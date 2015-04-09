@@ -14,8 +14,17 @@ class CreateSharesTable extends Migration {
 	{
 		Schema::create('shares', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->timestamps();
+            $table->increments('id');
+            $table->string('title');
+            $table->string('name');
+            $table->text('content');
+            $table->string('avatar');
+            $table->string('tag')->nullable();
+            $table->string('descript')->nullable();
+            $table->timestamp('start');
+            $table->timestamp('end');
+            $table->integer('ids');
+            $table->timestamps();
 		});
 	}
 
