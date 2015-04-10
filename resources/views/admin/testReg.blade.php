@@ -25,33 +25,27 @@
                         </div><!-- /. tools -->
                     </div><!-- /.box-header -->
                     <div class='box-body pad'>
-                        <form action="/panel/page" method="post">
-                            <div class="form-group">
-                                <label>Заголовок</label>
-                                <input class="form-control" type="text" maxlength="255" required name="title">
-                            </div>
+                        <form action="/auth/reg" method="post">
                             <div class="form-group">
                                 <label>Имя</label>
-                                <input class="form-control" type="text" maxlength="255" required name="name">
+                                <input class="form-control" type="text" maxlength="255"  equired name="name">
                             </div>
                             <div class="form-group">
-                                <label>Содержание</label>
-                                <textarea class="textarea" name="content" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                <label>E-mail</label>
+                                <input class="form-control" type="text" maxlength="255" required name="email">
                             </div>
+
                             <div class="form-group">
-                                <label>Теги</label>
-                                <input class="form-control" type="text" maxlength="255" required name="tag">
+                                <label>Пароль</label>
+                                <input class="form-control" type="text" maxlength="255" required name="password">
                             </div>
+
                             <div class="form-group">
-                                <label>Описание</label>
-                                <input class="form-control" type="text" maxlength="255" required name="descript">
-                            </div>
-                            <div class="form-group">
-                                <label>Сайт</label>
-                                <input class="form-control" type="text" maxlength="255" required name="ids">
+                                <label>Подтверждение пароля</label>
+                                <input class="form-control" type="text" maxlength="255" required name="password2">
                             </div>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <button type="submit" class="btn btn-default">Отправить</button>
+                            <button type="submit"  class="btn btn-default">Отправить</button>
 
 
 

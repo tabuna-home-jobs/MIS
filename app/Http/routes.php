@@ -15,17 +15,20 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
+*/
 
+//Перенаправление авторизации
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+	'panel' => 'AdminController'
 ]);
-*/
+
 
 
 //Route::get('panel', 'HomeController@index');
 
-Route::controller('panel', 'AdminController');
+//Route::controller('panel', 'AdminController');
 
 Route::group(['domain' => '{sitename}.{sitedomen}'], function()
 {
