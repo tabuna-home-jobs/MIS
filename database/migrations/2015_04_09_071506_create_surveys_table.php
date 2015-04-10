@@ -18,6 +18,7 @@ class CreateSurveysTable extends Migration {
             $table->string('name');
             $table->integer('ids');
             $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 

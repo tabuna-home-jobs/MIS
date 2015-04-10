@@ -19,6 +19,7 @@ class CreateQuestionsTable extends Migration {
             $table->string('type');
             $table->integer('survey');
             $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 

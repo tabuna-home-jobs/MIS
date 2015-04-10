@@ -23,6 +23,7 @@ class CreateNewsTable extends Migration {
             $table->string('descript');
             $table->integer('ids');
             $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 

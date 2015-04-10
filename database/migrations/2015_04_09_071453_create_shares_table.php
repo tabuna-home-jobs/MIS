@@ -25,6 +25,7 @@ class CreateSharesTable extends Migration {
             $table->timestamp('end');
             $table->integer('ids');
             $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 

@@ -20,6 +20,7 @@ class CreateReviewsTable extends Migration {
             $table->boolean('publish')->default(0);
             $table->integer('ids');
             $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 

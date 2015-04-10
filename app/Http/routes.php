@@ -11,6 +11,7 @@
 |
 */
 
+/*
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
@@ -19,3 +20,19 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+*/
+
+
+//Route::get('panel', 'HomeController@index');
+
+Route::controller('panel', 'AdminController');
+
+Route::group(['domain' => '{sitename}.{sitedomen}'], function()
+{
+    Route::controller('/', 'HomeController');
+
+
+});
+
+
+

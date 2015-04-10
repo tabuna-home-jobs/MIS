@@ -25,6 +25,7 @@ class CreateCatalogTable extends Migration {
             $table->integer('idcat');
             $table->integer('ids');
             $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 

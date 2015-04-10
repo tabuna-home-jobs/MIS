@@ -23,6 +23,7 @@ class CreateCommentsTable extends Migration {
             $table->integer('idcsub');
             $table->integer('ids');
             $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 

@@ -22,6 +22,7 @@ class CreatePagesTable extends Migration {
             $table->string('descript')->nullable();
             $table->integer('ids');
             $table->timestamps();
+            $table->softDeletes();
 
 		});
 	}

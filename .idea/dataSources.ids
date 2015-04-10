@@ -1456,6 +1456,7 @@
       <column name="question" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="answers_pkey" columns="id"/>
     </table>
     <table name="answers_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1483,6 +1484,7 @@
       <column name="ids" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="catalog_pkey" columns="id"/>
     </table>
     <table name="catalog_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1508,6 +1510,7 @@
       <column name="ids" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="comments_pkey" columns="id"/>
     </table>
     <table name="comments_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1531,6 +1534,7 @@
       <column name="ids" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="feedbacks_pkey" columns="id"/>
     </table>
     <table name="feedbacks_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1581,6 +1585,7 @@
       <column name="ids" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="news_pkey" columns="id"/>
     </table>
     <table name="news_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1605,6 +1610,7 @@
       <column name="ids" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="pages_pkey" columns="id"/>
     </table>
     <table name="pages_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1626,6 +1632,7 @@
       <column name="survey" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="questions_pkey" columns="id"/>
     </table>
     <table name="questions_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1648,6 +1655,7 @@
       <column name="ids" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="reviews_pkey" columns="id"/>
     </table>
     <table name="reviews_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1675,6 +1683,7 @@
       <column name="ids" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="shares_pkey" columns="id"/>
     </table>
     <table name="shares_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1696,6 +1705,7 @@
       <column name="pre" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="sites_pkey" columns="id"/>
     </table>
     <table name="sites_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1716,6 +1726,7 @@
       <column name="ids" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="surveys_pkey" columns="id"/>
     </table>
     <table name="surveys_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">

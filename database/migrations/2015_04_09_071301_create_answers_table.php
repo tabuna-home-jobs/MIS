@@ -18,6 +18,7 @@ class CreateAnswersTable extends Migration {
             $table->string('answer');
             $table->integer('question');
             $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 

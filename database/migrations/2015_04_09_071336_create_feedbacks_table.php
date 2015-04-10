@@ -21,6 +21,7 @@ class CreateFeedbacksTable extends Migration {
             $table->text('content');
             $table->integer('ids');
             $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 
