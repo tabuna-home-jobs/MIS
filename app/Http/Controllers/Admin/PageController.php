@@ -30,7 +30,16 @@ class PageController extends Controller {
         //$this->middleware('guest');
     }
 
-
+    private  function  Validator(){
+        Validator::make(Request::all(), [
+            'title' => 'max:255',
+            'name' => 'required|unique|max:255',
+            'content' => 'required',
+            'tag' => 'max:255',
+            'descript' => 'max:255',
+            'ids' => 'integer',
+        ]);
+    }
 
 
 
@@ -42,35 +51,24 @@ class PageController extends Controller {
 
     public function create()
     {
-        return view("dashboard/page");
+        return view("dashboard/page/pagesCrud");
     }
 
 
     public function show($id)
     {
         $Page = Models\Page::find($id);
-        return view("dashboard/page/page", ['Page' => $Page]);
+        return view("dashboard/page/pagesCrud", ['Page' => $Page]);
     }
 
 
 
     public function postPage()
     {
-        Validator::make(Request::all(), [
-            'title' => 'max:255',
-            'name' => 'required|unique|max:255',
-            'content' => 'required',
-            'tag' => 'max:255',
-            'descript' => 'max:255',
-            'ids' => 'integer',
-        ]);
 
-
+        $this->Validator();
         $input = Request::all();
         $page = new Models\Page();
-
-        //dd('Здохни Шелдон. Здохни!');
-        //Заполнение модели
         $page->title = $input['title'];
         $page->name = $input['name'];
         $page->content = $input['content'];
@@ -80,15 +78,35 @@ class PageController extends Controller {
         $page->save();
 
         //Флеш сообщение
-        Session::flash('good', 'Вы успешно создали тикет!');
+        Session::flash('good', 'Вы успешно создали страницу');
         return redirect()->route('page');
+    }
+
+
+    public function update(){
+
+        $this->Validator();
+        $input = Request::all();
+        $page = Models\Page::find($input['id']);
+        $page->title = $input['title'];
+        $page->name = $input['name'];
+        $page->content = $input['content'];
+        $page->tag = $input['tag'];
+        $page->descript = $input['descript'];
+        $page->ids = $input['ids'];
+        $page->save();
+
+        //Флеш сообщение
+        Session::flash('good', 'Вы успешно обновили страницу!');
+        return redirect()->route('page.index');
     }
 
 
     //Удаление
     public function destroy($id)
     {
-
+        $Page = Models\Page::find($id);
+        $Page->delete();
     }
 
 
