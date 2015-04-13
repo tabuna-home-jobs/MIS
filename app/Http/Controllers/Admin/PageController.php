@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models;
+use App\Models\Page;
 use Request;
 use Redirect;
 use Validator;
@@ -30,45 +30,27 @@ class PageController extends Controller {
         //$this->middleware('guest');
     }
 
-    private  function  Validator(){
-        Validator::make(Request::all(), [
-            'title' => 'max:255',
-            'name' => 'required|unique|max:255',
-            'content' => 'required',
-            'tag' => 'max:255',
-            'descript' => 'max:255',
-            'ids' => 'integer',
-        ]);
-    }
 
-
-
-    public function Index()
+    public function Index(Page $page)
     {
-        $PageList = Models\Page::orderBy('id', 'desc')->paginate(15);
+        $PageList = $page->orderBy('id', 'desc')->paginate(15);
         return view("dashboard/page/pages", ['PageList' => $PageList]);
     }
 
-    public function create()
-    {
-        return view("dashboard/page/pagesCrud");
-    }
 
-
-    public function show($id)
-    {
-        $Page = Models\Page::find($id);
-        return view("dashboard/page/pagesCrud", ['Page' => $Page]);
-    }
-
-
-
-    public function postPage()
+    public function postPage(Page $page)
     {
 
-        $this->Validator();
+	    Validator::make(Request::all(), [
+		    'title' => 'max:255',
+		    'name' => 'required|unique|max:255',
+		    'content' => 'required',
+		    'tag' => 'max:255',
+		    'descript' => 'max:255',
+		    'ids' => 'integer',
+	    ]);
+
         $input = Request::all();
-        $page = new Models\Page();
         $page->title = $input['title'];
         $page->name = $input['name'];
         $page->content = $input['content'];
@@ -83,31 +65,13 @@ class PageController extends Controller {
     }
 
 
-    public function update(){
-
-        $this->Validator();
-        $input = Request::all();
-        $page = Models\Page::find($input['id']);
-        $page->title = $input['title'];
-        $page->name = $input['name'];
-        $page->content = $input['content'];
-        $page->tag = $input['tag'];
-        $page->descript = $input['descript'];
-        $page->ids = $input['ids'];
-        $page->save();
-
-        //Флеш сообщение
-        Session::flash('good', 'Вы успешно обновили страницу!');
-        return redirect()->route('page.index');
-    }
-
 
     //Удаление
-    public function destroy($id)
+    public function postDestroy(Page $page)
     {
-        $Page = Models\Page::find($id);
-        $Page->delete();
+        $page->delete();
     }
+
 
 
 

@@ -6,6 +6,7 @@ use Request;
 use Redirect;
 use Validator;
 use Session;
+
 class UserController extends Controller {
 
     /*

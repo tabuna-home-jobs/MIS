@@ -35,8 +35,17 @@ Route::group(['domain' => '{sitename}.{sitedomen}'], function()
 // ДОбавить ,'middleware' => 'authdashboard'
 Route::group(['namespace' => 'Admin','prefix' => 'dashboard'], function()
 {
-    Route::resource('page', 'PageController', ['as' => 'page']);
-    Route::resource('user', 'UserController');
+
+	Route::Model('page','App\Model\Page');
+	Route::controller('page', 'PageController', [
+		'getIndex' => 'page',
+	]);
+
+	Route::Model('user','App\Model\User');
+	Route::controller('user', 'UserController', [
+		'getIndex' => 'user',
+	]);
+
 });
 
 

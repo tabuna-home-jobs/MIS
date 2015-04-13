@@ -3,12 +3,7 @@
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
-//use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
-//Для авторизации
-use Sentry;
-use Request;
-use Input;
-use Validator;
+use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller {
 
@@ -23,7 +18,7 @@ class AuthController extends Controller {
 	|
 	*/
 
-	//use AuthenticatesAndRegistersUsers;
+	use AuthenticatesAndRegistersUsers;
 
 	/**
 	 * Create a new authentication controller instance.
@@ -34,34 +29,10 @@ class AuthController extends Controller {
 	 */
 	public function __construct(Guard $auth, Registrar $registrar)
 	{
-
-/*
 		$this->auth = $auth;
 		$this->registrar = $registrar;
+
 		$this->middleware('guest', ['except' => 'getLogout']);
-*/
-
 	}
-
-	public function postReg(Request $request){
-
-		Validator::make(Request::all(), [
-			'email' => 'max:255',
-			'name' => 'required|unique|max:255',
-			'password' => 'required|min:6|',
-			'password2' => Input::get('password'),
-		]);
-
-		dd(Request::all());
-
-		Sentry::register(array(
-			'email'    => Input::get('email'),
-			'password' => Input::get('password'),
-		));
-	}
-	public function getReg(){
-		return view("dashboard/registrat");
-	}
-
 
 }

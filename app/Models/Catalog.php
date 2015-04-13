@@ -20,4 +20,9 @@ class Catalog extends Model {
      */
     protected $fillable = ['title', 'name', 'content', 'avatar', 'price', 'idcat', 'ids', 'tag', 'descript'];
 
+
+
+
+
+
 }
