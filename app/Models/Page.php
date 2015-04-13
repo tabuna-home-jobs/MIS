@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Page extends Model {
 
+    use SoftDeletes;
     /**
      * The database table used by the model.
      *

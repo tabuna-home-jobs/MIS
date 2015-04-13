@@ -11,31 +11,32 @@
 |
 */
 
-/*
-Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
-*/
 
 //Перенаправление авторизации
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
-	'panel' => 'AdminController'
 ]);
 
 
 
-//Route::get('panel', 'HomeController@index');
-
-//Route::controller('panel', 'AdminController');
-
+//Группа для сайтов
 Route::group(['domain' => '{sitename}.{sitedomen}'], function()
 {
     Route::controller('/', 'HomeController');
 
-
 });
 
+
+
+
+//Группа админ
+// ДОбавить ,'middleware' => 'authdashboard'
+Route::group(['namespace' => 'Admin','prefix' => 'dashboard'], function()
+{
+    Route::resource('page', 'PageController');
+    Route::resource('user', 'UserController');
+});
 
 

@@ -60,7 +60,7 @@ class AuthController extends Controller {
 		));
 	}
 	public function getReg(){
-		return view("admin/testReg");
+		return view("dashboard/registrat");
 	}
 
 

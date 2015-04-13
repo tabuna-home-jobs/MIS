@@ -25,26 +25,27 @@
                         </div><!-- /. tools -->
                     </div><!-- /.box-header -->
                     <div class='box-body pad'>
-                        <form action="/panel/page" method="post">
+                        <form action="/dashboard/page" method="post">
                             <div class="form-group">
                                 <label>Заголовок</label>
-                                <input class="form-control" type="text" maxlength="255" required name="title">
+                                <input class="form-control" type="text" maxlength="255" required name="title" value="{{$Page->title}}">
                             </div>
                             <div class="form-group">
                                 <label>Имя</label>
-                                <input class="form-control" type="text" maxlength="255" required name="name">
+                                <input class="form-control" type="text" maxlength="255" required name="name" value="{{$Page->name}}">
                             </div>
                             <div class="form-group">
                                 <label>Содержание</label>
-                                <textarea class="textarea" name="content" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                <textarea class="textarea" name="content" placeholder="Place some text here"
+                                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Теги</label>
-                                <input class="form-control" type="text" maxlength="255" required name="tag">
+                                <input class="form-control" type="text" maxlength="255" required name="tag" value="{{$Page->tag}}">
                             </div>
                             <div class="form-group">
                                 <label>Описание</label>
-                                <input class="form-control" type="text" maxlength="255" required name="descript">
+                                <input class="form-control" type="text" maxlength="255" required name="descript" value="{{$Page->descript}}">
                             </div>
                             <div class="form-group">
                                 <label>Сайт</label>
@@ -52,9 +53,6 @@
                             </div>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button type="submit" class="btn btn-default">Отправить</button>
-
-
-
                         </form>
                     </div>
                 </div>

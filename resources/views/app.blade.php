@@ -38,7 +38,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <header class="main-header">
 
         <!-- Logo -->
-        <a href="/panel" class="logo"><b>Управление</b> МИС</a>
+        <a href="/dashboard" class="logo"><b>Управление</b> МИС</a>
 
         <!-- Header Navbar -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -165,7 +165,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li class="header">Меню</li>
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active"><a href="#"><span class="fa fa-bar-chart"></span> Статистика</a></li>
-                <li><a href="/panel/pages/"><span class="fa fa-file-text"></span> Страницы</a></li>
+                <li><a href="/dashboard/page/"><span class="fa fa-file-text"></span> Страницы</a></li>
                 <li><a href="№"><span class="fa fa-newspaper-o"></span> Новости</a></li>
                 <li><a href="№"><span class="fa fa-file-text"></span> Акции</a></li>
 
@@ -187,7 +187,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                 <li><a href="№"><span class="fa fa-file-text"></span> Отзывы</a></li>
                 <li><a href="№"><span class="fa fa-file-text"></span> Комментарии</a></li>
-                <li><a href="№"><span class="fa fa-file-text"></span> Пользователи</a></li>
+                <li><a href="/dashboard/user"><span class="fa fa-user"></span> Пользователи</a></li>
 
 
                 <li class="treeview">

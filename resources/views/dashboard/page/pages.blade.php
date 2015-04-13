@@ -36,7 +36,7 @@
                                         <td>{{ $Page->name }}</td>
                                         <td>{{ $Page->title }}</td>
                                         <td>
-                                            <a href="/panel/page/{{ $Page->id }}">Редактировать</a>
+                                            <a href="/dashboard/page/{{ $Page->id }}">Редактировать</a>
                                            Удалить
                                         </td>
                                     </tr>
@@ -50,7 +50,9 @@
                                     <th>Управление</th>
                                 </tr>
                                 </tfoot>
+
                             </table>
+                            {!! $PageList->render() !!}
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
 
