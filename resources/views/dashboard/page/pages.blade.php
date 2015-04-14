@@ -7,7 +7,7 @@
         <section class="content-header">
             <h1>
                 Список страниц
-                <small>Выберите нужную</small>
+                <small><a href="/dashboard/page/add">Добавить новую</a></small>
             </h1>
         </section>
 
@@ -36,8 +36,8 @@
                                         <td>{{ $Page->name }}</td>
                                         <td>{{ $Page->title }}</td>
                                         <td>
-                                            <a href="/dashboard/page/{{ $Page->id }}">Редактировать</a>
-                                           Удалить
+                                            <a href="/dashboard/page/add/{{ $Page->id }}" class="btn"><span class="fa fa-edit"></span> </a>
+                                            <a href="/dashboard/page/destroy/{{ $Page->id }}" class="btn"><span class="fa fa-trash-o"></span></a>
                                         </td>
                                     </tr>
                                 @endforeach

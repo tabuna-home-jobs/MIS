@@ -6,24 +6,11 @@ use Request;
 use Redirect;
 use Validator;
 use Session;
+
+
+
 class PageController extends Controller {
 
-    /*
-    |--------------------------------------------------------------------------
-    | Welcome Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller renders the "marketing page" for the application and
-    | is configured to only allow guests. Like most of the other sample
-    | controllers, you are free to modify or remove it as you desire.
-    |
-    */
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         //Тут должна быть проверка авторизации
@@ -31,45 +18,60 @@ class PageController extends Controller {
     }
 
 
-    public function Index(Page $page)
+    public function getIndex()
     {
-        $PageList = $page->orderBy('id', 'desc')->paginate(15);
+        $PageList = Page::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
         return view("dashboard/page/pages", ['PageList' => $PageList]);
     }
 
+    public function getAdd($page = null)
+    {
+        $page = Page::find($page);
 
-    public function postPage(Page $page)
+        return view("dashboard/page/pagesCrud", ['Page' => $page ]);
+    }
+
+    //Добовление и изменение данных
+    public function postIndex()
     {
 
 	    Validator::make(Request::all(), [
+            'id' => 'integer',
 		    'title' => 'max:255',
 		    'name' => 'required|unique|max:255',
 		    'content' => 'required',
 		    'tag' => 'max:255',
 		    'descript' => 'max:255',
-		    'ids' => 'integer',
 	    ]);
-
         $input = Request::all();
+
+        if(isset($input['id']))
+            $page = Page::find($input['id']);
+        else
+            $page = new Page();
+
         $page->title = $input['title'];
         $page->name = $input['name'];
         $page->content = $input['content'];
         $page->tag = $input['tag'];
         $page->descript = $input['descript'];
-        $page->ids = $input['ids'];
+        $page->ids = Session::get('website');
         $page->save();
 
         //Флеш сообщение
-        Session::flash('good', 'Вы успешно создали страницу');
+        Session::flash('good', 'Вы успешно изменили значения');
         return redirect()->route('page');
     }
 
 
 
     //Удаление
-    public function postDestroy(Page $page)
+    public function getDestroy($page = null)
     {
+        $page = Page::find($page);
         $page->delete();
+        Session::flash('good', 'Вы успешно удалили значения');
+        return redirect()->route('page');
     }
 
 

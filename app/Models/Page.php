@@ -20,4 +20,6 @@ class Page extends Model {
      */
     protected $fillable = ['title', 'name', 'content', 'tag', 'descript', 'ids'];
 
+
+
 }

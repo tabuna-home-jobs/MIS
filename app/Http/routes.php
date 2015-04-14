@@ -31,21 +31,38 @@ Route::group(['domain' => '{sitename}.{sitedomen}'], function()
 
 
 
-//Группа админ
-// ДОбавить ,'middleware' => 'authdashboard'
+
+// Спец группа отмывания
 Route::group(['namespace' => 'Admin','prefix' => 'dashboard'], function()
 {
+    Route::controller('sites', 'SitesController', [
+        'getIndex' => 'sites',
+    ]);
+});
 
-	Route::Model('page','App\Model\Page');
+
+//Группа админ
+Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'auth'], function()
+{
 	Route::controller('page', 'PageController', [
 		'getIndex' => 'page',
 	]);
 
-	Route::Model('user','App\Model\User');
+    Route::controller('news', 'NewsController', [
+        'getIndex' => 'news',
+    ]);
+
 	Route::controller('user', 'UserController', [
 		'getIndex' => 'user',
 	]);
 
+
+
+    Route::controller('/', 'AdminController', [
+        'getIndex' => 'admin',
+    ]);
+
 });
+
 
 

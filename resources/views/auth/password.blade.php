@@ -1,50 +1,52 @@
-@extends('app')
+@extends('appAutch')
 
 @section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Reset Password</div>
-				<div class="panel-body">
-					@if (session('status'))
-						<div class="alert alert-success">
-							{{ session('status') }}
-						</div>
-					@endif
 
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
+<body class="register-page">
+<div class="register-box">
+    <div class="register-logo">
+        <b>Управление</b> МИС</a>
+    </div>
 
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+    <div class="register-box-body">
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
 
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">
-									Send Password Reset Link
-								</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+
+        <p class="login-box-msg">Забыли пароль? Востановим!</p>
+        <form action="{{ url('/password/email')}}" method="post">
+
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+            <div class="form-group has-feedback">
+                <input type="email" class="form-control" value="{{ old('email') }}" placeholder="Email"/>
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+
+            <div class="row">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Востановить пароль</button>
+            </div>
+        </form>
+
+
+    </div><!-- /.form-box -->
+</div><!-- /.register-box -->
+
+
+
 @endsection

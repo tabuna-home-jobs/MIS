@@ -31,7 +31,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 
 
-<body class="skin-blue">
+<body class="skin-blue layout-boxed">
 <div class="wrapper">
 
     <!-- Main Header -->
@@ -86,22 +86,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <li class="dropdown notifications-menu">
                         <!-- Menu toggle button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-bell-o"></i>
-                            <span class="label label-warning">10</span>
+                            <i class="fa fa-sitemap"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="header">You have 10 notifications</li>
+                            <li class="header  text-center">Выберите веб-сайт:</li>
                             <li>
                                 <!-- Inner Menu: contains the notifications -->
                                 <ul class="menu">
-                                    <li><!-- start notification -->
-                                        <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                        </a>
-                                    </li><!-- end notification -->
+
+                                    @foreach(Sites::get() as $site)
+                                        <li><!-- start notification -->
+                                            <a href="/dashboard/sites/select/{{$site->id}}">
+                                                <i class="fa fa-users text-aqua"></i> {{$site->name}}
+                                            </a>
+                                        </li><!-- end notification -->
+                                    @endforeach
+
                                 </ul>
                             </li>
-                            <li class="footer"><a href="#">View all</a></li>
+                            <li class="footer"><a href="/dashboard/sites/">Смотреть все</a></li>
                         </ul>
                     </li>
                     <!-- Tasks Menu -->
@@ -166,7 +169,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active"><a href="#"><span class="fa fa-bar-chart"></span> Статистика</a></li>
                 <li><a href="/dashboard/page/"><span class="fa fa-file-text"></span> Страницы</a></li>
-                <li><a href="№"><span class="fa fa-newspaper-o"></span> Новости</a></li>
+                <li><a href="/dashboard/news/"><span class="fa fa-newspaper-o"></span> Новости</a></li>
                 <li><a href="№"><span class="fa fa-file-text"></span> Акции</a></li>
 
                 <li class="treeview">
@@ -188,6 +191,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li><a href="№"><span class="fa fa-file-text"></span> Отзывы</a></li>
                 <li><a href="№"><span class="fa fa-file-text"></span> Комментарии</a></li>
                 <li><a href="/dashboard/user"><span class="fa fa-user"></span> Пользователи</a></li>
+                <li><a href="/dashboard/sites"><span class="fa fa-user"></span> Сменить сайт</a></li>
 
 
                 <li class="treeview">

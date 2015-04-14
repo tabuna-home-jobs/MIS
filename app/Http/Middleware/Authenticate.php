@@ -2,6 +2,7 @@
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
+use Session;
 
 class Authenticate {
 
@@ -43,6 +44,21 @@ class Authenticate {
 				return redirect()->guest('auth/login');
 			}
 		}
+
+        //Проверка сайтов
+        if (!Session::has('website'))
+        {
+            if ($request->ajax())
+            {
+                //Тут должен быть обработчик для ajax запросов
+            }
+            else
+            {
+                return redirect()->route('sites');
+            }
+        }
+
+
 
 
 		return $next($request);
