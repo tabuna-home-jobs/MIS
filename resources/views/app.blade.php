@@ -11,16 +11,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Bootstrap 3.3.2 -->
     <link href="{{ asset('/admin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <!-- Ionicons -->
-    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-    <!-- Theme style -->
+    <link href="{{ asset('/admin/bootstrap/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+
+
+     <!-- Theme style -->
     <link href="{{ asset('/admin/dist/css/AdminLTE.min.css') }}"  rel="stylesheet" type="text/css" />
-    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-          page. However, you can choose any other skin. Make sure you
-          apply the skin class to the body tag so the changes take effect.
-    -->
+
     <link href="{{ asset('/admin/dist/css/skins/skin-blue.min.css') }}" rel="stylesheet" type="text/css" />
+
+
+    <link href="{{ asset('/admin/bootstrap/css/custom.css') }}" rel="stylesheet" type="text/css" />
+
+    <link href="{{ asset('/admin/dist/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,6 +30,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 
@@ -54,31 +57,106 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- Menu toggle button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-envelope-o"></i>
-                            <span class="label label-success">4</span>
+                            <span class="label label-success">8</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="header">You have 4 messages</li>
+                            <li class="header text-center">У вас 8 сообщения</li>
                             <li>
                                 <!-- inner menu: contains the messages -->
                                 <ul class="menu">
                                     <li><!-- start message -->
                                         <a href="#">
-                                            <div class="pull-left">
-                                                <!-- User Image -->
-                                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
-                                            </div>
                                             <!-- Message title and timestamp -->
                                             <h4>
-                                                Support Team
-                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                Юлия Алексеева
+                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
                                             </h4>
                                             <!-- The message -->
-                                            <p>Why not buy a new awesome theme?</p>
+                                            <p>Как можно до вас добраться?</p>
                                         </a>
                                     </li><!-- end message -->
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <!-- Message title and timestamp -->
+                                            <h4>
+                                                Юлия Алексеева
+                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
+                                            </h4>
+                                            <!-- The message -->
+                                            <p>Как можно до вас добраться?</p>
+                                        </a>
+                                    </li><!-- end message -->
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <!-- Message title and timestamp -->
+                                            <h4>
+                                                Юлия Алексеева
+                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
+                                            </h4>
+                                            <!-- The message -->
+                                            <p>Как можно до вас добраться?</p>
+                                        </a>
+                                    </li><!-- end message -->
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <!-- Message title and timestamp -->
+                                            <h4>
+                                                Юлия Алексеева
+                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
+                                            </h4>
+                                            <!-- The message -->
+                                            <p>Как можно до вас добраться?</p>
+                                        </a>
+                                    </li><!-- end message -->
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <!-- Message title and timestamp -->
+                                            <h4>
+                                                Юлия Алексеева
+                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
+                                            </h4>
+                                            <!-- The message -->
+                                            <p>Как можно до вас добраться?</p>
+                                        </a>
+                                    </li><!-- end message -->
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <!-- Message title and timestamp -->
+                                            <h4>
+                                                Юлия Алексеева
+                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
+                                            </h4>
+                                            <!-- The message -->
+                                            <p>Как можно до вас добраться?</p>
+                                        </a>
+                                    </li><!-- end message -->
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <!-- Message title and timestamp -->
+                                            <h4>
+                                                Юлия Алексеева
+                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
+                                            </h4>
+                                            <!-- The message -->
+                                            <p>Как можно до вас добраться?</p>
+                                        </a>
+                                    </li><!-- end message -->
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <!-- Message title and timestamp -->
+                                            <h4>
+                                                Юлия Алексеева
+                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
+                                            </h4>
+                                            <!-- The message -->
+                                            <p>Как можно до вас добраться?</p>
+                                        </a>
+                                    </li><!-- end message -->
+
+
                                 </ul><!-- /.menu -->
                             </li>
-                            <li class="footer"><a href="#">See All Messages</a></li>
+                            <li class="footer"><a href="#">Перейти в чат</a></li>
                         </ul>
                     </li><!-- /.messages-menu -->
 
@@ -142,6 +220,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </li>
                         </ul>
                     </li>
+
+
+
+
+
+
+
+
+
+
+
+                    <li class=" tasks-menu">
+                        <a href="/auth/logout" title="Выйти" >
+                           <i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
                 </ul>
             </div>
         </nav>
@@ -151,7 +255,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle" alt="User Image" />
+                </div>
+                <div class="pull-left info">
+                    <p>{{Auth::user()->name}}</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
             <!-- search form (Optional) -->
             <form action="#" method="get" class="sidebar-form">
                 <div class="input-group">
@@ -170,28 +283,43 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li class="active"><a href="#"><span class="fa fa-bar-chart"></span> Статистика</a></li>
                 <li><a href="/dashboard/page/"><span class="fa fa-file-text"></span> Страницы</a></li>
                 <li><a href="/dashboard/news/"><span class="fa fa-newspaper-o"></span> Новости</a></li>
-                <li><a href="№"><span class="fa fa-file-text"></span> Акции</a></li>
+                <li><a href="/dashboard/shares/"><span class="fa fa-file-text"></span> Акции</a></li>
+
 
                 <li class="treeview">
-                    <a href="#"><span>Каталог</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><span class="fa fa-shopping-cart"></span> Каталог <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Категории</a></li>
-                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#"><span class="fa fa-suitcase"></span> Категории</a></li>
+                        <li><a href="#"><span class="fa fa-stethoscope"></span> Услуги</a></li>
+                        <li><a href="#"><span class="fa fa-file-text"></span> Комментарии</a></li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><span>Вопросы и ответы</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><span class="glyphicon glyphicon-info-sign"></span> Вопросы и ответы <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Вопросы</a></li>
-                        <li><a href="#">Статистика</a></li>
+                        <li><a href="#"><span class="fa fa-question"></span>Вопросы</a></li>
+                        <li><a href="#"><span class="fa fa-pie-chart"></span>Статистика</a></li>
                     </ul>
                 </li>
 
-                <li><a href="№"><span class="fa fa-file-text"></span> Отзывы</a></li>
-                <li><a href="№"><span class="fa fa-file-text"></span> Комментарии</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> Меню</a></li>
+                <li><a href="#"><span class="fa fa-file-text"></span> Отзывы</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-book"></span> Энциклопедия</a></li>
+
+
+                <li class="treeview">
+                    <a href="#"><span class="glyphicon glyphicon-globe"></span> Социальные сети <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="#"><span class="fa fa-vk"></span>Вконтакте</a></li>
+                        <li><a href="#"><span class="fa fa-circle-o"></span>Однокласники</a></li>
+                        <li><a href="#"><span class="fa fa-facebook-official"></span>Facebook</a></li>
+                        <li><a href="#"><span class="fa fa-instagram"></span>Instagram</a></li>
+                    </ul>
+                </li>
+
+
                 <li><a href="/dashboard/user"><span class="fa fa-user"></span> Пользователи</a></li>
-                <li><a href="/dashboard/sites"><span class="fa fa-user"></span> Сменить сайт</a></li>
 
 
                 <li class="treeview">
@@ -251,8 +379,50 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE App -->
 <script src="{{asset('/admin/dist/js/app.min.js')}}" type="text/javascript"></script>
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-      Both of these plugins are recommended to enhance the
-      user experience -->
+<script src="{{asset('/admin/dist/js/moment-with-locales.js')}}" type="text/javascript"></script>
+<script src="{{asset('/admin/dist/js/bootstrap-datetimepicker.min.js')}}" type="text/javascript"></script>
+
+
+
+<script src="{{asset('/admin/bootstrap/js/custom.js')}}" type="text/javascript"></script>
+
+
+
+
+<!--  TinyMCE -->
+<script src="{{asset('/admin/plugins/tinymce/tinymce.min.js')}}" type="text/javascript"></script>
+<script type="text/javascript">
+    tinymce.init({
+        theme: "modern",
+        skin: 'light',
+        language: 'ru',
+        selector: "textarea.textareaedit",
+        extended_valid_elements: "img[class=img-responsive|!src|border:0|alt|title|width|height|style]",
+        plugins: "image,code,link,preview,hr,media,",
+        toolbar: "styleselect | fontsizeselect   | bullist numlist outdent indent | link image media  | preview code | more  ",
+        menu: "false",
+        statusbar: false,
+        setup: function (editor) {
+            editor.addButton('more', {
+                text: 'Превью',
+                onclick: function () {
+                    editor.insertContent('<!--more-->');
+                }
+            });
+        },
+
+        //responsivefilemanager
+        //external_filemanager_path: "/Views/src/filemanager/",
+        //filemanager_title: "Файловый менеджер",
+        //external_plugins: {"filemanager": "/Views/src/filemanager/plugin.min.js"}
+    });
+</script>
+
+
+
+
+
+
+
 </body>
 </html>

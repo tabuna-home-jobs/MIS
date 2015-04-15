@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models;
+use App\Models\User;
 use Request;
 use Redirect;
 use Validator;
@@ -35,56 +35,58 @@ class UserController extends Controller {
 
 
 
-    public function Index()
+    public function getIndex()
     {
-        $UsersList = Models\User::orderBy('id', 'desc')->paginate(15);
+        $UsersList = User::orderBy('id', 'desc')->paginate(15);
         return view("dashboard/user/users", ['UsersList' => $UsersList]);
     }
 
-    public function create()
+    public function getAdd($user = null)
     {
-        return view("dashboard/page");
+        $user = User::find($user);
+
+        return view("dashboard/user/usersCrud", ['User' => $user ]);
     }
 
 
-    public function show($id)
-    {
-        $User = Models\User::find($id);
-        return view("dashboard/user/user", ['User' => $User]);
-    }
-
-
-
-    public function postPage()
+    //Добовление и изменение данных
+    public function postIndex()
     {
         Validator::make(Request::all(), [
-            'title' => 'max:255',
-            'name' => 'required|unique|max:255',
-            'content' => 'required',
-            'tag' => 'max:255',
-            'descript' => 'max:255',
-            'ids' => 'integer',
+            'id' => 'integer',
+            'email' => 'required|unique|max:255',
+            'name' => 'required|max:255',
         ]);
-
-
         $input = Request::all();
-        $page = new Models\Page();
 
-        //dd('Здохни Шелдон. Здохни!');
-        //Заполнение модели
-        $page->title = $input['title'];
-        $page->name = $input['name'];
-        $page->content = $input['content'];
-        $page->tag = $input['tag'];
-        $page->descript = $input['descript'];
-        $page->ids = $input['ids'];
-        $page->save();
+        if(isset($input['id']))
+            $user = User::find($input['id']);
+        else
+            $user = new User();
+
+        $user->name = $input['name'];
+        $user->email = $input['email'];
+        $user->save();
 
         //Флеш сообщение
-        Session::flash('good', 'Вы успешно создали тикет!');
-        return redirect()->route('page');
-
+        Session::flash('good', 'Вы успешно изменили значения');
+        return redirect()->route('user');
     }
+
+
+
+
+
+    //Удаление
+    public function getDestroy($page = null)
+    {
+        $page = User::find($page);
+        $page->delete();
+        Session::flash('good', 'Вы успешно удалили значения');
+        return redirect()->route('user');
+    }
+
+
 
 
 }

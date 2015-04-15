@@ -34,7 +34,6 @@ class NewsController extends Controller {
     //Добовление и изменение данных
     public function postIndex()
     {
-
         Validator::make(Request::all(), [
             'id' => 'integer',
             'title' => 'max:255',

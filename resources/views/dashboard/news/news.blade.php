@@ -36,8 +36,8 @@
                                     <td>{{ $News->name }}</td>
                                     <td>{{ $News->title }}</td>
                                     <td>
-                                        <a href="/dashboard/news/add/{{ $News->id }}" class="btn"><span class="fa fa-edit"></span> </a>
-                                        <a href="/dashboard/news/destroy/{{ $News->id }}" class="btn"><span class="fa fa-trash-o"></span></a>
+                                        <a href="/dashboard/news/add/{{ $News->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
+                                        <a href="/dashboard/news/destroy/{{ $News->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
                                     </td>
                                 </tr>
                             @endforeach

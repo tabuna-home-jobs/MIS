@@ -1,0 +1,12 @@
+a {
+    outline: none !important;
+}
+
+.layout-boxed {
+    background: url("http://www.mother-baby.ru/img/leftbg.jpg") ,
+                url("http://www.mother-baby.ru/img/rightbg.jpg");
+    background-size: auto 100%, auto 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, right;
+    background-attachment: fixed;
+}

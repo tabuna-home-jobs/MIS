@@ -52,11 +52,17 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'au
         'getIndex' => 'news',
     ]);
 
+    Route::controller('shares', 'SharesController', [
+        'getIndex' => 'share',
+    ]);
+
+    Route::controller('menu', 'MenuController', [
+        'getIndex' => 'menu',
+    ]);
+
 	Route::controller('user', 'UserController', [
 		'getIndex' => 'user',
 	]);
-
-
 
     Route::controller('/', 'AdminController', [
         'getIndex' => 'admin',

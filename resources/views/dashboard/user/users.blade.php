@@ -24,8 +24,7 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Имя</th>
-                                <th>Фамилия</th>
+                                <th>ФИО</th>
                                 <th>E-mail</th>
                                 <th>Управление</th>
                             </tr>
@@ -34,12 +33,11 @@
                             @foreach ($UsersList as $User)
                                 <tr>
                                     <td>{{ $User->id }}</td>
-                                    <td>{{ $User->first_name }}</td>
-                                    <td>{{ $User->last_name }}</td>
+                                    <td>{{ $User->name }}</td>
                                     <td>{{ $User->email }}</td>
                                     <td>
-                                        <a href="/dashboard/user/{{ $User->id }}">Редактировать</a>
-                                        Удалить
+                                        <a href="/dashboard/user/add/{{ $User->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
+                                        <a href="/dashboard/user/destroy/{{ $User->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -47,8 +45,7 @@
                             <tfoot>
                             <tr>
                                 <th>#</th>
-                                <th>Имя</th>
-                                <th>Фамилия</th>
+                                <th>ФИО</th>
                                 <th>E-mail</th>
                                 <th>Управление</th>
                             </tr>
