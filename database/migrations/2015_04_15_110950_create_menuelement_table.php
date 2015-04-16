@@ -16,7 +16,7 @@ class CreateMenuelementTable extends Migration {
         {
             $table->increments('id');
             $table->string('name');
-            $table->integer('idm');
+            $table->integer('menu_id');
             $table->integer('order');
             $table->timestamps();
             $table->softDeletes();

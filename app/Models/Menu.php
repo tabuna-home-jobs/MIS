@@ -3,6 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+
 class Menu extends Model {
 
     use SoftDeletes;
@@ -21,9 +22,9 @@ class Menu extends Model {
     protected $fillable = ['name', 'ids'];
 
 
-    public function comments()
+    public function MenuElement()
     {
-        return $this->hasMany('MenuElement', 'idm');
+        return $this->hasMany('App\Models\MenuElement');
     }
 
 }

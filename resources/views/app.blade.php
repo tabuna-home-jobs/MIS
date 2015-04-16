@@ -303,7 +303,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </ul>
                 </li>
 
-                <li><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> Меню</a></li>
+                <li><a href="/dashboard/menu/"><span class="glyphicon glyphicon-menu-hamburger"></span> Меню</a></li>
                 <li><a href="#"><span class="fa fa-file-text"></span> Отзывы</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-book"></span> Энциклопедия</a></li>
 

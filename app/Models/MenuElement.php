@@ -18,6 +18,13 @@ class MenuElement extends Model {
      *
      * @var array
      */
-    protected $fillable = ['name', 'idm', 'order'];
+    protected $fillable = ['name', 'menu_id', 'order'];
+
+
+    public function menu()
+    {
+        return $this->belongsTo('App\Models\Menu');
+    }
+
 
 }

@@ -22,7 +22,46 @@
                     <div class="box-body">
 
 
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Имя</th>
+                                <th>Управление</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($Menu as $li)
+                                <tr>
+                                    <td>{{ $li->id }}</td>
+                                    <td>{{ $li->name }}</td>
 
+
+                                @forelse(//Menu::find($li->id)->MenuElement()->get as $sub)
+                                    <li>{{ //$sub->name }}</li>
+                                @empty
+                                    <p>No users</p>
+                                @endforelse
+
+
+                                        <td>
+                                        <a href="/dashboard/news/add/{{ $li->id }}" class="btn btn-primary"><span class="fa fa-plus"></span> </a>
+                                        <a href="/dashboard/news/add/{{ $li->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
+                                        <a href="/dashboard/news/destroy/{{ $li->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th>#</th>
+                                <th>Имя</th>
+                                <th>Управление</th>
+                            </tr>
+                            </tfoot>
+
+                        </table>
+                        {!! $Menu->render() !!}
 
 
 
