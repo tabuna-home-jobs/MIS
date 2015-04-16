@@ -55,44 +55,35 @@
                                 <div class="form-group">
                                     <label>Миниатюра</label>
                                     <div class="input-group">
+                                        <input class="form-control" type="text" maxlength="255" required name="avatar" value="{{$Shares->avatar or ''}}">
                                         <div class="input-group-addon">
                                             <i class="glyphicon glyphicon-picture"></i>
                                         </div>
-                                        <input class="form-control" type="text" maxlength="255" required name="avatar" value="{{$Shares->avatar or ''}}">
                                     </div><!-- /.input group -->
                                 </div>
 
+
+
                                 <div class="form-group">
                                     <label>Дата начала</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon date" id='datetimepickerstart2'>
-                                            <i class="glyphicon glyphicon-picture"></i>
-                                        </div>
-                                    <input class="form-control" type="text" maxlength="255" required name="start" value="{{$Shares->start or ''}}">
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
                                     <div class='input-group date' id='datetimepickerstart'>
-                                        <input type='text' class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
+                                        <input type='text' class="form-control" required name="start" value="{{$Shares->start or ''}}" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
                                     </div>
                                 </div>
-
-
-
 
                                 <div class="form-group">
                                     <label>Дата окончания</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon date" id='datetimepickerend'>
-                                            <i class="glyphicon glyphicon-picture"></i>
-                                        </div>
-                                    <input class="form-control" type="text" maxlength="255" required name="end" value="{{$Shares->end or ''}}">
-                                </div>
+                                    <div class='input-group date' id='datetimepickerend'>
+                                        <input type='text' class="form-control" required name="end" value="{{$Shares->end or ''}}" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
                                     </div>
+                                </div>
+
 
 
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

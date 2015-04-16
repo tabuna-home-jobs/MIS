@@ -380,6 +380,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{asset('/admin/dist/js/app.min.js')}}" type="text/javascript"></script>
 
 <script src="{{asset('/admin/dist/js/moment-with-locales.js')}}" type="text/javascript"></script>
+<script src="{{asset('/admin/dist/js/ru-picker.js')}}" type="text/javascript"></script>
+
 <script src="{{asset('/admin/dist/js/bootstrap-datetimepicker.min.js')}}" type="text/javascript"></script>
 
 
