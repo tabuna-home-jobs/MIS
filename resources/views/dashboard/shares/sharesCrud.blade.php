@@ -55,9 +55,9 @@
                                 <div class="form-group">
                                     <label>Миниатюра</label>
                                     <div class="input-group">
-                                        <input class="form-control" type="text" maxlength="255" required name="avatar" value="{{$Shares->avatar or ''}}">
+                                        <input class="form-control" type="text" id="avatar" maxlength="255" required name="avatar" value="{{$Shares->avatar or ''}}">
                                         <div class="input-group-addon">
-                                            <i class="glyphicon glyphicon-picture"></i>
+                                            <i class="glyphicon glyphicon-picture" data-toggle="modal" data-target="#avatarimage"></i>
                                         </div>
                                     </div><!-- /.input group -->
                                 </div>
@@ -106,6 +106,36 @@
         </div><!-- ./row -->
 
     </section><!-- /.content -->
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="avatarimage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Выберите изображение</h4>
+                </div>
+                <div class="modal-body">
+
+                    <iframe width="100%" height="500" frameborder="0"
+                             src="/admin/filemanager/dialog.php?type=1&field_id=avatar">
+                    </iframe>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 

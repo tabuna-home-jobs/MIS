@@ -393,32 +393,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--  TinyMCE -->
 <script src="{{asset('/admin/plugins/tinymce/tinymce.min.js')}}" type="text/javascript"></script>
-<script type="text/javascript">
-    tinymce.init({
-        theme: "modern",
-        skin: 'light',
-        language: 'ru',
-        selector: "textarea.textareaedit",
-        extended_valid_elements: "img[class=img-responsive|!src|border:0|alt|title|width|height|style]",
-        plugins: "image,code,link,preview,hr,media,",
-        toolbar: "styleselect | fontsizeselect   | bullist numlist outdent indent | link image media  | preview code | more  ",
-        menu: "false",
-        statusbar: false,
-        setup: function (editor) {
-            editor.addButton('more', {
-                text: 'Превью',
-                onclick: function () {
-                    editor.insertContent('<!--more-->');
-                }
-            });
-        },
-
-        //responsivefilemanager
-        //external_filemanager_path: "/Views/src/filemanager/",
-        //filemanager_title: "Файловый менеджер",
-        //external_plugins: {"filemanager": "/Views/src/filemanager/plugin.min.js"}
-    });
-</script>
 
 
 
