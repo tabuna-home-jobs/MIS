@@ -16,10 +16,11 @@ class CreateFeedbacksTable extends Migration {
 		{
             $table->increments('id');
             $table->string('fio');
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->string('email');
             $table->text('content');
             $table->integer('ids');
+            $table->boolean('read')->default(false);
             $table->timestamps();
             $table->softDeletes();
 		});

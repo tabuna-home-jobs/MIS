@@ -7,7 +7,6 @@
         <section class="content-header">
             <h1>
                 Список страниц
-                <small><a href="/dashboard/page/add">Добавить новую</a></small>
             </h1>
         </section>
 
@@ -17,7 +16,12 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-header">
-                            <h3 class="box-title">Управляй таблицой</h3>
+                            <h3 class="box-title">
+                                <h5 class="box-title">
+                                    <a href="/dashboard/page/add/" class="btn btn-link btn-sm"><span class="fa fa-plus"></span> Добавить новую запись </a>
+                                    <a href="/dashboard/page/trash/" class="btn btn-link btn-sm"><span class="fa fa-trash"></span> Корзина </a>
+                                </h5>
+                            </h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <table class="table table-bordered table-hover">

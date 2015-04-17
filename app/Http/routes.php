@@ -64,6 +64,10 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'au
 		'getIndex' => 'user',
 	]);
 
+    Route::controller('feedback', 'FeedbackController', [
+        'getIndex' => 'feedback',
+    ]);
+
     Route::controller('/', 'AdminController', [
         'getIndex' => 'admin',
     ]);

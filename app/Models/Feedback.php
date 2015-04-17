@@ -11,7 +11,7 @@ class Feedback extends Model {
      *
      * @var string
      */
-    protected $table = 'feedback';
+    protected $table = 'feedbacks';
 
     /**
      * The attributes that are mass assignable.

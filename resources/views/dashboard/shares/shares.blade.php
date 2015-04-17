@@ -7,7 +7,6 @@
     <section class="content-header">
         <h1>
             Список страниц акций
-            <small><a href="/dashboard/shares/add">Добавить новую</a></small>
         </h1>
     </section>
 
@@ -17,7 +16,10 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Управляй таблицой</h3>
+                        <h3 class="box-title">
+                            <a href="/dashboard/shares/add/" class="btn btn-link btn-sm"><span class="fa fa-plus"></span> Добавить новую запись </a>
+                            <a href="/dashboard/shares/trash/" class="btn btn-link btn-sm"><span class="fa fa-trash"></span> Корзина </a>
+                        </h3>
                     </div><!-- /.box-header -->
                     <div class="box-body">
                         <table class="table table-bordered table-hover">

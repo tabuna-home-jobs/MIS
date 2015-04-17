@@ -6,7 +6,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Список новостей
+            Список страниц
         </h1>
     </section>
 
@@ -17,8 +17,9 @@
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title">
-                            <a href="/dashboard/news/add/" class="btn btn-link btn-sm"><span class="fa fa-plus"></span> Добавить новую запись </a>
-                            <a href="/dashboard/news/trash/" class="btn btn-link btn-sm"><span class="fa fa-trash"></span> Корзина </a>
+                            <h5 class="box-title">
+                                <a href="/dashboard/page/" class="btn btn-link btn-sm"><span class="fa fa-check"></span> Активные </a>
+                            </h5>
                         </h3>
                     </div><!-- /.box-header -->
                     <div class="box-body">
@@ -32,14 +33,14 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach ($NewsList as $News)
+                            @foreach ($PageList as $Page)
                                 <tr>
-                                    <td>{{ $News->id }}</td>
-                                    <td>{{ $News->name }}</td>
-                                    <td>{{ $News->title }}</td>
+                                    <td>{{ $Page->id }}</td>
+                                    <td>{{ $Page->name }}</td>
+                                    <td>{{ $Page->title }}</td>
                                     <td>
-                                        <a href="/dashboard/news/add/{{ $News->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
-                                        <a href="/dashboard/news/destroy/{{ $News->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
+                                        <a href="/dashboard/page/restore/{{ $Page->id }}" class="btn btn-success"><span class="fa fa-reply"></span> </a>
+                                        <a href="/dashboard/page/unset/{{ $Page->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -54,7 +55,7 @@
                             </tfoot>
 
                         </table>
-                        {!! $NewsList->render() !!}
+                        {!! $PageList->render() !!}
                     </div><!-- /.box-body -->
                 </div><!-- /.box -->
 

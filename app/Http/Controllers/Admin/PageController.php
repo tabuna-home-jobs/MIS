@@ -9,6 +9,7 @@ use Session;
 use App\Http\Requests\PageRequest;
 
 
+
 class PageController extends Controller {
 
     public function __construct()
@@ -29,6 +30,29 @@ class PageController extends Controller {
         $page = Page::find($page);
 
         return view("dashboard/page/pagesCrud", ['Page' => $page ]);
+    }
+
+
+    public function getTrash()
+    {
+        $PageList = Page::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+        return view("dashboard/page/trash", ['PageList' => $PageList]);
+    }
+
+
+    public  function  getRestore($page = null)
+    {
+        Page::withTrashed()->find($page)->restore();
+        Session::flash('good', 'Вы успешно востановили запись');
+        return redirect()->route('page');
+    }
+
+
+    public  function  getUnset($page = null)
+    {
+        Page::withTrashed()->find($page)->forceDelete();
+        Session::flash('good', 'Вы успешно окончательно удалили запись');
+        return redirect()->route('page');
     }
 
     //Добовление и изменение данных

@@ -57,6 +57,22 @@ class SharesController extends Controller {
 
 
 
+    public function getTrash()
+    {
+        $PageList = Shares::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+        return view("dashboard/page/trash", ['PageList' => $PageList]);
+    }
+
+
+    public  function  getRestore($page = null)
+    {
+        Shares::withTrashed()->find($page)->restore();
+        Session::flash('good', 'Вы успешно востановили запись');
+        return redirect()->route('page');
+    }
+
+
+
     //Удаление
     public function getDestroy($page = null)
     {
@@ -66,7 +82,12 @@ class SharesController extends Controller {
         return redirect()->route('share');
     }
 
-
+    public  function  getUnset($page = null)
+    {
+        Shares::withTrashed()->find($page)->forceDelete();
+        Session::flash('good', 'Вы успешно окончательно удалили запись');
+        return redirect()->route('share');
+    }
 
 
 }

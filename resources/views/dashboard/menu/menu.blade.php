@@ -7,7 +7,6 @@
     <section class="content-header">
         <h1>
             Меню сайта
-            <small><a href="/dashboard/menu/add">Добавить новую</a></small>
         </h1>
     </section>
 
@@ -17,7 +16,10 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Дерево</h3>
+                        <h3 class="box-title">
+                            <a href="/dashboard/menu/add/" class="btn btn-link btn-sm"><span class="fa fa-plus"></span> Добавить новую запись </a>
+                            <a href="/dashboard/menu/trash/" class="btn btn-link btn-sm"><span class="fa fa-trash"></span> Корзина </a>
+                        </h3>
                     </div><!-- /.box-header -->
                     <div class="box-body">
 
@@ -36,12 +38,10 @@
                                     <td>{{ $li->id }}</td>
                                     <td>{{ $li->name }}</td>
 
-
-
                                         <td>
-                                        <a href="/dashboard/news/add/{{ $li->id }}" class="btn btn-primary"><span class="fa fa-plus"></span> </a>
-                                        <a href="/dashboard/news/add/{{ $li->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
-                                        <a href="/dashboard/news/destroy/{{ $li->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
+                                        <a href="/dashboard/menu/add/{{ $li->id }}" class="btn btn-primary"><span class="fa fa-plus"></span> </a>
+                                        <a href="/dashboard/menu/add/{{ $li->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
+                                        <a href="/dashboard/menu/destroy/{{ $li->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
                                     </td>
                                 </tr>
                             @endforeach
