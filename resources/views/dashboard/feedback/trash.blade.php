@@ -21,9 +21,9 @@
                     </div>
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#"><i class="fa fa-inbox"></i> Входящее</a></li>
-                            <li><a href="#"><i class="fa fa-file-text-o"></i> Не прочитанные</a></li>
-                            <li><a href="#"><i class="fa fa-envelope-o"></i> Исходящие</a></li>
+                            <li><a href="/dashboard/feedback"><i class="fa fa-inbox"></i> Входящее</a></li>
+                            <li><a href="/dashboard/feedback/noready"><i class="fa fa-file-text-o"></i> Не прочитанные</a></li>
+                            <li><a href="/dashboard/feedback/send"><i class="fa fa-envelope-o"></i> Исходящие</a></li>
                             <li class="active"><a href="/dashboard/feedback/trash/"><i class="fa fa-trash-o"></i> Корзина</a></li>
                         </ul>
                     </div><!-- /.box-body -->

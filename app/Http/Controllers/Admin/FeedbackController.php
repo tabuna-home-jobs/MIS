@@ -27,6 +27,16 @@ class FeedbackController extends Controller {
     }
 
 
+    public function getView($Feedback = null)
+    {
+        $Feedback = Feedback::find($Feedback);
+        $Feedback->read = true;
+        $Feedback->save();
+        return view("dashboard/feedback/view",['Feedback' => $Feedback ]);
+    }
+
+
+
     public  function  getRestore($Feedback = null)
     {
         Feedback::withTrashed()->find($Feedback)->restore();
