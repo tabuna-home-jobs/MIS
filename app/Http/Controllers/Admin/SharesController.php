@@ -6,7 +6,7 @@ use Request;
 use Redirect;
 use Validator;
 use Session;
-
+use App\Http\Requests\SharesRequest;
 
 
 class SharesController extends Controller {
@@ -31,32 +31,22 @@ class SharesController extends Controller {
     }
 
     //Добовление и изменение данных
-    public function postIndex()
+    public function postIndex(SharesRequest $request)
     {
 
-        Validator::make(Request::all(), [
-            'id' => 'integer',
-            'title' => 'max:255',
-            'name' => 'required|unique|max:255',
-            'content' => 'required',
-            'tag' => 'max:255',
-            'descript' => 'max:255',
-        ]);
-        $input = Request::all();
-
-        if(isset($input['id']))
-            $page = Shares::find($input['id']);
+        if(!is_null($request->id))
+            $page = Shares::find($request->id);
         else
             $page = new Shares();
 
-        $page->title = $input['title'];
-        $page->name = $input['name'];
-        $page->content = $input['content'];
-        $page->tag = $input['tag'];
-        $page->descript = $input['descript'];
-        $page->avatar = $input['avatar'];
-        $page->start = $input['start'];
-        $page->end = $input['end'];
+        $page->title =$request->title;
+        $page->name = $request->name;
+        $page->content = $request->content;
+        $page->tag = $request->tag;
+        $page->descript = $request->descript;
+        $page->avatar = $request->avatar;
+        $page->start = $request->start;
+        $page->end = $request->end;
         $page->ids = Session::get('website');
         $page->save();
 

@@ -37,12 +37,6 @@
                                     <td>{{ $li->name }}</td>
 
 
-                                @forelse(//Menu::find($li->id)->MenuElement()->get as $sub)
-                                    <li>{{ //$sub->name }}</li>
-                                @empty
-                                    <p>No users</p>
-                                @endforelse
-
 
                                         <td>
                                         <a href="/dashboard/news/add/{{ $li->id }}" class="btn btn-primary"><span class="fa fa-plus"></span> </a>

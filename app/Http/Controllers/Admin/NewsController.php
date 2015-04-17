@@ -6,7 +6,7 @@ use Request;
 use Redirect;
 use Validator;
 use Session;
-
+use App\Http\Requests\NewsRequest;
 
 
 class NewsController extends Controller {
@@ -32,30 +32,20 @@ class NewsController extends Controller {
     }
 
     //Добовление и изменение данных
-    public function postIndex()
+    public function postIndex(NewsRequest $request)
     {
-        Validator::make(Request::all(), [
-            'id' => 'integer',
-            'title' => 'max:255',
-            'name' => 'required|unique|max:255',
-            'content' => 'required',
-            'tag' => 'max:255',
-            'descript' => 'max:255',
-            'avatar' => 'max:255'
-        ]);
-        $input = Request::all();
 
-        if(isset($input['id']))
-            $news = News::find($input['id']);
+        if(!is_null($request->id))
+            $news = News::find($request->id);
         else
             $news = new News();
 
-        $news->title = $input['title'];
-        $news->name = $input['name'];
-        $news->content = $input['content'];
-        $news->tag = $input['tag'];
-        $news->avatar = $input['avatar'];
-        $news->descript = $input['descript'];
+        $news->title = $request->title;
+        $news->name = $request->name;
+        $news->content = $request->content;
+        $news->tag = $request->tag;
+        $news->avatar = $request->avatar;
+        $news->descript = $request->descript;
         $news->ids = Session::get('website');
         $news->save();
 

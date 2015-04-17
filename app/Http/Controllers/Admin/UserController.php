@@ -6,6 +6,7 @@ use Request;
 use Redirect;
 use Validator;
 use Session;
+use App\Http\Requests\UserRequest;
 
 class UserController extends Controller {
 
@@ -50,22 +51,17 @@ class UserController extends Controller {
 
 
     //Добовление и изменение данных
-    public function postIndex()
+    public function postIndex(UserRequest $request)
     {
-        Validator::make(Request::all(), [
-            'id' => 'integer',
-            'email' => 'required|unique|max:255',
-            'name' => 'required|max:255',
-        ]);
-        $input = Request::all();
 
-        if(isset($input['id']))
-            $user = User::find($input['id']);
+
+        if(!is_null($request->id))
+            $user = User::find($request->id);
         else
             $user = new User();
 
-        $user->name = $input['name'];
-        $user->email = $input['email'];
+        $user->name = $request->name;
+        $user->email = $request->email;
         $user->save();
 
         //Флеш сообщение

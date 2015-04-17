@@ -6,7 +6,7 @@ use Request;
 use Redirect;
 use Validator;
 use Session;
-
+use App\Http\Requests\PageRequest;
 
 
 class PageController extends Controller {
@@ -32,29 +32,19 @@ class PageController extends Controller {
     }
 
     //Добовление и изменение данных
-    public function postIndex()
+    public function postIndex(PageRequest $request)
     {
 
-	    Validator::make(Request::all(), [
-            'id' => 'integer',
-		    'title' => 'max:255',
-		    'name' => 'required|unique|max:255',
-		    'content' => 'required',
-		    'tag' => 'max:255',
-		    'descript' => 'max:255',
-	    ]);
-        $input = Request::all();
-
-        if(isset($input['id']))
-            $page = Page::find($input['id']);
+        if(!is_null($request->id))
+            $page = Page::find($request->id);
         else
             $page = new Page();
 
-        $page->title = $input['title'];
-        $page->name = $input['name'];
-        $page->content = $input['content'];
-        $page->tag = $input['tag'];
-        $page->descript = $input['descript'];
+        $page->title = $request->title;
+        $page->name = $request->name;
+        $page->content = $request->content;
+        $page->tag = $request->tag;
+        $page->descript = $request->descript;
         $page->ids = Session::get('website');
         $page->save();
 

@@ -338,6 +338,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content-wrapper">
 
         <div class="box-body">
+
+
         @if (Session::has('good'))
             <div class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -352,6 +354,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
         @endif
         </div>
+
+
+        @if (count($errors) > 0)
+                <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Ошибка!</strong> Пожалуйста проверте вводимые данные.<br><br>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+        @endif
+
+
+
+
 
 
         @yield('content')
