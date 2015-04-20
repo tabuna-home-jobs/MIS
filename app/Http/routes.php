@@ -68,6 +68,11 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'au
         'getIndex' => 'feedback',
     ]);
 
+    Route::controller('reviews', 'ReviewsController', [
+        'getIndex' => 'reviews',
+    ]);
+
+
     Route::controller('/', 'AdminController', [
         'getIndex' => 'admin',
     ]);

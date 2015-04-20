@@ -21,10 +21,10 @@
                     </div>
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="/dashboard/feedback"><i class="fa fa-inbox"></i> Входящее</a></li>
-                            <li><a href="/dashboard/feedback/noready"><i class="fa fa-file-text-o"></i> Не прочитанные</a></li>
+                            <li><a href="/dashboard/feedback/"><i class="fa fa-inbox"></i> Входящее</a></li>
+                            <li class="active"><a href="/dashboard/feedback/noready"><i class="fa fa-file-text-o"></i> Не прочитанные</a></li>
                             <li><a href="/dashboard/feedback/send"><i class="fa fa-envelope-o"></i> Исходящие</a></li>
-                            <li class="active"><a href="/dashboard/feedback/trash/"><i class="fa fa-trash-o"></i> Корзина</a></li>
+                            <li><a href="/dashboard/feedback/trash/"><i class="fa fa-trash-o"></i> Корзина</a></li>
                         </ul>
                     </div><!-- /.box-body -->
                 </div><!-- /. box -->
@@ -41,22 +41,21 @@
                                 <tbody>
 
                                 @forelse($Feedback as $mail )
-                                    <tr>
-                                        <td class="mailbox-name">{{ $mail->id  }}</td>
-                                        <td class="mailbox-name"><a href="/dashboard/feedback/view/">{{ $mail->fio  }}</a></td>
-                                        <td class="mailbox-subject">{{ $mail->email  }}</td>
-                                        <td class="mailbox-attachment">{{ $mail->phone  }}</td>
-                                        <td class="mailbox-date">{{ $mail->created_at  }}</td>
-                                        <td class="mailbox-name">
-                                            <a href="/dashboard/feedback/restore/{{ $mail->id }}" class="btn btn-success"><span class="fa fa-reply"></span> </a>
-                                            <a href="/dashboard/feedback/destroy/{{ $mail->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
-                                        </td>
-                                    </tr>
-                                @empty
-                                    <tr>
-                                        <td>Нет данных</td>
-                                    </tr>
-                                @endforelse
+
+
+                                        <tr class="info">
+                                            <td class="mailbox-name">{{ $mail->id  }}</td>
+                                            <td class="mailbox-name"><a href="/dashboard/feedback/view/{{ $mail->id }}">{{ $mail->fio  }}</a></td>
+                                            <td class="mailbox-subject">{{ $mail->email  }}</td>
+                                            <td class="mailbox-attachment">{{ $mail->phone  }}</td>
+                                            <td class="mailbox-date">{{ $mail->created_at  }}</td>
+                                            <td class="mailbox-name"><a href="/dashboard/feedback/destroy/{{ $mail->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a></td>
+                                        </tr>
+                                        @empty
+                                            <tr>
+                                                <td>Нет данных</td>
+                                            </tr>
+                                        @endforelse
 
                                 </tbody>
                             </table><!-- /.table -->

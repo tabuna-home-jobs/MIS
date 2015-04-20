@@ -280,7 +280,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <ul class="sidebar-menu">
                 <li class="header">Меню</li>
                 <!-- Optionally, you can add icons to the links -->
-                <li class="active"><a href="#"><span class="fa fa-bar-chart"></span> Статистика</a></li>
+                <li class="active"><a href="/dashboard/"><span class="fa fa-bar-chart"></span> Статистика</a></li>
                 <li><a href="/dashboard/page/"><span class="fa fa-file-text"></span> Страницы</a></li>
                 <li><a href="/dashboard/news/"><span class="fa fa-newspaper-o"></span> Новости</a></li>
                 <li><a href="/dashboard/shares/"><span class="fa fa-file-text"></span> Акции</a></li>
@@ -305,7 +305,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </ul>
                 </li>
 
-                <li><a href="#"><span class="fa fa-file-text"></span> Отзывы</a></li>
+                <li><a href="/dashboard/reviews"><span class="fa fa-file-text"></span> Отзывы</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-book"></span> Энциклопедия</a></li>
 
 

@@ -18,6 +18,7 @@ class CreateSitesTable extends Migration {
             $table->string('name');
             $table->string('domen');
             $table->string('pre');
+            $table->string('email');
             $table->timestamps();
             $table->softDeletes();
 		});

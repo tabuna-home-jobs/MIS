@@ -14,7 +14,7 @@
         <section class="content">
             <div class="row">
                 <div class="col-md-3">
-                    <a href="compose.html" class="btn btn-primary btn-block margin-bottom">Написать</a>
+                    <a href="/dashboard/feedback/send" class="btn btn-primary btn-block margin-bottom">Написать</a>
                     <div class="box box-solid">
                         <div class="box-header with-border">
                                 <h3 class="box-title">Папки</h3>

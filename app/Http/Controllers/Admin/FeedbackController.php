@@ -2,13 +2,14 @@
 
 use App\Http\Controllers\Controller;
 
+use App\Http\Requests\FeedBackSendRequests;
 use App\Models\Feedback;
 use Request;
 use Redirect;
 use Validator;
 use Session;
 use Mail;
-
+use App\Models\Sites;
 
 class FeedbackController extends Controller {
 
@@ -35,6 +36,11 @@ class FeedbackController extends Controller {
         return view("dashboard/feedback/view",['Feedback' => $Feedback ]);
     }
 
+
+    public function getNoready(){
+        $Feedback = Feedback::whereRaw('ids = ? and read = ?', [Session::get('website'), false])->orderBy('id', 'desc')->paginate(15);
+        return view("dashboard/feedback/noready", ['Feedback' => $Feedback]);
+    }
 
 
     public  function  getRestore($Feedback = null)
@@ -67,6 +73,28 @@ class FeedbackController extends Controller {
     }
 
 
+
+    public  function  getSend($Email= null)
+    {
+        $Feedback = Feedback::whereRaw('ids = ? and id = ?', [Session::get('website'), $Email])->first();
+        return view("dashboard/feedback/send", ['Feedback' => $Feedback]);
+    }
+
+
+    public  function postSend(FeedBackSendRequests $request)
+    {
+        $sites = Sites::find( Session::get('website' ) );
+
+        Mail::raw($request->contentmess, function($message) use ($sites, $request)
+        {
+            $message->from($sites->email, $sites->name);
+
+            $message->to($request->email );
+        });
+        Session::flash('good', 'Вы успешно отправили письмо');
+        return redirect()->route('feedback');
+
+    }
 
 
 
