@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'AddReedToFeedbacksTable' => $baseDir . '/database/migrations/2015_04_17_132521_add_reed_to_feedbacks_table.php',
     'Cartalyst\\Sentry\\Groups\\GroupExistsException' => $vendorDir . '/cartalyst/sentry/src/Cartalyst/Sentry/Groups/Exceptions.php',
     'Cartalyst\\Sentry\\Groups\\GroupNotFoundException' => $vendorDir . '/cartalyst/sentry/src/Cartalyst/Sentry/Groups/Exceptions.php',
     'Cartalyst\\Sentry\\Groups\\NameRequiredException' => $vendorDir . '/cartalyst/sentry/src/Cartalyst/Sentry/Groups/Exceptions.php',
@@ -26,6 +25,7 @@ return array(
     'CreateMenuTable' => $baseDir . '/database/migrations/2015_04_15_105754_create_menu_table.php',
     'CreateMenuelementTable' => $baseDir . '/database/migrations/2015_04_15_110950_create_menuelement_table.php',
     'CreateNewsTable' => $baseDir . '/database/migrations/2015_04_09_071429_create_news_table.php',
+    'CreateOptionsTable' => $baseDir . '/database/migrations/2015_04_20_140259_create_options_table.php',
     'CreatePagesTable' => $baseDir . '/database/migrations/2015_04_09_071246_create_pages_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateQuestionsTable' => $baseDir . '/database/migrations/2015_04_09_071437_create_questions_table.php',
