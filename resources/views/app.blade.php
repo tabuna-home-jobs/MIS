@@ -8,6 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta charset="UTF-8">
     <title>Панель управления| МИС</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="token" content="{{ csrf_token() }}" >
     <!-- Bootstrap 3.3.2 -->
     <link href="{{ asset('/admin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->
@@ -34,7 +35,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 
 
-<body class="skin-blue layout-boxed">
+
+    @if('show' == Session::get('Sidebar', 'show'))
+        <body class="skin-blue layout-boxed">
+    @else
+        <body class="skin-blue layout-boxed sidebar-collapse">
+    @endif
+
 <div class="wrapper">
 
     <!-- Main Header -->
@@ -46,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Header Navbar -->
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <a href="#" class="sidebar-toggle" id="sidebarcollapse" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Навигация</span>
             </a>
             <!-- Navbar Right Menu -->

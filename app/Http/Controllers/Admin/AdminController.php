@@ -23,6 +23,19 @@ class AdminController extends Controller {
     }
 
 
+    // Запонимание положение сайтбара
+    public function postSidebar()
+    {
+        $value = Session::get('Sidebar', 'show');
+        if($value == 'show')
+            Session::put('Sidebar', 'hide');
+        else
+            Session::put('Sidebar', 'show');
+
+    }
+
+
+
 
 
 }

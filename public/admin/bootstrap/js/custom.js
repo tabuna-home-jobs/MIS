@@ -56,6 +56,25 @@ $(document).ready(function(){
     });
 
 
+
+
+
+    // Запонимание положения сайт бара
+    $( "#sidebarcollapse" ).click(function() {
+        $.ajax({
+            type: "post",
+            url: '/dashboard/sidebar',
+            beforeSend: function(request) {
+                return request.setRequestHeader('X-CSRF-Token', $("meta[name='token']").attr('content'));
+            }
+        });
+    });
+
+
+
+
 });
+
+
 
 
