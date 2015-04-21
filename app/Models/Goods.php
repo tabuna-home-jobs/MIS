@@ -1,9 +1,9 @@
-<?php namespace App;
+<?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Catalog extends Model {
+class Goods extends Model {
 
     use SoftDeletes;
     /**
@@ -18,7 +18,7 @@ class Catalog extends Model {
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'content', 'avatar', 'price', 'idcat', 'ids', 'tag', 'descript'];
+    protected $fillable = ['title', 'name', 'content', 'avatar', 'price', 'category_id', 'ids', 'tag', 'descript'];
 
 
 

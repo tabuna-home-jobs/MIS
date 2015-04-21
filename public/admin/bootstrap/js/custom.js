@@ -72,9 +72,14 @@ $(document).ready(function(){
 
 
 
+    // Быстрый поиск на странице
+    $(function () {
+        $( 'table' ).searchable({
+            striped: true,
+            searchType: 'fuzzy'
+        });
+    });
+
 
 });
-
-
-
 

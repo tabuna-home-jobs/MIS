@@ -16,3 +16,11 @@ body.modal-open {
     background-position: left, right;
     background-attachment: fixed;
 }
+
+
+.direct-chat-messages{
+    height: 500px!important;
+}
+.direct-chat-contacts{
+    height: 500px!important;
+}

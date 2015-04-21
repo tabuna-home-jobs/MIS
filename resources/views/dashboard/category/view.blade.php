@@ -4,8 +4,7 @@
 
     <section class="content-header">
         <h1>
-           {{ $Page->name or 'Новая страница' }}
-            <small>Добавить новую страницу</small>
+            {{ $Category->name or 'Новая Категория' }}
         </h1>
     </section>
 
@@ -28,42 +27,51 @@
 
 
 
-                            <form action="/dashboard/page" method="post" class="row">
+                        <form action="/dashboard/category" method="post" class="row">
 
-                                @if(isset($Page->id))
-                                    <input type="hidden" name="id" value="{{$Page->id}}">
-                                @endif
+                            @if(isset($Category->id))
+                                <input type="hidden" name="id" value="{{$Category->id}}">
+                            @endif
 
 
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Заголовок</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="title" value="{{$Page->title or ''}}">
+                                    <input class="form-control" type="text" maxlength="255" required name="title" value="{{$Category->title or ''}}">
                                 </div>
                                 <div class="form-group">
                                     <label>Имя</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="name" value="{{$Page->name or ''}}">
+                                    <input class="form-control" type="text" maxlength="255" required name="name" value="{{$Category->name or ''}}">
                                 </div>
                                 <div class="form-group">
                                     <label>Теги</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="tag" value="{{$Page->tag or ''}}">
+                                    <input class="form-control" type="text" maxlength="255" required name="tag" value="{{$Category->tag or ''}}">
                                 </div>
                                 <div class="form-group">
                                     <label>Описание</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="descript" value="{{$Page->descript or ''}}">
+                                    <input class="form-control" type="text" maxlength="255" required name="descript" value="{{$Category->descript or ''}}">
+                                </div>
+                                <div class="form-group">
+                                    <label>Миниатюра</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="glyphicon glyphicon-picture"></i>
+                                        </div>
+                                        <input class="form-control" type="text" maxlength="255" required name="avatar" value="{{$Category->avatar or ''}}">
+                                    </div><!-- /.input group -->
                                 </div>
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <button type="submit" class="btn btn-default">Отправить</button>
                             </div>
 
-                                    <div class="col-md-8">
-                                        <div class="form-group">
-                                            <label>Содержание</label>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label>Содержание</label>
                                     <textarea class="textarea textareaedit" name="content" rows="30">
-                                        {!! $Page->content or '' !!}
+                                        {!! $Category->text or '' !!}
                                     </textarea>
-                                        </div>
-                                    </div>
+                                </div>
+                            </div>
 
 
                         </form>

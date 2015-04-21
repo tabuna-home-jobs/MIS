@@ -43,7 +43,7 @@
                                 @forelse($Feedback as $mail )
                                     <tr>
                                         <td class="mailbox-name">{{ $mail->id  }}</td>
-                                        <td class="mailbox-name"><a href="/dashboard/feedback/view/">{{ $mail->fio  }}</a></td>
+                                        <td class="mailbox-name">{{ $mail->fio  }}</td>
                                         <td class="mailbox-subject">{{ $mail->email  }}</td>
                                         <td class="mailbox-attachment">{{ $mail->phone  }}</td>
                                         <td class="mailbox-date">{{ $mail->created_at  }}</td>

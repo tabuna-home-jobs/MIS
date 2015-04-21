@@ -200,7 +200,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <span class="label label-danger">9</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="header">You have 9 tasks</li>
+                            <li class="header">У Вас 9 задач</li>
                             <li>
                                 <!-- Inner menu: contains the tasks -->
                                 <ul class="menu">
@@ -208,14 +208,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <a href="#">
                                             <!-- Task title and progress text -->
                                             <h3>
-                                                Design some buttons
+                                                Кнопка
                                                 <small class="pull-right">20%</small>
                                             </h3>
                                             <!-- The progress bar -->
                                             <div class="progress xs">
                                                 <!-- Change the css width attribute to simulate progress -->
                                                 <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">20% Complete</span>
+                                                    <span class="sr-only">20% Завершено</span>
                                                 </div>
                                             </div>
                                         </a>
@@ -223,19 +223,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </ul>
                             </li>
                             <li class="footer">
-                                <a href="#">View all tasks</a>
+                                <a href="#">Смотреть всё</a>
                             </li>
                         </ul>
                     </li>
-
-
-
-
-
-
-
-
-
 
 
                     <li class=" tasks-menu">
@@ -243,14 +234,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                            <i class="fa fa-sign-out"></i>
                         </a>
                     </li>
-
-
-
-
-
-
-
-
 
 
                 </ul>
@@ -275,7 +258,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- search form (Optional) -->
             <form action="#" method="get" class="sidebar-form">
                 <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Поиск..."/>
+                    <input type="text" name="q" class="form-control" type="search" id="search" placeholder="Поиск..."/>
               <span class="input-group-btn">
                 <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
               </span>
@@ -298,7 +281,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li class="treeview">
                     <a href="#"><span class="fa fa-shopping-cart"></span> Каталог <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#"><span class="fa fa-suitcase"></span> Категории</a></li>
+                        <li><a href="/dashboard/category/"><span class="fa fa-suitcase"></span> Категории</a></li>
                         <li><a href="#"><span class="fa fa-stethoscope"></span> Услуги</a></li>
                         <li><a href="#"><span class="fa fa-file-text"></span> Комментарии</a></li>
                     </ul>
@@ -327,14 +310,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </li>
 
 
-                <li><a href="/dashboard/user"><span class="fa fa-user"></span> Пользователи</a></li>
 
+
+                <li><a href="/dashboard/user"><span class="fa fa-user"></span> Пользователи</a></li>
+                <li><a href="/dashboard/chat"><span class="fa fa-users"></span> Консультант</a></li>
 
                 <li class="treeview">
                     <a href="#"><span class="fa fa-cog"></span> Настройки <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Настройки сайта №1</a></li>
-                        <li><a href="#">Настройки сайта №2</a></li>
+
+
+                        @foreach(Sites::get() as $site)
+                            <li><!-- start notification -->
+                                <a href="#">{{$site->name}}</a>
+                            </li><!-- end notification -->
+                        @endforeach
+
                     </ul>
                 </li>
             </ul><!-- /.sidebar-menu -->
@@ -413,6 +404,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 
+    <script src="{{asset('/admin/bootstrap/js/search.js')}}" type="text/javascript"></script>
+
+
+
 <script src="{{asset('/admin/bootstrap/js/custom.js')}}" type="text/javascript"></script>
 
 
@@ -420,7 +415,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--  TinyMCE -->
 <script src="{{asset('/admin/plugins/tinymce/tinymce.min.js')}}" type="text/javascript"></script>
-
 
 
 

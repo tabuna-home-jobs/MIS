@@ -5,8 +5,7 @@
 
     <section class="content-header">
         <h1>
-            Это главная страница админки
-            <small>На ней будет статистика</small>
+            Статистика
         </h1>
     </section>
 

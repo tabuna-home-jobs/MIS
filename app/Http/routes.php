@@ -72,6 +72,13 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'au
         'getIndex' => 'reviews',
     ]);
 
+    Route::controller('category', 'CategoryController', [
+        'getIndex' => 'category',
+    ]);
+
+    Route::controller('chat', 'ChatController', [
+        'getIndex' => 'chat',
+    ]);
 
     Route::controller('/', 'AdminController', [
         'getIndex' => 'admin',
