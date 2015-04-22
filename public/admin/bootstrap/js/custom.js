@@ -81,5 +81,35 @@ $(document).ready(function(){
     });
 
 
+
+    //Атрибуты и их значения
+    $(function()
+    {
+        $('.glyphicon.btn-remove.glyphicon-minus').last().removeClass('btn-remove glyphicon-minus').addClass('glyphicon-plus btn-add');
+
+        $(document).on('click', '.btn-add', function(e)
+        {
+            e.preventDefault();
+
+            var controlForm = $('.controls form:first'),
+                currentEntry = $(this).parents('.entry:first'),
+                newEntry = $(currentEntry.clone()).appendTo('#GoodsAttr');
+
+            newEntry.find('input').val('');
+            controlForm.find('.entry:not(:last) .btn-add')
+                .removeClass('btn-add').addClass('btn-remove')
+                .removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        }).on('click', '.btn-remove', function(e)
+        {
+            $(this).parents('.entry:first').remove();
+
+            e.preventDefault();
+            return false;
+        });
+    });
+
+
+
+
 });
 

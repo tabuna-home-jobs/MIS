@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class FeedBackSend extends Request {
+class GoodsRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -21,15 +21,16 @@ class FeedBackSend extends Request {
 	 */
 	public function rules()
 	{
-		return [
+        return [
             'id' => 'integer',
             'title' => 'required|max:255',
             'name' => 'required|max:255',
-            'content' => 'required',
+            'text' => 'required',
             'tag' => 'max:255',
             'descript' => 'max:255',
-            'avatar' => 'max:255'
-		];
+            'avatar' => 'max:255',
+            'price' => 'integer'
+        ];
 	}
 
 }

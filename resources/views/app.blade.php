@@ -282,13 +282,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <a href="#"><span class="fa fa-shopping-cart"></span> Каталог <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="/dashboard/category/"><span class="fa fa-suitcase"></span> Категории</a></li>
-                        <li><a href="#"><span class="fa fa-stethoscope"></span> Услуги</a></li>
+                        <li><a href="/dashboard/goods/"><span class="fa fa-stethoscope"></span> Услуги</a></li>
                         <li><a href="#"><span class="fa fa-file-text"></span> Комментарии</a></li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><span class="glyphicon glyphicon-info-sign"></span> Вопросы и ответы <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><span class="glyphicon glyphicon-info-sign"></span> Опросы <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="#"><span class="fa fa-question"></span>Вопросы</a></li>
                         <li><a href="#"><span class="fa fa-pie-chart"></span>Статистика</a></li>

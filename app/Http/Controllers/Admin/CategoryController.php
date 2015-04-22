@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Session;
+use App\Http\Requests\CategoryRequest;
 
 class CategoryController extends Controller {
 
@@ -25,6 +26,36 @@ class CategoryController extends Controller {
         $Category = Category::find($Category);
         return view("dashboard/category/view",['Category' => $Category ]);
     }
+
+
+    //Добовление и изменение данных
+    public function postIndex(CategoryRequest $request)
+    {
+
+        if(!is_null($request->id))
+            $Category = Category::find($request->id);
+        else
+            $Category = new Category();
+
+        $Category->title = $request->title;
+        $Category->name = $request->name;
+        $Category->text = $request->text;
+        $Category->tag = $request->tag;
+        $Category->avatar = $request->avatar;
+        $Category->descript = $request->descript;
+        $Category->ids = Session::get('website');
+        $Category->save();
+
+        //Флеш сообщение
+        Session::flash('good', 'Вы успешно изменили значения');
+        return redirect()->route('category');
+    }
+
+
+
+
+
+
 
     public  function  getRestore($Category = null)
     {

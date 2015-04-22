@@ -24,3 +24,7 @@ body.modal-open {
 .direct-chat-contacts{
     height: 500px!important;
 }
+
+.btn-add , .btn-remove{
+    cursor: pointer;
+}

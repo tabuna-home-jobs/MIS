@@ -37,8 +37,8 @@
 
                         </div>
                         <div class="box-tools pull-right">
-                            <span data-toggle="tooltip" title="3 New Messages" class='badge bg-yellow'>3</span>
-                            <button class="btn btn-box-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle"><i class="fa fa-comments"></i></button>
+                            <span data-toggle="tooltip" title="3 Новых сообщения" class='badge bg-yellow'>3</span>
+                            <button class="btn btn-box-tool" data-toggle="tooltip" title="Чаты" data-widget="chat-pane-toggle"><i class="fa fa-comments"></i></button>
                         </div>
                     </div><!-- /.box-header -->
                     <div class="box-body">
@@ -59,7 +59,7 @@
                             <!-- Message to the right -->
                             <div class="direct-chat-msg right">
                                 <div class='direct-chat-info clearfix'>
-                                    <span class='direct-chat-name pull-right'>Sarah Bullock</span>
+                                    <span class='direct-chat-name pull-right'>Александр</span>
                                     <span class='direct-chat-timestamp pull-left'>2015-04-21 16:06:24</span>
                                 </div><!-- /.direct-chat-info -->
                                 <img class="direct-chat-img" src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="message user image" /><!-- /.direct-chat-img -->
@@ -106,7 +106,7 @@
                               Count Dracula
                               <small class='contacts-list-date pull-right'>2/28/2015</small>
                             </span>
-                                            <span class='contacts-list-msg'>How have you been? I was...</span>
+                                            <span class='contacts-list-msg'>RESTful ресурс-контроллеры...</span>
                                         </div><!-- /.contacts-list-info -->
                                     </a>
                                 </li><!-- End Contact Item -->
@@ -118,7 +118,7 @@
                               Sarah Doe
                               <small class='contacts-list-date pull-right'>2/23/2015</small>
                             </span>
-                                            <span class='contacts-list-msg'>I will be waiting for...</span>
+                                            <span class='contacts-list-msg'>RESTful ресурс-контроллеры...</span>
                                         </div><!-- /.contacts-list-info -->
                                     </a>
                                 </li><!-- End Contact Item -->
@@ -130,7 +130,7 @@
                               Nadia Jolie
                               <small class='contacts-list-date pull-right'>2/20/2015</small>
                             </span>
-                                            <span class='contacts-list-msg'>I'll call you back at...</span>
+                                            <span class='contacts-list-msg'>RESTful ресурс-контроллеры...</span>
                                         </div><!-- /.contacts-list-info -->
                                     </a>
                                 </li><!-- End Contact Item -->
@@ -142,7 +142,7 @@
                               Nora S. Vans
                               <small class='contacts-list-date pull-right'>2/10/2015</small>
                             </span>
-                                            <span class='contacts-list-msg'>Where is your new...</span>
+                                            <span class='contacts-list-msg'>RESTful ресурс-контроллеры...</span>
                                         </div><!-- /.contacts-list-info -->
                                     </a>
                                 </li><!-- End Contact Item -->
@@ -154,7 +154,7 @@
                               John K.
                               <small class='contacts-list-date pull-right'>1/27/2015</small>
                             </span>
-                                            <span class='contacts-list-msg'>Can I take a look at...</span>
+                                            <span class='contacts-list-msg'>RESTful ресурс-контроллеры...</span>
                                         </div><!-- /.contacts-list-info -->
                                     </a>
                                 </li><!-- End Contact Item -->
@@ -166,7 +166,7 @@
                               Kenneth M.
                               <small class='contacts-list-date pull-right'>1/4/2015</small>
                             </span>
-                                            <span class='contacts-list-msg'>Never mind I found...</span>
+                                            <span class='contacts-list-msg'>RESTful ресурс-контроллеры...</span>
                                         </div><!-- /.contacts-list-info -->
                                     </a>
                                 </li><!-- End Contact Item -->
@@ -178,7 +178,7 @@
                             <div class="input-group">
                                 <input type="text" name="message" placeholder="Ваше сообщение ..." class="form-control"/>
                       <span class="input-group-btn">
-                        <button type="button" class="btn btn-primary btn-flat">Send</button>
+                        <button type="button" class="btn btn-primary btn-flat">Отправить</button>
                       </span>
                             </div>
                         </form>

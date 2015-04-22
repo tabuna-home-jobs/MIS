@@ -6,7 +6,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Категории
+            Услуги
         </h1>
     </section>
 
@@ -18,8 +18,7 @@
                     <div class="box-header">
                         <h3 class="box-title">
                             <h5 class="box-title">
-                                <a href="/dashboard/category/add/" class="btn btn-link btn-sm"><span class="fa fa-plus"></span> Добавить новую запись </a>
-                                <a href="/dashboard/category/trash/" class="btn btn-link btn-sm"><span class="fa fa-trash"></span> Корзина </a>
+                                <a href="/dashboard/goods/" class="btn btn-link btn-sm"><span class="fa fa-check"></span> Активные </a>
                             </h5>
                         </h3>
                     </div><!-- /.box-header -->
@@ -30,19 +29,20 @@
                                 <th>#</th>
                                 <th>Миниатюра</th>
                                 <th>Имя</th>
+                                <th>Категория</th>
                                 <th>Управление</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach ($Category as $Cat)
+                            @foreach ($Goods as $good)
                                 <tr>
-                                    <td>{{ $Cat->id }}</td>
-                                    <td><img src="{{ $Cat->avatar }}" class="img-responsive" width="100px" height="50px"></td>
-                                    <td>{{ $Cat->name }}</td>
+                                    <td>{{ $good->id }}</td>
+                                    <td><img src="{{ $good->avatar }}" class="img-responsive" width="100px" height="50px"></td>
+                                    <td>{{ $good->name }}</td>
+                                    <td>{{ $good->category()->first()->name }}</td>
                                     <td>
-                                        <a href="/dashboard/category/add/{{ $Cat->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
-                                        <a href="/dashboard/goods/category/{{ $Cat->id }}" class="btn btn-info"><span class="glyphicon glyphicon-list-alt"></span> </a>
-                                        <a href="/dashboard/category/destroy/{{ $Cat->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
+                                        <a href="/dashboard/goods/restore/{{ $good->id }}" class="btn btn-success"><span class="fa fa-reply"></span> </a>
+                                        <a href="/dashboard/goods/unset/{{ $good->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -52,12 +52,13 @@
                                 <th>#</th>
                                 <th>Миниатюра</th>
                                 <th>Имя</th>
+                                <th>Категория</th>
                                 <th>Управление</th>
                             </tr>
                             </tfoot>
 
                         </table>
-                        {!! $Category->render() !!}
+                        {!! $Goods->render() !!}
                     </div><!-- /.box-body -->
                 </div><!-- /.box -->
 

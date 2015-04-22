@@ -34,13 +34,13 @@
 
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="status"  value="1"  @if($Reviews->status) checked @endif >
+                                    <input type="radio" name="status"  value="1"  @if($Reviews->publish) checked @endif >
                                    Опубликован
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="status" value="0" @if(!$Reviews->status) checked @endif>
+                                    <input type="radio" name="status" value="0" @if(!$Reviews->publish) checked @endif>
                                     Не опубликован
                                 </label>
                             </div>

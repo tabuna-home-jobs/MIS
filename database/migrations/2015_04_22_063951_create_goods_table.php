@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCatalogTable extends Migration {
+class CreateGoodsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,21 +12,22 @@ class CreateCatalogTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('catalog', function(Blueprint $table)
-		{
+        Schema::create('goods', function(Blueprint $table)
+        {
             $table->increments('id');
             $table->string('title');
             $table->string('name');
-            $table->text('content');
+            $table->text('text');
             $table->string('avatar');
             $table->string('tag')->nullable();
             $table->string('descript')->nullable();
-            $table->double('price')->default(0);
-            $table->integer('idcat');
             $table->integer('ids');
+            $table->integer('category_id');
+            $table->double('price');
+            $table->text('attribute')->nullable();;
             $table->timestamps();
             $table->softDeletes();
-		});
+        });
 	}
 
 	/**
@@ -36,7 +37,7 @@ class CreateCatalogTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('catalog');
+        Schema::drop('goods');
 	}
 
 }

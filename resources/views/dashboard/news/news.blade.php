@@ -26,6 +26,7 @@
                             <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Миниатюра</th>
                                 <th>Имя</th>
                                 <th>Заголовок</th>
                                 <th>Управление</th>
@@ -35,6 +36,7 @@
                             @foreach ($NewsList as $News)
                                 <tr>
                                     <td>{{ $News->id }}</td>
+                                    <td><img src="{{ $News->avatar }}" width="100px" height="50px"></td>
                                     <td>{{ $News->name }}</td>
                                     <td>{{ $News->title }}</td>
                                     <td>
@@ -47,6 +49,7 @@
                             <tfoot>
                             <tr>
                                 <th>#</th>
+                                <th>Миниатюра</th>
                                 <th>Имя</th>
                                 <th>Заголовок</th>
                                 <th>Управление</th>

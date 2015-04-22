@@ -11,16 +11,19 @@ class Goods extends Model {
      *
      * @var string
      */
-    protected $table = 'catalog';
+    protected $table = 'goods';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'content', 'avatar', 'price', 'category_id', 'ids', 'tag', 'descript'];
+    protected $fillable = ['title', 'name', 'content', 'avatar', 'price', 'category_id', 'ids', 'tag', 'descript', 'price', 'attribute'];
 
-
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category');
+    }
 
 
 

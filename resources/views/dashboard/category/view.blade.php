@@ -67,7 +67,7 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label>Содержание</label>
-                                    <textarea class="textarea textareaedit" name="content" rows="30">
+                                    <textarea class="textarea textareaedit" name="text" rows="30">
                                         {!! $Category->text or '' !!}
                                     </textarea>
                                 </div>
