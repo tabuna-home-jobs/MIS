@@ -29,7 +29,8 @@ class GoodsRequest extends Request {
             'tag' => 'max:255',
             'descript' => 'max:255',
             'avatar' => 'max:255',
-            'price' => 'integer'
+            'price' => 'integer',
+            'category'=> 'integer'
         ];
 	}
 

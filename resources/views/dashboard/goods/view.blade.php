@@ -2,11 +2,18 @@
 
 @section('content')
 
+
+
+
+
     <section class="content-header">
         <h1>
             {{ $Goods->name or 'Новая Услуга' }}
         </h1>
     </section>
+
+
+
 
     <!-- Main content -->
     <section class="content">
@@ -62,6 +69,31 @@
                                     </div><!-- /.input group -->
                                 </div>
 
+                                <div class="form-group">
+                                    <label>Категория</label>
+                                <select class="form-control" required name="category">
+                                    <option disabled>Выберите категорию</option>
+
+                                    @foreach($Category as $cat)
+
+
+                                        @if(isset($Goods->category_id))
+                                            @if($Goods->category_id == $cat->id)
+                                                <option value="{{ $cat->id}}" selected>{{ $cat->name}}</option>
+                                            @else
+                                                <option value="{{ $cat->id}}">{{ $cat->name}}</option>
+                                            @endif
+                                        @else
+                                            <option value="{{ $cat->id}}">{{ $cat->name}}</option>
+                                        @endif
+
+
+
+                                    @endforeach
+                                </select>
+                                </div>
+
+
 
                                 <div class="form-group">
                                     <label>Цена</label>
@@ -99,11 +131,25 @@
                                             </div>
                                                     @endif
 
+                                            @empty
 
-                                        @endforeach
+                                            <div class="entry input-group row">
+                                                <div class="form-group col-md-6">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-plus btn-add"></span>
+                                                        </div>
+                                                        <input class="form-control" name="fieldsAttr[]" type="text" placeholder="Название" />
+                                                    </div><!-- /.input group -->
 
+                                                </div>
 
+                                                <div class="form-group col-md-6">
+                                                    <input class="form-control" name="fieldsAttr[]" type="text" placeholder="Значение" />
+                                                </div>
+                                            </div>
 
+                                        @endforelse
                                     @else
                                     <div class="entry input-group row">
                                         <div class="form-group col-md-6">

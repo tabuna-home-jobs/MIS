@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Goods;
 use Session;
 use App\Http\Requests\GoodsRequest;
+use App\Models\Category;
 
 class GoodsController extends Controller {
 
@@ -24,7 +25,8 @@ class GoodsController extends Controller {
     public function getAdd($Goods = null)
     {
         $Goods = Goods::find($Goods);
-        return view("dashboard/goods/view",['Goods' => $Goods ]);
+        $Category = Category::all();
+        return view("dashboard/goods/view",['Goods' => $Goods , 'Category' => $Category]);
     }
 
 
@@ -45,7 +47,11 @@ class GoodsController extends Controller {
         $Goods->descript = $request->descript;
         $Goods->ids = Session::get('website');
         $Goods->price = $request->price;
+        $Goods->category_id = $request->category;
+
+        if(!is_null($request->fieldsAttr))
         $Goods->attribute = serialize(array_filter($request->fieldsAttr));
+
         $Goods->save();
 
         //Флеш сообщение
