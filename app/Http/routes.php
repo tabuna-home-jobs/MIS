@@ -80,6 +80,10 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'au
         'getIndex' => 'goods',
     ]);
 
+    Route::controller('comments', 'CommentsController', [
+        'getIndex' => 'comments',
+    ]);
+
     Route::controller('chat', 'ChatController', [
         'getIndex' => 'chat',
     ]);

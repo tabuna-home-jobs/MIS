@@ -1,7 +1,15 @@
 <?php namespace App\Providers;
 
+use App\Models\Category;
+use App\Models\Goods;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+
+
+//ОБсерверы!
+use App\Models\Observer\GoodsObserver;
+use App\Models\Observer\CategoryObserver;
+//!обсерверы
 
 class EventServiceProvider extends ServiceProvider {
 
@@ -26,7 +34,9 @@ class EventServiceProvider extends ServiceProvider {
 	{
 		parent::boot($events);
 
-		//
+
+        Goods::observe(new GoodsObserver);
+        Category::observe(new CategoryObserver);
 	}
 
 }

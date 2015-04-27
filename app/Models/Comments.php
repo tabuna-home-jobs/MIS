@@ -18,6 +18,14 @@ class Comments extends Model {
      *
      * @var array
      */
-    protected $fillable = ['fio', 'phone', 'email', 'content', 'idc', 'ids' , 'idcsub'];
+    protected $fillable = ['fio', 'phone', 'email', 'content', 'goods_id', 'ids' , 'comments_id', 'publish'];
+
+
+    public function goods()
+    {
+        return $this->belongsTo('App\Models\Goods');
+    }
+
+
 
 }

@@ -13,6 +13,11 @@ class Goods extends Model {
      */
     protected $table = 'goods';
 
+
+    protected $casts = [
+        'attribute' => 'array',
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -25,7 +30,9 @@ class Goods extends Model {
         return $this->belongsTo('App\Models\Category');
     }
 
-
-
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comments');
+    }
 
 }

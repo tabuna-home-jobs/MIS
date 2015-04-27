@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Session;
 use App\Http\Requests\CategoryRequest;
+use App\Models\Goods;
 
 class CategoryController extends Controller {
 

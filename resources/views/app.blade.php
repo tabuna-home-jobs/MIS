@@ -283,7 +283,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <ul class="treeview-menu">
                         <li><a href="/dashboard/category/"><span class="fa fa-suitcase"></span> Категории</a></li>
                         <li><a href="/dashboard/goods/"><span class="fa fa-stethoscope"></span> Услуги</a></li>
-                        <li><a href="#"><span class="fa fa-file-text"></span> Комментарии</a></li>
+                        <li><a href="/dashboard/comments"><span class="fa fa-file-text"></span> Комментарии</a></li>
                     </ul>
                 </li>
 

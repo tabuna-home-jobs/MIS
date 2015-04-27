@@ -6,7 +6,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Услуги
+            Комментарии
         </h1>
     </section>
 
@@ -18,7 +18,7 @@
                     <div class="box-header">
                         <h3 class="box-title">
                             <h5 class="box-title">
-                                <a href="/dashboard/goods/" class="btn btn-link btn-sm"><span class="fa fa-check"></span> Активные </a>
+                                <a href="/dashboard/comments/" class="btn btn-link btn-sm"><span class="fa fa-check"></span> Активные </a>
                             </h5>
                         </h3>
                     </div><!-- /.box-header -->
@@ -27,24 +27,24 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Миниатюра</th>
-                                <th>Имя</th>
-                                <th>Категория</th>
+                                <th>ФИО</th>
+                                <th>Содержание</th>
+                                <th>Услуга</th>
                                 <th>Управление</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach ($Goods as $good)
+                            @foreach ($Comments as $Comment)
                                 <tr>
-                                    <td>{{ $good->id }}</td>
-                                    <td><img src="{{ $good->avatar }}" class="img-responsive" width="100px" height="50px"></td>
-                                    <td>{{ $good->name }}</td>
-                                    <td>{!! $good->category()->first()->name or 'Категория удалена <br><small> Для востановления записи необходимо востановить её родителя </small>' !!}</td>
+                                    <td>{{ $Comment->id }}</td>
+                                    <td>{{ $Comment->fio }}</td>
+                                    <td>{{  mb_substr($Comment->content,0,50,'utf-8') }}...</td>
+                                    <td>{!! $Comment->goods()->first()->name or 'Услуга удалена <br><small> Для востановления записи необходимо востановить её родителя </small>' !!}</td>
                                     <td>
-                                        @if(isset($good->category()->first()->name))
-                                        <a href="/dashboard/goods/restore/{{ $good->id }}" class="btn btn-success"><span class="fa fa-reply"></span> </a>
+                                        @if(isset($Comment->goods()->first()->name))
+                                            <a href="/dashboard/comments/restore/{{ $Comment->id }}" class="btn btn-success"><span class="fa fa-reply"></span> </a>
                                         @endif
-                                        <a href="/dashboard/goods/unset/{{ $good->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
+                                        <a href="/dashboard/comments/unset/{{ $Comment->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -52,15 +52,15 @@
                             <tfoot>
                             <tr>
                                 <th>#</th>
-                                <th>Миниатюра</th>
-                                <th>Имя</th>
-                                <th>Категория</th>
+                                <th>ФИО</th>
+                                <th>Содержание</th>
+                                <th>Услуга</th>
                                 <th>Управление</th>
                             </tr>
                             </tfoot>
 
                         </table>
-                        {!! $Goods->render() !!}
+                        {!! $Comments->render() !!}
                     </div><!-- /.box-body -->
                 </div><!-- /.box -->
 

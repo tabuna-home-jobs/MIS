@@ -26,7 +26,7 @@ class Category extends Model {
     //Связь категории с товаром
     public function goods()
     {
-        return $this->hasMany('Goods');
+        return $this->hasMany('App\Models\Goods');
     }
 
     //Обратная Зависимость от сайта

@@ -19,9 +19,10 @@ class CreateCommentsTable extends Migration {
             $table->integer('phone');
             $table->string('email');
             $table->text('content');
-            $table->integer('idc');
-            $table->integer('idcsub');
+            $table->integer('goods_id');
+            $table->integer('comments_id');
             $table->integer('ids');
+            $table->boolean('publish')->default(0);
             $table->timestamps();
             $table->softDeletes();
 		});
