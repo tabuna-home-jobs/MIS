@@ -8,7 +8,6 @@ class GoodsObserver {
     public function deleted($model)
     {
         $model->comments()->delete();
-
     }
 
 

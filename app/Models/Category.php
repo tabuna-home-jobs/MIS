@@ -29,6 +29,14 @@ class Category extends Model {
         return $this->hasMany('App\Models\Goods');
     }
 
+
+    /*
+    public function comment()
+    {
+        return $this->hasManyThrough('App\Models\Goods', 'App\Models\Comments', 'category_id', 'goods_id');
+    }
+*/
+
     //Обратная Зависимость от сайта
     public function site()
     {
