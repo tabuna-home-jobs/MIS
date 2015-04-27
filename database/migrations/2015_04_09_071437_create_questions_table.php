@@ -17,7 +17,7 @@ class CreateQuestionsTable extends Migration {
             $table->increments('id');
             $table->string('quest');
             $table->string('type');
-            $table->integer('survey');
+            $table->integer('surveys_id');
             $table->timestamps();
             $table->softDeletes();
 		});

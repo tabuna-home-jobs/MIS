@@ -11,7 +11,7 @@ class Survey extends Model {
      *
      * @var string
      */
-    protected $table = 'survey';
+    protected $table = 'surveys';
 
     /**
      * The attributes that are mass assignable.
@@ -19,6 +19,11 @@ class Survey extends Model {
      * @var array
      */
     protected $fillable = ['name', 'ids'];
+
+    public function questions()
+    {
+        return $this->hasMany('App\Models\Question');
+    }
 
 
 }

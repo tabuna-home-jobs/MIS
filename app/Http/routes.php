@@ -84,6 +84,10 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'au
         'getIndex' => 'comments',
     ]);
 
+    Route::controller('surveys', 'SurveysController', [
+        'getIndex' => 'surveys',
+    ]);
+
     Route::controller('chat', 'ChatController', [
         'getIndex' => 'chat',
     ]);
