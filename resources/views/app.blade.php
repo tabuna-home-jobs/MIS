@@ -290,7 +290,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li class="treeview">
                     <a href="#"><span class="glyphicon glyphicon-info-sign"></span> Опросы <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="/dashboard/surveys"><span class="fa fa-question"></span>Вопросы</a></li>
+                        <li><a href="/dashboard/surveys"><span class="fa fa-question-circle"></span>Анкеты</a></li>
                         <li><a href="#"><span class="fa fa-question"></span>Вопросы</a></li>
                         <li><a href="#"><span class="fa fa-pie-chart"></span>Статистика</a></li>
                     </ul>

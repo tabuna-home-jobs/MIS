@@ -19,7 +19,7 @@ class Appointments extends Command {
 	 *
 	 * @var string
 	 */
-	protected $description = 'Command description.';
+	protected $description = 'Выгрузка xml файла для записи на приём.';
 
 	/**
 	 * Create a new command instance.
@@ -70,7 +70,7 @@ class Appointments extends Command {
 	protected function getOptions()
 	{
 		return [
-			['example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null],
+			//['example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null],
 		];
 	}
 
