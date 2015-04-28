@@ -12,6 +12,7 @@ class Kernel extends ConsoleKernel {
 	 */
 	protected $commands = [
 		'App\Console\Commands\Inspire',
+        'App\Console\Commands\Appointments',
 	];
 
 	/**
@@ -24,6 +25,11 @@ class Kernel extends ConsoleKernel {
 	{
 		$schedule->command('inspire')
 				 ->hourly();
+
+         //Каждые 15 секунд
+        $schedule->command('Appointments')
+            //->emailOutputTo('octavian48@yandex.ru')
+            ->cron('* * * * *');
 	}
 
 }
