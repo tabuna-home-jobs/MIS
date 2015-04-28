@@ -8,6 +8,10 @@ use App\Http\Requests\ReviewsRequest;
 
 class ReviewsController extends Controller {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
 	public function getIndex()
 	{

@@ -10,8 +10,7 @@ class CategoryController extends Controller {
 
     public function __construct()
     {
-        //Тут должна быть проверка авторизации
-        //$this->middleware('guest');
+        $this->middleware('auth');
     }
 
 

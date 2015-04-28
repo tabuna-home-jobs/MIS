@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+
 class ExampleTest extends TestCase {
 
 	/**
@@ -9,7 +11,10 @@ class ExampleTest extends TestCase {
 	 */
 	public function testBasicExample()
 	{
-		$response = $this->call('GET', '/');
+        $user = new User(array('id'=> '1','name' => 'John', 'email' => 'test@test.xt'));
+        $this->be($user);
+
+        $response = $this->action('GET', '/Admin/AdminController@index');
 
 		$this->assertEquals(200, $response->getStatusCode());
 	}
