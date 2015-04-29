@@ -9,13 +9,7 @@ use App\Models\Sites;
 
 
 class SitesController extends Controller {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-
+    
     public function getIndex()
     {
             return view("dashboard/sites", ['sites' => Sites::all() ]);

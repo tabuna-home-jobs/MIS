@@ -56,11 +56,11 @@
                 <!-- small box -->
                 <div class="small-box bg-red">
                     <div class="inner">
-                        <h3>65</h3>
-                        <p>Информация</p>
+                        <h3>{{ SMS::balance() }} <i class="fa fa-rub"></i></h3>
+                        <p>Баланс СМС</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-pie-graph"></i>
+                        <i class="fa fa-paper-plane"></i>
                     </div>
                     <a href="#" class="small-box-footer">Перейти <i class="fa fa-arrow-circle-right"></i></a>
                 </div>

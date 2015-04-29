@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMenuelementTable extends Migration {
+class CreateEntryTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,14 @@ class CreateMenuelementTable extends Migration {
 	 */
 	public function up()
 	{
-        Schema::create('menuelement', function(Blueprint $table)
+        Schema::create('entry', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->string('name');
-            $table->integer('menu_id');
-            $table->integer('order');
+            $table->bigInteger('beginning');
+            $table->bigInteger('end');
+            $table->boolean('1c_busy');
+            $table->boolean('web_busy');
+            $table->integer('timetable_id');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,7 +32,7 @@ class CreateMenuelementTable extends Migration {
 	 */
 	public function down()
 	{
-        Schema::drop('menuelement');
+        Schema::drop('entry');
 	}
 
 }

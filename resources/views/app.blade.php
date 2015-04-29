@@ -229,6 +229,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </li>
 
 
+
                     <li class=" tasks-menu">
                         <a href="/auth/logout" title="Выйти" >
                            <i class="fa fa-sign-out"></i>

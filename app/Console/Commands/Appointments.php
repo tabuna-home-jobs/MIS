@@ -43,7 +43,7 @@ class Appointments extends Command {
             //$xml = simplexml_load_string(Storage::get('MiD.xml'));
             //$xml = json_decode(json_encode($xml), TRUE);
             //dd($xml);
-            Storage::delete('MiD.xml');
+            //Storage::delete('MiD.xml');
             $this->info('Команда выгрузки xml файла расписания отработала');
         }
         else

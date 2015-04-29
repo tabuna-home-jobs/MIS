@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMenuelementTable extends Migration {
+class CreateTimetableTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,13 @@ class CreateMenuelementTable extends Migration {
 	 */
 	public function up()
 	{
-        Schema::create('menuelement', function(Blueprint $table)
+        Schema::create('timetable', function(Blueprint $table)
         {
             $table->increments('id');
+            $table->string('subdivision');
+            $table->string('specialization');
             $table->string('name');
-            $table->integer('menu_id');
-            $table->integer('order');
+            $table->string('cabinet');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,7 +31,7 @@ class CreateMenuelementTable extends Migration {
 	 */
 	public function down()
 	{
-        Schema::drop('menuelement');
+        Schema::drop('timetable');
 	}
 
 }

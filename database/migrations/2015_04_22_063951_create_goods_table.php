@@ -24,7 +24,7 @@ class CreateGoodsTable extends Migration {
             $table->integer('ids');
             $table->integer('category_id');
             $table->double('price');
-            $table->text('attribute')->nullable();;
+            $table->json('attribute')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

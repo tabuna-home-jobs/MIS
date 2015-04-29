@@ -195,8 +195,8 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 
-
         'Sites' => 'App\Facades\SitesFacades',
+        'SMS' => 'App\Facades\IntisSMSFacades',
 	],
 
 ];
