@@ -18,7 +18,7 @@ class TimeTable extends Model {
      *
      * @var array
      */
-    protected $fillable = ['subdvision', 'specialization', 'name', 'cabinet'];
+    protected $fillable = ['subdivision', 'specialization', 'name', 'cabinet'];
 
 
     //Связь категории с товаром

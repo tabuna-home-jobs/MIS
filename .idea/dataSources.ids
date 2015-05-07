@@ -1847,7 +1847,7 @@
     </table>
     <table name="timetable" schema="public" catalog="MISdb" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndGltZXRhYmxlX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
-      <column name="subdivision" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="subdivision" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="specialization" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="cabinet" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
