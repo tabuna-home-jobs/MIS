@@ -1,38 +1,78 @@
 <?php namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Contracts\Auth\Guard;
-use Illuminate\Contracts\Auth\Registrar;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use App\Http\Requests;
+use App\Http\Requests\AuthLoginRequest;
+use App\Http\Requests\AuthRequest;
+use Sentry;
 
 class AuthController extends Controller {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Registration & Login Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller handles the registration of new users, as well as the
-	| authentication of existing users. By default, this controller uses
-	| a simple trait to add these behaviors. Why don't you explore it?
-	|
-	*/
-    protected $redirectTo = '/dashboard';
-	use AuthenticatesAndRegistersUsers;
-
 	/**
-	 * Create a new authentication controller instance.
+     * Display a listing of the resource.
 	 *
-	 * @param  \Illuminate\Contracts\Auth\Guard  $auth
-	 * @param  \Illuminate\Contracts\Auth\Registrar  $registrar
-	 * @return void
+     * @return Response
 	 */
-	public function __construct(Guard $auth, Registrar $registrar)
+    public function getLogin()
 	{
-		$this->auth = $auth;
-		$this->registrar = $registrar;
+        return view('auth/login');
+    }
 
-		$this->middleware('guest', ['except' => 'getLogout']);
+    public function postLogin(AuthLoginRequest $request)
+    {
+
+        try {
+            $credentials = array(
+                'email' => $request->email,
+                'password' => $request->password,
+            );
+            Sentry::authenticateAndRemember($credentials);
+
+
+        } catch (Cartalyst\Sentry\Users\LoginRequiredException $e) {
+            echo 'Login field is required.';
+        } catch (Cartalyst\Sentry\Users\PasswordRequiredException $e) {
+            echo 'Password field is required.';
+        } catch (Cartalyst\Sentry\Users\WrongPasswordException $e) {
+            dd('stop');
+            echo 'Wrong password, try again.';
+        } catch (Cartalyst\Sentry\Users\UserNotFoundException $e) {
+            echo 'User was not found.';
+        } catch (Cartalyst\Sentry\Users\UserNotActivatedException $e) {
+            echo 'User is not activated.';
+        } // The following is only required if the throttling is enabled
+        catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e) {
+            echo 'User is suspended.';
+        } catch (Cartalyst\Sentry\Throttling\UserBannedException $e) {
+            echo 'User is banned.';
+        }
+
+        return redirect('/dashboard');
+
 	}
+
+
+    public function getRegister()
+    {
+        return view('auth/register');
+    }
+
+
+    public function postRegister(AuthRequest $request)
+    {
+        // Create the user
+        $user = Sentry::createUser(array(
+            'first_name' => $request->name,
+            'last_name' => $request->lastname,
+            'email' => $request->email,
+            'password' => $request->password,
+            'activated' => TRUE,
+        ));
+
+        $userGroup = Sentry::findGroupByName('User');
+        $user->addGroup($userGroup);
+        Sentry::loginAndRemember($user);
+        return redirect()->route('/dashboard');
+    }
 
 }

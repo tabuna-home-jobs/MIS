@@ -1,84 +1,107 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Requests\Admin\UserRequest;
 use App\Models\User;
-use Request;
-use Redirect;
-use Validator;
+use Sentry;
 use Session;
-use App\Http\Requests\UserRequest;
 
-class UserController extends Controller {
-
-    /*
-    |--------------------------------------------------------------------------
-    | Welcome Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller renders the "marketing page" for the application and
-    | is configured to only allow guests. Like most of the other sample
-    | controllers, you are free to modify or remove it as you desire.
-    |
-    */
+class UserController extends Controller
+{
 
     /**
-     * Create a new controller instance.
+     * Display a listing of the resource.
      *
-     * @return void
+     * @return Response
      */
-    public function __construct()
+    public function index()
     {
-        $this->middleware('auth');
+        $Users = User::paginate(15);
+
+        return view('dashboard/user/users', ['Users' => $Users]);
     }
 
-
-    public function getIndex()
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create()
     {
-        $UsersList = User::orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/user/users", ['UsersList' => $UsersList]);
+        //
     }
 
-    public function getAdd($user = null)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store()
     {
-        $user = User::find($user);
-
-        return view("dashboard/user/usersCrud", ['User' => $user ]);
+        //
     }
 
-
-    //Добовление и изменение данных
-    public function postIndex(UserRequest $request)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function show($id)
     {
+        $User = Sentry::findUserById($id);
 
-
-        if(!is_null($request->id))
-            $user = User::find($request->id);
-        else
-            $user = new User();
-
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->save();
-
-        //Флеш сообщение
-        Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->route('user');
+        return view('dashboard/user/usersEdit', ['user' => $User]);
     }
 
-
-
-
-
-    //Удаление
-    public function getDestroy($page = null)
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function edit($id)
     {
-        $page = User::find($page);
-        $page->delete();
-        Session::flash('good', 'Вы успешно удалили значения');
-        return redirect()->route('user');
+        //
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function update($id)
+    {
+        //
+    }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function destroy(UserRequest $request)
+    {
+        try {
+            // Find the user using the user id
+            $user = Sentry::findUserById($request->id);
 
+            // Delete the user
+            $user->delete();
+
+            Session::flash('good', 'Вы удалили пользователя.');
+
+            return redirect()->route('dashboard.user.index');
+        } catch (Cartalyst\Sentry\Users\UserNotFoundException $e) {
+            echo 'User was not found.';
+        }
+    }
 
 }

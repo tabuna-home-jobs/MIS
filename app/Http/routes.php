@@ -16,7 +16,7 @@
 //Перенаправление авторизации
 Route::controllers([
 	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    //'password' => 'Auth\RegistrationController',
 ]);
 
 
@@ -44,6 +44,9 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard'], function()
 //Группа админ
 Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'auth'], function()
 {
+    Route::resource('user', 'UserController');
+    Route::resource('groups', 'GroupsController');
+
 	Route::controller('page', 'PageController', [
 		'getIndex' => 'page',
 	]);
@@ -59,10 +62,6 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'au
     Route::controller('menu', 'MenuController', [
         'getIndex' => 'menu',
     ]);
-
-	Route::controller('user', 'UserController', [
-		'getIndex' => 'user',
-	]);
 
     Route::controller('feedback', 'FeedbackController', [
         'getIndex' => 'feedback',

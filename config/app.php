@@ -147,6 +147,7 @@ return [
 
 
         'App\Providers\SitesServiceProvider',
+        'Cartalyst\Sentry\SentryServiceProvider',
 	],
 
 	/*
@@ -161,7 +162,6 @@ return [
 	*/
 
 	'aliases' => [
-
 		'App'       => 'Illuminate\Support\Facades\App',
 		'Artisan'   => 'Illuminate\Support\Facades\Artisan',
 		'Auth'      => 'Illuminate\Support\Facades\Auth',
@@ -197,6 +197,7 @@ return [
 
         'Sites' => 'App\Facades\SitesFacades',
         'SMS' => 'App\Facades\IntisSMSFacades',
+        'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 	],
 
 ];

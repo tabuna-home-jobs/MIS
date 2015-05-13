@@ -246,16 +246,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-            <!-- Sidebar user panel -->
-            <div class="user-panel">
-                <div class="pull-left image">
-                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle" alt="User Image" />
-                </div>
-                <div class="pull-left info">
-                    <p>{{Auth::user()->name}}</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                </div>
-            </div>
+
             <!-- search form (Optional) -->
             <form action="#" method="get" class="sidebar-form">
                 <div class="input-group">
@@ -310,7 +301,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <li><a href="#"><span class="fa fa-instagram"></span>Instagram</a></li>
                     </ul>
                 </li>
-
 
 
 

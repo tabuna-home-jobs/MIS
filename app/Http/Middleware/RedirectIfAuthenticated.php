@@ -3,6 +3,7 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\RedirectResponse;
+use Sentry;
 
 class RedirectIfAuthenticated {
 
@@ -11,7 +12,7 @@ class RedirectIfAuthenticated {
 	 *
 	 * @var Guard
 	 */
-	protected $auth;
+
 
 	/**
 	 * Create a new filter instance.
@@ -19,10 +20,6 @@ class RedirectIfAuthenticated {
 	 * @param  Guard  $auth
 	 * @return void
 	 */
-	public function __construct(Guard $auth)
-	{
-		$this->auth = $auth;
-	}
 
 	/**
 	 * Handle an incoming request.
@@ -33,7 +30,7 @@ class RedirectIfAuthenticated {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($this->auth->check())
+        if (Sentry::check())
 		{
 			return new RedirectResponse(url('/dashboard'));
 		}
