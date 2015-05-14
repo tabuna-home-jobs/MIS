@@ -1,7 +1,6 @@
 <?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Facades\SitesFacades;
 
 class SitesServiceProvider extends ServiceProvider {
     /**

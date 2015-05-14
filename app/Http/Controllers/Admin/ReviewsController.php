@@ -2,9 +2,9 @@
 
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ReviewsRequest;
 use App\Models\Reviews;
 use Session;
-use App\Http\Requests\ReviewsRequest;
 
 class ReviewsController extends Controller {
 

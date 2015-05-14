@@ -2,11 +2,11 @@
 
 use App\Http\Controllers\Controller;
 use App\Models\Menu;
-use Request;
-use Redirect;
-use Validator;
-use Session;
 use Mail;
+use Redirect;
+use Request;
+use Session;
+use Validator;
 
 
 class MenuController extends Controller {

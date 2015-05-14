@@ -3,6 +3,7 @@
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
+
 class Handler extends ExceptionHandler {
 
 	/**
@@ -24,6 +25,7 @@ class Handler extends ExceptionHandler {
 	 */
 	public function report(Exception $e)
 	{
+
 		return parent::report($e);
 	}
 
@@ -36,6 +38,12 @@ class Handler extends ExceptionHandler {
 	 */
 	public function render($request, Exception $e)
 	{
+
+		if ($sentry = SentryExceptions::render($e))
+			return $sentry;
+
+
+
 		return parent::render($request, $e);
 	}
 

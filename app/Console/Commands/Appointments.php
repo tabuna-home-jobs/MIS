@@ -1,13 +1,11 @@
 <?php namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Input\InputArgument;
 use App\Console\Commands\AppointmentsThread;
 use App\Models\Entry;
 use App\Models\Timetable;
-use Storage;
 use DB;
+use Illuminate\Console\Command;
+use Storage;
 
 class Appointments extends Command {
 
@@ -70,7 +68,7 @@ class Appointments extends Command {
                     $entry[] = new Entry([
                         'beginning' => (int) $zapis->attributes()->S,
                         'end' => (int) $zapis->attributes()->PO,
-                        '1c_busy' => (bool) $zapis->attributes()->BUSY,
+                        '1c_busy' => (int) $zapis->attributes()->BUSY,
                     ]);
 
                 }

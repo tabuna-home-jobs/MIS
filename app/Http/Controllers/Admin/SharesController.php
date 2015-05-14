@@ -1,12 +1,12 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Shares;
-use Request;
-use Redirect;
-use Validator;
-use Session;
 use App\Http\Requests\SharesRequest;
+use App\Models\Shares;
+use Redirect;
+use Request;
+use Session;
+use Validator;
 
 
 class SharesController extends Controller {

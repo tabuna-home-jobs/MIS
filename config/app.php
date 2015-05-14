@@ -146,9 +146,10 @@ return [
 		'App\Providers\RouteServiceProvider',
 
 
-        'App\Providers\SitesServiceProvider',
-        'Cartalyst\Sentry\SentryServiceProvider',
-	],
+        'App\Providers\SitesServiceProvider', // Мульти-сайт
+        'Cartalyst\Sentry\SentryServiceProvider', // Права доступа
+
+    ],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -198,6 +199,6 @@ return [
         'Sites' => 'App\Facades\SitesFacades',
         'SMS' => 'App\Facades\IntisSMSFacades',
         'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
-	],
+    ],
 
 ];

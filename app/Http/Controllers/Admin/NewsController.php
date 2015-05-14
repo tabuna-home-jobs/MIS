@@ -1,12 +1,12 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\News;
-use Request;
-use Redirect;
-use Validator;
-use Session;
 use App\Http\Requests\NewsRequest;
+use App\Models\News;
+use Redirect;
+use Request;
+use Session;
+use Validator;
 
 
 class NewsController extends Controller {

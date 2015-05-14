@@ -1,15 +1,14 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
 use App\Http\Requests\FeedBackSendRequests;
 use App\Models\Feedback;
-use Request;
-use Redirect;
-use Validator;
-use Session;
-use Mail;
 use App\Models\Sites;
+use Mail;
+use Redirect;
+use Request;
+use Session;
+use Validator;
 
 class FeedbackController extends Controller {
 

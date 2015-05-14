@@ -11,6 +11,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta name="token" content="{{ csrf_token() }}" >
     <!-- Bootstrap 3.3.2 -->
     <link href="{{ asset('/admin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+
+
     <!-- Font Awesome Icons -->
     <link href="{{ asset('/admin/bootstrap/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
 
@@ -20,10 +22,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <link href="{{ asset('/admin/dist/css/skins/skin-blue.min.css') }}" rel="stylesheet" type="text/css" />
 
-
     <link href="{{ asset('/admin/bootstrap/css/custom.css') }}" rel="stylesheet" type="text/css" />
 
     <link href="{{ asset('/admin/dist/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <link href="{{ asset('/admin/plugins/fullcalendar/fullcalendar.min.css') }}" rel="stylesheet" type="text/css"/>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,14 +36,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
+
+    <!-- REQUIRED JS SCRIPTS -->
+    <!-- jQuery 2.1.3 -->
+    <script src="{{ asset('/admin/plugins/jQuery/jQuery-2.1.3.min.js')}}"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="{{asset('/admin/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script src="{{asset('/admin/dist/js/app.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/admin/dist/js/moment-with-locales.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/admin/dist/js/ru-picker.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/admin/dist/js/bootstrap-datetimepicker.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/admin/bootstrap/js/search.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/admin/bootstrap/js/custom.js')}}" type="text/javascript"></script>
+
+    <!--  TinyMCE -->
+    <script src="{{asset('/admin/plugins/tinymce/tinymce.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/admin/plugins/fullcalendar/fullcalendar.min.js')}}" type="text/javascript"></script>
+
+
 </head>
 
 
 
     @if('show' == Session::get('Sidebar', 'show'))
-        <body class="skin-blue layout-boxed">
+        <body class="skin-blue layout-boxed sidebar-mini">
     @else
-        <body class="skin-blue layout-boxed sidebar-collapse">
+        <body class="skin-blue layout-boxed sidebar-mini sidebar-collapse">
     @endif
 
 <div class="wrapper">
@@ -262,53 +285,78 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <ul class="sidebar-menu">
                 <li class="header">Меню</li>
                 <!-- Optionally, you can add icons to the links -->
-                <li class="active"><a href="/dashboard/"><span class="fa fa-bar-chart"></span> Статистика</a></li>
-                <li><a href="/dashboard/page/"><span class="fa fa-file-text"></span> Страницы</a></li>
-                <li><a href="/dashboard/news/"><span class="fa fa-newspaper-o"></span> Новости</a></li>
-                <li><a href="/dashboard/shares/"><span class="fa fa-file-text"></span> Акции</a></li>
-                <li><a href="/dashboard/menu/"><span class="glyphicon glyphicon-menu-hamburger"></span> Меню</a></li>
-                <li><a href="/dashboard/feedback/"><span class="glyphicon fa fa-inbox"></span> Обратная связь</a></li>
+                <li class="active"><a href="/dashboard/"><i class="fa fa-bar-chart"></i> <span> Статистика</span></a>
+                </li>
+                <li><a href="/dashboard/page/"><i class="fa fa-file-text"></i> <span>Страницы</a></li>
+                <li><a href="/dashboard/news/"><i class="fa fa-newspaper-o"></i> <span>Новости</a></li>
+                <li><a href="/dashboard/shares/"><i class="fa fa-file-text"></i> <span>Акции</a></li>
+                <li><a href="/dashboard/menu/"><i class="glyphicon glyphicon-menu-hamburger"></i> <span>Меню</span></a>
+                </li>
+                <li><a href="/dashboard/feedback/"><i class="glyphicon fa fa-inbox"></i> <span>Обратная связь</span></a>
+                </li>
 
 
                 <li class="treeview">
-                    <a href="#"><span class="fa fa-shopping-cart"></span> Каталог <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-shopping-cart"></i> <span>Каталог</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="/dashboard/category/"><span class="fa fa-suitcase"></span> Категории</a></li>
-                        <li><a href="/dashboard/goods/"><span class="fa fa-stethoscope"></span> Услуги</a></li>
-                        <li><a href="/dashboard/comments"><span class="fa fa-file-text"></span> Комментарии</a></li>
+                        <li><a href="/dashboard/category/"><i class="fa fa-suitcase"></i> <span>Категории</span></a>
+                        </li>
+                        <li><a href="/dashboard/goods/"><i class="fa fa-stethoscope"></i> <span>Услуги</span></a></li>
+                        <li><a href="/dashboard/comments"><i class="fa fa-file-text"></i> <span>Комментарии</span></a>
+                        </li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href="#"><span class="glyphicon glyphicon-info-sign"></span> Опросы <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="glyphicon glyphicon-info-sign"></i> <span>Опросы</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="/dashboard/surveys"><span class="fa fa-question-circle"></span>Анкеты</a></li>
-                        <li><a href="#"><span class="fa fa-question"></span>Вопросы</a></li>
-                        <li><a href="#"><span class="fa fa-pie-chart"></span>Статистика</a></li>
+                        <li><a href="/dashboard/surveys"><i class="fa fa-question-circle"></i><span>Анкеты</span></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-question"></i><span>Вопросы</span></a></li>
+                        <li><a href="#"><i class="fa fa-pie-chart"></i><span>Статистика</span></a></li>
                     </ul>
                 </li>
 
-                <li><a href="/dashboard/reviews"><span class="fa fa-file-text"></span> Отзывы</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-book"></span> Энциклопедия</a></li>
+                <li><a href="/dashboard/reviews"><i class="fa fa-file-text"></i> <span>Отзывы</span></a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-book"></i> <span>Энциклопедия</span></a></li>
+
+
+                <li>
+                    <a href="/dashboard/appointments">
+                        <i class="fa fa-calendar"></i> <span>Запись на приём</span>
+                    </a>
+                </li>
 
 
                 <li class="treeview">
-                    <a href="#"><span class="glyphicon glyphicon-globe"></span> Социальные сети <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="glyphicon glyphicon-globe"></i> <span>Социальные сети</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#"><span class="fa fa-vk"></span>Вконтакте</a></li>
-                        <li><a href="#"><span class="fa fa-circle-o"></span>Однокласники</a></li>
-                        <li><a href="#"><span class="fa fa-facebook-official"></span>Facebook</a></li>
-                        <li><a href="#"><span class="fa fa-instagram"></span>Instagram</a></li>
+                        <li><a href="#"><i class="fa fa-vk"></i>Вконтакте</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Однокласники</a></li>
+                        <li><a href="#"><i class="fa fa-facebook-official"></i>Facebook</a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
                     </ul>
                 </li>
 
 
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-user"></i> <span>Пользователи</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/dashboard/user"><i class="fa fa-user"></i> Пользователи</a></li>
+                        <li><a href="/dashboard/groups"><i class="fa fa-users"></i> Группы</a></li>
+                        <li><a href="#"><i class="fa fa-users"></i> Клиенты</a></li>
+                    </ul>
+                </li>
 
-                <li><a href="/dashboard/user"><span class="fa fa-user"></span> Пользователи</a></li>
-                <li><a href="/dashboard/chat"><span class="fa fa-users"></span> Консультант</a></li>
+                <li><a href="/dashboard/chat"><i class="fa fa-users"></i> <span>Консультант</span></a></li>
 
                 <li class="treeview">
-                    <a href="#"><span class="fa fa-cog"></span> Настройки <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class="fa fa-cog"></i> <span>Настройки</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
 
 
@@ -379,34 +427,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </footer>
 
 </div><!-- ./wrapper -->
-
-<!-- REQUIRED JS SCRIPTS -->
-
-<!-- jQuery 2.1.3 -->
-<script src="{{ asset('/admin/plugins/jQuery/jQuery-2.1.3.min.js')}}"></script>
-<!-- Bootstrap 3.3.2 JS -->
-<script src="{{asset('/admin/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('/admin/dist/js/app.min.js')}}" type="text/javascript"></script>
-
-<script src="{{asset('/admin/dist/js/moment-with-locales.js')}}" type="text/javascript"></script>
-<script src="{{asset('/admin/dist/js/ru-picker.js')}}" type="text/javascript"></script>
-
-<script src="{{asset('/admin/dist/js/bootstrap-datetimepicker.min.js')}}" type="text/javascript"></script>
-
-
-
-    <script src="{{asset('/admin/bootstrap/js/search.js')}}" type="text/javascript"></script>
-
-
-
-<script src="{{asset('/admin/bootstrap/js/custom.js')}}" type="text/javascript"></script>
-
-
-
-
-<!--  TinyMCE -->
-<script src="{{asset('/admin/plugins/tinymce/tinymce.min.js')}}" type="text/javascript"></script>
 
 
 

@@ -1,13 +1,12 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Page;
-use Request;
-use Redirect;
-use Validator;
-use Session;
 use App\Http\Requests\PageRequest;
-
+use App\Models\Page;
+use Redirect;
+use Request;
+use Session;
+use Validator;
 
 
 class PageController extends Controller {

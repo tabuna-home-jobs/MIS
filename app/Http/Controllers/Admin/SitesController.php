@@ -1,11 +1,11 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Request;
-use Redirect;
-use Validator;
-use Session;
 use App\Models\Sites;
+use Redirect;
+use Request;
+use Session;
+use Validator;
 
 
 class SitesController extends Controller {

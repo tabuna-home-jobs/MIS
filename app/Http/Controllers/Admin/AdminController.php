@@ -1,11 +1,10 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Request;
 use Redirect;
-use Validator;
+use Request;
 use Session;
-
+use Validator;
 
 
 class AdminController extends Controller {

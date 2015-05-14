@@ -22,12 +22,13 @@ Route::controllers([
 
 
 //Группа для сайтов
+/*
 Route::group(['domain' => '{sitename}.{sitedomen}'], function()
 {
     Route::controller('/', 'HomeController');
 
 });
-
+*/
 
 
 
@@ -89,6 +90,10 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'au
 
     Route::controller('chat', 'ChatController', [
         'getIndex' => 'chat',
+    ]);
+
+    Route::controller('appointments', 'AppointmentsController', [
+        'getIndex' => 'appointments',
     ]);
 
     Route::controller('/', 'AdminController', [

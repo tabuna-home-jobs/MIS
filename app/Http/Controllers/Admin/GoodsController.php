@@ -1,10 +1,10 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Goods;
-use Session;
 use App\Http\Requests\GoodsRequest;
 use App\Models\Category;
+use App\Models\Goods;
+use Session;
 
 class GoodsController extends Controller {
 

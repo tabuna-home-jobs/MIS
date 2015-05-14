@@ -1,9 +1,9 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CommentsRequest;
 use App\Models\Comments;
 use Session;
-use App\Http\Requests\CommentsRequest;
 
 class CommentsController extends Controller {
 
