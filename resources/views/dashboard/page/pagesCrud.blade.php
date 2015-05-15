@@ -7,6 +7,11 @@
            {{ $Page->name or 'Новая страница' }}
             <small>Добавить новую страницу</small>
         </h1>
+
+
+        {!! Breadcrumbs::render('curpage',$Page) !!}
+
+
     </section>
 
     <!-- Main content -->

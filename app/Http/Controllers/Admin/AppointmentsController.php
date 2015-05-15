@@ -21,8 +21,8 @@ class AppointmentsController extends Controller
             foreach ($test as $testing) {
                 $Calendar[] = ([
                     'title' => $time->name,
-                    'start' => Date('Y.m.d : H-i-s', $testing->beginning),
-                    'end' => Date('Y.m.d : H-i-s', $testing->end),
+                    'start' => $testing->beginning,
+                    'end' => $testing->end,
                     'backgroundColor' => substr(md5($time->name), 0, 6),
                     'borderColor' => substr(md5($time->name), 6, 6),
                 ]);

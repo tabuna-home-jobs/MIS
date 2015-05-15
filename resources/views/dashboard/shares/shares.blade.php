@@ -8,6 +8,9 @@
         <h1>
             Список страниц акций
         </h1>
+
+        {!! Breadcrumbs::render('share') !!}
+
     </section>
 
     <!-- Main content -->

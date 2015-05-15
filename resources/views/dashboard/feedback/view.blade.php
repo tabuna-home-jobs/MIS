@@ -8,6 +8,8 @@
         <h1>
             Обратная связь
         </h1>
+
+        {!! Breadcrumbs::render('curfeedback',$Feedback) !!}
     </section>
 
     <!-- Main content -->

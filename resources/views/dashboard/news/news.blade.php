@@ -8,6 +8,9 @@
         <h1>
             Список новостей
         </h1>
+
+        {!! Breadcrumbs::render('news') !!}
+
     </section>
 
     <!-- Main content -->

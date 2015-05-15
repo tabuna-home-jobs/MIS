@@ -7,6 +7,9 @@
         <h1>
             Статистика
         </h1>
+
+        {!! Breadcrumbs::render('dashboard') !!}
+
     </section>
 
     <!-- Main content -->

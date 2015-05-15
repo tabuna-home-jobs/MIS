@@ -5,8 +5,10 @@
     <section class="content-header">
         <h1>
             {{ $Shares->name or 'Новая страница' }}
-            <small>Добавить новую страницу</small>
         </h1>
+
+        {!! Breadcrumbs::render('curshare',$Shares) !!}
+
     </section>
 
     <!-- Main content -->

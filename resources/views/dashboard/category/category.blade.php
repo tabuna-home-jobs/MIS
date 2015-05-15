@@ -8,6 +8,8 @@
         <h1>
             Категории
         </h1>
+
+        {!! Breadcrumbs::render('category') !!}
     </section>
 
     <!-- Main content -->

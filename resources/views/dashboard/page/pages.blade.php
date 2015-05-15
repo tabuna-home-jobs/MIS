@@ -8,6 +8,10 @@
             <h1>
                 Список страниц
             </h1>
+
+
+            {!! Breadcrumbs::render('page') !!}
+
         </section>
 
         <!-- Main content -->

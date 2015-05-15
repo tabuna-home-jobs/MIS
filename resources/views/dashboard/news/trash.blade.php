@@ -8,6 +8,9 @@
         <h1>
             Список страниц
         </h1>
+
+        {!! Breadcrumbs::render('news') !!}
+
     </section>
 
     <!-- Main content -->
@@ -39,8 +42,10 @@
                                     <td>{{ $News->name }}</td>
                                     <td>{{ $News->title }}</td>
                                     <td>
-                                        <a href="/dashboard/page/restore/{{ $News->id }}" class="btn btn-success"><span class="fa fa-reply"></span> </a>
-                                        <a href="/dashboard/page/unset/{{ $News->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
+                                        <a href="/dashboard/news/restore/{{ $News->id }}" class="btn btn-success"><span
+                                                    class="fa fa-reply"></span> </a>
+                                        <a href="/dashboard/news/unset/{{ $News->id }}" class="btn btn-danger"><span
+                                                    class="fa fa-trash-o"></span></a>
                                     </td>
                                 </tr>
                             @endforeach

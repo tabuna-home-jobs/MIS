@@ -148,7 +148,7 @@ return [
 
         'App\Providers\SitesServiceProvider', // Мульти-сайт
         'Cartalyst\Sentry\SentryServiceProvider', // Права доступа
-
+        'DaveJamesMiller\Breadcrumbs\ServiceProvider', // Хлебные крошки
     ],
 
 	/*
@@ -199,6 +199,7 @@ return [
         'Sites' => 'App\Facades\SitesFacades',
         'SMS' => 'App\Facades\IntisSMSFacades',
         'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+        'Breadcrumbs' => 'DaveJamesMiller\Breadcrumbs\Facade',
     ],
 
 ];

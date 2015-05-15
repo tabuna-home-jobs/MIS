@@ -31,8 +31,14 @@
 
     <script>
         /* initialize the calendar
+
+
+
          -----------------------------------------------------------------*/
-        //Date for the calendar events (dummy data)
+        //Date for the calendar events (dummy data) 2015.05.14 : 13-42-13
+
+
+
         $('#calendar').fullCalendar({
             lang: 'ru',
             header: {
@@ -52,7 +58,27 @@
                 {
                     title: '{{ $element['title'] }}',
                     start: '{{ $element['start'] }}',
-                    end: '{{ $element['end'] }}',
+                    start: new Date(
+                            new Date({{ $element['start']}} * 1000).getFullYear(),
+                    new Date({{ $element['start']}} * 1000).getMonth(),
+        new Date({{ $element['start']}} * 1000
+        ).getDate(),
+        new Date({{ $element['start']}} * 1000
+        ).getHours(),
+        new Date({{ $element['start']}} * 1000
+        ).getMinutes()
+        ),
+        end: new Date(
+                new Date({{ $element['end']}} * 1000).getFullYear(),
+        new Date({{ $element['end']}} * 1000
+        ).getMonth(),
+        new Date({{ $element['end']}} * 1000
+        ).getDate(),
+        new Date({{ $element['end']}} * 1000
+        ).getHours(),
+        new Date({{ $element['end']}} * 1000
+        ).getMinutes()
+        ),
                     backgroundColor: '{{ $element['backgroundColor'] }}',
                     borderColor: '{{ $element['borderColor'] }}'
                 },

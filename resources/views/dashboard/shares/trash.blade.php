@@ -8,6 +8,9 @@
         <h1>
             Список страниц
         </h1>
+
+        {!! Breadcrumbs::render('curshare') !!}
+
     </section>
 
     <!-- Main content -->

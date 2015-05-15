@@ -57,7 +57,7 @@ class NewsController extends Controller {
     public function getTrash()
     {
         $PageList = News::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/page/trash", ['PageList' => $PageList]);
+        return view("dashboard/news/trash", ['NewsList' => $PageList]);
     }
 
 
@@ -65,7 +65,7 @@ class NewsController extends Controller {
     {
         News::withTrashed()->find($page)->restore();
         Session::flash('good', 'Вы успешно востановили запись');
-        return redirect()->route('page');
+        return redirect()->route('news');
     }
 
 

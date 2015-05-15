@@ -6,6 +6,8 @@
         <h1>
             {{ $Category->name or 'Новая Категория' }}
         </h1>
+
+        {!! Breadcrumbs::render('curcategory',$Category) !!}
     </section>
 
     <!-- Main content -->
