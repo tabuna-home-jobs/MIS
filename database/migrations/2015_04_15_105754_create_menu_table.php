@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
 class CreateMenuTable extends Migration {
 
@@ -16,6 +16,7 @@ class CreateMenuTable extends Migration {
         {
             $table->increments('id');
             $table->string('name');
+            $table->string('type');
             $table->integer('ids');
             $table->timestamps();
             $table->softDeletes();

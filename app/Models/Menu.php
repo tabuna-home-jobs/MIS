@@ -1,12 +1,10 @@
 <?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class Menu extends Model {
 
-    use SoftDeletes;
     /**
      * The database table used by the model.
      *
@@ -19,7 +17,7 @@ class Menu extends Model {
      *
      * @var array
      */
-    protected $fillable = ['name', 'ids'];
+    protected $fillable = ['name', 'type', 'ids'];
 
 
     public function MenuElement()

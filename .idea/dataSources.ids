@@ -1630,6 +1630,7 @@
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
+      <column name="type" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="menu_pkey" columns="id"/>
     </table>
     <table name="menu_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
@@ -1648,10 +1649,11 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnbWVudWVsZW1lbnRfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="menu_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="order" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="order" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
+      <column name="url" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="menuelement_pkey" columns="id"/>
     </table>
     <table name="menuelement_id_seq" schema="public" catalog="MISdb" type="SEQUENCE">
