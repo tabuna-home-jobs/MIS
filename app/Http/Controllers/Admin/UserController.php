@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Http\Requests\Admin\UserRequest;
+use App\Http\Requests\UserUpdateRequest;
 use App\Models\User;
 use Sentry;
 use Session;
@@ -39,7 +40,6 @@ class UserController extends Controller
      */
     public function store()
     {
-        //
     }
 
     /**
@@ -52,8 +52,11 @@ class UserController extends Controller
     public function show($id)
     {
         $User = Sentry::findUserById($id);
+        $groups = Sentry::findAllGroups();
+        $thisgroup = $User->getGroups();
 
-        return view('dashboard/user/usersEdit', ['user' => $User]);
+
+        return view('dashboard/user/usersEdit', ['user' => $User, 'groups' => $groups, 'thisgroup' => $thisgroup]);
     }
 
     /**
@@ -75,9 +78,18 @@ class UserController extends Controller
      *
      * @return Response
      */
-    public function update($id)
+    public function update(UserUpdateRequest $request)
     {
-        //
+
+        $user = Sentry::getUser();
+        $user->email = $request->email;
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->save();
+
+
+        dd(Sentry::getUser());
+
     }
 
     /**

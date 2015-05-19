@@ -341,6 +341,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </li>
 
                 <li><a href="/dashboard/chat"><i class="fa fa-users"></i> <span>Консультант</span></a></li>
+                <li><a href="/dashboard/filemanager"><i class="fa fa-upload"></i> <span>Файловый менеджер</span></a>
+                </li>
 
                 <li class="treeview">
                     <a href="#"><i class="fa fa-cog"></i> <span>Настройки</span> <i

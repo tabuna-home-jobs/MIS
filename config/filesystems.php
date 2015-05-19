@@ -48,6 +48,11 @@ return [
 			'root'   => storage_path().'/app',
 		],
 
+        'views' => [
+            'driver' => 'local',
+            'root' => base_path() . '/resources/views',
+        ],
+
 		's3' => [
 			'driver' => 's3',
 			'key'    => 'your-key',

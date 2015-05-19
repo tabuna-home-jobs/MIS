@@ -1,5 +1,8 @@
 <?php namespace App\Http\Requests;
 
+
+use Sentry;
+
 class UserRequest extends Request {
 
 	/**
@@ -9,7 +12,7 @@ class UserRequest extends Request {
 	 */
 	public function authorize()
 	{
-		return true;
+        return Sentry::check();
 	}
 
 	/**

@@ -9,7 +9,7 @@ use SMS;
 use Storage;
 use Validator;
 
-//Удалить!
+
 class SurveysController extends Controller {
     public function __construct()
     {

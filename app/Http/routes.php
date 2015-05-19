@@ -43,7 +43,7 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard'], function()
 
 
 //Группа админ
-Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'auth'], function()
+Route::group(['namespace' => 'Admin', 'prefix' => 'dashboard', 'middleware' => ['auth', 'sentry']], function ()
 {
     Route::resource('user', 'UserController');
     Route::resource('groups', 'GroupsController');
@@ -96,9 +96,16 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard','middleware' => 'au
         'getIndex' => 'appointments',
     ]);
 
+    Route::controller('filemanager', 'FilemanagerController', [
+        'getIndex' => 'filemanager',
+    ]);
+
+    Route::resource('codeeditor', 'CodeEditorController');
+
     Route::controller('/', 'AdminController', [
         'getIndex' => 'admin',
     ]);
+
 
 });
 

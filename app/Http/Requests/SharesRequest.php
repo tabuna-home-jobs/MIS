@@ -1,5 +1,7 @@
 <?php namespace App\Http\Requests;
 
+use Sentry;
+
 class SharesRequest extends Request {
 
 	/**
@@ -9,7 +11,7 @@ class SharesRequest extends Request {
 	 */
 	public function authorize()
 	{
-		return true;
+        return Sentry::check();
 	}
 
 	/**
