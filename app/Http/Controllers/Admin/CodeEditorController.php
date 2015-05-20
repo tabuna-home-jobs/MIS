@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
+use App\Http\Requests\CodeRequest;
 use Storage;
+
 
 class CodeEditorController extends Controller
 {
@@ -14,9 +16,7 @@ class CodeEditorController extends Controller
      */
     public function index()
     {
-
         //Получаем текущую директорию
-
         $files = Storage::disk('views')->files();
         $dir = Storage::disk('views')->directories();
         return view("dashboard/codeedit/codeedit", ['files' => $files, 'dir' => $dir]);
@@ -49,11 +49,13 @@ class CodeEditorController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function show($id)
+    public function show(CodeRequest $request)
     {
+
+
         //Показать директорию
-        $files = Storage::disk('views')->files($id);
-        $dir = Storage::disk('views')->directories($id);
+        $files = Storage::disk('views')->files($request->path);
+        $dir = Storage::disk('views')->directories($request->path);
         return response()->json(['files' => $files, 'dir' => $dir]);
     }
 
@@ -65,9 +67,8 @@ class CodeEditorController extends Controller
      */
     public function edit($id)
     {
-        //Редактировать файл
         $contents = Storage::disk('views')->get($id);
-        response()->json($contents);
+        return response()->json($contents);
     }
 
     /**
@@ -76,9 +77,9 @@ class CodeEditorController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function update($id)
+    public function update(CodeRequest $request)
     {
-        Storage::disk('views')->put($patch, $contents);
+        Storage::disk('views')->put($request->path, $request->text);
         return response()->json('200');
     }
 
