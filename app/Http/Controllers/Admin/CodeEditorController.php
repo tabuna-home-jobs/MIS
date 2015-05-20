@@ -40,7 +40,7 @@ class CodeEditorController extends Controller
      */
     public function store()
     {
-        //
+
     }
 
     /**
@@ -51,7 +51,10 @@ class CodeEditorController extends Controller
      */
     public function show($id)
     {
-        //
+        //Показать директорию
+        $files = Storage::disk('views')->files($id);
+        $dir = Storage::disk('views')->directories($id);
+        return response()->json(['files' => $files, 'dir' => $dir]);
     }
 
     /**
@@ -62,7 +65,9 @@ class CodeEditorController extends Controller
      */
     public function edit($id)
     {
-        //
+        //Редактировать файл
+        $contents = Storage::disk('views')->get($id);
+        response()->json($contents);
     }
 
     /**
@@ -73,7 +78,8 @@ class CodeEditorController extends Controller
      */
     public function update($id)
     {
-        //
+        Storage::disk('views')->put($patch, $contents);
+        return response()->json('200');
     }
 
     /**

@@ -6,6 +6,7 @@ use App\Http\Requests\AuthLoginRequest;
 use App\Http\Requests\AuthRequest;
 use Sentry;
 
+
 class AuthController extends Controller {
 
 	/**
@@ -21,31 +22,12 @@ class AuthController extends Controller {
     public function postLogin(AuthLoginRequest $request)
     {
 
-        try {
-            $credentials = array(
-                'email' => $request->email,
-                'password' => $request->password,
-            );
-            Sentry::authenticateAndRemember($credentials);
 
-
-        } catch (Cartalyst\Sentry\Users\LoginRequiredException $e) {
-            echo 'Login field is required.';
-        } catch (Cartalyst\Sentry\Users\PasswordRequiredException $e) {
-            echo 'Password field is required.';
-        } catch (Cartalyst\Sentry\Users\WrongPasswordException $e) {
-            dd('stop');
-            echo 'Wrong password, try again.';
-        } catch (Cartalyst\Sentry\Users\UserNotFoundException $e) {
-            echo 'User was not found.';
-        } catch (Cartalyst\Sentry\Users\UserNotActivatedException $e) {
-            echo 'User is not activated.';
-        } // The following is only required if the throttling is enabled
-        catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e) {
-            echo 'User is suspended.';
-        } catch (Cartalyst\Sentry\Throttling\UserBannedException $e) {
-            echo 'User is banned.';
-        }
+        $credentials = array(
+            'email' => $request->email,
+            'password' => $request->password,
+        );
+        Sentry::authenticateAndRemember($credentials);
 
         return redirect('/dashboard');
 
