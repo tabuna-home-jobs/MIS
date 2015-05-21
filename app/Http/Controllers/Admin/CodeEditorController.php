@@ -60,7 +60,7 @@ class CodeEditorController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for ediну ting the specified resource.
      *
      * @param  int $id
      * @return Response

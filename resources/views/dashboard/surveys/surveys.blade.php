@@ -17,12 +17,39 @@
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title">
+                            <a class="btn btn-link btn-sm" data-toggle="collapse" href="#collapseExample"
+                               aria-expanded="false" aria-controls="collapseExample">
+                                <span class="fa fa-plus"></span> Добавить новую запись
+                            </a>
                             <h5 class="box-title">
                                 <a href="/dashboard/surveys/trash/" class="btn btn-link btn-sm"><span class="fa fa-trash"></span> Корзина </a>
                             </h5>
                         </h3>
                     </div><!-- /.box-header -->
                     <div class="box-body">
+
+
+                        <div class="collapse" id="collapseExample">
+                            <div class="well">
+                                <form action="/dashboard/surveys/add" method="post" class="row">
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Название</label>
+                                            <input class="form-control" type="text" maxlength="255" required
+                                                   name="name">
+                                        </div>
+
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <button type="submit" class="btn btn-default">Отправить</button>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
