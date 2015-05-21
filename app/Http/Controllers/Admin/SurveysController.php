@@ -3,11 +3,10 @@
 use App\Console\Commands\AppointmentsCommand;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SurveysRequest;
-use App\Models\Survey;
+use App\Models\Surveys;
 use Redirect;
 use Request;
 use Session;
-
 
 class SurveysController extends Controller
 {
@@ -18,17 +17,14 @@ class SurveysController extends Controller
 
     public function getIndex()
     {
-        $Survey = Survey::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        $Survey = Survey::all()->questions();
-        //$Survey->questions()->get();
-        dd($Survey);
+        $Survey = Surveys::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
         return view("dashboard/surveys/surveys", ['Surveys' => $Survey]);
     }
 
 
     public function postAdd(SurveysRequest $request)
     {
-        $Survey = new Survey([
+        $Survey = new Surveys([
             'name' => $request->name,
             'ids' => Session::get('website'),
         ]);
@@ -40,7 +36,7 @@ class SurveysController extends Controller
 
     public function getDestroy($id)
     {
-        $page = Survey::find($id);
+        $page = Surveys::find($id);
         $page->delete();
         Session::flash('good', 'Вы успешно удалили значения');
         return redirect()->route('surveys');

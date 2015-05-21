@@ -11,7 +11,7 @@ class Question extends Model {
      *
      * @var string
      */
-    protected $table = 'question';
+    protected $table = 'questions';
 
     /**
      * The attributes that are mass assignable.
@@ -20,5 +20,10 @@ class Question extends Model {
      */
     protected $fillable = ['quest', 'type', 'surveys_id'];
 
+
+    public function syrvey()
+    {
+        return $this->belongsTo('App\Models\Surveys');
+    }
 
 }

@@ -46,6 +46,8 @@ class Appointments extends Command {
 	 */
 	public function fire()
 	{
+        //ОТключаем лог
+        DB::connection()->disableQueryLog();
         if (Storage::exists('MiD.xml')) {
 
             $xml = simplexml_load_string(Storage::get('MiD.xml'));
@@ -60,6 +62,7 @@ class Appointments extends Command {
                     'name'=> $value->SOTR,
                     'cabinet'=> $value->KAB,
                 ]);
+
                 $TimeTable->save();
 
                 $entry = array();
@@ -72,7 +75,9 @@ class Appointments extends Command {
                     ]);
 
                 }
+
                 $TimeTable->entry()->saveMany($entry);
+                $this->info('Запись полностью добавлена' . date('h-i-s'));
             }
 
 

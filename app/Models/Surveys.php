@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Survey extends Model {
+class Surveys extends Model
+{
 
     use SoftDeletes;
     /**
@@ -20,7 +21,8 @@ class Survey extends Model {
      */
     protected $fillable = ['name', 'ids'];
 
-    public function questions()
+
+    public function quest()
     {
         return $this->hasMany('App\Models\Question');
     }

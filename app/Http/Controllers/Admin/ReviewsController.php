@@ -31,7 +31,6 @@ class ReviewsController extends Controller {
     {
 
         $Reviews = Reviews::find($request->id);
-
         $Reviews->fio = $request->fio;
         $Reviews->content = $request->content;
         $Reviews->publish = $request->status;
