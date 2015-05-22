@@ -4,8 +4,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Http\Requests\AuthLoginRequest;
 use App\Http\Requests\AuthRequest;
+use Mail;
 use Sentry;
-
 
 class AuthController extends Controller {
 
@@ -48,13 +48,21 @@ class AuthController extends Controller {
             'last_name' => $request->lastname,
             'email' => $request->email,
             'password' => $request->password,
-            'activated' => TRUE,
+            //'activated' => TRUE,
         ));
 
-        $userGroup = Sentry::findGroupByName('User');
-        $user->addGroup($userGroup);
-        Sentry::loginAndRemember($user);
-        return redirect()->route('/dashboard');
+        $activationCode = $user->getActivationCode();
+
+        Mail::send('mail/activate', ['activationCode' => $activationCode, 'email' => $request->email], function ($message) use ($request) {
+            $message->from('us@example.com', 'Laravel');
+            $message->to($request->email)->cc($request->email);
+
+        });
+
+        //$userGroup = Sentry::findGroupByName('User');
+        //$user->addGroup($userGroup);
+        //Sentry::loginAndRemember($user);
+        return redirect()->route('/auth/action/' . $request->email);
     }
 
 
@@ -62,5 +70,27 @@ class AuthController extends Controller {
     {
         Sentry::logout();
     }
+
+
+    public function anyAction($email = null, $activationCode = null)
+    {
+        if (is_null($email) || is_null($activationCode))
+            return view('auth/action', ['email' => $email]);
+        else {
+            $user = Sentry::findUserByLogin($email);
+            if ($user->attemptActivation($activationCode)) {
+                dd('Вы активировали пользователя туту его надо перебросить значит');
+            } else {
+                return redirect()->back()->withErrors(array('Ключ не подходит к email'));
+            }
+        }
+    }
+
+
+    public function anyReset()
+    {
+        return view('auth/reset');
+    }
+
 
 }
