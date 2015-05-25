@@ -21,14 +21,13 @@ Route::controllers([
 
 
 
-//Группа для сайтов
-/*
-Route::group(['domain' => '{sitename}.{sitedomen}'], function()
-{
-    Route::controller('/', 'HomeController');
 
+Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], function()
+{
+    Route::resource('/blog', 'BlogController');
+    Route::controller('/', 'HomeController');
 });
-*/
+
 
 
 

@@ -20,4 +20,12 @@ class News extends Model {
      */
     protected $fillable = ['title', 'name', 'content', 'avatar', 'datetime', 'tag', 'descript', 'ids'];
 
+
+
+    public function getSite()
+    {
+        return $this->belongsTo('App\Models\Sites', 'ids');
+    }
+
+
 }

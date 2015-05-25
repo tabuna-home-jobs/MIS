@@ -21,6 +21,9 @@ class Sites extends Model {
      */
     protected $fillable = ['name', 'domen', 'pre'];
 
-
+    public function getNews()
+    {
+        return $this->hasOne('App\Models\News','ids');
+    }
 
 }
