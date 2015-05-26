@@ -2,12 +2,10 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
-use App\Models\News;
-use App\Models\Sites;
 
-class BlogController extends Controller {
-
+class TeamController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,9 +14,7 @@ class BlogController extends Controller {
 	 */
 	public function index($sitename, $sitedomen)
 	{
-        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
-        $getNews =$getSites->getNews()->orderBy('id', 'desc')->paginate(5);
-        return view( $sitename.$sitedomen.'/blog', ['News' => $getNews]);
+        return view( $sitename.$sitedomen.'/team');
 	}
 
 	/**
@@ -47,11 +43,9 @@ class BlogController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($sitename, $sitedomen,$id)
+	public function show($id)
 	{
-        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
-        $getNews =$getSites->getNews()->find($id);
-        return view($sitename.$sitedomen.'/blogNews', ['New' => $getNews]);
+		//
 	}
 
 	/**

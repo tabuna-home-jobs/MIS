@@ -24,8 +24,13 @@ Route::controllers([
 
 Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], function()
 {
+    Route::resource('/service', 'ServiceController');
+    Route::resource('/gallery', 'GalleryController');
+    Route::resource('/team', 'TeamController');
+    Route::resource('/feedback', 'FeedbackController');
+    Route::resource('/appointment', 'AppointmentController');
     Route::resource('/blog', 'BlogController');
-    Route::controller('/', 'HomeController');
+    Route::resource('/', 'HomeController');
 });
 
 

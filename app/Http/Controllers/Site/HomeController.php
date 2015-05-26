@@ -12,10 +12,10 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-
-	}
+    public function index($sitename, $sitedomen)
+    {
+        return view( $sitename.$sitedomen.'/index');
+    }
 
 	/**
 	 * Show the form for creating a new resource.
