@@ -5,6 +5,9 @@
     <title>Здоровье Нации</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+
     <!--theme colour-->
     <link rel="stylesheet" id="color" href="/site1.ru/css/blue.css">
 
@@ -58,9 +61,9 @@
                         <li><a href="/appointment">Запись</a></li>
 
                         <li class="active"><a href="#">Личный кабинет</a></li>
-                        <li><a href="#">Услуги</a></li>
-                        <li><a href="/gallery">Галлерея</a></li>
-                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="/service">Услуги</a></li>
+                        <li><a href="/gallery">Галерея</a></li>
+                        <li><a href="/reviews">Отзывы</a></li>
                         <li><a href="/team">Специалисты</a></li>
                         <li><a href="/feedback">Контакты</a></li>
 
@@ -71,6 +74,42 @@
         </div>
         <div class="header-bottom-line"></div>
     </header>
+
+
+    @if (Session::has('good'))
+        <div class="container">
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="fa fa-check"></i> Успех!</h4>
+                {{Session::get('good')}}
+            </div>
+        </div>
+    @elseif(Session::has('bad'))
+        <div class="container">
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="fa fa-ban"></i> Что то пошло не так!</h4>
+                {{Session::get('bad')}}
+            </div>
+        </div>
+    @endif
+</div>
+
+
+@if (count($errors) > 0)
+    <div class="container">
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Ошибка!</strong> Пожалуйста проверте вводимые данные.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+@endif
+
 
 
 @yield('content')

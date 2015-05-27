@@ -24,6 +24,7 @@ Route::controllers([
 
 Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], function()
 {
+    Route::resource('/reviews', 'ReviewsController');
     Route::resource('/service', 'ServiceController');
     Route::resource('/gallery', 'GalleryController');
     Route::resource('/team', 'TeamController');

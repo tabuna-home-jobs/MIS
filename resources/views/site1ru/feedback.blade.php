@@ -22,12 +22,14 @@
             <div class="row">
             	<div class="col-md-8 contact-form">
                 	<h2 class="light bordered">Написать нам <span>сообщение</span></h2>
-                    <form>
-                    <input type="text" placeholder="ФИО">
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Телефон">
-                    <textarea placeholder="Текст сообщения"></textarea>
-                    <input type="submit" class="btn btn-default" value="Отправить">
+
+                    <form action="/feedback" method="post">
+                        <input type="text" name="fio" placeholder="ФИО" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="phone" placeholder="Телефон" required>
+                        <textarea name="message" required placeholder="Текст сообщения"></textarea>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="submit" class="btn btn-default" value="Отправить">
                     </form>
                     <div class="clearfix"></div>
                 </div>

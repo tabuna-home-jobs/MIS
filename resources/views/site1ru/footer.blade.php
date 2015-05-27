@@ -4,20 +4,20 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="footer-widget">
-                    <h4><span>Medicom</span></h4>
+                    <h4><span>Иформация</span></h4>
                     <ul class="footer-nav list-unstyled clearfix">
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Home</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Doctors</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>About US</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Departments</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Services</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Blog</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Why US</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Medical Care</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Specilaties</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Timetable</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Events</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Contact Us</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
+                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,7 +30,13 @@
                         <!-- VK Widget -->
                         <div id="vk_groups"></div>
                         <script type="text/javascript">
-                            VK.Widgets.Group("vk_groups", {mode: 0, width: "auto", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 20003922);
+                            VK.Widgets.Group("vk_groups", {
+                                mode: 0,
+                                width: "auto",
+                                color1: 'fafafa',
+                                color2: '2B587A',
+                                color3: '5B7FA6'
+                            }, 20003922);
                         </script>
 
                     </div>
@@ -38,27 +44,26 @@
             </div>
             <div class="col-md-3">
                 <div class="footer-widget">
-                    <h4><span>Latest Tweets</span></h4>
+                    <h4><span>Мы в твиттере</span></h4>
                     <div class="twitter-widget">
                         <div class="tweet">
                             <i class="fa fa-twitter"></i>
-                            <p><a href="#">@Rotography</a> Please kindly use our Support Forum: <a href="#.">pixelatic.co.uk.</a>
-                                <span>about a month ago</span>
+
+                            <p><a href="#">@Rotography</a> Центр психологии и развития личности «Карта Успеха» проводит
+                                ряд мероприятий, посвященный активным тренингам по славянской системе «Разбуди свой
+                                мозг».</a>
+                                <span>Час назад</span>
                             </p>
                         </div>
                     </div>
                     <div class="tweet">
                         <i class="fa fa-twitter"></i>
-                        <p><a href="#">@Rotography</a> Please kindly use our Support Forum: <a href="#.">pixelatic.co.uk.</a>
-                            <span>about a month ago</span>
+
+                        <p><a href="#">@Rotography</a> Тестовая запись
+                            <span>Час назад</span>
                         </p>
                     </div>
-                    <div class="tweet">
-                        <i class="fa fa-twitter"></i>
-                        <p><a href="#">@Rotography</a> Please kindly use our Support Forum: <a href="#.">pixelatic.co.uk.</a>
-                            <span>about a month ago</span>
-                        </p>
-                    </div>
+
                 </div>
             </div>
             <div class="col-md-3">
@@ -76,12 +81,18 @@
             </div>
         </div>
     </div>
-    <p class="copyright text-center">Copyright &copy; 2014 Medicom. All right reserved.</p>
+    <p class="copyright text-center">&copy; ООО "Здоровье Нации" <br>
+        <small>Использование информации только с письменного разрешения.</small>
+    </p>
     <div class="container">
         <div class="row">
             <div class="col-md-2"><a href="#."><img src="/site1.ru/images/footer-logo.png" alt="" title="Medicom Logo"></a></div>
             <div class="col-md-10">
-                <p class="footer-bottom-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.</p>
+                <p class="footer-bottom-text">Есть вещи, которые нельзя купить. Это наши главные жизненные ценности:
+                    профессионализм, качество, гуманность, сплоченность.
+                    С нами вы будете уверены в своём здоровье и в здоровье ваших близких. А что может быть дороже для
+                    человека?<br>
+                    Вы доверяете нам здоровье своих детей. Здоровье нации – наша цель.</p>
             </div>
         </div>
     </div>
@@ -165,6 +176,51 @@
             jQuery('.content-sec').slideUp(1000);
         });
 
+    });
+
+
+    $(document).ready(function () {
+
+        var navListItems = $('div.setup-panel div a'),
+                allWells = $('.setup-content'),
+                allNextBtn = $('.nextBtn');
+
+        allWells.hide();
+
+        navListItems.click(function (e) {
+            e.preventDefault();
+            var $target = $($(this).attr('href')),
+                    $item = $(this);
+
+            if (!$item.hasClass('disabled')) {
+                navListItems.removeClass('btn-primary').addClass('btn-default');
+                $item.addClass('btn-primary');
+                allWells.hide();
+                $target.show();
+                $target.find('input:eq(0)').focus();
+            }
+        });
+
+        allNextBtn.click(function () {
+            var curStep = $(this).closest(".setup-content"),
+                    curStepBtn = curStep.attr("id"),
+                    nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                    curInputs = curStep.find("input[type='text'],input[type='url']"),
+                    isValid = true;
+
+            $(".form-group").removeClass("has-error");
+            for (var i = 0; i < curInputs.length; i++) {
+                if (!curInputs[i].validity.valid) {
+                    isValid = false;
+                    $(curInputs[i]).closest(".form-group").addClass("has-error");
+                }
+            }
+
+            if (isValid)
+                nextStepWizard.removeAttr('disabled').trigger('click');
+        });
+
+        $('div.setup-panel div a.btn-primary').trigger('click');
     });
 
 

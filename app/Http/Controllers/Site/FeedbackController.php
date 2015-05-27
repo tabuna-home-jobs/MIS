@@ -1,9 +1,12 @@
 <?php namespace App\Http\Controllers\Site;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Requests\Site\FeedbackRequest;
+use App\Models\Feedback;
+use App\Models\Sites;
+use Session;
 
-use Illuminate\Http\Request;
 
 class FeedbackController extends Controller {
 
@@ -34,9 +37,20 @@ class FeedbackController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+    public function store($sitename, $sitedomen, FeedbackRequest $request)
 	{
-		//
+
+        $new = new Feedback([
+            'fio' => $request->fio,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'content' => $request->message,
+            'ids' => Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id,
+        ]);
+        $new->save();
+
+        Session::flash('good', 'Спасибо, что написали, мы обязательно ответим вам.');
+        return redirect()->back();
 	}
 
 	/**

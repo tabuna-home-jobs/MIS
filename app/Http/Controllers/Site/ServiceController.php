@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers\Site;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use App\Http\Requests;
 
 class ServiceController extends Controller {
 
@@ -25,7 +23,8 @@ class ServiceController extends Controller {
 	public function create()
 	{
 		//
-	}
+
+    }
 
 	/**
 	 * Store a newly created resource in storage.

@@ -20,5 +20,9 @@ class Reviews extends Model {
      */
     protected $fillable = ['fio', 'content', 'datatime', 'publish', 'ids'];
 
+    public function getSite()
+    {
+        return $this->belongsTo('App\Models\Sites', 'ids');
+    }
 
 }

@@ -1,9 +1,8 @@
 <?php namespace App\Http\Controllers\Site;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Models\Sites;
 
 class HomeController extends Controller {
 
@@ -14,7 +13,17 @@ class HomeController extends Controller {
 	 */
     public function index($sitename, $sitedomen)
     {
-        return view( $sitename.$sitedomen.'/index');
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+
+
+        $getNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
+        $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
+
+
+        return view($sitename . $sitedomen . '/index', [
+            'getNews' => $getNews,
+            'getShares' => $getShares,
+        ]);
     }
 
 	/**

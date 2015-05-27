@@ -21,5 +21,8 @@ class Shares extends Model {
     protected $fillable = ['title', 'name', 'content', 'avatar', 'datestart', 'dateend', 'tag', 'descript', 'ids'];
 
 
-
+    public function getSite()
+    {
+        return $this->belongsTo('App\Models\Sites', 'ids');
+    }
 }

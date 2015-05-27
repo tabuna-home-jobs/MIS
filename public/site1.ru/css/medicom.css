@@ -332,6 +332,11 @@ video {
 	background:#f47c23;
 	border:2px solid #d26514;
 }
+
+.odnok:hover {
+    background: #f47c23;
+}
+
 .social-rounded li a i.fa-pinterest:hover {
 	background:#ca1f28;
 	border:2px solid #b71c23;
@@ -490,7 +495,7 @@ video {
 }
 .counter .quantity-counter1, .counter .quantity-counter2, .counter .quantity-counter3, .counter .quantity-counter4 {
 	font-size:80px;
-	font-family: 'SourceSansProBold';
+    font-family: 'RobotoBold';
 	line-height:1;
 	color:#fff
 }
@@ -537,7 +542,7 @@ video {
 	font-weight: 900;
 	line-height: 44px;
 	margin: 0 0 0 2px;
-	font-family: 'SourceSansProBlack';
+    font-family: 'RobotoBold';
 }
 .monthyear {
 	color: #FFFFFF;
@@ -557,7 +562,7 @@ video {
 }
 .blog-content a.btn {
 	font-weight:normal;
-	font-family: 'SourceSansProRegular';
+    font-family: 'RobotoRegular';
 }
 .blog-title, .blog-item .blog-title a {
 	color: #373737;
@@ -689,7 +694,7 @@ video {
 	color: #FFFFFF;
 	cursor: pointer;
 	display: inline-block;
-	font-family: 'SourceSansProBold';
+    font-family: 'RobotoBold';
 	font-size: 14px;
 	line-height: 1.42857;
 	margin-bottom: 0;
@@ -784,7 +789,7 @@ video {
 }
 .medicom-app-content p span {
 	display:block;
-	font-family: 'SourceSansProSemibold';
+    font-family: 'RobotoLight';
 	margin-top:10px;
 }
 .medicom-app-content .app-buttons li {
@@ -826,7 +831,7 @@ footer {
 	line-height:23px;
 }
 footer h4 {
-	font-family: 'SourceSansProBold';
+    font-family: 'RobotoBold';
 	margin-bottom:30px;
 }
 footer h4 span {
@@ -953,7 +958,7 @@ footer.dark .footer-bottom-text {
 	padding: 11px 12px 5px;
 	margin-top:4px;
 	font-size:14px;
-	font-family: 'SourceSansProBold';
+    font-family: 'RobotoBold';
 }
 /*footer twitter*/
 .tweet i {
@@ -1101,7 +1106,7 @@ footer.dark .footer-bottom-text {
 	font-size:21px;
 	color:#373737;
 	text-transform:none;
-	font-family: 'SourceSansProRegular';
+    font-family: 'RobotoRegular';
 }
 .blog2-content .post-date {
 	font-size:13px;
@@ -1347,7 +1352,7 @@ footer.dark .footer-bottom-text {
 }
 .creative-sec-thumb figcaption {
 	color:#565656;
-	font-family: 'SourceSansProLight';
+    font-family: 'RobotoLight';
 	font-size:26px;
 	padding:20px 0 0;
 }
@@ -1437,7 +1442,7 @@ footer.dark .footer-bottom-text {
 .awesome-features li span {
 	font-size:20px;
 	text-transform:uppercase;
-	font-family: 'SourceSansProBold';
+    font-family: 'RobotoBold';
 	display:block;
 }
 .awesome-features li i {
@@ -1724,13 +1729,13 @@ footer.dark .footer-bottom-text {
 	padding-left:257px;
 }
 .doctors-detail h4 {
-	font-family: 'SourceSansProSemibold';
+    font-family: 'RobotoBold';
 	margin-top:0;
 }
 .doctors-detail h4 span {
 	font-size:12px;
 	color:#8f8f8f;
-	font-family: 'SourceSansProLight';
+    font-family: 'RobotoLight';
 	display:block;
 }
 .doctors-detail p {
@@ -1745,10 +1750,10 @@ footer.dark .footer-bottom-text {
 	width:100%;
 }
 .doctors-detail p label.detail {
-	font-family: 'SourceSansProLight';
+    font-family: 'RobotoLight';
 }
 .doctors-detail p label.heading {
-	font-family: 'SourceSansProSemibold';
+    font-family: 'RobotoBold';
 	width:130px;
 }
 /*Investigations*/
@@ -1777,7 +1782,7 @@ footer.dark .footer-bottom-text {
 	padding:15px 22px 12px;
 	border-left:1px solid #f5f5f5;
 	font-size:16px;
-	font-family: 'SourceSansProLight';
+    font-family: 'RobotoLight';
 }
 .pricing-table li span {
 	width:50%;
@@ -1824,7 +1829,7 @@ footer.dark .footer-bottom-text {
 .pricing-table2 .table-heading h3 span {
 	font-size:12px;
 	color:#e8e8e8;
-	font-family: 'SourceSansProLight';
+    font-family: 'RobotoLight';
 	display:block;
 }
 .pricing-table2 .table-heading .price {
@@ -1844,12 +1849,12 @@ footer.dark .footer-bottom-text {
 }
 .pricing-table2 .table-heading .price strong {
 	font-size:50px;
-	font-family: 'SourceSansProBold';
+    font-family: 'RobotoBold';
 }
 .pricing-table2 .table-heading .price span {
 	font-size:18px;
 	display:inline-block;
-	font-family: 'SourceSansProSemibold';
+    font-family: 'RobotoBold';
 	position:relative;
 	top:-14px;
 	left:2px;
@@ -1897,7 +1902,7 @@ footer.dark .footer-bottom-text {
 .team-member-description .team-member-desc-inner h5 span {
 	display:block;
 	font-size:14px;
-	font-family: 'SourceSansProRegular';
+    font-family: 'RobotoRegular';
 }
 .team-member-description .team-member-desc-inner p {
 	color:#fff;
@@ -1988,7 +1993,7 @@ i.feature-icon {
 }
 .feature-content h5, .feature-content h5 a {
 	color:#616161;
-	font-family: 'SourceSansProBold';
+    font-family: 'RobotoBold';
 	font-size:20px;
 }
 .feature-content p {
@@ -2088,7 +2093,7 @@ i.feature-icon {
 	margin:0 12px 0 0;
 }
 .popular-post h4, .popular-post h4 a {
-	font-family: 'SourceSansProRegular';
+    font-family: 'RobotoRegular';
 	margin:0;
 	font-size:22px;
 	color:#373737;
@@ -2138,7 +2143,7 @@ i.feature-icon {
 	position: absolute;
 	text-align: center;
 	width: 100%;
-	font-family: 'SourceSansProSemibold';
+    font-family: 'RobotoBold';
 }
 /********************************* Lits ********************************/
 
@@ -2323,7 +2328,7 @@ i.feature-icon {
 	max-width:556px;
 	font-size:26px;
 	color:#ababab;
-	font-family: 'SourceSansProLight';
+    font-family: 'RobotoLight';
 	border-radius:15px;
 	-moz-border-radius:15px;
 	-webkit-border-radius:15px;
@@ -2403,7 +2408,7 @@ i.feature-icon {
 }
 .error-text p {
 	font-size:24px;
-	font-family: 'SourceSansProLight';
+    font-family: 'RobotoLight';
 }
 .error-text p span {
 	display:block;
@@ -2414,7 +2419,7 @@ i.feature-icon {
 }
 .error-text p span strong {
 	font-size:260px;
-	font-family: 'SourceSansProBold';
+    font-family: 'RobotoBold';
 	line-height:200px
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -2586,7 +2591,7 @@ padding:31px 32px 27px
     padding:105px 0 0;
 }
 .shop-banner .slider-text h1{
-    font-family: 'SourceSansProLight';
+    font-family: 'RobotoLight';
     margin:0
 }
 .shop-banner .slider-text p{
@@ -2788,12 +2793,18 @@ padding:31px 32px 27px
 }
 .cart-product{ padding-top:10px; text-align:left;border-right: 1px solid #D8D8D8; line-height:128px; height:128px}
 .cart-product img{ margin-right:10px; display:block;}
-.cart-product h4{font-family: 'SourceSansProLight';}
+
+.cart-product h4 {
+    font-family: 'RobotoLight';
+}
 .cart-price, .cart-quantity, .cart-total, .product-remove2 { height:128px;
     border-right: 1px solid #D8D8D8;
     font-size: 24px;
 }
-.cart-price .amount, .cart-total .amount{font-family: 'SourceSansProLight';}
+
+.cart-price .amount, .cart-total .amount {
+    font-family: 'RobotoLight';
+}
 .cart-quantity .item-counter{ margin:0 auto; float:none; display:inline-flex}
 .product-remove2 span{ cursor:pointer;}
 .cart-buttons{ min-height:128px;border-top: 1px solid #D8D8D8; padding:10px 0 0}
@@ -2806,3 +2817,52 @@ padding:31px 32px 27px
 .cart-total-amount label{ font-size:17px;}
 .order-total{ border-bottom:1px solid #F4F4F4;border-top:1px solid #F4F4F4;}
 .cart-total-amount .price{ font-weight:bold}
+
+.stepwizard-step p {
+    margin-top: 10px;
+}
+
+.stepwizard-row {
+    display: table-row;
+}
+
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+
+}
+
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+
+.stepwizard-step > .btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    box-shadow: none;
+
+}

@@ -13,105 +13,113 @@
                             <div class="product-thumb">
                                 <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
                             </div>
-                            <h4>panadol tablets</h4>
-                            <p>tablets for children</p>
+                            <h4>Воспалительные</h4>
+
+                            <p>урогенитальные инфекции</p>
                             <div class="price-rating">
-                                <p class="price">£69.00</p>
+                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
                                 <div class="clearfix"></div>
                             </div>
                             <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-shopping-cart"></i>add to cart</a>
+                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
                             </div>
-                            <h4>panadol tablets</h4>
-                            <p>tablets for children</p>
+                            <h4>Воспалительные</h4>
+
+                            <p>урогенитальные инфекции</p>
                             <div class="price-rating">
-                                <p class="price">£69.00</p>
+                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
                                 <div class="clearfix"></div>
                             </div>
                             <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-shopping-cart"></i>add to cart</a>
+                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
                             </div>
-                            <h4>panadol tablets</h4>
-                            <p>tablets for children</p>
+                            <h4>Воспалительные</h4>
+
+                            <p>урогенитальные инфекции</p>
                             <div class="price-rating">
-                                <p class="price">£69.00</p>
+                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
                                 <div class="clearfix"></div>
                             </div>
                             <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-shopping-cart"></i>add to cart</a>
+                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
                             </div>
-                            <h4>panadol tablets</h4>
-                            <p>tablets for children</p>
+                            <h4>Воспалительные</h4>
+
+                            <p>урогенитальные инфекции</p>
                             <div class="price-rating">
-                                <p class="price">£69.00</p>
+                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
                                 <div class="clearfix"></div>
                             </div>
                             <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-shopping-cart"></i>add to cart</a>
+                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
                             </div>
-                            <h4>panadol tablets</h4>
-                            <p>tablets for children</p>
+                            <h4>Воспалительные</h4>
+
+                            <p>урогенитальные инфекции</p>
                             <div class="price-rating">
-                                <p class="price">£69.00</p>
+                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
                                 <div class="clearfix"></div>
                             </div>
                             <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-shopping-cart"></i>add to cart</a>
+                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
                             </div>
-                            <h4>panadol tablets</h4>
-                            <p>tablets for children</p>
+                            <h4>Воспалительные</h4>
+
+                            <p>урогенитальные инфекции</p>
                             <div class="price-rating">
-                                <p class="price">£69.00</p>
+                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
                                 <div class="clearfix"></div>
                             </div>
                             <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-shopping-cart"></i>add to cart</a>
+                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
                             </div>
-                            <h4>panadol tablets</h4>
-                            <p>tablets for children</p>
+                            <h4>Воспалительные</h4>
+
+                            <p>урогенитальные инфекции</p>
                             <div class="price-rating">
-                                <p class="price">£69.00</p>
+                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
                                 <div class="clearfix"></div>
                             </div>
                             <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-shopping-cart"></i>add to cart</a>
+                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
                             </div>
-                            <h4>panadol tablets</h4>
-                            <p>tablets for children</p>
+                            <h4>Воспалительные</h4>
+
+                            <p>урогенитальные инфекции</p>
                             <div class="price-rating">
-                                <p class="price">£69.00</p>
+                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
                                 <div class="clearfix"></div>
                             </div>
                             <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-shopping-cart"></i>add to cart</a>
+                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -120,25 +128,29 @@
                     <div class="sidebar-widget">
                         <div class="search clearfix">
                             <form action="#." method="get">
-                                <input type="text" placeholder="Search...">
+                                <input type="text" placeholder="Поиск...">
                                 <button class="search-icon" type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </div>
 
                     <div class="sidebar-widget clearfix">
-                        <h2 class="bordered light">community <span>poll</span></h2>
+                        <h2 class="bordered light">всего пара <span>вопросов</span></h2>
                         <div class="poll">
                             <form>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div><span>Price Rules</span>
+                                <div class="radio"><span class="checked"><input type="radio"></span></div>
+                                <span>Качество</span>
                                 <div class="clearfix"></div>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div><span>Medicines</span>
+                                <div class="radio"><span class="checked"><input type="radio"></span></div>
+                                <span>Цена</span>
                                 <div class="clearfix"></div>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div><span>Injection</span>
+                                <div class="radio"><span class="checked"><input type="radio"></span></div>
+                                <span>Удобство</span>
                                 <div class="clearfix"></div>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div><span>Blood Bank</span>
+                                <div class="radio"><span class="checked"><input type="radio"></span></div>
+                                <span>Профессианализм</span>
                                 <div class="clearfix"></div>
-                                <input type="submit" value="Poll" class="btn btn-default btn-rounded">
+                                <input type="submit" value="Голосовать" class="btn btn-default btn-rounded">
                             </form>
                         </div>
                     </div>
