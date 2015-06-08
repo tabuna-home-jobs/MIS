@@ -1,7 +1,8 @@
 <?php namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
+use App\Models\Sites;
+use Request;
 
 class ServiceController extends Controller {
 
@@ -12,7 +13,18 @@ class ServiceController extends Controller {
 	 */
     public function index($sitename, $sitedomen)
     {
-        return view( $sitename.$sitedomen.'/service');
+
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $Category = $getSites->getCategory()->get();
+
+        $requestCategory = Request::input('category');
+
+        if (is_null($requestCategory))
+            $Goods = $getSites->getGoods()->paginate(9);
+        else
+            $Goods = $getSites->getGoods()->where('category_id', $requestCategory)->paginate(9);
+
+        return view($sitename . $sitedomen . '/service', ['Category' => $Category, 'Goods' => $Goods]);
     }
 
 	/**
@@ -42,9 +54,13 @@ class ServiceController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+    public function show($sitename, $sitedomen, $id)
 	{
-		//
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $Category = $getSites->getCategory()->get();
+        $Goods = $getSites->getGoods()->where('id', $id)->first();
+        $Comments = $Goods->comments()->where('publish', true)->orderBy('id', 'desc')->simplepaginate(5);
+        return view($sitename . $sitedomen . '/goods', ['Category' => $Category, 'Goods' => $Goods, 'Comments' => $Comments]);
 	}
 
 	/**

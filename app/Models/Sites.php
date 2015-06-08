@@ -36,4 +36,15 @@ class Sites extends Model {
         return $this->hasOne('App\Models\Reviews', 'ids');
     }
 
+
+    public function getCategory()
+    {
+        return $this->hasOne('App\Models\Category', 'ids');
+    }
+
+    public function getGoods()
+    {
+        return $this->hasOne('App\Models\Goods', 'ids');
+    }
+
 }

@@ -9,120 +9,31 @@
                 <div class="col-md-8">
                     <h2 class="bordered light">Предоставляемые <span>Услуги</span></h2>
                     <div class="products">
+
+
+                        @foreach($Goods as $good)
+
                         <div class="product">
                             <div class="product-thumb">
-                                <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
+                                <a href="/service/{{$good['id']}}"><img alt="" src="{{$good['avatar']}}" height="100px"></a>
                             </div>
-                            <h4>Воспалительные</h4>
+                            <h4>{{$good['name']}}</h4>
 
-                            <p>урогенитальные инфекции</p>
+                            <p>Тут должна быть категория</p>
                             <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
+                                <p class="price"><i class="fa fa-rub"></i> {{$good['price']}}</p>
                                 <div class="clearfix"></div>
                             </div>
                             <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
+                            <a class="ad-to-cart" href="/service/{{$good['id']}}"><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
-                            </div>
-                            <h4>Воспалительные</h4>
 
-                            <p>урогенитальные инфекции</p>
-                            <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
-                        </div>
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
-                            </div>
-                            <h4>Воспалительные</h4>
+                        @endforeach
 
-                            <p>урогенитальные инфекции</p>
-                            <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
-                        </div>
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
-                            </div>
-                            <h4>Воспалительные</h4>
-
-                            <p>урогенитальные инфекции</p>
-                            <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
-                        </div>
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
-                            </div>
-                            <h4>Воспалительные</h4>
-
-                            <p>урогенитальные инфекции</p>
-                            <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
-                        </div>
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
-                            </div>
-                            <h4>Воспалительные</h4>
-
-                            <p>урогенитальные инфекции</p>
-                            <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
-                        </div>
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
-                            </div>
-                            <h4>Воспалительные</h4>
-
-                            <p>урогенитальные инфекции</p>
-                            <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
-                        </div>
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="#"><img alt="" src="/site1.ru/images/latest-news3.jpg"></a>
-                            </div>
-                            <h4>Воспалительные</h4>
-
-                            <p>урогенитальные инфекции</p>
-                            <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> 69.00</p>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="sperator"></span>
-                            <a class="ad-to-cart" href="#."><i class="fa fa-hospital-o"></i>Подробнее</a>
-                        </div>
                     </div>
+
                     <div class="clearfix"></div>
+                    {!! $Goods->render(); !!}
                 </div>
                 <aside class="col-md-4">
                     <div class="sidebar-widget">
@@ -133,6 +44,20 @@
                             </form>
                         </div>
                     </div>
+
+
+                    <div class="sidebar-widget clearfix">
+                        <h2 class="bordered light">Категории</h2>
+                        <ul class="tags">
+                            @foreach($Category as $value)
+
+                                <li><a href="/service?category={{$value['id']}}">{{$value['name']}}</a></li>
+
+                            @endforeach
+
+                        </ul>
+                    </div>
+
 
                     <div class="sidebar-widget clearfix">
                         <h2 class="bordered light">всего пара <span>вопросов</span></h2>

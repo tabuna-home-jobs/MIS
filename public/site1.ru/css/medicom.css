@@ -2617,15 +2617,17 @@ padding:31px 32px 27px
     top: auto
 }
 /*review comment*/
-#comments .comment-text{
-    padding-left:80px;
-}
+
 #comments .comment-text .meta{
     margin-bottom:5px;
     font-size:14px;
 }
 #comments .comment-text .description{
     font-size:14px;
+}
+
+#comments .comment-text .description > p {
+    padding: 10px 0px 5px 10px;
 }
 #comments .commentlist{
     padding:0;
@@ -2866,3 +2868,4 @@ padding:31px 32px 27px
     box-shadow: none;
 
 }
+
