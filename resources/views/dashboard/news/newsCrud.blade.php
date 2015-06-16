@@ -29,8 +29,7 @@
                     <div class='box-body pad'>
 
 
-
-                        <form action="/dashboard/news" method="post" class="row">
+                        <form action="/dashboard/news" method="post" class="row" enctype="multipart/form-data">
 
                             @if(isset($News->id))
                                 <input type="hidden" name="id" value="{{$News->id}}">
@@ -48,22 +47,36 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Теги</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="tag" value="{{$News->tag or ''}}">
+                                    <input class="form-control form-tag" data-role="tagsinput" type="text"
+                                           maxlength="255" required name="tag" value="{{$News->tag or ''}}">
                                 </div>
                                 <div class="form-group">
                                     <label>Описание</label>
                                     <input class="form-control" type="text" maxlength="255" required name="descript" value="{{$News->descript or ''}}">
                                 </div>
+
+
                                 <div class="form-group">
                                     <label>Миниатюра</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="glyphicon glyphicon-picture"></i>
-                                        </div>
-                                        <input class="form-control" type="text" maxlength="255" required name="avatar" value="{{$News->avatar or ''}}">
-                                    </div><!-- /.input group -->
-                                </div>
 
+                                    <div class="form-group text-center">
+
+                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                            <div data-trigger="fileinput" class="fileinput-preview thumbnail"
+                                                 style="line-height: 150px;"><img src="{{$News->avatar or ''}}">
+                                            </div>
+
+                                            <div>
+                                                <span class="btn btn-default btn-file"><span class="fileinput-new">Выбрать изображение</span><span
+                                                            class="fileinput-exists">Изменить</span><input type="file"
+                                                                                                           name="avatar"
+                                                                                                           value="{{$News->avatar or ''}}"></span>
+                                                <a href="#" class="btn btn-default fileinput-exists"
+                                                   data-dismiss="fileinput">Удалить</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

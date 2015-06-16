@@ -73,7 +73,7 @@ class CategoryController extends Controller {
     public function getDestroy($Category = null)
     {
         $Category = Category::find($Category);
-        $Category->delete();
+        $Category->delete('cascade');
         Session::flash('good', 'Вы успешно удалили значения');
         return redirect()->route('category');
     }

@@ -76,7 +76,7 @@ class GoodsController extends Controller {
     public function getDestroy($Goods = null)
     {
         $Category = Goods::find($Goods);
-        $Category->delete();
+        $Category->delete('cascade');
         Session::flash('good', 'Вы успешно удалили значения');
         return redirect()->route('goods');
     }

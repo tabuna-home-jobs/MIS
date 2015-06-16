@@ -3,11 +3,11 @@
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SharesRequest;
 use App\Models\Shares;
+use Image;
 use Redirect;
 use Request;
 use Session;
 use Validator;
-
 
 class SharesController extends Controller {
 
@@ -43,7 +43,10 @@ class SharesController extends Controller {
         $page->content = $request->content;
         $page->tag = $request->tag;
         $page->descript = $request->descript;
-        $page->avatar = $request->avatar;
+        if (Request::hasFile('avatar')) {
+            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            $page->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+        }
         $page->start = $request->start;
         $page->end = $request->end;
         $page->ids = Session::get('website');

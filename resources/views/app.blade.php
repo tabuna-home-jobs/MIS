@@ -11,10 +11,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta name="token" content="{{ csrf_token() }}" >
     <!-- Bootstrap 3.3.2 -->
     <link href="{{ asset('/admin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-
+    <link href="{{ asset('/admin/bootstrap/css/jasny-bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/admin/bootstrap/css/bootstrap-tagsinput.css') }}" rel="stylesheet" type="text/css"/>
 
     <!-- Font Awesome Icons -->
     <link href="{{ asset('/admin/bootstrap/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+
 
 
      <!-- Theme style -->
@@ -42,13 +44,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{ asset('/admin/plugins/jQuery/jQuery-2.1.3.min.js')}}"></script>
     <!-- Bootstrap 3.3.2 JS -->
     <script src="{{asset('/admin/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/admin/bootstrap/js/jasny-bootstrap.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/admin/bootstrap/js/bootstrap-tagsinput.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/admin/bootstrap/js/custom.js')}}" type="text/javascript"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('/admin/dist/js/app.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('/admin/dist/js/moment-with-locales.js')}}" type="text/javascript"></script>
     <script src="{{asset('/admin/dist/js/ru-picker.js')}}" type="text/javascript"></script>
     <script src="{{asset('/admin/dist/js/bootstrap-datetimepicker.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('/admin/bootstrap/js/search.js')}}" type="text/javascript"></script>
-    <script src="{{asset('/admin/bootstrap/js/custom.js')}}" type="text/javascript"></script>
+
 
     <!--  TinyMCE -->
     <script src="{{asset('/admin/plugins/tinymce/tinymce.min.js')}}" type="text/javascript"></script>
@@ -280,7 +285,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li><a href="/dashboard/shares/"><i class="fa fa-file-text"></i> <span>Акции</a></li>
                 <li><a href="/dashboard/menu/"><i class="glyphicon glyphicon-menu-hamburger"></i> <span>Меню</span></a>
                 </li>
-                <li><a href="/dashboard/feedback/"><i class="glyphicon fa fa-inbox"></i> <span>Обратная связь</span></a>
+                <li><a href="/dashboard/feedback/"><i class="fa fa-inbox"></i> <span>Обратная связь</span></a>
                 </li>
 
 

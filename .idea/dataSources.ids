@@ -1677,7 +1677,7 @@
       <column name="title" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="content" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
-      <column name="avatar" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="avatar" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="tag" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="descript" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="ids" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>

@@ -3,11 +3,11 @@
 use App\Http\Controllers\Controller;
 use App\Http\Requests\NewsRequest;
 use App\Models\News;
+use Image;
 use Redirect;
 use Request;
 use Session;
 use Validator;
-
 
 class NewsController extends Controller {
 
@@ -43,10 +43,16 @@ class NewsController extends Controller {
         $news->name = $request->name;
         $news->content = $request->content;
         $news->tag = $request->tag;
-        $news->avatar = $request->avatar;
         $news->descript = $request->descript;
         $news->ids = Session::get('website');
+
+        if (Request::hasFile('avatar')) {
+            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            $news->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+        }
+
         $news->save();
+
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');

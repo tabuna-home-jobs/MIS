@@ -29,8 +29,7 @@
                     <div class='box-body pad'>
 
 
-
-                        <form action="/dashboard/shares" method="post" class="row">
+                        <form action="/dashboard/shares" method="post" class="row" enctype="multipart/form-data">
 
                             @if(isset($Shares->id))
                                 <input type="hidden" name="id" value="{{$Shares->id}}">
@@ -48,7 +47,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Теги</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="tag" value="{{$Shares->tag or ''}}">
+                                    <input class="form-control" data-role="tagsinput" type="text" maxlength="255"
+                                           required name="tag" value="{{$Shares->tag or ''}}">
                                 </div>
                                 <div class="form-group">
                                     <label>Описание</label>
@@ -56,12 +56,24 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Миниатюра</label>
-                                    <div class="input-group">
-                                        <input class="form-control" type="text" id="avatar" maxlength="255" required name="avatar" value="{{$Shares->avatar or ''}}">
-                                        <div class="input-group-addon">
-                                            <i class="glyphicon glyphicon-picture" data-toggle="modal" data-target="#avatarimage"></i>
+
+                                    <div class="form-group text-center">
+
+                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                            <div data-trigger="fileinput" class="fileinput-preview thumbnail"
+                                                 style="line-height: 150px;"><img src="{{$Shares->avatar or ''}}">
+                                            </div>
+
+                                            <div>
+                                                <span class="btn btn-default btn-file"><span class="fileinput-new">Выбрать изображение</span><span
+                                                            class="fileinput-exists">Изменить</span><input type="file"
+                                                                                                           name="avatar"
+                                                                                                           value="{{$Shares->avatar or ''}}"></span>
+                                                <a href="#" class="btn btn-default fileinput-exists"
+                                                   data-dismiss="fileinput">Удалить</a>
+                                            </div>
                                         </div>
-                                    </div><!-- /.input group -->
+                                    </div>
                                 </div>
 
 
@@ -112,31 +124,6 @@
 
 
 
-
-    <!-- Modal -->
-    <div class="modal fade" id="avatarimage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Выберите изображение</h4>
-                </div>
-                <div class="modal-body">
-
-                    <iframe width="100%" height="500" frameborder="0"
-                             src="/admin/filemanager/dialog.php?type=1&field_id=avatar">
-                    </iframe>
-
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                    <button type="button" class="btn btn-primary">Сохранить</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
