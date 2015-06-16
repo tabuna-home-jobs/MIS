@@ -4,6 +4,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\GoodsRequest;
 use App\Models\Category;
 use App\Models\Goods;
+use Image;
+use Request;
 use Session;
 
 class GoodsController extends Controller {
@@ -37,7 +39,10 @@ class GoodsController extends Controller {
         $Goods->name = $request->name;
         $Goods->text = $request->text;
         $Goods->tag = $request->tag;
-        $Goods->avatar = $request->avatar;
+        if (Request::hasFile('avatar')) {
+            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            $Goods->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+        }
         $Goods->descript = $request->descript;
         $Goods->ids = Session::get('website');
         $Goods->price = $request->price;

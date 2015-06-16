@@ -3,6 +3,8 @@
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
+use Image;
+use Request;
 use Session;
 
 class CategoryController extends Controller {
@@ -40,7 +42,10 @@ class CategoryController extends Controller {
         $Category->name = $request->name;
         $Category->text = $request->text;
         $Category->tag = $request->tag;
-        $Category->avatar = $request->avatar;
+        if (Request::hasFile('avatar')) {
+            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            $Category->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+        }
         $Category->descript = $request->descript;
         $Category->ids = Session::get('website');
         $Category->save();

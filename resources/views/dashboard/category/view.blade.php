@@ -28,8 +28,7 @@
                     <div class='box-body pad'>
 
 
-
-                        <form action="/dashboard/category" method="post" class="row">
+                        <form action="/dashboard/category" method="post" class="row" enctype="multipart/form-data">
 
                             @if(isset($Category->id))
                                 <input type="hidden" name="id" value="{{$Category->id}}">
@@ -47,21 +46,36 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Теги</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="tag" value="{{$Category->tag or ''}}">
+                                    <input class="form-control" data-role="tagsinput" type="text" maxlength="255"
+                                           required name="tag" value="{{$Category->tag or ''}}">
                                 </div>
                                 <div class="form-group">
                                     <label>Описание</label>
                                     <input class="form-control" type="text" maxlength="255" required name="descript" value="{{$Category->descript or ''}}">
                                 </div>
+
                                 <div class="form-group">
                                     <label>Миниатюра</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="glyphicon glyphicon-picture"></i>
+
+                                    <div class="form-group text-center">
+
+                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                            <div data-trigger="fileinput" class="fileinput-preview thumbnail"
+                                                 style="line-height: 150px;"><img src="{{$Category->avatar or ''}}">
+                                            </div>
+
+                                            <div>
+                                                <span class="btn btn-default btn-file"><span class="fileinput-new">Выбрать изображение</span><span
+                                                            class="fileinput-exists">Изменить</span><input type="file"
+                                                                                                           name="avatar"
+                                                                                                           value="{{$Category->avatar or ''}}"></span>
+                                                <a href="#" class="btn btn-default fileinput-exists"
+                                                   data-dismiss="fileinput">Удалить</a>
+                                            </div>
                                         </div>
-                                        <input class="form-control" type="text" maxlength="255" required name="avatar" value="{{$Category->avatar or ''}}">
-                                    </div><!-- /.input group -->
+                                    </div>
                                 </div>
+
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <button type="submit" class="btn btn-default">Отправить</button>
                             </div>

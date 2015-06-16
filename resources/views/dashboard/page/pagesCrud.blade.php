@@ -51,7 +51,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Теги</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="tag" value="{{$Page->tag or ''}}">
+                                    <input class="form-control" data-role="tagsinput" type="text" maxlength="255"
+                                           required name="tag" value="{{$Page->tag or ''}}">
                                 </div>
                                 <div class="form-group">
                                     <label>Описание</label>

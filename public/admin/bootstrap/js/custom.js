@@ -81,6 +81,43 @@ $(document).ready(function(){
     });
 
 
+    //Подсветка активных полей админки
+    //У всех ссылок должны быть конечные слэши /
+    $("ul.sidebar-menu > li").each(function () {
+        var pathName = location + "/";//pathname + "/";
+        var currHref = $('a', this).attr('href');
+        var currObj = $(this);
+
+        //Если оно с дочками то бежим по нему
+        if (currObj.hasClass('treeview')) {
+            $('ul li a', currObj).each(function () {
+                //Получаем ссылку текущего подменю
+                var currSubHref = $(this).attr('href');
+
+                if (pathName.indexOf(currSubHref) + 1) {
+                    currObj.addClass('active');
+                    $(this).addClass('activeA');
+                } else {
+                    $(this).removeClass('activeA');
+                }
+            });
+        } else {
+            if (pathName.indexOf(currHref) != '-1') {
+                currObj.addClass('active');
+            } else {
+                currObj.removeClass('active');
+            }
+        }
+    });
+
+
+
+
+
+
+
+
+
 
     //Атрибуты и их значения
     $(function()

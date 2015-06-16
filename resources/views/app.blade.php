@@ -278,7 +278,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
                 <!-- Optionally, you can add icons to the links -->
-                <li class="active"><a href="/dashboard/"><i class="fa fa-bar-chart"></i> <span> Статистика</span></a>
+                <li><a href="/dashboard/"><i class="fa fa-bar-chart"></i> <span> Статистика</span></a>
                 </li>
                 <li><a href="/dashboard/page/"><i class="fa fa-file-text"></i> <span>Страницы</a></li>
                 <li><a href="/dashboard/news/"><i class="fa fa-newspaper-o"></i> <span>Новости</a></li>
