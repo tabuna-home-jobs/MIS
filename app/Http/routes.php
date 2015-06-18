@@ -105,6 +105,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'dashboard', 'middleware' => [
         'getIndex' => 'filemanager',
     ]);
 
+
     Route::resource('codeeditor', 'CodeEditorController');
 
     Route::controller('/', 'AdminController', [

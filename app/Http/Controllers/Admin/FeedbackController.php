@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\FeedBackSendRequests;
+use App\Http\Requests\FeedBackSend;
 use App\Models\Feedback;
 use App\Models\Sites;
 use Mail;
@@ -79,7 +79,7 @@ class FeedbackController extends Controller {
     }
 
 
-    public  function postSend(FeedBackSendRequests $request)
+    public function postSend(FeedBackSend $request)
     {
         $sites = Sites::find( Session::get('website' ) );
 

@@ -22,6 +22,14 @@ class SurveysController extends Controller
     }
 
 
+    public function getShow($id)
+    {
+        $quests = Surveys::whereRaw('ids =' . Session::get('website') . ' and id =' . $id)->first()->quest()->paginate(15);
+        return view("dashboard/surveys/questions", ['quests' => $quests]);
+    }
+
+
+
     public function postAdd(SurveysRequest $request)
     {
         $Survey = new Surveys([

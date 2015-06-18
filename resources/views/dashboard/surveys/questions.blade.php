@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Опросы
+            Вопросы
         </h1>
     </section>
 
@@ -21,7 +21,8 @@
                                 <span class="fa fa-plus"></span> Добавить новую запись
                             </a>
                         </h3>
-                    </div><!-- /.box-header -->
+                    </div>
+                    <!-- /.box-header -->
                     <div class="box-body">
 
 
@@ -30,11 +31,41 @@
                                 <form action="/dashboard/surveys/add" method="post" class="row">
 
                                     <div class="col-md-4">
+
+
+                                        <div id="GoodsAttr" class="text-center">
+                                            <label>Атрибуты</label>
+
+                                            <div class="entry input-group row">
+                                                <div class="form-group col-md-12">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-plus btn-add"></span>
+                                                        </div>
+                                                        <input class="form-control" name="fieldsAttr[]" type="text"
+                                                               placeholder="Название"/>
+                                                    </div>
+                                                    <!-- /.input group -->
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="col-md-4">
+
+
                                         <div class="form-group">
                                             <label>Название</label>
                                             <input class="form-control" type="text" maxlength="255" required
                                                    name="name">
                                         </div>
+
 
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <button type="submit" class="btn btn-default">Отправить</button>
@@ -50,58 +81,52 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Название</th>
+                                <th>Вопрос</th>
+                                <th>Тип</th>
+                                <th>Дата создания</th>
                                 <th>Управление</th>
 
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach ($Surveys as $survey)
+                            @foreach ($quests as $survey)
                                 <tr>
                                     <td>{{ $survey->id }}</td>
-                                    <td>{{ $survey->name }}</td>
+                                    <td>{{ $survey->quest }}</td>
+                                    <td>{{ $survey->type }}</td>
+                                    <td>{{ $survey->created_at }}</td>
                                     <td>
                                         <a href="/dashboard/surveys/show/{{ $survey->id }}"
                                            class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span>
                                         </a>
-                                        <a href="/dashboard/surveys/destroy/{{ $survey->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
+                                        <a href="/dashboard/surveys/destroy/{{ $survey->id }}"
+                                           class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
                                     </td>
                                 </tr>
-
-                                @foreach($survey->quest()->get() as $key => $value)
-                                    <tr class="collapse" id="syrveys-{{$survey->id}}">
-                                        <td>{{$value->quest}}</td>
-                                        <td>{{$value->type}}</td>
-                                        <td>
-                                            <a href="/dashboard/surveys/add/{{ $survey->id }}"
-                                               class="btn btn-primary"><span
-                                                        class="glyphicon glyphicon-eye-open"></span> </a>
-                                            <a href="/dashboard/surveys/destroy/{{ $survey->id }}"
-                                               class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
-                                        </td>
-                                    </tr>
-                                @endforeach
-
-
 
                             @endforeach
                             </tbody>
                             <tfoot>
                             <tr>
                                 <th>#</th>
-                                <th>Название</th>
+                                <th>Вопрос</th>
+                                <th>Тип</th>
+                                <th>Дата создания</th>
                                 <th>Управление</th>
-
                             </tr>
                             </tfoot>
 
                         </table>
-                        {!! $Surveys->render() !!}
-                    </div><!-- /.box-body -->
-                </div><!-- /.box -->
+                        {!! $quests->render() !!}
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
 
-            </div><!-- /.col -->
-        </div><!-- /.row -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
     </section><!-- /.content -->
 
 @endsection
