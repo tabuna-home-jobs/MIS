@@ -17,7 +17,7 @@ class Question extends Model {
      *
      * @var array
      */
-    protected $fillable = ['quest', 'type', 'surveys_id'];
+    protected $fillable = ['quest', 'type', 'surveys_id', 'answer'];
 
 
     public function syrvey()

@@ -2,7 +2,9 @@
 
 use App\Console\Commands\AppointmentsCommand;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\QuestionRequest;
 use App\Http\Requests\SurveysRequest;
+use App\Models\Question;
 use App\Models\Surveys;
 use Redirect;
 use Request;
@@ -25,7 +27,30 @@ class SurveysController extends Controller
     public function getShow($id)
     {
         $quests = Surveys::whereRaw('ids =' . Session::get('website') . ' and id =' . $id)->first()->quest()->paginate(15);
-        return view("dashboard/surveys/questions", ['quests' => $quests]);
+        return view("dashboard/surveys/questions", ['quests' => $quests, 'surveysID' => $id]);
+    }
+
+    public function getShowquest($id)
+    {
+        $quests = Question::find($id);
+        return view("dashboard/surveys/showquest", ['quests' => $quests]);
+    }
+
+
+    public function postStore(QuestionRequest $request)
+    {
+
+        $newQuest = new Question([
+            'quest' => $request->quest,
+            'type' => $request->type,
+            'answer' => serialize($request->fieldsAttr),
+            'surveys_id' => $request->surveysID
+        ]);
+
+        $newQuest->save();
+        Session::flash('good', 'Вы успешно создали вопрос');
+        return redirect()->back();
+
     }
 
 
@@ -50,6 +75,13 @@ class SurveysController extends Controller
         return redirect()->route('surveys');
     }
 
+    public function getDestroyquest($id)
+    {
+        $page = Question::find($id);
+        $page->delete();
+        Session::flash('good', 'Вы успешно удалили значения');
+        return redirect()->back();
+    }
 
 
 

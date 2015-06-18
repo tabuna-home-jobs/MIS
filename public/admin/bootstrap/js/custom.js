@@ -133,6 +133,7 @@ $(document).ready(function(){
                 newEntry = $(currentEntry.clone()).appendTo('#GoodsAttr');
 
             newEntry.find('input').val('');
+
             controlForm.find('.entry:not(:last) .btn-add')
                 .removeClass('btn-add').addClass('btn-remove')
                 .removeClass('glyphicon-plus').addClass('glyphicon-minus');
