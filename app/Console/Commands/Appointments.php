@@ -1,8 +1,6 @@
 <?php namespace App\Console\Commands;
 
 use App\Console\Commands\AppointmentsThread;
-use App\Models\Entry;
-use App\Models\Timetable;
 use DB;
 use Illuminate\Console\Command;
 use Storage;
@@ -32,10 +30,8 @@ class Appointments extends Command {
 	 *
 	 * @return void
 	 */
-	public function __construct(Timetable $timetable, Entry $entry )
+    public function __construct()
 	{
-        $this->Timetable = $timetable;
-        $this->Entry = $entry;
 		parent::__construct();
 	}
 
@@ -46,7 +42,7 @@ class Appointments extends Command {
 	 */
 	public function fire()
 	{
-        //ОТключаем лог
+
         DB::connection()->disableQueryLog();
         if (Storage::exists('MiD.xml')) {
 
@@ -54,30 +50,38 @@ class Appointments extends Command {
             DB::table('entry')->truncate();
             DB::table('timetable')->truncate();
 
+            $date = date("Y-m-d G:i:s");
+
             foreach ($xml->Record as $value) {
 
-                $TimeTable = new Timetable([
+
+                $id = DB::table('timetable')->insertGetId([
                     'subdivision' => (string) $value->PODR,
                     'specialization' => (string) $value->SPEC,
                     'name'=> $value->SOTR,
                     'cabinet'=> $value->KAB,
+                    'created_at' => $date,
+                    'updated_at' => $date,
                 ]);
 
-                $TimeTable->save();
 
                 $entry = array();
                 foreach($value->ZAPIS->T as $zapis)
                 {
-                    $entry[] = new Entry([
+                    $entry[] = [
                         'beginning' => (int) $zapis->attributes()->S,
                         'end' => (int) $zapis->attributes()->PO,
                         '1c_busy' => (int) $zapis->attributes()->BUSY,
-                    ]);
+                        'timetable_id' => $id,
+                        'created_at' => $date,
+                        'updated_at' => $date,
+                    ];
 
                 }
 
-                $TimeTable->entry()->saveMany($entry);
-                $this->info('Запись полностью добавлена' . date('h-i-s'));
+                DB::table('entry')->insert($entry);
+
+                //$this->info('Запись полностью добавлена' . date('h-i-s'));
             }
 
 
