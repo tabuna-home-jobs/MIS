@@ -1,9 +1,8 @@
 <?php namespace App\Http\Controllers\Site;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Models\Sites;
 
 class TeamController extends Controller {
 
@@ -14,7 +13,9 @@ class TeamController extends Controller {
 	 */
 	public function index($sitename, $sitedomen)
 	{
-        return view( $sitename.$sitedomen.'/team');
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $Specialisty = $getSites->getTeam()->orderBy('id', 'desc')->paginate(6);
+        return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty]);
 	}
 
 	/**

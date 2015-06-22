@@ -280,9 +280,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Optionally, you can add icons to the links -->
                 <li><a href="/dashboard/"><i class="fa fa-bar-chart"></i> <span> Статистика</span></a>
                 </li>
-                <li><a href="/dashboard/page/"><i class="fa fa-file-text"></i> <span>Страницы</a></li>
-                <li><a href="/dashboard/news/"><i class="fa fa-newspaper-o"></i> <span>Новости</a></li>
-                <li><a href="/dashboard/shares/"><i class="fa fa-file-text"></i> <span>Акции</a></li>
+                <li><a href="/dashboard/page/"><i class="fa fa-file-text"></i> <span>Страницы</span></a></li>
+                <li><a href="/dashboard/news/"><i class="fa fa-newspaper-o"></i> <span>Новости</span></a></li>
+                <li><a href="/dashboard/shares/"><i class="fa fa-file-text"></i> <span>Акции</span></a></li>
+                <li><a href="/dashboard/special/"><i class="fa fa-user-md"></i> <span>Специалисты</span></a></li>
                 <li><a href="/dashboard/menu/"><i class="glyphicon glyphicon-menu-hamburger"></i> <span>Меню</span></a>
                 </li>
                 <li><a href="/dashboard/feedback/"><i class="fa fa-inbox"></i> <span>Обратная связь</span></a>

@@ -7,11 +7,13 @@ $(document).ready(function(){
         if(document.getElementById('datetimepickerstart') &&  document.getElementById('datetimepickerend')){
 
                 $('#datetimepickerstart').datetimepicker({
+                    format: 'YYYY-MM-DD HH:mm:ss',
                     locale: 'ru',
                     defaultDate:  $('#datetimepickerstart input').attr('value')
                 });
 
                 $('#datetimepickerend').datetimepicker({
+                    format: 'YYYY-MM-DD HH:mm:ss',
                     locale: 'ru',
                     defaultDate:  $('#datetimepickerend input').attr('value')
                 });

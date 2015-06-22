@@ -1727,6 +1727,8 @@ footer.dark .footer-bottom-text {
 }
 .doctors-detail {
 	padding-left:257px;
+    max-height: 500px;
+    min-height: 500px;
 }
 .doctors-detail h4 {
     font-family: 'RobotoBold';

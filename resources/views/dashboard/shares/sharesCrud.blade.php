@@ -81,7 +81,8 @@
                                 <div class="form-group">
                                     <label>Дата начала</label>
                                     <div class='input-group date' id='datetimepickerstart'>
-                                        <input type='text' class="form-control" required name="start" value="{{$Shares->start or ''}}" />
+                                        <input type='text' class="form-control" required name="start"
+                                               value="{{$Shares->start or ''}}"/>
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
