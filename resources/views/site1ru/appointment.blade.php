@@ -1,8 +1,7 @@
 @extends('site1ru/header')
 
 @section('content')
-    
-    
+
 
     <section class="appointment-sec text-center">
         <div class="container">
@@ -38,7 +37,7 @@
                             </div>
                         </div>
                     </div>
-                    <form role="form">
+                    <form role="form" action="appointment/store" method="post">
                         <div class="row setup-content" id="step-1">
                             <div class="col-xs-12">
                                 <div class="col-md-12">
@@ -46,27 +45,166 @@
 
                                     <div class="form-group row">
                                         <label class="control-label">Место</label>
-                                        <select>
-                                            <option>Политехническая 1</option>
-                                            <option>Политехническая 2</option>
-                                            <option>Политехническая 3</option>
+                                        <select name="place" required>
+                                            <option selected disabled>Выберите место</option>
+                                            @foreach($place as $placeItem)
+                                                <option value="{{$placeItem->subdivision}}">{{$placeItem->subdivision}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group row">
                                         <label class="control-label">Специализациия</label>
-                                        <select>
-                                            <option>Врач-гастроэнтеролог</option>
-                                            <option>Врач акушер-гинеколог</option>
+                                        <select disabled name="specialization" required>
+                                            <option>Выберите место</option>
                                         </select>
                                     </div>
 
                                     <div class="form-group row">
                                         <label class="control-label">Врач</label>
-                                        <select>
-                                            <option>Дмитриева Калерия Ивановна</option>
-                                            <option>Истомин Максим Олегович</option>
+                                        <select disabled name="fio" required>
+                                            <option>Выберите специализацию</option>
                                         </select>
                                     </div>
+
+
+
+                                    <script>
+                                      $('select[name="place"]').change(function () {
+
+                                            var obj = $(this);
+                                            var Curvalue = $(':selected',this).val();
+                                            var csrf = $('meta[name="csrf-token"]').attr('content');
+
+
+
+                                            $.ajax({
+                                                type: "POST",
+                                                url: "/appointment/special/" + Curvalue ,
+                                                beforeSend: function(request) {
+                                                    request.setRequestHeader('X-CSRF-Token', csrf);
+                                                },
+                                                success: function(msg){
+
+                                                    var option = "<option selected disabled>Выберите специализацию</option>";
+                                                    for(var i = 0; msg.length > i; i++)
+                                                    {
+                                                        option += "<option value='"+ msg[i].specialization + "'>"
+                                                        + msg[i].specialization + "</option>";
+                                                    }
+
+                                                    $('select[name="specialization"]').html(option);
+                                                    $('select[name="specialization"]').attr('disabled',false);
+
+                                                }
+                                            });
+
+                                        });
+
+
+
+
+                                        $('select[name="specialization"]').change(function () {
+
+
+                                            var obj = $(this);
+                                            var Curvalue = $(':selected',this).val();
+                                            var Placevalue = $('select[name="place"] :selected').val();
+                                            var csrf = $('meta[name="csrf-token"]').attr('content');
+
+
+                                            $.ajax({
+                                                type: "POST",
+                                                url: "/appointment/fio/" + Placevalue +"/"+ Curvalue ,
+                                                beforeSend: function(request) {
+                                                    request.setRequestHeader('X-CSRF-Token', csrf);
+                                                },
+                                                success: function(msg){
+
+                                                    var option = "<option selected disabled>Выберите врача</option>";
+                                                    for(var i = 0; msg.length > i; i++)
+                                                    {
+                                                        option += "<option value='"+ msg[i].name + "'>"
+                                                        + msg[i].name + "</option>";
+                                                    }
+
+                                                    $('select[name="fio"]').html(option);
+                                                    $('select[name="fio"]').attr('disabled',false);
+
+                                                }
+                                            });
+
+
+                                        });
+
+
+
+
+
+
+
+
+
+
+
+                                      $('select[name="fio"]').change(function () {
+
+
+                                          var obj = $(this);
+                                          var Curvalue = $(':selected',this).val();
+                                          var Placevalue = $('select[name="place"] :selected').val();
+                                          var Specialvalue = $('select[name="specialization"] :selected').val();
+                                          var csrf = $('meta[name="csrf-token"]').attr('content');
+
+
+                                          $.ajax({
+                                              type: "POST",
+                                              url: "/appointment/time/" + Placevalue +"/"+ Specialvalue +"/"+ Curvalue ,
+                                              beforeSend: function(request) {
+                                                  request.setRequestHeader('X-CSRF-Token', csrf);
+                                              },
+                                              success: function(msg){
+
+                                                  var option = "";
+                                                  for(var i = 0; msg.length > i; i++)
+                                                  {
+
+                                                      var beginning = new Date(msg[i].beginning * 1000).toLocaleString();
+                                                      var end = new Date(msg[i].end * 1000).toLocaleString();
+                                                      option += "<div class='radio'><label><input type='radio' name='apport' value='"+ msg[i].beginning+"|"+msg[i].end+"'> С " + beginning+ " по " +end+"</label></div>";
+
+                                                  }
+
+
+
+
+
+
+
+
+                                                  $('#date').html(option);
+
+                                              }
+                                          });
+
+
+                                      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        </script>
+
+
 
 
                                     <button class="btn btn-default  nextBtn btn-rounded pull-right" type="button">
@@ -80,7 +218,9 @@
                                 <div class="col-md-12">
                                     <h5> Выберите дату</h5>
 
-                                    <h4>Тут должен быть хороший календарь</h4>
+                                  <div class="form-group" id="date">
+
+                                  </div>
 
                                     <button class="btn btn-default nextBtn btn-rounded pull-right" type="button">Далее
                                     </button>
@@ -90,14 +230,14 @@
                         <div class="row setup-content" id="step-3">
                             <div class="col-xs-12">
                                 <div class="col-md-12">
-                                    <h5> Выберите специализацию</h5>
+                                    <h5> Информация</h5>
 
-                                    <input type="text" placeholder="Имя">
-                                    <input type="text" placeholder="Фамилия">
-                                    <input type="email" placeholder="Email адрес">
-                                    <input type="text" placeholder="Номер телефона">
-                                    <textarea rows="4" placeholder="Комментарий"></textarea>
-
+                                    <input type="text" name="firstname" placeholder="Имя">
+                                    <input type="text" name="lastname" placeholder="Фамилия">
+                                    <input type="email" name="email" placeholder="Email адрес">
+                                    <input type="text" name="phone" placeholder="Номер телефона">
+                                    <textarea rows="4" name="comment" placeholder="Комментарий"></textarea>
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <button class="btn btn-default btn-rounded pull-right" type="submit">Записаться!
                                     </button>
                                 </div>

@@ -4,7 +4,7 @@
 <head>
     <title>Здоровье Нации</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}" >
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300&subset=latin,cyrillic'
           rel='stylesheet' type='text/css'>
 
@@ -20,7 +20,7 @@
     <!-- masonary -->
     <link href="/site1.ru/css/style-masonary.css" rel="stylesheet">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!--Madonary CSS-->
     <link rel="stylesheet" href="/site1.ru/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="/site1.ru/css/prettyPhoto.css" />

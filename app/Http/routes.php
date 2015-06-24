@@ -29,7 +29,7 @@ Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], funct
     Route::resource('/gallery', 'GalleryController');
     Route::resource('/team', 'TeamController');
     Route::resource('/feedback', 'FeedbackController');
-    Route::resource('/appointment', 'AppointmentController');
+    Route::controller('/appointment', 'AppointmentController');
     Route::resource('/blog', 'BlogController');
     Route::resource('/', 'HomeController');
 });
