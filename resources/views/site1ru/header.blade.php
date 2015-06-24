@@ -77,7 +77,7 @@
 
 
     @if (Session::has('good'))
-        <div class="container">
+        <div class="container alert-container">
             <div class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="fa fa-check"></i> Успех!</h4>
@@ -85,7 +85,7 @@
             </div>
         </div>
     @elseif(Session::has('bad'))
-        <div class="container">
+        <div class="container alert-container">
             <div class="alert alert-danger alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="fa fa-ban"></i> Что то пошло не так!</h4>
@@ -97,7 +97,7 @@
 
 
 @if (count($errors) > 0)
-    <div class="container">
+    <div class="container alert-container">
         <div class="alert alert-danger alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             <strong>Ошибка!</strong> Пожалуйста проверте вводимые данные.<br><br>

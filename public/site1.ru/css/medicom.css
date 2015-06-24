@@ -2871,3 +2871,14 @@ padding:31px 32px 27px
 
 }
 
+.alert-container > .alert {
+    margin: 40px 40px -20px;
+}
+
+.alert-container > .alert > .close {
+    min-width: inherit;
+}
+
+.alert-container > .alert {
+    margin: 40px 40px -20px;
+}

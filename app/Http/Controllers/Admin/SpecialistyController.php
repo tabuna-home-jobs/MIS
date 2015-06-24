@@ -17,7 +17,6 @@ class SpecialistyController extends Controller
         $this->middleware('auth');
     }
 
-
     public function getIndex()
     {
         $Specialisty = Specialisty::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
@@ -33,24 +32,24 @@ class SpecialistyController extends Controller
 
     public function getTrash()
     {
-        $PageList = Page::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/page/trash", ['PageList' => $PageList]);
+        $Specialisty = Specialisty::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+        return view("dashboard/special/trash", ['Specialisty' => $Specialisty]);
     }
 
 
-    public function  getRestore($page = null)
+    public function  getRestore($Spec = null)
     {
-        Page::withTrashed()->find($page)->restore();
+        Specialisty::withTrashed()->find($Spec)->restore();
         Session::flash('good', 'Вы успешно востановили запись');
-        return redirect()->route('page');
+        return redirect()->route('special');
     }
 
 
-    public function  getUnset($page = null)
+    public function  getUnset($Spec = null)
     {
-        Page::withTrashed()->find($page)->forceDelete();
+        Specialisty::withTrashed()->find($Spec)->forceDelete();
         Session::flash('good', 'Вы успешно окончательно удалили запись');
-        return redirect()->route('page');
+        return redirect()->route('special');
     }
 
     //Добовление и изменение данных
