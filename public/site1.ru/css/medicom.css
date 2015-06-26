@@ -333,6 +333,17 @@ video {
 	border:2px solid #d26514;
 }
 
+.social-rounded li a i.fa-circle-o:hover {
+    background: #f47c23;
+    border: 2px solid #d26514;
+}
+
+.social-rounded li a i.fa-vk:hover {
+    background: #4b68b4;
+    border: 2px solid #223874;
+}
+
+
 .odnok:hover {
     background: #f47c23;
 }

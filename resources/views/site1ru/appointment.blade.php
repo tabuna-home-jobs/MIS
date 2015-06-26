@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <section class="appointment-sec text-center">
         <div class="container">
             <h1>Записаться на приём к специалисту</h1>
@@ -241,9 +240,45 @@
             </div>
         </div>
     </section>
-    
-    
-    
+
+
+
+    <section class="services-sec container">
+        <div class="service-box one">
+            <span class="icon img-circle"><i class="fa fa-lightbulb-o"></i></span>
+            <h4><a href="#.">Лучшие доктора</a></h4>
+
+            <p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros
+                adipiscing elit Ut volutpat. cancer care is power of dummy for all business.</p>
+        </div>
+        <div class="service-box two">
+            <span class="icon img-circle"><i class="fa fa fa-flask"></i></span>
+            <h4><a href="#.">Лучшие доктора</a></h4>
+
+            <p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros
+                adipiscing elit Ut volutpat. cancer care is power of dummy for all business.</p>
+        </div>
+        <div class="service-box three">
+            <span class="icon img-circle"><i class="fa fa-tint"></i></span>
+            <h4><a href="#.">Лучшие доктора</a></h4>
+
+            <p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros
+                adipiscing elit Ut volutpat. cancer care is power of dummy for all business.</p>
+        </div>
+        <div class="service-box four">
+            <span class="icon img-circle"><i class="fa fa-phone"></i></span>
+            <h4><a href="#.">Лучшие доктора</a></h4>
+
+            <p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros
+                adipiscing elit Ut volutpat. cancer care is power of dummy for all business.</p>
+        </div>
+    </section>
+
+
+
+
+
+
     <section class="after-booking-sec text-center">
         <div class="container">
             <h1>Что дальше?</h1>

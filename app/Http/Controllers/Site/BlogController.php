@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers\Site;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\News;
+use App\Http\Requests;
 use App\Models\Sites;
 
 class BlogController extends Controller {
@@ -51,7 +49,11 @@ class BlogController extends Controller {
 	{
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
         $getNews =$getSites->getNews()->find($id);
-        return view($sitename.$sitedomen.'/blogNews', ['New' => $getNews]);
+
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(10)->get();
+
+
+        return view($sitename . $sitedomen . '/blogNews', ['New' => $getNews, 'LastNews' => $getLastNews]);
 	}
 
 	/**

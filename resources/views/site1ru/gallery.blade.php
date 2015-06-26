@@ -6,6 +6,69 @@
 
 
 
+    <div class="row text-center no-margin">
+        <div class="col-md-4 bg-default">
+            <div class="home-box">
+                <span class="glyphicon glyphicon-tint"></span>
+
+                <h3>Услуги</h3>
+
+                <p>Текст про наши услуги, Текст про наши услуги , Текст про наши услуги, Текст про наши услуги</p>
+                <a class="btn-rounded btn-bordered" href="#.">Посмотреть</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="home-box opening-hours clearfix">
+                <span class="glyphicon glyphicon-time"></span>
+
+                <h3>Часы приёма</h3>
+
+                <p>Мы всегда рады видеть вас в нашем медицинском центре</p>
+                <ul class="list-unstyled">
+                    <li class="clearfix">
+				<span>
+					Понедельник - Пятница
+				</span>
+
+                        <div class="value">
+                            8.00 - 16.00
+                        </div>
+                    </li>
+                    <li class="clearfix">
+				<span>
+					Субота
+				</span>
+
+                        <div class="value">
+                            9.30 - 15.30
+                        </div>
+                    </li>
+                    <li class="clearfix">
+				<span>
+					Воскресенье
+				</span>
+
+                        <div class="value">
+                            9.30 - 17.00
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 bg-default">
+            <div class="home-box">
+                <span class="glyphicon glyphicon-tint"></span>
+
+                <h3>Услуги</h3>
+
+                <p>Текст про наши услуги, Текст про наши услуги , Текст про наши услуги, Текст про наши услуги</p>
+                <a class="btn-rounded btn-bordered" href="#.">Посмотреть</a>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="container">
         <nav class="primary clearfix">
                     <ul>
@@ -97,4 +160,52 @@
     </div>
 
 
-   @endsection
+
+
+
+
+    <section class="about-sec text-center" data-stellar-background-ratio="0.3">
+        <div class="container">
+            <h1>Наш центр</h1>
+
+            <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+            <div class="row text-center" id="counters">
+                <div class="col-md-3">
+                    <div class="counter">
+                        <span class="quantity-counter1 highlight">180</span>
+                        <h6 class="counter-details">Посетителей</h6>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter">
+                        <span class="quantity-counter2 highlight">99</span>
+                        <h6 class="counter-details">Сотрудников</h6>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter">
+                        <span class="quantity-counter3 highlight">50</span>
+                        <h6 class="counter-details">Кабинетов</h6>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter">
+                        <span class="quantity-counter4 highlight">362</span>
+                        <h6 class="counter-details">Наград</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+@endsection

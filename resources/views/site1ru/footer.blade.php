@@ -2,7 +2,7 @@
 <footer id="footer" class="light">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="footer-widget">
                     <h4><span>Иформация</span></h4>
                     <ul class="footer-nav list-unstyled clearfix">
@@ -21,7 +21,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="footer-widget">
                     <h4><span>Мы в контакте</span></h4>
                     <div class="newsletter clearfix">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="footer-widget">
                     <h4><span>Мы в твиттере</span></h4>
                     <div class="twitter-widget">
@@ -66,7 +66,7 @@
 
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="footer-widget">
                     <h4><span>Мы находимся</span></h4>
                     <div class="contact-widget">
@@ -129,7 +129,7 @@
         animationOptions: {
             duration: 750,
             easing: 'linear',
-            queue: false,
+            queue: false
         }
     });
 
@@ -140,7 +140,7 @@
             animationOptions: {
                 duration: 750,
                 easing: 'linear',
-                queue: false,
+                queue: false
             }
         });
         return false;

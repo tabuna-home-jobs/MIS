@@ -15,7 +15,7 @@
                 <p class="lead"> многопрофильная компания, оказывающая широкий спектр услуг для всей семьи отрудников и
                     клиентов.</p>
             </div>
-            
+
             <div class="creative-sec-thumb one">
                 <figure>
                 <span class="overlay"><a href="#test"><i class="fa fa-eye"></i></a></span>
@@ -23,7 +23,7 @@
                     <figcaption>О центре</figcaption>
                 </figure>
             </div>
-            
+
             <div class="creative-sec-thumb two">
                 <figure>
                 <span class="overlay"><a href="#test"><i class="fa fa-eye"></i></a></span>
@@ -31,15 +31,18 @@
                     <figcaption>О центре</figcaption>
                 </figure>
             </div>
-            
+
+
             <div class="creative-sec-thumb three">
                 <figure>
-                <span class="overlay"><a href="#test"><i class="fa fa-eye"></i></a></span>
-                <img src="/site1.ru/images/creative-sec-img3.jpg" width="162" class="img-circle img-thumbnail img-responsive" alt="" title="">
-                    <figcaption>О центре</figcaption>
+                    <span class="overlay"><a href="medical-department.html"><i class="fa fa-eye"></i></a></span>
+                    <img width="162" title="" alt="" class="img-circle img-thumbnail img-responsive"
+                         src="/site1.ru/images/creative-sec-img3.jpg">
+                    <figcaption>Primery Health Care</figcaption>
                 </figure>
             </div>
-            
+
+
             <div class="creative-sec-thumb four">
                 <figure>
                 <span class="overlay"><a href="#test"><i class="fa fa-eye"></i></a></span>
@@ -285,7 +288,6 @@
             </div>
 
     </div>
-
 
 
         <section class="medicom-app" data-stellar-background-ratio="0.3">
