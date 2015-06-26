@@ -1,10 +1,12 @@
 <?php namespace App\Http\Controllers\Site;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Requests\Site\AppointmentRequest;
+use App\Models\Appointments;
 use App\Models\TimeTable;
 use DB;
-use Illuminate\Http\Request;
+use Session;
 
 class AppointmentController extends Controller
 {
@@ -44,7 +46,7 @@ class AppointmentController extends Controller
     public function postTime($sitename, $sitedomen, $place, $specialization, $fio)
     {
         $doctor = TimeTable::whereRaw('subdivision = ? and specialization = ? and name = ?',[$place,$specialization,$fio])->first();
-        $doctor= $doctor->entry()->select('beginning','end')->where('1c_busy',false)->get();
+        $doctor = $doctor->entry()->select('beginning', 'end')->whereRaw(' "1c_busy" = false and ("web_busy" is NULL or "web_busy" !=TRUE ) ')->get();
         return response()->json($doctor);
     }
 
@@ -54,9 +56,44 @@ class AppointmentController extends Controller
 	 *
 	 * @return Response
 	 */
-	public function postStore()
+    public function postStore(AppointmentRequest $request)
 	{
-		dd('stop');
+        $beginning = strstr($request->apport, '|', true);
+        $end = str_replace('|', '', strstr($request->apport, '|'));
+
+
+        $timetable = TimeTable::whereRaw('subdivision = ? and specialization = ? and name = ?',
+            [$request->subdivision, $request->specialization, $request->name])
+            ->get();
+
+        $record = [];
+        foreach ($timetable as $specialTimeTable) {
+            //Проверяем только начало, так как если использую end ругаеться бд
+            $record = $specialTimeTable->entry()->whereRaw('beginning = ?', [$beginning])
+                ->get();
+            if (!is_null($record)) break;
+        }
+        $record[0]->web_busy = true;
+        $record[0]->save();
+
+
+        $appointments = new Appointments([
+            'subdivision' => $request->subdivision,
+            'specialization' => $request->specialization,
+            'name' => $request->name,
+            'beginning' => $beginning,
+            'end' => $end,
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'comment' => $request->comment,
+        ]);
+        $appointments->save();
+
+
+        Session::flash('good', 'Вы успешно записались на приём');
+        return redirect()->back();
 	}
 
 	/**

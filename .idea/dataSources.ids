@@ -7,7 +7,7 @@
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
   </data-source>
   <data-source name="PostgreSQL - octavian_mis@193.111.141.198" uuid="3578d799-d67b-4c17-958f-4955ab0f8904">
-    <database-info product="PostgreSQL" version="9.3.8" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+    <database-info product="PostgreSQL" version="9.3.9" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
@@ -22,6 +22,35 @@
       <primary-key name="answers_pkey" columns="id"/>
     </table>
     <table name="answers_id_seq" schema="public" catalog="octavian_mis" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="appointments" schema="public" catalog="octavian_mis" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnYXBwb2ludG1lbnRzX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="subdivision" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="specialization" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="beginning" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="end" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="firstname" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lastname" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="comment" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="appointments_pkey" columns="id"/>
+    </table>
+    <table name="appointments_id_seq" schema="public" catalog="octavian_mis" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>

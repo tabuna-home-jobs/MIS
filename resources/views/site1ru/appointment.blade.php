@@ -45,7 +45,7 @@
 
                                     <div class="form-group row">
                                         <label class="control-label">Место</label>
-                                        <select name="place" required>
+                                        <select name="subdivision" required>
                                             <option selected disabled>Выберите место</option>
                                             @foreach($place as $placeItem)
                                                 <option value="{{$placeItem->subdivision}}">{{$placeItem->subdivision}}</option>
@@ -61,7 +61,7 @@
 
                                     <div class="form-group row">
                                         <label class="control-label">Врач</label>
-                                        <select disabled name="fio" required>
+                                        <select disabled name="name" required>
                                             <option>Выберите специализацию</option>
                                         </select>
                                     </div>
@@ -69,7 +69,7 @@
 
 
                                     <script>
-                                      $('select[name="place"]').change(function () {
+                                        $('select[name="subdivision"]').change(function () {
 
                                             var obj = $(this);
                                             var Curvalue = $(':selected',this).val();
@@ -108,7 +108,7 @@
 
                                             var obj = $(this);
                                             var Curvalue = $(':selected',this).val();
-                                            var Placevalue = $('select[name="place"] :selected').val();
+                                            var Placevalue = $('select[name="subdivision"] :selected').val();
                                             var csrf = $('meta[name="csrf-token"]').attr('content');
 
 
@@ -127,8 +127,8 @@
                                                         + msg[i].name + "</option>";
                                                     }
 
-                                                    $('select[name="fio"]').html(option);
-                                                    $('select[name="fio"]').attr('disabled',false);
+                                                    $('select[name="name"]').html(option);
+                                                    $('select[name="name"]').attr('disabled', false);
 
                                                 }
                                             });
@@ -137,21 +137,12 @@
                                         });
 
 
-
-
-
-
-
-
-
-
-
-                                      $('select[name="fio"]').change(function () {
+                                        $('select[name="name"]').change(function () {
 
 
                                           var obj = $(this);
                                           var Curvalue = $(':selected',this).val();
-                                          var Placevalue = $('select[name="place"] :selected').val();
+                                            var Placevalue = $('select[name="subdivision"] :selected').val();
                                           var Specialvalue = $('select[name="specialization"] :selected').val();
                                           var csrf = $('meta[name="csrf-token"]').attr('content');
 
@@ -170,7 +161,7 @@
 
                                                       var beginning = new Date(msg[i].beginning * 1000).toLocaleString();
                                                       var end = new Date(msg[i].end * 1000).toLocaleString();
-                                                      option += "<div class='radio'><label><input type='radio' name='apport' value='"+ msg[i].beginning+"|"+msg[i].end+"'> С " + beginning+ " по " +end+"</label></div>";
+                                                      option += "<div class='radio'><label><input type='radio' required name='apport' value='" + msg[i].beginning + "|" + msg[i].end + "'> С " + beginning + " по " + end + "</label></div>";
 
                                                   }
 
@@ -232,10 +223,10 @@
                                 <div class="col-md-12">
                                     <h5> Информация</h5>
 
-                                    <input type="text" name="firstname" placeholder="Имя">
-                                    <input type="text" name="lastname" placeholder="Фамилия">
+                                    <input type="text" name="firstname" max="255" placeholder="Имя">
+                                    <input type="text" name="lastname" max="255" placeholder="Фамилия">
                                     <input type="email" name="email" placeholder="Email адрес">
-                                    <input type="text" name="phone" placeholder="Номер телефона">
+                                    <input type="number" name="phone" placeholder="Номер телефона">
                                     <textarea rows="4" name="comment" placeholder="Комментарий"></textarea>
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <button class="btn btn-default btn-rounded pull-right" type="submit">Записаться!
