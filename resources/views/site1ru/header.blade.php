@@ -58,14 +58,13 @@
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
 
-                        <li><a href="/appointment">Запись</a></li>
-
-                        <li class="active"><a href="#">Личный кабинет</a></li>
-                        <li><a href="/service">Услуги</a></li>
-                        <li><a href="/gallery">Галерея</a></li>
-                        <li><a href="/reviews">Отзывы</a></li>
-                        <li><a href="/team">Специалисты</a></li>
-                        <li><a href="/feedback">Контакты</a></li>
+                        <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись</a></li>
+                        <li><a href="#">Личный кабинет</a></li>
+                        <li class="{{Active::route('service.*')}}"><a href="/service">Услуги</a></li>
+                        <li class="{{Active::route('gallery.*')}}"><a href="/gallery">Галерея</a></li>
+                        <li class="{{Active::route('reviews.*')}}"><a href="/reviews">Отзывы</a></li>
+                        <li class="{{Active::route('team.*')}}"><a href="/team">Специалисты</a></li>
+                        <li class="{{Active::route('feedback.*')}}"><a href="/feedback">Контакты</a></li>
 
                     </ul>
                 </div><!-- /.navbar-collapse -->
