@@ -105,15 +105,15 @@
 
 <script src="/site1.ru/js/jquery-revolution.js"></script>
 <script src="/site1.ru/js/bootstrap.min.js"></script>
-<script src="/site1.ru/js/jquery.anythingslider.js"></script>
-<script src="/site1.ru/js/jquery.stellar.js"></script>
-<script src="/site1.ru/js/jquery-ui-1.10.3.custom.js"></script>
-<script src="/site1.ru/js/jquery.uniform.js"></script>
+<!--<script src="/site1.ru/js/jquery.anythingslider.js"></script>-->
+<!--<script src="/site1.ru/js/jquery.stellar.js"></script>-->
+<!--<script src="/site1.ru/js/jquery-ui-1.10.3.custom.js"></script>-->
+<!--<script src="/site1.ru/js/jquery.uniform.js"></script>-->
 <!--Nimble-->
 <script type="text/javascript" src="/site1.ru/js/jquery.isotope.min.js"></script>
 <script type="text/javascript" src="/site1.ru/js/jquery.prettyPhoto.js"></script>
 <!--jCarousel library-->
-<script type="text/javascript" src="/site1.ru/js/jquery.jcarousel.min.js"></script>
+<!--<script type="text/javascript" src="/site1.ru/js/jquery.jcarousel.min.js"></script>-->
 
 
 

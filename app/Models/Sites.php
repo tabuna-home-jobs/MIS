@@ -52,4 +52,17 @@ class Sites extends Model {
         return $this->hasOne('App\Models\Specialisty', 'ids');
     }
 
+
+    public function getAlbums()
+    {
+        return $this->hasOne('App\Models\Album', 'ids');
+    }
+
+    public function getPhoto()
+    {
+        return $this->hasOne('App\Models\Photo', 'ids');
+    }
+
+
+
 }

@@ -53,6 +53,26 @@
                     </div>
 
 
+
+                    <div class="share-post clearfix">
+                        <label>Поделиться</label>
+                        <ul class="social-rounded">
+                            <li><a href="http://www.facebook.com/sharer.php?u={{Request::url()}}" target="_blank"><i
+                                            class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/share?url={{Request::url()}}" target="_blank"><i
+                                            class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://plus.google.com/share?url={{Request::url()}}" target="_blank"><i
+                                            class="fa fa-google-plus"></i></a></li>
+                            <li><a href="http://vkontakte.ru/share.php?url={{Request::url()}}" target="_blank"><i
+                                            class="fa fa-vk"></i></a></li>
+                            <li><a href="http://www.ok.ru/dk?st.cmd=addShare&st.s=1&st._surl={{Request::url()}}"
+                                   target="_blank"><i class="fa fa-circle-o"></i></a></li>
+                        </ul>
+                    </div>
+
+
+
+
                     <h2 class="light bordered">Отзывы</h2>
 
 
@@ -80,7 +100,15 @@
 
                         {!! $Comments->render(); !!}
 
-                        <a class="btn btn-default btn-rounded" href="#.">Добавить отзыв</a>
+                        <form class="row testimonials2" action="/service" method="post">
+                                <input type="text" name="fio" max="255" required placeholder="Имя">
+                                <input type="email" name="email" required placeholder="Email адрес">
+                                <input type="integer" name="phone" required placeholder="Номер телефона">
+                                <textarea rows="4" name="comment" required placeholder="Комментарий"></textarea>
+                                <input type="hidden" name="goods" value="{{$Goods->id}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="btn btn-default btn-rounded">Добавить отзыв</button>
+                        </form>
                     </div>
 
                     <div class="clearfix"></div>
@@ -135,6 +163,25 @@
                             </form>
                         </div>
                     </div>
+
+
+
+                    <div class="sidebar-widget light">
+                        <h2 class="bordered light">Последние новости</h2>
+
+                        @foreach($LastNews as $lastNew)
+                            <article class="popular-post">
+                                <img alt="{{$lastNew->title}}" src="{{$lastNew->avatar}}">
+                                <h4><a href="/blog/{{$lastNew->id}}">{{$lastNew->name}}</a></h4>
+
+                                <p class="text-justify">{{ substr(strip_tags($lastNew->content), 0, 201) }} ...</p>
+
+                                <p class="popular-date text-right">{{$lastNew->created_at}}</p>
+                            </article>
+                        @endforeach
+                    </div>
+
+
 
 
                 </aside>

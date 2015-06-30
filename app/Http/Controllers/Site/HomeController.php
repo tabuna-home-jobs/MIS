@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Models\Sites;
+use DB;
 
 class HomeController extends Controller {
 
@@ -20,9 +21,15 @@ class HomeController extends Controller {
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
 
 
+
+
+        //Получить все места
+        $place = DB::table('timetable')->select('subdivision')->distinct()->get();
+
         return view($sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShares' => $getShares,
+            'place' => $place
         ]);
     }
 

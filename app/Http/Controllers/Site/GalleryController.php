@@ -2,9 +2,10 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Models\Album;
+use App\Models\Photo;
 use Illuminate\Http\Request;
-
+use App\Models\Sites;
 class GalleryController extends Controller {
 
 	/**
@@ -14,7 +15,14 @@ class GalleryController extends Controller {
 	 */
     public function index($sitename, $sitedomen)
     {
-        return view( $sitename.$sitedomen.'/gallery');
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $albums  =  $getSites->getAlbums()->select('name')->get();
+        $photo = $getSites->getPhoto()->get();
+
+        return view( $sitename.$sitedomen.'/gallery', [
+                'albums' => $albums,
+                'photos'  => $photo,
+            ]);
     }
 	/**
 	 * Show the form for creating a new resource.

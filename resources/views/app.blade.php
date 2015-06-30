@@ -287,6 +287,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li><a href="/dashboard/menu/"><i class="glyphicon glyphicon-menu-hamburger"></i> <span>Меню</span></a>
                 </li>
                 <li><a href="/dashboard/feedback/"><i class="fa fa-inbox"></i> <span>Обратная связь</span></a>
+                <li><a href="/dashboard/gallery/"><i class="fa fa-picture-o"></i> <span>Галерея</span></a>
                 </li>
 
 
@@ -317,11 +318,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li><a href="#"><i class="glyphicon glyphicon-book"></i> <span>Энциклопедия</span></a></li>
 
 
-                <li>
+              <!-- Плохо работает <li>
                     <a href="/dashboard/appointments">
                         <i class="fa fa-calendar"></i> <span>Запись на приём</span>
                     </a>
-                </li>
+                </li> -->
 
 
                 <li class="treeview">

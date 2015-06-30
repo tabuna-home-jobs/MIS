@@ -3,6 +3,9 @@
 use App\Http\Controllers\Controller;
 use App\Models\Sites;
 use Request;
+use App\Models\Comments;
+use App\Http\Requests\Site\CommentRequest;
+use Session;
 
 class ServiceController extends Controller {
 
@@ -18,13 +21,20 @@ class ServiceController extends Controller {
         $Category = $getSites->getCategory()->get();
 
         $requestCategory = Request::input('category');
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
+
+
 
         if (is_null($requestCategory))
             $Goods = $getSites->getGoods()->paginate(9);
         else
             $Goods = $getSites->getGoods()->where('category_id', $requestCategory)->paginate(9);
 
-        return view($sitename . $sitedomen . '/service', ['Category' => $Category, 'Goods' => $Goods]);
+        return view($sitename . $sitedomen . '/service', [
+            'Category' => $Category,
+            'Goods' => $Goods,
+            'LastNews' => $getLastNews,
+        ]);
     }
 
 	/**
@@ -43,9 +53,23 @@ class ServiceController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store($sitename, $sitedomen, CommentRequest $request)
 	{
-		//
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+
+        $comment = new Comments([
+            'fio' => $request->fio,
+            'phone'=> $request->phone,
+            'email'=> $request->email,
+            'content' => $request->comment,
+            'comments_id' => 0, // Вложенные комментарии никому не нужны
+            'goods_id' => $request->goods,
+            'ids' => $getSites->id,
+        ]);
+        $comment->save();
+        Session::flash('good', 'Спасибо, что написали, ваше сообщение будет опубликовано после модерации.');
+        return redirect()->back();
+
 	}
 
 	/**
@@ -60,7 +84,10 @@ class ServiceController extends Controller {
         $Category = $getSites->getCategory()->get();
         $Goods = $getSites->getGoods()->where('id', $id)->first();
         $Comments = $Goods->comments()->where('publish', true)->orderBy('id', 'desc')->simplepaginate(5);
-        return view($sitename . $sitedomen . '/goods', ['Category' => $Category, 'Goods' => $Goods, 'Comments' => $Comments]);
+
+
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
+        return view($sitename . $sitedomen . '/goods', ['Category' => $Category, 'Goods' => $Goods, 'Comments' => $Comments,  'LastNews' => $getLastNews]);
 	}
 
 	/**

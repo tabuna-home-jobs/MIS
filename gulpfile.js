@@ -12,5 +12,14 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less');
+    mix.styles([
+        "blue.css",
+        "bootstrap.css",
+        "medicom.css",
+        "reset.css",
+        "prettyPhoto.css",
+    ], 'public/css');
 });
+
+
+

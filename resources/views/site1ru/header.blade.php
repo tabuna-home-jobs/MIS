@@ -9,21 +9,21 @@
           rel='stylesheet' type='text/css'>
 
     <!--theme colour-->
-    <link rel="stylesheet" id="color" href="/site1.ru/css/blue.css">
-
+    <link rel="stylesheet" id="color" href="/site1.ru/css/all.css">
+    <link rel="stylesheet" href="/site1.ru/fonts/font-awesome.css">
     <!-- Bootstrap -->
-    <link href="/site1.ru/css/bootstrap.css" rel="stylesheet">
+    <!--<link href="/site1.ru/css/bootstrap.css" rel="stylesheet">-->
 
     <!-- medicom style -->
-    <link href="/site1.ru/css/medicom.css" rel="stylesheet">
+    <!--<link href="/site1.ru/css/medicom.css" rel="stylesheet">-->
 
     <!-- masonary -->
-    <link href="/site1.ru/css/style-masonary.css" rel="stylesheet">
+    <!--  <link href="/site1.ru/css/style-masonary.css" rel="stylesheet">-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!--Madonary CSS-->
-    <link rel="stylesheet" href="/site1.ru/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/site1.ru/css/prettyPhoto.css" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <!--Madonary CSS-->
+    <!--<link rel="stylesheet" href="/site1.ru/css/reset.css" />-->
+   <!-- <link rel="stylesheet" type="text/css" href="/site1.ru/css/prettyPhoto.css" />-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,7 +58,7 @@
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
 
-                        <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись</a></li>
+                        <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
                         <li><a href="#">Личный кабинет</a></li>
                         <li class="{{Active::route('service.*')}}"><a href="/service">Услуги</a></li>
                         <li class="{{Active::route('gallery.*')}}"><a href="/gallery">Галерея</a></li>

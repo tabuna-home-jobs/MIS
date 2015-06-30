@@ -111,6 +111,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'dashboard', 'middleware' => [
         'getIndex' => 'special',
     ]);
 
+    Route::controller('gallery', 'GalleryController', [
+        'getIndex' => 'gallery',
+    ]);
+
 
     Route::resource('codeeditor', 'CodeEditorController');
 
