@@ -60,6 +60,7 @@
 
                         <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
                         <li><a href="#">Личный кабинет</a></li>
+                        <li class="{{Active::route('encyclopedia.*')}}"><a href="/encyclopedia">Э</a></li>
                         <li class="{{Active::route('service.*')}}"><a href="/service">Услуги</a></li>
                         <li class="{{Active::route('gallery.*')}}"><a href="/gallery">Галерея</a></li>
                         <li class="{{Active::route('reviews.*')}}"><a href="/reviews">Отзывы</a></li>

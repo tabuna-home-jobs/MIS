@@ -24,6 +24,7 @@ Route::controllers([
 
 Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], function()
 {
+    Route::resource('/encyclopedia', 'EncyclopediaController');
     Route::resource('/reviews', 'ReviewsController');
     Route::resource('/service', 'ServiceController');
     Route::resource('/gallery', 'GalleryController');
@@ -55,9 +56,14 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'dashboard', 'middleware' => [
     Route::resource('user', 'UserController');
     Route::resource('groups', 'GroupsController');
 
-	Route::controller('page', 'PageController', [
-		'getIndex' => 'page',
-	]);
+    Route::resource('encyclopedia', 'EncyclopediaController');
+    Route::resource('encyclopediaCategory', 'EncyclopediaCategoryController');
+
+
+    Route::controller('page', 'PageController', [
+        'getIndex' => 'page',
+    ]);
+
 
     Route::controller('news', 'NewsController', [
         'getIndex' => 'news',

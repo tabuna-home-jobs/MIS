@@ -24,8 +24,9 @@ class RouteServiceProvider extends ServiceProvider {
 	{
 		parent::boot($router);
 
-        $router->model('page', 'App\Models\Page');
-		//
+
+        $router->model('encyclopediaCategory', 'App\Models\EncyCategory');
+
 	}
 
 	/**
