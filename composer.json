@@ -7,7 +7,6 @@
 	"require": {
       "laravel/framework": "5.1.*",
       "cartalyst/sentry": "dev-feature/laravel-5",
-      "davejamesmiller/laravel-breadcrumbs": "3.*",
       "intervention/image": "2.2.*",
       "watson/active": "1.3.*"
 	},

@@ -1,51 +1,58 @@
-<?php namespace App\Http\Controllers\Admin;
+<?php
 
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\NewsRequest;
 use App\Models\News;
 use Image;
 use Redirect;
 use Request;
 use Session;
 use Validator;
-
-class NewsController extends Controller {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+use App\Http\Requests\NewsRequest;
 
 
-    public function getIndex()
+class NewsController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index()
     {
         $NewsList = News::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
         return view("dashboard/news/news", ['NewsList' => $NewsList]);
     }
 
-    public function getAdd($news = null)
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create()
     {
-        $news = News::find($news);
-
-        return view("dashboard/news/newsCrud", ['News' => $news ]);
+        return view("dashboard/news/create");
     }
 
-    //Добовление и изменение данных
-    public function postIndex(NewsRequest $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store(NewsRequest $request)
     {
+        $news = new News([
+            'title'=>$request->title,
+            'name'=>$request->name,
+            'content'=>$request->content,
+            'tag'=>$request->tag,
+            'descript'=>$request->descript,
+            'ids'=> Session::get('website'),
+        ]);
 
-        if(!is_null($request->id))
-            $news = News::find($request->id);
-        else
-            $news = new News();
-
-        $news->title = $request->title;
-        $news->name = $request->name;
-        $news->content = $request->content;
-        $news->tag = $request->tag;
-        $news->descript = $request->descript;
-        $news->ids = Session::get('website');
-
+        //Пока оставлю так
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $news->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
@@ -53,44 +60,73 @@ class NewsController extends Controller {
 
         $news->save();
 
+        //Флеш сообщение
+        Session::flash('good', 'Вы успешно изменили значения');
+        return redirect()->route('dashboard.news.index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function edit(News $news)
+    {
+        return view("dashboard/news/edit", ['news' => $news ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function update(News $news, NewsRequest $request)
+    {
+        $news->fill([
+            'title'=>$request->title,
+            'name'=>$request->name,
+            'content'=>$request->content,
+            'tag'=>$request->tag,
+            'descript'=>$request->descript,
+            'ids'=> Session::get('website'),
+        ]);
+
+        //Пока оставлю так
+        if (Request::hasFile('avatar')) {
+            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            $news->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+        }
+
+        $news->save();
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->route('news');
+        return redirect()->route('dashboard.news.index');
     }
 
-
-    public function getTrash()
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy(News $news)
     {
-        $PageList = News::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/news/trash", ['NewsList' => $PageList]);
-    }
-
-
-    public  function  getRestore($page = null)
-    {
-        News::withTrashed()->find($page)->restore();
-        Session::flash('good', 'Вы успешно востановили запись');
-        return redirect()->route('news');
-    }
-
-
-
-    //Удаление
-    public function getDestroy($page = null)
-    {
-        $page = News::find($page);
-        $page->delete();
+        $news->delete();
         Session::flash('good', 'Вы успешно удалили значения');
-        return redirect()->route('news');
+        return redirect()->route('dashboard.news.index');
     }
-
-    public  function  getUnset($page = null)
-    {
-        News::withTrashed()->find($page)->forceDelete();
-        Session::flash('good', 'Вы успешно окончательно удалили запись');
-        return redirect()->route('news');
-    }
-
-
 }

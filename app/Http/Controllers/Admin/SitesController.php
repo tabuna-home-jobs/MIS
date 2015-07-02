@@ -18,10 +18,11 @@ class SitesController extends Controller {
     public function getSelect($site)
     {
 
-        if(Sites::find($site))
+        if($modelSite =  Sites::find($site))
         {
             Session::put('website', $site);
-             return redirect()->route('admin');
+            Session::put('SiteName', $modelSite->name);
+             return redirect()->route('dashboard..index');
         }
         else
         {

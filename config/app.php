@@ -148,7 +148,6 @@ return [
 
         'App\Providers\SitesServiceProvider', // Мульти-сайт
         'Cartalyst\Sentry\SentryServiceProvider', // Права доступа
-        'DaveJamesMiller\Breadcrumbs\ServiceProvider', // Хлебные крошки
         'Intervention\Image\ImageServiceProvider',
         'Watson\Active\ActiveServiceProvider'
     ],
@@ -201,7 +200,6 @@ return [
         'Sites' => 'App\Facades\SitesFacades',
         'SMS' => 'App\Facades\IntisSMSFacades',
         'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
-        'Breadcrumbs' => 'DaveJamesMiller\Breadcrumbs\Facade',
         'Image' => 'Intervention\Image\Facades\Image',
         'Active' => 'Watson\Active\Facades\Active'
     ],

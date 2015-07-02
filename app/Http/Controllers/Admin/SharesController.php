@@ -1,4 +1,6 @@
-<?php namespace App\Http\Controllers\Admin;
+<?php
+
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SharesRequest;
@@ -9,87 +11,126 @@ use Request;
 use Session;
 use Validator;
 
-class SharesController extends Controller {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
 
-    public function getIndex()
+
+class SharesController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index()
     {
         $SharesList = Shares::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
         return view("dashboard/shares/shares", ['SharesList' => $SharesList]);
     }
 
-    public function getAdd($Shares = null)
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create()
     {
-        $Shares = Shares::find($Shares);
-        return view("dashboard/shares/sharesCrud", ['Shares' => $Shares ]);
+        return view("dashboard/shares/create");
     }
 
-    //Добовление и изменение данных
-    public function postIndex(SharesRequest $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store(SharesRequest $request)
     {
+        $shares = new Shares([
+            'title'=>$request->title,
+            'name'=>$request->name,
+            'content'=>$request->content,
+            'tag'=>$request->tag,
+            'descript'=>$request->descript,
+            'start'=> $request->start,
+            'end'=> $request->end,
+            'ids'=> Session::get('website'),
+        ]);
 
-        if(!is_null($request->id))
-            $page = Shares::find($request->id);
-        else
-            $page = new Shares();
-
-        $page->title =$request->title;
-        $page->name = $request->name;
-        $page->content = $request->content;
-        $page->tag = $request->tag;
-        $page->descript = $request->descript;
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
-            $page->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+            $shares->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
-        $page->start = $request->start;
-        $page->end = $request->end;
-        $page->ids = Session::get('website');
-        $page->save();
+
+        $shares->save();
+
+        //Флеш сообщение
+        Session::flash('good', 'Вы успешно добавили значения');
+        return redirect()->route('dashboard.shares.index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function edit(Shares $shares)
+    {
+        return view("dashboard/shares/edit", ['Shares' => $shares ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function update(Shares $shares)
+    {
+
+        $shares-fill([
+            'title'=>$request->title,
+            'name'=>$request->name,
+            'content'=>$request->content,
+            'tag'=>$request->tag,
+            'descript'=>$request->descript,
+            'start'=> $request->start,
+            'end'=> $request->end,
+            'ids'=> Session::get('website'),
+        ]);
+
+        if (Request::hasFile('avatar')) {
+            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            $shares->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+        }
+
+        $shares->save();
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->route('share');
+        return redirect()->route('dashboard.shares.index');
     }
 
-
-
-    public function getTrash()
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy(Shares $shares)
     {
-        $PageList = Shares::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/page/trash", ['PageList' => $PageList]);
-    }
-
-
-    public  function  getRestore($page = null)
-    {
-        Shares::withTrashed()->find($page)->restore();
-        Session::flash('good', 'Вы успешно востановили запись');
-        return redirect()->route('page');
-    }
-
-
-
-    //Удаление
-    public function getDestroy($page = null)
-    {
-        $page = Shares::find($page);
-        $page->delete();
+        $shares->delete();
         Session::flash('good', 'Вы успешно удалили значения');
-        return redirect()->route('share');
+        return redirect()->route('dashboard.shares.index');
     }
-
-    public  function  getUnset($page = null)
-    {
-        Shares::withTrashed()->find($page)->forceDelete();
-        Session::flash('good', 'Вы успешно окончательно удалили запись');
-        return redirect()->route('share');
-    }
-
-
 }

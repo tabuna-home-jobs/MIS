@@ -1,434 +1,413 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Панель управления| МИС</title>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <meta name="token" content="{{ csrf_token() }}" >
-    <!-- Bootstrap 3.3.2 -->
-    <link href="{{ asset('/admin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('/admin/bootstrap/css/jasny-bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('/admin/bootstrap/css/bootstrap-tagsinput.css') }}" rel="stylesheet" type="text/css"/>
+    <meta charset="utf-8" />
+    <title>Медицинская информационная система</title>
 
-    <!-- Font Awesome Icons -->
-    <link href="{{ asset('/admin/bootstrap/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-
-
-     <!-- Theme style -->
-    <link href="{{ asset('/admin/dist/css/AdminLTE.min.css') }}"  rel="stylesheet" type="text/css" />
-
-    <link href="{{ asset('/admin/dist/css/skins/skin-blue.min.css') }}" rel="stylesheet" type="text/css" />
-
-    <link href="{{ asset('/admin/bootstrap/css/custom.css') }}" rel="stylesheet" type="text/css" />
-
-    <link href="{{ asset('/admin/dist/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" />
-
-    <link href="{{ asset('/admin/plugins/fullcalendar/fullcalendar.min.css') }}" rel="stylesheet" type="text/css"/>
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-
-    <!-- REQUIRED JS SCRIPTS -->
-    <!-- jQuery 2.1.3 -->
-    <script src="{{ asset('/admin/plugins/jQuery/jQuery-2.1.3.min.js')}}"></script>
-    <!-- Bootstrap 3.3.2 JS -->
-    <script src="{{asset('/admin/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('/admin/bootstrap/js/jasny-bootstrap.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('/admin/bootstrap/js/bootstrap-tagsinput.js')}}" type="text/javascript"></script>
-    <script src="{{asset('/admin/bootstrap/js/custom.js')}}" type="text/javascript"></script>
-    <!-- AdminLTE App -->
-    <script src="{{asset('/admin/dist/js/app.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('/admin/dist/js/moment-with-locales.js')}}" type="text/javascript"></script>
-    <script src="{{asset('/admin/dist/js/ru-picker.js')}}" type="text/javascript"></script>
-    <script src="{{asset('/admin/dist/js/bootstrap-datetimepicker.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('/admin/bootstrap/js/search.js')}}" type="text/javascript"></script>
-
-
-    <!--  TinyMCE -->
-    <script src="{{asset('/admin/plugins/tinymce/tinymce.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('/admin/plugins/fullcalendar/fullcalendar.min.js')}}" type="text/javascript"></script>
+    <link rel="stylesheet" href="/dash/bootstrap/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/dash/bootstrap/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/dash/css/font.css" type="text/css" />
+    <link rel="stylesheet" href="/dash/css/app.css" type="text/css" />
+    <link href="{{ asset('/dash/bootstrap/css/jasny-bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/dash/bootstrap/css/custom.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/dash/dist/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" />
 
 
 </head>
+<body>
+<div class="app app-header-fixed app-aside-fixed container app-aside-dock app-aside-folded ">
 
-
-
-    @if('show' == Session::get('Sidebar', 'show'))
-        <body class="skin-blue layout-boxed sidebar-mini">
-    @else
-        <body class="skin-blue layout-boxed sidebar-mini sidebar-collapse">
-    @endif
-
-<div class="wrapper">
-
-    <!-- Main Header -->
-    <header class="main-header">
-
-        <!-- Logo -->
-        <a href="/dashboard" class="logo"> <i class="fa fa-home"></i> <b> МИС</b></a>
-
-        <!-- Header Navbar -->
-        <nav class="navbar navbar-static-top" role="navigation">
-            <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" id="sidebarcollapse" data-toggle="offcanvas" role="button">
-                <span class="sr-only">Навигация</span>
+    <!-- header -->
+    <header id="header" class="app-header navbar" role="menu">
+        <!-- navbar header -->
+        <div class="navbar-header bg-dark">
+            <button class="pull-right visible-xs dk" ui-toggle="show" target=".navbar-collapse">
+                <i class="glyphicon glyphicon-cog"></i>
+            </button>
+            <button class="pull-right visible-xs" ui-toggle="off-screen" target=".app-aside" ui-scroll="app">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </button>
+            <!-- brand -->
+            <a href="#/" class="navbar-brand text-lt">
+                <i class="fa fa-hospital-o"></i>
             </a>
-            <!-- Navbar Right Menu -->
-            <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown.less-->
-                    <li class="dropdown messages-menu">
-                        <!-- Menu toggle button -->
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="label label-success">8</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header text-center">У вас 8 сообщения</li>
-                            <li>
-                                <!-- inner menu: contains the messages -->
-                                <ul class="menu">
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <!-- Message title and timestamp -->
-                                            <h4>
-                                                Юлия Алексеева
-                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
-                                            </h4>
-                                            <!-- The message -->
-                                            <p>Как можно до вас добраться?</p>
-                                        </a>
-                                    </li><!-- end message -->
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <!-- Message title and timestamp -->
-                                            <h4>
-                                                Юлия Алексеева
-                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
-                                            </h4>
-                                            <!-- The message -->
-                                            <p>Как можно до вас добраться?</p>
-                                        </a>
-                                    </li><!-- end message -->
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <!-- Message title and timestamp -->
-                                            <h4>
-                                                Юлия Алексеева
-                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
-                                            </h4>
-                                            <!-- The message -->
-                                            <p>Как можно до вас добраться?</p>
-                                        </a>
-                                    </li><!-- end message -->
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <!-- Message title and timestamp -->
-                                            <h4>
-                                                Юлия Алексеева
-                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
-                                            </h4>
-                                            <!-- The message -->
-                                            <p>Как можно до вас добраться?</p>
-                                        </a>
-                                    </li><!-- end message -->
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <!-- Message title and timestamp -->
-                                            <h4>
-                                                Юлия Алексеева
-                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
-                                            </h4>
-                                            <!-- The message -->
-                                            <p>Как можно до вас добраться?</p>
-                                        </a>
-                                    </li><!-- end message -->
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <!-- Message title and timestamp -->
-                                            <h4>
-                                                Юлия Алексеева
-                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
-                                            </h4>
-                                            <!-- The message -->
-                                            <p>Как можно до вас добраться?</p>
-                                        </a>
-                                    </li><!-- end message -->
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <!-- Message title and timestamp -->
-                                            <h4>
-                                                Юлия Алексеева
-                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
-                                            </h4>
-                                            <!-- The message -->
-                                            <p>Как можно до вас добраться?</p>
-                                        </a>
-                                    </li><!-- end message -->
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <!-- Message title and timestamp -->
-                                            <h4>
-                                                Юлия Алексеева
-                                                <small><i class="fa fa-clock-o"></i> 5 минут</small>
-                                            </h4>
-                                            <!-- The message -->
-                                            <p>Как можно до вас добраться?</p>
-                                        </a>
-                                    </li><!-- end message -->
+            <!-- / brand -->
+        </div>
+        <!-- / navbar header -->
 
+        <!-- navbar collapse -->
+        <div class="collapse pos-rlt navbar-collapse box-shadow bg-white-only">
 
-                                </ul><!-- /.menu -->
-                            </li>
-                            <li class="footer"><a href="#">Перейти в чат</a></li>
-                        </ul>
-                    </li><!-- /.messages-menu -->
+            <!-- link and dropdown -->
+            <ul class="nav navbar-nav hidden-sm">
 
-                    <!-- Notifications Menu -->
-                    <li class="dropdown notifications-menu">
-                        <!-- Menu toggle button -->
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-sitemap"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header  text-center">Выберите веб-сайт:</li>
-                            <li>
-                                <!-- Inner Menu: contains the notifications -->
-                                <ul class="menu">
-
-                                    @foreach(Sites::get() as $site)
-                                        <li><!-- start notification -->
-                                            <a href="/dashboard/sites/select/{{$site->id}}">
-                                                <i class="fa fa-users text-aqua"></i> {{$site->name}}
-                                            </a>
-                                        </li><!-- end notification -->
-                                    @endforeach
-
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="/dashboard/sites/">Смотреть все</a></li>
-                        </ul>
-                    </li>
-                    <!-- Tasks Menu -->
-                    <li class="dropdown tasks-menu">
-                        <!-- Menu Toggle Button -->
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-flag-o"></i>
-                            <span class="label label-danger">9</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">У Вас 9 задач</li>
-                            <li>
-                                <!-- Inner menu: contains the tasks -->
-                                <ul class="menu">
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <!-- Task title and progress text -->
-                                            <h3>
-                                                Кнопка
-                                                <small class="pull-right">20%</small>
-                                            </h3>
-                                            <!-- The progress bar -->
-                                            <div class="progress xs">
-                                                <!-- Change the css width attribute to simulate progress -->
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">20% Завершено</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li><!-- end task item -->
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">Смотреть всё</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-
-                    <li class=" tasks-menu">
-                        <a href="/auth/logout" title="Выйти" >
-                           <i class="fa fa-sign-out"></i>
-                        </a>
-                    </li>
-
-
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-
-            <!-- Sidebar Menu -->
-            <ul class="sidebar-menu">
-                <!-- Optionally, you can add icons to the links -->
-                <li><a href="/dashboard/"><i class="fa fa-bar-chart"></i> <span> Статистика</span></a>
-                </li>
-                <li><a href="/dashboard/page/"><i class="fa fa-file-text"></i> <span>Страницы</span></a></li>
-                <li><a href="/dashboard/news/"><i class="fa fa-newspaper-o"></i> <span>Новости</span></a></li>
-                <li><a href="/dashboard/shares/"><i class="fa fa-file-text"></i> <span>Акции</span></a></li>
-                <li><a href="/dashboard/special/"><i class="fa fa-user-md"></i> <span>Специалисты</span></a></li>
-                <li><a href="/dashboard/menu/"><i class="glyphicon glyphicon-menu-hamburger"></i> <span>Меню</span></a>
-                </li>
-                <li><a href="/dashboard/feedback/"><i class="fa fa-inbox"></i> <span>Обратная связь</span></a>
-                <li><a href="/dashboard/gallery/"><i class="fa fa-picture-o"></i> <span>Галерея</span></a>
-                </li>
-
-
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-shopping-cart"></i> <span>Каталог</span> <i
-                                class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="/dashboard/category/"><i class="fa fa-suitcase"></i> <span>Категории</span></a>
-                        </li>
-                        <li><a href="/dashboard/goods/"><i class="fa fa-stethoscope"></i> <span>Услуги</span></a></li>
-                        <li><a href="/dashboard/comments"><i class="fa fa-file-text"></i> <span>Комментарии</span></a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="treeview">
-                    <a href="#"><i class="glyphicon glyphicon-info-sign"></i> <span>Опросы</span> <i
-                                class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="/dashboard/surveys"><i class="fa fa-question-circle"></i><span>Анкеты</span></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-question"></i><span>Вопросы</span></a></li>
-                        <li><a href="#"><i class="fa fa-pie-chart"></i><span>Статистика</span></a></li>
-                    </ul>
-                </li>
-
-                <li><a href="/dashboard/reviews"><i class="fa fa-file-text"></i> <span>Отзывы</span></a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-book"></i> <span>Энциклопедия</span></a></li>
-
-
-              <!-- Плохо работает <li>
-                    <a href="/dashboard/appointments">
-                        <i class="fa fa-calendar"></i> <span>Запись на приём</span>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <i class="fa fa-fw fa-plus visible-xs-inline-block"></i>
+                        {{Session::get('SiteName')}}   <span class="fa fa-dedent fa-fw text"></span>
                     </a>
-                </li> -->
-
-
-                <li class="treeview">
-                    <a href="#"><i class="glyphicon glyphicon-globe"></i> <span>Социальные сети</span> <i
-                                class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-vk"></i>Вконтакте</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i>Однокласники</a></li>
-                        <li><a href="#"><i class="fa fa-facebook-official"></i>Facebook</a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
-                    </ul>
-                </li>
-
-
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-user"></i> <span>Пользователи</span> <i
-                                class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="/dashboard/user"><i class="fa fa-user"></i> Пользователи</a></li>
-                        <li><a href="/dashboard/groups"><i class="fa fa-users"></i> Группы</a></li>
-                        <li><a href="#"><i class="fa fa-users"></i> Клиенты</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="/dashboard/chat"><i class="fa fa-users"></i> <span>Консультант</span></a></li>
-                <li><a href="/dashboard/filemanager"><i class="fa fa-upload"></i> <span>Файловый менеджер</span></a>
-                </li>
-
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-cog"></i> <span>Настройки</span> <i
-                                class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-
+                    <ul class="dropdown-menu" role="menu">
 
                         @foreach(Sites::get() as $site)
                             <li><!-- start notification -->
-                                <a href="#">{{$site->name}}</a>
+                                <a href="/dashboard/sites/select/{{$site->id}}">
+                                    <i class="fa fa-users text-aqua"></i> {{$site->name}}
+                                </a>
                             </li><!-- end notification -->
                         @endforeach
 
                     </ul>
                 </li>
-            </ul><!-- /.sidebar-menu -->
-        </section>
-        <!-- /.sidebar -->
-    </aside>
+            </ul>
+            <!-- / link and dropdown -->
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+            <!-- search form -->
+            <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control input-sm bg-light no-border rounded padder" placeholder="Поиск ...">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
+                    </div>
+                </div>
+            </form>
+            <!-- / search form -->
 
-        <div class="box-body">
-
-
-        @if (Session::has('good'))
-            <div class="alert alert-success alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h4>	<i class="icon fa fa-check"></i> Успех!</h4>
-                {{Session::get('good')}}
-            </div>
-        @elseif(Session::has('bad'))
-            <div class="alert alert-danger alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h4><i class="icon fa fa-ban"></i> Что то пошло не так!</h4>
-                {{Session::get('bad')}}
-            </div>
-        @endif
+            <!-- nabar right -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        <span class="visible-xs-inline">Notifications</span>
+                        <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+                    </a>
+                    <!-- dropdown -->
+                    <div class="dropdown-menu w-xl animated fadeInUp">
+                        <div class="panel bg-white">
+                            <div class="panel-heading b-light bg-light">
+                                <strong>You have <span>2</span> notifications</strong>
+                            </div>
+                            <div class="list-group">
+                                <a href class="media list-group-item">
+                    <span class="pull-left thumb-sm">
+                      <img src="img/a0.jpg" alt="..." class="img-circle">
+                    </span>
+                    <span class="media-body block m-b-none">
+                      Use awesome animate.css<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                                </a>
+                                <a href class="media list-group-item">
+                    <span class="media-body block m-b-none">
+                      1.0 initial released<br>
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                                </a>
+                            </div>
+                            <div class="panel-footer text-sm">
+                                <a href class="pull-right"><i class="fa fa-cog"></i></a>
+                                <a href="#notes" data-toggle="class:show animated fadeInRight">See all the notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / dropdown -->
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+                        <span class="hidden-sm hidden-md">Александр</span> <b class="caret"></b>
+                    </a>
+                    <!-- dropdown -->
+                    <ul class="dropdown-menu animated fadeInRight w">
+                        <li class="wrapper b-b m-b-sm bg-light m-t-n-xs">
+                            <div>
+                                <p>300mb of 500mb used</p>
+                            </div>
+                            <div class="progress progress-xs m-b-none dker">
+                                <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href>
+                                <span class="badge bg-danger pull-right">30%</span>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="app.page.profile">Profile</a>
+                        </li>
+                        <li>
+                            <a ui-sref="app.docs">
+                                <span class="label bg-info pull-right">new</span>
+                                Help
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a ui-sref="access.signin">Logout</a>
+                        </li>
+                    </ul>
+                    <!-- / dropdown -->
+                </li>
+            </ul>
+            <!-- / navbar right -->
         </div>
+        <!-- / navbar collapse -->
+    </header>
+    <!-- / header -->
+
+    <!-- aside -->
+    <aside id="aside" class="app-aside hidden-xs bg-dark">
+        <div class="aside-wrap">
+            <div class="navi-wrap">
+                <!-- user -->
+                <div class="clearfix hidden-xs text-center hide" id="aside-user">
+                    <div class="dropdown wrapper">
+                        <a href="app.page.profile">
+                <span class="thumb-lg w-auto-folded avatar m-t-sm">
+                  <img src="img/a0.jpg" class="img-full" alt="...">
+                </span>
+                        </a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+                <span class="clear">
+                  <span class="block m-t-sm">
+                    <strong class="font-bold text-lt">John.Smith</strong>
+                    <b class="caret"></b>
+                  </span>
+                  <span class="text-muted text-xs block">Art Director</span>
+                </span>
+                        </a>
+                        <!-- dropdown -->
+                        <ul class="dropdown-menu animated fadeInRight w hidden-folded">
+                            <li class="wrapper b-b m-b-sm bg-info m-t-n-xs">
+                                <span class="arrow top hidden-folded arrow-info"></span>
+                                <div>
+                                    <p>300mb of 500mb used</p>
+                                </div>
+                                <div class="progress progress-xs m-b-none dker">
+                                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href>Settings</a>
+                            </li>
+                            <li>
+                                <a href="page_profile.html">Profile</a>
+                            </li>
+                            <li>
+                                <a href>
+                                    <span class="badge bg-danger pull-right">3</span>
+                                    Notifications
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="page_signin.html">Logout</a>
+                            </li>
+                        </ul>
+                        <!-- / dropdown -->
+                    </div>
+                    <div class="line dk hidden-folded"></div>
+                </div>
+                <!-- / user -->
+
+                <!-- nav -->
+                <nav ui-nav class="navi clearfix">
+                    <ul class="nav">
+                        <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                            <span>Навигация</span>
+                        </li>
+
+
+
+                        <li class="{{Active::route('dashboard..*')}}">
+                            <a href="{{URL::route('dashboard..index')}}">
+                                <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+                                <span>Панель</span>
+                            </a>
+                        </li>
+
+
+
+                        <li>
+                            <a href="mail.html">
+                                <b class="badge bg-info pull-right">9</b>
+                                <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
+                                <span class="font-bold">Обратная связь</span>
+                            </a>
+                        </li>
+                        <li class="line dk"></li>
+
+                        <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                            <span>Components</span>
+                        </li>
+                        <li>
+                            <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                                <b class="badge bg-info pull-right">3</b>
+                                <i class="glyphicon glyphicon-th"></i>
+                                <span>Layout</span>
+                            </a>
+                            <ul class="nav nav-sub dk">
+                                <li class="nav-sub-header">
+                                    <a href>
+                                        <span>Layout</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="layout_app.html">
+                                        <span>Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="layout_fullwidth.html">
+                                        <span>Full width</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="layout_boxed.html">
+                                        <span>Boxed layout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="ui_chart.html">
+                                <i class="fa fa-user-md"></i>
+                                <span>Специалисты</span>
+                            </a>
+                        </li>
+
+                        <li class="{{Active::route('dashboard.filemanager.*')}}">
+                            <a href="{{URL::route('dashboard.filemanager.index')}}">
+                                <i class="glyphicon glyphicon-folder-open"></i>
+                                <span>Файлы</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="{{Active::route(['dashboard.page.*','dashboard.news.*'])}}">
+                            <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                                <i class="glyphicon glyphicon-file icon"></i>
+                                <span>Контент</span>
+                            </a>
+
+                            <ul class="nav nav-sub dk">
+
+                                <li class="{{Active::route('dashboard.page.*')}}">
+                                    <a href="{{URL::route('dashboard.page.index')}}">
+                                        <i class="glyphicon glyphicon-file icon"></i>
+                                        <span>Страницы</span>
+                                    </a>
+                                </li>
+                                <li class="{{Active::route('dashboard.news.*')}}">
+                                    <a href="{{URL::route('dashboard.news.index')}}">
+                                        <i class="fa fa-newspaper-o icon"></i>
+                                        <span>Новости</span>
+                                    </a>
+                                </li>
+                                <li class="{{Active::route('dashboard.shares.*')}}">
+                                    <a href="{{URL::route('dashboard.shares.index')}}">
+                                        <i class="fa fa-star"></i>
+                                        <span>Акции</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+
+
+
+
+                    </ul>
+                </nav>
+                <!-- nav -->
+
+
+            </div>
+        </div>
+    </aside>
+    <!-- / aside -->
+
+    <!-- content -->
+    <div id="content" class="app-content" role="main">
+        <div class="app-content-body ">
+
+
+            @if (Session::has('good'))
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h4>	<i class="icon fa fa-check"></i> Успех!</h4>
+                    {{Session::get('good')}}
+                </div>
+            @elseif(Session::has('bad'))
+                <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-ban"></i> Что то пошло не так!</h4>
+                    {{Session::get('bad')}}
+                </div>
+            @endif
 
 
         @if (count($errors) > 0)
-                <div class="alert alert-danger alert-dismissable">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Ошибка!</strong> Пожалуйста проверте вводимые данные.<br><br>
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Ошибка!</strong> Пожалуйста проверте вводимые данные.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
         @endif
 
 
 
+            @yield('content')
 
 
-
-        @yield('content')
-
-    </div><!-- /.content-wrapper -->
-
-    <!-- Main Footer -->
-    <footer class="main-footer">
-        <!-- To the right -->
-        <div class="pull-right hidden-xs">
-            Мы следим за тобой!
         </div>
-        <!-- Default to the left -->
-        <strong>Copyright &copy; 2015 <a href="http://octavian48.ru">Октавиан</a>.</strong>
+    </div>
+    <!-- / content -->
+
+    <!-- footer -->
+    <footer id="footer" class="app-footer" role="footer">
+        <div class="wrapper b-t bg-light">
+            <span class="pull-right">2.0.1 <a href ui-scroll="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>
+            &copy; 2015 Copyright.
+        </div>
     </footer>
+    <!-- / footer -->
 
-</div><!-- ./wrapper -->
+</div>
 
-
-
-
-
+<script src="/dash/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/dash/bootstrap/js/bootstrap.js"></script>
+<script src="/dash/js/ui-load.js"></script>
+<script src="/dash/js/ui-jp.config.js"></script>
+<script src="/dash/js/ui-jp.js"></script>
+<script src="/dash/js/ui-nav.js"></script>
+<script src="/dash/js/ui-toggle.js"></script>
+<script src="{{asset('/dash/bootstrap/js/custom.js')}}" type="text/javascript"></script>
+<script src="{{asset('/dash/plugins/tinymce/tinymce.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('/dash/bootstrap/js/jasny-bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('/dash/dist/js/moment-with-locales.js')}}" type="text/javascript"></script>
+<script src="{{asset('/dash/dist/js/ru-picker.js')}}" type="text/javascript"></script>
+<script src="{{asset('/dash/dist/js/bootstrap-datetimepicker.min.js')}}" type="text/javascript"></script>
 
 </body>
 </html>

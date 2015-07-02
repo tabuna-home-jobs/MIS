@@ -1,92 +1,116 @@
-<?php namespace App\Http\Controllers\Admin;
+<?php
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\PageRequest;
+namespace App\Http\Controllers\Admin;
+
 use App\Models\Page;
 use Redirect;
 use Request;
 use Session;
 use Validator;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\PageRequest;
 
-
-class PageController extends Controller {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-
-    public function getIndex()
+class PageController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index()
     {
         $PageList = Page::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
         return view("dashboard/page/pages", ['PageList' => $PageList]);
     }
 
-    public function getAdd($page = null)
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create()
     {
-        $page = Page::find($page);
-
-        return view("dashboard/page/pagesCrud", ['Page' => $page ]);
+        return view("dashboard/page/create");
     }
 
-
-    public function getTrash()
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store(PageRequest $request)
     {
-        $PageList = Page::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/page/trash", ['PageList' => $PageList]);
-    }
-
-
-    public  function  getRestore($page = null)
-    {
-        Page::withTrashed()->find($page)->restore();
-        Session::flash('good', 'Вы успешно востановили запись');
-        return redirect()->route('page');
-    }
-
-
-    public  function  getUnset($page = null)
-    {
-        Page::withTrashed()->find($page)->forceDelete();
-        Session::flash('good', 'Вы успешно окончательно удалили запись');
-        return redirect()->route('page');
-    }
-
-    //Добовление и изменение данных
-    public function postIndex(PageRequest $request)
-    {
-
-        if(!is_null($request->id))
-            $page = Page::find($request->id);
-        else
-            $page = new Page();
-
-        $page->title = $request->title;
-        $page->name = $request->name;
-        $page->content = $request->content;
-        $page->tag = $request->tag;
-        $page->descript = $request->descript;
-        $page->ids = Session::get('website');
+        $page = new Page([
+            'title'=>$request->title,
+            'name'=>$request->name,
+            'content'=>$request->content,
+            'tag'=>$request->tag,
+            'descript'=>$request->descript,
+            'ids'=> Session::get('website'),
+        ]);
         $page->save();
 
         //Флеш сообщение
-        Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->route('page');
+        Session::flash('good', 'Вы успешно добавили значения');
+        return redirect()->route('dashboard.page.index');
     }
 
-
-
-    //Удаление
-    public function getDestroy($page = null)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
     {
-        $page = Page::find($page);
+
+
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function edit(Page $page)
+    {
+        return view("dashboard/page/edit", ['Page' => $page ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function update(Page $page, PageRequest $request)
+    {
+        $page->fill([
+            'title'=>$request->title,
+            'name'=>$request->name,
+            'content'=>$request->content,
+            'tag'=>$request->tag,
+            'descript'=>$request->descript,
+            'ids'=> Session::get('website'),
+        ])->save();
+
+        //Флеш сообщение
+        Session::flash('good', 'Вы успешно изменили значения');
+        return redirect()->route('dashboard.page.index');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy(Page $page)
+    {
         $page->delete();
         Session::flash('good', 'Вы успешно удалили значения');
-        return redirect()->route('page');
+        return redirect()->route('dashboard.page.index');
     }
-
-
-
-
 }

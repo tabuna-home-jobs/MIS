@@ -18,7 +18,7 @@ class Shares extends Model {
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'content', 'avatar', 'datestart', 'dateend', 'tag', 'descript', 'ids'];
+    protected $fillable = ['title', 'name', 'content', 'avatar', 'start', 'end', 'tag', 'descript', 'ids'];
 
 
     public function getSite()

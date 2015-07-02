@@ -130,4 +130,90 @@
         <!-- /.row -->
     </section><!-- /.content -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="bg-light lter b-b wrapper-md">
+        <h1 class="m-n font-thin h3">Меню сайта</h1>
+    </div>
+    <div class="wrapper-md">
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div ui-jq="nestable" class="dd">
+                    <ol class="dd-list">
+
+
+
+                        @foreach ($Child as $key=> $value)
+
+
+
+                        <li class="dd-item" data-id="{{ $value->id }}">
+                            <div class="dd-handle">
+                                <span class="pull-right" >
+                                <a href><i class="fa fa-fw m-r-xs fa-pencil"></i></a>
+                                <a href><i class="fa fa-fw m-r-xs fa-plus"></i></a>
+                                <a href="google.com"><i class="fa fa-fw fa-times"></i></a>
+                              </span>
+                                <span class="pull-left"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                                <div class="clear">
+                                    {{ $value->name }}
+                                </div>
+
+                            </div>
+                        </li>
+                        @endforeach
+
+
+                        <li class="dd-item" data-id="2">
+                            <div class="dd-handle">Item 2</div>
+                            <ol class="dd-list">
+                                <li class="dd-item" data-id="3"><div class="dd-handle">Item 3</div></li>
+                                <li class="dd-item" data-id="4"><div class="dd-handle">Item 4</div></li>
+                                <li class="dd-item" data-id="5">
+                                    <div class="dd-handle">Item 5</div>
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="6"><div class="dd-handle">Item 6</div></li>
+                                        <li class="dd-item" data-id="7"><div class="dd-handle">Item 7</div></li>
+                                        <li class="dd-item" data-id="8"><div class="dd-handle">Item 8</div></li>
+                                    </ol>
+                                </li>
+                                <li class="dd-item" data-id="9"><div class="dd-handle">Item 9</div></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 @endsection

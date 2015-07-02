@@ -33,10 +33,6 @@ class EventServiceProvider extends ServiceProvider {
 	public function boot(DispatcherContract $events)
 	{
 		parent::boot($events);
-
-
-        Goods::observe(new GoodsObserver);
-        Category::observe(new CategoryObserver);
 	}
 
 }

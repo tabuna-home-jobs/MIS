@@ -1,74 +1,76 @@
-
 @extends('app')
 
 @section('content')
 
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            Список страниц акций
-        </h1>
 
-        {!! Breadcrumbs::render('share') !!}
+    <div class="bg-light lter b-b wrapper-md">
+        <h1 class="m-n font-thin h3">Список новостей</h1>
+    </div>
+    <div class="wrapper-md">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Список страниц акций
+                <a href="{{URL::route('dashboard.shares.create')}}" class="btn btn-success btn-xs pull-right">Добавить <i class="fa fa-plus"></i></a>
 
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="box">
-                    <div class="box-header">
-                        <h3 class="box-title">
-                            <a href="/dashboard/shares/add/" class="btn btn-link btn-sm"><span class="fa fa-plus"></span> Добавить новую запись </a>
-                            <a href="/dashboard/shares/trash/" class="btn btn-link btn-sm"><span class="fa fa-trash"></span> Корзина </a>
-                        </h3>
-                    </div><!-- /.box-header -->
-                    <div class="box-body">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Имя</th>
-                                <th>Заголовок</th>
-                                <th>Дата начала</th>
-                                <th>Дата окончания</th>
-                                <th>Управление</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach ($SharesList as $Share)
-                                <tr>
-                                    <td>{{ $Share->id }}</td>
-                                    <td>{{ $Share->name }}</td>
-                                    <td>{{ $Share->title }}</td>
-                                    <td>{{ $Share->start }}</td>
-                                    <td>{{ $Share->end }}</td>
-                                    <td>
-                                        <a href="/dashboard/shares/add/{{ $Share->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
-                                        <a href="/dashboard/shares/destroy/{{ $Share->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
-                                    </td>
+            </div>
+            <div class="table-responsive">
+                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-striped m-b-none dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                                <thead>
+                                <tr role="row">
+                                    <th>#</th>
+                                    <th>Имя</th>
+                                    <th>Заголовок</th>
+                                    <th>Дата начала</th>
+                                    <th>Дата окончания</th>
+                                    <th>Последнее редактирование</th>
+                                    <th>Управление</th>
                                 </tr>
-                            @endforeach
-                            </tbody>
-                            <tfoot>
-                            <tr>
-                                <th>#</th>
-                                <th>Имя</th>
-                                <th>Заголовок</th>
-                                <th>Дата начала</th>
-                                <th>Дата окончания</th>
-                                <th>Управление</th>
-                            </tr>
-                            </tfoot>
+                                </thead>
+                                <tbody>
 
+                                @foreach ($SharesList as $Share)
+                                    <tr>
+                                        <td>{{ $Share->id }}</td>
+                                        <td>{{ $Share->name }}</td>
+                                        <td>{{ $Share->title }}</td>
+                                        <td>{{ $Share->start }}</td>
+                                        <td>{{ $Share->end }}</td>
+                                        <td>{{ $Share->updated_at }}</td>
+                                        <td class="pull-right">
+                                            <a href="{{URL::route('dashboard.shares.edit',$Share->id)}}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
+                                            <form action="{{URL::route('dashboard.shares.destroy',$Share->id)}}" method="post" class="pull-right">
+                                                <input type="hidden" name="_method" value="delete">
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <button type="submit" class="btn btn-danger"><span class="fa fa-trash-o"></span></button>
+                        </div>
+                        </td>
+                        </tr>
+                        @endforeach
+
+                        </tbody>
                         </table>
-                        {!! $SharesList->render() !!}
-                    </div><!-- /.box-body -->
-                </div><!-- /.box -->
+                    </div>
+                </div>
 
-            </div><!-- /.col -->
-        </div><!-- /.row -->
-    </section><!-- /.content -->
+
+                <div class="row">
+                    <div class="col-sm-6 text-center">
+                        <small class="text-muted inline m-t-sm m-b-sm">Всего элементов: {!! $SharesList->count() !!}</small>
+                    </div>
+                    <div class="col-sm-6 text-right text-center-xs">
+                        {!! $SharesList->render() !!}
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
 
 @endsection
