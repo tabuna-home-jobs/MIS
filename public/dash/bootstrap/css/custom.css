@@ -40,6 +40,6 @@ html {
     width: 100%;
 }
 
-.bootstrap-tagsinput{
-    width: 100%;
+.bootstrap-tagsinput, .chosen-container{
+    width: 100% !important;
 }

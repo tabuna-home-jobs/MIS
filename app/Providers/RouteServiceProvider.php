@@ -29,7 +29,7 @@ class RouteServiceProvider extends ServiceProvider {
         $router->model('page', 'App\Models\Page');
         $router->model('news', 'App\Models\News');
         $router->model('shares', 'App\Models\Shares');
-
+        $router->model('special', 'App\Models\Specialisty');
 	}
 
 	/**

@@ -278,12 +278,13 @@
                         </li>
 
 
-                        <li>
-                            <a href="ui_chart.html">
+                        <li class="{{Active::route('dashboard.special.*')}}">
+                            <a href="{{URL::route('dashboard.special.index')}}">
                                 <i class="fa fa-user-md"></i>
-                                <span>Специалисты</span>
+                                <span>Врачи</span>
                             </a>
                         </li>
+
 
                         <li class="{{Active::route('dashboard.filemanager.*')}}">
                             <a href="{{URL::route('dashboard.filemanager.index')}}">

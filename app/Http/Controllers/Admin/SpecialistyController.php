@@ -12,63 +12,36 @@ use Validator;
 class SpecialistyController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
-    public function getIndex()
+    public function index()
     {
         $Specialisty = Specialisty::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
         return view("dashboard/special/special", ['Specialisty' => $Specialisty]);
     }
 
-    public function getAdd($Spec = null)
+    public function create()
     {
-        $Spec = Specialisty::find($Spec);
-        return view("dashboard/special/specialCrud", ['Spec' => $Spec]);
+        return view("dashboard/special/create");
+    }
+
+    public function edit(Specialisty $Spec)
+    {
+        return view("dashboard/special/create",['Spec'=>$Spec]);
     }
 
 
-    public function getTrash()
+    public function store(SpecialRequest $request)
     {
-        $Specialisty = Specialisty::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/special/trash", ['Specialisty' => $Specialisty]);
-    }
-
-
-    public function  getRestore($Spec = null)
-    {
-        Specialisty::withTrashed()->find($Spec)->restore();
-        Session::flash('good', 'Вы успешно востановили запись');
-        return redirect()->route('special');
-    }
-
-
-    public function  getUnset($Spec = null)
-    {
-        Specialisty::withTrashed()->find($Spec)->forceDelete();
-        Session::flash('good', 'Вы успешно окончательно удалили запись');
-        return redirect()->route('special');
-    }
-
-    //Добовление и изменение данных
-    public function postIndex(SpecialRequest $request)
-    {
-        if (!is_null($request->id))
-            $special = Specialisty::find($request->id);
-        else
-            $special = new Specialisty();
-
-        $special->fio = $request->fio;
-        $special->subname = $request->subname;
-        $special->special = $request->special;
-        $special->obrazovanie = $request->obrazovanie;
-        $special->opyt = $request->opyt;
-        $special->about = $request->about;
-        $special->works = serialize($request->works);
-        $special->ids = Session::get('website');
-
+        $special = new Specialisty([
+                'fio' => $request->fio,
+                'subname' => $request->subname,
+                'special' => $request->special,
+                'obrazovanie' => $request->obrazovanie,
+                'opyt' => $request->opyt,
+                'about' => $request->about,
+                'works' => serialize($request->works),
+                'ids' => Session::get('website'),
+        ]);
 
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
@@ -79,17 +52,45 @@ class SpecialistyController extends Controller
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->back();
+        return redirect()->route('dashboard.special.index');
     }
 
 
-    //Удаление
-    public function getDestroy($special = null)
+
+    public function update(Specialisty $special, SpecialRequest $request)
     {
-        $special = Specialisty::find($special);
+        $special->fill([
+            'fio' => $request->fio,
+            'subname' => $request->subname,
+            'special' => $request->special,
+            'obrazovanie' => $request->obrazovanie,
+            'opyt' => $request->opyt,
+            'about' => $request->about,
+            'works' => serialize($request->works),
+            'ids' => Session::get('website'),
+        ]);
+
+        if (Request::hasFile('avatar')) {
+            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            $special->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+        }
+
+        $special->save();
+
+        //Флеш сообщение
+        Session::flash('good', 'Вы успешно изменили значения');
+        return redirect()->route('dashboard.special.index');
+    }
+
+
+
+
+    //Удаление
+    public function destroy(Specialisty $special)
+    {
         $special->delete();
         Session::flash('good', 'Вы успешно удалили значения');
-        return redirect()->back();
+        return redirect()->route('dashboard.special.index');
     }
 
 

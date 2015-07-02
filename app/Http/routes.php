@@ -65,6 +65,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'dashboard'], function ()
     Route::resource('shares', 'SharesController');
     Route::resource('filemanager', 'FilemanagerController');
     Route::resource('', 'AdminController');
+    Route::resource('special', 'SpecialistyController');
 
 
 
@@ -104,9 +105,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'dashboard'], function ()
 
 
 
-    Route::controller('special', 'SpecialistyController', [
-        'getIndex' => 'special',
-    ]);
+
+
+
 
     Route::controller('gallery', 'GalleryController', [
         'getIndex' => 'gallery',
