@@ -3,81 +3,70 @@
 
 @section('content')
 
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                Обратная связь
-            </h1>
 
-            {!! Breadcrumbs::render('feedback') !!}
 
-        </section>
-
-        <!-- Main content -->
-        <section class="content">
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="/dashboard/feedback/send" class="btn btn-primary btn-block margin-bottom">Написать</a>
-                    <div class="box box-solid">
-                        <div class="box-header with-border">
-                                <h3 class="box-title">Папки</h3>
+                <div class="hbox hbox-auto-xs hbox-auto-sm">
+                    <div class="col w-md bg-light dk b-r bg-auto">
+                        <div class="wrapper b-b bg">
+                            <button class="btn btn-sm btn-default pull-right visible-sm visible-xs" ui-toggle="show" target="#email-menu"><i class="fa fa-bars"></i></button>
+                            <a href="{{URL::route('dashboard.feedback.create')}}" class="btn btn-sm btn-danger w-xs font-bold">Написать</a>
                         </div>
-                        <div class="box-body no-padding">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li class="active"><a href="/dashboard/feedback/"><i class="fa fa-inbox"></i> Входящее</a></li>
-                                <li><a href="/dashboard/feedback/noready"><i class="fa fa-file-text-o"></i> Не прочитанные</a></li>
-                                <li><a href="/dashboard/feedback/send"><i class="fa fa-envelope-o"></i> Исходящие</a></li>
-                                <li><a href="/dashboard/feedback/trash/"><i class="fa fa-trash-o"></i> Корзина</a></li>
+                        <div class="wrapper hidden-sm hidden-xs" id="email-menu">
+                            <ul class="nav nav-pills nav-stacked nav-sm">
+                                <li><a href="/dashboard/feedback/"><i class="fa fa-inbox"></i> Входящее</a></li>
+                                <li><a href="/dashboard/feedback?noread=true"><i class="fa fa-file-text-o"></i> Не прочитанные</a></li>
                             </ul>
-                        </div><!-- /.box-body -->
-                    </div><!-- /. box -->
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div>
 
 
-                </div><!-- /.col -->
-                <div class="col-md-9">
-                    <div class="box box-primary">
+                            <!-- list -->
+                            <ul class="list-group list-group-lg no-radius m-b-none m-t-n-xxs">
 
-                        <div class="box-body no-padding">
 
-                            <div class="table-responsive mailbox-messages">
-                                <table class="table table-hover table-striped">
-                                    <tbody>
+                                @forelse($Feedback as $mail )
 
-                                    @forelse($Feedback as $mail )
 
                                         @if($mail->read)
-                                            <tr>
+                                            <li class="list-group-item clearfix b-l-3x">
                                         @else
-                                            <tr class="info">
-                                        @endif
+                                            <li class="list-group-item clearfix b-l-3x b-l-info">
+                                                @endif
 
-                                        <td class="mailbox-name">{{ $mail->id  }}</td>
-                                        <td class="mailbox-name"><a href="/dashboard/feedback/view/{{ $mail->id }}">{{ $mail->fio  }}</a></td>
-                                        <td class="mailbox-subject">{{ $mail->email  }}</td>
-                                        <td class="mailbox-attachment">{{ $mail->phone  }}</td>
-                                        <td class="mailbox-date">{{ $mail->created_at  }}</td>
-                                        <td class="mailbox-name"><a href="/dashboard/feedback/destroy/{{ $mail->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a></td>
-                                    </tr>
-                                    @empty
-                                    <tr>
-                                        <td>Нет данных</td>
-                                    </tr>
-                                    @endforelse
+                                    <div class="pull-right text-sm text-muted">
+                                        <span class="hidden-xs ">{{ $mail->created_at  }}</span>
+                                        <i class="fa fa-clock-o"></i>
+                                    </div>
+                                    <div class="clear">
+                                        <div><a  class="text-md " href="{{URL::route('dashboard.feedback.show',$mail->id) }}">{{ $mail->fio  }}</a><span class="label bg-light m-l-sm ">{{ $mail->email  }}</span></div>
+                                        <div class="text-ellipsis m-t-xs">{{str_limit($mail->content,100,'...')}}</div>
+                                    </div>
+                                </li>
 
-                                    </tbody>
-                                </table><!-- /.table -->
-                            </div><!-- /.mail-box-messages -->
-                        </div><!-- /.box-body -->
-                        <div class="box-footer no-padding">
-                            <div class="mailbox-controls">
-                                    <!-- Пагинация -->
-                                {!! $Feedback->render() !!}
-                            </div>
+                                        @empty
+                                            <li class="list-group-item clearfix b-l-3x b-l-info"> Нет данных </li>
+                                        @endforelse
+
+
+
+                            </ul>
+
+                            <!-- / list -->
                         </div>
-                    </div><!-- /. box -->
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </section><!-- /.content -->
+
+
+                        {!! $Feedback->render() !!}
+
+                    </div>
+                </div>
+
+
+
+
+
 
 
 @endsection

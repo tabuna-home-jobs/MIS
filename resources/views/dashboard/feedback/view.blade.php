@@ -1,67 +1,69 @@
-
 @extends('app')
 
 @section('content')
 
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            Обратная связь
-        </h1>
-
-        {!! Breadcrumbs::render('curfeedback',$Feedback) !!}
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-            <div class="col-md-3">
-                <a href="/dashboard/feedback/send" class="btn btn-primary btn-block margin-bottom">Написать</a>
-                <div class="box box-solid">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Папки</h3>
-                    </div>
-                    <div class="box-body no-padding">
-                        <ul class="nav nav-pills nav-stacked">
-                            <li><a href="/dashboard/feedback"><i class="fa fa-inbox"></i> Входящее</a></li>
-                            <li><a href="/dashboard/feedback/noready"><i class="fa fa-file-text-o"></i> Не прочитанные</a></li>
-                            <li><a href="/dashboard/feedback/send"><i class="fa fa-envelope-o"></i> Исходящие</a></li>
-                            <li><a href="/dashboard/feedback/trash/"><i class="fa fa-trash-o"></i> Корзина</a></li>
-                        </ul>
-                    </div><!-- /.box-body -->
-                </div><!-- /. box -->
-            </div><!-- /.col -->
 
 
-            <div class="col-md-9">
-                <div class="box box-primary">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+        <div class="col w-md bg-light dk b-r bg-auto">
+            <div class="wrapper b-b bg">
+                <button class="btn btn-sm btn-default pull-right visible-sm visible-xs" ui-toggle="show"
+                        target="#email-menu"><i class="fa fa-bars"></i></button>
+                <a href="{{URL::route('dashboard.feedback.create')}}" class="btn btn-sm btn-danger w-xs font-bold">Написать</a>
+            </div>
+            <div class="wrapper hidden-sm hidden-xs" id="email-menu">
+                <ul class="nav nav-pills nav-stacked nav-sm">
+                    <li><a href="/dashboard/feedback/"><i class="fa fa-inbox"></i> Входящее</a></li>
+                    <li><a href="/dashboard/feedback?noread=true"><i class="fa fa-file-text-o"></i> Не прочитанные</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-                    <div class="box-body no-padding">
-                        <div class="mailbox-read-info">
-                            <h3>{{ $Feedback->fio  }}</h3>
-                            <h5>Электронная почта: {{$Feedback->email}} <span class="mailbox-read-time pull-right">{{$Feedback->created_at}} </span></h5>
-                            <h5>Номер телефона: {{$Feedback->phone}} </h5>
-                        </div><!-- /.mailbox-read-info -->
+
+        <div class="col">
+            <div ui-view="" class="ng-scope">
+                <div class="ng-scope">
+                    <!-- header -->
+                    <div class="wrapper bg-light lter b-b">
+                        <a tooltip="Back to Inbox" class="btn btn-sm btn-default w-xxs m-r-sm" ui-sref="app.mail.list"
+                           href="/dashboard/feedback/"><i class="fa fa-long-arrow-left"></i></a>
+
+                        <div class="btn-group m-r-sm">
+                            <button tooltip="Archive" class="btn btn-sm btn-default w-xxs w-auto-xs"><i
+                                        class="fa fa-print"></i></button>
+                            <button tooltip="Report" class="btn btn-sm btn-default w-xxs w-auto-xs"><i
+                                        class="fa fa-reply"></i></button>
 
 
-                        <div class="mailbox-read-message">
-                            {{$Feedback->content}}
-                        </div><!-- /.mailbox-read-message -->
-                    </div><!-- /.box-body -->
-                    <div class="box-footer">
-                        <div class="pull-right">
-                            <a href="/dashboard/feedback/send/{{ $Feedback->id  }}"><button class="btn btn-default"><i class="fa fa-reply"></i> Ответить</button>
+                            <form action="{{URL::route('dashboard.feedback.destroy',$Feedback->id)}}" method="post" class="pull-right">
+                                <input type="hidden" name="_method" value="delete">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <button type="submit" class="btn btn-sm btn-default w-xxs w-auto-xs"><i
+                                            class="fa fa-trash-o"></i></button>
+                            </form>
+
                         </div>
-                        <a href="/dashboard/feedback/destroy/{{ $Feedback->id }}"> <button class="btn btn-danger"><i class="fa fa-trash-o"></i></button></a>
-                        <button class="btn btn-default"><i class="fa fa-print"></i></button>
-                    </div><!-- /.box-footer -->
-                </div><!-- /. box -->
-            </div><!-- /.col -->
+
+                    </div>
+                    <!-- / header -->
+                    <div class="wrapper b-b">
+                        <h2 class="font-thin m-n ng-binding">{{ $Feedback->fio  }}</h2>
+                    </div>
+                    <div class="wrapper b-b ng-binding">
+                        <p class="pull-left"> от {{$Feedback->email}} в {{$Feedback->created_at}} </p>
+
+                        <p class="text-right">Телефон: {{$Feedback->phone}}</p>
+                    </div>
+                    <div class="wrapper ng-binding">
+                        {{$Feedback->content}}
+                    </div>
 
 
+                </div>
+            </div>
+        </div>
 
-        </div><!-- /.row -->
-    </section><!-- /.content -->
-
+    </div>
 
 @endsection

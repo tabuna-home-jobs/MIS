@@ -8,10 +8,6 @@ use Session;
 
 class ReviewsController extends Controller {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
 	public function getIndex()
 	{
@@ -38,17 +34,10 @@ class ReviewsController extends Controller {
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->route('reviews');
+        return redirect()->route('dashboard.reviews.index');
     }
 
 
-
-
-    public function getTrash()
-    {
-        $ReviewsList = Reviews::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/reviews/trash", ['ReviewsList' => $ReviewsList]);
-    }
 
 
     public  function  getRestore($Reviews = null)
@@ -68,7 +57,7 @@ class ReviewsController extends Controller {
         $page = Reviews::find($Reviews);
         $page->delete();
         Session::flash('good', 'Вы успешно удалили значения');
-        return redirect()->route('reviews');
+        return redirect()->route('dashboard.reviews.index');
     }
 
 
@@ -77,7 +66,7 @@ class ReviewsController extends Controller {
     {
         Reviews::withTrashed()->find($Reviews)->forceDelete();
         Session::flash('good', 'Вы успешно окончательно удалили запись');
-        return redirect()->route('reviews');
+        return redirect()->route('dashboard.reviews.index');
     }
 
 

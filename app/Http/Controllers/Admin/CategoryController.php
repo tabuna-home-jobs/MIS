@@ -9,10 +9,7 @@ use Session;
 
 class CategoryController extends Controller {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
 
 
     public function getIndex()
@@ -52,7 +49,7 @@ class CategoryController extends Controller {
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->route('category');
+        return redirect()->route('dashboard.category.index');
     }
 
 
@@ -65,7 +62,7 @@ class CategoryController extends Controller {
     {
         Category::withTrashed()->find($Category)->restore();
         Session::flash('good', 'Вы успешно востановили запись');
-        return redirect()->route('category');
+        return redirect()->route('dashboard.category.index');
     }
 
     public function getTrash()
@@ -80,14 +77,14 @@ class CategoryController extends Controller {
         $Category = Category::find($Category);
         $Category->delete('cascade');
         Session::flash('good', 'Вы успешно удалили значения');
-        return redirect()->route('category');
+        return redirect()->route('dashboard.category.index');
     }
 
     public  function  getUnset($Feedback = null)
     {
         Category::withTrashed()->find($Feedback)->forceDelete();
         Session::flash('good', 'Вы успешно окончательно удалили запись');
-        return redirect()->route('category');
+        return redirect()->route('dashboard.category.index');
     }
 
 

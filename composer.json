@@ -8,7 +8,8 @@
       "laravel/framework": "5.1.*",
       "cartalyst/sentry": "dev-feature/laravel-5",
       "intervention/image": "2.2.*",
-      "watson/active": "1.3.*"
+      "watson/active": "1.3.*",
+      "laravelcollective/html": "5.1.*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",

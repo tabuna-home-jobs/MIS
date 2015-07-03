@@ -2,40 +2,37 @@
 
 @section('content')
 
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            Изображения
-        </h1>
-    </section>
 
-    <!-- Main content -->
-    <section class="content">
+    <div class="bg-light lter b-b wrapper-md">
+        <h1 class="m-n font-thin h3"> {{ $Album->name or 'Новый Альбом' }}</h1>
+    </div>
+    <div class="wrapper-md">
         <div class="row">
-            <div class="col-xs-12">
-                <div class="box">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold">Изображения</div>
+                    <div class="panel-body">
 
-                    <div class="box-body">
 
                         <form class="col-md-4 col-xs-12" method="post" action="/dashboard/gallery/photo" enctype="multipart/form-data">
                             <div class="panel panel-default">
                                 <div class="panel-body">
 
-                                        <div class="form-group text-center">
+                                    <div class="form-group text-center">
 
-                                            <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                <div data-trigger="fileinput" class="fileinput-preview thumbnail"
-                                                     style="line-height: 150px;">
-                                                </div>
+                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                            <div data-trigger="fileinput" class="fileinput-preview thumbnail"
+                                                 style="line-height: 150px;">
+                                            </div>
 
-                                                <div>
+                                            <div>
                                                 <span class="btn btn-default btn-file"><span class="fileinput-new">Выбрать изображение</span><span
                                                             class="fileinput-exists">Изменить</span><input type="file"
                                                                                                            name="url"
                                                                                                            value=""></span>
-                                                </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
                                 <div class="panel-footer text-center">
                                     <input type="hidden" name="album" value="{{ $Album }}">
@@ -90,12 +87,21 @@
 
 
 
-                        <div class="col-xs-12">{!! $AlbumPhoto->render() !!}</div>
-                    </div><!-- /.box-body -->
-                </div><!-- /.box -->
 
-            </div><!-- /.col -->
-        </div><!-- /.row -->
-    </section><!-- /.content -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-12">{!! $AlbumPhoto->render() !!}</div>
+    </div>
 
 @endsection
+
+
+
+
+
+

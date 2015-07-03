@@ -13,12 +13,6 @@ use Image;
 
 class GalleryController extends Controller {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-
     public function getIndex()
     {
         $AlbumList = Album::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
@@ -44,7 +38,7 @@ class GalleryController extends Controller {
     {
         Album::withTrashed()->find($Album)->restore('cascade');
         Session::flash('good', 'Вы успешно востановили запись');
-        return redirect()->route('gallery');
+        return redirect()->route('dashboard.gallery.index');
     }
 
 
@@ -52,7 +46,7 @@ class GalleryController extends Controller {
     {
         Page::withTrashed()->find($Album)->forceDelete('cascade');
         Session::flash('good', 'Вы успешно окончательно удалили запись');
-        return redirect()->route('gallery');
+        return redirect()->route('dashboard.gallery.index');
     }
 
     //Добовление и изменение данных
@@ -70,7 +64,7 @@ class GalleryController extends Controller {
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->route('gallery');
+        return redirect()->route('dashboard.gallery.index');
     }
 
 
@@ -81,7 +75,7 @@ class GalleryController extends Controller {
         $Album = Album::find($Album);
         $Album->delete('cascade');
         Session::flash('good', 'Вы успешно удалили значения');
-        return redirect()->route('gallery');
+        return redirect()->route('dashboard.gallery.index');
     }
 
 

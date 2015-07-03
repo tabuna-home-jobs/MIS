@@ -2,21 +2,17 @@
 
 @section('content')
 
-    <section class="content-header">
-        <h1>
-           Отзыв:  {{ $Reviews->fio }}
-        </h1>
-    </section>
 
-    <!-- Main content -->
-    <section class="content">
+    <div class="bg-light lter b-b wrapper-md">
+        <h1 class="m-n font-thin h3">Отзыв:  {{ $Reviews->fio }}</h1>
+    </div>
+    <div class="wrapper-md">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold">Содержание</div>
+                    <div class="panel-body">
 
-        <div class='row'>
-            <div class='col-md-12'>
-
-                <div class='box'>
-
-                    <div class='box-body pad'>
 
 
                         <form action="/dashboard/reviews" method="post">
@@ -35,7 +31,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="status"  value="1"  @if($Reviews->publish) checked @endif >
-                                   Опубликован
+                                    Опубликован
                                 </label>
                             </div>
                             <div class="radio">
@@ -45,16 +41,19 @@
                                 </label>
                             </div>
 
-                                <input type="hidden" name="id" value="{{ $Reviews->id }}">
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <button type="submit" class="btn btn-default">Отправить</button>
+                            <input type="hidden" name="id" value="{{ $Reviews->id }}">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="btn btn-default">Отправить</button>
                         </form>
+
+
 
                     </div>
                 </div>
-            </div><!-- /.col-->
-        </div><!-- ./row -->
+            </div>
 
-    </section><!-- /.content -->
+        </div>
+    </div>
 
 @endsection
+

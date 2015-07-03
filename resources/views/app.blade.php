@@ -10,9 +10,29 @@
     <link rel="stylesheet" href="/dash/bootstrap/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="/dash/css/font.css" type="text/css" />
     <link rel="stylesheet" href="/dash/css/app.css" type="text/css" />
+    <meta name="token" content="{{ csrf_token() }}" >
     <link href="{{ asset('/dash/bootstrap/css/jasny-bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('/dash/bootstrap/css/custom.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/dash/dist/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <link href="{{asset('/menu/style.css')}}" rel="stylesheet">
+
+    <script src="/dash/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var menus = {
+            "oneThemeLocationNoMenus" : "",
+            "moveUp" : "Вверх",
+            "moveDown" : "Вних",
+            "moveToTop" : "В начало",
+            "moveUnder" : "До %s",
+            "moveOutFrom" : "Под  %s",
+            "under" : "После %s",
+            "outFrom" : "За from %s",
+            "menuFocus" : "%1$s. элемент меню %2$d из %3$d.",
+            "subMenuFocus" : "%1$s. Меню суб-элемента %2$d из %3$s."
+        };
+    </script>
 
 
 </head>
@@ -30,7 +50,7 @@
                 <i class="glyphicon glyphicon-align-justify"></i>
             </button>
             <!-- brand -->
-            <a href="#/" class="navbar-brand text-lt">
+            <a href="/dashboard/" class="navbar-brand text-lt">
                 <i class="fa fa-hospital-o"></i>
             </a>
             <!-- / brand -->
@@ -231,69 +251,6 @@
 
 
 
-                        <li>
-                            <a href="mail.html">
-                                <b class="badge bg-info pull-right">9</b>
-                                <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
-                                <span class="font-bold">Обратная связь</span>
-                            </a>
-                        </li>
-                        <li class="line dk"></li>
-
-                        <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                            <span>Components</span>
-                        </li>
-                        <li>
-                            <a href class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
-                                <b class="badge bg-info pull-right">3</b>
-                                <i class="glyphicon glyphicon-th"></i>
-                                <span>Layout</span>
-                            </a>
-                            <ul class="nav nav-sub dk">
-                                <li class="nav-sub-header">
-                                    <a href>
-                                        <span>Layout</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="layout_app.html">
-                                        <span>Application</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="layout_fullwidth.html">
-                                        <span>Full width</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="layout_boxed.html">
-                                        <span>Boxed layout</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-
-                        <li class="{{Active::route('dashboard.special.*')}}">
-                            <a href="{{URL::route('dashboard.special.index')}}">
-                                <i class="fa fa-user-md"></i>
-                                <span>Врачи</span>
-                            </a>
-                        </li>
-
-
-                        <li class="{{Active::route('dashboard.filemanager.*')}}">
-                            <a href="{{URL::route('dashboard.filemanager.index')}}">
-                                <i class="glyphicon glyphicon-folder-open"></i>
-                                <span>Файлы</span>
-                            </a>
-                        </li>
-
-
 
                         <li class="{{Active::route(['dashboard.page.*','dashboard.news.*'])}}">
                             <a href class="auto">
@@ -328,6 +285,158 @@
 
                             </ul>
                         </li>
+
+
+                        <li class="{{Active::route('dashboard.special.*')}}">
+                            <a href="{{URL::route('dashboard.special.index')}}">
+                                <i class="glyphicon glyphicon-align-justify"></i>
+                                <span>Меню</span>
+                            </a>
+                        </li>
+
+
+                        <li class="{{Active::route('dashboard.feedback.*')}}">
+                            <a href="{{URL::route('dashboard.feedback.index')}}">
+                                <b class="badge bg-info pull-right">9</b>
+                                <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
+                                <span class="font-bold">Почта</span>
+                            </a>
+                        </li>
+                        <li class="line dk"></li>
+
+                        <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                            <span>Компоненты</span>
+                        </li>
+
+
+
+
+
+
+                        <li class="{{Active::route('dashboard.filemanager.*')}}">
+                            <a href="{{URL::route('dashboard.filemanager.index')}}">
+                                <i class="glyphicon glyphicon-folder-open"></i>
+                                <span>Файлы</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="{{Active::route('dashboard.reviews.*')}}">
+                            <a href="{{URL::route('dashboard.reviews.index')}}">
+                                <i class="fa fa-bullhorn"></i>
+                                <span>Отзывы</span>
+                            </a>
+                        </li>
+
+                        <li class="{{Active::route('dashboard.gallery.*')}}">
+                            <a href="{{URL::route('dashboard.gallery.index')}}">
+                                <i class="fa fa-picture-o"></i>
+                                <span>Галерея</span>
+                            </a>
+                        </li>
+
+
+                        <li class="{{Active::route('dashboard.special.*')}}">
+                            <a href="{{URL::route('dashboard.special.index')}}">
+                                <i class="fa fa-question"></i>
+                                <span>Опросы</span>
+                            </a>
+                        </li>
+
+                        <li class="{{Active::route('dashboard.special.*')}}">
+                            <a href="{{URL::route('dashboard.special.index')}}">
+                                <i class="fa fa-life-ring"></i>
+                                <span>ЧАВО</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="{{Active::route(['dashboard.category.*','dashboard.goods.*','dashboard.comments.*'])}}">
+                            <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                                <i class="fa fa-ambulance icon"></i>
+                                <span>Услуги</span>
+                            </a>
+
+                            <ul class="nav nav-sub dk">
+
+                                <li class="{{Active::route('dashboard.category.*')}}">
+                                    <a href="{{URL::route('dashboard.category.index')}}">
+                                        <i class="fa fa-medkit icon"></i>
+                                        <span>Категории</span>
+                                    </a>
+                                </li>
+                                <li class="{{Active::route('dashboard.news.*')}}">
+                                    <a href="{{URL::route('dashboard.news.index')}}">
+                                        <i class="fa fa-stethoscope"></i>
+                                        <span>Услуги</span>
+                                    </a>
+                                </li>
+                                <li class="{{Active::route('dashboard.comments.*')}}">
+                                    <a href="{{URL::route('dashboard.comments.index')}}">
+                                        <i class="fa fa-comment"></i>
+                                        <span>Коментарии</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+
+
+                        <li class="{{Active::route(['dashboard.page.*','dashboard.news.*'])}}">
+                            <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                                <i class="glyphicon glyphicon-book icon"></i>
+                                <span>Энциклопедия</span>
+                            </a>
+
+                            <ul class="nav nav-sub dk">
+
+                                <li class="{{Active::route('dashboard.page.*')}}">
+                                    <a href="{{URL::route('dashboard.page.index')}}">
+                                        <i class="glyphicon glyphicon-bookmark"></i>
+                                        <span>Разделы</span>
+                                    </a>
+                                </li>
+                                <li class="{{Active::route('dashboard.news.*')}}">
+                                    <a href="{{URL::route('dashboard.news.index')}}">
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span>Статьи</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+                        <li class="{{Active::route('dashboard.special.*')}}">
+                            <a href="{{URL::route('dashboard.special.index')}}">
+                                <i class="fa fa-cog"></i>
+                                <span>Настройки</span>
+                            </a>
+                        </li>
+
+
 
 
 
@@ -396,7 +505,6 @@
 
 </div>
 
-<script src="/dash/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/dash/bootstrap/js/bootstrap.js"></script>
 <script src="/dash/js/ui-load.js"></script>
 <script src="/dash/js/ui-jp.config.js"></script>

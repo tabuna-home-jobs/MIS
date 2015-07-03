@@ -149,7 +149,8 @@ return [
         'App\Providers\SitesServiceProvider', // Мульти-сайт
         'Cartalyst\Sentry\SentryServiceProvider', // Права доступа
         'Intervention\Image\ImageServiceProvider',
-        'Watson\Active\ActiveServiceProvider'
+        'Watson\Active\ActiveServiceProvider',
+        Collective\Html\HtmlServiceProvider::class,
     ],
 
 	/*
@@ -201,7 +202,9 @@ return [
         'SMS' => 'App\Facades\IntisSMSFacades',
         'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
         'Image' => 'Intervention\Image\Facades\Image',
-        'Active' => 'Watson\Active\Facades\Active'
+        'Active' => 'Watson\Active\Facades\Active',
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];
