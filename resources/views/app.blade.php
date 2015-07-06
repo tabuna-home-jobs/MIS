@@ -6,6 +6,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
+
+
+    <link href="{{asset('/menu/menu.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="/dash/bootstrap/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="/dash/bootstrap/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="/dash/css/font.css" type="text/css" />
@@ -15,7 +18,6 @@
     <link href="{{ asset('/dash/bootstrap/css/custom.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/dash/dist/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" />
 
-    <link href="{{asset('/menu/style.css')}}" rel="stylesheet">
 
     <script src="/dash/bower_components/jquery/dist/jquery.min.js"></script>
 
@@ -112,9 +114,6 @@
                             </div>
                             <div class="list-group">
                                 <a href class="media list-group-item">
-                    <span class="pull-left thumb-sm">
-                      <img src="img/a0.jpg" alt="..." class="img-circle">
-                    </span>
                     <span class="media-body block m-b-none">
                       Use awesome animate.css<br>
                       <small class="text-muted">10 minutes ago</small>
@@ -185,11 +184,6 @@
                 <!-- user -->
                 <div class="clearfix hidden-xs text-center hide" id="aside-user">
                     <div class="dropdown wrapper">
-                        <a href="app.page.profile">
-                <span class="thumb-lg w-auto-folded avatar m-t-sm">
-                  <img src="img/a0.jpg" class="img-full" alt="...">
-                </span>
-                        </a>
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
                 <span class="clear">
                   <span class="block m-t-sm">
@@ -287,8 +281,8 @@
                         </li>
 
 
-                        <li class="{{Active::route('dashboard.special.*')}}">
-                            <a href="{{URL::route('dashboard.special.index')}}">
+                        <li class="{{Active::route('wmenuindex')}}">
+                            <a href="{{URL::route('wmenuindex')}}">
                                 <i class="glyphicon glyphicon-align-justify"></i>
                                 <span>Меню</span>
                             </a>
@@ -390,7 +384,7 @@
 
 
 
-                        <li class="{{Active::route(['dashboard.page.*','dashboard.news.*'])}}">
+                        <li class="{{Active::route(['dashboard.encyclopediaCategory.*','dashboard.encyclopedia.*'])}}">
                             <a href class="auto">
                   <span class="pull-right text-muted">
                     <i class="fa fa-fw fa-angle-right text"></i>
@@ -402,14 +396,14 @@
 
                             <ul class="nav nav-sub dk">
 
-                                <li class="{{Active::route('dashboard.page.*')}}">
-                                    <a href="{{URL::route('dashboard.page.index')}}">
+                                <li class="{{Active::route('dashboard.encyclopediaCategory.*')}}">
+                                    <a href="{{URL::route('dashboard.encyclopediaCategory.index')}}">
                                         <i class="glyphicon glyphicon-bookmark"></i>
                                         <span>Разделы</span>
                                     </a>
                                 </li>
-                                <li class="{{Active::route('dashboard.news.*')}}">
-                                    <a href="{{URL::route('dashboard.news.index')}}">
+                                <li class="{{Active::route('dashboard.encyclopedia.*')}}">
+                                    <a href="{{URL::route('dashboard.encyclopedia.index')}}">
                                         <i class="fa fa-file-text-o"></i>
                                         <span>Статьи</span>
                                     </a>

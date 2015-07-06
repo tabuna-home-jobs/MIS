@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\EncyCategory;
+use App\Models\TimeTable;
+use Cache;
+use App\Models\EncyPost;
 
 class EncyclopediaController extends Controller
 {
@@ -17,7 +21,16 @@ class EncyclopediaController extends Controller
 
     public function index()
     {
+        /*
+        $category = EncyCategory::lists('id','name')->all();
+        $specdoctor = Cache::remember('TimeTableSpecialist', 10, function() {
+            return TimeTable::distinct()->lists('specialization')->all();
+        });
+        */
 
+        $listPost = EncyPost::with('Category')->orderBy('id', 'desc')->paginate(15);
+
+        return view("dashboard/encyclopedia/post",['listPost' => $listPost ]);
     }
 
     /**
@@ -27,7 +40,9 @@ class EncyclopediaController extends Controller
      */
     public function create()
     {
-        //
+
+
+
     }
 
     /**

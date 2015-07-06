@@ -1923,7 +1923,7 @@ var wpNavMenu;
        
         eventOnClickMenuItemDelete: function(c) {
         	
-        	var r = confirm("Do you want to delete this item ?");
+        	var r = confirm("Вы действительно хотите удалить элемент ?");
 if (r == true) {
    var d = parseInt(c.id.replace("delete-", ""), 10);
                deleteitem(d);

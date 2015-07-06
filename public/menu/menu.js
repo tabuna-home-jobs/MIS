@@ -127,7 +127,7 @@ function getmenus() {
 
 				function deletemenu() {
 
-					var r = confirm("Do you want to delete this menu ?");
+					var r = confirm("Вы действительно хотите удалить это меню?");
 					if (r == true) {
 						$.ajax({
 							dataType : "json",
@@ -179,7 +179,7 @@ function getmenus() {
 							}
 						});
 					} else {
-						alert("Enter menu name!")
+						alert("Введите название меню!")
 						$("#menu-name").focus();
 						return false;
 					}

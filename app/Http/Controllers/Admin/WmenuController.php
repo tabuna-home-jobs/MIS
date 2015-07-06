@@ -15,10 +15,11 @@ class WmenuController extends Controller
     public function wmenuindex()
     {
         $menuitems = new MenuItem();
-        $menulist = Menu::lists("name", "id");
-        $menulist[0] = "Select menu";
+        //$menulist = Menu::lists("name", "id");
+        $menulist = Menu::where('ids',Session::get('website'))->lists("name", "id");
+        $menulist[0] = "Выберите меню";
         if (Input::has("action")) {
-            return View::make('wmenuindex')->with("menulist", $menulist);
+            return View::make('dashboard/menu/menu')->with("menulist", $menulist);
         } else {
             $menu = Menu::find(Input::get("menu"));
             $menus = $menuitems->getall(Input::get("menu"));
@@ -30,6 +31,7 @@ class WmenuController extends Controller
     {
         $menu = new Menu();
         $menu->name = Input::get("menuname");
+        $menu->ids = Session::get('website');
         $menu->save();
         return json_encode(array("resp" => $menu->id));
     }
@@ -47,9 +49,9 @@ class WmenuController extends Controller
         if (count($getall) == 0) {
             $menudelete = Menu::find(Input::get("id"));
             $menudelete->delete();
-            return json_encode(array("resp" => "you delete this item"));
+            return json_encode(array("resp" => "Вы удалили этот элемент"));
         } else {
-            return json_encode(array("resp" => "You have to delete all items first", "error" => 1));
+            return json_encode(array("resp" => "Вы должны сначала удалить все элементы", "error" => 1));
         }
     }
 

@@ -10,7 +10,7 @@ var elixir = require('laravel-elixir');
  | file for our application, as well as publishing vendor resources.
  |
  */
-
+/*
 elixir(function(mix) {
     mix.styles([
         "blue.css",
@@ -20,6 +20,9 @@ elixir(function(mix) {
         "prettyPhoto.css",
     ], 'public/css');
 });
+*/
 
 
-
+elixir(function(mix) {
+    mix.less("style.less");
+});

@@ -112,7 +112,7 @@ class EncyclopediaCategoryController extends Controller
      */
     public function destroy(EncyCategory $EncyCategory)
     {
-        $EncyCategory->forceDelete();
+        $EncyCategory->forceDelete('cascade');
         Session::flash('good', 'Вы успешно удалили запись');
         return redirect()->back();
     }
