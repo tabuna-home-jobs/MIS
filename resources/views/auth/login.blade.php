@@ -6,9 +6,6 @@
 
     <body class="login-page">
 <div class="login-box">
-    <div class="login-logo">
-        <b>Управление</b> МИС</a>
-    </div><!-- /.login-logo -->
     <div class="login-box-body">
 
         @if (count($errors) > 0)
@@ -22,7 +19,6 @@
             </div>
         @endif
 
-        <p class="login-box-msg">Войди и управляй!</p>
         <form action="{{ url('/auth/login') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -48,9 +44,7 @@
                 </div><!-- /.col -->
             </div>
         </form>
-
-
-        <p class="text-center"><a href="{{ url('/password/email') }}">Забыл пароль?</a></p>
+        
 
     </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->

@@ -6,9 +6,6 @@
 
 <body class="register-page">
 <div class="register-box">
-    <div class="register-logo">
-        <b>Управление</b> МИС</a>
-    </div>
 
     <div class="register-box-body">
 
@@ -23,7 +20,6 @@
             </div>
         @endif
 
-        <p class="login-box-msg">Добро пожаловать</p>
         <form action="{{ url('/auth/register') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

@@ -355,7 +355,6 @@
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
-      <primary-key name="news_pkey" columns="id"/>
     </table>
     <table name="news_id_seq" schema="public" catalog="octavian_mis" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>

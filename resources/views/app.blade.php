@@ -423,8 +423,8 @@
 
 
 
-                        <li class="{{Active::route('dashboard.special.*')}}">
-                            <a href="{{URL::route('dashboard.special.index')}}">
+                        <li class="{{Active::route('dashboard.options.*')}}">
+                            <a href="{{URL::route('dashboard.options.index')}}">
                                 <i class="fa fa-cog"></i>
                                 <span>Настройки</span>
                             </a>

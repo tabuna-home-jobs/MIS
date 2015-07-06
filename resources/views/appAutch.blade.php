@@ -1,46 +1,119 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Панель управления| МИС</title>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <!-- Bootstrap 3.3.2 -->
-    <link href="{{ asset('/admin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- Font Awesome Icons -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <!-- Ionicons -->
-    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-    <!-- Theme style -->
-    <link href="{{ asset('/admin/dist/css/AdminLTE.min.css') }}"  rel="stylesheet" type="text/css" />
-    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-          page. However, you can choose any other skin. Make sure you
-          apply the skin class to the body tag so the changes take effect.
-    -->
-    <link href="{{ asset('/admin/dist/css/skins/skin-blue.min.css') }}" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <title>Медицинская информационная система</title>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+
+
+    <link href="{{asset('/menu/menu.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="/dash/bootstrap/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/dash/bootstrap/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/dash/css/font.css" type="text/css" />
+    <link rel="stylesheet" href="/dash/css/app.css" type="text/css" />
+    <meta name="token" content="{{ csrf_token() }}" >
+    <link href="{{ asset('/dash/bootstrap/css/jasny-bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/dash/bootstrap/css/custom.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/dash/dist/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" />
+
+
+    <script src="/dash/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var menus = {
+            "oneThemeLocationNoMenus" : "",
+            "moveUp" : "Вверх",
+            "moveDown" : "Вних",
+            "moveToTop" : "В начало",
+            "moveUnder" : "До %s",
+            "moveOutFrom" : "Под  %s",
+            "under" : "После %s",
+            "outFrom" : "За from %s",
+            "menuFocus" : "%1$s. элемент меню %2$d из %3$d.",
+            "subMenuFocus" : "%1$s. Меню суб-элемента %2$d из %3$s."
+        };
+    </script>
+
+
 </head>
+<body>
+<div class="app app-header-fixed  ">
 
-@yield('content')
 
-<!-- jQuery 2.1.3 -->
-<script src="{{ asset('/admin/plugins/jQuery/jQuery-2.1.3.min.js')}}"></script>
-<!-- Bootstrap 3.3.2 JS -->
-<script src="{{asset('/admin/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('/admin/dist/js/app.min.js')}}" type="text/javascript"></script>
+    <div class="container w-xxl w-auto-xs" ng-controller="SignupFormController" ng-init="app.settings.container = false;">
+        <a href class="navbar-brand block m-t">МИС</a>
+        <div class="m-b-lg">
+            <div class="wrapper text-center">
+                <strong>Для входи введите необходимые данные</strong>
+            </div>
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-      Both of these plugins are recommended to enhance the
-      user experience -->
+
+
+
+        @if (Session::has('good'))
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h4>	<i class="icon fa fa-check"></i> Успех!</h4>
+                    {{Session::get('good')}}
+                </div>
+            @elseif(Session::has('bad'))
+                <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-ban"></i> Что то пошло не так!</h4>
+                    {{Session::get('bad')}}
+                </div>
+            @endif
+
+
+            @if (count($errors) > 0)
+                <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Ошибка!</strong> Пожалуйста проверте вводимые данные.<br><br>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+
+
+            @yield('content')
+
+
+        </div>
+        <div class="text-center" ng-include="'tpl/blocks/page_footer.html'">
+            <p>
+                <small class="text-muted">Сайт создан в студии Октавиан<br>&copy; 2015</small>
+            </p>
+        </div>
+    </div>
+
+<script src="/dash/bootstrap/js/bootstrap.js"></script>
+<script src="/dash/js/ui-load.js"></script>
+<script src="/dash/js/ui-jp.config.js"></script>
+<script src="/dash/js/ui-jp.js"></script>
+<script src="/dash/js/ui-nav.js"></script>
+<script src="/dash/js/ui-toggle.js"></script>
+<script src="{{asset('/dash/bootstrap/js/custom.js')}}" type="text/javascript"></script>
+<script src="{{asset('/dash/plugins/tinymce/tinymce.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('/dash/bootstrap/js/jasny-bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('/dash/dist/js/moment-with-locales.js')}}" type="text/javascript"></script>
+<script src="{{asset('/dash/dist/js/ru-picker.js')}}" type="text/javascript"></script>
+<script src="{{asset('/dash/dist/js/bootstrap-datetimepicker.min.js')}}" type="text/javascript"></script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

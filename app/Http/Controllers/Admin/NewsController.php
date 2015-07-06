@@ -11,7 +11,8 @@ use Request;
 use Session;
 use Validator;
 use App\Http\Requests\NewsRequest;
-
+use App\Services\VK;
+use App\Models\Options;
 
 class NewsController extends Controller
 {
@@ -59,6 +60,32 @@ class NewsController extends Controller
         }
 
         $news->save();
+
+
+
+
+        $vkToken = Options::select('value')->whereRaw('ids = ? and module=? ',[Session::get('website'), 'vk-token'])->first();
+        $vkGroup = Options::select('value')->whereRaw('ids = ? and module=? ',[Session::get('website'), 'vk-group'])->first();
+
+        if(!is_null($vkGroup) && !is_null($vkToken) && $request->social)
+        {
+            $tagArraySend = explode(",", $request->tag);  // Делаем теги
+            $ImageSend =  public_path($news->avatar);
+
+            $vkAPI = new VK(['access_token' => $vkToken->value]);
+            $vkAPI->postToPublic(
+                $vkGroup->value, //Группа
+                $request->descript, //Текст
+                $ImageSend, // Изображение
+                $tagArraySend); // Теги
+        }
+
+
+
+
+
+
+
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');

@@ -25,7 +25,7 @@ class AlbumRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'sometimes|required',
             'id' => 'sometimes|required',
         ];
     }

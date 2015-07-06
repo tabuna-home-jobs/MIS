@@ -25,6 +25,7 @@
                     <div class="panel-body">
 
 
+
                         <div class="form-group">
                             <label>Заголовок</label>
                             <input class="form-control" type="text" maxlength="255" required name="title" >
@@ -71,6 +72,21 @@
 
                             <textarea class="form-control" rows="7"  maxlength="255" required name="descript"></textarea>
                         </div>
+
+
+
+                        <div class="form-group">
+                            <label class="col-sm-6 control-label">Социальные сети</label>
+                            <div class="col-sm-6">
+                                <label class="i-switch bg-info m-t-xs m-r">
+                                    <input value="true" name="social" type="checkbox" checked>
+                                    <i></i>
+                                </label>
+                            </div>
+                        </div>
+
+
+
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <button type="submit" class="btn btn-primary">Отправить</button>
 

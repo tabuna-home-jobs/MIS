@@ -51,8 +51,8 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard'], function()
 
 
 //Группа админ
-//  'middleware' => ['auth', 'sentry']
-Route::group(['namespace' => 'Admin', 'prefix' => 'dashboard'], function ()
+//
+Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefix' => 'dashboard'], function ()
 {
     Route::resource('user', 'UserController');
     Route::resource('groups', 'GroupsController');
@@ -64,6 +64,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'dashboard'], function ()
     Route::resource('filemanager', 'FilemanagerController');
     Route::resource('', 'AdminController');
     Route::resource('special', 'SpecialistyController');
+    Route::resource('options', 'OptionsController');
+
 
 
     Route::resource('feedback', 'FeedbackController');
