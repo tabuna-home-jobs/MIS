@@ -6,9 +6,7 @@
 
     <body class="login-page">
     <div class="login-box">
-        <div class="login-logo">
-            <b>Управление</b> МИС</a>
-        </div><!-- /.login-logo -->
+
         <div class="login-box-body">
 
 

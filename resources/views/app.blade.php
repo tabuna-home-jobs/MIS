@@ -340,8 +340,8 @@
 
                         <li class="{{Active::route('dashboard.special.*')}}">
                             <a href="{{URL::route('dashboard.special.index')}}">
-                                <i class="fa fa-life-ring"></i>
-                                <span>ЧАВО</span>
+                                <i class="fa fa-user-md"></i>
+                                <span>Специалисты</span>
                             </a>
                         </li>
 

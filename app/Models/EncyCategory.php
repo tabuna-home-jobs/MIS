@@ -23,13 +23,19 @@ class EncyCategory extends Model {
 
     public function subCategory()
     {
-        return $this->hasMany('App\Models\EncyCategory');
+        return $this->hasMany('App\Models\EncyCategory','encycategory_id');
     }
 
     public function mainCategory()
     {
         return $this->belongsTo('App\Models\EncyCategory');
     }
+
+    public function Post()
+    {
+        return $this->hasMany('App\Models\EncyPost','encycategory_id');
+    }
+
 
 
 }

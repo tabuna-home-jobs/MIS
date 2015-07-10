@@ -51,7 +51,7 @@
 
                             <p><a href="#">@Rotography</a> Центр психологии и развития личности «Карта Успеха» проводит
                                 ряд мероприятий, посвященный активным тренингам по славянской системе «Разбуди свой
-                                мозг».</a>
+                                мозг».
                                 <span>Час назад</span>
                             </p>
                         </div>
@@ -86,7 +86,7 @@
     </p>
     <div class="container">
         <div class="row">
-            <div class="col-md-2"><a href="#."><img src="/site1.ru/images/footer-logo.png" alt="" title="Medicom Logo"></a></div>
+            <div class="col-md-2"><a href="/"><img src="/site1.ru/images/footer-logo.png" alt="" title="Medicom Logo"></a></div>
             <div class="col-md-10">
                 <p class="footer-bottom-text">Есть вещи, которые нельзя купить. Это наши главные жизненные ценности:
                     профессионализм, качество, гуманность, сплоченность.
@@ -97,7 +97,7 @@
         </div>
     </div>
 </footer>
-</div><!--end #wrapper-->
+</div>
 
 
 

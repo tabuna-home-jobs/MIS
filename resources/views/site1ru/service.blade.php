@@ -32,18 +32,9 @@
                     </div>
 
                     <div class="clearfix"></div>
-                    {!! $Goods->render(); !!}
+                    {!! $Goods->render() !!}
                 </div>
                 <aside class="col-md-4">
-                    <div class="sidebar-widget">
-                        <div class="search clearfix">
-                            <form action="#." method="get">
-                                <input type="text" placeholder="Поиск...">
-                                <button class="search-icon" type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-
 
                     <div class="sidebar-widget clearfix">
                         <h2 class="bordered light">Категории</h2>
@@ -56,29 +47,6 @@
 
                         </ul>
                     </div>
-
-
-                    <div class="sidebar-widget clearfix">
-                        <h2 class="bordered light">всего пара <span>вопросов</span></h2>
-                        <div class="poll">
-                            <form>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div>
-                                <span>Качество</span>
-                                <div class="clearfix"></div>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div>
-                                <span>Цена</span>
-                                <div class="clearfix"></div>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div>
-                                <span>Удобство</span>
-                                <div class="clearfix"></div>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div>
-                                <span>Профессианализм</span>
-                                <div class="clearfix"></div>
-                                <input type="submit" value="Голосовать" class="btn btn-default btn-rounded">
-                            </form>
-                        </div>
-                    </div>
-
 
 
 

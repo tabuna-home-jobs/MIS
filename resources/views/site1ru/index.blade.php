@@ -26,28 +26,28 @@
 
             <div class="creative-sec-thumb two">
                 <figure>
-                <span class="overlay"><a href="#test"><i class="fa fa-eye"></i></a></span>
+                <span class="overlay"><a href="/gallery"><i class="fa fa-eye"></i></a></span>
                 <img src="/site1.ru/images/creative-sec-img2.jpg" width="266" class="img-circle img-thumbnail img-responsive" alt="" title="">
-                    <figcaption>О центре</figcaption>
+                    <figcaption>Галерея</figcaption>
                 </figure>
             </div>
 
 
             <div class="creative-sec-thumb three">
                 <figure>
-                    <span class="overlay"><a href="medical-department.html"><i class="fa fa-eye"></i></a></span>
+                    <span class="overlay"><a href="/reviews"><i class="fa fa-eye"></i></a></span>
                     <img width="162" title="" alt="" class="img-circle img-thumbnail img-responsive"
                          src="/site1.ru/images/creative-sec-img3.jpg">
-                    <figcaption>Primery Health Care</figcaption>
+                    <figcaption>Отзывы</figcaption>
                 </figure>
             </div>
 
 
             <div class="creative-sec-thumb four">
                 <figure>
-                <span class="overlay"><a href="#test"><i class="fa fa-eye"></i></a></span>
+                <span class="overlay"><a href="/team"><i class="fa fa-eye"></i></a></span>
                 <img src="/site1.ru/images/creative-sec-img4.jpg" width="305" class="img-circle img-thumbnail img-responsive" alt="" title="">
-                    <figcaption>О центре</figcaption>
+                    <figcaption>Специалисты</figcaption>
                 </figure>
             </div>
         </div>
@@ -443,7 +443,9 @@
                                 <h4 class="blog2-title"><a href="/blog/{{$value['id']}}">{{$value['name']}}</a></h4>
 
                                 <p class="post-date">{{$value['created_at']}}</p>
-                                {{ substr(strip_tags($value['content']), 0, 150)  }} ...</p>
+                               <p>
+                                   {{str_limit((strip_tags($value['content'])), $limit = 130, $end = '...')}}
+                               </p>
                                 <p class="text-right"><a href="/blog/{{$value['id']}}">Читать дальше</a></p>
                             </div>
                             </article>

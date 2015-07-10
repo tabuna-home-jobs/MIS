@@ -97,7 +97,7 @@ class EncyclopediaCategoryController extends Controller
                 "tag" => $request->tag,
                 "descript" => $request->descript,
                 "encycategory_id" => $request->category,
-                "text" => $request->category,
+                "text" => $request->content,
             ])->save();
 
         Session::flash('good', 'Вы успешно удалили запись');

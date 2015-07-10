@@ -43,3 +43,7 @@ html {
 .bootstrap-tagsinput, .chosen-container{
     width: 100% !important;
 }
+
+#encyPost .tab-pane  iframe{
+    min-height: 850px!important;
+}

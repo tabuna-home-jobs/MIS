@@ -13,7 +13,7 @@
                     <div class="panel-heading font-bold">Содержание</div>
                     <div class="panel-body">
 
-                                    <textarea class="textarea textareaedit" name="content" rows="30">{{$EncyCategory->descript}}
+                                    <textarea class="textarea textareaedit" name="content" rows="30">{{$EncyCategory->text}}
                                     </textarea>
 
                     </div>

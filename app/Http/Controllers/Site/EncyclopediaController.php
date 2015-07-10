@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\EncyCategory;
+use App\Models\EncyPost;
+use DB;
 
 class EncyclopediaController extends Controller
 {
@@ -16,7 +19,20 @@ class EncyclopediaController extends Controller
      */
     public function index($sitename,$sitedomen)
     {
-        return view( $sitename.$sitedomen.'/encyclopedia');
+        $LastNews = EncyPost::limit(6)->get();
+        $MainElementMenu = EncyCategory::where('encycategory_id','0')->select('id','name')->get();
+
+
+
+        //Алфавитный указатель
+        $Index = DB::table('encypost')
+            ->selectRaw('left(name,1) as name')
+            ->distinct()
+            ->get();
+        sort($Index);
+
+
+        return view( $sitename.$sitedomen.'/encyclopedia',['MainElementMenu' => $MainElementMenu, 'LastNews' => $LastNews,'Index' => $Index]);
     }
 
     /**
@@ -45,9 +61,23 @@ class EncyclopediaController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show($sitename,$sitedomen,$model)
     {
-        //
+        $MainElementMenu = EncyCategory::where('encycategory_id','0')->select('id','name')->get();
+
+
+        //Алфавитный указатель
+        $Index = DB::table('encypost')
+            ->selectRaw('left(name,1) as name')
+            ->distinct()
+            ->get();
+        sort($Index);
+
+        return view( $sitename.$sitedomen.'/encyclopediaCategory',[
+            'MainElementMenu' => $MainElementMenu,
+            'Category' => $model,
+            'Index' => $Index
+        ]);
     }
 
     /**

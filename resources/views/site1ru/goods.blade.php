@@ -1,5 +1,17 @@
 @extends('site1ru/header')
 
+
+
+@section('title', $Goods->title)
+@section('description', $Goods->descript)
+@section('keywords', $Goods->tag)
+@section('avatar', $Goods->avatar)
+
+
+
+
+
+
 @section('content')
 
     <div class="sub-page-content">
@@ -98,7 +110,7 @@
 
                         </ol>
 
-                        {!! $Comments->render(); !!}
+                        {!! $Comments->render() !!}
 
                         <form class="row testimonials2" action="/service" method="post">
                                 <input type="text" name="fio" max="255" required placeholder="Имя">
@@ -135,33 +147,6 @@
                             @endforeach
 
                         </ul>
-                    </div>
-
-
-                    <div class="sidebar-widget clearfix">
-                        <h2 class="bordered light">всего пара <span>вопросов</span></h2>
-
-                        <div class="poll">
-                            <form>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div>
-                                <span>Качество</span>
-
-                                <div class="clearfix"></div>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div>
-                                <span>Цена</span>
-
-                                <div class="clearfix"></div>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div>
-                                <span>Удобство</span>
-
-                                <div class="clearfix"></div>
-                                <div class="radio"><span class="checked"><input type="radio"></span></div>
-                                <span>Профессианализм</span>
-
-                                <div class="clearfix"></div>
-                                <input type="submit" value="Голосовать" class="btn btn-default btn-rounded">
-                            </form>
-                        </div>
                     </div>
 
 

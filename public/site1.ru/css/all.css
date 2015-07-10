@@ -11035,4 +11035,8 @@ div.light_rounded .pp_top .pp_middle, div.light_rounded .pp_content_container .p
 }
 .ppt{ display:none !important;}
 
+.nav-tabs > li > a{
+  border-radius: inherit;
+}
+
 /*# sourceMappingURL=all.css.map */

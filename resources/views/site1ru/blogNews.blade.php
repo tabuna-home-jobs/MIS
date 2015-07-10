@@ -1,5 +1,15 @@
 @extends('site1ru/header')
 
+
+
+
+@section('title', $New['title'])
+@section('description', $New['descript'])
+@section('keywords', $New['tag'])
+@section('avatar', $New['avatar'])
+
+
+
 @section('content')
 
 

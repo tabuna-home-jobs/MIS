@@ -2,11 +2,25 @@
 <html>
 
 <head>
-    <title>Здоровье Нации</title>
+    <title>Здоровье Нации - @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="csrf-token" content="{{ csrf_token() }}" >
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300&subset=latin,cyrillic'
           rel='stylesheet' type='text/css'>
+
+
+
+
+    <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
+    <meta property="og:title" content="@yield('title')">
+    <meta property="og:description" content="@yield('description')">
+    <meta property="og:image" content="@yield('avatar')">
+    <meta name="twitter:title" content="@yield('title')">
+    <meta name="twitter:description" content="@yield('description')"/>
+    <meta name="twitter:image:src" content="@yield('avatar')"/>
+
+
 
     <!--theme colour-->
     <link rel="stylesheet" id="color" href="/site1.ru/css/all.css">
@@ -60,11 +74,11 @@
 
                         <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
                         <li><a href="#">Личный кабинет</a></li>
-                        <li class="{{Active::route('encyclopedia.*')}}"><a href="/encyclopedia">Э</a></li>
+                        <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li>
                         <li class="{{Active::route('service.*')}}"><a href="/service">Услуги</a></li>
-                        <li class="{{Active::route('gallery.*')}}"><a href="/gallery">Галерея</a></li>
-                        <li class="{{Active::route('reviews.*')}}"><a href="/reviews">Отзывы</a></li>
-                        <li class="{{Active::route('team.*')}}"><a href="/team">Специалисты</a></li>
+                        <!--  <li class="{{Active::route('gallery.*')}}"><a href="/gallery">Галерея</a></li> -->
+                        <!--  <li class="{{Active::route('reviews.*')}}"><a href="/reviews">Отзывы</a></li> -->
+                       <!-- <li class="{{Active::route('team.*')}}"><a href="/team">Специалисты</a></li> -->
                         <li class="{{Active::route('feedback.*')}}"><a href="/feedback">Контакты</a></li>
 
                     </ul>
