@@ -27,6 +27,7 @@ Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], funct
     Route::resource('/medencyclopedia', 'EncyclopediaController');
     Route::resource('/encypost', 'EncyPostController');
 
+    Route::resource('/answers', 'AnswersController');
 
     Route::resource('/reviews', 'ReviewsController');
     Route::resource('/service', 'ServiceController');

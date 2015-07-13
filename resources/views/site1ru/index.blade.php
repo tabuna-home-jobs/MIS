@@ -355,7 +355,7 @@
                     <h3>Услуги</h3>
 
                     <p>Текст про наши услуги, Текст про наши услуги , Текст про наши услуги, Текст про наши услуги</p>
-                    <a class="btn-rounded btn-bordered" href="#.">Посмотреть</a>
+                    <a class="btn-rounded btn-bordered" href="/service">Посмотреть</a>
                 </div>
             </div>
             <div class="col-md-4">

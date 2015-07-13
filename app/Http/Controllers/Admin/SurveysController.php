@@ -9,6 +9,7 @@ use App\Models\Surveys;
 use Redirect;
 use Request;
 use Session;
+use App\Models\Answers;
 
 class SurveysController extends Controller
 {
@@ -54,6 +55,19 @@ class SurveysController extends Controller
     }
 
 
+    public function postUpdate()
+    {
+
+        $newQuest = Question::find(Request::get('id'));
+        $newQuest->fill(Request::all());
+        $newQuest->answer = serialize(Request::get('fieldsAttr'));
+        $newQuest->save();
+        Session::flash('good', 'Вы успешно создали вопрос');
+        return redirect()->back();
+
+    }
+
+
 
     public function postAdd(SurveysRequest $request)
     {
@@ -83,6 +97,29 @@ class SurveysController extends Controller
         return redirect()->back();
     }
 
+
+
+
+    public function getShowstatquest($id)
+    {
+        $quest = Question::find($id);
+        $Answers = Answers::where('surveys_id', $quest->surveys_id)->get();
+
+        //Общая коллекция
+        $collection = collect();
+
+        foreach($Answers as $Answ)
+        {
+            $AnswerThis = unserialize($Answ->answer);
+            $collection->push($AnswerThis[$id]); // Добавляем элементы к коллекции
+        }
+
+        $collection = array_flatten($collection); //Делаем массив плоским
+        $collection = array_count_values($collection); // Узнаём количество повторяющихся элементов массива
+        arsort($collection,SORT_NUMERIC);
+        return view("dashboard/surveys/statsQuest", ['collection' => $collection, 'quest' => $quest]);
+
+    }
 
 
 }

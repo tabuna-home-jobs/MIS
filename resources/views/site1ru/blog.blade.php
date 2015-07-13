@@ -39,7 +39,7 @@
             </div>
 
 
-            <div class="row">{!! $News->render(); !!}</div>
+            <div class="row">{!! $News->render() !!}</div>
 
         </div>
     </div>

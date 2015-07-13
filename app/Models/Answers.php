@@ -17,7 +17,7 @@ class Answers extends Model {
      *
      * @var array
      */
-    protected $fillable = ['answer', 'question'];
+    protected $fillable = ['answer', 'surveys_id', 'fio', 'phone', 'email'];
 
 
 

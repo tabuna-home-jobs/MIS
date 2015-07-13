@@ -127,14 +127,6 @@
                 </div>
 
                 <aside class="col-md-4">
-                    <div class="sidebar-widget">
-                        <div class="search clearfix">
-                            <form action="#." method="get">
-                                <input type="text" placeholder="Поиск...">
-                                <button class="search-icon" type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
 
 
                     <div class="sidebar-widget clearfix">

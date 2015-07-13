@@ -52,14 +52,106 @@
 
                 </div>
                 <aside class="col-md-4">
-                    <div class="sidebar-widget">
-                        <div class="search clearfix">
-                            <form method="get" action="#.">
-                                <input type="text" placeholder="Поиск...">
-                                <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
+
+
+                    <div class="sidebar-widget light">
+                        <h2 class="bordered light">Опрос</h2>
+
+
+
+                        <div class="">
+                            <div class="stepwizard">
+                                <div class="stepwizard-row setup-panel">
+
+                                    <div class="stepwizard-step">
+                                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                                    </div>
+
+                                    @for($i= 2 ; $i == $getQuests->count(); $i++)
+
+                                    <div class="stepwizard-step">
+                                        <a href="#step-{{$i}}" type="button" class="btn btn-circle btn-default"  disabled="disabled">{{$i}}</a>
+                                    </div>
+
+                                    @endfor
+
+                                    <div class="stepwizard-step">
+                                        <a href="#step-{{$i}}" type="button" class="btn btn-circle btn-default" disabled="disabled">{{$i}}</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <form role="form" method="post" action="/answers">
+
+                                @foreach($getQuests as $key => $quest)
+
+                                <div class="row setup-content" id="step-{{$key+1}}">
+                                    <div class="col-xs-12">
+                                        <div class="col-md-12">
+                                            <h6 class="text-justify">{{$quest->quest}}</h6>
+
+
+                                            @if($quest->type == 'one')
+
+                                                @foreach(unserialize($quest->answer) as $answer)
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="answer[{{$quest->id}}][]" value="{{$answer}}" required>
+                                                        {{$answer}}
+                                                    </label>
+                                                </div>
+
+                                                @endforeach
+
+                                            @else
+
+                                                @foreach(unserialize($quest->answer) as $answer)
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="answer[{{$quest->id}}][]" value="{{$answer}}">
+                                                            {{$answer}}
+                                                        </label>
+                                                    </div>
+
+                                                @endforeach
+
+
+                                            @endif
+
+                                            <button class="btn btn-primary nextBtn pull-right  btn-sm" type="button">Далее</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @endforeach
+
+                                <div class="row setup-content" id="step-{{$i}}">
+                                    <div class="col-xs-12">
+                                        <div class="col-md-12">
+                                            <h6 class="text-justify">Контакты для обратной связи</h6>
+
+                                            <div class="form-group">
+                                                <input type="text" name="fio" placeholder="ФИО" required="" style="width: 100%">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" name="email" placeholder="E-mail" required="" style="width: 100%">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="phone" placeholder="Телефон" required="" style="width: 100%">
+                                            </div>
+                                            <input type="hidden" name="id" value="{{$getSurveys->id}}">
+                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                            <button class="btn btn-success btn-lg" type="submit">Отправить</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
+
+
+
 
 
                     <div class="sidebar-widget light">

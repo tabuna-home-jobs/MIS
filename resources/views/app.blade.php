@@ -291,8 +291,7 @@
 
                         <li class="{{Active::route('dashboard.feedback.*')}}">
                             <a href="{{URL::route('dashboard.feedback.index')}}">
-                                <b class="badge bg-info pull-right">9</b>
-                                <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
+                                <i class="glyphicon glyphicon-envelope icon"></i>
                                 <span class="font-bold">Почта</span>
                             </a>
                         </li>
@@ -301,10 +300,6 @@
                         <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
                             <span>Компоненты</span>
                         </li>
-
-
-
-
 
 
                         <li class="{{Active::route('dashboard.filemanager.*')}}">
@@ -331,8 +326,8 @@
                         </li>
 
 
-                        <li class="{{Active::route('dashboard.special.*')}}">
-                            <a href="{{URL::route('dashboard.special.index')}}">
+                        <li class="{{Active::route('*surveys*')}}">
+                            <a href="{{URL::route('surveys')}}">
                                 <i class="fa fa-question"></i>
                                 <span>Опросы</span>
                             </a>

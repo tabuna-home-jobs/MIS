@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Models\Sites;
+use App\Models\Surveys;
 
 class BlogController extends Controller {
 
@@ -49,11 +50,22 @@ class BlogController extends Controller {
 	{
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
         $getNews =$getSites->getNews()->find($id);
-
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(10)->get();
 
 
-        return view($sitename . $sitedomen . '/blogNews', ['New' => $getNews, 'LastNews' => $getLastNews]);
+
+
+        //Опросы
+        $getSurveys = $getSites->getSurveys()->get()->random();
+        $getQuests =  $getSurveys->quest()->get();
+
+
+        return view($sitename . $sitedomen . '/blogNews', [
+            'New' => $getNews,
+            'LastNews' => $getLastNews,
+            'getQuests' => $getQuests,
+            'getSurveys' => $getSurveys,
+        ]);
 	}
 
 	/**

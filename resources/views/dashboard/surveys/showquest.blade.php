@@ -5,124 +5,117 @@
 
 
 
-
-    <section class="content-header">
-        <h1>
-            {{ $quests->quest }}
-        </h1>
-    </section>
-
-
-
-
     <!-- Main content -->
     <section class="content">
+
+
+        <div class="wrapper-md">
+
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold"> {{ $quests->quest }}</div>
+                    <div class="panel-body">
+
 
         <div class='row'>
             <div class='col-md-12'>
 
                 <div class='box'>
-                    <div class='box-header'>
-                        <h3 class='box-title'>Чтобы добавить страницу заполните форму
-                            <small>Это очень просто!</small>
-                        </h3>
-                        <!-- tools box -->
-                        <div class="pull-right box-tools">
-                            <button class="btn btn-default btn-sm" data-widget='collapse' data-toggle="tooltip"
-                                    title="Свернуть"><i class="fa fa-minus"></i></button>
-                            <button class="btn btn-default btn-sm" data-widget='remove' data-toggle="tooltip"
-                                    title="Закрыть"><i class="fa fa-times"></i></button>
-                        </div>
-                        <!-- /. tools -->
-                    </div>
-                    <!-- /.box-header -->
+
                     <div class='box-body pad controls'>
 
 
-                        <form action="/dashboard/goods" method="post" class="row" enctype="multipart/form-data">
+                        <form action="/dashboard/surveys/update" method="post" class="row" enctype="multipart/form-data">
 
 
-                            <div id="GoodsAttr" class="text-center col-md-6">
+                            <div id="GoodsAttr" class="text-center col-md-4">
 
 
-                                <label>Атрибуты</label>
+                                <label>Варианты ответа</label>
+
 
                                 @if(isset($quests->answer))
                                     @forelse(unserialize($quests->answer) as $key => $attr)
 
-                                        @if($key % 2 == 0)
-                                            <div class="entry input-group ">
-                                                <div class="form-group">
-                                                    <div class="input-group">
-                                                        <div class="input-group-addon">
-                                                            <span class="glyphicon btn-remove glyphicon-minus"></span>
-                                                        </div>
-                                                        <input type="text" placeholder="Название" value="{{ $attr }}"
-                                                               name="fieldsAttr[]" pattern="^[а-яА-ЯёЁa-zA-Z0-9\s]+$"
-                                                               class="form-control">
+                                        <div class="entry input-group">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <span class="glyphicon btn-remove glyphicon-minus"></span>
                                                     </div>
-                                                    <!-- /.input group -->
-
-                                                </div>
-                                                @else
-
-                                                    <div class="form-group col-md-6">
-                                                        <input type="text" placeholder="Значение" value="{{ $attr }}"
-                                                               name="fieldsAttr[]" pattern="^[а-яА-ЯёЁa-zA-Z0-9\s]+$"
-                                                               class="form-control">
-                                                    </div>
+                                                    <input type="text" placeholder="Название" value="{{ $attr }}" name="fieldsAttr[]" pattern="^[а-яА-ЯёЁa-zA-Z0-9\s]+$" class="form-control">
+                                                </div><!-- /.input group -->
 
                                             </div>
-                                        @endif
+                                        </div>
+
 
                                     @empty
 
-                                        <div class="entry input-group ">
-                                            <div class="form-group ">
+                                        <div class="entry input-group">
+                                            <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-addon">
                                                         <span class="glyphicon glyphicon-plus btn-add"></span>
                                                     </div>
-                                                    <input class="form-control" name="fieldsAttr[]" type="text"
-                                                           placeholder="Название"/>
-                                                </div>
-                                                <!-- /.input group -->
+                                                    <input class="form-control" name="fieldsAttr[]" type="text" placeholder="Название" />
+                                                </div><!-- /.input group -->
 
                                             </div>
 
                                             <div class="form-group">
-                                                <input class="form-control" name="fieldsAttr[]" type="text"
-                                                       placeholder="Значение"/>
+                                                <input class="form-control" name="fieldsAttr[]" type="text" placeholder="Значение" />
                                             </div>
                                         </div>
 
                                     @endforelse
                                 @else
                                     <div class="entry input-group">
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-addon">
                                                     <span class="glyphicon glyphicon-plus btn-add"></span>
                                                 </div>
-                                                <input class="form-control" name="fieldsAttr[]" type="text"
-                                                       placeholder="Название"/>
-                                            </div>
-                                            <!-- /.input group -->
+                                                <input class="form-control" name="fieldsAttr[]" type="text" placeholder="Название" />
+                                            </div><!-- /.input group -->
 
                                         </div>
 
-                                        <div class="form-group col-md-6">
-                                            <input class="form-control" name="fieldsAttr[]" type="text"
-                                                   placeholder="Значение"/>
+                                        <div class="form-group">
+                                            <input class="form-control" name="fieldsAttr[]" type="text" placeholder="Значение" />
                                         </div>
                                     </div>
 
                                 @endif
                             </div>
-                    </div>
 
 
-                    <div class="col-md-6">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-8">
                         <div class="form-group">
                             <label>Вопрос</label>
                             <input type="text" class="form-control" name="quest" placeholder="Введите вопрос"
@@ -130,15 +123,14 @@
                         </div>
 
 
-                        <div class="col-md-4">
                             <div class="form-group">
                                 <label>Тип</label>
                                 <select class="form-control" name="type">
-                                    <option value="one">Один вариант</option>
-                                    <option value="more">Несколько вариантов</option>
+                                    <option value="one" @if($quests->type == 'one') selected @endif >Один вариант</option>
+                                    <option value="more" @if($quests->type == 'more') selected @endif>Несколько вариантов</option>
                                 </select>
                             </div>
-                        </div>
+
 
 
                         <input type="hidden" name="id" value="{{$quests->id}}">
@@ -153,6 +145,11 @@
         </div>
         <!-- /.col-->
         </div><!-- ./row -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section><!-- /.content -->
 

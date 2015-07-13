@@ -53,6 +53,13 @@ class Sites extends Model {
     }
 
 
+    public function getSurveys()
+    {
+        return $this->hasOne('App\Models\Surveys', 'ids');
+    }
+
+
+
     public function getAlbums()
     {
         return $this->hasOne('App\Models\Album', 'ids');
