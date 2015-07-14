@@ -65,27 +65,15 @@
                                         <td>{{ $survey->id }}</td>
                                         <td>{{ $survey->name }}</td>
                                         <td>
+                                            <a href="/dashboard/surveys/anserusers/{{ $survey->id }}"
+                                               class="btn btn-info"><i class="fa fa-info-circle"></i>
+                                            </a>
                                             <a href="/dashboard/surveys/show/{{ $survey->id }}"
                                                class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span>
                                             </a>
                                             <a href="/dashboard/surveys/destroy/{{ $survey->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
                                         </td>
                                     </tr>
-
-                                    @foreach($survey->quest()->get() as $key => $value)
-                                        <tr class="collapse" id="syrveys-{{$survey->id}}">
-                                            <td>{{$value->quest}}</td>
-                                            <td>{{$value->type}}</td>
-                                            <td>
-                                                <a href="/dashboard/surveys/add/{{ $survey->id }}"
-                                                   class="btn btn-primary"><span
-                                                            class="glyphicon glyphicon-eye-open"></span> </a>
-                                                <a href="/dashboard/surveys/destroy/{{ $survey->id }}"
-                                                   class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-
 
 
                                 @endforeach

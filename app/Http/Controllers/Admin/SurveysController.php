@@ -118,8 +118,23 @@ class SurveysController extends Controller
         $collection = array_count_values($collection); // Узнаём количество повторяющихся элементов массива
         arsort($collection,SORT_NUMERIC);
         return view("dashboard/surveys/statsQuest", ['collection' => $collection, 'quest' => $quest]);
-
     }
+
+
+    public function getAnserusers($id)
+    {
+        $Answers = Answers::where('surveys_id', $id)->paginate(15);
+        return view("dashboard/surveys/answerList", ['Answers' => $Answers]);
+    }
+
+
+    public function getAnsertquest($id)
+    {
+        $Answers = Answers::find($id);
+        $Quest = new Question;
+        return view("dashboard/surveys/answerUser", ['Answers' => $Answers, 'Quest' => $Quest]);
+    }
+
 
 
 }

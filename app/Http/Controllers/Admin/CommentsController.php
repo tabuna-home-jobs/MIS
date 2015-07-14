@@ -40,7 +40,7 @@ class CommentsController extends Controller {
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->route('comments');
+        return redirect()->route('dashboard.comments.index');
     }
 
 
@@ -48,7 +48,7 @@ class CommentsController extends Controller {
     {
         Comments::withTrashed()->find($Category)->restore();
         Session::flash('good', 'Вы успешно востановили запись');
-        return redirect()->route('comments');
+        return redirect()->route('dashboard.comments.index');
     }
 
     public function getTrash()
@@ -63,14 +63,14 @@ class CommentsController extends Controller {
         $Comments = Comments::find($Comments);
         $Comments->delete();
         Session::flash('good', 'Вы успешно удалили значения');
-        return redirect()->route('comments');
+        return redirect()->route('dashboard.comments.index');
     }
 
     public  function  getUnset($Comments = null)
     {
         Comments::withTrashed()->find($Comments)->forceDelete();
         Session::flash('good', 'Вы успешно окончательно удалили запись');
-        return redirect()->route('comments');
+        return redirect()->route('dashboard.comments.index');
     }
 
 

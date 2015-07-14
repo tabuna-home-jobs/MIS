@@ -7,6 +7,11 @@ use Request;
 use Session;
 use Validator;
 use App\Services\Ok;
+use App\Models\News;
+use App\Models\Goods;
+use App\Models\Comments;
+use App\Models\Feedback;
+
 
 class AdminController extends Controller {
 
@@ -31,8 +36,27 @@ class AdminController extends Controller {
             dd('Хуканул: ключ, токен и сессию -  заебись');
         }
 */
+
+        $goods = Goods::where('ids', '=', Session::get('website'))->count();
+        $news = News::where('ids', '=', Session::get('website'))->count();
         $pages = Page::where('ids', '=', Session::get('website'))->count();
-        return view("dashboard/home", ['Page' => $pages]);
+
+        $CommentsGood = Comments::whereRaw('ids = ? and publish = ?', [Session::get('website'), 'true'])->count();
+        $CommentsAll = Comments::where('ids', '=', Session::get('website'))->count();
+        $Comments = round($CommentsGood / $CommentsAll * 100);
+
+
+        $feedbacksGood = Feedback::whereRaw('ids = ? and read = ?', [Session::get('website'), 'true'])->count();
+        $feedbacksAll = Feedback::where('ids', '=', Session::get('website'))->count();
+        $feedbacks = round($feedbacksGood / $feedbacksAll * 100);
+
+        return view("dashboard/home", [
+            'Page' => $pages,
+            'News' => $news,
+            'Goods' => $goods,
+            'Comments' => $Comments,
+            'Feedbacks' => $feedbacks,
+        ]);
     }
 
 

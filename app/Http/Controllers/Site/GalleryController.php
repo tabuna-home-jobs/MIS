@@ -6,6 +6,7 @@ use App\Models\Album;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use App\Models\Sites;
+
 class GalleryController extends Controller {
 
 	/**

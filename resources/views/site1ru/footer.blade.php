@@ -6,18 +6,7 @@
                 <div class="footer-widget">
                     <h4><span>Иформация</span></h4>
                     <ul class="footer-nav list-unstyled clearfix">
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Лицензии</a></li>
-                        <li><a href="#."><i class="fa fa-long-arrow-right"></i>Документы</a></li>
+                        {!!Menu::getLI('2','footer', '<i class="fa fa-long-arrow-right"></i>')!!}
                     </ul>
                 </div>
             </div>
@@ -44,26 +33,11 @@
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="footer-widget">
-                    <h4><span>Мы в твиттере</span></h4>
-                    <div class="twitter-widget">
-                        <div class="tweet">
-                            <i class="fa fa-twitter"></i>
+                    <h4><span>Мы на Facebook</span></h4>
+                    <div class="newsletter clearfix">
 
-                            <p><a href="#">@Rotography</a> Центр психологии и развития личности «Карта Успеха» проводит
-                                ряд мероприятий, посвященный активным тренингам по славянской системе «Разбуди свой
-                                мозг».
-                                <span>Час назад</span>
-                            </p>
-                        </div>
+                        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>
                     </div>
-                    <div class="tweet">
-                        <i class="fa fa-twitter"></i>
-
-                        <p><a href="#">@Rotography</a> Тестовая запись
-                            <span>Час назад</span>
-                        </p>
-                    </div>
-
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
