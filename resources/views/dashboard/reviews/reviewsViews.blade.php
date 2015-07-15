@@ -28,23 +28,21 @@
                                 <textarea class="form-control" name="content" id="content">{{ $Reviews->content or '' }}</textarea>
                             </div>
 
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="status"  value="1"  @if($Reviews->publish) checked @endif >
-                                    Опубликован
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="status" value="0" @if(!$Reviews->publish) checked @endif>
-                                    Не опубликован
-                                </label>
-                            </div>
+
+
+
+
+
+
 
                             <input type="hidden" name="id" value="{{ $Reviews->id }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button type="submit" class="btn btn-default">Отправить</button>
                         </form>
+
+
+
+
 
 
 

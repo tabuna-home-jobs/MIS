@@ -9,9 +9,6 @@
 
 
 
-
-
-
     <div class="wrapper-md col-md-6">
 
         <div class="col-sm-12">
@@ -20,9 +17,11 @@
                 <div class="panel-body">
                     <div ui-jq="plot" ui-options="
                     [
+                    @if(is_array($collection))
                       @foreach ($collection as $key => $cout)
                                {'label':'{{$key}}','data':{{$cout}}},
                       @endforeach
+                    @endif
                     ],
                         {
                         series: { pie: { show: true, innerRadius: 0.5, stroke: { width: 0 },
@@ -66,12 +65,14 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($collection as $key => $cout)
-                                    <tr>
-                                        <td>{{ $key }}</td>
-                                        <td>{{ $cout }}</td>
-                                    </tr>
-                                @endforeach
+                                @if(is_array($collection))
+                                    @foreach ($collection as $key => $cout)
+                                        <tr>
+                                            <td>{{ $key }}</td>
+                                            <td>{{ $cout }}</td>
+                                        </tr>
+                                    @endforeach
+                                @endif
                                 </tbody>
                             </table>
                         </div>

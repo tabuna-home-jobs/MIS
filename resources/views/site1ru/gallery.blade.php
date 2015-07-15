@@ -26,7 +26,7 @@
                       <div class="gallery-thumb">
                       	<span class="overlay"></span>
                             <a href="{{$photo->url}}" data-rel="prettyPhoto" class="link-preety"></a>
-                       	<img src="{{$photo->url}}" alt="">
+                       	<img src="{{$photo->url}}" alt="" height="200px">
                         </div>
                           <p></p>
                       </article>

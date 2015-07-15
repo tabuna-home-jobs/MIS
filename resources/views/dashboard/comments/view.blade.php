@@ -44,18 +44,31 @@
                                 <input class="form-control" type="text" maxlength="255" required name="email" value="{{$Comments->email or ''}}">
                             </div>
 
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="status"  value="1"  @if($Comments->publish) checked @endif >
-                                    Опубликован
-                                </label>
+
+
+
+                            <div class="line line-dashed b-b line-lg pull-in"></div>
+                            <div class="form-group col-xs-12">
+                                <label class="col-sm-12 control-label text-center">Статус</label>
+                                <div class="col-sm-12">
+                                    <small style="font-size: 10px">Опубликован</small>
+                                    <label class="i-switch bg-primary m-t-xs m-r">
+                                        <input type="radio" name="status"  value="1"  @if($Comments->publish) checked @endif >
+                                        <i></i>
+                                    </label>
+                                    <label class="i-switch bg-warning m-t-xs m-r">
+                                        <input type="radio" name="status" value="0" @if(!$Comments->publish) checked @endif>
+                                        <i></i>
+                                    </label>
+                                    <small style="font-size: 10px">Не опубликован</small>
+                                </div>
                             </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="status" value="0" @if(!$Comments->publish) checked @endif>
-                                    Не опубликован
-                                </label>
-                            </div>
+
+
+
+
+
+
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <button type="submit" class="btn btn-primary">Отправить</button>
 

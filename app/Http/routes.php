@@ -26,9 +26,7 @@ Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], funct
 {
     Route::resource('/medencyclopedia', 'EncyclopediaController');
     Route::resource('/encypost', 'EncyPostController');
-
     Route::resource('/answers', 'AnswersController');
-
     Route::resource('/reviews', 'ReviewsController');
     Route::resource('/service', 'ServiceController');
     Route::resource('/gallery', 'GalleryController');
@@ -58,6 +56,8 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard'], function()
 //
 Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefix' => 'dashboard'], function ()
 {
+
+    Route::resource('questanswer', 'QuestAnswerController');
     Route::resource('user', 'UserController');
     Route::resource('groups', 'GroupsController');
     Route::resource('encyclopedia', 'EncyclopediaController');
@@ -69,11 +69,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefi
     Route::resource('', 'AdminController');
     Route::resource('special', 'SpecialistyController');
     Route::resource('options', 'OptionsController');
-
-
-
     Route::resource('feedback', 'FeedbackController');
-
     Route::controller('reviews', 'ReviewsController', [
         'getIndex' => 'dashboard.reviews.index',
         'getAdd' => 'dashboard.reviews.add',

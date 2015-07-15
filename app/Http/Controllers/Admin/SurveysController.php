@@ -115,8 +115,11 @@ class SurveysController extends Controller
         }
 
         $collection = array_flatten($collection); //Делаем массив плоским
-        $collection = array_count_values($collection); // Узнаём количество повторяющихся элементов массива
-        arsort($collection,SORT_NUMERIC);
+
+        if(is_array($collection)) {
+            $collection = array_count_values($collection); // Узнаём количество повторяющихся элементов массива
+            arsort($collection, SORT_NUMERIC);
+        }
         return view("dashboard/surveys/statsQuest", ['collection' => $collection, 'quest' => $quest]);
     }
 

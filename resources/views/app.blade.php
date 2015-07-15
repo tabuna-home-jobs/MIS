@@ -410,7 +410,12 @@
 
 
 
-
+                        <li class="{{Active::route('dashboard.questanswer.*')}}">
+                            <a href="{{URL::route('dashboard.questanswer.index')}}">
+                                <i class="fa fa-graduation-cap"></i>
+                                <span>Ответы</span>
+                            </a>
+                        </li>
 
 
 

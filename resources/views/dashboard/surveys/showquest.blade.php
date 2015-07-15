@@ -43,7 +43,7 @@
                                                     <div class="input-group-addon">
                                                         <span class="glyphicon btn-remove glyphicon-minus"></span>
                                                     </div>
-                                                    <input type="text" placeholder="Название" value="{{ $attr }}" name="fieldsAttr[]" pattern="^[а-яА-ЯёЁa-zA-Z0-9\s]+$" class="form-control">
+                                                    <input type="text" placeholder="Название" value="{{ $attr }}" name="fieldsAttr[]" required pattern="^[а-яА-ЯёЁa-zA-Z0-9\s]+$" class="form-control">
                                                 </div><!-- /.input group -->
 
                                             </div>
@@ -58,13 +58,13 @@
                                                     <div class="input-group-addon">
                                                         <span class="glyphicon glyphicon-plus btn-add"></span>
                                                     </div>
-                                                    <input class="form-control" name="fieldsAttr[]" type="text" placeholder="Название" />
+                                                    <input class="form-control" name="fieldsAttr[]" type="text" required placeholder="Название" />
                                                 </div><!-- /.input group -->
 
                                             </div>
 
                                             <div class="form-group">
-                                                <input class="form-control" name="fieldsAttr[]" type="text" placeholder="Значение" />
+                                                <input class="form-control" name="fieldsAttr[]" type="text" required placeholder="Значение" />
                                             </div>
                                         </div>
 
@@ -76,37 +76,18 @@
                                                 <div class="input-group-addon">
                                                     <span class="glyphicon glyphicon-plus btn-add"></span>
                                                 </div>
-                                                <input class="form-control" name="fieldsAttr[]" type="text" placeholder="Название" />
+                                                <input class="form-control" name="fieldsAttr[]" type="text" required placeholder="Название" />
                                             </div><!-- /.input group -->
 
                                         </div>
 
                                         <div class="form-group">
-                                            <input class="form-control" name="fieldsAttr[]" type="text" placeholder="Значение" />
+                                            <input class="form-control" name="fieldsAttr[]" type="text" required placeholder="Значение" />
                                         </div>
                                     </div>
 
                                 @endif
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
