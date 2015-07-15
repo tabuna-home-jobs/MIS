@@ -181,4 +181,31 @@
     </div><!--end sub-page-content-->
 
 
+
+
+
+    <div class="tri-sec-bg">
+        <div class="container">
+            <div class="tri-sec text-center">
+                <i class="feature-icon fa fa-plus-square"></i>
+                <h4>Услуги</h4>
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.<br><a href="/service">- Перейти</a></p>
+            </div>
+            <div class="tri-sec text-center">
+                <i class="feature-icon fa fa-thumbs-o-up"></i>
+                <h4>Отзывы</h4>
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.<br><a href="/reviews">- Перейти</a></p>
+            </div>
+            <div class="tri-sec text-center">
+                <i class="feature-icon fa fa-stethoscope"></i>
+                <h4>Записатсья на приём</h4>
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.<br><a href="/appointment">- Перейти</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
 @endsection

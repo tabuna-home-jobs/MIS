@@ -24,6 +24,7 @@ Route::controllers([
 
 Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], function()
 {
+    Route::resource('/questanswer', 'QuestAnswerController');
     Route::resource('/medencyclopedia', 'EncyclopediaController');
     Route::resource('/encypost', 'EncyPostController');
     Route::resource('/answers', 'AnswersController');

@@ -17,9 +17,9 @@
 
             <div class="creative-sec-thumb one">
                 <figure>
-                <span class="overlay"><a href="#test"><i class="fa fa-eye"></i></a></span>
+                <span class="overlay"><a href="/questanswer"><i class="fa fa-eye"></i></a></span>
                 <img src="/site1.ru/images/creative-sec-img1.jpg" width="154" class="img-circle img-thumbnail img-responsive" alt="" title="">
-                    <figcaption>О центре</figcaption>
+                    <figcaption>Вопрос - ответ</figcaption>
                 </figure>
             </div>
 
