@@ -16,7 +16,6 @@ class HomeController extends Controller {
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
-
         $getNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
 

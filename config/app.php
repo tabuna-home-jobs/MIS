@@ -151,6 +151,7 @@ return [
         'Intervention\Image\ImageServiceProvider',
         'Watson\Active\ActiveServiceProvider',
         Collective\Html\HtmlServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
     ],
 
 	/*

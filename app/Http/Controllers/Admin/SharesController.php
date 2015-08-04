@@ -16,6 +16,7 @@ use Validator;
 
 class SharesController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *

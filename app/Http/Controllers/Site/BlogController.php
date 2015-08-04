@@ -50,15 +50,21 @@ class BlogController extends Controller {
 	{
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
         $getNews =$getSites->getNews()->find($id);
-        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(10)->get();
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
 
 
 
 
         //Опросы
-        $getSurveys = $getSites->getSurveys()->get()->random();
-        $getQuests =  $getSurveys->quest()->get();
-
+		if($getSites->getSurveys()->first() != null) {
+			$getSurveys = $getSites->getSurveys()->get()->random();
+			$getQuests = $getSurveys->quest()->get();
+		}
+		else
+		{
+			$getQuests = null;
+			$getSurveys = null;
+		}
 
         return view($sitename . $sitedomen . '/blogNews', [
             'New' => $getNews,

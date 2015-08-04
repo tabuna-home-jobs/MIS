@@ -2,10 +2,8 @@
 
 namespace League\Flysystem;
 
-use BadMethodCallException;
 use InvalidArgumentException;
 use League\Flysystem\Plugin\PluggableTrait;
-use League\Flysystem\Plugin\PluginNotFoundException;
 
 /**
  * @method array getWithMetadata(string $path, array $metadata)
@@ -87,7 +85,7 @@ class Filesystem implements FilesystemInterface
     public function writeStream($path, $resource, array $config = [])
     {
         if (! is_resource($resource)) {
-            throw new InvalidArgumentException(__METHOD__.' expects argument #2 to be a valid resource.');
+            throw new InvalidArgumentException(__METHOD__ . ' expects argument #2 to be a valid resource.');
         }
 
         $path = Util::normalizePath($path);
@@ -120,7 +118,7 @@ class Filesystem implements FilesystemInterface
     public function putStream($path, $resource, array $config = [])
     {
         if (! is_resource($resource)) {
-            throw new InvalidArgumentException(__METHOD__.' expects argument #2 to be a valid resource.');
+            throw new InvalidArgumentException(__METHOD__ . ' expects argument #2 to be a valid resource.');
         }
 
         $path = Util::normalizePath($path);
@@ -171,7 +169,7 @@ class Filesystem implements FilesystemInterface
     public function updateStream($path, $resource, array $config = [])
     {
         if (! is_resource($resource)) {
-            throw new InvalidArgumentException(__METHOD__.' expects argument #2 to be a valid resource.');
+            throw new InvalidArgumentException(__METHOD__ . ' expects argument #2 to be a valid resource.');
         }
 
         $path = Util::normalizePath($path);
@@ -280,24 +278,33 @@ class Filesystem implements FilesystemInterface
     public function listContents($directory = '', $recursive = false)
     {
         $directory = Util::normalizePath($directory);
+
         $contents = $this->getAdapter()->listContents($directory, $recursive);
-        $mapper = function ($entry) use ($directory, $recursive) {
-            if (
-                strlen($entry['path']) === 0
-                || (! empty($directory) && strpos($entry['path'], $directory.'/') === false)
-                || ($recursive === false && Util::dirname($entry['path']) !== $directory)
-            ) {
+
+        $filter = function (array $entry) use ($directory, $recursive) {
+            if (empty($entry['path']) && $entry['path'] !== '0') {
                 return false;
             }
 
-            return  $entry + Util::pathinfo($entry['path']);
+            if ($recursive) {
+                return $directory === '' || strpos($entry['path'], $directory . '/') === 0;
+            }
+
+            return Util::dirname($entry['path']) === $directory;
         };
 
-        $listing = array_values(array_filter(array_map($mapper, $contents)));
+        $mapper = function (array $entry) {
+            return $entry + Util::pathinfo($entry['path']);
+        };
 
-        usort($listing, function ($a, $b) {
-            return strcasecmp($a['path'], $b['path']);
-        });
+        $listing = array_values(array_map($mapper, array_filter($contents, $filter)));
+
+        usort(
+            $listing,
+            function ($a, $b) {
+                return strcasecmp($a['path'], $b['path']);
+            }
+        );
 
         return $listing;
     }
@@ -440,29 +447,6 @@ class Filesystem implements FilesystemInterface
     {
         if ($this->has($path)) {
             throw new FileExistsException($path);
-        }
-    }
-
-    /**
-     * Plugins pass-through.
-     *
-     * @param string $method
-     * @param array  $arguments
-     *
-     * @throws BadMethodCallException
-     *
-     * @return mixed
-     */
-    public function __call($method, array $arguments)
-    {
-        try {
-            return $this->invokePlugin($method, $arguments, $this);
-        } catch (PluginNotFoundException $e) {
-            throw new BadMethodCallException(
-                'Call to undefined method '
-                .__CLASS__
-                .'::'.$method
-            );
         }
     }
 }

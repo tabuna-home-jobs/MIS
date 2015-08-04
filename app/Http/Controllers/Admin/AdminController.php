@@ -43,12 +43,21 @@ class AdminController extends Controller {
 
         $CommentsGood = Comments::whereRaw('ids = ? and publish = ?', [Session::get('website'), 'true'])->count();
         $CommentsAll = Comments::where('ids', '=', Session::get('website'))->count();
-        $Comments = round($CommentsGood / $CommentsAll * 100);
+
+        if($CommentsAll != 0)
+            $Comments = round($CommentsGood / $CommentsAll * 100);
+        else
+            $Comments = 100;
 
 
         $feedbacksGood = Feedback::whereRaw('ids = ? and read = ?', [Session::get('website'), 'true'])->count();
         $feedbacksAll = Feedback::where('ids', '=', Session::get('website'))->count();
-        $feedbacks = round($feedbacksGood / $feedbacksAll * 100);
+
+        if($feedbacksAll != 0)
+            $feedbacks = round($feedbacksGood / $feedbacksAll * 100);
+        else
+            $feedbacks = 100;
+
 
         return view("dashboard/home", [
             'Page' => $pages,

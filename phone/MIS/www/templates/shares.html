@@ -1,0 +1,67 @@
+<ion-view view-title="Акции центра">
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">Акции центра</h1>
+    </ion-header-bar>
+
+
+
+    <ion-content>
+
+
+
+        <ion-list>
+
+
+
+            <ion-item  class="list card" ng-repeat="item in items">
+
+                <div class="item">
+                    <a href="#/app/share/{{item.id}}"><h2>{{ item.name }}</h2></a>
+                </div>
+
+                <div class="item item-body">
+                    <a href="#/app/share/{{item.id}}"> <img class="full-image" ng-src="https://medicalsystem.tk{{ item.avatar }}"></a>
+                    <p>
+                        {{ item.descript }}
+                    </p>
+                    <p class="text-right">
+                        <span class="subdued">{{item.created_at}}</span>
+                    </p>
+                </div>
+
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item" href="#/app/share/{{item.id}}">
+                        <i class="icon ion-ios-paper-outline"></i>
+                        Читать полностью
+                    </a>
+                    <a class="tab-item" href="#">
+                        <i class="icon ion-share"></i>
+                        Поделиться
+                    </a>
+                </div>
+
+            </ion-item>
+
+
+
+        </ion-list>
+
+
+
+
+        <ion-infinite-scroll
+                on-infinite="loadMore()"
+                distance="1%">
+        </ion-infinite-scroll>
+
+
+
+    </ion-content>
+
+
+
+
+
+</ion-view>
+
+

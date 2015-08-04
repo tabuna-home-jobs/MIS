@@ -2,6 +2,7 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use App;
 
 class RouteServiceProvider extends ServiceProvider {
 
@@ -33,6 +34,26 @@ class RouteServiceProvider extends ServiceProvider {
 		$router->model('encyclopedia', 'App\Models\EncyPost');
         $router->model('medencyclopedia', 'App\Models\EncyCategory');
         $router->model('encypost', 'App\Models\EncyPost');
+
+
+
+
+
+
+
+		$router->bind('model' ,  function($model, $function)
+		{
+			//Отдаём необходимую модельк
+			return $model;
+
+			dd(App::make('App/Models/' . $model));
+			$model = App::make('App/Models/' . $model);
+			dd($model);
+
+			//return User::where('name', $value)->first();
+		});
+
+
 	}
 
 	/**

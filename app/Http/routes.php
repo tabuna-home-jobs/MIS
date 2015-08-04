@@ -118,3 +118,25 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefi
 
 
 
+
+
+//API
+
+Route::group(['namespace' => 'API', 'middleware' => 'cors','prefix' => 'api'], function()
+{
+    Route::resource('/news', 'NewsAPI');
+    Route::resource('/shares', 'ShareAPI');
+});
+
+
+
+
+Route::group(['namespace' => 'test', 'prefix' => 'test'], function()
+{
+    Route::resource('/{model}/{function?}', 'TestController');
+
+});
+
+
+
+

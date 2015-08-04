@@ -1,0 +1,57 @@
+
+
+table.table_2 tbody > tr > td > div.big_blue_cell address p, table.table_2 tbody > tr > td > div.big_blue_cell_1 address p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+}
+
+.caption_blogs_1 h4 a p {
+    color: #363d3f;
+    line-height: 23px;
+    letter-spacing: 0.9px;
+    font-weight: 600;
+}
+
+.rsMedic_1 .rsArrowRight {
+    right: 20px;
+}
+
+.overlay-none {
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 80px;
+}
+
+.caption_doctor ul {
+    margin-bottom: 15px !important;
+}
+
+.mdc_row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.mdc_row > .vc_col-sm-12 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.wp-caption-text, .sticky, .gallery-caption, .bypostauthor {}
+
+td.toolt {
+    vertical-align: middle;
+}
+
+.archives li {
+    width: 50%;
+    float: left;
+    padding: 5px 0;
+}

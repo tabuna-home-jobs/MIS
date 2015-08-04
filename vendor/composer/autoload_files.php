@@ -8,11 +8,11 @@ $baseDir = dirname($vendorDir);
 return array(
     $vendorDir . '/nikic/php-parser/lib/bootstrap.php',
     $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
-    $vendorDir . '/danielstjules/stringy/src/Create.php',
     $vendorDir . '/psy/psysh/src/Psy/functions.php',
+    $vendorDir . '/danielstjules/stringy/src/Create.php',
     $vendorDir . '/watson/active/src/ActiveHelpers.php',
-    $vendorDir . '/laravelcollective/html/src/helpers.php',
     $vendorDir . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/functions.php',
     $vendorDir . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
     $vendorDir . '/laravel/framework/src/Illuminate/Support/helpers.php',
+    $vendorDir . '/laravelcollective/html/src/helpers.php',
 );
