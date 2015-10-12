@@ -7,7 +7,7 @@
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
   </data-source>
   <data-source name="PostgreSQL - octavian_mis@193.111.141.198" uuid="3578d799-d67b-4c17-958f-4955ab0f8904">
-    <database-info product="PostgreSQL" version="9.3.9" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+    <database-info product="PostgreSQL" version="9.3.9" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
