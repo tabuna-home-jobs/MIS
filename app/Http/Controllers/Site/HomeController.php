@@ -15,9 +15,10 @@ class HomeController extends Controller {
     public function index($sitename, $sitedomen)
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-
-        $getNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
+		$goods = $getSites->getGoods()->orderBy('id', 'desc')->limit(5)->get();
+        $getNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
+
 
 
 
@@ -28,7 +29,8 @@ class HomeController extends Controller {
         return view($sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShares' => $getShares,
-            'place' => $place
+            'place' => $place,
+			'goods' => $goods
         ]);
     }
 
