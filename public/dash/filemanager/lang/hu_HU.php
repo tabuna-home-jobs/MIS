@@ -70,7 +70,7 @@ return array(
 	'Clear_Clipboard_Confirm' => 'Biztos törlöd a vágólap tartalmát?',
 	'Files_ON_Clipboard' => 'Fájlok találhatóak a vágólapon.',
 	'Copy_Cut_Size_Limit' => 'A kiválasztott fájlok/mappák túl nagyok a %shoz. Limit: %d MB/művelet', // %s = cut or copy
-	'Copy_Cut_Count_Limit' => 'Túl sok fájlt választottál ki a %shoz. Limit: %d fájl/művelet', // %s = cut or copy
+	'Copy_Cut_Count_Limit' => 'Túl sokru fájlt választottál ki a %shoz. Limit: %d fájl/művelet', // %s = cut or copy
 	'Copy_Cut_Not_Allowed' => 'A %s nem engedélyezett.', // %s(1) = cut or copy, %s(2) = files or folders
 	'Aviary_No_Save' => 'A kép mentése sikertelen.',
 	'Zip_No_Extract' => 'Kicsomagolás sikertelen. Lehet, hogy korrupt a fájl.',
