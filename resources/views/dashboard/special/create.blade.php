@@ -16,31 +16,40 @@
                         <div class="form-group">
                             <label>ФИО</label>
                             <input class="form-control" type="text" maxlength="255" required name="fio"
-                                   value="{{$Spec->fio or ''}}">
+                                   value="{{$Spec->fio or old('fio')}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>ФИО</label>
+                            <select name="cats">
+                                @foreach($cats as $item)
+                                    <option value="{{$item['id']}}">{{$item['name']}}</option>
+                                    @endforeach
+                            </select>
                         </div>
 
                         <div class="form-group">
                             <label>Квалификация</label>
                             <input class="form-control" type="text" maxlength="255" required name="subname"
-                                   value="{{$Spec->subname or ''}}">
+                                   value="{{$Spec->subname or old('subname')}}">
                         </div>
 
 
                         <div class="form-group">
                             <label>Специализация</label>
                             <input class="form-control" type="text" maxlength="255" required name="special"
-                                   value="{{$Spec->special or ''}}">
+                                   value="{{$Spec->special or old('special')}}">
                         </div>
 
                         <div class="form-group">
                             <label>Опыт работы</label>
                             <input class="form-control" type="text" maxlength="255" required name="opyt"
-                                   value="{{$Spec->opyt or ''}}">
+                                   value="{{$Spec->opyt or old('opyt')}}">
                         </div>
                         <div class="form-group">
                             <label>Образование</label>
                             <input class="form-control" type="text" maxlength="255" required name="obrazovanie"
-                                   value="{{$Spec->obrazovanie or ''}}">
+                                   value="{{$Spec->obrazovanie or old('obrazovanie')}}">
                         </div>
 
 
