@@ -1,8 +1,8 @@
-@extends('cozn48ru/header')
+@extends('luchiki48ru/header')
 @section('content')
     <div class="page-content">
         <div class="container">
-            <h1>Акции центра Остеопатии</h1>
+            <h1>Новости</h1>
             <div class="page-text">
                 <div class="row">
                     @foreach($News as $item)

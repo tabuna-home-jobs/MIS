@@ -1,80 +1,59 @@
-@extends('site1ru/header')
+@extends('luchiki48ru/header')
 
 @section('content')
-
-    <div class="sub-page-content">
-
+    <style>
+        .page-content {
+            padding-bottom: 10px;
+        }
+        .page-content h1 {
+            margin:25px 0;
+        }
+        .item-row {
+            margin:10px 0;
+        }
+    </style>
+    <div class="page-content">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h2 class="bordered light">Предоставляемые <span>Услуги</span></h2>
-                    <div class="products">
-
-
-                        @foreach($Goods as $good)
-
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="/service/{{$good['id']}}"><img alt="" src="{{$good['avatar']}}" height="100px"></a>
+            <h1>Услуги</h1>
+            <div class="page-text">
+                <div class="row">
+                    @foreach($Goods as $item)
+                        <div class="col-md-4 item-row">
+                            <div>
+                                <div><img src="{{$item['avatar']}}" alt=""></div>
+                                <h3><a href="/blog/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
+                                <p class="day">{{$item['created_at']}}</p>
+                                <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
+                                <div class="seeall"><a href="/service/{{$item['id']}}">Читать полностью <img src="/cozn48.ru/img/minibutton.png"></a><br></div>
                             </div>
-                            <h4>{{$good['name']}}</h4>
-
-                            <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> {{$good['price']}}</p>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="sperator"></span>
-                            <a class="ad-to-cart" href="/service/{{$good['id']}}"><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
-
-                        @endforeach
-
-                    </div>
-
-                    <div class="clearfix"></div>
-                    {!! $Goods->render() !!}
+                    @endforeach
                 </div>
-                <aside class="col-md-4">
-
-                    <div class="sidebar-widget clearfix">
-                        <h2 class="bordered light">Категории</h2>
-                        <ul class="tags">
-                            @foreach($Category as $value)
-
-                                <li><a href="/service?category={{$value['id']}}">{{$value['name']}}</a></li>
-
-                            @endforeach
-
-                        </ul>
-                    </div>
-
-
-
-                    <div class="sidebar-widget light">
-                        <h2 class="bordered light">Последние новости</h2>
-
-                        @foreach($LastNews as $lastNew)
-                            <article class="popular-post">
-                                <img alt="{{$lastNew->title}}" src="{{$lastNew->avatar}}">
-                                <h4><a href="/blog/{{$lastNew->id}}">{{$lastNew->name}}</a></h4>
-
-                                <p class="text-justify">{{ substr(strip_tags($lastNew->content), 0, 201) }} ...</p>
-
-                                <p class="popular-date text-right">{{$lastNew->created_at}}</p>
-                            </article>
-                        @endforeach
-                    </div>
-
-
-
-
-
-
-                </aside>
             </div>
         </div>
+
     </div>
+    <script>
+        var resized = function (height) {
 
+            $('.item-row').each(function(){
+                var height_this = $(this).height();
+                height_this > height ? height = height_this:'';
+            });
 
+            $('.item-row').height(height);
+        };
+
+        $(window).resize(function(){
+            var height = 0;
+            resized(height);
+        });
+
+        $(document).ready(function(){
+            var height = 0;
+            resized(height);
+        });
+
+    </script>
 
 @endsection

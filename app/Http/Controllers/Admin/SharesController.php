@@ -57,7 +57,7 @@ class SharesController extends Controller
         ]);
 
         if (Request::hasFile('avatar')) {
-            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $shares->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
 
@@ -96,10 +96,11 @@ class SharesController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Shares $shares)
+    public function update(SharesRequest $request,Shares $shares)
     {
+        //$sahres->fill($request->all());
 
-        $shares-fill([
+        $shares->fill([
             'title'=>$request->title,
             'name'=>$request->name,
             'content'=>$request->content,
@@ -111,7 +112,7 @@ class SharesController extends Controller
         ]);
 
         if (Request::hasFile('avatar')) {
-            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $shares->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
 

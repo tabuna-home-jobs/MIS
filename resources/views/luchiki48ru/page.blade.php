@@ -1,4 +1,4 @@
-@extends('cozn48ru/header')
+@extends('luchiki48ru/header')
 @section('content')
 <div class="page-content">
     <div class="container">

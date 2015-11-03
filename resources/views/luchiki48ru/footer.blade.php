@@ -1,72 +1,80 @@
-
-<!--end downhead-->
 <div class="footer">
-    <div class="downhead">
-        <div class="buttons footer-buttons">
-            <nav class="navbar navbar-default container footer-nav">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                        <ul class="nav navbar-nav">
-                            {!! Menu::getLi(6,'top','') !!}
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav>
-        </div>
-    </div>
-
-
     <div class="container">
-        <div class="footer1 col-sm-6">© ООО «Центр остеопатии» 2015</div>
-        <div class="octavian col-sm-5">
-            Разработка, поддержка
-            и продвижение сайта
-        </div>
-        <div class="octav col-sm-1">
-            <a href="#"><img src="/cozn48.ru/img/octavian.png"></a>
-        </div>
-    </div>
-    <div class="error">
-        <a href="#" data-toggle="modal" data-target="#myModal">сообщить об ошибке</a>
-    </div>
+        <nav class="navbar navbar-default menu2">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-                <form id="otchet" action="/" method="get">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Отчёт об ошибке</h4>
-                    </div>
-                    <div class="modal-body obltext">
-                        <textarea name="report_error"></textarea>
-                        <input name="hid_report" id="report_url_page" type="hidden">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                        <button id="sendotchet" type="button" class="btn btn-primary">Отправить</button>
-                    </div>
-                </form>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        {!! Menu::getLi(7,'topmain','') !!}
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="footer-block-1 col-md-3">
+            <ul>
+                <li><a>Развивающая и досуговая деятельность</a></li>
+                <li><a>Развивающие занятия для детей от 1,5 лет</a></li>
+                <li><a>Адаптация и подготовка детей к школе</a></li>
+                <li><a>Веселый английский</a></li>
+                <li><a>Йога</a></li>
+                <li><a>Детский психолог</a></li>
+                <li><a>Логопед-дефектолог</a></li>
+                <li><a>Организация и проведение детских праздников</a></li>
+            </ul>
+        </div>
+        <div class="footer-block-2 col-md-3">
+            <div class="phone-footer">
+                <img src="/luchiki48.ru/img/phone.png">
+                +7 (4742) 77 03 97
             </div>
+            <div class="adr-footer">
+                <img src="/luchiki48.ru/img/adr.png">
+                г. Липецк, ул. Неделина, 15-а
+            </div>
+            <div class="mail-footer">
+                <img src="/luchiki48.ru/img/mail.png">
+                <a href="">info@luchiki.ru</a>
+            </div>
+            <img src="/luchiki48.ru/img/minobr.png">
+        </div>
+        <div class="footer-block-3 col-md-3">
+            <!--<script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>-->
+            <!-- VK Widget -->
+            <!--<div id="vk_groups"></div>-->
+            <!--<script type="text/javascript">
+            VK.Widgets.Group("vk_groups", {mode: 0, width: "260", height: "260", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 20003922);
+            </script>-->
+        </div>
+        <div class="footer-block-4 col-md-3">
+            <h5>Студия раннего развития детей «Лучики»</h5>
+            <p>Фундаментальные отрасли психологии имеют
+                общее значение в изучении психических
+                явлений. Это базис, который объединяет все
+                отрасли психологии, а также служит основой их
+                развития. Фундаментальные отрасли, как
+                правило, называют термином «общая
+                психология». Основными понятиями, которые
+                рассматривает общая психология, являются:
+                познавательные процессы (ощущения,
+                восприятия, внимание, представления, память</p>
         </div>
     </div>
 </div>
-</div>
-<!--end footer-->
+<script>
+    $(document).ready(function(){
+        $(".fancybox").fancybox();
+    });
+</script>
 </body>
 </html>

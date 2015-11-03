@@ -1,46 +1,21 @@
-@extends('site1ru/header')
-
+@extends('luchiki48ru/header')
 @section('content')
-
-
-
-    <div class="container">
-        <nav class="primary clearfix">
-                    <ul>
-                        <li><a href="#" class="selected" data-filter="*">Все</a></li>
-                    @foreach($albums as $album)
-                      <li><a href="#" data-filter=".{{$album->name}}">{{$album->name}}</a></li>
-                    @endforeach
-
-                    </ul>
-                  </nav>
-                  
-        <section class="main">
-                    <div class="portfolio">
-
-
-
-                        @foreach($photos as $photo)
-
-                      <article class="entry {{$photo->getAlbum()->first()->name}}">
-                      <div class="gallery-thumb">
-                      	<span class="overlay"></span>
-                            <a href="{{$photo->url}}" data-rel="prettyPhoto" class="link-preety"></a>
-                       	<img src="{{$photo->url}}" alt="" height="200px">
+    <div class="page-content">
+        <div class="container">
+            <h1>Галерея</h1>
+            <div class="page-text">
+                <div class="row">
+                    @foreach($photos as $item)
+                        <div class="col-md-3 item-galery">
+                            <div>
+                                <a class="fancybox" rel="group" href="{{$item->url}}"><img src="{{$item->url}}" alt="" /></a>
+                            </div>
                         </div>
-                          <p></p>
-                      </article>
-                        @endforeach
+                    @endforeach
+                </div>
+            </div>
+        </div>
 
-                    </div>
-                  </section>
     </div>
-
-
-
-
-
-
-
 
 @endsection

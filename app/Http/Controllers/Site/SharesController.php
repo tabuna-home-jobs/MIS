@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Sites;
 
 class SharesController extends Controller
 {
@@ -14,9 +15,11 @@ class SharesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($sitename, $sitedomen)
     {
-        //
+        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
+        $getShares =$getSites->getShares()->orderBy('id', 'desc')->paginate(5);
+        return view( $sitename.$sitedomen.'/shares', ['Shares' => $getShares]);
     }
 
     /**
@@ -46,9 +49,14 @@ class SharesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($sitename, $sitedomen,$Share)
     {
-        //
+        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
+
+
+        $getShares = $getSites->getShares()->findorFail($Share->id);
+
+        return view( $sitename.$sitedomen.'/sharesItem', ['Shares' => $getShares]);
     }
 
     /**

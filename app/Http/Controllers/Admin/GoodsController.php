@@ -21,7 +21,8 @@ class GoodsController extends Controller {
     public function getAdd($Goods = null)
     {
         $Goods = Goods::find($Goods);
-        $Category = Category::all();
+        $Category = Category::where('ids', Session::get('website'))->get();
+        //$Category = Category::all();
         return view("dashboard/goods/view",['Goods' => $Goods , 'Category' => $Category]);
     }
 
@@ -40,7 +41,7 @@ class GoodsController extends Controller {
         $Goods->text = $request->text;
         $Goods->tag = $request->tag;
         if (Request::hasFile('avatar')) {
-            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $Goods->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
         $Goods->descript = $request->descript;

@@ -10,7 +10,8 @@
     <script type="text/javascript" src="/cozn48.ru/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/cozn48.ru/js/slick/slick.css"/>
 
-
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <script type="text/javascript" src="/cozn48.ru/js/slick/slick.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -60,9 +61,47 @@
                 <img src="/cozn48.ru/img/phone.png"> (4742) <span class="tel">227-887</span>
             </div>
             <div class="callback col-sm-3 col-xs-12">
-                <button class="button1">
+                <a type="button" class="btn btn-lg button1" data-toggle="modal" data-target="#myModal">
                     обратный звонок
-                </button>
+                </a>
+
+
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Обратный звонок</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">ФИО</span>
+                                        <input type="text" class="form-control" placeholder="ФИО" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">@</span>
+                                        <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">99-99-99</span>
+                                        <input type="text" class="form-control" placeholder="Телефон" aria-describedby="basic-addon1">
+                                    </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Отправить</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
     </div>

@@ -18,7 +18,6 @@ class ReviewsController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Reviews = $getSites->getReviews()->where('publish', true)->orderBy('id', 'desc')->paginate(6);
-
         return view($sitename . $sitedomen . '/reviews', ['Reviews' => $Reviews]);
     }
 

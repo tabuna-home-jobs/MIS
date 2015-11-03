@@ -19,7 +19,7 @@ class Specialisty extends Model
      *
      * @var array
      */
-    protected $fillable = ['fio', 'subname', 'special', 'obrazovanie', 'opyt', 'about', 'works','ids'];
+    protected $fillable = ['fio', 'subname', 'special', 'obrazovanie', 'opyt', 'about', 'works','ids','cats'];
 
 
 }

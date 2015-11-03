@@ -12,7 +12,9 @@ class Pageediting extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('pages', function ($table) {
+            $table->text('content')->change();
+        });
     }
 
     /**

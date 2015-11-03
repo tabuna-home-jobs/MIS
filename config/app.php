@@ -207,6 +207,11 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Menu' => App\Facades\Menu::class,
+		'SpecialOnMain' => App\Facades\SpecOnMainFacades::class,
+		'GoodsMain' => App\Facades\GoodsMain::class,
+		'newsOnMain' => App\Facades\NewsonMain::class,
+		'sharesOnMain' => App\Facades\sharesOnMain::class,
+		'reviewsOnMain' => App\Facades\ReviewsOnMain::class
     ],
 
 ];

@@ -1,24 +1,24 @@
-<?php
+<?php namespace App\Http\Controllers\Site;
 
-namespace App\Http\Controllers\Site;
-
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Sites;
-use App\Models\Page;
+use Request;
+use App\Models\Comments;
+use App\Http\Requests\Site\CommentRequest;
+use Session;
 
-class PageController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function index($sitename, $sitedomen)
+class PageController extends Controller {
+
+
+    public function show($sitename, $sitedomen, $Pages)
     {
-        return view($sitename . $sitedomen . '/index');
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+
+        $Page = $getSites->getPages()->find($Pages->id);
+
+         return view($sitename . $sitedomen . '/page', [
+             'Page' => $Page,
+         ]);
     }
 
 

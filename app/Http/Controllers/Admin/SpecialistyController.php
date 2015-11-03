@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\SpecialRequest;
 use App\Models\Specialisty;
+use App\Models\SpecCat;
 use Image;
 use Redirect;
 use Request;
@@ -11,6 +12,11 @@ use Validator;
 
 class SpecialistyController extends Controller
 {
+
+    public function category()
+    {
+        return view("dashboard/special/categorySpecial");
+    }
 
 
     public function index()
@@ -21,12 +27,17 @@ class SpecialistyController extends Controller
 
     public function create()
     {
-        return view("dashboard/special/create");
+        $SpecCat = SpecCat::where('ids', Session::get('website'))->orderBy('id', 'desc')->get();
+        return view("dashboard/special/create",[
+           'cats' => $SpecCat
+        ]);
     }
 
     public function edit(Specialisty $Spec)
     {
-        return view("dashboard/special/create",['Spec'=>$Spec]);
+        $SpecCat = SpecCat::where('ids', Session::get('website'))->orderBy('id', 'desc')->get();
+
+        return view("dashboard/special/edit",['Spec'=>$Spec,'cats' => $SpecCat]);
     }
 
 
@@ -40,11 +51,12 @@ class SpecialistyController extends Controller
                 'opyt' => $request->opyt,
                 'about' => $request->about,
                 'works' => serialize($request->works),
+                'cats' => $request->cats,
                 'ids' => Session::get('website'),
         ]);
 
         if (Request::hasFile('avatar')) {
-            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $special->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
 
@@ -59,6 +71,7 @@ class SpecialistyController extends Controller
 
     public function update(Specialisty $special, SpecialRequest $request)
     {
+
         $special->fill([
             'fio' => $request->fio,
             'subname' => $request->subname,
@@ -66,12 +79,13 @@ class SpecialistyController extends Controller
             'obrazovanie' => $request->obrazovanie,
             'opyt' => $request->opyt,
             'about' => $request->about,
+            'cats' => $request->cats,
             'works' => serialize($request->works),
             'ids' => Session::get('website'),
         ]);
 
         if (Request::hasFile('avatar')) {
-            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $special->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
 

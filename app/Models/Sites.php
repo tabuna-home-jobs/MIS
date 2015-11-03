@@ -26,6 +26,11 @@ class Sites extends Model {
         return $this->hasOne('App\Models\News','ids');
     }
 
+    public function getPages()
+    {
+        return $this->hasOne('App\Models\Page','ids');
+    }
+
     public function getShares()
     {
         return $this->hasOne('App\Models\Shares', 'ids');

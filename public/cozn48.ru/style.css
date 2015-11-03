@@ -1,5 +1,6 @@
 body{
 	font-size: 14px;
+	font-family: Arial;
 }
 .button1 {
     border: none;
@@ -94,13 +95,15 @@ body{
 	vertical-align: top;
 	text-align: center;
 }
+.f1>img {
+	max-width:100%;
+}
 .skidki{
 	color: white ;
 }
-.everypeople>div{
-	display: inline-block;
 
-	vertical-align: text-top;
+.everypeople img {
+	max-width: 100%;
 }
 .people {
 	text-align: center;
@@ -109,6 +112,9 @@ body{
 .reasons {
 	background: url(img/backgr1.jpg);
 	text-align: center;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: 100% 100%;
 }
 .block2{
 	display: inline-block;
@@ -156,6 +162,8 @@ text-align: left;
 }
 .news{
 	text-align: center;
+	margin: 30px 0;
+	padding: 20px 0;
 }
 .specialists{
 	text-align: center;
@@ -172,6 +180,7 @@ h2 {
 }
 .f1>p{
 	text-align: center;
+	margin: 15px 0;
 }
 .navbar {
 	background-image: url("img/head_buttons.png");
@@ -317,15 +326,41 @@ h2 {
 
 .navbar {
 	margin-bottom:0;
+	min-height: 0;
+}
+.navbar-nav li:hover {
+	color:white;
+	background-color: #691f75;
+}
+.navbar-nav li:hover a{
+	color:white!important;
+	background-color: #691f75;
+}
+.navbar-nav li a{
+	text-transform:uppercase;
 }
 .seeall{
 	text-align: center;
 }
+.seeall img {
+	margin-right: 5px;
+}
 .sk1.col-xs-12.col-md-12.col-sm-12.col-lg-4 {
 	margin-top: 10px;
 }
+.callback .btn:hover {
+	color:white !important;
+	opacity: 0.8;
+}
+.callback .btn {
+	padding: 5px 15px;
+}
 .news{
 	background: url(img/backgr1.jpg);
+	text-align: center;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: 100% 100%;
 }
 .circle{
 	padding-top: 15px;
@@ -379,10 +414,14 @@ border-radius: 3px;
 	text-align: center;
 	margin-top: 30px;
 }
-.fbtn>button{
+.fbtn>a,.fbtn>button{
+	display: inline-block;
 	color: white;
-	width: 261px;
-height: 42px;
+	padding: 10px;
+	cursor: pointer;
+	border: none;
+	text-decoration: none;
+	min-width: 114px;
 background-color: white;
 background-image: linear-gradient(to top, #6d1455 0%, #b50034 100%);
 border-radius: 3px;
@@ -420,7 +459,7 @@ background-repeat: no-repeat;
     border:none;
 }
 div,a,img {
-    outline: none !important; /* РЈР±РёСЂР°РµРј РіСЂР°РЅРёС†Сѓ РІРѕРєСЂСѓРі СЃСЃС‹Р»РѕРє  */
+    outline: none !important; /* РЈР±РёСЂР°РµР�? РіСЂР°РЅРёС†Сѓ РІРѕРєСЂСѓРі СЃСЃС‹Р»РѕРє  */
 }
 div:focus{outline:none !important;}
 a:focus{outline:none !important;}
@@ -434,4 +473,26 @@ button:focus{outline:none !important;}
 }
 .sl-img img{
 	display: inline-block;
+}
+.circle {
+	cursor: pointer;
+}
+.step2,.step3 {
+	display: none;
+}
+.step3 input, .step3 textarea {
+	display: block;
+	width: 100%;
+	margin:10px 0;
+	border-radius: 8px;
+	padding: 10px;
+	border:1px grey solid;
+}
+.step3 h5,.step2 h5{
+	text-align: center;
+	padding: 10px 0;
+}
+#date {
+	max-height: 300px;
+	overflow: scroll;
 }

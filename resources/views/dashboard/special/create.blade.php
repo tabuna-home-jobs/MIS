@@ -16,40 +16,42 @@
                         <div class="form-group">
                             <label>ФИО</label>
                             <input class="form-control" type="text" maxlength="255" required name="fio"
-                                   value="{{$Spec->fio or old('fio')}}">
+                                   value="">
                         </div>
 
                         <div class="form-group">
-                            <label>ФИО</label>
-                            <select name="cats">
+                            <label>Категория</label>
+                            <select class="form-control" name="cats">
                                 @foreach($cats as $item)
                                     <option value="{{$item['id']}}">{{$item['name']}}</option>
-                                    @endforeach
+                                @endforeach
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Квалификация</label>
                             <input class="form-control" type="text" maxlength="255" required name="subname"
-                                   value="{{$Spec->subname or old('subname')}}">
+                                   value="">
                         </div>
 
 
                         <div class="form-group">
                             <label>Специализация</label>
-                            <input class="form-control" type="text" maxlength="255" required name="special"
-                                   value="{{$Spec->special or old('special')}}">
+
+                            <textarea class="form-control" rows="5" name="special">
+
+                            </textarea>
                         </div>
 
                         <div class="form-group">
-                            <label>Опыт работы</label>
+                            <label>Должность</label>
                             <input class="form-control" type="text" maxlength="255" required name="opyt"
-                                   value="{{$Spec->opyt or old('opyt')}}">
+                                   value="">
                         </div>
                         <div class="form-group">
                             <label>Образование</label>
                             <input class="form-control" type="text" maxlength="255" required name="obrazovanie"
-                                   value="{{$Spec->obrazovanie or old('obrazovanie')}}">
+                                   value="">
                         </div>
 
 
@@ -57,32 +59,25 @@
                         <div class="form-group">
                             <label>Рабочие дни</label>
                             <select name="works[]" multiple class="form-control w-md"  ui-jq="chosen"  size="7">
-                                <option @if(isset($Spec->works) && strpos($Spec->works,"Понедельник")) selected
-                                                                                                       @endif value="Понедельник">
+                                <option  value="Понедельник">
                                     Понедельник
                                 </option>
-                                <option @if(isset($Spec->works) && strpos($Spec->works,"Вторник")) selected
-                                                                                                   @endif value="Вторник">
+                                <option  value="Вторник">
                                     Вторник
                                 </option>
-                                <option @if(isset($Spec->works) && strpos($Spec->works,"Среда")) selected
-                                                                                                 @endif value="Среда">
+                                <option  value="Среда">
                                     Среда
                                 </option>
-                                <option @if(isset($Spec->works) && strpos($Spec->works,"Четверг")) selected
-                                                                                                   @endif value="Четверг">
+                                <option  value="Четверг">
                                     Четверг
                                 </option>
-                                <option @if(isset($Spec->works) && strpos($Spec->works,"Пятница")) selected
-                                                                                                   @endif value="Пятница">
+                                <option  value="Пятница">
                                     Пятница
                                 </option>
-                                <option @if(isset($Spec->works) && strpos($Spec->works,"Суббота")) selected
-                                                                                                   @endif value="Суббота">
+                                <option  value="Суббота">
                                     Суббота
                                 </option>
-                                <option @if(isset($Spec->works) && strpos($Spec->works,"Воскресенье")) selected
-                                                                                                       @endif value="Воскресенье">
+                                <option  value="Воскресенье">
                                     Воскресенье
                                 </option>
                             </select>
@@ -107,14 +102,14 @@
 
                                 <div class="fileinput fileinput-new" data-provides="fileinput">
                                     <div data-trigger="fileinput" class="fileinput-preview thumbnail"
-                                         style="line-height: 150px;"><img src="{{$Spec->avatar or ''}}">
+                                         style="line-height: 150px;"><img src="">
                                     </div>
 
                                     <div>
                                                 <span class="btn btn-default btn-file"><span class="fileinput-new">Выбрать изображение</span><span
                                                             class="fileinput-exists">Изменить</span><input type="file"
                                                                                                            name="avatar"
-                                                                                                           value="{{$Spec->avatar or ''}}"></span>
+                                                                                                           value=""></span>
                                         <a href="#" class="btn btn-default fileinput-exists"
                                            data-dismiss="fileinput">Удалить</a>
                                     </div>
@@ -125,9 +120,9 @@
 
 
                         <div class="form-group">
-                            <label>Содержание</label>
+                            <label>Умения</label>
                                     <textarea class="form-control" name="about"
-                                              rows="5">{!! $Spec->about or '' !!}</textarea>
+                                              rows="5"></textarea>
                         </div>
 
 

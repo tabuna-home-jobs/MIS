@@ -4,7 +4,7 @@
 
 
     <div class="bg-light lter b-b wrapper-md">
-        <h1 class="m-n font-thin h3"> {{$Spec->fio}}</h1>
+        <h1 class="m-n font-thin h3">Новый специалист</h1>
     </div>
     <div class="wrapper-md">
         <form class="row" role="form" action="{{URL::route('dashboard.special.update',$Spec->id)}}" method="post" enctype="multipart/form-data">
@@ -13,34 +13,53 @@
                     <div class="panel-heading font-bold">Содержание</div>
                     <div class="panel-body">
 
+
+                        <div class="form-group">
+                            <label>Порядок</label>
+                            <input class="form-control" type="text" maxlength="255" required name="fio"
+                                   value="{{$Spec->fio or old('fio')}}">
+                        </div>
+
                         <div class="form-group">
                             <label>ФИО</label>
                             <input class="form-control" type="text" maxlength="255" required name="fio"
-                                   value="{{$Spec->fio or ''}}">
+                                   value="{{$Spec->fio or old('fio')}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Категория</label>
+                            <select class="form-control" name="cats">
+                                @foreach($cats as $item)
+                                    <option {{$Spec->cats == $item['id']?'selected':''}} value="{{$item['id']}}">{{$item['name']}}</option>
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="form-group">
                             <label>Квалификация</label>
                             <input class="form-control" type="text" maxlength="255" required name="subname"
-                                   value="{{$Spec->subname or ''}}">
+                                   value="{{$Spec->subname or old('subname')}}">
                         </div>
 
 
                         <div class="form-group">
                             <label>Специализация</label>
-                            <input class="form-control" type="text" maxlength="255" required name="special"
-                                   value="{{$Spec->special or ''}}">
+
+                            <textarea class="form-control" rows="5" name="special" required>{{$Spec->special or old('special')}}</textarea>
+
+
+
                         </div>
 
                         <div class="form-group">
-                            <label>Опыт работы</label>
+                            <label>Должность</label>
                             <input class="form-control" type="text" maxlength="255" required name="opyt"
-                                   value="{{$Spec->opyt or ''}}">
+                                   value="{{$Spec->opyt or old('opyt')}}">
                         </div>
                         <div class="form-group">
                             <label>Образование</label>
                             <input class="form-control" type="text" maxlength="255" required name="obrazovanie"
-                                   value="{{$Spec->obrazovanie or ''}}">
+                                   value="{{$Spec->obrazovanie or old('obrazovanie')}}">
                         </div>
 
 
@@ -49,31 +68,31 @@
                             <label>Рабочие дни</label>
                             <select name="works[]" multiple class="form-control w-md"  ui-jq="chosen"  size="7">
                                 <option @if(isset($Spec->works) && strpos($Spec->works,"Понедельник")) selected
-                                                                                                       @endif value="Понедельник">
+                                        @endif value="Понедельник">
                                     Понедельник
                                 </option>
                                 <option @if(isset($Spec->works) && strpos($Spec->works,"Вторник")) selected
-                                                                                                   @endif value="Вторник">
+                                        @endif value="Вторник">
                                     Вторник
                                 </option>
                                 <option @if(isset($Spec->works) && strpos($Spec->works,"Среда")) selected
-                                                                                                 @endif value="Среда">
+                                        @endif value="Среда">
                                     Среда
                                 </option>
                                 <option @if(isset($Spec->works) && strpos($Spec->works,"Четверг")) selected
-                                                                                                   @endif value="Четверг">
+                                        @endif value="Четверг">
                                     Четверг
                                 </option>
                                 <option @if(isset($Spec->works) && strpos($Spec->works,"Пятница")) selected
-                                                                                                   @endif value="Пятница">
+                                        @endif value="Пятница">
                                     Пятница
                                 </option>
                                 <option @if(isset($Spec->works) && strpos($Spec->works,"Суббота")) selected
-                                                                                                   @endif value="Суббота">
+                                        @endif value="Суббота">
                                     Суббота
                                 </option>
                                 <option @if(isset($Spec->works) && strpos($Spec->works,"Воскресенье")) selected
-                                                                                                       @endif value="Воскресенье">
+                                        @endif value="Воскресенье">
                                     Воскресенье
                                 </option>
                             </select>
@@ -116,7 +135,7 @@
 
 
                         <div class="form-group">
-                            <label>Содержание</label>
+                            <label>Умения</label>
                                     <textarea class="form-control" name="about"
                                               rows="5">{!! $Spec->about or '' !!}</textarea>
                         </div>

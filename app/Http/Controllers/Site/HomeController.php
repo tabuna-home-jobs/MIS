@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Models\Sites;
 use DB;
+use App\Models\Page as Page;
 
 class HomeController extends Controller {
 
@@ -15,8 +16,8 @@ class HomeController extends Controller {
     public function index($sitename, $sitedomen)
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-		$goods = $getSites->getGoods()->orderBy('id', 'desc')->limit(5)->get();
-        $getNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
+
+        $getNews = $getSites->getNews()->orderBy('id', 'desc')->limit(4)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
 
 
@@ -30,7 +31,7 @@ class HomeController extends Controller {
             'getNews' => $getNews,
             'getShares' => $getShares,
             'place' => $place,
-			'goods' => $goods
+
         ]);
     }
 

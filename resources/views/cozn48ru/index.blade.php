@@ -44,32 +44,32 @@
             <h2>ДОСТОИНСТВА ОСТЕОПАТИИ</h2>
 
             <div class="f1 col-sm-4 col-md-2 col-xs-12">
-                <img src="cozn48.ru/img/f1.png">
+                <img src="/cozn48.ru/img/f1.png">
 
                 <p>Безопасна<br> и безболезненна</p>
             </div>
             <div class="f1 col-sm-4 col-md-2 col-xs-12">
-                <img src="cozn48.ru/img/f2.png">
+                <img src="/cozn48.ru/img/f2.png">
 
                 <p>Это лечение,<br> предложенное<br> самой природой</p>
             </div>
             <div class="f1 col-sm-4 col-md-2 col-xs-12">
-                <img src="cozn48.ru/img/f3.png">
+                <img src="/cozn48.ru/img/f3.png">
 
                 <p>Основана на<br> фундаментальном<br> знании врачом<br> анатомии</p>
             </div>
             <div class="f1 col-sm-4 col-md-2 col-xs-12">
-                <img src="cozn48.ru/img/f4.png">
+                <img src="/cozn48.ru/img/f4.png">
 
                 <p>Позволяет обнаружить<br> первопричину<br> заболевания<br> и быстро устранить её</p>
             </div>
             <div class="f1 col-sm-4 col-md-2 col-xs-12">
-                <img src="cozn48.ru/img/f5.png">
+                <img src="/cozn48.ru/img/f5.png">
 
                 <p>Эффективна</p>
             </div>
             <div class="f1 col-sm-4 col-md-2 col-xs-12">
-                <img src="cozn48.ru/img/f6.png">
+                <img src="/cozn48.ru/img/f6.png">
 
                 <p>Не требует<br> длительного<br> лечения</p>
             </div>
@@ -114,25 +114,212 @@
         <div class="doctor col-lg-6 col-md-6 hidden-sm hidden-xs"><img src="cozn48.ru/img/doctor.png"></div>
         <div class="appointment-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div class="app-header">
-                <div class="circle">1</div>
-                <div class="circle">2</div>
-                <div class="circle">3</div>
+                <div data-target="step1" class="circle">1</div>
+                <div data-target="step2" class="circle">2</div>
+                <div data-target="step3" class="circle">3</div>
                 <div class="step">Шаг 1</div>
                 <div class="step">Шаг 2</div>
                 <div class="step">Шаг 3</div>
             </div>
             <form>
+                <div class="step1">
                 <div class="description-form">Выберите место</div>
-                <div class="input-form"><select></select></div>
+                <div class="input-form"><select name="subdivision" required>
+                        <option selected disabled>Выберите место</option>
+                        @foreach($place as $placeItem)
+                            <option value="{{$placeItem->subdivision}}">{{$placeItem->subdivision}}</option>
+                        @endforeach
+                    </select></div>
                 <div class="description-form">Специализация</div>
-                <div class="input-form"><select></select></div>
+                <div class="input-form"><select disabled name="specialization" required>
+                        <option>Выберите специализацию</option>
+                    </select></div>
                 <div class="description-form">Врач</div>
-                <div class="input-form"><select></select></div>
-                <div class="fbtn"><button>ДАЛЕЕ</button></div>
+                <div class="input-form"><select disabled name="name" required>
+                        <option>Выберите Врача</option>
+                    </select></div>
+                <div class="fbtn"><a class="">ДАЛЕЕ</a></div>
+                </div>
+                <div class="step2">
+                    <h5> Врач может принять вас в следующие дни:</h5>
+                    <div id="date"></div>
+                    <div class="fbtn"><a class="">ДАЛЕЕ</a></div>
+                </div>
+                <div class="step3">
+                    <h5> Информация</h5>
+                    <div>
+                        <input type="text" name="firstname" max="255" placeholder="Имя">
+                        <input type="text" name="lastname" max="255" placeholder="Фамилия">
+                        <input type="email" name="email" placeholder="Email адрес">
+                        <input type="number" name="phone" placeholder="Номер телефона">
+                        <textarea rows="4" name="comment" placeholder="Комментарий"></textarea>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <div class="fbtn"><button class="btn-block" >ЗАПИСАТЬСЯ</button></div>
+                    </div>
+
+                </div>
+
             </form>
         </div>
     </div>
 </div>
+
+
+<!-- apointment -->
+<script>
+    $('select[name="subdivision"]').change(function () {
+
+        var obj = $(this);
+        var Curvalue = $(':selected',this).val();
+        var csrf = $('meta[name="csrf-token"]').attr('content');
+
+
+
+        $.ajax({
+            type: "POST",
+            url: "/appointment/special/" + Curvalue ,
+            beforeSend: function(request) {
+                request.setRequestHeader('X-CSRF-Token', csrf);
+            },
+            success: function(msg){
+
+                var option = "<option selected disabled>Выберите специализацию</option>";
+                for(var i = 0; msg.length > i; i++)
+                {
+                    option += "<option value='"+ msg[i].specialization + "'>"
+                            + msg[i].specialization + "</option>";
+                }
+
+                $('select[name="specialization"]').html(option);
+                $('select[name="specialization"]').attr('disabled',false);
+
+            }
+        });
+
+    });
+
+
+
+
+    $('select[name="specialization"]').change(function () {
+
+
+        var obj = $(this);
+        var Curvalue = $(':selected',this).val();
+        var Placevalue = $('select[name="subdivision"] :selected').val();
+        var csrf = $('meta[name="csrf-token"]').attr('content');
+
+
+        $.ajax({
+            type: "POST",
+            url: "/appointment/fio/" + Placevalue +"/"+ Curvalue ,
+            beforeSend: function(request) {
+                request.setRequestHeader('X-CSRF-Token', csrf);
+            },
+            success: function(msg){
+
+                var option = "<option selected disabled>Выберите врача</option>";
+                for(var i = 0; msg.length > i; i++)
+                {
+                    option += "<option value='"+ msg[i].name + "'>"
+                            + msg[i].name + "</option>";
+                }
+
+                $('select[name="name"]').html(option);
+                $('select[name="name"]').attr('disabled', false);
+
+            }
+        });
+
+
+    });
+
+
+    $('select[name="name"]').change(function () {
+
+
+        var obj = $(this);
+        var Curvalue = $(':selected',this).val();
+        var Placevalue = $('select[name="subdivision"] :selected').val();
+        var Specialvalue = $('select[name="specialization"] :selected').val();
+        var csrf = $('meta[name="csrf-token"]').attr('content');
+
+
+        $.ajax({
+            type: "POST",
+            url: "/appointment/time/" + Placevalue +"/"+ Specialvalue +"/"+ Curvalue ,
+            beforeSend: function(request) {
+                request.setRequestHeader('X-CSRF-Token', csrf);
+            },
+            success: function(msg){
+
+                var option = "";
+
+                for(var i = 0; msg.length > i; i++)
+                {
+                    var beginning = new Date(msg[i].beginning * 1000).toLocaleString();
+                    var end = new Date(msg[i].end * 1000).toLocaleString();
+                    option += "<div class='radio'><label><input type='radio' required name='apport' value='" + msg[i].beginning + "|" + msg[i].end + "'> С " + beginning + " по " + end + "</label></div>";
+
+                }
+
+
+
+
+
+
+
+
+                $('#date').html(option);
+
+            }
+        });
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<!-- apointment -->
+
+
+
+
+<div class="skidki">
+    <br>
+
+    <h2>СКИДКИ И АКЦИИ</h2>
+
+    <div class="sk">
+        <div class="container">
+            @foreach($getShares as $item)
+
+            <div class="sk1 col-xs-12 col-md-12 col-sm-12 col-lg-4">
+                <a href="/shares/{{$item['id']}}">
+                    <img src="{{$item['avatar']}}">
+                </a>
+            </div>
+
+                @endforeach
+        </div>
+    </div>
+    <br>
+</div>
+
+<!--end of skidki-->
+
 
 <h2>НАШИ СПЕЦИАЛИСТЫ</h2>
 
@@ -154,145 +341,45 @@
             </div>
         </div>
         <div class="everypeople col-lg-9">
-            <div class="p1 col-lg-4  col-md-4 col-sm-6">
-                <div class="people">
-                    <img style="vertical-align: middle;" src="cozn48.ru/img/sotrudnik1.png">
+            @foreach(SpecialOnMain::getSpec(6) as $item )
+                <div class="col-md-4">
+                    <img src="{{$item['avatar']}}">
 
-                    <div class="ptext"><strong>Кабанов</strong><br>
-                        Александр Дмитриевич
-                        <div class="specialisation">специалист по массажу</div>
+                    <div class="ptext">{{$item['fio']}}
+                        <div class="specialisation">{{$item['subname']}}</div>
                     </div>
                 </div>
-                <div class="people">
-                    <img src="cozn48.ru/img/sotrudnik4.png">
-
-                    <div class="ptext"><strong>Кренева</strong><br>
-                        Алеся Михайловна
-                        <div class="specialisation">специалист по массажу</div>
-                    </div>
-                </div>
-            </div>
-            <div class="p2 col-lg-4 col-md-4 col-sm-6 col-xs-12">
-
-                <div class="people">
-                    <img src="cozn48.ru/img/sotrudnik2.png">
-
-                    <div class="ptext"><strong>Подовинникова</strong><br>
-                        Юлия Владимировна
-                        <div class="specialisation">специалист по массажу</div>
-                    </div>
-                </div>
-
-                <div class="people">
-                    <img src="cozn48.ru/img/sotrudnik5.png">
-
-                    <div class="ptext"><strong>Жданова</strong><br>
-                        Надежда Ивановна
-                        <div class="specialisation">специалист по массажу</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="people col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <img src="cozn48.ru/img/sotrudnik3.png">
-
-                <div class="ptext"><strong>Федоренко</strong><br>
-                    Лилия Владимировна
-                    <div class="specialisation">специалист по массажу</div>
-                </div>
-            </div>
-
-
-            <div class="people col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <img src="cozn48.ru/img/sotrudnik6.png">
-
-                <div class="ptext"><strong>Пищулина</strong><br>
-                    Алина Валерьевна
-                    <div class="specialisation">специалист по массажу<br>
-                        высшей категории</div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
-</div>
-<div><!--end of specialists-->
-    <br>
-    <div class="seeall"><img src="cozn48.ru/img/minibutton.png"><a href="#">Посмотреть всех</a><br></div>
-</div>
-<br>
-</div>
-
-
-<div class="skidki">
-    <br>
-
-    <h2>СКИДКИ И АКЦИИ</h2>
-
-    <div class="sk">
-        <div class="container">
-            <div class="sk1 col-xs-12 col-md-12 col-sm-12 col-lg-4"> <img src="cozn48.ru/img/skidki1.png"> </div>
-            <div class="sk1 col-xs-12 col-md-12 col-sm-12 col-lg-4"> <img src="cozn48.ru/img/skidki2.png"> </div>
-            <div class="sk1 col-xs-12 col-md-12 col-sm-12 col-lg-4"> <img src="cozn48.ru/img/skidki3.png"> </div>
-        </div>
+    <div><!--end of specialists-->
+        <br>
+        <div class="seeall"><img src="cozn48.ru/img/minibutton.png"><a href="/team">Посмотреть всех</a><br></div>
     </div>
     <br>
 </div>
-
-<!--end of skidki-->
 
 <div class="news">
     <h2>НОВОСТИ</h2>
 
     <div class="container">
-        <div class="news1 col-md-3 col-sm-6 col-xs-12">
-            <img src="cozn48.ru/img/news1.jpg">
-            <div class="s1"><a href="#">День рождения микрорайона Университетский вместе с ГК «Здоровье нации»</a></div>
 
-            <div class="textnews1">
-                Свой день рождения, 19 июня, микрорайон УНИВЕРСИТЕТСКИЙ г. Липецка, отметил - ЯРКО, СПОРТИВНО, АКТИВНО
-                вместе с ГК «Здоровье нации»!
-            </div>
-            <div class="date1">
-                23.06.2015
-            </div>
-        </div>
-        <div class="news1 col-md-3 col-sm-6 col-xs-12">
-            <img src="cozn48.ru/img/news2.jpg">
-            <div class="s1"><a href="#">С Днем Рождения!</a></div>
+        @foreach($getNews as $item)
 
-            <div class="textnews1">
-                Поздравляем с Днем Рождения врача-оториноларинголога, Тоспаева Рашида Рауфовича! Желаем счастья и добра,
-                пусть будет к Вам судьба щедра! Мечты в реальность воплотятся, любовь и радость вечно длятся!
-            </div>
-            <div class="date1">
-                23.06.2015
-            </div>
-        </div>
-        <div class="news1 col-md-3 col-sm-6 col-xs-12">
-            <img src="cozn48.ru/img/news3.jpg">
-            <div class="s1"><a href="#">С Днем Рождения!</a></div>
+            <div class="news1 col-md-3 col-sm-6 col-xs-12">
+                <img src="{{$item['avatar']}}">
+                <div class="s1"><a href="/blog/{{$item['id']}}">{{$item['name']}}</a></div>
 
-            <div class="textnews1">
-                Поздравляем с Днем Рождения медицинскую сестру, Люшненко Алину Эдуардовну! С днем рожденья поздравляем!
-                Здоровья, успехов и счастья желаем, пусть мир улыбается солнышком ясным!
+                <div class="textnews1">
+                    {{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}
+                </div>
+                <div class="date1">
+                    {{$item['created_at']}}
+                </div>
             </div>
-            <div class="date1">
-                23.06.2015
-            </div>
-        </div>
-        <div class="news1 col-md-3 col-sm-6 col-xs-12">
-            <img src="cozn48.ru/img/news4.jpg">
-            <div class="s1"><a href="#">Группа компаний «Здоровье нации» pа счастливое и здоровое детство!</a></div>
 
-            <div class="textnews1">
-                31 мая в Парке Победы города Липецка для детей и их родителей Группа компаний «Здоровье нации» провела
-                масштабный праздник
-            </div>
-            <div class="date1">
-                23.06.2015
-            </div>
-        </div>
+        @endforeach
+
     </div>
 </div>
 <div class="sites-slider">
@@ -304,7 +391,6 @@
             <div class="sl-img"><img src="cozn48.ru/img/zn3.png"></div>
             <div class="sl-img"><img src="cozn48.ru/img/zn4.png"></div>
             <div class="sl-img"><img src="cozn48.ru/img/zn5.png"></div>
-            <div class="sl-img"><img src="cozn48.ru/img/zn-blank.png"></div>
         </div>
         <script type="text/javascript">
             $('.autoplay').slick({
@@ -352,84 +438,4 @@
 
 </div>
 <!--end map-->
-<div class="downhead">
-    <div class="buttons footer-buttons">
-        <nav class="navbar navbar-default container footer-nav">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                    <ul class="nav navbar-nav">
-                        <li >
-                            <a href="#">О ЦЕНТРЕ</a>
-                        </li>
-
-                        <li><a href="#">УСЛУГИ</a></li>
-                        <li><a href="#">СПЕЦИАЛИСТЫ</a></li>
-                        <li><a href="#">НОВОСТИ</a></li>
-                        <li><a href="#">АКЦИИ</a></li>
-                        <li><a href="#">ОТЗЫВЫ</a></li>
-                        <li><a href="#">ПРАЙС-ЛИСТ</a></li>
-                        <li><a href="#">СТАТЬИ</a></li>
-                        <li><a href="#">КОНТАКТЫ</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-    </div>
-</div>
-<!--end downhead-->
-<div class="footer">
-    <div class="container">
-        <div class="footer1 col-sm-6">© ООО «Центр остеопатии» 2015</div>
-        <div class="octavian col-sm-5">
-            Разработка, поддержка
-            и продвижение сайта
-        </div>
-        <div class="octav col-sm-1">
-            <a href="#"><img src="cozn48.ru/img/octavian.png"></a>
-        </div>
-    </div>
-    <div class="error">
-        <a href="#" data-toggle="modal" data-target="#myModal">сообщить об ошибке</a>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-
-                <form id="otchet" action="/" method="get">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Отчёт об ошибке</h4>
-                    </div>
-                    <div class="modal-body obltext">
-                        <textarea name="report_error"></textarea>
-                        <input name="hid_report" id="report_url_page" type="hidden">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                        <button id="sendotchet" type="button" class="btn btn-primary">Отправить</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!--end footer-->
-</body>
-</html>
 @endsection

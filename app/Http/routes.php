@@ -27,9 +27,12 @@ Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], funct
     Route::resource('/questanswer', 'QuestAnswerController');
     Route::resource('/medencyclopedia', 'EncyclopediaController');
     Route::resource('/encypost', 'EncyPostController');
+    Route::resource('/articles', 'ArticlesController');
     Route::resource('/answers', 'AnswersController');
     Route::resource('/reviews', 'ReviewsController');
     Route::resource('/service', 'ServiceController');
+    Route::resource('/shares', 'SharesController');
+    Route::resource('/page', 'PageController');
     Route::resource('/gallery', 'GalleryController');
     Route::resource('/team', 'TeamController');
     Route::resource('/feedback', 'FeedbackController');
@@ -37,6 +40,7 @@ Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], funct
         'getIndex' => 'appointment',
     ]);
     Route::resource('/blog', 'BlogController');
+
     Route::resource('/', 'HomeController');
 });
 
@@ -55,9 +59,18 @@ Route::group(['namespace' => 'Admin','prefix' => 'dashboard'], function()
 
 //Группа админ
 //
+
+//Извиняюсь за то чо сделал так...
+Route::resource('dashboard/spcat', 'Admin\SpecCatController');
+Route::post('dashboard/spcat/store','Admin\SpecCatController@store');
+Route::get('dashboard/spcat/edit/{id}','Admin\SpecCatController@edit');
+Route::post('dashboard/spcat/update/{id}','Admin\SpecCatController@update');
+Route::get('dashboard/spcat/destroy/{id}','Admin\SpecCatController@destroy');
+
+
 Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefix' => 'dashboard'], function ()
 {
-
+    //Route::resource('spcat', 'SpecCatController');
     Route::resource('questanswer', 'QuestAnswerController');
     Route::resource('user', 'UserController');
     Route::resource('groups', 'GroupsController');
@@ -69,6 +82,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefi
     Route::resource('filemanager', 'FilemanagerController');
     Route::resource('', 'AdminController');
     Route::resource('special', 'SpecialistyController');
+
     Route::resource('options', 'OptionsController');
     Route::resource('feedback', 'FeedbackController');
     Route::controller('reviews', 'ReviewsController', [
@@ -81,6 +95,8 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefi
         'getIndex' => 'dashboard.category.index',
         'getAdd' => 'dashboard.category.add',
     ]);
+
+
 
     Route::controller('goods', 'GoodsController', [
         'getIndex' => 'goods',
@@ -131,11 +147,11 @@ Route::group(['namespace' => 'API', 'middleware' => 'cors','prefix' => 'api'], f
 
 
 
-Route::group(['namespace' => 'test', 'prefix' => 'test'], function()
+/*Route::group(['namespace' => 'test', 'prefix' => 'test'], function()
 {
     Route::resource('/{model}/{function?}', 'TestController');
 
-});
+});*/
 
 
 

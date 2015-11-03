@@ -6,82 +6,68 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\SpecCat;
+use Session;
 
 class SpecCatController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        $Category = SpecCat::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+
+        return view("dashboard/special/categorySpecial",['Category' => $Category ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
+
+        return view("dashboard/special/categoryCreate");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $cat = new SpecCat;
+        $cat->name = $request->name;
+        $cat->ids = Session::get('website');
+        $cat->save();
+        return redirect('dashboard/spcat');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
-        //
+
+        $Category =  SpecCat::where('id',$id)->firstOrFail();
+
+        return view("dashboard/special/categoryUpdate",[
+            'Category' =>$Category
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+
+    public function update(Request $request,$id)
     {
-        //
+
+        $cat = SpecCat::where('id',$id)->firstOrFail();
+        $cat->name = $request->name;
+        $cat->save();
+        return redirect('dashboard/spcat');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
-        //
+        $cat = SpecCat::where('id',$id)->firstOrFail();
+        $cat->delete();
+        return redirect('dashboard/spcat');
     }
 }

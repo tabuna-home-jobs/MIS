@@ -12,7 +12,10 @@ class AlterTableSpecialist extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('specialisty', function($table)
+        {
+            $table->string('cats')->nullable();
+        });
     }
 
     /**
@@ -22,6 +25,6 @@ class AlterTableSpecialist extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('specialisty');
     }
 }

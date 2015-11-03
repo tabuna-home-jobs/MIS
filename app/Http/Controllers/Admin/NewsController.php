@@ -60,7 +60,7 @@ class NewsController extends Controller
 
         //Пока оставлю так
         if (Request::hasFile('avatar')) {
-            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $news->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
 
@@ -130,7 +130,7 @@ class NewsController extends Controller
 
         //Пока оставлю так
         if (Request::hasFile('avatar')) {
-            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $news->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
 

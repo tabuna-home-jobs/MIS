@@ -335,6 +335,24 @@
                                 <i class="fa fa-user-md"></i>
                                 <span>Специалисты</span>
                             </a>
+
+
+                            <ul class="nav nav-sub dk">
+
+                                <li class="{{Active::route('dashboard.category.*')}}">
+                                    <a href="{{URL::route('dashboard.spcat.index')}}">
+                                        <i class="fa fa-medkit icon"></i>
+                                        <span>Категории</span>
+                                    </a>
+                                </li>
+                                <li class="{{Active::route('dashboard.news.*')}}">
+                                    <a href="{{URL::route('dashboard.special.index')}}">
+                                        <i class="fa fa-stethoscope"></i>
+                                        <span>Специалисты</span>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
 
 
@@ -358,7 +376,7 @@
                                     </a>
                                 </li>
                                 <li class="{{Active::route('dashboard.news.*')}}">
-                                    <a href="{{URL::route('dashboard.news.index')}}">
+                                    <a href="dashboard/goods">
                                         <i class="fa fa-stethoscope"></i>
                                         <span>Услуги</span>
                                     </a>

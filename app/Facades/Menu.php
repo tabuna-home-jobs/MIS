@@ -18,6 +18,7 @@ class Menu  extends Facade {
             $html .= "<li class='$li->class'><a href='$li->link'> $pref $li->label</a></li>";
         }
 
+
         return $html;
     }
 

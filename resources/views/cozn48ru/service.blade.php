@@ -1,79 +1,131 @@
-@extends('site1ru/header')
+@extends('cozn48ru/header')
 
 @section('content')
-
-    <div class="sub-page-content">
-
+    <div class="page-content">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h2 class="bordered light">Предоставляемые <span>Услуги</span></h2>
-                    <div class="products">
+            <h1>Услуги центра Остеопатии</h1>
+            <div class="page-text">
 
+                <div class="nav-good-category-container">
 
-                        @foreach($Goods as $good)
+                    <div class="btn-group nav-good-category" role="group" aria-label="...">
+                        <a href="/service" type="button" class="btn btn-default">Все</a>
+                        @foreach($Category as $item)
 
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="/service/{{$good['id']}}"><img alt="" src="{{$good['avatar']}}" height="100px"></a>
-                            </div>
-                            <h4>{{$good['name']}}</h4>
-
-                            <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> {{$good['price']}}</p>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="sperator"></span>
-                            <a class="ad-to-cart" href="/service/{{$good['id']}}"><i class="fa fa-hospital-o"></i>Подробнее</a>
-                        </div>
+                            <a href="/service?category={{$item['id']}}" type="button" class="btn btn-default">{{$item['name']}}</a>
 
                         @endforeach
-
                     </div>
 
-                    <div class="clearfix"></div>
-                    {!! $Goods->render() !!}
                 </div>
-                <aside class="col-md-4">
-
-                    <div class="sidebar-widget clearfix">
-                        <h2 class="bordered light">Категории</h2>
-                        <ul class="tags">
-                            @foreach($Category as $value)
-
-                                <li><a href="/service?category={{$value['id']}}">{{$value['name']}}</a></li>
-
-                            @endforeach
-
-                        </ul>
-                    </div>
-
-
-
-                    <div class="sidebar-widget light">
-                        <h2 class="bordered light">Последние новости</h2>
-
-                        @foreach($LastNews as $lastNew)
-                            <article class="popular-post">
-                                <img alt="{{$lastNew->title}}" src="{{$lastNew->avatar}}">
-                                <h4><a href="/blog/{{$lastNew->id}}">{{$lastNew->name}}</a></h4>
-
-                                <p class="text-justify">{{ substr(strip_tags($lastNew->content), 0, 201) }} ...</p>
-
-                                <p class="popular-date text-right">{{$lastNew->created_at}}</p>
-                            </article>
-                        @endforeach
-                    </div>
 
 
 
 
 
 
-                </aside>
+                <div class="row">
+                    @foreach($Goods as $item)
+                        <div class="col-md-4 item-row-good">
+                            <div>
+                                <div class="item-row-good-img">
+                                    <img src="{{$item['avatar']}}" alt="">
+                                </div>
+                                <h3><a href="/blog/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
+                                <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
+                                <div class="seeall"><img src="/cozn48.ru/img/minibutton.png"><a href="/service/{{$item['id']}}">Перейти к услуге</a><br></div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
+
     </div>
+    <div class="map">
+
+        <script type="text/javascript" charset="utf-8"
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=nLG7p1-vbVZ40JWbYYtbBh9udCUS_5SM&width=100%&height=450"></script>
+
+    </div>
+
+    <style>
+        .page-content {
+            padding-bottom: 20px;
+        }
+        .seeall {
+            text-align: left;
+            margin:10px 0;
+        }
+        .item-row-good-img {
+            text-align: center;
+        }
+        .nav-good-category {
+            margin:30px 0;
+            text-align: center;
+        }
+        .item-row-good {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .item-row-good h3>a {
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 10px;
+            display: inline-block;
+        }
+        .nav-good-category-container {
+            text-align: center;
+        }
+    </style>
+    <script>
+        var resized = function (height) {
+
+            $('.item-row').each(function(){
+                var height_this = $(this).height();
+                height_this > height ? height = height_this:'';
+            });
+
+            $('.item-row').height(height);
+        };
+
+        $(window).resize(function(){
+            var height = 0;
+            $('.item-row').each(function(){
+                var height_this = $(this).height();
+                //height_this > height ? height = height_this:'';
+                if(height_this > height){
+                    height = height_this;
+                }
+            });
+
+            $('.item-row').height(height);
+        });
+
+        $(document).ready(function(){
+            var height = 0;
+            $('.item-row').each(function(){
+                var height_this = $(this).height();
+                //height_this > height ? height = height_this:'';
+                if(height_this > height){
+                    height = height_this;
+                }
+            });
+
+            $('.item-row').height(height);
+        });
+
+    </script>
+
+
+
+
+                    </div>
+
+
+                    {!! $Goods->render() !!}
+
 
 
 
