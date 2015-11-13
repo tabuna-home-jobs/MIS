@@ -45,7 +45,8 @@
                                                 <input type="hidden" name="_method" value="delete">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <button type="submit" class="btn btn-danger"><span class="fa fa-trash-o"></span></button>
-                        </div>
+
+                                            </form>
                         </td>
                                     </tr>
                                 @endforeach

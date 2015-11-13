@@ -13,6 +13,13 @@
                     <div class="panel-heading font-bold">Содержание</div>
                     <div class="panel-body">
 
+
+                        <div class="form-group">
+                            <label>Порядок</label>
+                            <input class="form-control" type="text" maxlength="255" required name="sort"
+                                   value="0">
+                        </div>
+
                         <div class="form-group">
                             <label>ФИО</label>
                             <input class="form-control" type="text" maxlength="255" required name="fio"
@@ -30,7 +37,7 @@
 
                         <div class="form-group">
                             <label>Квалификация</label>
-                            <input class="form-control" type="text" maxlength="255" required name="subname"
+                            <input class="form-control" type="text" maxlength="255" name="subname"
                                    value="">
                         </div>
 
@@ -38,7 +45,7 @@
                         <div class="form-group">
                             <label>Специализация</label>
 
-                            <textarea class="form-control" rows="5" name="special">
+                            <textarea style="overflow: scroll" class="form-control" rows="5" name="special">
 
                             </textarea>
                         </div>
@@ -50,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             <label>Образование</label>
-                            <input class="form-control" type="text" maxlength="255" required name="obrazovanie"
+                            <input class="form-control" type="text" maxlength="255" name="obrazovanie"
                                    value="">
                         </div>
 

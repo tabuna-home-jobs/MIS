@@ -16,25 +16,44 @@
         <div class="container">
             <h1>Услуги</h1>
             <div class="page-text">
+
+                <div class="btn-group" role="group" aria-label="...">
+                    @foreach($Category as $value)
+
+
+                        <a href="/service?category={{$value['id']}}" type="button"
+                           class="btn btn-default">{{$value['name']}}</a>
+
+                    @endforeach
+
+
+                </div>
+
                 <div class="row">
                     @foreach($Goods as $item)
                         <div class="col-md-4 item-row">
                             <div>
                                 <div><img src="{{$item['avatar']}}" alt=""></div>
-                                <h3><a href="/blog/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
-                                <p class="day">{{$item['created_at']}}</p>
+                                <h3>
+                                    <a href="/service/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a>
+                                </h3>
+
+                                <p class="day"></p>
                                 <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
-                                <div class="seeall"><a href="/service/{{$item['id']}}">Читать полностью <img src="/cozn48.ru/img/minibutton.png"></a><br></div>
+                                <div class="seeall"><a href="/service/{{$item['id']}}"
+                                                       class="btn btn-primary btn-default"><span
+                                                class="glyphicon glyphicon-eye-open"></span> Посмотреть</a></div>
                             </div>
                         </div>
                     @endforeach
                 </div>
+                {!! $Goods->render() !!}
             </div>
         </div>
 
     </div>
     <script>
-        var resized = function (height) {
+        var resized = function () {
 
             $('.item-row').each(function(){
                 var height_this = $(this).height();
@@ -44,14 +63,35 @@
             $('.item-row').height(height);
         };
 
-        $(window).resize(function(){
+
+        $(window).on('load', function () {
             var height = 0;
-            resized(height);
+            $('.item-row').each(function () {
+                var height_this = $(this).height();
+                if (height_this > height) {
+                    height = height_this
+                }
+
+            });
+
+
+            $('.item-row').height(height);
         });
 
-        $(document).ready(function(){
+        $(window).on('resize', function () {
+
+            $('.item-row').css('height', 'auto');
             var height = 0;
-            resized(height);
+            $('.item-row').each(function () {
+                var height_this = $(this).height();
+                if (height_this > height) {
+                    height = height_this
+                }
+
+            });
+
+
+            $('.item-row').height(height);
         });
 
     </script>

@@ -31,8 +31,11 @@
 
                     </div>
 
-                    <div class="clearfix"></div>
-                    {!! $Goods->render() !!}
+                    <div class="clearfix text-center">
+
+                        {!! $Goods->render() !!}
+                    </div>
+
                 </div>
                 <aside class="col-md-4">
 

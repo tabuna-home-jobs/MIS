@@ -26,12 +26,9 @@ class SpecialRequest extends Request
     {
         return [
             'fio' => 'max:255|required',
-            'subname' => 'max:255|required',
-            'special' => 'max:255|required',
-            'obrazovanie' => 'max:255|required',
+
             'opyt' => 'max:255|required',
-            'about' => 'required',
-            'works' => 'required',
+
         ];
     }
 }

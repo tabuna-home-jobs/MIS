@@ -4,43 +4,53 @@
 
 
     <div class="sub-page-content">
-    	
+
         
         <div class="container">
         	<h2 class="light bordered main-title">Наши <span> Специалисты</span></h2>
-     		<div class="row">
 
+
+            <nav class="clearfix text-center padding-bottom-30">
+                <ul class="tags">
+                    <li><a href="/team">Все <span class="glyphicon glyphicon-info-sign"></span> </a></li>
+                    @foreach($SpCat as $spec)
+                        <li><a href="/team?catspec={{$spec['id']}}">{{$spec['name']}}</a></li>
+                    @endforeach
+
+                </ul>
+            </nav>
+
+
+            <div class="row">
 
                 @foreach($Specialisty as $spec)
             	<div class="col-md-6 padding-bottom-60 clearfix">
-                    <div class="doctors-img"><img src="{{$spec->avatar}}" width="234" alt="" title="">
-                        <ul class="list-unstyled social2">
-                            <li><a href="#." class="fb"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#." class="twitter"><i class="fa fa-vk"></i></a></li>
-                            <li><a href="#." class="odnok"><i class="fa fa-circle-o"></i></a></li>
-                        </ul>
+                    <div class="doctors-img"><img src="{{$spec->avatar or ''}}" width="234" alt="" title="">
                         </div>
                     <div class="doctors-detail">
-                        <h4>{{$spec->fio}}<span class="text-center">{{$spec->subname}}</span></h4>
+                        <h4>{{$spec->fio or ''}}<span class="text-center">{{$spec->subname or ''}}</span></h4>
 
+                        @if(!empty($spec->special))
                         <p><label class="heading">Специализация: </label><label
-                                    class="detail">{{$spec->special}}</label>
+                                    class="detail">{{$spec->special or ''}}</label>
                         </p>
+                        @endif
 
+                        @if(!empty($spec->obrazovanie))
                         <p><label class="heading">Образование</label><label
-                                    class="detail">{{$spec->obrazovanie}}</label></p>
+                                    class="detail">{{$spec->obrazovanie or ''}}</label></p>
+                        @endif
 
-                        <p><label class="heading">Опыт: </label><label class="detail">{{$spec->opyt}} </label></p>
+                        @if(!empty($spec->opyt))
+                            <p><label class="heading">Должность: </label><label
+                                        class="detail">{{$spec->opyt or ''}} </label></p>
+                        @endif
 
-                        <p><label class="heading">Умения:</label><label class="detail">{{$spec->about}} </label></p>
+                        @if(!empty($spec->about))
+                            <p><label class="heading">Умения:</label><label
+                                        class="detail">{{$spec->about or ''}} </label></p>
+                        @endif
 
-                        <p><label class="heading">Рабочие дни:</label><label class="detail">
-                                @foreach(unserialize($spec->works) as $work)
-                                    {{$work}}
-                                @endforeach
-                            </label>
-                        </p>
                         </div>
                 </div>
 
@@ -51,7 +61,7 @@
             </div>
 
 
-            <div class="row">
+            <div class="row text-center">
                 {!! $Specialisty->render() !!}
             </div>
 
@@ -60,9 +70,4 @@
 
 
     </div><!--end sub-page-content-->
-    
-    
-    
-    
-    
     @endsection

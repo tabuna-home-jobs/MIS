@@ -10,7 +10,9 @@
                             <div>
                                 <h3>{{$item['name']}}</h3>
                                 <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
-                                <div class="seeall"><img src="/cozn48.ru/img/minibutton.png"><a href="/shares/{{$item['id']}}">Посмотреть акцию</a><br></div>
+                                <div class="seeall"><a href="/shares/{{$item['id']}}"
+                                                       class="btn btn-primary btn-default"><span
+                                                class="glyphicon glyphicon-eye-open"></span> Посмотреть</a></div>
                             </div>
                         </div>
                     @endforeach
