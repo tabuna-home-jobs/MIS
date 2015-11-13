@@ -14,7 +14,8 @@ class CategoryController extends Controller {
 
     public function getIndex()
     {
-        $Category = Category::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+        Category::fixTree();
+        $Category = Category::where('ids', Session::get('website'))->paginate(15);
         return view("dashboard/category/category",['Category' => $Category ]);
     }
 

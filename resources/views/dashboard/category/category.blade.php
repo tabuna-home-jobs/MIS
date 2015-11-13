@@ -21,10 +21,8 @@
                             <table class="table table-striped m-b-none dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                                 <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Миниатюра</th>
                                     <th>Имя</th>
-                                    <th>Управление</th>
+                                    <th class="pull-right">Управление</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -33,18 +31,7 @@
                                     @include('dashboard.category._partials.category', $category)
                                 @endforeach
 
-                                @foreach ($Category as $Cat)
-                                    <tr>
-                                        <td>{{ $Cat->id }}</td>
-                                        <td><img src="{{ $Cat->avatar }}" class="img-responsive" width="100px" height="50px"></td>
-                                        <td>{{ $Cat->name }}</td>
-                                        <td>
-                                            <a href="/dashboard/category/add/{{ $Cat->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
-                                            <a href="/dashboard/goods/category/{{ $Cat->id }}" class="btn btn-info"><span class="glyphicon glyphicon-list-alt"></span> </a>
-                                            <a href="/dashboard/category/destroy/{{ $Cat->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
-                                        </td>
-                                    </tr>
-                                @endforeach
+
                                 </tbody>
                         </table>
                     </div>
