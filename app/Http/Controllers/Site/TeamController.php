@@ -5,7 +5,6 @@ use App\Http\Requests;
 use App\Models\Sites;
 use App\Models\SpecCat;
 use Request;
-
 class TeamController extends Controller {
 
 	/**
@@ -16,18 +15,18 @@ class TeamController extends Controller {
 	public function index($sitename, $sitedomen)
 	{
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-		//$Specialisty = $getSites->getTeam()->orderBy('sort', 'desc')->paginate(6);
-		$SpecCat = $Specialisty = $getSites->getSpecCat()->get();
+        //$Specialisty = $getSites->getTeam()->orderBy('sort', 'desc')->paginate(6);
+		$SpecCat = $Specialisty = $getSites->getSpecCat()->paginate(9);
 
 
 		$requestCategory = Request::input('catspec');
 		if (is_null($requestCategory))
-			$Specialisty = $getSites->getTeam()->paginate(10);
+			$Specialisty = $getSites->getTeam()->paginate(9);
 		else
-			$Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->paginate(10);
+			$Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->paginate(9);
 
 
-		return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty, 'SpCat' => $SpecCat]);
+        return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty,'SpCat' => $SpecCat]);
 	}
 
 	/**

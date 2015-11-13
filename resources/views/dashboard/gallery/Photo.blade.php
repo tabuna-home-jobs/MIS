@@ -43,6 +43,11 @@
 
                                 </div>
                             </div>
+                            <h3>Добавте ссылку на видео с сервиса youtube</h3>
+                            <div>
+                                <textarea class="form-control" name="videourl" placeholder="Ссылка на видео с сервиса youtube"></textarea>
+                            </div>
+
                         </form>
 
 
@@ -70,12 +75,19 @@
 
                                         </div>
                                     </div>
+
+
                                     <div class="panel-footer text-center">
                                         <div class="btn-group btn-group-sm" role="group" >
                                             <a href="/dashboard/gallery/deletephote/{{$photo->id}}" class="btn btn-danger">Удалить</a>
                                         </div>
 
-                                    </div>
+
+                                </div>
+                                </div>
+                                <h3>Отредактируйте ссылку на видео с сервиса youtube</h3>
+                                <div>
+                                    <textarea class="form-control" name="videourl" placeholder="Ссылка на видео с сервиса youtube">{{$photo->videourl}}</textarea>
                                 </div>
                             </div>
 

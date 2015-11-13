@@ -1,0 +1,47 @@
+@media (max-width: 1500px) {
+    .menu-container {
+        position: relative;
+    }
+    .form-consult {
+        top:10px;
+    }
+}
+@media (max-width: 1200px) {
+    .form-consult {
+        position: relative;
+        display: block;
+        text-align: center;
+    }
+    .form-zapisi form input {
+        float: left;
+        vertical-align: top;
+        width: 32.19%;
+        border:1px #4fbbbb solid;
+        white-space: nowrap;
+    }
+    .form-zapisi form input:nth-child(4) {
+        float: right;
+    }
+    .form-zapisi form input:nth-child(3){
+        margin: 0px 1.71%;
+    }
+    .form-zapisi form textarea {
+        border:1px #4fbbbb solid;
+        resize: none;
+    }
+    .form-zapisi form>div>div:nth-child(1){
+        display: block;
+    }
+    .form-zapisi form {
+        display: block;
+    }
+}
+@media (max-width: 400px) {
+    .form-zapisi form input {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .form-zapisi form input:nth-child(3){
+        margin: 0
+    }
+}

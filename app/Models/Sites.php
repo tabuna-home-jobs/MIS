@@ -26,6 +26,12 @@ class Sites extends Model {
         return $this->hasOne('App\Models\News','ids');
     }
 
+    public function getArts()
+    {
+        return $this->hasOne('App\Models\Articles','ids');
+    }
+
+
     public function getPages()
     {
         return $this->hasOne('App\Models\Page','ids');
@@ -50,6 +56,10 @@ class Sites extends Model {
     public function getGoods()
     {
         return $this->hasOne('App\Models\Goods', 'ids');
+    }
+    public function getSpecCat()
+    {
+        return $this->hasOne('App\Models\SpecCat', 'ids');
     }
 
     public function getSpecCat()

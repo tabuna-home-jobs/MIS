@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\SpecialRequest;
-use App\Models\SpecCat;
 use App\Models\Specialisty;
+use App\Models\SpecCat;
 use Image;
 use Redirect;
 use Request;
@@ -52,7 +52,7 @@ class SpecialistyController extends Controller
                 'about' => $request->about,
                 'works' => serialize($request->works),
                 'cats' => $request->cats,
-            'sort' => $request->sort,
+                'sort' => $request->sort,
                 'ids' => Session::get('website'),
         ]);
 

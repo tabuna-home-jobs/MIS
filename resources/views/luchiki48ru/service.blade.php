@@ -21,8 +21,7 @@
                     @foreach($Category as $value)
 
 
-                        <a href="/service?category={{$value['id']}}" type="button"
-                           class="btn btn-default">{{$value['name']}}</a>
+                        <a href="/service?category={{$value['id']}}" type="button" class="btn btn-default">{{$value['name']}}</a>
 
                     @endforeach
 
@@ -34,15 +33,10 @@
                         <div class="col-md-4 item-row">
                             <div>
                                 <div><img src="{{$item['avatar']}}" alt=""></div>
-                                <h3>
-                                    <a href="/service/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a>
-                                </h3>
-
+                                <h3><a href="/service/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
                                 <p class="day"></p>
                                 <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
-                                <div class="seeall"><a href="/service/{{$item['id']}}"
-                                                       class="btn btn-primary btn-default"><span
-                                                class="glyphicon glyphicon-eye-open"></span> Посмотреть</a></div>
+                                <div class="seeall"><a href="/service/{{$item['id']}}" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-eye-open"></span> Посмотреть</a></div>
                             </div>
                         </div>
                     @endforeach
@@ -64,11 +58,12 @@
         };
 
 
-        $(window).on('load', function () {
+
+        $(window).on('load',function(){
             var height = 0;
-            $('.item-row').each(function () {
+            $('.item-row').each(function(){
                 var height_this = $(this).height();
-                if (height_this > height) {
+                if(height_this > height){
                     height = height_this
                 }
 
@@ -78,13 +73,13 @@
             $('.item-row').height(height);
         });
 
-        $(window).on('resize', function () {
+        $(window).on('resize',function(){
 
-            $('.item-row').css('height', 'auto');
+            $('.item-row').css('height','auto');
             var height = 0;
-            $('.item-row').each(function () {
+            $('.item-row').each(function(){
                 var height_this = $(this).height();
-                if (height_this > height) {
+                if(height_this > height){
                     height = height_this
                 }
 

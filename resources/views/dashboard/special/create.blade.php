@@ -37,7 +37,7 @@
 
                         <div class="form-group">
                             <label>Квалификация</label>
-                            <input class="form-control" type="text" maxlength="255" name="subname"
+                            <input class="form-control" type="text" maxlength="255"  name="subname"
                                    value="">
                         </div>
 
@@ -57,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             <label>Образование</label>
-                            <input class="form-control" type="text" maxlength="255" name="obrazovanie"
+                            <input class="form-control" type="text" maxlength="255"  name="obrazovanie"
                                    value="">
                         </div>
 

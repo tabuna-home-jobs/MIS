@@ -211,7 +211,10 @@ return [
 		'GoodsMain' => App\Facades\GoodsMain::class,
 		'newsOnMain' => App\Facades\NewsonMain::class,
 		'sharesOnMain' => App\Facades\sharesOnMain::class,
-		'reviewsOnMain' => App\Facades\ReviewsOnMain::class
+		'reviewsOnMain' => App\Facades\ReviewsOnMain::class,
+		'ArtsOnMain' => App\Facades\ArticlesOnMain::class,
+		'CustomPage' => App\Facades\PageOnMain::class,
+		'GalleryOnMain'=> \App\Facades\GalleryOnMain::class
     ],
 
 ];

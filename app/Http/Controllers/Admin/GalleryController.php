@@ -102,6 +102,7 @@ class GalleryController extends Controller {
 
         $photo->photoalbum_id = $request->album;
         $photo->ids = Session::get('website');
+        $photo->videourl = $request->videourl;
         $photo->save();
 
         //Флеш сообщение

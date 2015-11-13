@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Facades/GalleryOnMain.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Facades/NewsonMain.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Facades/PageOnMain.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SpecCatController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/cozn48ru/appointment.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/cozn48ru/blogNews.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/cozn48ru/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/cozn48ru/page.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/cozn48ru/shares.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/dashboard/special/categoryCreate.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/dashboard/special/categorySpecial.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/dashboard/special/categoryUpdate.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/karta-uspeharu/Articles.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/karta-uspeharu/artItem.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/karta-uspeharu/blogNews.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/karta-uspeharu/goods.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/karta-uspeharu/headerPage.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/karta-uspeharu/page.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/medicalsystemtk/appointment.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/sokzn48ru/Articles.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/sokzn48ru/artItem.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/sokzn48ru/blogNews.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/sokzn48ru/goods.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/sokzn48ru/headerPage.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/sokzn48ru/page.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/sokzn48ru/sharesItem.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/stomzn48ru/Articles.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/stomzn48ru/artItem.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/stomzn48ru/blogNews.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/stomzn48ru/goods.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/stomzn48ru/headerPage.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/stomzn48ru/page.blade.php" charset="UTF-8" />
   </component>
 </project>
