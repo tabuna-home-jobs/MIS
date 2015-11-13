@@ -33,7 +33,7 @@
 
                     <div class="clearfix text-center">
 
-                        {!! $Goods->render() !!}
+                        {!! $Goods->render(\Input::except('page')) !!}
                     </div>
 
                 </div>
