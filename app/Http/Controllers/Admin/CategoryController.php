@@ -21,8 +21,15 @@ class CategoryController extends Controller {
 
     public function getAdd($Category = null)
     {
+        $categories = Category::select('id', 'name', 'parent_id')
+            ->where('ids', Session::get('website'))
+            ->get();
+
         $Category = Category::find($Category);
-        return view("dashboard/category/view",['Category' => $Category ]);
+        return view("dashboard/category/view", [
+            'Category' => $Category,
+            'Categories' => $categories,
+        ]);
     }
 
 
@@ -39,6 +46,9 @@ class CategoryController extends Controller {
         $Category->name = $request->name;
         $Category->text = $request->text;
         $Category->tag = $request->tag;
+
+        $Category->parent_id = $request->parent_id;
+
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $Category->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();

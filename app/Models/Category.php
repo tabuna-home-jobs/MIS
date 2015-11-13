@@ -1,9 +1,10 @@
 <?php namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Kalnoy\Nestedset\Node;
 
-class Category extends Model {
+class Category extends Node
+{
 
     use SoftDeletes;
     /**
@@ -18,7 +19,7 @@ class Category extends Model {
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'text', 'tag', 'descript', 'avatar', 'ids'];
+    protected $fillable = ['title', 'name', 'text', 'tag', 'descript', 'avatar', 'ids', '_lft', '_rgt', 'parent_id'];
 
 
 
