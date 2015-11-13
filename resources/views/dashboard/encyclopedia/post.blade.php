@@ -23,7 +23,6 @@
                                     <th>Миниатюра</th>
                                     <th>Название</th>
                                     <th>Заголовок</th>
-                                    <th>Специализация</th>
                                     <th>Раздел</th>
                                     <th>Управление</th>
                                 </tr>
@@ -35,7 +34,6 @@
                                         <td><img src="{{ $post->avatar }}" class="img-responsive" width="100px" height="50px"></td>
                                         <td>{{$post->name}}</td>
                                         <td>{{$post->title}}</td>
-                                        <td>{{$post->specdoctor}}</td>
                                         <td>{{$post->Category->name}}</td>
                                         <td class="btn-toolbar">
                                             <div class="btn-group">

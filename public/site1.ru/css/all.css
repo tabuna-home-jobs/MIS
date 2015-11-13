@@ -10997,7 +10997,7 @@ div.facebook .pp_content, div.light_rounded .pp_bottom .pp_middle, div.light_rou
     display: none !important
 }
 
-.product{
+.product, .ency-prev {
     width: 31%;
     display: inline-block;
     float: none;

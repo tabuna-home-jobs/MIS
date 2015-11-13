@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\EncyPostRequest;
 use App\Models\EncyCategory;
+use App\Models\EncyPost;
 use App\Models\TimeTable;
 use Cache;
-use App\Models\EncyPost;
-use App\Http\Requests\Admin\EncyPostRequest;
-use Request;
 use Image;
+use Request;
 use Session;
 
 class EncyclopediaController extends Controller
@@ -52,7 +52,7 @@ class EncyclopediaController extends Controller
         $Encypost = new EncyPost($request->all());
         $Encypost->pol = serialize($request->pol);
         if (Request::hasFile('avatar')) {
-            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $Encypost->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
         $Encypost->save();
@@ -104,7 +104,7 @@ class EncyclopediaController extends Controller
         $post->pol = serialize($request->pol);
         //Пока оставлю так
         if (Request::hasFile('avatar')) {
-            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $post->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
 

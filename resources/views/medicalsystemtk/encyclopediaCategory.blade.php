@@ -128,14 +128,13 @@
                     </div>
 
 
-
-                    @if($Category->Post()->first())
+                    @if($Post->first())
                         <h2 class="light bordered">Новые материалы данной категории:</h2>
                         <div class="height20"></div>
 
-                        @foreach($Category->Post()->limit(6)->get() as $post)
+                        @foreach($Post as $post)
 
-                            <section class="col-md-4">
+                            <section class="col-md-4 ency-prev">
                                 <article class="blog-item">
                                     <div class="blog-thumbnail">
                                         <img src="{{$post->avatar}}" alt="">
@@ -153,6 +152,9 @@
                         @endforeach
                     @endif
 
+                    <div class="row text-center">
+                        {!! $Post->render() !!}
+                    </div>
 
                 </div>
             </div>

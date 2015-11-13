@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers\Site;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Models\EncyCategory;
 use App\Models\EncyPost;
 use DB;
@@ -63,6 +61,8 @@ class EncyclopediaController extends Controller
      */
     public function show($sitename,$sitedomen,$model)
     {
+
+
         $MainElementMenu = EncyCategory::where('encycategory_id','0')->select('id','name')->get();
 
 
@@ -73,10 +73,14 @@ class EncyclopediaController extends Controller
             ->get();
         sort($Index);
 
+        $post = $model->Post()->paginate(9);
+
+
         return view( $sitename.$sitedomen.'/encyclopediaCategory',[
             'MainElementMenu' => $MainElementMenu,
             'Category' => $model,
-            'Index' => $Index
+            'Index' => $Index,
+            'Post' => $post
         ]);
     }
 

@@ -29,7 +29,8 @@ class NewsRequest extends Request {
             'content' => 'required',
             'tag' => 'max:255',
             'descript' => 'max:255',
-            'avatar' => 'mimes:jpeg,bmp,png'
+				'avatar' => 'mimes:jpeg,bmp,png',
+				'created_at' => 'date',
 		];
 	}
 

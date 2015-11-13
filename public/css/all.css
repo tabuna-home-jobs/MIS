@@ -12963,3 +12963,10 @@ div.facebook .pp_content, div.light_rounded .pp_bottom .pp_middle, div.light_rou
 .ppt {
     display: none !important
 }
+
+.product, .ency-prev {
+    width: 31%;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
