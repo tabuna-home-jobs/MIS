@@ -25,12 +25,40 @@
 
                             <div class="form-group">
                                 <label for="content">Содержание</label>
-                                <textarea class="form-control" name="content" id="content">{{ $Reviews->content or '' }}</textarea>
+                                <textarea class="form-control" name="content" rows="10"
+                                          id="content">{{ $Reviews->content or '' }}</textarea>
                             </div>
 
 
+                            <div class="form-group">
+                                <label>Дата публикации</label>
+
+                                <div class='input-group date' id='datetimepicker'>
+                                    <input type='text' class="form-control" required name="created_at"
+                                           value="{{$Reviews->created_at or ''}}"/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
 
 
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Статус публикации</label>
+
+                                <div class="col-sm-10">
+                                    <label class="i-switch bg-success m-t-xs m-r">
+                                        <input type="radio" name="status" value="1"
+                                               @if($Reviews->publish) checked @endif>
+                                        <i></i>
+                                    </label>
+                                    <label class="i-switch bg-danger m-t-xs m-r">
+                                        <input type="radio" name="status" value="0"
+                                               @if(!$Reviews->publish) checked @endif>
+                                        <i></i>
+                                    </label>
+                                </div>
+                            </div>
 
 
 
