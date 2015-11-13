@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('medicalsystemtk/header')
 
 @section('content')
 
@@ -33,7 +33,7 @@
 
                     <div class="clearfix text-center">
 
-                        {!! $Goods->render(\Input::except('page')) !!}
+                        {!! $Goods->appends(\Input::except('page'))->render() !!}
                     </div>
 
                 </div>

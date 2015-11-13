@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('medicalsystemtk/header')
 
 
 
@@ -110,7 +110,7 @@
 
                         </ol>
 
-                        {!! $Comments->render(\Input::except('page')) !!}
+                        {!! $Comments->render() !!}
 
                         <form class="row testimonials2" action="/service" method="post">
                                 <input type="text" name="fio" max="255" required placeholder="Имя">

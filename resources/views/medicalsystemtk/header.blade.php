@@ -88,6 +88,8 @@
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
 
+
+                        <li class="{{Active::path('page/18')}}"><a href="/page/18">О нас</a></li>
                         <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
                         <li><a href="#">Личный кабинет</a></li>
                         <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li>
@@ -145,5 +147,4 @@
 @yield('content')
 
 
-
-    @include('site1ru/footer')
+@include('medicalsystemtk/footer')

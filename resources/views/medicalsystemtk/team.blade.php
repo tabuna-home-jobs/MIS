@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('medicalsystemtk/header')
 
 @section('content')
 
@@ -24,7 +24,7 @@
             <div class="row">
 
                 @foreach($Specialisty as $spec)
-            	<div class="col-md-6 padding-bottom-60 clearfix">
+                    <div class="col-md-6 padding-bottom-20 clearfix">
                     <div class="doctors-img"><img src="{{$spec->avatar or ''}}" width="234" alt="" title="">
                         </div>
                     <div class="doctors-detail">
@@ -62,7 +62,7 @@
 
 
             <div class="row text-center">
-                {!! $Specialisty->render() !!}
+                {!! $Specialisty->appends(\Input::except('page'))->render() !!}
             </div>
 
 
