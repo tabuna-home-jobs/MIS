@@ -10,7 +10,7 @@ use Redirect;
 use Request;
 use Session;
 use Validator;
-use App\Http\Requests\NewsRequest;
+use App\Http\Requests\ArtRequest;
 use App\Services\Social;
 
 
@@ -28,8 +28,8 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $NewsList = News::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/news/news", ['NewsList' => $NewsList]);
+        $Articles = Articles::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+        return view("dashboard/Articles/art", ['Articles' => $Articles]);
     }
 
     /**
@@ -39,7 +39,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view("dashboard/news/create");
+        return view("dashboard/Articles/create");
     }
 
     /**
@@ -47,9 +47,9 @@ class ArticlesController extends Controller
      *
      * @return Response
      */
-    public function store(NewsRequest $request)
+    public function store(ArtRequest $request)
     {
-        $news = new News([
+        $art = new Articles([
             'title'=>$request->title,
             'name'=>$request->name,
             'content'=>$request->content,
@@ -61,10 +61,10 @@ class ArticlesController extends Controller
         //Пока оставлю так
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
-            $news->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+            $art->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
 
-        $news->save();
+        $art->save();
 
 
 
@@ -75,51 +75,36 @@ class ArticlesController extends Controller
          */
 
         $Social = new Social([
-            'descript' => $news->descript,
-            'tag' => $news->tag,
-            'image' => $news->avatar,
-            'name' => $news->name,
-            'type' => 'news'
+            'descript' => $art->descript,
+            'tag' => $art->tag,
+            'image' => $art->avatar,
+            'name' => $art->name,
+            'type' => 'articles'
         ]);
         $Social->pushAll();
 
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->route('dashboard.news.index');
+        return redirect()->route('dashboard.art.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit(News $news)
+
+    public function edit(Articles $art)
     {
-        return view("dashboard/news/edit", ['news' => $news ]);
+        return view("dashboard/Articles/edit", ['Articles' => $art ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function update(News $news, NewsRequest $request)
+
+    public function update(Articles $art, ArtRequest $request)
     {
-        $news->fill([
+        $art->fill([
             'title'=>$request->title,
             'name'=>$request->name,
             'content'=>$request->content,
@@ -131,14 +116,14 @@ class ArticlesController extends Controller
         //Пока оставлю так
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
-            $news->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+            $art->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }
 
-        $news->save();
+        $art->save();
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
-        return redirect()->route('dashboard.news.index');
+        return redirect()->route('dashboard.art.index');
     }
 
     /**
@@ -147,10 +132,10 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function destroy(News $news)
+    public function destroy(Articles $art)
     {
-        $news->delete();
+        $art->delete();
         Session::flash('good', 'Вы успешно удалили значения');
-        return redirect()->route('dashboard.news.index');
+        return redirect()->route('dashboard.art.index');
     }
 }

@@ -18,7 +18,7 @@ class Photo extends Model {
      *
      * @var array
      */
-    protected $fillable = ['ids', 'photoalbum_id', 'url'];
+    protected $fillable = ['ids', 'photoalbum_id', 'url','videourl'];
 
 
 

@@ -16,8 +16,8 @@
 
                         <div class="form-group">
                             <label>Порядок</label>
-                            <input class="form-control" type="text" maxlength="255" required name="fio"
-                                   value="{{$Spec->fio or old('fio')}}">
+                            <input class="form-control" type="text" maxlength="255" required name="sort"
+                                   value="{{$Spec->sort or old('sort')}}">
                         </div>
 
                         <div class="form-group">
@@ -37,7 +37,7 @@
 
                         <div class="form-group">
                             <label>Квалификация</label>
-                            <input class="form-control" type="text" maxlength="255" required name="subname"
+                            <input class="form-control" type="text" maxlength="255"  name="subname"
                                    value="{{$Spec->subname or old('subname')}}">
                         </div>
 
@@ -45,7 +45,7 @@
                         <div class="form-group">
                             <label>Специализация</label>
 
-                            <textarea class="form-control" rows="5" name="special" required>{{$Spec->special or old('special')}}</textarea>
+                            <textarea style="overflow: scroll" class="form-control" rows="5" name="special" >{{$Spec->special or old('special')}}</textarea>
 
 
 
@@ -58,7 +58,7 @@
                         </div>
                         <div class="form-group">
                             <label>Образование</label>
-                            <input class="form-control" type="text" maxlength="255" required name="obrazovanie"
+                            <input class="form-control" type="text" maxlength="255"  name="obrazovanie"
                                    value="{{$Spec->obrazovanie or old('obrazovanie')}}">
                         </div>
 

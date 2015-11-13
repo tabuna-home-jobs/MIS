@@ -35,6 +35,7 @@ Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], funct
     Route::resource('/page', 'PageController');
     Route::resource('/gallery', 'GalleryController');
     Route::resource('/team', 'TeamController');
+    Route::resource('/art', 'ArtController');
     Route::resource('/feedback', 'FeedbackController');
     Route::controller('/appointment', 'AppointmentController', [
         'getIndex' => 'appointment',
@@ -78,6 +79,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefi
     Route::resource('encyclopediaCategory', 'EncyclopediaCategoryController');
     Route::resource('page', 'PageController');
     Route::resource('news', 'NewsController');
+    Route::resource('art', 'ArticlesController');
     Route::resource('shares', 'SharesController');
     Route::resource('filemanager', 'FilemanagerController');
     Route::resource('', 'AdminController');

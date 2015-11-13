@@ -29,6 +29,7 @@ class RouteServiceProvider extends ServiceProvider {
         $router->model('encyclopediaCategory', 'App\Models\EncyCategory');
         $router->model('page', 'App\Models\Page');
         $router->model('news', 'App\Models\News');
+		$router->model('art', 'App\Models\Articles');
         $router->model('shares', 'App\Models\Shares');
         $router->model('special', 'App\Models\Specialisty');
 		$router->model('encyclopedia', 'App\Models\EncyPost');

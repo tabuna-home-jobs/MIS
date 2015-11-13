@@ -2765,6 +2765,7 @@
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
+      <column name="videourl" sqlType="varchar" precision="500" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="photo_pkey" columns="id"/>
     </table>
     <table name="photo_id_seq" schema="public" catalog="octavian_mis" type="SEQUENCE">
@@ -2926,7 +2927,7 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc3BlY2lhbGlzdHlfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="fio" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="subname" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="special" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="special" sqlType="varchar" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="obrazovanie" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="opyt" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="about" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -2937,6 +2938,7 @@
       <column name="ids" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="avatar" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="cats" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="sort" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
       <primary-key name="specialisty_pkey" columns="id"/>
     </table>
     <table name="specialisty_id_seq" schema="public" catalog="octavian_mis" type="SEQUENCE">

@@ -376,7 +376,7 @@
                                     </a>
                                 </li>
                                 <li class="{{Active::route('dashboard.news.*')}}">
-                                    <a href="dashboard/goods">
+                                    <a href="/dashboard/goods">
                                         <i class="fa fa-stethoscope"></i>
                                         <span>Услуги</span>
                                     </a>
