@@ -70,6 +70,20 @@
 
                             <textarea class="form-control" rows="7"  maxlength="255" required name="descript">{{$news->descript or ''}}</textarea>
                         </div>
+
+
+                        <div class="form-group">
+                            <label>Дата публикации</label>
+
+                            <div class='input-group date' id='datetimepicker'>
+                                <input type='text' class="form-control" required name="created_at"
+                                       value="{{$news->created_at or ''}}"/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                            </div>
+                        </div>
+
                         <input type="hidden" name="_method" value="PUT">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <button type="submit" class="btn btn-primary">Отправить</button>

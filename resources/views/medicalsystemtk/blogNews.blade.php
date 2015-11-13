@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('medicalsystemtk/header')
 
 
 
@@ -67,7 +67,8 @@
                                         <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
                                     </div>
 
-                                    @for($i= 2 ; $i == $getQuests->count(); $i++)
+
+                                    @for($i= 2 ; $i != $getQuests->count(); $i++)
 
                                     <div class="stepwizard-step">
                                         <a href="#step-{{$i}}" type="button" class="btn btn-circle btn-default"  disabled="disabled">{{$i}}</a>
@@ -76,12 +77,14 @@
                                     @endfor
 
                                     <div class="stepwizard-step">
-                                        <a href="#step-{{$i}}" type="button" class="btn btn-circle btn-default" disabled="disabled">{{$i}}</a>
+                                        <a href="#step-end" type="button" class="btn btn-circle btn-default"
+                                           disabled="disabled">{{$i}}</a>
                                     </div>
 
 
                                 </div>
                             </div>
+
                             <form role="form" method="post" action="/answers">
 
                                 @foreach($getQuests as $key => $quest)
@@ -126,7 +129,7 @@
 
                                 @endforeach
 
-                                <div class="row setup-content" id="step-{{$i}}">
+                                <div class="row setup-content" id="step-end">
                                     <div class="col-xs-12">
                                         <div class="col-md-12">
                                             <h6 class="text-justify">Контакты для обратной связи</h6>

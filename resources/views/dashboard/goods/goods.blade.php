@@ -34,7 +34,7 @@
                                         <td>{{ $good->id }}</td>
                                         <td><img src="{{ $good->avatar }}" class="img-responsive" width="100px" height="50px"></td>
                                         <td>{{ $good->name }}</td>
-                                        <td>{{ $good->category()->first()->name }}</td>
+                                        <td>{{ $good->category()->first()->name or '' }}</td>
                                         <td>
                                             <a href="/dashboard/goods/add/{{ $good->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
                                             <a href="/dashboard/goods/destroy/{{ $good->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>

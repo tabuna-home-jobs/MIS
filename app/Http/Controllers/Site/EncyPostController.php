@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use DB;
-use Request;
 use App\Models\EncyCategory;
 use App\Models\EncyPost;
 use App\Models\Sites;
+use DB;
+use Request;
 
 class EncyPostController extends Controller
 {
@@ -25,14 +25,15 @@ class EncyPostController extends Controller
             ->distinct()
             ->get();
         sort($Index);
+
         $MainElementMenu = EncyCategory::where('encycategory_id','0')->select('id','name')->get();
 
 
 
         if(Request::has('index')) {
-            $Index = EncyPost::whereRaw('left(name,1) = ?', [Request::get('index')])->paginate(10);
+            $IndexEncyPost = EncyPost::whereRaw('left(name,1) = ?', [Request::get('index')])->paginate(10);
             return view($sitename . $sitedomen . '/encyclopediaPostList', [
-                'PostList' => $Index,
+                'PostList' => $IndexEncyPost,
                 'MainElementMenu' => $MainElementMenu,
                 'Index' => $Index
             ]);

@@ -49,6 +49,31 @@
                                 <input class="form-control" type="text" maxlength="255" required name="descript" value="{{$Category->descript or ''}}">
                             </div>
 
+
+                            <div class="form-group">
+                                <label>Отношение</label>
+                                <select ui-jq="chosen" class="chosen-select form-control w-full" name="parent_id">
+                                    <option value="0">Без отношения</option>
+
+                                    @if(isset($Category))
+
+                                        @foreach($Categories as $cat)
+                                            <option value="{{$cat->id}}"
+                                                    @if($Category->parent_id == $cat->id) selected @endif>{{$cat->name}}</option>
+                                        @endforeach
+
+                                    @else
+
+                                        @foreach($Categories as $cat)
+                                            <option value="{{$cat->id}}">{{$cat->name}}</option>
+                                        @endforeach
+
+                                    @endif
+
+                                </select>
+                            </div>
+
+
                             <div class="form-group">
                                 <label>Миниатюра</label>
 
@@ -70,6 +95,7 @@
                                     </div>
                                 </div>
                             </div>
+
 
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button type="submit" class="btn btn-primary">Отправить</button>

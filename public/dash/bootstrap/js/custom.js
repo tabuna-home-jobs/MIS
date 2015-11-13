@@ -29,6 +29,26 @@ $(document).ready(function(){
     });
 
 
+    //Тайм пикер одиночный
+    $(function () {
+        if (document.getElementById('datetimepicker')) {
+
+            $('#datetimepicker').datetimepicker({
+                format: 'YYYY-MM-DD HH:mm:ss',
+                locale: 'ru',
+                defaultDate: $('#datetimepicker input').attr('value')
+            });
+
+        }
+        ;
+    });
+
+
+
+
+
+
+
 
     //Визуальный редактор
     $(function () {

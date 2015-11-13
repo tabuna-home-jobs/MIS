@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('medicalsystemtk/header')
 
 @section('content')
 
@@ -95,7 +95,7 @@
 
                     @foreach($LastNews as $post)
 
-                        <section class="col-md-4">
+                        <section class="col-md-4 ency-prev">
                             <article class="blog-item">
                                 <div class="blog-thumbnail">
                                     <img src="{{$post->avatar}}" alt="{{$post->name}}">

@@ -2,21 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Requests\NewsRequest;
 use App\Models\News;
+use App\Services\Social;
 use Image;
 use Redirect;
 use Request;
 use Session;
 use Validator;
-use App\Http\Requests\NewsRequest;
-use App\Services\Social;
-
-
-
-
-
 
 
 class NewsController extends Controller
@@ -55,6 +50,7 @@ class NewsController extends Controller
             'content'=>$request->content,
             'tag'=>$request->tag,
             'descript'=>$request->descript,
+            'created_at' => $request->created_at,
             'ids'=> Session::get('website'),
         ]);
 
@@ -125,6 +121,7 @@ class NewsController extends Controller
             'content'=>$request->content,
             'tag'=>$request->tag,
             'descript'=>$request->descript,
+            'created_at' => $request->created_at,
             'ids'=> Session::get('website'),
         ]);
 

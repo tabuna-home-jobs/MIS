@@ -74,6 +74,17 @@
                         </div>
 
 
+                        <div class="form-group">
+                            <label>Дата публикации</label>
+
+                            <div class='input-group date' id='datetimepicker'>
+                                <input type='text' class="form-control" name="created_at"/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                            </div>
+                        </div>
+
 
                         <div class="form-group">
                             <label class="col-sm-6 control-label">Социальные сети</label>
@@ -84,7 +95,6 @@
                                 </label>
                             </div>
                         </div>
-
 
 
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">

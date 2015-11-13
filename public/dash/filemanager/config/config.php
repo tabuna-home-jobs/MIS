@@ -56,27 +56,36 @@ $config = array(
 	|
 	*/
 
-	'base_url' => ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && ! in_array(strtolower($_SERVER['HTTPS']), array( 'off', 'no' ))) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'],
-
+		'base_url' => ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']), array('off', 'no'))) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'],
 	/*
-	|--------------------------------------------------------------------------
-	| path from base_url to base of upload folder
-	|--------------------------------------------------------------------------
-	|
-	| with start and final /
-	|
-	*/
-	'upload_dir' => '../source/',
-
+    |--------------------------------------------------------------------------
+    | path from base_url to base of upload folder
+    |--------------------------------------------------------------------------
+    |
+    | with start and final /
+    |
+    */
+		'upload_dir' => '/dash/source/',
 	/*
-	|--------------------------------------------------------------------------
-	| relative path from filemanager folder to upload folder
-	|--------------------------------------------------------------------------
-	|
-	| with final /
-	|
-	*/
-	'current_path' =>  __DIR__ . '/../../source/',
+    |--------------------------------------------------------------------------
+    | relative path from filemanager folder to upload folder
+    |--------------------------------------------------------------------------
+    |
+    | with final /
+    |
+    */
+		'current_path' => __DIR__ . '/../../source/',
+	/*
+    |--------------------------------------------------------------------------
+    | relative path from filemanager folder to thumbs folder
+    |--------------------------------------------------------------------------
+    |
+    | with final /
+    | DO NOT put inside upload folder
+    |
+    */
+		'thumbs_base_path' => '../thumbs/',
+
 
 	/*
 	|--------------------------------------------------------------------------

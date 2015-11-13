@@ -62,6 +62,11 @@ class Sites extends Model {
         return $this->hasOne('App\Models\SpecCat', 'ids');
     }
 
+    public function getSpecCat()
+    {
+        return $this->hasOne('App\Models\SpecCat', 'ids');
+    }
+
     public function getTeam()
     {
         return $this->hasOne('App\Models\Specialisty', 'ids');

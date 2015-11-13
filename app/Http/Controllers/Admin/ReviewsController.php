@@ -30,6 +30,7 @@ class ReviewsController extends Controller {
         $Reviews->fio = $request->fio;
         $Reviews->content = $request->content;
         $Reviews->publish = $request->status;
+        $Reviews->created_at = $request->created_at;
         $Reviews->save();
 
         //Флеш сообщение

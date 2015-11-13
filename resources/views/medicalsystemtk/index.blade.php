@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('medicalsystemtk/header')
 
 @section('content')
 
@@ -539,5 +539,6 @@
             </div>
         </section>
 
+    </div>
 
     @endsection

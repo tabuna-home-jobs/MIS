@@ -28,6 +28,11 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+
+                                @foreach ($Category->toTree() as $category)
+                                    @include('dashboard.category._partials.category', $category)
+                                @endforeach
+
                                 @foreach ($Category as $Cat)
                                     <tr>
                                         <td>{{ $Cat->id }}</td>
