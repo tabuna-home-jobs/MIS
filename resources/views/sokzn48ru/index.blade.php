@@ -35,48 +35,145 @@
         </div>
     </div>
     <!-- END ADVANTAGES -->
-    <!-- REQUEST -->
-    <div class="request">
+
+    <!-- тест -->
+    <div class="application_main">
+
+
         <div class="container">
+            <h2>ОСТАВИТЬ ЗАЯВКУ ON-LINE</h2>
+
             <div class="row">
-                <div class="request-head">ОСТАВИТЬ ЗАЯВКУ ON-LINE</div>
-                <div class="request-step">
-                    <div class="request-img col-md-4 hidden-sm hidden-xs">
+
+                <div class="col-md-4">
+
+                    <div class="application_img">
+
                         <img src="/sokzn48.ru/img/request-img.png">
+
                     </div>
-                    <div class="request-form col-md-8 col-sm-12">
-                        <form>
-                            <select></select>
-                            <select></select>
-                            <select></select>
-                            <textarea></textarea>
-                        </form>
-                        <div class="button-form">
-                            <button>ДАЛЕЕ</button>
+
+                </div>
+
+                <div class="col-md-8">
+
+                    <!-- Tab panes -->
+                    <form action="">
+                        <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">
+                                    <div class="form-group">
+                                        <select class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                            <option>Выберите специализацию</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                            <option>Выберите услугу</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                            <option>Выберите специалиста</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="exampleInputEmail1" rows="8">Подробнее</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">ДАЛЕЕ</a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="profile">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Check me out
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Check me out
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Check me out
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="#messages" aria-controls="profile" role="tab" data-toggle="tab">ДАЛЕЕ</a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="messages">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">ФИО</label>
+                                        <input type="text" class="form-control" id="exampleInputFIO" placeholder="ФИО">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Телефон</label>
+                                        <input type="text" class="form-control" id="exampleInputPhone" placeholder="Телефон">
+                                    </div>
+                                    <div class="form-group">
+                                        <button>ОТПРАВИТЬ</button>
+                                    </div>
+                                </div>
                         </div>
-                    </div>
+                    </form>
+
                 </div>
-                <div class="steps col-md-12">
-                    <div class="step col-md-4 col-sm-4 hidden-xs">
-                        <p><img src="/sokzn48.ru/img/1step.png" class="active-img"></p>
-                        <h4>1-й шаг</h4>
-                        <p>Выберите специализацию, услугу и специалиста</p>
-                    </div>
-                    <div class="step col-md-4 col-sm-4 hidden-xs">
-                        <p><img src="/sokzn48.ru/img/2step.png"></p>
-                        <h4>2-й шаг</h4>
-                        <p>Выберите удобные для Вас день и время</p>
-                    </div>
-                    <div class="step col-md-4 col-sm-4 hidden-xs">
-                        <p><img src="/sokzn48.ru/img/3step.png"></p>
-                        <h4>3-й шаг</h4>
-                        <p>Введите Ваши контактные данные</p>
-                    </div>
-                </div>
+
+
+
+
+
+
             </div>
+            <div class="row">
+                <!-- Nav tabs -->
+                <ul class="step-control col-md-7 col-md-push-3" role="tablist">
+                    <li role="presentation" class="active col-md-4">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            <img src="/sokzn48.ru/img/1step.png">
+                            <p><strong>1-Й ШАГ</strong></p>
+                        </a>
+                        <p>
+                            Выберите специализацию,
+                            услугу и специалиста
+                        </p>
+                    </li>
+                    <li role="presentation" class="col-md-4">
+                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                            <img src="/sokzn48.ru/img/2step.png">
+                            <p><strong>2-Й ШАГ</strong></p>
+                        </a>
+                        <p>
+                            Выберите специализацию,
+                            услугу и специалиста
+                        </p>
+                    </li>
+                    <li role="presentation" class="col-md-4">
+                        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
+                            <img src="/sokzn48.ru/img/3step.png">
+                            <p><strong>3-Й ШАГ</strong></p>
+                        </a>
+                        <p>
+                            Выберите специализацию,
+                            услугу и специалиста
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+
         </div>
     </div>
-    <!-- END REQUEST -->
+    <!-- тест -->
+
+
+
     <!-- ОСНОВНЫЕ НАПРАВЛЕНИЯ ЦЕНТРА -->
     <div class="directions">
         <div class="container">
@@ -103,6 +200,11 @@
         </div>
     </div>
     <!-- END ОСНОВНЫЕ НАПРАВЛЕНИЯ ЦЕНТРА -->
+
+
+
+
+
     <!-- СЕМЕЙНЫЙ ОЗДОРОВИТЕЛЬНЫЙ КОМПЛЕКС «СОК» -->
     <div class="healthy">
         <div class="container">
@@ -306,106 +408,43 @@
                 <div class="reviews col-md-6">
                     <div class="orange-head"><h3>ОТЗЫВЫ</h3></div>
                     <div class="reviews-body">
+                        @foreach(reviewsOnMain::getReview(9,4) as $item)
                         <div class="single-review col-md-12">
                             <div class="review-img col-md-3">
-                                <img src="/sokzn48.ru/img/review1.png">
+                                <i class="feature-icon fa fa-commenting"></i>
                             </div>
                             <div class="review-text col-md-9">
-                                <h5>Иванова Светлана</h5>
-                                <p>Развитие максимума возможностей
-                                    заложено в ребенке до трех лет в период
-                                    интенсивного роста мозга. В это время
-                                    формируются<a href="">Подробнее</a></p>
-                                <span>2.07.2015</span>
+                                <h5>{{$item['fio']}}</h5>
+                                <p>{!! str_limit($item['content'],300,'...') !!}<a href="">Подробнее</a></p>
+                                <span>{{$item['created_at']}}</span>
                             </div>
                         </div>
-                        <div class="single-review col-md-12">
-                            <div class="review-img col-md-3">
-                                <img src="/sokzn48.ru/img/review1.png">
-                            </div>
-                            <div class="review-text col-md-9">
-                                <h5>Иванова Светлана</h5>
-                                <p>Развитие максимума возможностей
-                                    заложено в ребенке до трех лет в период
-                                    интенсивного роста мозга. В это время
-                                    формируются<a href="">Подробнее</a></p>
-                                <span>2.07.2015</span>
-                            </div>
-                        </div>
-                        <div class="single-review col-md-12">
-                            <div class="review-img col-md-3">
-                                <img src="/sokzn48.ru/img/review1.png">
-                            </div>
-                            <div class="review-text col-md-9">
-                                <h5>Иванова Светлана</h5>
-                                <p>Развитие максимума возможностей
-                                    заложено в ребенке до трех лет в период
-                                    интенсивного роста мозга. В это время
-                                    формируются<a href="">Подробнее</a></p>
-                                <span>2.07.2015</span>
-                            </div>
-                        </div>
-                        <div class="single-review col-md-12">
-                            <div class="review-img col-md-3">
-                                <img src="/sokzn48.ru/img/review1.png">
-                            </div>
-                            <div class="review-text col-md-9">
-                                <h5>Иванова Светлана</h5>
-                                <p>Развитие максимума возможностей
-                                    заложено в ребенке до трех лет в период
-                                    интенсивного роста мозга. В это время
-                                    формируются<a href="">Подробнее</a></p>
-                                <span>2.07.2015</span>
-                            </div>
-                        </div>
+                        @endforeach
                         <div class="all-reviews">
-                            <a href="">Все отзывы</a>
+                            <a href="/reviews">Все отзывы</a>
                         </div>
                     </div>
                 </div>
                 <div class="questions col-md-6">
                     <div class="green-head"><h3>ВОПРОСЫ-ОТВЕТЫ</h3></div>
                     <div class="questions-body">
+                        @foreach(qaMain::getQA(9,2) as $item)
                         <div class="single-question col-md-12">
-                            <h5>Нефедова Наталья</h5>
-                            <p>Развитие максимума возможностей заложено в ребенке до
-                                трех лет в период интенсивного роста мозга. В это время
-                                формируются?</p>
-                            <span>2.07.2015</span>
+                            <h5>{{$item['fio']}}</h5>
+                            <p>{{$item['questions']}}</p>
+                            <span>{{$item['created_at']}}</span>
                         </div>
                         <div class="single-answer col-md-12">
                             <div class="answer-img col-md-3">
                                 <img src="/sokzn48.ru/img/questions1.png">
                             </div>
                             <div class="answer-text col-md-9">
-                                <h5>Иванова Светлана</h5>
-                                <p><p><span>Сертифицированный специалист по трайбл и восточному танцу</span></p>
-                                Современное общество предъявляет
-                                серьезные требования к поколению,
-                                побуждая родителей
-                                <a href="">Подробнее</a></p>
+                                <h5>Ответ специалиста центра</h5>
+                                <p><span>Сертифицированный специалист центра</span></p>
+                                <p>{{$item['answer']}}</p>
                             </div>
                         </div>
-                        <div class="single-question col-md-12">
-                            <h5>Нефедова Наталья</h5>
-                            <p>Развитие максимума возможностей заложено в ребенке до
-                                трех лет в период интенсивного роста мозга. В это время
-                                формируются?</p>
-                            <span>2.07.2015</span>
-                        </div>
-                        <div class="single-answer col-md-12">
-                            <div class="answer-img col-md-3">
-                                <img src="/sokzn48.ru/img/questions1.png">
-                            </div>
-                            <div class="answer-text col-md-9">
-                                <h5>Иванова Светлана</h5>
-                                <p><p><span>Сертифицированный специалист по трайбл и восточному танцу</span></p>
-                                Современное общество предъявляет
-                                серьезные требования к поколению,
-                                побуждая родителей
-                                <a href="">Подробнее</a></p>
-                            </div>
-                        </div>
+                        @endforeach
                         <div class="all-questions"><a href="">Все вопросы</a></div>
                     </div>
                 </div>

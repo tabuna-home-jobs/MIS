@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('sokzn48ru/headerPage')
 
 @section('content')
 
