@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/css/slick.css">
-
+    <link rel="stylesheet" type="text/css" href="/luchiki48.ru/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/style.css">
     <title>COK</title>
     <script type="text/javascript" src="/sokzn48.ru/js/jquery.js"></script>

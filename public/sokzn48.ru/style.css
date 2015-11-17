@@ -13,6 +13,27 @@ background-image: url('img/mainbg.jpg');
 background-repeat: no-repeat;
 	background-position: center top;
 }
+ @media screen and (max-width:980px){
+	 body{
+		 background-position: center 10%;
+	 }
+ }
+ .right.carousel-control {
+	 height: 30px;
+	 width: 30px;
+	 padding: 23px;
+	 border-radius: 100%;
+	 background-color: #fb8542;
+	 top: 50%;
+ }
+ .left.carousel-control {
+	 height: 30px;
+	 width: 30px;
+	 padding: 23px;
+	 border-radius: 100%;
+	 background-color: #29b02f;
+	 top: 50%;
+ }
 .header-top{
 text-align: right;
 }
@@ -109,6 +130,78 @@ background-size: 1920px 100%;
 padding: 50px 0;
 	background-position: center;
 }
+
+ .application_main {
+	 background-image: url(img/bg-request.png);
+	 background-repeat: no-repeat;
+	 background-size: 1920px 100%;
+	 padding: 50px 0;
+	 background-position: center;
+ }
+ .application_main h2 {
+	 color: white;
+	 margin:20px 0;
+	 text-align: center;
+	 margin-bottom: 40px;
+ }
+ .application_main ul li {
+	 display: inline-block;
+ }
+ .application_img {
+	 display: inline-block;
+	 overflow: hidden;
+	 border-radius: 100%;
+	 border: 8px white solid;
+ }
+ .application_img img {
+	 width: 100%;
+ }
+ .application_main .form-group a,.application_main .form-group button{
+	 display: inline-block;
+	 background-color: #fb8542;
+	 border: none;
+	 color:white;
+	 padding: 15px 25px;
+	 border-radius: 5px;
+	 font-size: 18px;
+ }
+ .application_main .form-group a:hover,.application_main .form-group button:hover{
+
+	 background-color: #d47037;
+
+	 color:white;
+
+	 text-decoration: none;
+ }
+ .step-control .active img {
+	 border:8px #f8e626 solid;
+ }
+ .step-control li img {
+	 border:8px transparent solid;
+ }
+ .step-control li {
+	 text-align: center;
+ }
+ .step-control img {
+	 border-radius: 100%;
+ }
+ .step-control a {
+	 color: white;
+	 font-size: 18px;
+ }
+ .step-control p {
+	 text-align: center;
+	 color:white;
+	 margin: 10px 0;
+ }
+ .step-control {
+	 background: url("img/arrow_main.png") no-repeat center 30%;
+	 overflow: hidden;
+ }
+ .step-control {
+	 text-align: center;
+ }
+
 .request-head{
 color: white;
 font-family: OpenSans;
@@ -433,6 +526,7 @@ margin-bottom: 20px;
 }
 .review-img{
 padding: 5px;
+	text-align: center;
 }
 .review-img img{
 width: 100%;
@@ -440,12 +534,28 @@ border-radius: 100%;
 border:5px solid white;
 box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
+.review-img i {
+	font-size: 106px;
+}
 .review-text h5{
 color: #19851e;
 font-family: OpenSans;
 font-size: 16px;
 font-weight: 700;
 line-height: 16px;	
+}
+ .search form{
+	 position: relative;
+	 display: inline-block;
+ }
+.search button {
+	position: absolute;
+	right: 0;
+	top:0;
+}
+.search input {
+	padding-left: 10px;
+	padding-left: 10px;
 }
 .review-text a{
 color: #19851e;

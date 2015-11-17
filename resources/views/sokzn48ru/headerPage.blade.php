@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/css/slick.css">
-
+    <link rel="stylesheet" type="text/css" href="/luchiki48.ru/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/style.css">
     <title>COK</title>
     <script type="text/javascript" src="/sokzn48.ru/js/jquery.js"></script>
@@ -69,6 +69,19 @@
     </div>
 </div>
 <!-- END HEADER -->
+<style>
+    .page-content .container {
+        background-color: white;
+    }
+    body {
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
 
+        background-position: center 7%;
+        background-attachment: fixed;
+    }
+</style>
 @yield('content')
 @include('sokzn48ru/footer')

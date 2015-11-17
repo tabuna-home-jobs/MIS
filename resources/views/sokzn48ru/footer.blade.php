@@ -31,7 +31,11 @@
             </div><!-- /.container-fluid -->
         </nav>
     </div>
-    <div class="search col-md-12"><input></div>
+    <div class="search col-md-12">
+        <form action="">
+            <input type="text" placeholder="поиск">
+            <button>ok</button>
+        </form></div>
     <div class="footer-left col-md-6">
         <div class="soc-set">
             Присоеденяйтесь к нам в соцсетях:

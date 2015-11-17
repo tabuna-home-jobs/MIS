@@ -214,7 +214,8 @@ return [
 		'reviewsOnMain' => App\Facades\ReviewsOnMain::class,
 		'ArtsOnMain' => App\Facades\ArticlesOnMain::class,
 		'CustomPage' => App\Facades\PageOnMain::class,
-		'GalleryOnMain'=> \App\Facades\GalleryOnMain::class
+		'GalleryOnMain'=> \App\Facades\GalleryOnMain::class,
+		'qaMain'=> \App\Facades\QAMain::class
     ],
 
 ];
