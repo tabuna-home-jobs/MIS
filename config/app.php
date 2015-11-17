@@ -215,7 +215,8 @@ return [
 		'ArtsOnMain' => App\Facades\ArticlesOnMain::class,
 		'CustomPage' => App\Facades\PageOnMain::class,
 		'GalleryOnMain'=> \App\Facades\GalleryOnMain::class,
-		'qaMain'=> \App\Facades\QAMain::class
+		'qaMain'=> \App\Facades\QAMain::class,
+		'catOnMain'=> \App\Facades\categoryOnMain::class,
     ],
 
 ];

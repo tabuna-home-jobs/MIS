@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\Controller;
 use App\Models\Sites;
+use App\Models\Category as Cats;
 use Request;
 use App\Models\Comments;
 use App\Http\Requests\Site\CommentRequest;
 use Session;
+use Kalnoy\Nestedset\Collection as Colect;
 
 class ServiceController extends Controller {
 
@@ -19,6 +21,8 @@ class ServiceController extends Controller {
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Category = $getSites->getCategory()->get();
+
+
 
         $requestCategory = Request::input('category');
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
