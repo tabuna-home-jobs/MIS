@@ -41,16 +41,35 @@
 
                     <div class="sidebar-widget clearfix">
                         <h2 class="bordered light">Категории</h2>
-                        <ul class="tags">
-                            @foreach($Category as $value)
-
-                                <li><a href="/service?category={{$value['id']}}">{{$value['name']}}</a></li>
-
+                        <ul class="main-category">
+                            @foreach(catOnMain::getCats(2,99)->toTree() as $category)
+                                @include('mother-babyru.category.category', $category)
                             @endforeach
 
                         </ul>
                     </div>
 
+                    <style>
+                        .main-category {
+                             list-style-type: none;
+                         }
+                        .main-category li{
+                            cursor: pointer;
+                        }
+                        .main-category li a{
+                            cursor: pointer;
+                            font-size: 20px;
+                        }
+                        .main-category .children-ul {
+                            display: none;
+                            list-style: none;
+                        }
+                        .main-category li:hover >.children-ul{
+                            display: block;
+                            cursor: pointer;
+                        }
+
+                    </style>
 
 
                     <div class="sidebar-widget light">
