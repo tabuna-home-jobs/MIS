@@ -1,6 +1,7 @@
 <?php namespace App\Console\Commands;
 
 use App\Console\Commands\AppointmentsThread;
+use App\Models\Appointments as Appoint;
 use DB;
 use Illuminate\Console\Command;
 use Storage;
@@ -44,9 +45,9 @@ class Appointments extends Command {
 	{
 
         DB::connection()->disableQueryLog();
-        if (Storage::exists('MiD.xml')) {
+		if (Storage::exists('import.xml')) {
 
-            $xml = simplexml_load_string(Storage::get('MiD.xml'));
+			$xml = simplexml_load_string(Storage::get('import.xml'));
             DB::table('entry')->truncate();
             DB::table('timetable')->truncate();
 
@@ -80,12 +81,9 @@ class Appointments extends Command {
                 }
 
                 DB::table('entry')->insert($entry);
-
-                //$this->info('Запись полностью добавлена' . date('h-i-s'));
             }
 
-
-            Storage::delete('MiD.xml');
+			Storage::delete('import.xml');
             $this->info('Команда выгрузки xml файла расписания отработала' . date('h-i-s'));
 
         }
@@ -93,6 +91,16 @@ class Appointments extends Command {
         {
             $this->info('xml файл не существует');
         }
+
+
+		$Apportointments = Appoint::all();
+		$Views = view('XML.appointments', [
+				'Record' => $Apportointments
+		])->render();
+		Storage::put('export.xml', $Views);
+
+
+
 	}
 
 
