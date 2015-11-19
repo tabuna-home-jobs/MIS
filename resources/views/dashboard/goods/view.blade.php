@@ -40,8 +40,12 @@
                                 <select class="form-control w-md"   ui-jq="chosen" name="parent">
                                     <option value="">Выберите значение</option>
                                     @foreach($All as $item)
-                                        @if($Goods->parent_id == $item['id'])
-                                            <option value="{{$item['id']}}" selected >{{$item['name']}}</option>
+                                        @if(isset($Goods))
+
+                                            @if($Goods->parent_id == $item['id'])
+                                                <option value="{{$item['id']}}" selected >{{$item['name']}}</option>
+                                            @endif
+
                                         @endif
                                         <option value="{{$item['id']}}">{{$item['name']}}</option>
                                     @endforeach
