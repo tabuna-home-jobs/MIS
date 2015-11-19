@@ -24,7 +24,7 @@ class Goods extends Node {
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'content', 'avatar', 'price', 'category_id','parent_id','_lft', '_rgt', 'ids', 'tag', 'descript', 'price', 'attribute'];
+    protected $fillable = ['title', 'name', 'content', 'avatar', 'price', 'category_id','parent_id','_lft', '_rgt', 'ids', 'tag', 'descript', 'price', 'attribute','sort'];
 
     public function category()
     {

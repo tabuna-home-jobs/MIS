@@ -2606,6 +2606,9 @@
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="deleted_at" sqlType="timestamp" precision="22" scale="0" nullable="true" jdbcType="93"/>
+      <column name="parent_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="_lft" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="_rgt" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="goods_pkey" columns="id"/>
     </table>
     <table name="goods_id_seq" schema="public" catalog="octavian_mis" type="SEQUENCE">

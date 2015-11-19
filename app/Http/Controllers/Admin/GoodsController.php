@@ -14,7 +14,7 @@ class GoodsController extends Controller {
     public function getIndex()
     {
         //Goods::fixTree();
-        $Goods = Goods::where('ids', Session::get('website'))->orderBy('name', 'asc')->paginate(10);
+        $Goods = Goods::where('ids', Session::get('website'))->orderBy('name', 'asc')->paginate(999);
         return view("dashboard/goods/goods",['Goods' => $Goods ]);
     }
 
@@ -51,6 +51,7 @@ class GoodsController extends Controller {
         $Goods->price = $request->price;
         $Goods->category_id = $request->category;
         $Goods->parent_id = $request->parent;
+        $Goods->sort = $request->sort;
 
         if(!is_null($request->fieldsAttr))
         $Goods->attribute = serialize(array_filter($request->fieldsAttr));

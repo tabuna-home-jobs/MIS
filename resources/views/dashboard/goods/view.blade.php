@@ -30,7 +30,10 @@
                             <input type="hidden" name="id" value="{{$Goods->id}}">
                         @endif
 
-
+                            <div class="form-group">
+                                <label>Порядок</label>
+                                <input class="form-control" type="text" maxlength="255" required name="sort" value="{{$Goods->sort or '0'}}">
+                            </div>
                             <div class="form-group">
                                 <label>Заголовок</label>
                                 <input class="form-control" type="text" maxlength="255" required name="title" value="{{$Goods->title or ''}}">
