@@ -81,7 +81,7 @@
 
                         <div class="category-text">
                             @foreach($thisCategory as $item)
-                                {{$item['text']}}
+                                {!! $item['text'] !!}
                             @endforeach
                         </div>
                         <!--@foreach($Goods as $good)
