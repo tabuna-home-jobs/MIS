@@ -1,49 +1,26 @@
 @extends('medicalsystemtk/header')
 
 @section('content')
+    <section class="sub-page-banner text-center hidden-xs">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1 class="entry-title">Наши услуги</h1>
+            <p>Описание услуг оказываемых центром "Здоровье Нации"</p>
+        </div>
+    </section>
 
     <div class="sub-page-content">
 
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    <h2 class="bordered light">Предоставляемые <span>Услуги</span></h2>
-                    <div class="products">
 
-
-                        @foreach($Goods as $good)
-
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="/service/{{$good['id']}}"><img alt="" src="{{$good['avatar']}}" height="100px"></a>
-                            </div>
-                            <h4>{{$good['name']}}</h4>
-
-                            <div class="price-rating">
-                                <p class="price"><i class="fa fa-rub"></i> {{$good['price']}}</p>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="sperator"></span>
-                            <a class="ad-to-cart" href="/service/{{$good['id']}}"><i class="fa fa-hospital-o"></i>Подробнее</a>
-                        </div>
-
-                        @endforeach
-
-                    </div>
-
-                    <div class="clearfix text-center">
-
-                        {!! $Goods->appends(\Input::except('page'))->render() !!}
-                    </div>
-
-                </div>
                 <aside class="col-md-4">
 
                     <div class="sidebar-widget clearfix">
                         <h2 class="bordered light">Категории</h2>
                         <ul class="main-category">
-                            @foreach(catOnMain::getCats(2,99)->toTree() as $category)
-                                @include('mother-babyru.category.category', $category)
+                            @foreach($Goods->toTree() as $category)
+                                @include('medicalsystemtk.category.category', $category)
                             @endforeach
 
                         </ul>
@@ -51,8 +28,8 @@
 
                     <style>
                         .main-category {
-                             list-style-type: none;
-                         }
+                            list-style-type: none;
+                        }
                         .main-category li{
                             cursor: pointer;
                         }
@@ -93,6 +70,47 @@
 
 
                 </aside>
+
+                <div class="col-md-8">
+                    <h2 class="bordered light">
+                        @foreach($thisCategory as $item)
+                            {{$item['name']}}
+                        @endforeach
+                    </h2>
+                    <div class="products">
+
+                        <div class="category-text">
+                            @foreach($thisCategory as $item)
+                                {{$item['text']}}
+                            @endforeach
+                        </div>
+                        <!--@foreach($Goods as $good)
+
+                        <div class="product">
+                            <div class="product-thumb">
+                                <a href="/service/{{$good['id']}}"><img alt="" src="{{$good['avatar']}}" height="100px"></a>
+                            </div>
+                            <h4>{{$good['name']}}</h4>
+
+                            <div class="price-rating">
+                                <p class="price"><i class="fa fa-rub"></i> {{$good['price']}}</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <span class="sperator"></span>
+                            <a class="ad-to-cart" href="/service/{{$good['id']}}"><i class="fa fa-hospital-o"></i>Подробнее</a>
+                        </div>
+
+                        @endforeach-->
+
+                    </div>
+
+                    <!--<div class="clearfix text-center">
+
+
+                    </div>-->
+
+                </div>
+
             </div>
         </div>
     </div>

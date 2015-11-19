@@ -36,6 +36,15 @@
                                 <input class="form-control" type="text" maxlength="255" required name="title" value="{{$Goods->title or ''}}">
                             </div>
                             <div class="form-group">
+                                <label>Выберите родителькую услугу</label>
+                                <select class="form-control w-md"   ui-jq="chosen" name="parent">
+                                    <option value="">Выберите значение</option>
+                                    @foreach($All as $item)
+                                        <option value="{{$item['id']}}">{{$item['name']}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label>Имя</label>
                                 <input class="form-control" type="text" maxlength="255" required name="name" value="{{$Goods->name or ''}}">
                             </div>

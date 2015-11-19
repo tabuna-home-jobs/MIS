@@ -13,7 +13,8 @@ class GoodsController extends Controller {
 
     public function getIndex()
     {
-        $Goods = Goods::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+        //Goods::fixTree();
+        $Goods = Goods::where('ids', Session::get('website'))->orderBy('name', 'asc')->paginate(10);
         return view("dashboard/goods/goods",['Goods' => $Goods ]);
     }
 
@@ -21,9 +22,10 @@ class GoodsController extends Controller {
     public function getAdd($Goods = null)
     {
         $Goods = Goods::find($Goods);
+        $allGoods = Goods::where('ids', Session::get('website'))->orderBy('name', 'desc')->get();
         $Category = Category::where('ids', Session::get('website'))->get();
         //$Category = Category::all();
-        return view("dashboard/goods/view",['Goods' => $Goods , 'Category' => $Category]);
+        return view("dashboard/goods/view",['Goods' => $Goods , 'Category' => $Category,'All'=>$allGoods]);
     }
 
 
@@ -48,6 +50,7 @@ class GoodsController extends Controller {
         $Goods->ids = Session::get('website');
         $Goods->price = $request->price;
         $Goods->category_id = $request->category;
+        $Goods->parent_id = $request->parent;
 
         if(!is_null($request->fieldsAttr))
         $Goods->attribute = serialize(array_filter($request->fieldsAttr));

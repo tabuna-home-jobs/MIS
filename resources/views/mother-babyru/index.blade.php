@@ -32,7 +32,8 @@
         </div>
     </div>
     <!--appointment-->
-    <div class="form-appointment container">
+    <div class="form-appointment">
+    <div class="container">
         <div class="head-category col-md-12"><span>Записаться на прием</span></div>
         <div class="form-image col-md-6"><img src="/mother-baby.ru/img/img-form.png"></div>
         <div class="form-itself col-md-6">
@@ -64,12 +65,13 @@
             <p>Заполните Ваши контактные данные</p>
         </div>
     </div>
+    </div>
     <!--end of appointment-->
     <div class="container">
         <div class="department col-md-4">
             <div class="department-head">Отделения центра</div>
             <div class="department-body">
-                <ul>
+                <ul class="main-category">
                <!-- <a href="">Аллергология-иммунология</a><br>
                 <a href="">Гастроэнтерология</a><br>
                 <a href="">Гинекология</a><br>
@@ -95,6 +97,34 @@
                     @endforeach
                 </ul>
                 <style>
+                    .department-body ul {
+                        margin:0;
+                        padding: 0;
+                    }
+                    .department-body {
+                        padding: 10px;
+                    }
+                    .department-body a {
+                        color: white;
+                    }
+                    .main-category {
+                        list-style-type: none;
+                    }
+                    .main-category li{
+                        cursor: pointer;
+                    }
+                    .main-category li a{
+                        cursor: pointer;
+                        font-size: 20px;
+                    }
+                    .main-category .children-ul {
+                        display: none;
+                        list-style: none;
+                    }
+                    .main-category li:hover >.children-ul{
+                        display: block;
+                        cursor: pointer;
+                    }
 
                 </style>
             </div>
@@ -107,170 +137,81 @@
         </div>
         <div class="discounts col-md-8">
             <div class="head-category col-md-12"><span>Скидки и акции</span></div>
+
+            @foreach(sharesOnMain::getShare(11,5) as $item)
             <div class="discount col-md-12">
                 <div class="discounts-img col-md-3"><img src="/mother-baby.ru/img/sa1.png"></div>
                 <div class="discounts-info col-md-9">
                     <a href="">Накопительная скидка при сумме 15 000 р. - 3%</a>
-                    <p>В Центре «Здоровье нации» работают врачи первой высшей квалификационной категории
-                        соискатели научной степени, кандидаты медицинских наук, заслуженный врач Российской
-                        Федерации. Наши клиенты – успешные, активные люди, которые ценят своё время и
-                        предпочитают качественные медицинские услуги, высокий уровень сервиса, удобство,
-                        комфорт, престиж <a href="">Подробнее.</a></p>
+                    <p>{!! str_limit($item['content'],300,'...') !!} <a href="shares/{{$item['id']}}">Подробнее.</a></p>
                 </div>
             </div>
-            <div class="discount col-md-12">
-                <div class="discounts-img col-md-3"><img src="/mother-baby.ru/img/sa1.png"></div>
-                <div class="discounts-info col-md-9">
-                    <a href="">Накопительная скидка при сумме 15 000 р. - 3%</a>
-                    <p>В Центре «Здоровье нации» работают врачи первой высшей квалификационной категории
-                        соискатели научной степени, кандидаты медицинских наук, заслуженный врач Российской
-                        Федерации. Наши клиенты – успешные, активные люди, которые ценят своё время и
-                        предпочитают качественные медицинские услуги, высокий уровень сервиса, удобство,
-                        комфорт, престиж <a href="">Подробнее.</a></p>
-                </div>
-            </div>
-            <div class="discount col-md-12">
-                <div class="discounts-img col-md-3"><img src="/mother-baby.ru/img/sa1.png"></div>
-                <div class="discounts-info col-md-9">
-                    <a href="">Накопительная скидка при сумме 15 000 р. - 3%</a>
-                    <p>В Центре «Здоровье нации» работают врачи первой высшей квалификационной категории
-                        соискатели научной степени, кандидаты медицинских наук, заслуженный врач Российской
-                        Федерации. Наши клиенты – успешные, активные люди, которые ценят своё время и
-                        предпочитают качественные медицинские услуги, высокий уровень сервиса, удобство,
-                        комфорт, престиж <a href="">Подробнее.</a></p>
-                </div>
-            </div>
-            <div class="discount col-md-12">
-                <div class="discounts-img col-md-3"><img src="/mother-baby.ru/img/sa1.png"></div>
-                <div class="discounts-info col-md-9">
-                    <a href="">Накопительная скидка при сумме 15 000 р. - 3%</a>
-                    <p>В Центре «Здоровье нации» работают врачи первой высшей квалификационной категории
-                        соискатели научной степени, кандидаты медицинских наук, заслуженный врач Российской
-                        Федерации. Наши клиенты – успешные, активные люди, которые ценят своё время и
-                        предпочитают качественные медицинские услуги, высокий уровень сервиса, удобство,
-                        комфорт, престиж <a href="">Подробнее.</a></p>
-                </div>
-            </div>
-            <div class="discount col-md-12">
-                <div class="discounts-img col-md-3"><img src="/mother-baby.ru/img/sa1.png"></div>
-                <div class="discounts-info col-md-9">
-                    <a href="">Накопительная скидка при сумме 15 000 р. - 3%</a>
-                    <p>В Центре «Здоровье нации» работают врачи первой высшей квалификационной категории
-                        соискатели научной степени, кандидаты медицинских наук, заслуженный врач Российской
-                        Федерации. Наши клиенты – успешные, активные люди, которые ценят своё время и
-                        предпочитают качественные медицинские услуги, высокий уровень сервиса, удобство,
-                        комфорт, престиж <a href="">Подробнее.</a></p>
-                </div>
-            </div>
+            @endforeach
+
 
         </div>
     </div>
     <!-- специалисты-->
     <div class="specialists">
         <div class="container">
-            <div class="head-spec col-md-12"><span>Приветствуем специалиста</span><a href="">Все специалисты</a></div>
+            <div class="head-spec col-md-12"><span>Приветствуем специалиста</span><a href="/team">Все специалисты</a></div>
+
+            @foreach(SpecialOnMain::getSpec(11) as $item)
             <div class="spec col-md-2">
-                <div class="spec-img"><img src="/mother-baby.ru/img/person1.png"></div>
+                <div class="spec-img"><img src="{{$item['avatar']}}"></div>
                 <div class="spec-info">
-                    <p>Глубшева Наталья Александровна</p>
-                    <span>Врач-травматолог-ортопед</span>
-                    <span>Специализация: <a href="">травматология и ортопедия</a></span>
+                    <p>{{$item['fio']}}</p>
+                    <span>{{$item['opyt']}}</span>
+                    <span>Специализация: <a href="">{{$item['special']}}</a></span>
                 </div>
             </div>
-            <div class="spec col-md-2">
-                <div class="spec-img"><img src="/mother-baby.ru/img/person2.png"></div>
-                <div class="spec-info">
-                    <p>Глубшева Наталья Александровна</p>
-                    <span>Врач-травматолог-ортопед</span>
-                    <span>Специализация: <a href="">травматология и ортопедия</a></span>
-                </div>
-            </div>
-            <div class="spec col-md-2">
-                <div class="spec-img"><img src="/mother-baby.ru/img/person3.png"></div>
-                <div class="spec-info">
-                    <p>Глубшева Наталья Александровна</p>
-                    <span>Врач-травматолог-ортопед</span>
-                    <span>Специализация: <a href="">травматология и ортопедия</a></span>
-                </div>
-            </div>
-            <div class="spec col-md-2">
-                <div class="spec-img"><img src="/mother-baby.ru/img/person4.png"></div>
-                <div class="spec-info">
-                    <p>Глубшева Наталья Александровна</p>
-                    <span>Врач-травматолог-ортопед</span>
-                    <span>Специализация: <a href="">травматология и ортопедия</a></span>
-                </div>
-            </div>
-            <div class="spec col-md-2">
-                <div class="spec-img"><img src="/mother-baby.ru/img/person5.png"></div>
-                <div class="spec-info">
-                    <p>Глубшева Наталья Александровна</p>
-                    <span>Врач-травматолог-ортопед</span>
-                    <span>Специализация: <a href="">травматология и ортопедия</a></span>
-                </div>
-            </div>
-            <div class="spec col-md-2">
-                <div class="spec-img"><img src="/mother-baby.ru/img/person1.png"></div>
-                <div class="spec-info">
-                    <p>Глубшева Наталья Александровна</p>
-                    <span>Врач-травматолог-ортопед</span>
-                    <span>Специализация: <a href="">травматология и ортопедия</a></span>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
     <!-- конец поля специалисты-->
     <!-- информационное поле -->
     <div class="info-field">
         <div class="container">
+
+            @foreach(CustomPage::getPage(11,48) as $item)
             <div class="info-column col-md-4">
-                <div class="head-info-column">Карьера в компании</div>
+                <div class="head-info-column">{{$item['name']}}</div>
                 <div class="img-info-column"><img src="/mother-baby.ru/img/carera.png"></div>
                 <div class="text-info-column">
                     <p>
-                        В Центре «Здоровье нации» работают врачи первой
-                        высшей квалификационной  категории, соискатели
-                        научной степени, кандидаты медицинских наук,
-                        заслуженный врач Российской Федерации. Наши
-                        клиенты – успешные, активные люди, которые
-                        ценят своё время и  предпочитают качественные
-                        медицинские услуги, высокий уровень сервиса,
-                        удобство, комфорт, престиж.   <a href="">Подробнее</a>
+                       {!! str_limit($item['descript'],200,'...') !!}
                     </p>
+                    <a href="/page/{{$item['id']}}">Подробнее</a>
                 </div>
             </div>
-            <div class="info-column col-md-4">
-                <div class="head-info-column">Полезные статьи</div>
-                <div class="img-info-column"><img src="/mother-baby.ru/img/statyi.png"></div>
-                <div class="text-info-column">
-                    <p>
-                        В Центре «Здоровье нации» работают врачи первой
-                        высшей квалификационной  категории, соискатели
-                        научной степени, кандидаты медицинских наук,
-                        заслуженный врач Российской Федерации. Наши
-                        клиенты – успешные, активные люди, которые
-                        ценят своё время и  предпочитают качественные
-                        медицинские услуги, высокий уровень сервиса,
-                        удобство, комфорт, престиж.   <a href="">Подробнее</a>
-                    </p>
-                </div>
-            </div>
-            <div class="info-column col-md-4">
-                <div class="head-info-column">Памятка клиенту</div>
-                <div class="img-info-column"><img src="/mother-baby.ru/img/pamyatka.png"></div>
-                <div class="text-info-column">
-                    <p>
-                        В Центре «Здоровье нации» работают врачи первой
-                        высшей квалификационной  категории, соискатели
-                        научной степени, кандидаты медицинских наук,
-                        заслуженный врач Российской Федерации. Наши
-                        клиенты – успешные, активные люди, которые
-                        ценят своё время и  предпочитают качественные
-                        медицинские услуги, высокий уровень сервиса,
-                        удобство, комфорт, престиж.   <a href="">Подробнее</a>
-                    </p>
-                </div>
-            </div>
+            @endforeach
+                @foreach(CustomPage::getPage(11,49) as $item)
+                    <div class="info-column col-md-4">
+                        <div class="head-info-column">{{$item['name']}}</div>
+                        <div class="img-info-column"><img src="/mother-baby.ru/img/statyi.png"></div>
+                        <div class="text-info-column">
+                            <p>
+                                {!! str_limit($item['descript'],200,'...') !!}
+                            </p>
+                            <a href="/page/{{$item['id']}}">Подробнее</a>
+                        </div>
+                    </div>
+                @endforeach
+                @foreach(CustomPage::getPage(11,50) as $item)
+                    <div class="info-column col-md-4">
+                        <div class="head-info-column">{{$item['name']}}</div>
+                        <div class="img-info-column"><img src="/mother-baby.ru/img/pamyatka.png"></div>
+                        <div class="text-info-column">
+                            <p>
+                                {!! str_limit($item['descript'],200,'...') !!}
+                            </p>
+                            <a href="/page/{{$item['id']}}">Подробнее</a>
+                        </div>
+                    </div>
+                @endforeach
+
+
         </div>
     </div>
     <!-- конец поля информационное поле -->
@@ -278,54 +219,40 @@
     <div class="complex">
         <div class="container">
             <div class="head-category col-md-12"><span>Комплексные программы</span></div>
+
+            @foreach(CustomPage::getPage(11,51) as $item)
             <div class="complex-column col-md-4">
-                <div class="head-complex-column">Первый год жизни</div>
+                <div class="head-complex-column">{{$item['name']}}</div>
                 <div class="img-complex-column"><img src="/mother-baby.ru/img/1god.png"></div>
                 <div class="text-complex-column">
                     <p>
-                        В Центре «Здоровье нации» работают врачи первой
-                        высшей квалификационной  категории, соискатели
-                        научной степени, кандидаты медицинских наук,
-                        заслуженный врач Российской Федерации. Наши
-                        клиенты – успешные, активные люди, которые
-                        ценят своё время и  предпочитают качественные
-                        медицинские услуги, высокий уровень сервиса,
-                        удобство, комфорт, престиж. <a href="">Подробнее</a>
+                        {{str_limit($item['descript'],300,'...')}}<a href="/page/{{$item['id']}}">Подробнее</a>
                     </p>
                 </div>
             </div>
-            <div class="complex-column col-md-4">
-                <div class="head-complex-column">Идем в детский сад</div>
-                <div class="img-complex-column"><img src="/mother-baby.ru/img/detsad.png"></div>
-                <div class="text-complex-column">
-                    <p>
-                        В Центре «Здоровье нации» работают врачи первой
-                        высшей квалификационной  категории, соискатели
-                        научной степени, кандидаты медицинских наук,
-                        заслуженный врач Российской Федерации. Наши
-                        клиенты – успешные, активные люди, которые
-                        ценят своё время и  предпочитают качественные
-                        медицинские услуги, высокий уровень сервиса,
-                        удобство, комфорт, престиж. <a href="">Подробнее</a>
-                    </p>
+            @endforeach
+            @foreach(CustomPage::getPage(11,52) as $item)
+                <div class="complex-column col-md-4">
+                    <div class="head-complex-column">{{$item['name']}}</div>
+                    <div class="img-complex-column"><img src="/mother-baby.ru/img/detsad.png"></div>
+                    <div class="text-complex-column">
+                        <p>
+                            {{str_limit($item['descript'],300,'...')}}<a href="/page/{{$item['id']}}">Подробнее</a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="complex-column col-md-4">
-                <div class="head-complex-column">Идем в школу</div>
-                <div class="img-complex-column"><img src="/mother-baby.ru/img/school.png"></div>
-                <div class="text-complex-column">
-                    <p>
-                        В Центре «Здоровье нации» работают врачи первой
-                        высшей квалификационной  категории, соискатели
-                        научной степени, кандидаты медицинских наук,
-                        заслуженный врач Российской Федерации. Наши
-                        клиенты – успешные, активные люди, которые
-                        ценят своё время и  предпочитают качественные
-                        медицинские услуги, высокий уровень сервиса,
-                        удобство, комфорт, престиж. <a href="">Подробнее</a>
-                    </p>
+            @endforeach
+            @foreach(CustomPage::getPage(11,53) as $item)
+                <div class="complex-column col-md-4">
+                    <div class="head-complex-column">{{$item['name']}}</div>
+                    <div class="img-complex-column"><img src="/mother-baby.ru/img/school.png"></div>
+                    <div class="text-complex-column">
+                        <p>
+                            {{str_limit($item['descript'],300,'...')}} <a href="/page/{{$item['id']}}">Подробнее</a>
+                        </p>
+                    </div>
                 </div>
-            </div>
+            @endforeach
 
         </div>
     </div>
@@ -336,14 +263,16 @@
             <div class="head-category-blank"><span>Наша галерея</span><a href="">Смотреть все</a></div>
         </div>
         <div class="album">
-            <img src="/mother-baby.ru/img/gallery.png" style="width:24.5%;">
-            <img src="/mother-baby.ru/img/gallery.png" style="width:24.5%;">
-            <img src="/mother-baby.ru/img/gallery.png" style="width:24.5%;">
-            <img src="/mother-baby.ru/img/gallery.png" style="width:24.5%;">
-            <img src="/mother-baby.ru/img/gallery.png" style="width:24.5%;">
-            <img src="/mother-baby.ru/img/gallery.png" style="width:24.5%;">
-            <img src="/mother-baby.ru/img/gallery.png" style="width:24.5%;">
-            <img src="/mother-baby.ru/img/gallery.png" style="width:24.5%;">
+            <div class="row">
+                <div class="col-md-3"><img src="/mother-baby.ru/img/g1.jpg" ></div>
+                <div class="col-md-3"><img src="/mother-baby.ru/img/gallery.png" ></div>
+                <div class="col-md-3"><img src="/mother-baby.ru/img/g2.jpg" ></div>
+                <div class="col-md-3"><img src="/mother-baby.ru/img/g3.jpg" ></div>
+                <div class="col-md-3"><img src="/mother-baby.ru/img/g4.jpg" ></div>
+                <div class="col-md-3"><img src="/mother-baby.ru/img/g5.jpg" ></div>
+                <div class="col-md-3"><img src="/mother-baby.ru/img/g6.jpg" ></div>
+                <div class="col-md-3"><img src="/mother-baby.ru/img/g7.jpg" ></div>
+            </div>
         </div>
     </div>
     <!-- конец поля альбом -->
@@ -396,58 +325,19 @@
     <!-- поле новостей -->
     <div class="news">
         <div class="container">
-            <div class="head-category-blank"><span>Новости компании</span><a href="">Все новости</a></div>
+            <div class="head-category-blank"><span>Новости компании</span><a href="/blog">Все новости</a></div>
+
+            @foreach(newsOnMain::getNews(11,3) as $item)
             <div class="news-column col-md-4">
-                <div class="img-news-column col-md-4"><img src="/mother-baby.ru/img/news.png"></div>
+                <div class="img-news-column col-md-4"><img src="{{$item['avatar']}}"></div>
                 <div class="text-news-column col-md-8">
-                    <a href="">
-                        19.05.2012   Группа Компаний
-                        «Здоровье Нации» поздравляет
-                        всех медицинских сестер с их
-                        профессиональным праздником</a>
-                    <p>В Центре «Здоровье нации»
-                        работают врачи первой высшей
-                        квалификационной  категории,
-                        соискатели научной степени,
-                        кандидаты медицинских наук,
-                        заслуженный врач Российской
-                        Федерации  <a href="">Подробнее</a></p>
+                    <a href="/blog/{{$item['id']}}">
+                        {{$item['created_at']}}   {{$item['name']}}</a>
+                    <p>{!! str_limit($item['content'],150,'..') !!}<a href="/blog/{{$item['id']}}">Подробнее</a></p>
                 </div>
             </div>
-            <div class="news-column col-md-4">
-                <div class="img-news-column col-md-4"><img src="/mother-baby.ru/img/news.png"></div>
-                <div class="text-news-column col-md-8">
-                    <a href="">
-                        19.05.2012   Группа Компаний
-                        «Здоровье Нации» поздравляет
-                        всех медицинских сестер с их
-                        профессиональным праздником</a>
-                    <p>В Центре «Здоровье нации»
-                        работают врачи первой высшей
-                        квалификационной  категории,
-                        соискатели научной степени,
-                        кандидаты медицинских наук,
-                        заслуженный врач Российской
-                        Федерации  <a href="">Подробнее</a></p>
-                </div>
-            </div>
-            <div class="news-column col-md-4">
-                <div class="img-news-column col-md-4"><img src="/mother-baby.ru/img/news.png"></div>
-                <div class="text-news-column col-md-8">
-                    <a href="">
-                        19.05.2012   Группа Компаний
-                        «Здоровье Нации» поздравляет
-                        всех медицинских сестер с их
-                        профессиональным праздником</a>
-                    <p>В Центре «Здоровье нации»
-                        работают врачи первой высшей
-                        квалификационной  категории,
-                        соискатели научной степени,
-                        кандидаты медицинских наук,
-                        заслуженный врач Российской
-                        Федерации  <a href="">Подробнее</a></p>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
     <!-- конец поля новостей -->

@@ -65,8 +65,7 @@
                     <li><a href="#">Новости</a></li>
                     <li><a href="#">Акции</a></li>
                     <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Запись</a></li>
-                    <li><a href="#">ON-LINE</a></li>
+                    <li><a href="#">Запись ON-LINE</a></li>
                     <li><a href="#">Специалисты</a></li>
                     <li><a href="#">Наши услуги</a></li>
                     <li><a href="#">Цены</a></li>

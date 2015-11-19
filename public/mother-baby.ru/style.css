@@ -7,6 +7,15 @@
 body{
 font-family: Arimo;
 font-weight: 400;
+	
+}
+.form-appointment {
+	background: url("img/bg_part1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	padding-top: 40px;
+}
 }
 .nav>li>a {
     position: relative;
@@ -345,11 +354,14 @@ text-decoration: underline;
 .footer-left-middle{
 margin-bottom: 10px;	
 }
-.slider{
-	margin-bottom: 20px;
-}
 .slider img{
 	width: 100%;
+}
+.album img {
+	width:100%;
+}
+.album .row div {
+	padding: 0;
 }
 .license-slide{
 	text-align: center;

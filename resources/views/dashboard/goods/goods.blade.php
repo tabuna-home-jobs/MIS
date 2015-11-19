@@ -29,7 +29,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($Goods as $good)
+                                <!--@foreach ($Goods as $good)
                                     <tr>
                                         <td>{{ $good->id }}</td>
                                         <td><img src="{{ $good->avatar }}" class="img-responsive" width="100px" height="50px"></td>
@@ -40,7 +40,12 @@
                                             <a href="/dashboard/goods/destroy/{{ $good->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
                                         </td>
                                     </tr>
+                                @endforeach-->
+
+                                @foreach ($Goods->toTree() as $category)
+                                    @include('dashboard.goods._partials.category', $category)
                                 @endforeach
+
                                 </tbody>
                             </table>
                         </div>

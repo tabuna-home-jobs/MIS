@@ -20,22 +20,27 @@ class ServiceController extends Controller {
     {
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $Category = $getSites->getCategory()->get();
+
 
 
 
         $requestCategory = Request::input('category');
+
+        $Category = $getSites->getCategory()->where('id',$requestCategory)->get();
+
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
 
 
 
         if (is_null($requestCategory))
-            $Goods = $getSites->getGoods()->paginate(9);
+            $Goods = $getSites->getGoods();
         else
-            $Goods = $getSites->getGoods()->where('category_id', $requestCategory)->paginate(9);
+            $Goods = $getSites->getGoods()->where('category_id', $requestCategory)->get();
+
+
 
         return view($sitename . $sitedomen . '/service', [
-            'Category' => $Category,
+            'thisCategory' => $Category,
             'Goods' => $Goods,
             'LastNews' => $getLastNews,
         ]);

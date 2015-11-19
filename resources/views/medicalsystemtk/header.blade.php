@@ -93,13 +93,27 @@
                         <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
                         <li><a href="#">Личный кабинет</a></li>
                         <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li>
-                        <li class="{{Active::route('service.*')}}"><a href="/service">Услуги</a></li>
+                        <li role="presentation" class="dropdown" style="padding-bottom: 5px;">
+                            <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Услуги
+                                <span class="caret"></span>
+                            </a>
+                            <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+                                <li><a href="/service?category=47">Консультация</a></li>
+                                <li><a href="/service?category=49">Лечение</a></li>
+                                <li><a href="/service?category=48">Диагностика</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="{{Active::route('service.*')}}"><a href="/service">Услуги</a></li>-->
+
+
                         <!--  <li class="{{Active::route('gallery.*')}}"><a href="/gallery">Галерея</a></li> -->
                         <!--  <li class="{{Active::route('reviews.*')}}"><a href="/reviews">Отзывы</a></li> -->
                        <!-- <li class="{{Active::route('team.*')}}"><a href="/team">Специалисты</a></li> -->
                         <li class="{{Active::route('feedback.*')}}"><a href="/feedback">Контакты</a></li>
 
                     </ul>
+
                 </div><!-- /.navbar-collapse -->
             </nav>
 
