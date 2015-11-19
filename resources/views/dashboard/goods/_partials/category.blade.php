@@ -3,7 +3,7 @@
         {{$category->id}}
     </td>
     <td>
-        <img src="{{$category->avatar}}" alt="">
+        <img style="width: 100px;" src="{{$category->avatar}}" alt="">
     </td>
     <td>
         {{$category->category()->first()->name or ''}}
