@@ -18,14 +18,18 @@
 
                     <div class="sidebar-widget clearfix">
 
-                        <h2 class="bordered light">Категории</h2>
-                        <div class="panel-group sidebar-nav" id="accordion3">
-                            @foreach($Goods->toTree() as $category)
-                                @include('medicalsystemtk.category.category', $category)
-                            @endforeach
+                        <!--<h2 class="bordered light">Категории</h2>-->
+                        <div class="procedures">
+                            <h3>Разделы</h3>
 
+
+                            <div class="panel-group sidebar-nav" id="accordion3">
+                                @foreach($Goods->toTree() as $category)
+                                    @include('medicalsystemtk.category.category', $category)
+                                @endforeach
+
+                            </div>
                         </div>
-
 
                     </div>
 
@@ -34,28 +38,37 @@
 
 
                     <style>
-                        .main-category {
-                            list-style-type: none;
+                        .plus-service:hover {
+                            color:#2B96CF;
+                            -webkit-transition: all .5s;
+                            transition: all .5s;
                         }
-                        .main-category li{
-                            cursor: pointer;
+                        .panel-sidebar a {
+                            border-bottom:1px transparent solid;
+                            -webkit-transition: all .5s;
+                            transition: all .5s;
                         }
-                        .main-category li a{
-                            cursor: pointer;
-                            font-size: 20px;
+                        .panel-sidebar a:hover {
+                            border-bottom:1px black solid;
                         }
-                        .main-category .children-ul {
-                            display: none;
-                            list-style: none;
-                        }
-                        .main-category li:hover >.children-ul{
-                            display: block;
-                            cursor: pointer;
-                        }
-
                     </style>
 
+                    <script>
+                        $('.plus-service').on('click',function(){
+                            var allPlus = $('.plus-service');
+                            allPlus.removeClass('fa-minus-square').addClass('fa-plus-square');
+                            var its = $(this);
+                            if(its.parent().parent().next().hasClass('in'))
+                            {
 
+                                its.addClass('fa-plus-square').removeClass('fa-minus-square');
+                            }
+                            else
+                            {
+                                its.addClass('fa-minus-square').removeClass('fa-plus-square');
+                            }
+                        });
+                    </script>
 
 
 
