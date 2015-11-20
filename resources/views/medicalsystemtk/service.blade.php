@@ -17,70 +17,20 @@
                 <aside class="col-md-4">
 
                     <div class="sidebar-widget clearfix">
+
                         <h2 class="bordered light">Категории</h2>
-                        <ul class="main-category">
+                        <div class="panel-group sidebar-nav" id="accordion3">
                             @foreach($Goods->toTree() as $category)
                                 @include('medicalsystemtk.category.category', $category)
                             @endforeach
 
-                        </ul>
-                    </div>
-
-
-                    <div class="procedures">
-                        <h3>Разделы</h3>
-                        <div class="panel-group sidebar-nav" id="accordion3">
-
-                            <div class="panel panel-sidebar">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse12">
-                                            <i class="fa fa-angle-right"></i> Заболевания органов дыхания
-                                        </a>
-                                    </h4>
-                                </div>
-
-                                <div id="collapse12" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <a href="/medencyclopedia/30"><i class="fa fa-angle-right"></i> Заболевания органов дыхания</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-sidebar">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse7">
-                                            <i class="fa fa-angle-right"></i> Акушерство и гинекология
-                                        </a>
-                                    </h4>
-                                </div>
-
-                                <div id="collapse7" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <a href="/medencyclopedia/13"><i class="fa fa-angle-right"></i> Акушерство и гинекология</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-sidebar">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse11">
-                                            <i class="fa fa-angle-right"></i> Аллергические заболевания
-                                        </a>
-                                    </h4>
-                                </div>
-
-                                <div id="collapse11" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <a href="/medencyclopedia/29"><i class="fa fa-angle-right"></i> Аллергические заболевания</a>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
+
+
                     </div>
+
+
+
 
 
                     <style>
