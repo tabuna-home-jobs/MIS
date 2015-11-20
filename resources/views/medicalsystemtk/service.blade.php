@@ -44,12 +44,29 @@
                             transition: all .5s;
                         }
                         .panel-sidebar a {
-                            border-bottom:1px transparent solid;
-                            -webkit-transition: all .5s;
-                            transition: all .5s;
+                            position: relative;
+                            display: inline-block;
                         }
-                        .panel-sidebar a:hover {
-                            border-bottom:1px black solid;
+                        .panel-heading a:after {
+                            position: absolute;
+                            left: 0;
+                            content: "";
+                            display: block;
+                            width: 0%;
+                            margin-right: 10px;
+                            border-bottom: 1px #373737 solid;
+
+                        }
+                        .panel-heading a:hover:after {
+                            width: 100%;
+                            border-bottom-width: 1px;
+                            transition: all .5s ease-out;
+                        }
+                        .panel-collapse a {
+                             transition: all .5s ease-out;
+                        }
+                        .panel-collapse a:hover {
+                            background-color: white;
                         }
                     </style>
 
