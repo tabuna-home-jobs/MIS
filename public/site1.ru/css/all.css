@@ -10645,7 +10645,7 @@ nav.primary ul {
 }
 
 nav.primary ul li {
-    display: inline-block;
+    display: block;
     list-style: none;
     margin: 0 -2px;
     width: auto
@@ -10691,7 +10691,8 @@ nav.primary li a.selected, nav.primary li a:hover {
 }
 
 .gallery-thumb {
-    position: relative
+    position: relative;
+    text-align:center;
 }
 
 .entry .overlay {
@@ -10793,7 +10794,7 @@ img {
 }
 
 .portfolio .entry {
-    width: 363px !important;
+    width: 40%;
     margin: 0 17px 36px 0 !important
 }
 

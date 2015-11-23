@@ -17,8 +17,8 @@ class GalleryController extends Controller {
     public function index($sitename, $sitedomen)
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $albums  =  $getSites->getAlbums()->select('name')->get();
-        $photo = $getSites->getPhoto()->get();
+        $albums  =  $getSites->getAlbums()->select('*')->get();
+        $photo = $getSites->getPhoto()->paginate(20);
 
         return view( $sitename.$sitedomen.'/gallery', [
                 'albums' => $albums,
@@ -51,9 +51,17 @@ class GalleryController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($sitename,$sitedomen,$id)
 	{
-		//
+		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+		$albums  =  $getSites->getAlbums()->select('*')->get();
+		$photo = $getSites->getPhoto()->where('album_id',$id)->paginate(20);
+
+		return view( $sitename.$sitedomen.'/gallery', [
+			'albums' => $albums,
+			'photos'  => $photo,
+			'id' =>$id
+		]);
 	}
 
 	/**

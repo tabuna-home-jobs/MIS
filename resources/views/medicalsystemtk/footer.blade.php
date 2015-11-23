@@ -209,10 +209,8 @@
 
 </script>
 
-
-
-
-
+<link rel="stylesheet" href="/site1.ru/js/fancy/jquery.fancybox.css">
+<script src="/site1.ru/js/fancy/jquery.fancybox.pack.js"></script>
 
 </body>
 </html>
