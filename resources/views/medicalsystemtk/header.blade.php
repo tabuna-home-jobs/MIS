@@ -25,6 +25,7 @@
     <!--theme colour-->
     <link rel="stylesheet" id="color" href="/site1.ru/css/all.css">
     <link rel="stylesheet" href="/site1.ru/fonts/font-awesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Bootstrap -->
     <!--<link href="/site1.ru/css/bootstrap.css" rel="stylesheet">-->
 
@@ -72,7 +73,12 @@
     <header class="medicom-header">
         <div class="colourfull-row"></div>
         <div class="container">
-            <nav class="navbar navbar-default" role="navigation">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="logo-main" href="/"><img src="/site1.ru/images/logo.png" alt="image" title="Medicom Logo"></a>
+                </div>
+                <div class="col-md-9">
+                    <nav class="navbar navbar-default" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -81,11 +87,37 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/"><img src="/site1.ru/images/logo.png" alt="image" title="Medicom Logo"></a>
+
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <div style="overflow: hidden;" class="top_panel">
+                        <div style="overflow: hidden;" class="col-lg-3">
+                            <div class="cocial-top-li">
+                                <a href=""><i class="fa fa-vk" ></i></a>
+                                <a href=""><i class="fa fa-facebook" ></i></a>
+                                <a href=""><i class="fa fa-odnoklassniki" ></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="top-contacts">
+                                        <i class="fa fa-map-marker top-contacts-fa" ></i> г.Липецк ул.Октябрьская д.61
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="top-contacts">
+                                        <i class="fa fa-phone top-contacts-fa" ></i>
+                                        <a href="">(4742) 227-887</a>,
+                                        <a href="">(4742) 227-888</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <ul class="nav navbar-nav">
 
 
@@ -116,7 +148,8 @@
 
                 </div><!-- /.navbar-collapse -->
             </nav>
-
+                </div>
+            </div>
         </div>
         <div class="header-bottom-line"></div>
     </header>
