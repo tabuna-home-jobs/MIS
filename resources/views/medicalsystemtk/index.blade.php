@@ -7,13 +7,13 @@
     
     <section class="creative-sec">
         <div class="container">
-            <div class="text-center">
+            <!--<div class="text-center">
                 <h1 class="light">«Здоровье Нации»
                 </h1>
 
                 <p class="lead"> многопрофильная компания, оказывающая широкий спектр услуг для всей семьи отрудников и
                     клиентов.</p>
-            </div>
+            </div>-->
 
             <div class="creative-sec-thumb one">
                 <figure>
@@ -514,7 +514,7 @@
 
 
 
-        <section class="medicom-app" data-stellar-background-ratio="0.3">
+        <!--<section class="medicom-app" data-stellar-background-ratio="0.3">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
@@ -537,7 +537,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
     </div>
 
