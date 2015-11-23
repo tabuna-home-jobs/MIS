@@ -95,9 +95,9 @@
                     <div style="overflow: hidden;" class="top_panel">
                         <div style="overflow: hidden;" class="col-lg-3">
                             <div class="cocial-top-li">
-                                <a href=""><i class="fa fa-vk" ></i></a>
-                                <a href=""><i class="fa fa-facebook" ></i></a>
-                                <a href=""><i class="fa fa-odnoklassniki" ></i></a>
+                                <a target="_blank" href="http://vk.com/zdorovie_nacii48"><i class="fa fa-vk" ></i></a>
+                                <a target="_blank" href="https://www.facebook.com/groups/zdorovie48/"><i class="fa fa-facebook" ></i></a>
+                                <a target="_blank" href="http://ok.ru/group52174602436776"><i class="fa fa-odnoklassniki" ></i></a>
                             </div>
                         </div>
                         <div class="col-lg-9">
@@ -109,9 +109,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="top-contacts">
-                                        <i class="fa fa-phone top-contacts-fa" ></i>
-                                        <a href="">(4742) 227-887</a>,
-                                        <a href="">(4742) 227-888</a>
+                                        <i style="display: inline!important" class="fa fa-phone top-contacts-fa" ></i>
+                                        <a href="tel:+74742227887">(4742) 227-887</a>,
+                                        <a href="tel:+74742227888">(4742) 227-888</a>
                                     </div>
 
                                 </div>
