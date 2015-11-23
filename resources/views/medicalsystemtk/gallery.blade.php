@@ -22,7 +22,7 @@
 
                         @foreach($photos as $photo)
 
-                      <article class="entry {{$photo->getAlbum()->first()->name}}">
+                      <article class="entry {{$photo->getAlbum()->first()->name }} ">
                       <div class="gallery-thumb">
                       	<span class="overlay"></span>
                             <a href="{{$photo->url}}" data-rel="prettyPhoto" class="link-preety"></a>

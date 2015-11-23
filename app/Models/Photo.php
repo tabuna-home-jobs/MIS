@@ -18,7 +18,7 @@ class Photo extends Model {
      *
      * @var array
      */
-    protected $fillable = ['ids', 'photoalbum_id', 'url','videourl'];
+    protected $fillable = ['ids', 'album_id', 'url','videourl'];
 
 
 
@@ -29,7 +29,7 @@ class Photo extends Model {
 
     public function getAlbum()
     {
-        return $this->belongsTo('App\Models\Album', 'photoalbum_id');
+        return $this->belongsTo('App\Models\Album', 'album_id');
     }
 
 

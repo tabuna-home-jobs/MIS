@@ -11,7 +11,7 @@ class Album extends Model {
      *
      * @var string
      */
-    protected $table = 'photoalbum';
+    protected $table = 'album';
 
     /**
      * The attributes that are mass assignable.

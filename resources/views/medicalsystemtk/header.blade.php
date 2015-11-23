@@ -23,7 +23,7 @@
 
 
     <!--theme colour-->
-    <link rel="stylesheet" id="color" href="/public/site1.ru/css/all.css">
+    <link rel="stylesheet" id="color" href="/site1.ru/css/all.css">
     <link rel="stylesheet" href="/site1.ru/fonts/font-awesome.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Bootstrap -->
