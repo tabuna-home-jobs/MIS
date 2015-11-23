@@ -25,6 +25,7 @@
                         <div class="col-md-3 photo-item-container">
                             <a rel="group" href="{{$photo->url}}" class="photo-item fancybox">
                                 <img src="{{$photo->url}}" alt="">
+                                <i class="fa fa-eye"></i>
                             </a>
                         </div>
 
@@ -50,6 +51,7 @@
             margin-bottom: 20px;
         }
         .photo-item-container .photo-item  {
+            position: relative;
             height: 200px;
             overflow: hidden;
             display: block;
@@ -59,11 +61,40 @@
             box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.37);
             text-align: center;
             BACKGROUND-COLOR: #E5E9EC;
+
         }
+
+        @keyframes rotate {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.5;
+            }
+
+        }
+
         .photo-item-container img {
             height: 100%;
             width: auto;
             max-width: 9999px;
+            transition: all .5s;
+        }
+        .photo-item-container a:hover img{
+            opacity:0.5;
+        }
+        .photo-item-container a i{
+            opacity: 0;
+            position: absolute;
+            top: 40%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 50px;
+            transition: all .5s;
+        }
+        .photo-item-container a:hover i{
+            opacity:1;
         }
     </style>
 @endsection
