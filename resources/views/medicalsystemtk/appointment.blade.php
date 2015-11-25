@@ -426,8 +426,8 @@
             <div class="row text-center" id="counters">
                 <div class="col-md-3">
                     <div class="counter">
-                        <span class="quantity-counter1 highlight">109675</span>
-                        <h6 class="counter-details">Посетителей (клиентов) </h6>
+                        <span class="quantity-counter1 highlight">109 675</span>
+                        <h6 class="counter-details">Посетителей</h6>
                     </div>
                 </div>
                 <div class="col-md-3">
