@@ -16,7 +16,7 @@ class TeamController extends Controller {
 	{
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         //$Specialisty = $getSites->getTeam()->orderBy('sort', 'desc')->paginate(6);
-		$SpecCat = $Specialisty = $getSites->getSpecCat()->paginate(999);
+		$SpecCat = $getSites->getSpecCat()->get();
 
 
 		$requestCategory = Request::input('catspec');
@@ -25,7 +25,7 @@ class TeamController extends Controller {
 		else
 			$Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->paginate(9);
 
-
+		//dd($requestCategory);
         return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty,'SpCat' => $SpecCat]);
 	}
 

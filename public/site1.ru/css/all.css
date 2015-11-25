@@ -11031,18 +11031,25 @@ div.facebook .pp_content, div.light_rounded .pp_bottom .pp_middle, div.light_rou
 
 }
 .cocial-top-li a:hover {
-    border: 1px #707070 solid;
+    border: 1px #2b96cc solid;
     background-color: white;
     color:  #2b96cc;
 }
+
 .top-contacts, .top-contacts a {
     color: #707070;
     font-size: 18px;
+}
+.top-contacts, .top-contacts a:hover {
+    color: #2b96cc;
 }
 .top-contacts .top-contacts-fa {
     font-size: 32px;
     color: #2b96cc;
     vertical-align: middle;
     margin-right: 7px;
+}
+.top-addres {
+    color:#2b96cc;
 }
 /*коммент*/

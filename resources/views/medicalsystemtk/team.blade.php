@@ -55,7 +55,7 @@
 
 
             <div class="row">
-                {!! $Specialisty->render() !!}
+                {!! $Specialisty->appends(\Input::except('page'))->render() !!}
             </div>
 
 

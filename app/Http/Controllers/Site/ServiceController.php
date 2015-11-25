@@ -90,10 +90,12 @@ class ServiceController extends Controller {
 	 */
     public function show($sitename, $sitedomen, $id)
 	{
+
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Category = $getSites->getCategory()->get();
         $Goods = $getSites->getGoods()->where('id', $id)->first();
-        $Comments = $Goods->comments()->where('publish', true)->orderBy('name', 'asc')->simplepaginate(5);
+
+        $Comments = $Goods->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
 
 
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();

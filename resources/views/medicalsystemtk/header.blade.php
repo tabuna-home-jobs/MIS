@@ -103,7 +103,7 @@
                         <div class="col-lg-9">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="top-contacts">
+                                    <div class="top-contacts top-addres">
                                         <i class="fa fa-map-marker top-contacts-fa" ></i> г.Липецк ул.Октябрьская д.61
                                     </div>
                                 </div>
