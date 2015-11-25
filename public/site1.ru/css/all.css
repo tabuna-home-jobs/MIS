@@ -8800,7 +8800,7 @@ footer.dark .footer-bottom-text {
 
 .creative-sec-thumb.four {
     right: 0;
-    top: 275px
+    top: 182px
 }
 
 .creative-sec-thumb figure {
@@ -11007,45 +11007,42 @@ div.facebook .pp_content, div.light_rounded .pp_bottom .pp_middle, div.light_rou
     vertical-align: top;
 }
 .cocial-top-li i {
-    font-size: 27px;
+    font-size: 20px;
     display: table-cell;
     vertical-align: middle;
 
 }
 .cocial-top-li {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 19px;
     overflow: hidden;
 }
 .cocial-top-li a {
     display: table;
     border: 1px transparent solid;
     transition: all .5s linear;
-    width: 45px;
-    height: 37px;
+    width: 34px;
+    height: 30px;
     float: left;
-    margin-right: 3px;
+    margin-right: 10px;
     border-radius: 5px;
-    background-color: #428BCA;
+    background-color: #2b96cc;
     color: white;
 
 }
 .cocial-top-li a:hover {
     border: 1px #707070 solid;
     background-color: white;
-    color:  #428BCA;
+    color:  #2b96cc;
 }
 .top-contacts, .top-contacts a {
     color: #707070;
     font-size: 18px;
 }
 .top-contacts .top-contacts-fa {
-    font-size: 43px;
-    color: #428BCA;
+    font-size: 32px;
+    color: #2b96cc;
     vertical-align: middle;
     margin-right: 7px;
-}
-.top_panel {
-    margin-bottom: 20px;
 }
 /*коммент*/

@@ -4,7 +4,7 @@
 
 
 <div class="container galery-container">
-    <h1 style="margin-bottom: 40px">Видеогалерея</h1>
+    <h2 class="light bordered"> <div><a  href="/gallery">Фотогалерея</a><a class="active">Видеогалерея</a></div> </h2>
     <div class="row">
         <div class="col-sm-4 col-xs-12 col-md-3">
             <nav class="primary-albums clearfix">
@@ -47,6 +47,37 @@
 </script>
 
 <style>
+    .galery-container {
+        padding-top: 50px;
+    }
+
+
+
+    .galery-container .light.bordered a {
+        display: inline-block;
+        padding: 10px;
+        /* border: 1px #DDDDDD solid; */
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom: none;
+        background-color: white;
+        padding-top: 4px;
+    }
+    .galery-container .light.bordered div {
+        border-bottom: 1px #DDDDDD solid;
+        display: inline-block;
+    }
+    .galery-container .light.bordered a.active {
+        display: inline-block;
+        padding: 10px;
+        border: 1px #DDDDDD solid;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom: none;
+        background-color: #428BCA;
+        color: white;
+    }
+
     .photo-item-container {
         margin-bottom: 20px;
     }
