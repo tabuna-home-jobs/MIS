@@ -421,31 +421,30 @@
         <div class="container">
             <h1>Наш центр</h1>
 
-            <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
 
             <div class="row text-center" id="counters">
                 <div class="col-md-3">
                     <div class="counter">
-                        <span class="quantity-counter1 highlight">180</span>
-                        <h6 class="counter-details">Посетителей</h6>
+                        <span class="quantity-counter1 highlight">109675</span>
+                        <h6 class="counter-details">Посетителей (клиентов)</h6>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="counter">
-                        <span class="quantity-counter2 highlight">99</span>
+                        <span class="quantity-counter2 highlight">346</span>
                         <h6 class="counter-details">Сотрудников</h6>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="counter">
-                        <span class="quantity-counter3 highlight">50</span>
+                        <span class="quantity-counter3 highlight">71</span>
                         <h6 class="counter-details">Кабинетов</h6>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="counter">
-                        <span class="quantity-counter4 highlight">362</span>
+                        <span class="quantity-counter4 highlight">20</span>
                         <h6 class="counter-details">Наград</h6>
                     </div>
                 </div>
