@@ -239,6 +239,7 @@ class User extends Model implements UserInterface
      */
     public function setPermissionsAttribute(array $permissions)
     {
+
         // Merge permissions
         $permissions = array_merge($this->getPermissions(), $permissions);
 
@@ -256,6 +257,7 @@ class User extends Model implements UserInterface
         }
 
         $this->attributes['permissions'] = (!empty($permissions)) ? json_encode($permissions) : '';
+
     }
 
     /**

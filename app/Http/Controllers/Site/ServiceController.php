@@ -26,16 +26,17 @@ class ServiceController extends Controller {
 
         $requestCategory = Request::input('category');
 
-        $Category = $getSites->getCategory()->where('id',$requestCategory)->get();
+        $Category = $getSites->getCategory()->where('id',$requestCategory)->orderBy('name','desc')->get();
 
-        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
+
+        $getLastNews = $getSites->getNews()->orderBy('name', 'asc')->limit(5)->get();
 
 
 
         if (is_null($requestCategory))
             $Goods = $getSites->getGoods();
         else
-            $Goods = $getSites->getGoods()->where('category_id', $requestCategory)->get();
+            $Goods = $getSites->getGoods()->where('category_id', $requestCategory)->orderBy('name','asc')->get();
 
 
 
@@ -92,7 +93,7 @@ class ServiceController extends Controller {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Category = $getSites->getCategory()->get();
         $Goods = $getSites->getGoods()->where('id', $id)->first();
-        $Comments = $Goods->comments()->where('publish', true)->orderBy('id', 'desc')->simplepaginate(5);
+        $Comments = $Goods->comments()->where('publish', true)->orderBy('name', 'asc')->simplepaginate(5);
 
 
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();

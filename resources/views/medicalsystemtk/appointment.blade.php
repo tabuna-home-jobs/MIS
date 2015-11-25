@@ -243,37 +243,150 @@
 
 
 
-
+    <style>
+        .modal-starter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+        }
+        .service-box {
+            position: relative;
+        }
+        .modal-body {
+            text-align: left;
+        }
+    </style>
 
 
     <section class="services-sec container">
-        <div class="service-box one">
+        <div style="cursor:pointer;position: relative;"  class="service-box one">
+            <a class="modal-starter" data-toggle="modal" data-target="#myModal1"></a>
             <span class="icon img-circle"><i class="fa fa-lightbulb-o"></i></span>
-            <h4><a href="#.">Лучшие доктора</a></h4>
+            <h4><a  href="#.">Многопрофильность </a></h4>
 
-            <p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros
-                adipiscing elit Ut volutpat. cancer care is power of dummy for all business.</p>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Многопрофильность</h4>
+                        </div>
+                        <div class="modal-body">
+                            «Здоровье нации» – это многопрофильный медицинский центр, ориентированный на оказание высококвалифицированной помощи жителям города и области.
+                            <br><br>
+                            «Здоровье нации» - это профессиональная команда специалистов, которые: <br>
+                            - ответственно используют проверенные и надежные технологии;<br>
+                            - постоянно работают над внедрением инноваций;<br>
+                            - добиваются положительных результатов в каждом конкретном случае с каждым конкретным клиентом.
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="service-box two">
+        <div style="cursor:pointer;"  class="service-box two">
+            <a class="modal-starter" data-toggle="modal" data-target="#myModal2"></a>
             <span class="icon img-circle"><i class="fa fa fa-flask"></i></span>
-            <h4><a href="#.">Лучшие доктора</a></h4>
+            <h4><a  href="#.">Квалификация специалистов</a></h4>
 
-            <p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros
-                adipiscing elit Ut volutpat. cancer care is power of dummy for all business.</p>
+
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Квалификация специалистов</h4>
+                        </div>
+                        <div class="modal-body">
+                            Врачи,  принимающие в нашем центре, с многолетним опытом работы, среди них доктора и кандидаты медицинских наук, врачи с высшей квалификационной категорией, заслуженные врачи Российской федерации. Вы можете записаться к ним на прием в удобное для Вас время.<br><br>
+                            В медицинском центре «Здоровье Нации» собственная лаборатория, а как известно анализы  являются главной частью в диагностики заболеваний человека. Наша лаборатория оснащена современным оборудованием, которое соответствует всем требованиям федеральных и международных стандартов качества.<br><br>
+                            Мы гарантируем оперативность, надежность, высокий профессионализм медицинского персонала лаборатории.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        <div class="service-box three">
+        <div style="cursor:pointer;"  class="service-box three">
+            <a class="modal-starter" data-toggle="modal" data-target="#myModal3"></a>
             <span class="icon img-circle"><i class="fa fa-tint"></i></span>
-            <h4><a href="#.">Лучшие доктора</a></h4>
+            <h4><a href="#.">Безопасность</a></h4>
 
-            <p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros
-                adipiscing elit Ut volutpat. cancer care is power of dummy for all business.</p>
+
+            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Безопасность</h4>
+                        </div>
+                        <div class="modal-body">
+                            В медицинских центрах группы компаний «Здоровье нации» весь инструментарий стерилен, поэтому вы можете не волноваться о безопасности проведения процедур. Безопасность – этот принцип основывается на индивидуальности, одноразовости, стерильности.<br><br>
+                            Одноразовый инструментарий: шприцы, иглы, одноразовые системы для внутривенного вливания, иглы - бабочки для забора крови, скарификатор, быстр в подготовке, не требует циклической стерилизации, минимизирует эпидемиологическую угрозу.<br><br>
+                            Все используемые многоразовые инструменты проходят четыре  стадии  очистки:<br><br>
+                            1.дезинфекцию<br>
+                            2.ПСО (предстерилизационная очистка)<br>
+                            3.стерилизация (в автоклавирующем  оборудовании Vacuclav 24B Германии)<br>
+                            4.ополаскивание дистиллированной водой<br>
+                            В нашей клинике используется упаковочный материал в рулонах для паровой стерилизации марки Steriguard  и упаковочный аппарат Legron, позволяющий в течение года  сохранять стерильность инструментария.<br>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
-        <div class="service-box four">
+        <div style="cursor:pointer;"  class="service-box four">
+            <a class="modal-starter" data-toggle="modal" data-target="#myModal4"></a>
             <span class="icon img-circle"><i class="fa fa-phone"></i></span>
-            <h4><a href="#.">Лучшие доктора</a></h4>
+            <h4><a href="#.">Лояльность </a></h4>
 
-            <p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros
-                adipiscing elit Ut volutpat. cancer care is power of dummy for all business.</p>
+
+            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Лояльность</h4>
+                        </div>
+                        <div class="modal-body">
+                            Мы гарантируем индивидуальный подход, высокоточную диагностику на современном оборудовании, соблюдение всех норм и правил оказания медицинской помощи.
+                            <br>
+                            У нас действует система лояльности: <br>
+                            - скидки по  накопительным картам «Любимый клиент»<br>
+                            - скидки матерям одиночкам 5%<br>
+                            - скидки медработникам 7%<br>
+                            - скидки  пенсионерам 7%<br>
+                            - скидки  детям инвалидам 10%<br>
+                            - скидки многодетным семьям 10%
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -286,18 +399,18 @@
         <div class="container">
             <h1>Что дальше?</h1>
 
-            <p class="lead">В течении несколько минут вам перезвонит сотрудник нашего центра что бы уточнить
-                подробности</p>
+
             <ul class="medicom-feature-list list-inline text-left">
-                <li><i class="fa fa-check medicom-check"></i>Бесплатный звонок</li>
-                <li><i class="fa fa-check medicom-check"></i>Бесплатный первичный приём</li>
-                <li><i class="fa fa-check medicom-check"></i>Консультация профессионального специалиста</li>
-                <li><i class="fa fa-check medicom-check"></i>Бесплатный звонок</li>
-                <li><i class="fa fa-check medicom-check"></i>Бесплатный первичный приём</li>
-                <li><i class="fa fa-check medicom-check"></i>Консультация профессионального специалиста</li>
-                <li><i class="fa fa-check medicom-check"></i>Бесплатный звонок</li>
-                <li><i class="fa fa-check medicom-check"></i>Бесплатный первичный приём</li>
-                <li><i class="fa fa-check medicom-check"></i>Консультация профессионального специалиста</li>
+                <li><i class="fa fa-check medicom-check"></i>Вы можете записаться на прием к любому врачу/специалисту нашего центра. Познакомиться с нашими врачами можно в разделе специалисты.</li>
+                <li><i class="fa fa-check medicom-check"></i>Ваша заявка является предварительной.</li>
+                <li><i class="fa fa-check medicom-check"></i>Указанная Вами дата приема может быть изменена в связи с действующим расписанием и существующей записью</li>
+                <li><i class="fa fa-check medicom-check"></i>В течение часа с момента подачи заявки с Вами свяжется сотрудник колл-центра нашего центра и согласует окончательную дату приема.</li>
+                <li><i class="fa fa-check medicom-check"></i>Для иногородних: просим Вас планировать приезд в  медицинский центр только после подтверждения даты приема.</li>
+                <li><i class="fa fa-check medicom-check"></i>Будьте внимательны, указывайте правильный, действующий контактный номер телефона.</li>
+                <li><i class="fa fa-check medicom-check"></i>Вы можете указать свой адрес электронной почты для того, чтобы получать информацию о скидках и специальных предложениях  медицинского центра «Здоровье Нации».</li>
+                <li><i class="fa fa-check medicom-check"></i>Вы также можете позвонить нам по телефону:
+                    <a href="tel:+74742227887">+7 (4742) 227-887</a> и записаться с 8.00 до 21.00 ежедневно.</li>
+
             </ul>
         </div>
     </section>
@@ -342,6 +455,10 @@
     </section>
 
 
-
+    <script>
+        $('#myModal1').on('hide.bs.modal', function () {
+            alert('asd');
+        })
+    </script>
 
 @endsection

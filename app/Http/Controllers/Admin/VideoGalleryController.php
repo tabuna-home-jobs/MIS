@@ -1,0 +1,82 @@
+<?php
+
+namespace App\Http\Controllers\admin;
+
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Models\VideoAlbum as Album;
+use App\Models\Video as Video;
+use Session;
+
+class VideoGalleryController extends Controller
+{
+
+    public function index()
+    {
+        $AlbumList = Album::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+        return view("dashboard/Video/gallery", ['AlbumList' => $AlbumList]);
+    }
+
+
+    public function create()
+    {
+
+
+        return view("dashboard/Video/galleryCrud");
+    }
+
+
+    public function store(Request $request)
+    {
+        $alb = new Album();
+            $alb->name = $request->name;
+            $alb->ids = Session::get('website');
+        $alb->save();
+        return redirect('dashboard/video');
+    }
+
+
+    public function show($id)
+    {
+        $AlbumPhoto = Album::whereRaw('id = ? and ids = ? ',[$id,Session::get('website')])->first()->getVideo()->orderBy('id', 'desc')->paginate(8);
+        return view("dashboard/Video/Video", ['AlbumPhoto' => $AlbumPhoto, 'Album' => $id]);
+    }
+
+
+    public function edit($id)
+    {
+        return view("dashboard/Video/galleryCrud");
+    }
+
+
+    public function update(Request $request, $id)
+    {
+        if($request->id){
+            $video = Video::find($request->id);
+            $video->ids = Session::get('website');
+            $video->code = $request->code;
+            $video->album_id = $request->album_id;
+            $video->name = $request->name;
+            $video->save();
+            return redirect('dashboard/video/'.$request->album_id.'');
+        }else {
+            $video = new Video();
+            $video->ids = Session::get('website');
+            $video->code = $request->code;
+            $video->album_id = $request->album_id;
+            $video->name = $request->name;
+            $video->save();
+            return redirect('dashboard/video/'.$request->album_id.'');
+        }
+
+    }
+
+
+    public function destroy(Request $request,$id)
+    {
+        $video = Video::find($id);
+        $video->delete();
+        return redirect('dashboard/video/'.$request->album_id.'');
+    }
+}

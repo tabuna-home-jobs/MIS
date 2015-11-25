@@ -24,6 +24,7 @@ Route::controllers([
 
 Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], function()
 {
+    Route::resource('/video', 'VideoGalleryController');
     Route::resource('/questanswer', 'QuestAnswerController');
     Route::resource('/medencyclopedia', 'EncyclopediaController');
     Route::resource('/encypost', 'EncyPostController');
@@ -72,6 +73,7 @@ Route::get('dashboard/spcat/destroy/{id}','Admin\SpecCatController@destroy');
 Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefix' => 'dashboard'], function ()
 {
     //Route::resource('spcat', 'SpecCatController');
+    Route::resource('video','VideoGalleryController');
     Route::resource('questanswer', 'QuestAnswerController');
     Route::resource('user', 'UserController');
     Route::resource('groups', 'GroupsController');
@@ -117,7 +119,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefi
 
     Route::controller('gallery', 'GalleryController', [
         'getIndex' => 'dashboard.gallery.index',
-        'getAdd' => 'dashboard.gallery.add',
+        'getAdd' => 'dashboard.gallery.add'
     ]);
 
 

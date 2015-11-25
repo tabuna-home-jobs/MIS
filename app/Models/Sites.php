@@ -91,6 +91,15 @@ class Sites extends Model {
     {
         return $this->hasOne('App\Models\Photo', 'ids');
     }
+    public function getVideoAlbums()
+    {
+        return $this->hasOne('App\Models\VideoAlbum', 'ids');
+    }
+
+    public function getVideo()
+    {
+        return $this->hasOne('App\Models\Video', 'ids');
+    }
 
 
 

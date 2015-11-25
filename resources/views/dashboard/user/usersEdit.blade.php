@@ -111,7 +111,7 @@
                                                                 @if($value->id == $thisUserGroup->id)
                                                                        checked
                                                                         @endif
-                                                                        >
+                                                                     <label>
                                                                 {{$value->name}}
                                                                 </label>
                                                             </div>
@@ -136,7 +136,7 @@
                                                                 <input type="checkbox"
                                                                        name="permissions['{{$route->getName()}}']"
                                                                        value="1"
-                                                                @if(isset($user->permissions[$route->getName()]))
+                                                                @if(isset($user->permissions["'".$route->getName()."'"]))
                                                                        checked
                                                                        @endif
                                                                         >

@@ -85,10 +85,11 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
+        $user->setPermissionsAttribute($request->permissions);
         $user->save();
+        return redirect()->route('dashboard.user.index');
 
-
-        dd(Sentry::getUser());
+        //dd(Sentry::getUser());
 
     }
 

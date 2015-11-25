@@ -3,7 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Album extends Model {
+class Video extends Model {
 
     use SoftDeletes;
     /**
@@ -11,23 +11,26 @@ class Album extends Model {
      *
      * @var string
      */
-    protected $table = 'album';
+    protected $table = 'video';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['ids', 'name'];
+    protected $fillable = ['ids', 'album_id', 'code'];
+
+
 
     public function getSite()
     {
         return $this->belongsTo('App\Models\Sites', 'ids');
     }
 
-    public function getPhoto()
+    public function getAlbum()
     {
-        return $this->hasOne('App\Models\Photo', 'album_id');
+        return $this->belongsTo('App\Models\VideoAlbum', 'album_id');
     }
-    
+
+
 }

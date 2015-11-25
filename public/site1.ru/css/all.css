@@ -8413,13 +8413,16 @@ footer.dark .footer-bottom-text {
     font-size: 16px;
     color: #494949;
     padding: 30px 4.6% 0;
-    min-height: 285px;
+    min-height: 215px;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
 }
 
 .service-box p {
     margin-bottom: 10px
+}
+.service-box .modal,.service-box h4{
+    color:black!important;
 }
 
 .service-box h4, .service-box h4 a {
@@ -9798,7 +9801,8 @@ i.feature-icon {
 .after-booking-sec li {
     width: 49%;
     font-size: 18px;
-    color: #373737
+    color: #373737;
+    vertical-align: top;
 }
 
 .team-description .jcarousel-skin-tango .jcarousel-item-horizontal {

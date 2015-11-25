@@ -132,8 +132,9 @@
                             </a>
                             <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
                                 <li><a href="/service?category=47">Консультация</a></li>
-                                <li><a href="/service?category=49">Лечение</a></li>
                                 <li><a href="/service?category=48">Диагностика</a></li>
+                                <li><a href="/service?category=49">Лечение</a></li>
+
                             </ul>
                         </li>
                         <!--<li class="{{Active::route('service.*')}}"><a href="/service">Услуги</a></li>-->

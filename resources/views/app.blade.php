@@ -311,11 +311,29 @@
                             </a>
                         </li>
 
+
+                        <li>
+                            <a href="">
+                                <i class="fa fa-film"></i>
+                                <span>Галереи</span>
+                            </a>
+
+                        <ul class="nav nav-sub dk">
+
                         <li class="{{Active::route('dashboard.gallery.*')}}">
                             <a href="{{URL::route('dashboard.gallery.index')}}">
                                 <i class="fa fa-picture-o"></i>
-                                <span>Галерея</span>
+                                <span>Фотогалерея</span>
                             </a>
+                        </li>
+                        <li class="{{Active::route('dashboard.video.*')}}">
+                            <a href="{{URL::route('dashboard.video.index')}}">
+                                <i class="fa fa-video-camera"></i>
+                                <span>Видеогалерея</span>
+                            </a>
+                        </li>
+
+                        </ul>
                         </li>
 
 
