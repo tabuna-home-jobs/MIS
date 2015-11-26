@@ -58,7 +58,7 @@ class ArticlesController extends Controller
             'ids'=> Session::get('website'),
         ]);
 
-        //Пока оставлю так
+        //???? ??????? ???
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $art->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
@@ -71,7 +71,7 @@ class ArticlesController extends Controller
 
 
         /*
-         * Социалки
+         * ????????
          */
 
         $Social = new Social([
@@ -84,8 +84,8 @@ class ArticlesController extends Controller
         $Social->pushAll();
 
 
-        //Флеш сообщение
-        Session::flash('good', 'Вы успешно изменили значения');
+        //???? ?????????
+        Session::flash('good', '?? ??????? ???????? ????????');
         return redirect()->route('dashboard.art.index');
     }
 
@@ -113,7 +113,7 @@ class ArticlesController extends Controller
             'ids'=> Session::get('website'),
         ]);
 
-        //Пока оставлю так
+        //???? ??????? ???
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $art->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
@@ -121,8 +121,8 @@ class ArticlesController extends Controller
 
         $art->save();
 
-        //Флеш сообщение
-        Session::flash('good', 'Вы успешно изменили значения');
+        //???? ?????????
+        Session::flash('good', '?? ??????? ???????? ????????');
         return redirect()->route('dashboard.art.index');
     }
 
@@ -135,7 +135,7 @@ class ArticlesController extends Controller
     public function destroy(Articles $art)
     {
         $art->delete();
-        Session::flash('good', 'Вы успешно удалили значения');
+        Session::flash('good', '?? ??????? ??????? ????????');
         return redirect()->route('dashboard.art.index');
     }
 }

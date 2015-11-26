@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/app/Facades/GalleryOnMain.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Facades/NewsonMain.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Facades/PageOnMain.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Facades/categoryOnMain.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SpecCatController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/cozn48ru/appointment.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/cozn48ru/blogNews.blade.php" charset="UTF-8" />
