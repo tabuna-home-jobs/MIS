@@ -68,6 +68,7 @@ Route::post('dashboard/spcat/store','Admin\SpecCatController@store');
 Route::get('dashboard/spcat/edit/{id}','Admin\SpecCatController@edit');
 Route::post('dashboard/spcat/update/{id}','Admin\SpecCatController@update');
 Route::get('dashboard/spcat/destroy/{id}','Admin\SpecCatController@destroy');
+Route::get('dashboard/video/destroy/{id}','Admin\VideoGalleryController@getDestroyAlbom');
 
 Route::post('/errormailsend','Site\EmailFrom@postSend');
 
@@ -75,6 +76,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefi
 {
     //Route::resource('spcat', 'SpecCatController');
     Route::resource('video','VideoGalleryController');
+
     Route::resource('questanswer', 'QuestAnswerController');
     Route::resource('user', 'UserController');
     Route::resource('groups', 'GroupsController');

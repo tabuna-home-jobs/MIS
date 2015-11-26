@@ -24,8 +24,9 @@
                 @foreach($videos as $video)
                 <div class="col-md-3 photo-item-container">
                     <a rel="group" href="{{$video->code}}" class="photo-item fancybox fancybox.iframe">
-                        <iframe src="{{preg_replace("/autoplay=1/",'autoplay=0',$video->code)}}" frameborder="0"></iframe>
-                        <i class="fa fa-eye"></i>
+                        <i style="z-index:999;" class="fa fa-eye"></i>
+                        {{--<iframe src="{{preg_replace("/autoplay=1/",'autoplay=0',$video->code)}}" frameborder="0"></iframe>--}}
+                        <img src="http://img.youtube.com/vi{{preg_replace("/(.*)embed/",'',$video->code)}}/hqdefault.jpg" alt="">
                     </a>
                 </div>
 
@@ -105,9 +106,9 @@
 
     }
 
-    .photo-item-container iframe {
+    .photo-item-container img {
         height: 100%;
-        width: 100%;
+        width: auto;
         max-width: 9999px;
         transition: all .5s;
     }
@@ -117,7 +118,8 @@
     .photo-item-container a i{
         opacity: 0;
         position: absolute;
-        top: 40%;
+        padding-top: 40%;
+        top: 0;
         bottom: 0;
         left: 0;
         right: 0;

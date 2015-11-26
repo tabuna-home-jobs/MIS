@@ -35,7 +35,7 @@
                                         <td>
                                             <a href="/dashboard/video/{{ $album->id }}" class="btn btn-info"><span class="fa fa-eye"></span> </a>
                                             <a href="/dashboard/video/{{ $album->id }}/edit" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
-                                            <a href="/dashboard/gallery/destroy/{{ $album->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
+                                            <a href="/dashboard/video/destroy/{{ $album->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
                                         </td>
                                     </tr>
                                 @endforeach

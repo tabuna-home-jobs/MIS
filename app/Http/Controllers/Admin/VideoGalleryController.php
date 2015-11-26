@@ -29,10 +29,19 @@ class VideoGalleryController extends Controller
 
     public function store(Request $request)
     {
-        $alb = new Album();
+
+        if($request->id){
+            $alb = $AlbumPhoto = Album::find($request->id);
             $alb->name = $request->name;
             $alb->ids = Session::get('website');
-        $alb->save();
+            $alb->save();
+        }else {
+            $alb = new Album();
+            $alb->name = $request->name;
+            $alb->ids = Session::get('website');
+            $alb->save();
+        }
+
         return redirect('dashboard/video');
     }
 
@@ -46,7 +55,8 @@ class VideoGalleryController extends Controller
 
     public function edit($id)
     {
-        return view("dashboard/Video/galleryCrud");
+        $Album = Album::whereRaw('id = ? and ids = ? ',[$id,Session::get('website')])->first();
+        return view("dashboard/Video/galleryCrud",['Album'=>$Album]);
     }
 
 
@@ -78,5 +88,13 @@ class VideoGalleryController extends Controller
         $video = Video::find($id);
         $video->delete();
         return redirect('dashboard/video/'.$request->album_id.'');
+    }
+    public function getDestroyAlbom($id)
+    {
+
+        $album = Album::find($id);
+        $album->getVideo()->delete();
+        $album->delete();
+        return redirect('dashboard/video');
     }
 }
