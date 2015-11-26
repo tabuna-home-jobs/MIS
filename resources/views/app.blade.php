@@ -320,18 +320,18 @@
 
                         <ul class="nav nav-sub dk">
 
-                        <li class="{{Active::route('dashboard.gallery.*')}}">
-                            <a href="{{URL::route('dashboard.gallery.index')}}">
-                                <i class="fa fa-picture-o"></i>
-                                <span>Фотогалерея</span>
-                            </a>
-                        </li>
-                        <li class="{{Active::route('dashboard.video.*')}}">
-                            <a href="{{URL::route('dashboard.video.index')}}">
-                                <i class="fa fa-video-camera"></i>
-                                <span>Видеогалерея</span>
-                            </a>
-                        </li>
+                            <li class="{{Active::route('dashboard.gallery.*')}}">
+                                <a href="{{URL::route('dashboard.gallery.index')}}">
+                                    <i class="fa fa-picture-o"></i>
+                                    <span>Фотогалерея</span>
+                                </a>
+                            </li>
+                            <li class="{{Active::route('dashboard.video.*')}}">
+                                <a href="{{URL::route('dashboard.video.index')}}">
+                                    <i class="fa fa-video-camera"></i>
+                                    <span>Видеогалерея</span>
+                                </a>
+                            </li>
 
                         </ul>
                         </li>
@@ -442,18 +442,33 @@
                         </li>
 
 
-
-
-
-
-                        <li class="{{Active::route('dashboard.questanswer.*')}}">
-                            <a href="{{URL::route('dashboard.questanswer.index')}}">
-                                <i class="fa fa-graduation-cap"></i>
-                                <span>Ответы</span>
+                        <li class="{{Active::route(['dashboard.questanswer.*','dashboard.categoryanswer.*'])}}">
+                            <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                                <i class="fa fa-graduation-cap icon"></i>
+                                <span>Вопрос/Ответ</span>
                             </a>
+
+                            <ul class="nav nav-sub dk">
+
+                                <li class="{{Active::route('dashboard.categoryanswer.*')}}">
+                                    <a href="{{URL::route('dashboard.categoryanswer.index')}}">
+                                        <i class="fa fa-certificate icon"></i>
+                                        <span>Категории</span>
+                                    </a>
+                                </li>
+                                <li class="{{Active::route('dashboard.questanswer.*')}}">
+                                    <a href="{{URL::route('dashboard.questanswer.index')}}">
+                                        <i class="fa fa-graduation-cap"></i>
+                                        <span>Ответы</span>
+                                    </a>
+                                </li>
+
+                            </ul>
                         </li>
-
-
 
 
                         <li class="{{Active::route('dashboard.options.*')}}">

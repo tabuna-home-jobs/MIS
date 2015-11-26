@@ -17,8 +17,18 @@ class QuestAnswer extends Model {
      *
      * @var array
      */
-    protected $fillable = ['fio', 'questions', 'answer', 'publish', 'ids', 'email', 'phone'];
+    protected $fillable = ['fio', 'questions', 'answer', 'publish', 'ids', 'email', 'phone', 'category_id', 'doctor_id'];
 
+
+    public function getDoctor()
+    {
+        return $this->hasOne('App\Models\Specialisty', 'id', 'doctor_id');
+    }
+
+    public function getCategory()
+    {
+        return $this->hasOne('App\Models\CategoryAnswers', 'id', 'category_id');
+    }
 
 
 }

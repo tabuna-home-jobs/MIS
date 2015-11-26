@@ -62,6 +62,13 @@ class Sites extends Model {
         return $this->hasOne('App\Models\SpecCat', 'ids');
     }
 
+    public function getAnswersCategory()
+    {
+        return $this->hasOne('App\Models\CategoryAnswers', 'ids');
+    }
+
+
+
     /*
     public function getSpecCat()
     {
