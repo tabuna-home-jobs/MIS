@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreatePhotoTable extends Migration
+class CategoryAnswersCreate extends Migration
 {
-
     /**
      * Run the migrations.
      *
@@ -13,12 +12,10 @@ class CreatePhotoTable extends Migration
      */
     public function up()
     {
-        Schema::create('photo', function (Blueprint $table) {
+        Schema::create('category_answers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->integer('ids');
-            $table->integer('album_id');
-            $table->string('url');
-            $table->string('alt');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,7 +28,6 @@ class CreatePhotoTable extends Migration
      */
     public function down()
     {
-        Schema::drop('photo');
+        Schema::drop('category_answers');
     }
-
 }

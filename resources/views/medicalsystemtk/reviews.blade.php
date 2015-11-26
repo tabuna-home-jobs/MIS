@@ -37,7 +37,7 @@
 
                 </div>
 
-                <div class="row">
+                <div class="row text-center">
 
                     {!! $Reviews->render() !!}
                 </div>

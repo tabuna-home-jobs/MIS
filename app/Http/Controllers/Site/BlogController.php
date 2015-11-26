@@ -53,8 +53,6 @@ class BlogController extends Controller {
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
 
 
-
-
         //Опросы
 		if($getSites->getSurveys()->first() != null) {
 			$getSurveys = $getSites->getSurveys()->get()->random();

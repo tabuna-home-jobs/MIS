@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\Site;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Http\Requests\Site\QuestAnswerRequest;
 use App\Models\QuestAnswer;
-use Session;
 use App\Models\Sites;
+use Illuminate\Http\Request;
+use Session;
 
 class QuestAnswerController extends Controller
 {
@@ -21,7 +20,7 @@ class QuestAnswerController extends Controller
     public function index($sitename,$sitedomen)
     {
 
-        $QuestAnswers = QuestAnswer::whereRaw('ids = ? and publish = ?', [Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id, true] )->orderBy('id', 'desc')->paginate(5);
+        $QuestAnswers = QuestAnswer::whereRaw('ids = ? and publish = ?', [Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id, true])->orderBy('id', 'desc')->simplePaginate(5);
 
         return view( $sitename.$sitedomen.'/questanswer', ['QuestAnswers' => $QuestAnswers]);
     }

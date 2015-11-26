@@ -8838,7 +8838,7 @@ footer.dark .footer-bottom-text {
 
 .creative-sec-thumb.three .overlay {
     height: 152px;
-    left: 29px;
+    left: 24px;
     position: absolute;
     top: 5px;
     width: 152px;
@@ -9255,7 +9255,7 @@ footer.dark .footer-bottom-text {
 
 .doctors-detail {
     padding-left: 257px;
-    min-height: 500px
+    min-height: 300px
 }
 
 .doctors-detail h4 {

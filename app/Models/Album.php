@@ -29,5 +29,12 @@ class Album extends Model {
     {
         return $this->hasOne('App\Models\Photo', 'album_id');
     }
-    
+
+    public function getVideo()
+    {
+        return $this->hasOne('App\Models\Video', 'album_id');
+    }
+
+
+
 }
