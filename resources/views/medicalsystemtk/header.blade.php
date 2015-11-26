@@ -23,6 +23,7 @@
 
 
     <!--theme colour-->
+    <link rel="stylesheet" type="text/css" href="/karta-uspeha.ru/css/slick.css">
     <link rel="stylesheet" id="color" href="/site1.ru/css/all.css">
     <link rel="stylesheet" href="/site1.ru/fonts/font-awesome.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -46,7 +47,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
+    <script type="text/javascript" src="/karta-uspeha.ru/js/slick.min.js"></script>
 </head>
 <body>
 

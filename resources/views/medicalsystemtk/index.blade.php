@@ -539,6 +539,77 @@
             </div>
         </section>-->
 
+        <div class="map-on-main">
+            <div class="bage">
+                <div class="footer-widget">
+                    <h4><span>Мы находимся</span></h4>
+                    <div class="contact-widget">
+                        <i class="fa fa-home"></i><p>г.Липецк, ул.Октябрьская, д.61</p>
+                        <i class="fa fa-envelope"></i><p>octavian48@yandex.ru</p>
+                        <i class="fa fa-mobile"></i><p class="phone-number">(4742) 227-887, 227-8881</p>
+                        <i class="fa fa-clock-o"></i><p class="phone-number"> Понедельник-пятница: 8:00-21:00<br>
+                            Суббота: 8:00-18:00<br>
+                            Воскресенье: 10:00-16:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=JOw68K82DOpDjANXKNZxxptogev8Vshe&width=100%&height=450&lang=ru_RU&sourceType=constructor"></script>
+            </div>
+        </div>
+
+
+        <div class="slider-companies col-md-12">
+            <div class="content-head"><h2>Сайты ГК "Здоровье нации</h2></div>
+            <div class="slider-sites autoplay">
+                <div class="sites-slide"><a target="_blank" href="http://mother-baby.ru"><img src="/karta-uspeha.ru/img/zn1.png"></a></div>
+                <div class="sites-slide"><a target="_blank" href="http://karta-uspeha.ru"><img src="/karta-uspeha.ru/img/zn2.png"></a></div>
+                <div class="sites-slide"><a target="_blank" href="http://luchiki48.ru"><img src="/karta-uspeha.ru/img/zn4.png"></a></div>
+                <div class="sites-slide"><a target="_blank" href="http://sokzn48.ru"><img src="/karta-uspeha.ru/img/zn5.png"></a></div>
+                <div class="sites-slide"><a target="_blank" href="http://stomzn48.ru"><img src="/karta-uspeha.ru/img/zn6.png"></a></div>
+                <div class="sites-slide"><a target="_blank" href="http://cokzn48.ru"><img src="/karta-uspeha.ru/img/zn7.png"></a></div>
+                <!-- остеопатии, стоматология,  -->
+            </div>
+            <script type="text/javascript">
+                $('.autoplay').slick({
+                    prevArrow:'<button type="button" class="slick-prev-custom"><i class="fa fa-angle-left"></i></button>',
+                    nextArrow:'<button type="button" class="slick-next-custom"><i class="fa fa-angle-right"></i></button>',
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    responsive: [
+                        {
+                            breakpoint: 1000,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 2,
+                                infinite: true,
+                                dots: false
+                            }
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
+            </script>
+
+        </div>
+
+
     </div>
 
     @endsection

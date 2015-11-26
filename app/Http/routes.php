@@ -69,6 +69,7 @@ Route::get('dashboard/spcat/edit/{id}','Admin\SpecCatController@edit');
 Route::post('dashboard/spcat/update/{id}','Admin\SpecCatController@update');
 Route::get('dashboard/spcat/destroy/{id}','Admin\SpecCatController@destroy');
 
+Route::post('/errormailsend','Site\EmailFrom@postSend');
 
 Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefix' => 'dashboard'], function ()
 {
