@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-use App\Models\QuestAnswer;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Models\CategoryAnswers;
+use App\Models\QuestAnswer;
+use App\Models\Specialisty;
+use Illuminate\Http\Request;
 use Session;
 
 class QuestAnswerController extends Controller
@@ -61,8 +63,14 @@ class QuestAnswerController extends Controller
      */
     public function edit($id)
     {
+        $Doctors = Specialisty::lists('id', 'fio');
+        $Category = CategoryAnswers::lists('id', 'name');
         $QuestAnswer = QuestAnswer::whereRaw('ids = ? and id= ?', [Session::get('website'), $id])->first();
-        return view("dashboard/questAnswer/edit", ['QuestAnswer' => $QuestAnswer]);
+        return view("dashboard/questAnswer/edit", [
+            'QuestAnswer' => $QuestAnswer,
+            'Doctors' => $Doctors,
+            'Category' => $Category,
+        ]);
     }
 
 

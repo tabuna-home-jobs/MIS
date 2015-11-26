@@ -2,21 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Requests\ArtRequest;
 use App\Models\Articles;
+use App\Services\Social;
 use Image;
 use Redirect;
 use Request;
 use Session;
 use Validator;
-use App\Http\Requests\ArtRequest;
-use App\Services\Social;
-
-
-
-
-
 
 
 class ArticlesController extends Controller
@@ -58,7 +53,7 @@ class ArticlesController extends Controller
             'ids'=> Session::get('website'),
         ]);
 
-        //Пока оставлю так
+        //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $art->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
@@ -71,7 +66,7 @@ class ArticlesController extends Controller
 
 
         /*
-         * Социалки
+         * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
          */
 
         $Social = new Social([
@@ -84,8 +79,8 @@ class ArticlesController extends Controller
         $Social->pushAll();
 
 
-        //Флеш сообщение
-        Session::flash('good', 'Вы успешно изменили значения');
+        //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        Session::flash('good', 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
         return redirect()->route('dashboard.art.index');
     }
 
@@ -113,7 +108,7 @@ class ArticlesController extends Controller
             'ids'=> Session::get('website'),
         ]);
 
-        //Пока оставлю так
+        //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $art->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
@@ -121,8 +116,8 @@ class ArticlesController extends Controller
 
         $art->save();
 
-        //Флеш сообщение
-        Session::flash('good', 'Вы успешно изменили значения');
+        //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        Session::flash('good', 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
         return redirect()->route('dashboard.art.index');
     }
 
@@ -135,7 +130,7 @@ class ArticlesController extends Controller
     public function destroy(Articles $art)
     {
         $art->delete();
-        Session::flash('good', 'Вы успешно удалили значения');
+        Session::flash('good', 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
         return redirect()->route('dashboard.art.index');
     }
 }

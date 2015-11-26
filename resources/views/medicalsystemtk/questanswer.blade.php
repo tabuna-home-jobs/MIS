@@ -37,8 +37,10 @@
                                             {{$QA->questions}}
                                         </a>
 
+
                                         <p class="text-right">
-                                            <small class="light bordered main-title text-right">{{$QA->fio}} </small>
+                                            <small class="light bordered main-title text-right"> {{$QA->getCategory->name or ''}}
+                                                <br>{{$QA->fio}} </small>
                                         </p>
 
                                     </h4>
@@ -49,7 +51,10 @@
                                 <div id="collapse-answer-{{$QA->id}}" class="panel-collapse collapse" role="tabpanel"
                                      aria-labelledby="heading-answer-{{$QA->id}}">
                                     <div class="panel-body blog-content">
-                                        {{$QA->answer}}
+                                        {!! nl2br(e($QA->answer)) !!}
+                                        <p class="text-right">
+                                            <small>С уважением {{$QA->getDoctor->fio or ''}}</small>
+                                        </p>
                                     </div>
                                 </div>
 
@@ -119,7 +124,9 @@
                         <i class="pull-left feature-icon fa fa-phone-square"></i>
                         <div class="feature-content">
                             <h5><a href="/appointment">Записаться на приём</a></h5>
-                            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
+
+                            <p>Сервис «Онлайн запись на прием» предоставляет возможность записаться на прием в удобное
+                                время не выходя из дома.</p>
                             <a href="/appointment"><dfn>-  Перейти</dfn></a>
                         </div>
                     </div>

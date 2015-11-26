@@ -51,6 +51,25 @@
                             <input class="form-control" type="text" maxlength="255" required name="email" value="{{$QuestAnswer->email or ''}}">
                         </div>
 
+                            <div class="form-group">
+                                <label>Доктор</label>
+                                <select class="form-control" name="doctor_id">
+                                    @foreach($Doctors as $key =>  $doc)
+                                        <option value="{{$doc}}"
+                                                @if($QuestAnswer->doctor_id == $doc) selected @endif>{{$key}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Категория</label>
+                                <select class="form-control" name="category_id">
+                                    @foreach($Category as $key =>  $cat)
+                                        <option value="{{$cat}}"
+                                                @if($QuestAnswer->category_id == $cat) selected @endif>{{$key}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
 
 
 

@@ -20,7 +20,10 @@ class QuestAnswerController extends Controller
     public function index($sitename,$sitedomen)
     {
 
-        $QuestAnswers = QuestAnswer::whereRaw('ids = ? and publish = ?', [Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id, true])->orderBy('id', 'desc')->simplePaginate(5);
+        $QuestAnswers = QuestAnswer::whereRaw('ids = ? and publish = ?', [Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id, true])
+            ->orderBy('id', 'desc')
+            ->with('getCategory', 'getDoctor')
+            ->simplePaginate(8);
 
         return view( $sitename.$sitedomen.'/questanswer', ['QuestAnswers' => $QuestAnswers]);
     }

@@ -117,6 +117,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefi
     ]);
 
 
+    Route::resource('categoryanswer', 'CategoryAnswersController');
 
     Route::controller('gallery', 'GalleryController', [
         'getIndex' => 'dashboard.gallery.index',
