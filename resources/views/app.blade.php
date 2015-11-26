@@ -314,7 +314,7 @@
 
                         <li>
                             <a href="">
-                                <i class="fa fa-film"></i>
+                                <i class="fa fa-film "></i>
                                 <span>Галереи</span>
                             </a>
 
