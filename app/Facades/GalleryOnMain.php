@@ -10,7 +10,7 @@ class GalleryOnMain  extends Facade {
     {
 
 
-        return Photo::whereRaw('photoalbum_id=? and ids=?',[$id,$siteId])->limit($lim)->get()->toArray();
+        return Photo::whereRaw('album_id=? and ids=?', [$id, $siteId])->limit($lim)->get()->toArray();
 
     }
 

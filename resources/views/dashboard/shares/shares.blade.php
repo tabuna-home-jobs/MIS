@@ -16,7 +16,7 @@
             <div class="table-responsive">
                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                     <div class="row">
-                        <div class="col-sm-12">
+                        <form class="col-sm-12">
                             <table class="table table-striped m-b-none dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                                 <thead>
                                 <tr role="row">
@@ -45,7 +45,7 @@
                                                 <input type="hidden" name="_method" value="delete">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <button type="submit" class="btn btn-danger"><span class="fa fa-trash-o"></span></button>
-                        </div>
+                                            </form>
                         </td>
                         </tr>
                         @endforeach
