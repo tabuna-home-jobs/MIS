@@ -351,58 +351,31 @@
                 <div class="home-box">
                     <span class="fa fa-stethoscope"></span>
 
-                    <h3>Услуги</h3>
+                    <h3>Консультации</h3>
 
-                    <p>Текст про наши услуги, Текст про наши услуги , Текст про наши услуги, Текст про наши услуги</p>
-                    <a class="btn-rounded btn-bordered" href="/service">Посмотреть</a>
+
+                    <a class="btn-rounded btn-bordered" href="/service?category=47">Подробнее</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="home-box opening-hours clearfix">
                     <span class="glyphicon glyphicon-time"></span>
 
-                    <h3>Часы приёма</h3>
+                    <h3>Диагностика</h3>
 
-                    <p>Мы всегда рады видеть вас в нашем медицинском центре</p>
-                    <ul class="list-unstyled">
-                        <li class="clearfix">
-				<span>
-					Понедельник - Пятница
-				</span>
+                    <a class="btn-rounded btn-bordered" href="/service?category=48">Подробнее</a>
 
-                            <div class="value">
-                                8.00 - 16.00
-                            </div>
-                        </li>
-                        <li class="clearfix">
-				<span>
-					Субота
-				</span>
 
-                            <div class="value">
-                                9.30 - 15.30
-                            </div>
-                        </li>
-                        <li class="clearfix">
-				<span>
-					Воскресенье
-				</span>
-
-                            <div class="value">
-                                9.30 - 17.00
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
             <div class="col-md-4 bg-default">
                 <div class="home-box">
                     <span class="fa fa-user-md"></span>
 
-                    <h3>Личный кабинет</h3>
+                    <h3>Лечение</h3>
 
-                    <p>Текст про наши услуги, Текст про наши услуги , Текст про наши услуги, Текст про наши услуги</p>
-                    <a class="btn-rounded btn-bordered" href="#.">Посмотреть</a>
+
+                    <a class="btn-rounded btn-bordered" href="/service?category=49">Подробнее</a>
                 </div>
             </div>
         </div>
@@ -539,25 +512,7 @@
             </div>
         </section>-->
 
-        <div class="map-on-main">
-            <div class="bage">
-                <div class="footer-widget">
-                    <h4><span>Мы находимся</span></h4>
-                    <div class="contact-widget">
-                        <i class="fa fa-home"></i><p>г.Липецк, ул.Октябрьская, д.61</p>
-                        <i class="fa fa-envelope"></i><p>octavian48@yandex.ru</p>
-                        <i class="fa fa-mobile"></i><p class="phone-number">(4742) 227-887, 227-8881</p>
-                        <i class="fa fa-clock-o"></i><p class="phone-number"> Понедельник-пятница: 8:00-21:00<br>
-                            Суббота: 8:00-18:00<br>
-                            Воскресенье: 10:00-16:00</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="map-container">
-                <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=JOw68K82DOpDjANXKNZxxptogev8Vshe&width=100%&height=400&lang=ru_RU&sourceType=constructor"></script>
-            </div>
-        </div>
 
 
         <div class="slider-companies col-md-12">
@@ -607,6 +562,27 @@
                 });
             </script>
 
+        </div>
+
+
+        <div class="map-on-main">
+            <div class="bage">
+                <div class="footer-widget">
+                    <h4><span>Мы находимся</span></h4>
+                    <div class="contact-widget">
+                        <i class="fa fa-home"></i><p>г.Липецк, ул.Октябрьская, д.61</p>
+                        <i class="fa fa-envelope"></i><p>octavian48@yandex.ru</p>
+                        <i class="fa fa-mobile"></i><p class="phone-number">(4742) 227-887, 227-8881</p>
+                        <i class="fa fa-clock-o"></i><p class="phone-number"> Понедельник-пятница: 8:00-21:00<br>
+                            Суббота: 8:00-18:00<br>
+                            Воскресенье: 10:00-16:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=JOw68K82DOpDjANXKNZxxptogev8Vshe&width=100%&height=400&lang=ru_RU&sourceType=constructor"></script>
+            </div>
         </div>
 
 

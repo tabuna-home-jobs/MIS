@@ -54,6 +54,22 @@
             </nav>
         </div>
 
+
+        <div class="container margin-top-15">
+            <div class="row">
+                <div class="col-md-2"><a href="/"><img src="/site1.ru/images/footer-logo.png" alt=""
+                                                       title="Medicom Logo"></a></div>
+                <div class="col-md-10">
+                    <p class="footer-bottom-text">Есть вещи, которые нельзя купить. Это наши главные жизненные ценности:
+                        профессионализм, качество, гуманность, сплоченность.
+                        С нами вы будете уверены в своём здоровье и в здоровье ваших близких. А что может быть дороже для
+                        человека?<br>
+                        Вы доверяете нам здоровье своих детей. Здоровье нации – наша цель.</p>
+                </div>
+            </div>
+        </div>
+
+
         <div class="copyright-area"><div class="row">
             <div class="col-sm-6">
                 <p class="text-left">&copy; ООО "Здоровье Нации" <br>
@@ -83,7 +99,7 @@
                                     <div class="modal-body">
 
                                             <div class="form-group">
-                                                <textarea class="form-control" name="error-send" id="" cols="30" rows="10"></textarea>
+                                                <textarea required class="form-control" name="error-send" id="" cols="30" rows="10"></textarea>
                                             </div>
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="hidden" name="url-error" value="{{  Request::url() }}">
@@ -91,7 +107,7 @@
 
                                     </div>
                                     <div class="modal-footer">
-                                        <button  class="btn btn-default">Закрыть</button>
+                                        <button  class="btn btn-default">Отправить</button>
                                     </div>
                                     </form>
                                 </div>
@@ -158,19 +174,7 @@
         {{--</div>--}}
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2"><a href="/"><img src="/site1.ru/images/footer-logo.png" alt=""
-                                                   title="Medicom Logo"></a></div>
-            <div class="col-md-10">
-                <p class="footer-bottom-text">Есть вещи, которые нельзя купить. Это наши главные жизненные ценности:
-                    профессионализм, качество, гуманность, сплоченность.
-                    С нами вы будете уверены в своём здоровье и в здоровье ваших близких. А что может быть дороже для
-                    человека?<br>
-                    Вы доверяете нам здоровье своих детей. Здоровье нации – наша цель.</p>
-            </div>
-        </div>
-    </div>
+
 </footer>
 </div>
 

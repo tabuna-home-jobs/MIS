@@ -9,55 +9,69 @@
         <div class="container">
             <h2 class="light bordered main-title">Наши <span> Специалисты</span></h2>
 
-            <div class="btn-group " role="group" aria-label="...">
-                <a href="/team" type="button" class="btn btn-info">Все <span
-                            class="glyphicon glyphicon-info-sign"></span> </a>
-                @foreach($SpCat as $spec)
-
-                    <a href="/team?catspec={{$spec['id']}}" type="button" class="btn btn-info">{{$spec['name']}}</a>
 
 
-                @endforeach
-            </div>
-            <div class="row">
 
 
-                @foreach($Specialisty as $spec)
-                    <div class="col-md-6 padding-bottom-60 clearfix">
-                        <div class="doctors-img">
-                            <img src="{{$spec->avatar or ''}}" width="234" alt="" title="">
-                        </div>
-                        <div class="doctors-detail">
-                            <h4>{{$spec->fio or ''}}<span class="text-center">{{$spec->subname or ''}}</span></h4>
+            <div class="row relative">
 
 
-                            @if(empty(!$spec->special))
-                                <p><label class="heading">Специализация: </label><label
-                                            class="detail">{{$spec->special or ''}}</label>
-                                </p>
-                            @endif
+                    <input type="checkbox" name="" id="nav-trigger">
+                    <label for="nav-trigger"><i class="fa fa-bars"></i></label>
 
-                            @if(empty(!$spec->obrazovanie))
-                                <p><label class="heading">Образование</label><label
-                                            class="detail">{{$spec->obrazovanie or ''}}</label></p>
-                            @endif
+                <div class="col-sm-4 col-xs-12 col-md-3 of-canvas-xs">
 
+                    <nav class="primary-albums clearfix">
+                        <div class="list-group">
+                            <a style="z-index: 99" href="/team" class="list-group-item @if(!isset($id))active @endif">Все</a>
+                            @foreach($SpCat as $album)
 
-                            @if(empty(!$spec->opyt))
-                                <p><label class="heading">Должность: </label><label
-                                            class="detail">{{$spec->opyt or ''}} </label></p>
-                            @endif
-
-
-                            @if(empty(!$spec->about))
-                                <p><label class="heading">Умения:</label><label
-                                            class="detail">{{$spec->about or ''}} </label></p>
-                            @endif
+                                <a class="list-group-item @if(isset($id) && $id==$album->id)active @endif" href="/team?catspec={{$album['id']}}">{{$album->name}}</a>
+                            @endforeach
 
                         </div>
-                    </div>
+                    </nav>
+                </div>
 
-                @endforeach
+                <div class="col-sm-8 font-size-0">
+                    @foreach($Specialisty as $spec)
+                        <div class="col-md-6 padding-bottom-60 display-inline-block vertical-align-top float-none">
+                            <div class="doctors-img">
+                                <img src="{{$spec->avatar or ''}}" width="234" alt="" title="">
+                            </div>
+                            <div class="doctors-detail">
+                                <h4>{{$spec->fio or ''}}<span class="text-center">{{$spec->subname or ''}}</span></h4>
+
+
+                                @if(empty(!$spec->special))
+                                    <p><label class="heading">Специализация: </label><label
+                                                class="detail">{{$spec->special or ''}}</label>
+                                    </p>
+                                @endif
+
+                                @if(empty(!$spec->obrazovanie))
+                                    <p><label class="heading">Образование</label><label
+                                                class="detail">{{$spec->obrazovanie or ''}}</label></p>
+                                @endif
+
+
+                                @if(empty(!$spec->opyt))
+                                    <p><label class="heading">Должность: </label><label
+                                                class="detail">{{$spec->opyt or ''}} </label></p>
+                                @endif
+
+
+                                @if(empty(!$spec->about))
+                                    <p><label class="heading">Умения:</label><label
+                                                class="detail">{{$spec->about or ''}} </label></p>
+                                @endif
+
+                            </div>
+                        </div>
+
+                    @endforeach
+                </div>
+
 
 
             </div>

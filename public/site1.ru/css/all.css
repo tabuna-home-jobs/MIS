@@ -7171,9 +7171,6 @@ td.hidden-lg, th.hidden-lg {
         width: 400px
     }
 
-    .team-description .doctors-detail {
-        padding-left: 440px
-    }
 
     .get-directions.small input[type=text] {
         width: 80%
@@ -7722,7 +7719,7 @@ video {
 
 .home-box {
     color: #fff;
-    min-height: 327px
+    min-height: 260px
 }
 
 .home-box h3 {
@@ -7756,6 +7753,15 @@ video {
     background: #fff !important;
     color: #393939;
     padding-bottom: 1px
+}
+.opening-hours a {
+    color: #393939;
+    border: 1px #393939 solid;
+}
+.opening-hours a:hover {
+    color: white;
+    border: 1px #393939 solid;
+    background-color: #393939;
 }
 
 .opening-hours li, .opening-hours p {
@@ -9250,13 +9256,10 @@ footer.dark .footer-bottom-text {
     -webkit-border-radius: 5px;
     border: 1px solid #f2f2f2;
     overflow: hidden;
-    float: left
+    float: none
 }
 
-.doctors-detail {
-    padding-left: 257px;
-    min-height: 300px
-}
+
 
 .doctors-detail h4 {
     font-family: RobotoBold;
@@ -9808,9 +9811,7 @@ i.feature-icon {
     width: 1140px
 }
 
-.team-description .doctors-detail {
-    padding-left: 580px
-}
+
 
 .sidebar-nav .panel {
     background: 0 0
@@ -11054,7 +11055,7 @@ div.facebook .pp_content, div.light_rounded .pp_bottom .pp_middle, div.light_rou
 /*коммент*/
 .map-on-main {
     position: relative;
-    margin: 50px 0;
+    margin-top: 50px;
 }
 .map-on-main .map-container>ymaps{
     border: 2px #2B96CC solid;
@@ -11177,4 +11178,60 @@ div.facebook .pp_content, div.light_rounded .pp_bottom .pp_middle, div.light_rou
     #bs-example-navbar-collapse-2 li a{
         font-size: 11px!important;
     }
+}
+.display-inline-block {
+    display: inline-block;
+}
+.vertical-align-top {
+    vertical-align: top;
+}
+.float-none {
+    float: none;
+}
+.font-size-0 {
+    font-size: 0;
+}
+.relative {
+    position: relative;
+}
+@media (max-width:768px) {
+    .of-canvas-xs {
+        position: absolute;
+        left: -100%;
+        transition: all 1s;
+        z-index: 100;
+    }
+    label[for="nav-trigger"] {
+        display: block !important;
+        z-index: 999;
+    }
+}
+label[for="nav-trigger"]{
+    position: absolute;
+    left: 0;
+    display: none;
+}
+label[for="nav-trigger"] {
+    font-size: 30px;
+    transition:all .5s;
+}
+label[for="nav-trigger"]:hover {
+    font-size: 35px;
+    cursor: pointer;
+}
+#nav-trigger:checked + label {
+    color: black;
+    left: 85%;
+    z-index: 200;
+}
+#nav-trigger:checked ~ .of-canvas-xs {
+    left: 0;
+    z-index: 100;
+}
+#nav-trigger {
+    position: absolute;
+    left: -9999px;
+}
+.margin-top-15 {
+    margin-top:15px;
 }
