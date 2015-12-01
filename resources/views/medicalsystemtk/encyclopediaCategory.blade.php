@@ -134,7 +134,7 @@
 
                         @foreach($Post as $post)
 
-                            <section class="col-md-4 ency-prev">
+                            <section class="col-md-12 ">
                                 <article class="blog-item">
                                     <div class="blog-thumbnail">
                                         <img src="{{$post->avatar}}" alt="">

@@ -525,9 +525,7 @@ ol {
     font-size: 18px
 }
 
-ol li {
-    line-height: 56px
-}
+
 
 ol ol, ol ul, ul ol, ul ul {
     margin-bottom: 0
