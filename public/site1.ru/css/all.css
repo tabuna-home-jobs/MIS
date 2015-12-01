@@ -11057,8 +11057,10 @@ div.facebook .pp_content, div.light_rounded .pp_bottom .pp_middle, div.light_rou
     position: relative;
     margin-top: 50px;
 }
-.map-on-main .map-container>ymaps{
+.map-on-main .map-container>iframe{
     border: 2px #2B96CC solid;
+    width: 100%;
+    height: 450px;
 }
 .map-on-main h1 {
     color:#2B96CC;
@@ -11067,8 +11069,8 @@ div.facebook .pp_content, div.light_rounded .pp_bottom .pp_middle, div.light_rou
 }
 .map-on-main .bage {
     position: absolute;
-    bottom:10%;
-    left:15%;
+    bottom:8%;
+    left:30px;
     z-index: 999;
     background-color: white;
     padding: 20px;
@@ -11084,9 +11086,12 @@ div.facebook .pp_content, div.light_rounded .pp_bottom .pp_middle, div.light_rou
         display: block;
         margin-bottom: 10px;
     }
-    .map-on-main .map-container>ymaps{
+    .map-on-main .map-container>iframe{
         height: 250px!important;
     }
+}
+.map-container {
+    border: 2px #2B96CC solid;
 }
 .slider-companies>.slick-slider {
     padding-left: 30px;
@@ -11234,4 +11239,39 @@ label[for="nav-trigger"]:hover {
 }
 .margin-top-15 {
     margin-top:15px;
+}
+.doctors-img h4 {
+    width: 100%;
+    background-color: rgba(66, 139, 202, 0.56);
+    color: #FFFFFF;
+    padding: 5px;
+    font-size: 20px;
+    margin: 0;
+    height: 57px;
+    text-align: center;
+    line-height: 1.2;
+}
+.doctors-img {
+    position: relative;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.37);
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.37);
+}
+.doctors-img img {
+    width:100%;
+}
+.doctors-skils {
+    padding-left: 10px;
+}
+.doctors-skils div{
+    font-size: 14px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+.doctors-skils .heading-doc {
+    font-weight: bold;
+}
+.doctors-skils .detail-doc {
+    padding-left: 15px;
+    font-size: 12px;
 }

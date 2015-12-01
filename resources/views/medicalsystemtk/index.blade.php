@@ -8,11 +8,10 @@
     <section class="creative-sec">
         <div class="container">
             <div class="text-center">
-                <h1 class="light">«Здоровье Нации»
+                <h1 class="light">«многопрофильный медицинский центр»
                 </h1>
 
-                <p class="lead"> многопрофильная компания, оказывающая широкий спектр услуг для всей семьи отрудников и
-                    клиентов.</p>
+                <p class="lead">широкий спектр медицинских услуг для всей семьи</p>
             </div>
 
             <div class="creative-sec-thumb one">
@@ -104,7 +103,7 @@
         <div class="container">
             <h1>Записаться на приём</h1>
 
-            <p class="lead">Быстрая и удобная запись в врачу где бы вы не были</p>
+            <p class="lead">Быстрая и удобная запись к врачу</p>
             <div class="row">
             <div class="col-md-6">
             <figure><img src="/site1.ru/images/appointment-img2.png" alt="image" title="Appointment image" class="img-responsive lady1"></figure>
@@ -347,8 +346,8 @@
 
 
         <div class="row text-center no-margin">
-            <div class="col-md-4 bg-default">
-                <div class="home-box">
+            <div class="col-md-4 ">
+                <div class="home-box bg-default">
                     <span class="fa fa-stethoscope"></span>
 
                     <h3>Консультации</h3>
@@ -357,8 +356,8 @@
                     <a class="btn-rounded btn-bordered" href="/service?category=47">Подробнее</a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="home-box opening-hours clearfix">
+            <div class="col-md-4 ">
+                <div class="home-box bg-default">
                     <span class="glyphicon glyphicon-time"></span>
 
                     <h3>Диагностика</h3>
@@ -368,8 +367,8 @@
 
                 </div>
             </div>
-            <div class="col-md-4 bg-default">
-                <div class="home-box">
+            <div class="col-md-4 ">
+                <div class="home-box bg-default">
                     <span class="fa fa-user-md"></span>
 
                     <h3>Лечение</h3>
@@ -530,7 +529,7 @@
                 $('.autoplay').slick({
                     prevArrow:'<button type="button" class="slick-prev-custom"><i class="fa fa-angle-left"></i></button>',
                     nextArrow:'<button type="button" class="slick-next-custom"><i class="fa fa-angle-right"></i></button>',
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 2,
                     autoplay: true,
                     autoplaySpeed: 2000,
@@ -565,13 +564,13 @@
         </div>
 
 
-        <div class="map-on-main">
+        <div class="map-on-main container">
             <div class="bage">
                 <div class="footer-widget">
                     <h4><span>Мы находимся</span></h4>
                     <div class="contact-widget">
                         <i class="fa fa-home"></i><p>г.Липецк, ул.Октябрьская, д.61</p>
-                        <i class="fa fa-envelope"></i><p>octavian48@yandex.ru</p>
+                        <i class="fa fa-envelope"></i><p>mother-baby@mail.ru</p>
                         <i class="fa fa-mobile"></i><p class="phone-number">(4742) 227-887, 227-8881</p>
                         <i class="fa fa-clock-o"></i><p class="phone-number"> Понедельник-пятница: 8:00-21:00<br>
                             Суббота: 8:00-18:00<br>
@@ -580,10 +579,10 @@
                 </div>
             </div>
 
-            <div class="map-container">
-                <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=JOw68K82DOpDjANXKNZxxptogev8Vshe&width=100%&height=400&lang=ru_RU&sourceType=constructor"></script>
-            </div>
+            <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2423.2438515896024!2d39.592403!3d52.601363!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413a14e9eece3c35%3A0xdfbc4fe617d626e0!2z0J7QutGC0Y_QsdGA0YzRgdC60LDRjyDRg9C7LiwgNjEsINCb0LjQv9C10YbQuiwg0JvQuNC_0LXRhtC60LDRjyDQvtCx0LsuLCAzOTgwNTk!5e0!3m2!1sru!2sru!4v1432638437060" width="600" height="450" frameborder="0" style="border:0"></iframe></div>
+
         </div>
+
 
 
     </div>

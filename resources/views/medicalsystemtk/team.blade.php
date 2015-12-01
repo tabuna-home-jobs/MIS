@@ -10,14 +10,11 @@
             <h2 class="light bordered main-title">Наши <span> Специалисты</span></h2>
 
 
-
-
-
             <div class="row relative">
 
 
-                    <input type="checkbox" name="" id="nav-trigger">
-                    <label for="nav-trigger"><i class="fa fa-bars"></i></label>
+                <input type="checkbox" name="" id="nav-trigger">
+                <label for="nav-trigger"><i class="fa fa-bars"></i></label>
 
                 <div class="col-sm-4 col-xs-12 col-md-3 of-canvas-xs">
 
@@ -26,7 +23,8 @@
                             <a style="z-index: 99" href="/team" class="list-group-item @if(!isset($id))active @endif">Все</a>
                             @foreach($SpCat as $album)
 
-                                <a class="list-group-item @if(isset($id) && $id==$album->id)active @endif" href="/team?catspec={{$album['id']}}">{{$album->name}}</a>
+                                <a class="list-group-item @if(isset($id) && $id==$album->id)active @endif"
+                                   href="/team?catspec={{$album['id']}}">{{$album->name}}</a>
                             @endforeach
 
                         </div>
@@ -38,32 +36,47 @@
                         <div class="col-md-6 padding-bottom-60 display-inline-block vertical-align-top float-none">
                             <div class="doctors-img">
                                 <img src="{{$spec->avatar or ''}}" width="234" alt="" title="">
+                                <h4>{{$spec->fio or ''}}</h4>
                             </div>
-                            <div class="doctors-detail">
-                                <h4>{{$spec->fio or ''}}<span class="text-center">{{$spec->subname or ''}}</span></h4>
+                            <div class="doctors-skils">
+
+                                @if(empty(!$spec->subname))
+                                <div>
+                                    <div class="heading-doc">Квалификация: </div>
+                                    <div class="detail-doc">{{$spec->subname or ''}}</div>
+
+                                </div>
+                                @endif
 
 
                                 @if(empty(!$spec->special))
-                                    <p><label class="heading">Специализация: </label><label
-                                                class="detail">{{$spec->special or ''}}</label>
-                                    </p>
+                                    <div>
+                                        <div class="heading-doc">Специализация: </div>
+                                        <div class="detail-doc">{{$spec->special or ''}}</div>
+                                    </div>
                                 @endif
 
                                 @if(empty(!$spec->obrazovanie))
-                                    <p><label class="heading">Образование</label><label
-                                                class="detail">{{$spec->obrazovanie or ''}}</label></p>
+                                    <div>
+                                        <div class="heading-doc">Образование</div>
+                                        <div class="detail-doc">{{$spec->obrazovanie or ''}}</div>
+                                    </div>
                                 @endif
 
 
                                 @if(empty(!$spec->opyt))
-                                    <p><label class="heading">Должность: </label><label
-                                                class="detail">{{$spec->opyt or ''}} </label></p>
+                                    <div>
+                                        <div class="heading-doc">Должность: </div>
+                                        <div class="detail-doc">{{$spec->opyt or ''}}</div>
+                                    </div>
                                 @endif
 
 
                                 @if(empty(!$spec->about))
-                                    <p><label class="heading">Умения:</label><label
-                                                class="detail">{{$spec->about or ''}} </label></p>
+                                    <div>
+                                        <div class="heading-doc">Умения:</div>
+                                        <div class="detail-doc">{{$spec->about or ''}}</div>
+                                    </div>
                                 @endif
 
                             </div>
@@ -71,7 +84,6 @@
 
                     @endforeach
                 </div>
-
 
 
             </div>
@@ -92,10 +104,3 @@
 
 
 @endsection
-
-<style>
-    .btn-group {
-        margin: 30px 0;
-        margin-bottom: 60px;
-    }
-</style>

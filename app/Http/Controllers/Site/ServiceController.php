@@ -92,14 +92,15 @@ class ServiceController extends Controller {
 	{
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $Category = $getSites->getCategory()->get();
+
         $Goods = $getSites->getGoods()->where('id', $id)->first();
+        $Category = $getSites->getCategory()->findorFail($Goods->category_id);
 
         $Comments = $Goods->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
-
+        $GoodsCat = $getSites->getGoods()->where('category_id', $Goods->category_id)->orderBy('name','asc')->get();
 
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
-        return view($sitename . $sitedomen . '/goods', ['Category' => $Category, 'Goods' => $Goods, 'Comments' => $Comments,  'LastNews' => $getLastNews]);
+        return view($sitename . $sitedomen . '/goods', ['Good' => $Goods,'Category' => $Category, 'Goods' => $GoodsCat, 'Comments' => $Comments,  'LastNews' => $getLastNews]);
 	}
 
 	/**
