@@ -1,13 +1,13 @@
 @extends('medicalsystemtk/header')
 
 @section('content')
-    <section class="sub-page-banner text-center hidden-xs">
+    <!--<section class="sub-page-banner text-center hidden-xs">
         <div class="overlay"></div>
         <div class="container">
             <h1 class="entry-title">{{$Category->name}}</h1>
             <p>Описание услуг оказываемых центром "Здоровье Нации"</p>
         </div>
-    </section>
+    </section>-->
 
     <div class="sub-page-content">
 
@@ -20,79 +20,28 @@
 
                         <!--<h2 class="bordered light">Категории</h2>-->
                         <div class="procedures">
-                            <h3>Разделы</h3>
+                            <h3>{{$Category->name}}</h3>
 
 
-                            <div class="panel-group sidebar-nav" id="accordion3">
+                            <div class="side-bar-catalog">
+
+                                <ul class="menu-catalog">
                                 @foreach($Goods->toTree() as $category)
                                     @include('medicalsystemtk.category.category', $category)
                                 @endforeach
+                                </ul>
 
+                                <script>
+                                    $('.menu-catalog .fa-plus-square').click(function(){
+                                        $(this).toggleClass('fa-minus-square');
+                                        $(this).next().next().toggleClass('active');
+                                    });
+                                </script>
                             </div>
                         </div>
 
                     </div>
-
-
-
-
-
-                    <style>
-                        .plus-service:hover {
-                            color:#2B96CF;
-                            -webkit-transition: all .5s;
-                            transition: all .5s;
-                        }
-                        .panel-sidebar a {
-                            position: relative;
-                            display: inline-block;
-                        }
-                        .panel-heading a:after {
-                            position: absolute;
-                            left: 0;
-                            content: "";
-                            display: block;
-                            width: 0%;
-                            margin-right: 10px;
-                            border-bottom: 1px #373737 solid;
-
-                        }
-                        .panel-heading a:hover:after {
-                            width: 100%;
-                            border-bottom-width: 1px;
-                            transition: all .5s ease-out;
-                        }
-                        .panel-collapse a {
-                            transition: all .5s ease-out;
-                        }
-                        .panel-collapse a:hover {
-                            background-color: white;
-                        }
-                    </style>
-
-                    <script>
-                        $('.plus-service').on('click',function(){
-                            var allPlus = $('.plus-service');
-                            allPlus.removeClass('fa-minus-square').addClass('fa-plus-square');
-                            var its = $(this);
-                            if(its.parent().parent().next().hasClass('in'))
-                            {
-
-                                its.addClass('fa-plus-square').removeClass('fa-minus-square');
-                            }
-                            else
-                            {
-                                its.addClass('fa-minus-square').removeClass('fa-plus-square');
-                            }
-                        });
-                    </script>
-
-
-
-
-
-
-
+                    
                 </aside>
 
                 <div class="col-md-8">

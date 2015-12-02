@@ -286,7 +286,7 @@ html {
 
 body {
     font-family: SourceSansProRegular;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.428571429;
     color: #646464;
     background-color: #fff
@@ -3768,7 +3768,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 .nav > li > a {
     position: relative;
     display: block;
-    padding: 10px 20px
+    padding: 10px 13px
 }
 
 .nav > li > a:focus, .nav > li > a:hover {
@@ -11291,4 +11291,42 @@ label[for="nav-trigger"]:hover {
 }
 .relative-pos .custom-dropdown-menu a:hover {
     color:#1F7BA9!important;
+}
+
+.menu-catalog .sub-menu-catalog {
+
+    position: absolute;
+    left: -100%;
+    opacity: 0;
+    transition: all .5s;
+}
+.menu-catalog ul.active {
+
+    position: relative;
+    left: 0;
+    opacity: 1;
+}
+.menu-catalog li {
+    margin: 10px 0;
+}
+.side-bar-catalog ul {
+    list-style-type: none;
+
+}
+.side-bar-catalog a {
+    color: #373737;
+    border-bottom: 1px solid transparent;
+    transition: all .5s;
+}
+.side-bar-catalog li i {
+    transition: all .5s;
+}
+.side-bar-catalog li i:hover {
+    cursor: pointer;
+    color: #2B96CC;
+    transition: all .5s;
+}
+.side-bar-catalog a:hover {
+    border-bottom: 1px solid #2B96CC;
+    color: #2B96CC;
 }
