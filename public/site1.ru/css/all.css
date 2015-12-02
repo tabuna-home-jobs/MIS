@@ -11276,3 +11276,19 @@ label[for="nav-trigger"]:hover {
 .blog-content .img-responsive {
     display: inline;
 }
+.relative-pos {
+    position: relative;
+}
+.relative-pos .custom-dropdown-menu {
+    left: 0;
+    right: 0;
+    border-top: 6px solid #1F7BA9
+
+}
+.relative-pos .custom-dropdown-menu a {
+    color: #616161!important;
+    transition: all .5s;
+}
+.relative-pos .custom-dropdown-menu a:hover {
+    color:#1F7BA9!important;
+}

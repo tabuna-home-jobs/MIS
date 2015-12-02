@@ -47,24 +47,26 @@
         <div class="container">
             <div class="tri-sec text-center">
                 <i class="feature-icon fa fa-plus-square"></i>
-                <h4>Услуги</h4>
+                <h4 class="relative-pos">
+                    <a id="dropserv" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Услуги
+                        <span class="caret"></span>
+                    </a>
+                    <ul id="menu1" class="dropdown-menu custom-dropdown-menu" aria-labelledby="dropserv">
+                        <li><a href="/service/53">Консультация</a></li>
+                        <li><a href="/service/127">Диагностика</a></li>
+                        <li><a href="/service/142">Лечение</a></li>
 
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    popularised only five Power of centuries.<br><a href="/service">- Перейти</a></p>
+                    </ul>
+                </h4>
             </div>
             <div class="tri-sec text-center">
                 <i class="feature-icon fa fa-thumbs-o-up"></i>
-                <h4>Отзывы</h4>
-
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    popularised only five Power of centuries.<br><a href="/reviews">- Перейти</a></p>
+                <h4><a href="/reviews">Отзывы</a></h4>
             </div>
             <div class="tri-sec text-center">
                 <i class="feature-icon fa fa-stethoscope"></i>
-                <h4>Записатсья на приём</h4>
-
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    popularised only five Power of centuries.<br><a href="/appointment">- Перейти</a></p>
+                <h4><a href="/appointment">Записатсья на приём</a></h4>
             </div>
         </div>
     </div>
