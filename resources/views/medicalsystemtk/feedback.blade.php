@@ -37,12 +37,14 @@
                 	<h2 class="light bordered">Мы <span>Находимся</span></h2>
                     <div class="get-in-touch-widget">
                     	<ul class="list-unstyled">
-                        <li><i class="fa fa-phone"></i>(4742) 227-887, 227-8881</li>
-                        <li><i class="fa fa-envelope"></i>octavian48@yandex.ru</li>
-                        <li><i class="fa fa-globe"></i><a href="http://zdorovie48.ru/">zdorovie48.ru</a></li>
+                        <li><i class="fa fa-phone"></i><a href="tel:+7474222788">(4742) 227-887</a></li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:">mother-baby@mail.ru</a></li>
+                        <li><i class="fa fa-globe"></i><a target="_blank" href="http://zdorovie48.ru/">zdorovie48.ru</a></li>
                         <li><i class="fa fa-clock-o"></i>Понедельник-пятница: 8:00-21:00<br>
-                            Суббота: 8:00-18:00<br>
-                            Воскресенье: 10:00-16:00</li>
+                            Суббота: 8:00-18:00
+                            <br>
+                            Запись на прием по телефону с 8.00 до 21.00 ежедневно
+                        </li>
                         <li><i class="fa fa-map-marker"></i> г.Липецк ул.Октябрьская д.61 </li>
                         </ul>
                     </div>

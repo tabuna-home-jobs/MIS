@@ -49,7 +49,7 @@
                                 @endif
 
 
-                                @if(empty(!$spec->special))
+                                @if(empty(!$spec->special) && trim($spec->special) !== '')
                                     <div>
                                         <div class="heading-doc">Специализация: </div>
                                         <div class="detail-doc">{{$spec->special or ''}}</div>

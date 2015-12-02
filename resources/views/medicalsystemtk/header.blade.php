@@ -48,6 +48,13 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="/karta-uspeha.ru/js/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.highslide').fancybox({
+                'fitToView' : false
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -122,7 +129,15 @@
                     <ul class="nav navbar-nav">
 
 
-                        <li class="{{Active::path('page/18')}}"><a href="/page/18">О нас</a></li>
+                        <li style="padding-bottom: 5px;" role="presentation" class=" dropdown" >
+                            <a id="onas" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">О нас</a>
+                            <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+                                <li><a href="/page/18">Информация о нас</a></li>
+                                <li><a href="/page/55">Наши лицензии</a></li>
+
+
+                            </ul>
+                        </li>
                         <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
                         <li><a href="#">Личный кабинет</a></li>
                         <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li>

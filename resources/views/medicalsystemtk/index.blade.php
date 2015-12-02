@@ -353,7 +353,7 @@
                     <h3>Консультации</h3>
 
 
-                    <a class="btn-rounded btn-bordered" href="/service?category=47">Подробнее</a>
+                    <a class="btn-rounded btn-bordered" href="/service/53">Подробнее</a>
                 </div>
             </div>
             <div class="col-md-4 ">
@@ -362,7 +362,7 @@
 
                     <h3>Диагностика</h3>
 
-                    <a class="btn-rounded btn-bordered" href="/service?category=48">Подробнее</a>
+                    <a class="btn-rounded btn-bordered" href="/service/127">Подробнее</a>
 
 
                 </div>
@@ -374,7 +374,7 @@
                     <h3>Лечение</h3>
 
 
-                    <a class="btn-rounded btn-bordered" href="/service?category=49">Подробнее</a>
+                    <a class="btn-rounded btn-bordered" href="/service/142">Подробнее</a>
                 </div>
             </div>
         </div>
@@ -567,14 +567,15 @@
         <div class="map-on-main container">
             <div class="bage">
                 <div class="footer-widget">
-                    <h4><span>Мы находимся</span></h4>
+                    <h4 style="font-size:18px"><span>Мы находимся</span></h4>
                     <div class="contact-widget">
                         <i class="fa fa-home"></i><p>г.Липецк, ул.Октябрьская, д.61</p>
-                        <i class="fa fa-envelope"></i><p>mother-baby@mail.ru</p>
-                        <i class="fa fa-mobile"></i><p class="phone-number">(4742) 227-887, 227-8881</p>
+                        <i class="fa fa-envelope"></i><p><a href="mailto:">mother-baby@mail.ru</a></p>
+                        <i class="fa fa-globe"></i><p><a target="_blank" href="http://zdorovie48.ru">zdorovie48.ru</a></p>
+                        <i class="fa fa-mobile"></i><p class="phone-number"><a href="tel:+7474222788">(4742) 227-887</a></p>
                         <i class="fa fa-clock-o"></i><p class="phone-number"> Понедельник-пятница: 8:00-21:00<br>
                             Суббота: 8:00-18:00<br>
-                            Воскресенье: 10:00-16:00</p>
+                            Запись на прием по телефону с 8.00 до 21.00 ежедневно </p>
                     </div>
                 </div>
             </div>

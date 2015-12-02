@@ -58,9 +58,10 @@ $(document).ready(function(){
                 language: 'ru',
                 selector: "textarea.textareaedit",
                 extended_valid_elements: "img[class=img-responsive|!src|border:0|alt|title|width|height|style]",
-                plugins: "image,code,link,preview,hr,media,responsivefilemanager",
-                toolbar: "styleselect | fontsizeselect   | bullist numlist outdent indent | link image media  | preview code | more  ",
-                menu: "false",
+                plugins: "image,code,link,preview,hr,media,responsivefilemanager,table",
+                image_advtab: true,
+                toolbar: "styleselect | fontsizeselect | table   | bullist numlist outdent indent | link image media  | preview code | more  ",
+                menu: "table",
                 statusbar: false,
                 setup: function (editor) {
                     editor.addButton('more', {
