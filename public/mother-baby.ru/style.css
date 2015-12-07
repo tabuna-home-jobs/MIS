@@ -5,9 +5,15 @@
     font-weight: normal;
 }
 body{
-font-family: Arimo;
-font-weight: 400;
+	font-size: 16px;
+	font-family: Arimo;
 	
+}
+.bold-font {
+	font-weight: bold;
+}
+.header {
+	padding-top: 10px;
 }
 .form-appointment {
 	background: url("img/bg_part1.jpg");
@@ -16,7 +22,7 @@ font-weight: 400;
 	background-position: center bottom;
 	padding-top: 40px;
 }
-}
+
 .nav>li>a {
     position: relative;
     display: block;
@@ -34,6 +40,9 @@ a{
 .head-top-block{
 	text-align: right;
 }
+.head-top-block a,.head-top-block span,.head-top-block img {
+	margin-left: 15px;
+}
 .head-bottom-block-1{
 color: #8e3891;
 font-family: Arimo;
@@ -43,12 +52,12 @@ line-height: 19px;
 padding-top: 29px;
 }
 .social{
-	padding-top: 25px;
+	padding-top: 32px;
 }
 .schedule{
-    padding-top: 10px;
+    padding-top: 14px;
     color: #8e3891;
-    font-size: 12px;
+    font-size: 14px;
 	line-height: 19px;
 }
 .head-top-block{
@@ -57,32 +66,35 @@ font-size: 14px;
 font-weight: 400;
 line-height: 17px;
 }
-.head-top-block span{
-font-family: Arimo;
-font-size: 16px;
-font-weight: 700;
-line-height: 19px;
-}
+
 .head-top-block a{
 color: #8e3891;
-font-family: Arimo;
-font-size: 12px;
+font-family: Arimo
 font-weight: 400;
-line-height: 14px;
 text-decoration: underline;
+}
+.header .social a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+.header .social a img{
+	width:100%;
 }
 .head-category{
 	background-color: #e0b0ff;
 	color: white;
 }
 .head-category span{
-font-family: Arimo;
-font-size: 24px;
-font-weight: 700;
-line-height: 29px;
-background-color: #b57edc;
-    padding-left: 20px;
-    padding-right: 20px;
+	font-family: Arimo;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 29px;
+	background-color: #b57edc;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding: 10px;
+	display: inline-block;
 }
 .form-image{
 	margin-top: 15px;
@@ -128,9 +140,12 @@ display: inline-block;
 	margin-top: 15px;
 }
 .indicators-form>button{
-	width: 15px;
-	height: 15px;
+	width: 20px;
+	height: 20px;
 	border-radius: 100px;
+	background-color: white;
+}
+.indicators-form .active {
 	background-color: #B57EDC;
 }
 .arrow>p{
@@ -142,6 +157,10 @@ line-height: 17px;
 }
 .form-appointment{
 	margin-bottom: 20px;
+}
+.form-appointment div.arrow a img{
+	vertical-align: middle;
+	margin-right: 10px;
 }
 .department-head{
 text-align: center;
@@ -359,9 +378,17 @@ margin-bottom: 10px;
 }
 .album img {
 	width:100%;
+	opacity: 0.8;
+
+}
+.album img:hover {
+	opacity: 1;
 }
 .album .row div {
 	padding: 0;
+}
+.album .row {
+	margin: 0;
 }
 .license-slide{
 	text-align: center;
@@ -437,4 +464,88 @@ button:focus{outline:none !important;}
 .arrow img{
 	max-width: 100%;
 }
+}
+@media (max-width: 1200px) {
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left,.navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+		display: none!important;
+	}
+	.navbar-nav {
+		float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.collapse.in{
+		display:block !important;
+	}
+}
+.header .navbar-default .navbar-nav>li>a{
+	font-size: 14px;
+}
+.menu1 {
+	margin-top: 10px;
+}
+.__BlockSelect__select {
+	width:105%;
+	padding:10px;
+	border:none;
+	background:transparent;
+	position: relative;
+	z-index: 10;
+	color: #d8d8d8;
+}
+.__BlockSelect {
+	border:1px #d8d8d8 solid;
+	position: relative;
+	overflow:hidden;
+	margin-bottom: 15px;
+	background-color: white;
+}
+.__BlockSelect__a {
+	position: absolute;
+	right:0;
+	top:0;
+	height:100%;
+	background-color:#e0b0ff;
+	z-index: 0;
+	font-size:20px;
+	width:35px;
+	text-align:center;
+	padding-top:7px;
+	display:block;
+	color:white;
+}
+.__BlockSelect__a:hover{
+	color:black;
+}
+.__Appointment__step {
+	display:none;
+}
+.__Appointment__step.Active {
+	display:block;
+}
+.__Appointment button,.indicators-form button {
+	border:none;
 }
