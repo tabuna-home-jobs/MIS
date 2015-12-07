@@ -7,11 +7,14 @@ class Appointments extends Model
 {
 
     use SoftDeletes;
+    public $incrementing = false;
     /**
      * The database table used by the model.
      *
      * @var string
      */
+
+    protected $primaryKey = null;
     protected $table = 'appointments';
 
     /**
