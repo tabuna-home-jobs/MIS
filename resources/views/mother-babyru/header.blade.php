@@ -3,40 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="/mother-baby.ru/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/mother-baby.ru/css/slick.css">
-
     <link rel="stylesheet" type="text/css" href="/mother-baby.ru/style.css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.min.js"></script>
     <title>Центр детского здоровья</title>
-    <script type="text/javascript" src="/mother-baby.ru/js/jquery.js"></script>
-    <script type="text/javascript" src="/mother-baby.ru/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/mother-baby.ru/js/slick.min.js"></script>
-
 </head>
-<body>
+<body id="vueMain">
 <!--header-->
 <div class="header container">
     <div class="row">
         <div class="logo col-md-3"><img src="/mother-baby.ru/img/logo.png"></div>
         <div class="header-info col-md-9">
             <div class="head-top-block col-md-12">
-                <span>+7 (4742) 227-887</span>
-                г. Липецк, ул. Советская, д. 66; ул. Фрунзе, д.14
-                <a href="">mother-baby@mail.ru</a>
+                <a class="bold-font" href="tel:+74742227887">+7 (4742) 227-887</a>
+                <span>г. Липецк, ул. Советская, д. 66,  ул. Фрунзе, д.14</span>
+                <br class="visible-xs">
+                <a href="mialto:mother-baby@mail.ru">mother-baby@mail.ru</a>
                 <img src="/mother-baby.ru/img/heart.png">
-                <a href="">добавить в закладки</a>
+                <a href="" onclick="return addFavorite(this);">добавить в закладки</a>
             </div>
             <div class="head-bottom-block-1 col-md-6">
                 Оказание высококвалифицированной медицинской
                 и психологической помощи детям и подросткам
             </div>
             <div class="head-bottom-block-2 col-md-6">
-                <div class="social col-md-5">
+                <div class="social col-md-4">
                     <a href=""><img src="/mother-baby.ru/img/vk.png"></a>
                     <a href=""><img src="/mother-baby.ru/img/ok.png"></a>
                     <a href=""><img src="/mother-baby.ru/img/fb.png"></a>
                 </div>
-                <div class="schedule col-md-7">
+                <div class="schedule col-md-8">
                     Пн-Пт: 8:00-21:00<br>
                     Сб: 8:00-18:00<br>
                     Вс: 10:00-16:00 (в режиме записи)

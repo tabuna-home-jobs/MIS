@@ -1,0 +1,21 @@
+{
+  "name": "MIS",
+  "description": "",
+  "main": "",
+  "authors": [
+    "SergeyOctavian <rserg.work@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tabuna/MIS",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}

@@ -34,36 +34,110 @@
     <!--appointment-->
     <div class="form-appointment">
     <div class="container">
-        <div class="head-category col-md-12"><span>Записаться на прием</span></div>
+        <div class="head-category "><span>Записаться на прием</span></div>
+        <div class="row">
+
         <div class="form-image col-md-6"><img src="/mother-baby.ru/img/img-form.png"></div>
         <div class="form-itself col-md-6">
-            <form>
-                <select></select>
-                <select></select>
-                <select></select>
-                <textarea></textarea>
-                <div class="button-form">
-                    <button>ДАЛЕЕ</button> <div><a href="">очистить</a><img src="/mother-baby.ru/img/erase.png"></div>
+            <form class="__Appointment">
+                <input v-model="csrf" type="hidden" name="_token" value="{{ csrf_token() }}">
+                <!--<pre>
+                    @{{ isActive[0] }}
+                    @{{$data | json}}
+                </pre>-->
+                <div  v-bind:class="{'Active':isActive[0]}" class="__Appointment__step">
+                    <div class="__BlockSelect">
+                        <select v-model="place" v-on:change="requestSpec('spec')" class="__BlockSelect__select" name="">
+                            <option selected disabled>Выберите место</option>
+                            @foreach($place as $placeItem)
+                                <option value="{{$placeItem->subdivision}}">{{$placeItem->subdivision}}</option>
+                            @endforeach
+                        </select>
+                        <a class="__BlockSelect__a" ><i class="fa fa-angle-down"></i></a>
+                    </div>
+                    <div class="__BlockSelect">
+                        <select v-model="spec" class="__BlockSelect__select" name="" v-on:change="requestSpec('fio')">
+                            <option selected disabled>Выберите специализацию</option>
+                            <option v-for="item in items.spec">
+
+                                @{{ item }}
+                            </option>
+                        </select>
+                        <a class="__BlockSelect__a" ><i class="fa fa-angle-down"></i></a>
+                    </div>
+                    <div class="__BlockSelect">
+                        <select class="__BlockSelect__select" name="" v-on:change="requestSpec('date')"  v-model="fio">
+                            <option selected disabled>Выберите специалиста</option>
+                            <option v-for="item in items.fio">
+                                @{{ item }}
+                            </option>
+                        </select>
+                        <a class="__BlockSelect__a" ><i class="fa fa-angle-down"></i></a>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control"></textarea>
+                    </div>
+
+
+                    <div class="button-form">
+                        <button type="button" v-on:click="next(1)">ДАЛЕЕ</button>
+                        <div><a href="">очистить</a><img src="/mother-baby.ru/img/erase.png"></div>
+                    </div>
                 </div>
+                <div v-bind:class="{'Active':isActive[1]}" class="__Appointment__step">
+                    ДАТА и ВРЕМЯ
+                    <div class="__BlockSelect">
+                    <select class="__BlockSelect__select" name="">
+                        <option v-for="item in items.dateView">
+                            @{{ item }}
+                        </option>
+                    </select>
+                        <a class="__BlockSelect__a" ><i class="fa fa-angle-down"></i></a>
+                        </div>
+                    <div class="button-form">
+                        <button type="button" v-on:click="next(2)">ДАЛЕЕ</button>
+                        <div><a href="">очистить</a><img src="/mother-baby.ru/img/erase.png"></div>
+                    </div>
+                </div>
+                <div v-bind:class="{'Active':isActive[2]}" class="__Appointment__step">
+                    <div class="form-group">
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="button-form">
+                        <button type="button">ОТПРАВИТЬ</button>
+                        <div><a href="">очистить</a><img src="/mother-baby.ru/img/erase.png"></div>
+                    </div>
+                </div>
+
             </form>
         </div>
         <div class="indicators-form col-md-12">
-            <button></button>
-            <button></button>
-            <button></button>
+            <button v-bind:class="{'active':isActive[0]}"  v-on:click="changeActive(0)"></button>
+            <button v-bind:class="{'active':isActive[1]}" v-on:click="changeActive(1)"></button>
+            <button v-bind:class="{'active':isActive[2]}" v-on:click="changeActive(2)"></button>
         </div>
         <div class="arrow col-md-4 col-sm-4 hidden-xs">
-            <a href=""><img src="/mother-baby.ru/img/icon-doctor.png"><img src="/mother-baby.ru/img/arrow-active.png"></a>
+            <a v-on:click="changeActive(0)"><img src="/mother-baby.ru/img/icon-doctor.png"><img
+                        src="/mother-baby.ru/img/arrow-active.png"></a>
+
             <p>Выберите специализацию, услугу, врача</p>
         </div>
         <div class="arrow col-md-4 col-sm-4 hidden-xs">
-            <a href=""><img src="/mother-baby.ru/img/icon-time.png"><img src="/mother-baby.ru/img/arrow.png"></a>
+            <a v-on:click="changeActive(1)"><img src="/mother-baby.ru/img/icon-time.png"><img src="/mother-baby.ru/img/arrow.png"></a>
+
             <p>Выберите удобную для Вас дату и время</p>
         </div>
         <div class="arrow col-md-4 col-sm-4 hidden-xs">
-            <a href=""><img src="/mother-baby.ru/img/icon-contact.png"><img src="/mother-baby.ru/img/arrow.png"></a>
+            <a v-on:click="changeActive(2)"><img src="/mother-baby.ru/img/icon-contact.png"><img src="/mother-baby.ru/img/arrow.png"></a>
+
             <p>Заполните Ваши контактные данные</p>
-        </div>
+        </div></div>
     </div>
     </div>
     <!--end of appointment-->
@@ -96,37 +170,7 @@
                         @include('mother-babyru.category.category', $category)
                     @endforeach
                 </ul>
-                <style>
-                    .department-body ul {
-                        margin:0;
-                        padding: 0;
-                    }
-                    .department-body {
-                        padding: 10px;
-                    }
-                    .department-body a {
-                        color: white;
-                    }
-                    .main-category {
-                        list-style-type: none;
-                    }
-                    .main-category li{
-                        cursor: pointer;
-                    }
-                    .main-category li a{
-                        cursor: pointer;
-                        font-size: 20px;
-                    }
-                    .main-category .children-ul {
-                        display: none;
-                        list-style: none;
-                    }
-                    .main-category li:hover >.children-ul{
-                        display: block;
-                        cursor: pointer;
-                    }
 
-                </style>
             </div>
             <div class="department-footer">
                 <img src="/mother-baby.ru/img/arrow-department.png">
@@ -136,7 +180,7 @@
             </div>
         </div>
         <div class="discounts col-md-8">
-            <div class="head-category col-md-12"><span>Скидки и акции</span></div>
+            <div class="head-category"><span>Скидки и акции</span></div>
 
             @foreach(sharesOnMain::getShare(11,5) as $item)
             <div class="discount col-md-12">
@@ -218,7 +262,7 @@
     <!-- комплексные программы -->
     <div class="complex">
         <div class="container">
-            <div class="head-category col-md-12"><span>Комплексные программы</span></div>
+            <div class="head-category"><span>Комплексные программы</span></div>
 
             @foreach(CustomPage::getPage(11,51) as $item)
             <div class="complex-column col-md-4">
@@ -286,39 +330,7 @@
                 <div class="license-slide"><img src="/mother-baby.ru/img/license3.png"></div>
                 <div class="license-slide"><img src="/mother-baby.ru/img/licenze3.png"></div>
             </div>
-            <script type="text/javascript">
-                $('.autoplay').slick({
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 2000,
-                    responsive: [
-                        {
-                            breakpoint: 1006,
-                            settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 1,
-                                infinite: true,
-                                dots: false
-                            }
-                        },
-                        {
-                            breakpoint: 600,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1
-                            }
-                        },
-                        {
-                            breakpoint: 480,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1
-                            }
-                        }
-                    ]
-                });
-            </script>
+
         </div>
     </div>
     <!-- конец слайдера лицензий -->
@@ -353,32 +365,7 @@
                 <div class="site-slide"><img src="/mother-baby.ru/img/zn5.png"></div>
                 <div class="site-slide"><img src="/mother-baby.ru/img/zn-blank.png"></div>
             </div>
-            <script type="text/javascript">
-                $('.center').slick({
-                    centerMode: true,
-                    centerPadding: '60px',
-                    slidesToShow: 3,
-                    responsive: [
-                        {
-                            breakpoint: 1006,
-                            settings: {
-                                arrows: false,
-                                centerMode: true,
-                                centerPadding: '40px',
-                                slidesToShow: 1
-                            }
-                        },
-                        {
-                            breakpoint: 480,
-                            settings: {
-                                arrows: false,
-                                centerMode: true,
-                                centerPadding: '40px',
-                                slidesToShow: 1
-                            }
-                        }
-                    ]
-                });</script>
+
         </div>
     </div>
     <!-- конец слайдера сайтов -->
