@@ -70,10 +70,10 @@ class Appointments extends Command {
 
 
 					$id = DB::table('timetable')->insertGetId([
+							'id' => $value->attributes()->ID,
 							'subdivision' => (string)$value->PODR,
 							'specialization' => (string)$value->SPEC,
 							'name' => $value->SOTR,
-							'cabinet' => $value->KAB,
 							'created_at' => $date,
 							'updated_at' => $date,
 					]);
@@ -85,7 +85,7 @@ class Appointments extends Command {
 								'beginning' => (int)$zapis->attributes()->S,
 								'end' => (int)$zapis->attributes()->PO,
 								'1c_busy' => (int)$zapis->attributes()->BUSY,
-								'timetable_id' => $id,
+								'timetable_id' => $value->attributes()->ID,
 								'created_at' => $date,
 								'updated_at' => $date,
 						];

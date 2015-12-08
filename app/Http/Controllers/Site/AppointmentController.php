@@ -7,6 +7,7 @@ use App\Models\Appointments;
 use App\Models\TimeTable;
 use DB;
 use Session;
+use App\Models\Entry;
 
 class AppointmentController extends Controller
 {
@@ -66,18 +67,24 @@ class AppointmentController extends Controller
             [$request->subdivision, $request->specialization, $request->name])
             ->get();
 
+
+
         $record = [];
         foreach ($timetable as $specialTimeTable) {
-            //Проверяем только начало, так как если использую end ругаеться бд
-            $record = $specialTimeTable->entry()->whereRaw('beginning = ?', [$beginning])
-                ->get();
-            if (!is_null($record)) break;
+			$record = Entry::whereRaw('beginning = ? and timetable_id = ? and "end" = ?', [$beginning, $specialTimeTable->id,$end])
+					->first();
+					if (!is_null($record)){
+						break;
+					}
+					else
+					{
+						$record->web_busy = true;
+						$record->save();
+					}
         }
-        $record[0]->web_busy = true;
-        $record[0]->save();
 
 
-        $appointments = new Appointments([
+		$appointments = new Appointments([
             'subdivision' => $request->subdivision,
             'specialization' => $request->specialization,
             'name' => $request->name,
@@ -88,9 +95,9 @@ class AppointmentController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'comment' => $request->comment,
+			'spec_id' => $timetable->first()->id,
         ]);
         $appointments->save();
-
 
         Session::flash('good', 'Вы успешно записались на приём');
         return redirect()->back();
