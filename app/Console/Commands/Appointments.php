@@ -2,6 +2,7 @@
 
 use App\Console\Commands\AppointmentsThread;
 use App\Models\Appointments as Appoint;
+use Carbon\Carbon;
 use DB;
 use Illuminate\Console\Command;
 use Storage;
@@ -43,63 +44,72 @@ class Appointments extends Command {
 	 */
 	public function fire()
 	{
+		$files = collect(Storage::files(''));
+
+		$filtered = $files->filter(function ($item) {
+			return str_is('MiD_*-OUT.xml', $item);
+		});
+
+
 
         DB::connection()->disableQueryLog();
-		if (Storage::exists('import.xml')) {
 
-			$xml = simplexml_load_string(Storage::get('import.xml'));
-            DB::table('entry')->truncate();
-            DB::table('timetable')->truncate();
-
-            $date = date("Y-m-d G:i:s");
-
-            foreach ($xml->Record as $value) {
+		foreach ($filtered as $file1COUT) {
 
 
-                $id = DB::table('timetable')->insertGetId([
-                    'subdivision' => (string) $value->PODR,
-                    'specialization' => (string) $value->SPEC,
-                    'name'=> $value->SOTR,
-                    'cabinet'=> $value->KAB,
-                    'created_at' => $date,
-                    'updated_at' => $date,
-                ]);
+			if (Storage::exists($file1COUT)) {
+
+				$xml = simplexml_load_string(Storage::get($file1COUT));
+
+				DB::table('entry')->truncate();
+				DB::table('timetable')->truncate();
+
+				$date = date("Y-m-d G:i:s");
+
+				foreach ($xml->Record as $value) {
 
 
-                $entry = array();
-                foreach($value->ZAPIS->T as $zapis)
-                {
-                    $entry[] = [
-                        'beginning' => (int) $zapis->attributes()->S,
-                        'end' => (int) $zapis->attributes()->PO,
-                        '1c_busy' => (int) $zapis->attributes()->BUSY,
-                        'timetable_id' => $id,
-                        'created_at' => $date,
-                        'updated_at' => $date,
-                    ];
-
-                }
-
-                DB::table('entry')->insert($entry);
-            }
-
-			Storage::delete('import.xml');
-            $this->info('Команда выгрузки xml файла расписания отработала' . date('h-i-s'));
-
-        }
-        else
-        {
-            $this->info('xml файл не существует');
-        }
+					$id = DB::table('timetable')->insertGetId([
+							'subdivision' => (string)$value->PODR,
+							'specialization' => (string)$value->SPEC,
+							'name' => $value->SOTR,
+							'cabinet' => $value->KAB,
+							'created_at' => $date,
+							'updated_at' => $date,
+					]);
 
 
-		$Apportointments = Appoint::all();
-		$Views = view('XML.appointments', [
-				'Record' => $Apportointments
-		])->render();
-		Storage::put('export.xml', $Views);
+					$entry = array();
+					foreach ($value->ZAPIS->T as $zapis) {
+						$entry[] = [
+								'beginning' => (int)$zapis->attributes()->S,
+								'end' => (int)$zapis->attributes()->PO,
+								'1c_busy' => (int)$zapis->attributes()->BUSY,
+								'timetable_id' => $id,
+								'created_at' => $date,
+								'updated_at' => $date,
+						];
+
+					}
+
+					DB::table('entry')->insert($entry);
+				}
+
+				Storage::delete($file1COUT);
+				$this->info('Команда выгрузки xml файла расписания отработала ' . date('h-i-s'));
+
+			} else {
+				$this->info('xml файл не существует');
+			}
 
 
+			$Apportointments = Appoint::where('updated_at', '>', Carbon::now()->subWeeks(1))->get();
+			$Views = view('XML.appointments', [
+					'Record' => $Apportointments
+			])->render();
+			Storage::put(time() . '-export.xml', $Views);
+
+		}
 
 	}
 
