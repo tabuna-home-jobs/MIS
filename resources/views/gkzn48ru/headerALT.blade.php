@@ -52,10 +52,10 @@
                 <a class="navbar-brand" href="/">
                     <span class="logo contrast">
                         <span class="primary-logo">
-                                                            <img id="logo" src="/gkzn48ru/wp-content/themes/medic-final/assets/img/logo_1.png" alt="Medic – Medical, Health and Hospital Wordpress Theme">
+                                                            <img id="logo" src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/logo_1.png" alt="Medic – Medical, Health and Hospital Wordpress Theme">
                                                     </span>
                         <span class="secondary-logo">
-                            <img id="logo" src="/gkzn48ru/wp-content/themes/medic-final/assets/img/logo.png" alt="Medic – Medical, Health and Hospital Wordpress Theme">
+                            <img id="logo" src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/logo.png" alt="Medic – Medical, Health and Hospital Wordpress Theme">
                         </span>
                     </span>
                 </a>

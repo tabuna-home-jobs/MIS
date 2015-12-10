@@ -24,7 +24,6 @@
 
                                     <form method="get" action="/encypost">
                                         <input type="text" class="form-control " name="search" placeholder="Поиск...">
-                                        <button type="submit" class="btn btn-default search-icon"><i class="fa fa-search"></i></button>
                                     </form>
 
                                 </div>
@@ -96,13 +95,13 @@
                                 <div class="col-xs-12">
                                     <div class="heading_e"><h3>Последние статьи</h3>
 
-                                        <p>Тут можно тоже что то написать для превлечения внимания</p><h4><img src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
+                                        <p>Тут можно тоже что то написать для превлечения внимания</p><h4><img src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
                                     </div>
                                 </div>
 
 
-                                <div class="xsx-width">
-                                    <div class=" alternate-divs">
+                                <div class="xsx-width v-s">
+                                    <div class="alternate-divs">
 
 
                                         <!-- ===== Begin Blog blocks ===== -->
@@ -112,7 +111,7 @@
                                         @foreach($LastNews as $post)
 
 
-                                            <div class="col-md-4">
+                                            <div class="v-p-3 col-md-4">
 
 
                                                 <div class="elements_news_c">

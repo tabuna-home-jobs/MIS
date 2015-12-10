@@ -11261,3 +11261,14 @@ table a {
 .p-t-40{
 	padding-top: 40px;
 }
+
+.v-p-3{
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+	width: 32.5%;
+}
+
+.archives li a{
+	padding: 10px!important;
+}

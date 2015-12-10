@@ -59,13 +59,13 @@
                         <span class="span-02"></span>
                         <span class="span-03"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/">
                     <span class="logo contrast">
                         <span class="primary-logo">
-                                                            <img id="logo" src="/gkzn48ru/wp-content/themes/medic-final/assets/img/logo_1.png" alt="Medic &#8211; Medical, Health and Hospital Wordpress Theme">
+                                                            <img id="logo" src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/logo_1.png" alt="">
                                                     </span>
                         <span class="secondary-logo">
-                            <img id="logo" src="/gkzn48ru/wp-content/themes/medic-final/assets/img/logo.png" alt="Medic &#8211; Medical, Health and Hospital Wordpress Theme">
+                            <img id="logo" src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/logo.png" alt="">
                         </span>
                     </span>
                     </a>
@@ -110,19 +110,26 @@
                     <ul class="clearfix">
                         <li>
                             <div class="departament-item-owl">
-                                <img src="/gkzn48ru/images/logo/zdorovie_w.png">
-                                <h3><a href="#">Здоровье нации</a></h3>
+                                <a href="http://zdorovie48.ru" target="_blank" class="no-u">
+                                    <img src="/gkzn48ru/images/logo/zdorovie_w.png">
+                                </a>
+                                <h3><a href="http://zdorovie48.ru" target="_blank">Здоровье нации</a></h3>
 
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию.</p></div>
                             <div class="departament-item-owl">
-                                <img src="/gkzn48ru/images/logo/karta_w.png">
-                                <h3><a href="#">Карта Успеха</a></h3>
+
+                                <a href="http://karta-uspeha.ru" target="_blank" class="no-u">
+                                    <img src="/gkzn48ru/images/logo/karta_w.png">
+                                </a>
+                                <h3><a href="http://karta-uspeha.ru" target="_blank">Карта Успеха</a></h3>
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию. </p></div>
                         </li>
                         <li>
                             <div class="departament-item-owl">
-                                <img src="/gkzn48ru/images/logo/kid_w.png">
-                                <h3><a href="#">Мать и Дитя</a></h3>
+                                <a href="http://mother-baby.ru/"  target="_blank" class="no-u">
+                                    <img src="/gkzn48ru/images/logo/kid_w.png">
+                                </a>
+                                <h3><a href="http://mother-baby.ru/"  target="_blank">Мать и Дитя</a></h3>
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию. </p></div>
 
                             <div class="departament-item-owl">

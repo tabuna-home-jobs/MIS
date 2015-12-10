@@ -50,7 +50,7 @@ class BlogController extends Controller {
 	{
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
         $getNews =$getSites->getNews()->find($id);
-        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
 
 
         //Опросы

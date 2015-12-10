@@ -19,7 +19,7 @@
         <div class="heading_e">
 
             <p>Последнии записи центров</p><h4><img
-                        src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
+                        src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
         </div>
     </div>
 
@@ -35,7 +35,7 @@
             @foreach($News as $key => $value)
 
 
-                <div class="col-md-4">
+                <div class="v-p-3 col-md-4">
 
 
                     <div class="elements_news_c">

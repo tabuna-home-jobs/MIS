@@ -88,7 +88,7 @@
                                 <div class="col-xs-12">
                                     <div class="heading_e"><h3>Результат поиска:</h3>
 
-                                        <p>Тут можно тоже что то написать для превлечения внимания</p><h4><img src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
+                                        <p>Тут можно тоже что то написать для превлечения внимания</p><h4><img src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
                                     </div>
                                 </div>
 
@@ -102,7 +102,7 @@
                                         <!-- ===== Begin Thumbnails ===== -->
 
                                         @forelse($PostList as $post)
-                                            <div class="col-md-4">
+                                            <div class="v-p-3 col-md-4">
 
 
                                                 <div class="elements_news_c">
