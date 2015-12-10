@@ -9,6 +9,8 @@
 @section('avatar', $New['avatar'])
 
 
+@section('headerTitle',$New['name'])
+
 
 @section('content')
 
@@ -45,32 +47,34 @@
 
 
                                 <div class="titleB">
-                                    <h4>{{$New['created_at']}}</h4>
-                                    <div class="right-linie">
-                                        <span></span>
+
+
+                                    <div class="col-md-7">
+                                        <h4>Поделиться</h4>
+                                        <div class="right-linie">
+                                            <span></span>
+                                        </div>
                                     </div>
+
+                                    <div class="col-md-5">
+                                        <ul class="social-rounded pull-right">
+                                            <li><a href="http://www.facebook.com/sharer.php?u={{Request::url()}}" target="_blank"><i
+                                                            class="fa fa-facebook"></i></a></li>
+                                            <li><a href="https://twitter.com/share?url={{Request::url()}}" target="_blank"><i
+                                                            class="fa fa-twitter"></i></a></li>
+                                            <li><a href="https://plus.google.com/share?url={{Request::url()}}" target="_blank"><i
+                                                            class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="http://vkontakte.ru/share.php?url={{Request::url()}}" target="_blank"><i
+                                                            class="fa fa-vk"></i></a></li>
+                                            <li><a href="http://www.ok.ru/dk?st.cmd=addShare&st.s=1&st._surl={{Request::url()}}"
+                                                   target="_blank"><i class="fa fa-odnoklassniki"></i></a></li>
+                                        </ul>
+                                    </div>
+
+
+
                                 </div>
 
-
-                                <div class="share-post clearfix">
-                                    <label>Поделиться</label>
-                                    <ul class="social-rounded">
-                                        <li><a href="http://www.facebook.com/sharer.php?u={{Request::url()}}" target="_blank"><i
-                                                        class="fa fa-facebook"></i></a></li>
-                                        <li><a href="https://twitter.com/share?url={{Request::url()}}" target="_blank"><i
-                                                        class="fa fa-twitter"></i></a></li>
-                                        <li><a href="https://plus.google.com/share?url={{Request::url()}}" target="_blank"><i
-                                                        class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="http://vkontakte.ru/share.php?url={{Request::url()}}" target="_blank"><i
-                                                        class="fa fa-vk"></i></a></li>
-                                        <li><a href="http://www.ok.ru/dk?st.cmd=addShare&st.s=1&st._surl={{Request::url()}}"
-                                               target="_blank"><i class="fa fa-circle-o"></i></a></li>
-                                    </ul>
-                                </div>
-
-
-
-                                <p class="">Теги: {{$New['tag']}}</p>
 
 
                             </div>
@@ -87,14 +91,20 @@
                 <aside class="col-sm-4 bloG">
 
                     @if(!is_null($getQuests))
-                    <div id="text-2" class="widget widget-widget_text"><div class="titleC"><h4>Опрос </h4><div class="right-linie"><span></span></div></div>			<div class="textwidget">                   <p>One of the most sublime experiences we can ever have is to wake up feeling healthy after we have been sick.</p>
+                    <div id="text-2" class="widget widget-widget_text"><div class="titleC"><h4>Опрос </h4><div class="right-linie"><span></span></div></div>			<div class="textwidget">
+
+                            <div>
+                            <p class="text-center">Добрый день уважаемые клиенты!</p>
+                               <p class="text-justify"> Мы  очень бережно относимся к Вашему здоровью и времени. Для улучшения качества оказываемых услуг, просим Вас ответить на несколько вопросов.</p>
+                                <small class="pull-right">С уважением администрация.</small>
+                            </div>
 
                             <div class="row">
 
 
-                                    <div class="sidebar-widget light">
+                                    <div class="sidebar-widget light widget-form-white-short">
 
-                                        <div class="">
+                                        <div class="p-t-40">
                                             <div class="stepwizard">
                                                 <div class="stepwizard-row setup-panel">
 
@@ -124,7 +134,7 @@
                                                     <div class="row setup-content" id="step-{{$key+1}}">
                                                         <div class="col-xs-12">
                                                             <div class="col-md-12">
-                                                                <h6 class="text-justify">{{$quest->quest}}</h6>
+                                                                <h5 class="text-justify">{{$quest->quest}}</h5>
 
 
                                                                 @if($quest->type == 'one')
@@ -164,20 +174,20 @@
                                                 <div class="row setup-content" id="step-{{$i}}">
                                                     <div class="col-xs-12">
                                                         <div class="col-md-12">
-                                                            <h6 class="text-justify">Контакты для обратной связи</h6>
+                                                            <h5 class="text-justify">Контакты для обратной связи</h5>
 
                                                             <div class="form-group">
-                                                                <input type="text" name="fio" placeholder="ФИО" required="" style="width: 100%">
+                                                                <input type="text" name="fio" class="form-control" placeholder="ФИО" required="" style="width: 100%">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input type="email" name="email" placeholder="E-mail" required="" style="width: 100%">
+                                                                <input type="email" name="email" class="form-control" placeholder="E-mail" required="" style="width: 100%">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input type="text" name="phone" placeholder="Телефон" required="" style="width: 100%">
+                                                                <input type="text" name="phone" class="form-control" placeholder="Телефон" required="" style="width: 100%">
                                                             </div>
                                                             <input type="hidden" name="id" value="{{$getSurveys->id}}">
                                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                            <button class="btn btn-success btn-lg" type="submit">Отправить</button>
+                                                            <button class="btn btn-primary pull-right  btn-sm" type="submit">Отправить</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -211,7 +221,7 @@
 
                                             <p class="text-justify">{{ substr(strip_tags($lastNew->content), 0, 201) }} ...</p>
 
-                                            <p class="popular-date text-right">{{$lastNew->created_at}}</p>
+                                            <p class="popular-date text-right">{{$lastNew->created_at->diffForHumans()}}</p>
                                         </article>
                                     @endforeach
                                 </div>

@@ -16,8 +16,8 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>20377</introspection-state-number>
-        <introspection-timestamp>2015-12-08.15:24:35.310</introspection-timestamp>
+        <introspection-state-number>27238</introspection-state-number>
+        <introspection-timestamp>2015-12-09.10:09:20.860</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="answers_id_seq">
         <object-id>24593</object-id>
@@ -49,7 +49,7 @@
       </sequence>
       <sequence id="10" parent="2" name="entry_id_seq">
         <object-id>26163</object-id>
-        <state-number>20247</state-number>
+        <state-number>27233</state-number>
       </sequence>
       <sequence id="11" parent="2" name="feedbacks_id_seq">
         <object-id>24624</object-id>
@@ -127,2063 +127,2058 @@
         <object-id>24730</object-id>
         <state-number>955</state-number>
       </sequence>
-      <sequence id="30" parent="2" name="timetable_id_seq">
-        <object-id>26129</object-id>
-        <state-number>20248</state-number>
-      </sequence>
-      <sequence id="31" parent="2" name="users_id_seq">
+      <sequence id="30" parent="2" name="users_id_seq">
         <object-id>24750</object-id>
         <state-number>962</state-number>
       </sequence>
-      <sequence id="32" parent="2" name="video_album_id_seq">
+      <sequence id="31" parent="2" name="video_album_id_seq">
         <object-id>25611</object-id>
         <state-number>7546</state-number>
       </sequence>
-      <sequence id="33" parent="2" name="video_id_seq">
+      <sequence id="32" parent="2" name="video_id_seq">
         <object-id>25547</object-id>
         <state-number>7274</state-number>
       </sequence>
-      <table id="34" parent="2" name="album">
+      <table id="33" parent="2" name="album">
         <object-id>24968</object-id>
         <state-number>7276</state-number>
       </table>
-      <table id="35" parent="2" name="answers">
+      <table id="34" parent="2" name="answers">
         <object-id>24590</object-id>
         <state-number>7704</state-number>
       </table>
-      <table id="36" parent="2" name="appointments">
+      <table id="35" parent="2" name="appointments">
         <object-id>24929</object-id>
         <state-number>20376</state-number>
       </table>
-      <table id="37" parent="2" name="articles">
+      <table id="36" parent="2" name="articles">
         <object-id>25300</object-id>
         <state-number>5564</state-number>
       </table>
-      <table id="38" parent="2" name="category">
+      <table id="37" parent="2" name="category">
         <object-id>24595</object-id>
         <state-number>6335</state-number>
       </table>
-      <table id="39" parent="2" name="category_answers">
+      <table id="38" parent="2" name="category_answers">
         <object-id>25645</object-id>
         <state-number>7676</state-number>
       </table>
-      <table id="40" parent="2" name="comments">
+      <table id="39" parent="2" name="comments">
         <object-id>24603</object-id>
         <state-number>3587</state-number>
       </table>
-      <table id="41" parent="2" name="encycategory">
+      <table id="40" parent="2" name="encycategory">
         <object-id>24983</object-id>
         <state-number>3601</state-number>
       </table>
-      <table id="42" parent="2" name="encypost">
+      <table id="41" parent="2" name="encypost">
         <object-id>24994</object-id>
         <state-number>14156</state-number>
       </table>
-      <table id="43" parent="2" name="entry">
+      <table id="42" parent="2" name="entry">
         <object-id>24612</object-id>
-        <state-number>20247</state-number>
+        <state-number>27233</state-number>
       </table>
-      <table id="44" parent="2" name="feedbacks">
+      <table id="43" parent="2" name="feedbacks">
         <object-id>24617</object-id>
         <state-number>914</state-number>
       </table>
-      <table id="45" parent="2" name="goods">
+      <table id="44" parent="2" name="goods">
         <object-id>24626</object-id>
         <state-number>7184</state-number>
       </table>
-      <table id="46" parent="2" name="groups">
+      <table id="45" parent="2" name="groups">
         <object-id>24634</object-id>
         <state-number>920</state-number>
       </table>
-      <table id="47" parent="2" name="menuitems">
+      <table id="46" parent="2" name="menuitems">
         <object-id>25005</object-id>
         <state-number>3660</state-number>
       </table>
-      <table id="48" parent="2" name="menus">
+      <table id="47" parent="2" name="menus">
         <object-id>25016</object-id>
         <state-number>3703</state-number>
       </table>
-      <table id="49" parent="2" name="migrations">
+      <table id="48" parent="2" name="migrations">
         <object-id>24659</object-id>
         <state-number>929</state-number>
       </table>
-      <table id="50" parent="2" name="news">
+      <table id="49" parent="2" name="news">
         <object-id>24662</object-id>
         <state-number>930</state-number>
       </table>
-      <table id="51" parent="2" name="options">
+      <table id="50" parent="2" name="options">
         <object-id>24670</object-id>
         <state-number>933</state-number>
       </table>
-      <table id="52" parent="2" name="pages">
+      <table id="51" parent="2" name="pages">
         <object-id>24678</object-id>
         <state-number>936</state-number>
       </table>
-      <table id="53" parent="2" name="photo">
+      <table id="52" parent="2" name="photo">
         <object-id>24957</object-id>
         <state-number>6186</state-number>
       </table>
-      <table id="54" parent="2" name="questanswer">
+      <table id="53" parent="2" name="questanswer">
         <object-id>25050</object-id>
         <state-number>7708</state-number>
       </table>
-      <table id="55" parent="2" name="questions">
+      <table id="54" parent="2" name="questions">
         <object-id>24686</object-id>
         <state-number>939</state-number>
       </table>
-      <table id="56" parent="2" name="reviews">
+      <table id="55" parent="2" name="reviews">
         <object-id>24694</object-id>
         <state-number>942</state-number>
       </table>
-      <table id="57" parent="2" name="shares">
+      <table id="56" parent="2" name="shares">
         <object-id>24703</object-id>
         <state-number>945</state-number>
       </table>
-      <table id="58" parent="2" name="sites">
+      <table id="57" parent="2" name="sites">
         <object-id>24711</object-id>
         <state-number>948</state-number>
       </table>
-      <table id="59" parent="2" name="SpecCat">
+      <table id="58" parent="2" name="SpecCat">
         <object-id>25311</object-id>
         <state-number>5571</state-number>
       </table>
-      <table id="60" parent="2" name="specialisty">
+      <table id="59" parent="2" name="specialisty">
         <object-id>24909</object-id>
         <state-number>5775</state-number>
       </table>
-      <table id="61" parent="2" name="surveys">
+      <table id="60" parent="2" name="surveys">
         <object-id>24719</object-id>
         <state-number>951</state-number>
       </table>
-      <table id="62" parent="2" name="throttle">
+      <table id="61" parent="2" name="throttle">
         <object-id>24724</object-id>
         <state-number>954</state-number>
       </table>
-      <table id="63" parent="2" name="timetable">
+      <table id="62" parent="2" name="timetable">
         <object-id>24732</object-id>
-        <state-number>20248</state-number>
+        <state-number>27238</state-number>
       </table>
-      <table id="64" parent="2" name="users">
+      <table id="63" parent="2" name="users">
         <object-id>24740</object-id>
         <state-number>7167</state-number>
       </table>
-      <table id="65" parent="2" name="users_groups">
+      <table id="64" parent="2" name="users_groups">
         <object-id>24747</object-id>
         <state-number>961</state-number>
       </table>
-      <table id="66" parent="2" name="video">
+      <table id="65" parent="2" name="video">
         <object-id>25549</object-id>
         <state-number>7577</state-number>
       </table>
-      <table id="67" parent="2" name="videoalbum">
+      <table id="66" parent="2" name="videoalbum">
         <object-id>25613</object-id>
         <state-number>7572</state-number>
       </table>
-      <column id="68" parent="34" name="id">
+      <column id="67" parent="33" name="id">
         <state-number>3532</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;photoalbum_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="69" parent="34" name="ids">
+      <column id="68" parent="33" name="ids">
         <state-number>3532</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="70" parent="34" name="name">
+      <column id="69" parent="33" name="name">
         <state-number>3532</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="71" parent="34" name="created_at">
+      <column id="70" parent="33" name="created_at">
         <state-number>3532</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="72" parent="34" name="updated_at">
+      <column id="71" parent="33" name="updated_at">
         <state-number>3532</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="73" parent="34" name="deleted_at">
+      <column id="72" parent="33" name="deleted_at">
         <state-number>3532</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="74" parent="34" name="photoalbum_pkey">
+      <index id="73" parent="33" name="photoalbum_pkey">
         <object-id>24972</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="75" parent="34" name="photoalbum_pkey">
+      <key id="74" parent="33" name="photoalbum_pkey">
         <columns>id</columns>
         <underlying-index>photoalbum_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="76" parent="35" name="id">
+      <column id="75" parent="34" name="id">
         <state-number>964</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;answers_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="77" parent="35" name="answer">
+      <column id="76" parent="34" name="answer">
         <state-number>3803</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="78" parent="35" name="surveys_id">
+      <column id="77" parent="34" name="surveys_id">
         <state-number>902</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="79" parent="35" name="created_at">
+      <column id="78" parent="34" name="created_at">
         <state-number>902</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="80" parent="35" name="updated_at">
+      <column id="79" parent="34" name="updated_at">
         <state-number>902</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="81" parent="35" name="deleted_at">
+      <column id="80" parent="34" name="deleted_at">
         <state-number>902</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="82" parent="35" name="fio">
+      <column id="81" parent="34" name="fio">
         <state-number>3804</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="83" parent="35" name="phone">
+      <column id="82" parent="34" name="phone">
         <state-number>3805</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="84" parent="35" name="email">
+      <column id="83" parent="34" name="email">
         <state-number>3806</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="85" parent="36" name="id">
+      <column id="84" parent="35" name="id">
         <state-number>14109</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;appointments_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="86" parent="36" name="subdivision">
+      <column id="85" parent="35" name="subdivision">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="87" parent="36" name="specialization">
+      <column id="86" parent="35" name="specialization">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="88" parent="36" name="name">
+      <column id="87" parent="35" name="name">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="89" parent="36" name="beginning">
+      <column id="88" parent="35" name="beginning">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
       </column>
-      <column id="90" parent="36" name="end">
+      <column id="89" parent="35" name="end">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
       </column>
-      <column id="91" parent="36" name="firstname">
+      <column id="90" parent="35" name="firstname">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="92" parent="36" name="lastname">
+      <column id="91" parent="35" name="lastname">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="93" parent="36" name="email">
+      <column id="92" parent="35" name="email">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="94" parent="36" name="phone">
+      <column id="93" parent="35" name="phone">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="95" parent="36" name="comment">
+      <column id="94" parent="35" name="comment">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="96" parent="36" name="created_at">
+      <column id="95" parent="35" name="created_at">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="97" parent="36" name="updated_at">
+      <column id="96" parent="35" name="updated_at">
         <state-number>3495</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="98" parent="36" name="deleted_at">
+      <column id="97" parent="35" name="deleted_at">
         <state-number>3495</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="99" parent="36" name="spec_id">
+      <column id="98" parent="35" name="spec_id">
         <state-number>20377</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="100" parent="36" name="appointments_pkey">
+      <index id="99" parent="35" name="appointments_pkey">
         <object-id>24936</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="101" parent="36" name="appointments_pkey">
+      <key id="100" parent="35" name="appointments_pkey">
         <columns>id</columns>
         <underlying-index>appointments_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="102" parent="37" name="id">
+      <column id="101" parent="36" name="id">
         <state-number>5564</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;articles_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="103" parent="37" name="title">
+      <column id="102" parent="36" name="title">
         <state-number>5564</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="104" parent="37" name="name">
+      <column id="103" parent="36" name="name">
         <state-number>5564</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="105" parent="37" name="content">
+      <column id="104" parent="36" name="content">
         <state-number>5564</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="106" parent="37" name="avatar">
+      <column id="105" parent="36" name="avatar">
         <state-number>5564</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="107" parent="37" name="tag">
+      <column id="106" parent="36" name="tag">
         <state-number>5564</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="108" parent="37" name="descript">
+      <column id="107" parent="36" name="descript">
         <state-number>5564</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="109" parent="37" name="ids">
+      <column id="108" parent="36" name="ids">
         <state-number>5564</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="110" parent="37" name="created_at">
+      <column id="109" parent="36" name="created_at">
         <state-number>5564</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="111" parent="37" name="updated_at">
+      <column id="110" parent="36" name="updated_at">
         <state-number>5564</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="112" parent="37" name="deleted_at">
+      <column id="111" parent="36" name="deleted_at">
         <state-number>5564</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="113" parent="37" name="articles_pkey">
+      <index id="112" parent="36" name="articles_pkey">
         <object-id>25307</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="114" parent="37" name="articles_pkey">
+      <key id="113" parent="36" name="articles_pkey">
         <columns>id</columns>
         <underlying-index>articles_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="115" parent="38" name="id">
+      <column id="114" parent="37" name="id">
         <state-number>965</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;category_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="116" parent="38" name="title">
+      <column id="115" parent="37" name="title">
         <state-number>905</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="117" parent="38" name="name">
+      <column id="116" parent="37" name="name">
         <state-number>905</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="118" parent="38" name="text">
+      <column id="117" parent="37" name="text">
         <state-number>905</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="119" parent="38" name="avatar">
+      <column id="118" parent="37" name="avatar">
         <state-number>905</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="120" parent="38" name="tag">
+      <column id="119" parent="37" name="tag">
         <state-number>905</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="121" parent="38" name="descript">
+      <column id="120" parent="37" name="descript">
         <state-number>905</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="122" parent="38" name="ids">
+      <column id="121" parent="37" name="ids">
         <state-number>905</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="123" parent="38" name="created_at">
+      <column id="122" parent="37" name="created_at">
         <state-number>905</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="124" parent="38" name="updated_at">
+      <column id="123" parent="37" name="updated_at">
         <state-number>905</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="125" parent="38" name="deleted_at">
+      <column id="124" parent="37" name="deleted_at">
         <state-number>905</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="126" parent="38" name="_lft">
+      <column id="125" parent="37" name="_lft">
         <state-number>6335</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="127" parent="38" name="_rgt">
+      <column id="126" parent="37" name="_rgt">
         <state-number>6335</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="128" parent="38" name="parent_id">
+      <column id="127" parent="37" name="parent_id">
         <state-number>6335</state-number>
         <data-type>integer</data-type>
       </column>
-      <index id="129" parent="38" name="category_pkey">
+      <index id="128" parent="37" name="category_pkey">
         <object-id>24776</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <index id="130" parent="38" name="category__lft__rgt_parent_id_index">
+      <index id="129" parent="37" name="category__lft__rgt_parent_id_index">
         <object-id>25366</object-id>
         <columns>_lft
 _rgt
 parent_id</columns>
       </index>
-      <key id="131" parent="38" name="category_pkey">
+      <key id="130" parent="37" name="category_pkey">
         <columns>id</columns>
         <underlying-index>category_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="132" parent="39" name="id">
+      <column id="131" parent="38" name="id">
         <state-number>7676</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;category_answers_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="133" parent="39" name="name">
+      <column id="132" parent="38" name="name">
         <state-number>7676</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="134" parent="39" name="ids">
+      <column id="133" parent="38" name="ids">
         <state-number>7676</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="135" parent="39" name="created_at">
+      <column id="134" parent="38" name="created_at">
         <state-number>7676</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="136" parent="39" name="updated_at">
+      <column id="135" parent="38" name="updated_at">
         <state-number>7676</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="137" parent="39" name="deleted_at">
+      <column id="136" parent="38" name="deleted_at">
         <state-number>7676</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="138" parent="39" name="category_answers_pkey">
+      <index id="137" parent="38" name="category_answers_pkey">
         <object-id>25649</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="139" parent="39" name="category_answers_pkey">
+      <key id="138" parent="38" name="category_answers_pkey">
         <columns>id</columns>
         <underlying-index>category_answers_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="140" parent="40" name="id">
+      <column id="139" parent="39" name="id">
         <state-number>966</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;comments_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="141" parent="40" name="fio">
+      <column id="140" parent="39" name="fio">
         <state-number>908</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="142" parent="40" name="phone">
+      <column id="141" parent="39" name="phone">
         <state-number>3587</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="143" parent="40" name="email">
+      <column id="142" parent="39" name="email">
         <state-number>908</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="144" parent="40" name="content">
+      <column id="143" parent="39" name="content">
         <state-number>908</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="145" parent="40" name="goods_id">
+      <column id="144" parent="39" name="goods_id">
         <state-number>908</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="146" parent="40" name="comments_id">
+      <column id="145" parent="39" name="comments_id">
         <state-number>908</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="147" parent="40" name="ids">
+      <column id="146" parent="39" name="ids">
         <state-number>908</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="148" parent="40" name="created_at">
+      <column id="147" parent="39" name="created_at">
         <state-number>908</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="149" parent="40" name="updated_at">
+      <column id="148" parent="39" name="updated_at">
         <state-number>908</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="150" parent="40" name="deleted_at">
+      <column id="149" parent="39" name="deleted_at">
         <state-number>908</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="151" parent="40" name="publish">
+      <column id="150" parent="39" name="publish">
         <state-number>908</state-number>
         <mandatory>1</mandatory>
         <data-type>boolean</data-type>
         <default-expression>false</default-expression>
       </column>
-      <index id="152" parent="40" name="comments_pkey">
+      <index id="151" parent="39" name="comments_pkey">
         <object-id>24778</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="153" parent="40" name="comments_pkey">
+      <key id="152" parent="39" name="comments_pkey">
         <columns>id</columns>
         <underlying-index>comments_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="154" parent="41" name="id">
+      <column id="153" parent="40" name="id">
         <state-number>3601</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
         <default-expression>nextval(&apos;encycategory_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="155" parent="41" name="encycategory_id">
+      <column id="154" parent="40" name="encycategory_id">
         <state-number>3601</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
       </column>
-      <column id="156" parent="41" name="title">
+      <column id="155" parent="40" name="title">
         <state-number>3601</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="157" parent="41" name="name">
+      <column id="156" parent="40" name="name">
         <state-number>3601</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="158" parent="41" name="tag">
+      <column id="157" parent="40" name="tag">
         <state-number>3601</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="159" parent="41" name="descript">
+      <column id="158" parent="40" name="descript">
         <state-number>3601</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="160" parent="41" name="text">
+      <column id="159" parent="40" name="text">
         <state-number>3601</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="161" parent="41" name="created_at">
+      <column id="160" parent="40" name="created_at">
         <state-number>3601</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="162" parent="41" name="updated_at">
+      <column id="161" parent="40" name="updated_at">
         <state-number>3601</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="163" parent="41" name="deleted_at">
+      <column id="162" parent="40" name="deleted_at">
         <state-number>3601</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="164" parent="41" name="encycategory_pkey">
+      <index id="163" parent="40" name="encycategory_pkey">
         <object-id>24990</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="165" parent="41" name="encycategory_pkey">
+      <key id="164" parent="40" name="encycategory_pkey">
         <columns>id</columns>
         <underlying-index>encycategory_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="166" parent="42" name="encycategory_id">
+      <column id="165" parent="41" name="encycategory_id">
         <state-number>3603</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
       </column>
-      <column id="167" parent="42" name="specdoctor">
+      <column id="166" parent="41" name="specdoctor">
         <state-number>3603</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="168" parent="42" name="avatar">
+      <column id="167" parent="41" name="avatar">
         <state-number>3603</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="169" parent="42" name="title">
+      <column id="168" parent="41" name="title">
         <state-number>3603</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="170" parent="42" name="name">
+      <column id="169" parent="41" name="name">
         <state-number>3603</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="171" parent="42" name="tag">
+      <column id="170" parent="41" name="tag">
         <state-number>3603</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="172" parent="42" name="descript">
+      <column id="171" parent="41" name="descript">
         <state-number>3603</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="173" parent="42" name="opisanie">
+      <column id="172" parent="41" name="opisanie">
         <state-number>3603</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="174" parent="42" name="history">
+      <column id="173" parent="41" name="history">
         <state-number>3603</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="175" parent="42" name="lechenie">
+      <column id="174" parent="41" name="lechenie">
         <state-number>3603</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="176" parent="42" name="diagnostica">
+      <column id="175" parent="41" name="diagnostica">
         <state-number>3603</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="177" parent="42" name="created_at">
+      <column id="176" parent="41" name="created_at">
         <state-number>3603</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="178" parent="42" name="updated_at">
+      <column id="177" parent="41" name="updated_at">
         <state-number>3603</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="179" parent="42" name="deleted_at">
+      <column id="178" parent="41" name="deleted_at">
         <state-number>3603</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="180" parent="42" name="pol">
+      <column id="179" parent="41" name="pol">
         <state-number>3713</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="181" parent="42" name="id">
+      <column id="180" parent="41" name="id">
         <state-number>14156</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
         <default-expression>nextval(&apos;encycategory_id_seq&apos;::regclass)</default-expression>
       </column>
-      <index id="182" parent="42" name="encypost_pkey">
+      <index id="181" parent="41" name="encypost_pkey">
         <object-id>25001</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <index id="183" parent="42" name="encypost_id_uindex">
+      <index id="182" parent="41" name="encypost_id_uindex">
         <object-id>26128</object-id>
         <columns>#17</columns>
         <unique>1</unique>
       </index>
-      <key id="184" parent="42" name="encypost_pkey">
+      <key id="183" parent="41" name="encypost_pkey">
         <columns>id</columns>
         <underlying-index>encypost_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="185" parent="43" name="beginning">
+      <column id="184" parent="42" name="beginning">
         <state-number>911</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
       </column>
-      <column id="186" parent="43" name="end">
+      <column id="185" parent="42" name="end">
         <state-number>911</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
       </column>
-      <column id="187" parent="43" name="1c_busy">
+      <column id="186" parent="42" name="1c_busy">
         <state-number>911</state-number>
         <mandatory>1</mandatory>
         <data-type>boolean</data-type>
       </column>
-      <column id="188" parent="43" name="web_busy">
+      <column id="187" parent="42" name="web_busy">
         <state-number>911</state-number>
         <data-type>boolean</data-type>
       </column>
-      <column id="189" parent="43" name="timetable_id">
+      <column id="188" parent="42" name="timetable_id">
         <state-number>20118</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="190" parent="43" name="created_at">
+      <column id="189" parent="42" name="created_at">
         <state-number>911</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="191" parent="43" name="updated_at">
+      <column id="190" parent="42" name="updated_at">
         <state-number>911</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="192" parent="43" name="deleted_at">
+      <column id="191" parent="42" name="deleted_at">
         <state-number>911</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="193" parent="43" name="id">
+      <column id="192" parent="42" name="id">
         <state-number>14620</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;entry_id_seq&apos;::regclass)</default-expression>
       </column>
-      <index id="194" parent="43" name="entry_pkey">
+      <index id="193" parent="42" name="entry_pkey">
         <object-id>24780</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <index id="195" parent="43" name="entry_id_uindex">
+      <index id="194" parent="42" name="entry_id_uindex">
         <object-id>26169</object-id>
         <columns>#10</columns>
         <unique>1</unique>
       </index>
-      <key id="196" parent="43" name="entry_pkey">
+      <key id="195" parent="42" name="entry_pkey">
         <columns>id</columns>
         <underlying-index>entry_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="197" parent="44" name="id">
+      <column id="196" parent="43" name="id">
         <state-number>968</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;feedbacks_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="198" parent="44" name="fio">
+      <column id="197" parent="43" name="fio">
         <state-number>914</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="199" parent="44" name="phone">
+      <column id="198" parent="43" name="phone">
         <state-number>914</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
       </column>
-      <column id="200" parent="44" name="email">
+      <column id="199" parent="43" name="email">
         <state-number>914</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="201" parent="44" name="content">
+      <column id="200" parent="43" name="content">
         <state-number>914</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="202" parent="44" name="ids">
+      <column id="201" parent="43" name="ids">
         <state-number>914</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="203" parent="44" name="read">
+      <column id="202" parent="43" name="read">
         <state-number>914</state-number>
         <mandatory>1</mandatory>
         <data-type>boolean</data-type>
         <default-expression>false</default-expression>
       </column>
-      <column id="204" parent="44" name="created_at">
+      <column id="203" parent="43" name="created_at">
         <state-number>914</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="205" parent="44" name="updated_at">
+      <column id="204" parent="43" name="updated_at">
         <state-number>914</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="206" parent="44" name="deleted_at">
+      <column id="205" parent="43" name="deleted_at">
         <state-number>914</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="207" parent="44" name="feedbacks_pkey">
+      <index id="206" parent="43" name="feedbacks_pkey">
         <object-id>24782</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="208" parent="44" name="feedbacks_pkey">
+      <key id="207" parent="43" name="feedbacks_pkey">
         <columns>id</columns>
         <underlying-index>feedbacks_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="209" parent="45" name="id">
+      <column id="208" parent="44" name="id">
         <state-number>969</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;goods_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="210" parent="45" name="title">
+      <column id="209" parent="44" name="title">
         <state-number>917</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="211" parent="45" name="name">
+      <column id="210" parent="44" name="name">
         <state-number>917</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="212" parent="45" name="text">
+      <column id="211" parent="44" name="text">
         <state-number>917</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="213" parent="45" name="avatar">
+      <column id="212" parent="44" name="avatar">
         <state-number>917</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="214" parent="45" name="tag">
+      <column id="213" parent="44" name="tag">
         <state-number>917</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="215" parent="45" name="descript">
+      <column id="214" parent="44" name="descript">
         <state-number>917</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="216" parent="45" name="ids">
-        <state-number>917</state-number>
-        <mandatory>1</mandatory>
-        <data-type>integer</data-type>
-      </column>
-      <column id="217" parent="45" name="category_id">
+      <column id="215" parent="44" name="ids">
         <state-number>917</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="218" parent="45" name="price">
+      <column id="216" parent="44" name="category_id">
+        <state-number>917</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="217" parent="44" name="price">
         <state-number>917</state-number>
         <mandatory>1</mandatory>
         <data-type>double precision</data-type>
       </column>
-      <column id="219" parent="45" name="attribute">
+      <column id="218" parent="44" name="attribute">
         <state-number>917</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="220" parent="45" name="created_at">
+      <column id="219" parent="44" name="created_at">
         <state-number>917</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="221" parent="45" name="updated_at">
+      <column id="220" parent="44" name="updated_at">
         <state-number>917</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="222" parent="45" name="deleted_at">
+      <column id="221" parent="44" name="deleted_at">
         <state-number>917</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="223" parent="45" name="parent_id">
+      <column id="222" parent="44" name="parent_id">
         <state-number>6750</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="224" parent="45" name="_lft">
+      <column id="223" parent="44" name="_lft">
         <state-number>6754</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="225" parent="45" name="_rgt">
+      <column id="224" parent="44" name="_rgt">
         <state-number>6754</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="226" parent="45" name="sort">
+      <column id="225" parent="44" name="sort">
         <state-number>7184</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
         <default-expression>&apos;0&apos;::character varying</default-expression>
       </column>
-      <index id="227" parent="45" name="goods_pkey">
+      <index id="226" parent="44" name="goods_pkey">
         <object-id>24784</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="228" parent="45" name="goods_pkey">
+      <key id="227" parent="44" name="goods_pkey">
         <columns>id</columns>
         <underlying-index>goods_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="229" parent="46" name="id">
+      <column id="228" parent="45" name="id">
         <state-number>970</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;groups_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="230" parent="46" name="name">
+      <column id="229" parent="45" name="name">
         <state-number>920</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="231" parent="46" name="permissions">
+      <column id="230" parent="45" name="permissions">
         <state-number>920</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="232" parent="46" name="created_at">
+      <column id="231" parent="45" name="created_at">
         <state-number>920</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="233" parent="46" name="updated_at">
+      <column id="232" parent="45" name="updated_at">
         <state-number>920</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="234" parent="46" name="groups_pkey">
+      <index id="233" parent="45" name="groups_pkey">
         <object-id>24788</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <index id="235" parent="46" name="groups_name_unique">
+      <index id="234" parent="45" name="groups_name_unique">
         <object-id>24786</object-id>
         <columns>name</columns>
         <unique>1</unique>
       </index>
-      <key id="236" parent="46" name="groups_pkey">
+      <key id="235" parent="45" name="groups_pkey">
         <columns>id</columns>
         <underlying-index>groups_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <key id="237" parent="46" name="groups_name_unique">
+      <key id="236" parent="45" name="groups_name_unique">
         <columns>name</columns>
         <underlying-index>groups_name_unique</underlying-index>
       </key>
-      <column id="238" parent="47" name="id">
+      <column id="237" parent="46" name="id">
         <state-number>3660</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;menuitems_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="239" parent="47" name="label">
+      <column id="238" parent="46" name="label">
         <state-number>3660</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="240" parent="47" name="link">
+      <column id="239" parent="46" name="link">
         <state-number>3660</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="241" parent="47" name="parent">
+      <column id="240" parent="46" name="parent">
         <state-number>3668</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="242" parent="47" name="sort">
+      <column id="241" parent="46" name="sort">
         <state-number>3669</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="243" parent="47" name="class">
+      <column id="242" parent="46" name="class">
         <state-number>3670</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="244" parent="47" name="menu">
+      <column id="243" parent="46" name="menu">
         <state-number>3660</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="245" parent="47" name="depth">
+      <column id="244" parent="46" name="depth">
         <state-number>3671</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="246" parent="47" name="created_at">
+      <column id="245" parent="46" name="created_at">
         <state-number>3660</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="247" parent="47" name="updated_at">
+      <column id="246" parent="46" name="updated_at">
         <state-number>3660</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="248" parent="47" name="menuitems_pkey">
+      <index id="247" parent="46" name="menuitems_pkey">
         <object-id>25012</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="249" parent="47" name="menuitems_pkey">
+      <key id="248" parent="46" name="menuitems_pkey">
         <columns>id</columns>
         <underlying-index>menuitems_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="250" parent="48" name="id">
+      <column id="249" parent="47" name="id">
         <state-number>3661</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;menus_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="251" parent="48" name="name">
+      <column id="250" parent="47" name="name">
         <state-number>3661</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="252" parent="48" name="created_at">
+      <column id="251" parent="47" name="created_at">
         <state-number>3661</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="253" parent="48" name="updated_at">
+      <column id="252" parent="47" name="updated_at">
         <state-number>3661</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="254" parent="48" name="ids">
+      <column id="253" parent="47" name="ids">
         <state-number>3703</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>0</default-expression>
       </column>
-      <index id="255" parent="48" name="menus_pkey">
+      <index id="254" parent="47" name="menus_pkey">
         <object-id>25020</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="256" parent="48" name="menus_pkey">
+      <key id="255" parent="47" name="menus_pkey">
         <columns>id</columns>
         <underlying-index>menus_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="257" parent="49" name="migration">
+      <column id="256" parent="48" name="migration">
         <state-number>929</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="258" parent="49" name="batch">
+      <column id="257" parent="48" name="batch">
         <state-number>929</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="259" parent="50" name="id">
+      <column id="258" parent="49" name="id">
         <state-number>973</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;news_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="260" parent="50" name="title">
+      <column id="259" parent="49" name="title">
         <state-number>930</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="261" parent="50" name="name">
+      <column id="260" parent="49" name="name">
         <state-number>930</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="262" parent="50" name="content">
+      <column id="261" parent="49" name="content">
         <state-number>930</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="263" parent="50" name="avatar">
+      <column id="262" parent="49" name="avatar">
         <state-number>930</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="264" parent="50" name="tag">
+      <column id="263" parent="49" name="tag">
         <state-number>930</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="265" parent="50" name="descript">
+      <column id="264" parent="49" name="descript">
         <state-number>930</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="266" parent="50" name="ids">
+      <column id="265" parent="49" name="ids">
         <state-number>930</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="267" parent="50" name="created_at">
+      <column id="266" parent="49" name="created_at">
         <state-number>930</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="268" parent="50" name="updated_at">
+      <column id="267" parent="49" name="updated_at">
         <state-number>930</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="269" parent="50" name="deleted_at">
+      <column id="268" parent="49" name="deleted_at">
         <state-number>930</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="270" parent="51" name="id">
+      <column id="269" parent="50" name="id">
         <state-number>974</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;options_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="271" parent="51" name="ids">
+      <column id="270" parent="50" name="ids">
         <state-number>933</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="272" parent="51" name="module">
+      <column id="271" parent="50" name="module">
         <state-number>933</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="273" parent="51" name="value">
+      <column id="272" parent="50" name="value">
         <state-number>933</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="274" parent="51" name="created_at">
+      <column id="273" parent="50" name="created_at">
         <state-number>933</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="275" parent="51" name="updated_at">
+      <column id="274" parent="50" name="updated_at">
         <state-number>933</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="276" parent="51" name="options_pkey">
+      <index id="275" parent="50" name="options_pkey">
         <object-id>24796</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="277" parent="51" name="options_pkey">
+      <key id="276" parent="50" name="options_pkey">
         <columns>id</columns>
         <underlying-index>options_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="278" parent="52" name="id">
+      <column id="277" parent="51" name="id">
         <state-number>975</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;pages_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="279" parent="52" name="title">
+      <column id="278" parent="51" name="title">
         <state-number>936</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="280" parent="52" name="name">
+      <column id="279" parent="51" name="name">
         <state-number>936</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="281" parent="52" name="content">
+      <column id="280" parent="51" name="content">
         <state-number>5512</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="282" parent="52" name="tag">
+      <column id="281" parent="51" name="tag">
         <state-number>936</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="283" parent="52" name="descript">
+      <column id="282" parent="51" name="descript">
         <state-number>936</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="284" parent="52" name="ids">
+      <column id="283" parent="51" name="ids">
         <state-number>936</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="285" parent="52" name="created_at">
+      <column id="284" parent="51" name="created_at">
         <state-number>936</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="286" parent="52" name="updated_at">
+      <column id="285" parent="51" name="updated_at">
         <state-number>936</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="287" parent="52" name="deleted_at">
+      <column id="286" parent="51" name="deleted_at">
         <state-number>936</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="288" parent="52" name="pages_pkey">
+      <index id="287" parent="51" name="pages_pkey">
         <object-id>24798</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="289" parent="52" name="pages_pkey">
+      <key id="288" parent="51" name="pages_pkey">
         <columns>id</columns>
         <underlying-index>pages_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="290" parent="53" name="id">
+      <column id="289" parent="52" name="id">
         <state-number>3530</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;photo_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="291" parent="53" name="ids">
+      <column id="290" parent="52" name="ids">
         <state-number>3530</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="292" parent="53" name="album_id">
+      <column id="291" parent="52" name="album_id">
         <state-number>7279</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="293" parent="53" name="url">
+      <column id="292" parent="52" name="url">
         <state-number>3530</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="294" parent="53" name="created_at">
+      <column id="293" parent="52" name="created_at">
         <state-number>3530</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="295" parent="53" name="updated_at">
+      <column id="294" parent="52" name="updated_at">
         <state-number>3530</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="296" parent="53" name="deleted_at">
+      <column id="295" parent="52" name="deleted_at">
         <state-number>3530</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="297" parent="53" name="videourl">
+      <column id="296" parent="52" name="videourl">
         <state-number>6186</state-number>
         <data-type>varchar(500)</data-type>
       </column>
-      <index id="298" parent="53" name="photo_pkey">
+      <index id="297" parent="52" name="photo_pkey">
         <object-id>24964</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="299" parent="53" name="photo_pkey">
+      <key id="298" parent="52" name="photo_pkey">
         <columns>id</columns>
         <underlying-index>photo_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="300" parent="54" name="id">
+      <column id="299" parent="53" name="id">
         <state-number>3857</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;questanswer_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="301" parent="54" name="fio">
+      <column id="300" parent="53" name="fio">
         <state-number>3857</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="302" parent="54" name="questions">
+      <column id="301" parent="53" name="questions">
         <state-number>3857</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="303" parent="54" name="answer">
+      <column id="302" parent="53" name="answer">
         <state-number>3874</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="304" parent="54" name="publish">
+      <column id="303" parent="53" name="publish">
         <state-number>3857</state-number>
         <mandatory>1</mandatory>
         <data-type>boolean</data-type>
         <default-expression>false</default-expression>
       </column>
-      <column id="305" parent="54" name="created_at">
+      <column id="304" parent="53" name="created_at">
         <state-number>3857</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="306" parent="54" name="updated_at">
+      <column id="305" parent="53" name="updated_at">
         <state-number>3857</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="307" parent="54" name="ids">
+      <column id="306" parent="53" name="ids">
         <state-number>3861</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="308" parent="54" name="phone">
+      <column id="307" parent="53" name="phone">
         <state-number>3863</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="309" parent="54" name="email">
+      <column id="308" parent="53" name="email">
         <state-number>3864</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="310" parent="54" name="category_id">
+      <column id="309" parent="53" name="category_id">
         <state-number>7707</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="311" parent="54" name="doctor_id">
+      <column id="310" parent="53" name="doctor_id">
         <state-number>7708</state-number>
         <data-type>integer</data-type>
       </column>
-      <index id="312" parent="54" name="questanswer_pkey">
+      <index id="311" parent="53" name="questanswer_pkey">
         <object-id>25058</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="313" parent="54" name="questanswer_pkey">
+      <key id="312" parent="53" name="questanswer_pkey">
         <columns>id</columns>
         <underlying-index>questanswer_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="314" parent="55" name="id">
+      <column id="313" parent="54" name="id">
         <state-number>976</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;questions_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="315" parent="55" name="quest">
+      <column id="314" parent="54" name="quest">
         <state-number>939</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="316" parent="55" name="type">
+      <column id="315" parent="54" name="type">
         <state-number>939</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="317" parent="55" name="surveys_id">
+      <column id="316" parent="54" name="surveys_id">
         <state-number>939</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="318" parent="55" name="created_at">
+      <column id="317" parent="54" name="created_at">
         <state-number>939</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="319" parent="55" name="updated_at">
+      <column id="318" parent="54" name="updated_at">
         <state-number>939</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="320" parent="55" name="deleted_at">
+      <column id="319" parent="54" name="deleted_at">
         <state-number>939</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="321" parent="55" name="answer">
+      <column id="320" parent="54" name="answer">
         <state-number>939</state-number>
         <data-type>text</data-type>
       </column>
-      <index id="322" parent="55" name="questions_pkey">
+      <index id="321" parent="54" name="questions_pkey">
         <object-id>24800</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="323" parent="55" name="questions_pkey">
+      <key id="322" parent="54" name="questions_pkey">
         <columns>id</columns>
         <underlying-index>questions_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="324" parent="56" name="id">
+      <column id="323" parent="55" name="id">
         <state-number>977</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;reviews_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="325" parent="56" name="fio">
+      <column id="324" parent="55" name="fio">
         <state-number>942</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="326" parent="56" name="content">
+      <column id="325" parent="55" name="content">
         <state-number>942</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="327" parent="56" name="publish">
+      <column id="326" parent="55" name="publish">
         <state-number>942</state-number>
         <mandatory>1</mandatory>
         <data-type>boolean</data-type>
         <default-expression>false</default-expression>
       </column>
-      <column id="328" parent="56" name="ids">
+      <column id="327" parent="55" name="ids">
         <state-number>942</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="329" parent="56" name="created_at">
+      <column id="328" parent="55" name="created_at">
         <state-number>942</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="330" parent="56" name="updated_at">
+      <column id="329" parent="55" name="updated_at">
         <state-number>942</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="331" parent="56" name="deleted_at">
+      <column id="330" parent="55" name="deleted_at">
         <state-number>942</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="332" parent="56" name="reviews_pkey">
+      <index id="331" parent="55" name="reviews_pkey">
         <object-id>24802</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="333" parent="56" name="reviews_pkey">
+      <key id="332" parent="55" name="reviews_pkey">
         <columns>id</columns>
         <underlying-index>reviews_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="334" parent="57" name="id">
+      <column id="333" parent="56" name="id">
         <state-number>978</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;shares_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="335" parent="57" name="title">
+      <column id="334" parent="56" name="title">
         <state-number>945</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="336" parent="57" name="name">
+      <column id="335" parent="56" name="name">
         <state-number>945</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="337" parent="57" name="content">
+      <column id="336" parent="56" name="content">
         <state-number>945</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="338" parent="57" name="avatar">
+      <column id="337" parent="56" name="avatar">
         <state-number>945</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="339" parent="57" name="tag">
+      <column id="338" parent="56" name="tag">
         <state-number>945</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="340" parent="57" name="descript">
+      <column id="339" parent="56" name="descript">
         <state-number>945</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="341" parent="57" name="start">
-        <state-number>945</state-number>
-        <mandatory>1</mandatory>
-        <data-type>timestamp(0)</data-type>
-      </column>
-      <column id="342" parent="57" name="end">
+      <column id="340" parent="56" name="start">
         <state-number>945</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="343" parent="57" name="ids">
+      <column id="341" parent="56" name="end">
+        <state-number>945</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp(0)</data-type>
+      </column>
+      <column id="342" parent="56" name="ids">
         <state-number>945</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="344" parent="57" name="created_at">
+      <column id="343" parent="56" name="created_at">
         <state-number>945</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="345" parent="57" name="updated_at">
+      <column id="344" parent="56" name="updated_at">
         <state-number>945</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="346" parent="57" name="deleted_at">
+      <column id="345" parent="56" name="deleted_at">
         <state-number>945</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="347" parent="57" name="shares_pkey">
+      <index id="346" parent="56" name="shares_pkey">
         <object-id>24804</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="348" parent="57" name="shares_pkey">
+      <key id="347" parent="56" name="shares_pkey">
         <columns>id</columns>
         <underlying-index>shares_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="349" parent="58" name="id">
+      <column id="348" parent="57" name="id">
         <state-number>979</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;sites_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="350" parent="58" name="name">
+      <column id="349" parent="57" name="name">
         <state-number>948</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="351" parent="58" name="domen">
+      <column id="350" parent="57" name="domen">
         <state-number>948</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="352" parent="58" name="pre">
+      <column id="351" parent="57" name="pre">
         <state-number>948</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="353" parent="58" name="email">
+      <column id="352" parent="57" name="email">
         <state-number>948</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="354" parent="58" name="created_at">
+      <column id="353" parent="57" name="created_at">
         <state-number>948</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="355" parent="58" name="updated_at">
+      <column id="354" parent="57" name="updated_at">
         <state-number>948</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="356" parent="58" name="deleted_at">
+      <column id="355" parent="57" name="deleted_at">
         <state-number>948</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="357" parent="58" name="sites_pkey">
+      <index id="356" parent="57" name="sites_pkey">
         <object-id>24806</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="358" parent="58" name="sites_pkey">
+      <key id="357" parent="57" name="sites_pkey">
         <columns>id</columns>
         <underlying-index>sites_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="359" parent="59" name="id">
+      <column id="358" parent="58" name="id">
         <state-number>5571</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;&quot;SpecCat_id_seq&quot;&apos;::regclass)</default-expression>
       </column>
-      <column id="360" parent="59" name="name">
+      <column id="359" parent="58" name="name">
         <state-number>5571</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="361" parent="59" name="ids">
+      <column id="360" parent="58" name="ids">
         <state-number>5571</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="362" parent="59" name="created_at">
+      <column id="361" parent="58" name="created_at">
         <state-number>5571</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="363" parent="59" name="updated_at">
+      <column id="362" parent="58" name="updated_at">
         <state-number>5571</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="364" parent="59" name="deleted_at">
+      <column id="363" parent="58" name="deleted_at">
         <state-number>5571</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="365" parent="59" name="SpecCat_pkey">
+      <index id="364" parent="58" name="SpecCat_pkey">
         <object-id>25315</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="366" parent="59" name="SpecCat_pkey">
+      <key id="365" parent="58" name="SpecCat_pkey">
         <columns>id</columns>
         <underlying-index>SpecCat_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="367" parent="60" name="id">
+      <column id="366" parent="59" name="id">
         <state-number>2788</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;specialisty_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="368" parent="60" name="fio">
+      <column id="367" parent="59" name="fio">
         <state-number>2788</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="369" parent="60" name="subname">
+      <column id="368" parent="59" name="subname">
         <state-number>2788</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="370" parent="60" name="special">
+      <column id="369" parent="59" name="special">
         <state-number>5847</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
       </column>
-      <column id="371" parent="60" name="obrazovanie">
+      <column id="370" parent="59" name="obrazovanie">
         <state-number>2788</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="372" parent="60" name="opyt">
+      <column id="371" parent="59" name="opyt">
         <state-number>2788</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="373" parent="60" name="about">
+      <column id="372" parent="59" name="about">
         <state-number>2790</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="374" parent="60" name="works">
+      <column id="373" parent="59" name="works">
         <state-number>2788</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="375" parent="60" name="created_at">
+      <column id="374" parent="59" name="created_at">
         <state-number>2788</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="376" parent="60" name="updated_at">
+      <column id="375" parent="59" name="updated_at">
         <state-number>2788</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="377" parent="60" name="deleted_at">
+      <column id="376" parent="59" name="deleted_at">
         <state-number>2788</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="378" parent="60" name="ids">
+      <column id="377" parent="59" name="ids">
         <state-number>2792</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="379" parent="60" name="avatar">
+      <column id="378" parent="59" name="avatar">
         <state-number>2797</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="380" parent="60" name="cats">
+      <column id="379" parent="59" name="cats">
         <state-number>5592</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="381" parent="60" name="sort">
+      <column id="380" parent="59" name="sort">
         <state-number>5775</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>0</default-expression>
       </column>
-      <index id="382" parent="60" name="specialisty_pkey">
+      <index id="381" parent="59" name="specialisty_pkey">
         <object-id>24916</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="383" parent="60" name="specialisty_pkey">
+      <key id="382" parent="59" name="specialisty_pkey">
         <columns>id</columns>
         <underlying-index>specialisty_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="384" parent="61" name="id">
+      <column id="383" parent="60" name="id">
         <state-number>980</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;surveys_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="385" parent="61" name="name">
+      <column id="384" parent="60" name="name">
         <state-number>951</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="386" parent="61" name="ids">
+      <column id="385" parent="60" name="ids">
         <state-number>951</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="387" parent="61" name="created_at">
+      <column id="386" parent="60" name="created_at">
         <state-number>951</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="388" parent="61" name="updated_at">
+      <column id="387" parent="60" name="updated_at">
         <state-number>951</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="389" parent="61" name="deleted_at">
+      <column id="388" parent="60" name="deleted_at">
         <state-number>951</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="390" parent="61" name="surveys_pkey">
+      <index id="389" parent="60" name="surveys_pkey">
         <object-id>24808</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="391" parent="61" name="surveys_pkey">
+      <key id="390" parent="60" name="surveys_pkey">
         <columns>id</columns>
         <underlying-index>surveys_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="392" parent="62" name="id">
+      <column id="391" parent="61" name="id">
         <state-number>981</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;throttle_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="393" parent="62" name="user_id">
+      <column id="392" parent="61" name="user_id">
         <state-number>954</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="394" parent="62" name="ip_address">
+      <column id="393" parent="61" name="ip_address">
         <state-number>954</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="395" parent="62" name="attempts">
+      <column id="394" parent="61" name="attempts">
         <state-number>954</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>0</default-expression>
       </column>
-      <column id="396" parent="62" name="suspended">
+      <column id="395" parent="61" name="suspended">
         <state-number>954</state-number>
         <mandatory>1</mandatory>
         <data-type>boolean</data-type>
         <default-expression>false</default-expression>
       </column>
-      <column id="397" parent="62" name="banned">
+      <column id="396" parent="61" name="banned">
         <state-number>954</state-number>
         <mandatory>1</mandatory>
         <data-type>boolean</data-type>
         <default-expression>false</default-expression>
       </column>
-      <column id="398" parent="62" name="last_attempt_at">
+      <column id="397" parent="61" name="last_attempt_at">
         <state-number>954</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="399" parent="62" name="suspended_at">
+      <column id="398" parent="61" name="suspended_at">
         <state-number>954</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="400" parent="62" name="banned_at">
+      <column id="399" parent="61" name="banned_at">
         <state-number>954</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <index id="401" parent="62" name="throttle_pkey">
+      <index id="400" parent="61" name="throttle_pkey">
         <object-id>24810</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <index id="402" parent="62" name="throttle_user_id_index">
+      <index id="401" parent="61" name="throttle_user_id_index">
         <object-id>24820</object-id>
         <columns>user_id</columns>
       </index>
-      <key id="403" parent="62" name="throttle_pkey">
+      <key id="402" parent="61" name="throttle_pkey">
         <columns>id</columns>
         <underlying-index>throttle_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="404" parent="63" name="subdivision">
+      <column id="403" parent="62" name="subdivision">
         <state-number>957</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="405" parent="63" name="specialization">
-        <state-number>957</state-number>
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="406" parent="63" name="name">
+      <column id="404" parent="62" name="specialization">
         <state-number>957</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="407" parent="63" name="created_at">
+      <column id="405" parent="62" name="name">
+        <state-number>957</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="406" parent="62" name="created_at">
         <state-number>957</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="408" parent="63" name="updated_at">
+      <column id="407" parent="62" name="updated_at">
         <state-number>957</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="409" parent="63" name="deleted_at">
+      <column id="408" parent="62" name="deleted_at">
         <state-number>957</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="410" parent="63" name="id">
-        <state-number>19983</state-number>
-        <mandatory>1</mandatory>
+      <column id="409" parent="62" name="id">
+        <state-number>24411</state-number>
         <data-type>varchar(255)</data-type>
-        <default-expression>nextval(&apos;timetable_id_seq&apos;::regclass)</default-expression>
+        <default-expression>NULL::character varying</default-expression>
       </column>
-      <index id="411" parent="63" name="timetable_pkey">
+      <index id="410" parent="62" name="timetable_pkey">
         <object-id>24812</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <index id="412" parent="63" name="timetable_id_uindex">
+      <index id="411" parent="62" name="timetable_id_uindex">
         <object-id>26492</object-id>
         <columns>#9</columns>
         <unique>1</unique>
       </index>
-      <key id="413" parent="63" name="timetable_pkey">
+      <key id="412" parent="62" name="timetable_pkey">
         <columns>id</columns>
         <underlying-index>timetable_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="414" parent="64" name="id">
+      <column id="413" parent="63" name="id">
         <state-number>983</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;users_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="415" parent="64" name="email">
+      <column id="414" parent="63" name="email">
         <state-number>960</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="416" parent="64" name="password">
+      <column id="415" parent="63" name="password">
         <state-number>960</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="417" parent="64" name="permissions">
+      <column id="416" parent="63" name="permissions">
         <state-number>960</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="418" parent="64" name="activated">
+      <column id="417" parent="63" name="activated">
         <state-number>960</state-number>
         <mandatory>1</mandatory>
         <data-type>boolean</data-type>
         <default-expression>false</default-expression>
       </column>
-      <column id="419" parent="64" name="activation_code">
+      <column id="418" parent="63" name="activation_code">
         <state-number>960</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="420" parent="64" name="activated_at">
+      <column id="419" parent="63" name="activated_at">
         <state-number>960</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="421" parent="64" name="last_login">
+      <column id="420" parent="63" name="last_login">
         <state-number>960</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="422" parent="64" name="persist_code">
+      <column id="421" parent="63" name="persist_code">
         <state-number>960</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="423" parent="64" name="reset_password_code">
+      <column id="422" parent="63" name="reset_password_code">
         <state-number>960</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="424" parent="64" name="first_name">
+      <column id="423" parent="63" name="first_name">
         <state-number>960</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="425" parent="64" name="last_name">
+      <column id="424" parent="63" name="last_name">
         <state-number>960</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="426" parent="64" name="created_at">
+      <column id="425" parent="63" name="created_at">
         <state-number>960</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="427" parent="64" name="updated_at">
+      <column id="426" parent="63" name="updated_at">
         <state-number>960</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="428" parent="64" name="sort">
+      <column id="427" parent="63" name="sort">
         <state-number>7167</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
         <default-expression>&apos;0&apos;::character varying</default-expression>
       </column>
-      <index id="429" parent="64" name="users_pkey">
+      <index id="428" parent="63" name="users_pkey">
         <object-id>24818</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <index id="430" parent="64" name="users_email_unique">
+      <index id="429" parent="63" name="users_email_unique">
         <object-id>24814</object-id>
         <columns>email</columns>
         <unique>1</unique>
       </index>
-      <index id="431" parent="64" name="users_activation_code_index">
+      <index id="430" parent="63" name="users_activation_code_index">
         <object-id>24821</object-id>
         <columns>activation_code</columns>
       </index>
-      <index id="432" parent="64" name="users_reset_password_code_index">
+      <index id="431" parent="63" name="users_reset_password_code_index">
         <object-id>24822</object-id>
         <columns>reset_password_code</columns>
       </index>
-      <key id="433" parent="64" name="users_pkey">
+      <key id="432" parent="63" name="users_pkey">
         <columns>id</columns>
         <underlying-index>users_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <key id="434" parent="64" name="users_email_unique">
+      <key id="433" parent="63" name="users_email_unique">
         <columns>email</columns>
         <underlying-index>users_email_unique</underlying-index>
       </key>
-      <column id="435" parent="65" name="user_id">
+      <column id="434" parent="64" name="user_id">
         <state-number>961</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="436" parent="65" name="group_id">
+      <column id="435" parent="64" name="group_id">
         <state-number>961</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <index id="437" parent="65" name="users_groups_pkey">
+      <index id="436" parent="64" name="users_groups_pkey">
         <object-id>24816</object-id>
         <columns>user_id
 group_id</columns>
         <unique>1</unique>
       </index>
-      <key id="438" parent="65" name="users_groups_pkey">
+      <key id="437" parent="64" name="users_groups_pkey">
         <columns>user_id
 group_id</columns>
         <underlying-index>users_groups_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="439" parent="66" name="id">
+      <column id="438" parent="65" name="id">
         <state-number>7274</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;video_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="440" parent="66" name="ids">
+      <column id="439" parent="65" name="ids">
         <state-number>7274</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="441" parent="66" name="code">
+      <column id="440" parent="65" name="code">
         <state-number>7274</state-number>
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="442" parent="66" name="created_at">
+      <column id="441" parent="65" name="created_at">
         <state-number>7274</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="443" parent="66" name="updated_at">
+      <column id="442" parent="65" name="updated_at">
         <state-number>7274</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="444" parent="66" name="deleted_at">
+      <column id="443" parent="65" name="deleted_at">
         <state-number>7274</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="445" parent="66" name="album_id">
+      <column id="444" parent="65" name="album_id">
         <state-number>7280</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="446" parent="66" name="name">
+      <column id="445" parent="65" name="name">
         <state-number>7577</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="447" parent="66" name="video_pkey">
+      <index id="446" parent="65" name="video_pkey">
         <object-id>25556</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="448" parent="66" name="video_pkey">
+      <key id="447" parent="65" name="video_pkey">
         <columns>id</columns>
         <underlying-index>video_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="449" parent="67" name="id">
+      <column id="448" parent="66" name="id">
         <state-number>7546</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;video_album_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="450" parent="67" name="name">
+      <column id="449" parent="66" name="name">
         <state-number>7546</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="451" parent="67" name="created_at">
+      <column id="450" parent="66" name="created_at">
         <state-number>7546</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="452" parent="67" name="updated_at">
+      <column id="451" parent="66" name="updated_at">
         <state-number>7546</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="453" parent="67" name="deleted_at">
+      <column id="452" parent="66" name="deleted_at">
         <state-number>7546</state-number>
         <data-type>timestamp(0)</data-type>
       </column>
-      <column id="454" parent="67" name="ids">
+      <column id="453" parent="66" name="ids">
         <state-number>7572</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <index id="455" parent="67" name="video_album_pkey">
+      <index id="454" parent="66" name="video_album_pkey">
         <object-id>25617</object-id>
         <columns>id</columns>
         <unique>1</unique>
       </index>
-      <key id="456" parent="67" name="video_album_pkey">
+      <key id="455" parent="66" name="video_album_pkey">
         <columns>id</columns>
         <underlying-index>video_album_pkey</underlying-index>
         <primary>1</primary>

@@ -1,5 +1,9 @@
 @extends('gkzn48ru/headerALT')
 
+
+
+@section('headerTitle','Записаться на приём к специалисту')
+
 @section('content')
 
     <section class="appointment-sec text-center">
@@ -13,13 +17,11 @@
             </div>
 
             <div class="row">
-            <div class="col-md-6">
-            	<figure><img src="/site1.ru/images/appointment-img.jpg" alt="image" title="Appointment image" class="img-responsive lady1"></figure>
-            </div>
-            <div class="col-md-6">
+
+            <div class="col-md-7">
 
 
-                <div class="appointment-form clearfix">
+                <div class="appointment-form clearfix widget-form-white-short">
                     <div class="stepwizard">
                         <div class="stepwizard-row setup-panel">
                             <div class="stepwizard-step">
@@ -202,7 +204,7 @@
 
 
 
-                                    <button class="btn btn-default btn-normal btn-4  nextBtn btn-rounded pull-right" type="button">
+                                    <button class="btn btn-default btn-normal  nextBtn btn-rounded pull-right" type="button">
                                         Далее
                                     </button>
                                 </div>
@@ -217,7 +219,7 @@
 
                                   </div>
 
-                                    <button class="btn btn-default btn-normal btn-4 nextBtn btn-rounded pull-right" type="button">Далее
+                                    <button class="btn btn-default btn-normal nextBtn btn-rounded pull-right" type="button">Далее
                                     </button>
                                 </div>
                             </div>
@@ -254,7 +256,18 @@
                 </div>
 
             </div>
+
+
+
+                <div class="col-md-5">
+                    <figure class="pull-right"><img src="/gkzn48ru/images/popup-doctor.png" alt="image" title="Appointment image" class="img-responsive lady1"></figure>
+                </div>
+
             </div>
+
+
+
+
         </div>
     </section>
 
@@ -270,31 +283,82 @@
 
 
 
-    <div class="overlay-none"><div class="container xsx-width"><div class="vc_row wpb_row vc_row-fluid">
+    <div class="overlay-none">
+        <div class="container xsx-width">
+            <div class="vc_row wpb_row vc_row-fluid">
                 <div class="vc_col-sm-12 wpb_column vc_column_container">
                     <div class="wpb_wrapper">
-                        <div class="heading_e"><h3>Awesome Services</h3><p>A perfect way to show your hospital services</p><h4><img src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1409843233310">
+                        <div class="heading_e"><h3>Наша цель – здоровое зачатие, рождение и развитие человека.</h3>
+
+                            <p>Мы бережно и уважительно относимся к нашим клиентам и сотрудникам.</p><h4><img
+                                        src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png"
+                                        alt="heading"></h4></div>
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1409843233310">
                             <div class="vc_col-sm-4 wpb_column vc_column_container">
                                 <div class="wpb_wrapper">
-                                    <div class="elements_service_bg"><div class="service_bg service_bg_1" style="background: url(/gkzn48ru/wp-content/uploads/2014/09/blog-style-1.jpg) 50% 0 no-repeat;"><div class="icon"><div class="icon-1"><i class="fa fa-phone fa-lg"></i></div><div class="icon-2"><i class="fa fa-phone fa-inverse fa-lg"></i></div></div><div class="describe"><h4>Emergy Case</h4><p>Pellentesque ligula odio, tempor sit amet fringilla vitae, pulvinar ullamcorper quamenatibus et magnis dis parturient montes nasce rdiculus..mus.</p><a href="index.html%3Fp=164.html#">READ MORE</a></div></div></div>
+                                    <div class="elements_service_bg">
+                                        <div class="service_bg service_bg_1"
+                                             style="background: url(/gkzn48ru/wp-content/uploads/2014/09/blog-style-1.jpg) 50% 0 no-repeat;">
+                                            <div class="icon">
+                                                <div class="icon-1"><i class="fa fa-phone fa-lg"></i></div>
+                                                <div class="icon-2"><i class="fa fa-phone fa-inverse fa-lg"></i></div>
+                                            </div>
+                                            <div class="describe"><h4>Удобное расположение</h4>
+
+                                                <p>Наши центры не только удобно территориально расположены, но оснащены современными диагностическими оборудованем</p><a
+                                                        href="/feedback">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="vc_col-sm-4 wpb_column vc_column_container">
                                 <div class="wpb_wrapper">
-                                    <div class="elements_service_bg"><div class="service_bg service_bg_1" style="background: url(/gkzn48ru/wp-content/uploads/2014/09/blog-style-2.jpg) 50% 0 no-repeat;"><div class="icon"><div class="icon-1"><i class="fa fa-phone fa-lg"></i></div><div class="icon-2"><i class="fa fa-calendar-o fa-inverse fa-lg"></i></div></div><div class="describe"><h4>Doctors Timetables</h4><p>Pellentesque ligula odio, tempor sit amet fringilla vitae, pulvinar ullamcorper quamenatibus et magnis dis parturient montes nasce rdiculus..mus.</p><a href="index.html%3Fp=164.html#">READ MORE</a></div></div></div>
+                                    <div class="elements_service_bg">
+                                        <div class="service_bg service_bg_1"
+                                             style="background: url(/gkzn48ru/wp-content/uploads/2014/09/blog-style-2.jpg) 50% 0 no-repeat;">
+                                            <div class="icon">
+                                                <div class="icon-1"><i class="fa fa-phone fa-lg"></i></div>
+                                                <div class="icon-2"><i class="fa fa-calendar-o fa-inverse fa-lg"></i>
+                                                </div>
+                                            </div>
+                                            <div class="describe"><h4>Запись на приём</h4>
+
+                                                <p>С помощью интернет-регистратуры можно
+                                                    записаться на прием к врачу в удобное
+                                                    для вас время.</p><a
+                                                        href="/appointment">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="vc_col-sm-4 wpb_column vc_column_container">
                                 <div class="wpb_wrapper">
-                                    <div class="elements_service_bg"><div class="service_bg service_bg_1" style="background: url(/gkzn48ru/wp-content/uploads/2014/09/blog-style-3.jpg) 50% 0 no-repeat;"><div class="icon"><div class="icon-1"><i class="fa fa-phone fa-lg"></i></div><div class="icon-2"><i class="fa fa-star fa-inverse fa-lg"></i></div></div><div class="describe"><h4>Free Online Consultation</h4><p>Pellentesque ligula odio, tempor sit amet fringilla vitae, pulvinar ullamcorper quamenatibus et magnis dis parturient montes nasce rdiculus..mus.</p><a href="index.html%3Fp=164.html#">READ MORE</a></div></div></div>
+                                    <div class="elements_service_bg">
+                                        <div class="service_bg service_bg_1"
+                                             style="background: url(/gkzn48ru/wp-content/uploads/2014/09/blog-style-3.jpg) 50% 0 no-repeat;">
+                                            <div class="icon">
+                                                <div class="icon-1"><i class="fa fa-phone fa-lg"></i></div>
+                                                <div class="icon-2"><i class="fa fa-star fa-inverse fa-lg"></i></div>
+                                            </div>
+                                            <div class="describe"><h4>Бесплатная консультация</h4>
+
+                                                <p>Профильные врачи, доступные круглосуточно из любой точки мира. Нужен только интернет и компьютер или смартфон.</p><a
+                                                        href="#">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div></div></div>
+            </div>
+        </div>
+    </div>
 
 
 

@@ -9,6 +9,7 @@
 
 
 
+@section('headerTitle',$Category->name)
 
 
 @section('content')
@@ -32,7 +33,7 @@
 
                                     <form method="get" action="/encypost">
                                         <input type="text" class="form-control " name="search" placeholder="Поиск...">
-                                        <button type="submit" class="btn btn-default search-icon"><i class="fa fa-search"></i></button>
+                                        <button type="submit" class="btn btn-default btn-sm btn-4 search-icon"><i class="fa fa-search"></i></button>
                                     </form>
 
                                 </div>

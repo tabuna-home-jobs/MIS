@@ -79,7 +79,7 @@
                                             </div>
 
                                             <div class="col-xs-10"><span>Email</span> <a
-                                                        href="#"><span
+                                                        href="mailto:mother-baby@mail.ru"><span
                                                             class="__cf_email__"
                                                           >mother-baby@mail.ru</span></a>
                                             </div>
@@ -119,7 +119,7 @@
                                             </div>
 
                                             <div class="col-xs-10"><span>или воспользуйтесь</span> <a
-                                                        href="#">обратной связью</a></div>
+                                                        href="/feedback">обратной связью</a></div>
                                         </div>
                                     </li>
 
@@ -158,15 +158,15 @@
 
 
 <script type='text/javascript'
-        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/bootstrap/js/bootstrap.min.js%3Fver=1.0'></script>
+        src='/public/gkzn48ru/wp-content/themes/medic-final/assets/plugins/bootstrap/js/bootstrap.min.js%3Fver=1.0'></script>
 <script type='text/javascript'
-        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/smooth-scroll.js%3Fver=1.0'></script>
+        src='/public/gkzn48ru/wp-content/themes/medic-final/assets/plugins/smooth-scroll.js%3Fver=1.0'></script>
 
 <script type='text/javascript'
-        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/prettyphoto/js/jquery.prettyPhoto.js%3Fver=1.0'></script>
+        src='/public/gkzn48ru/wp-content/themes/medic-final/assets/plugins/prettyphoto/js/jquery.prettyPhoto.js%3Fver=1.0'></script>
 <script type='text/javascript'
-        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/owl-carousel/owl.carousel.js%3Fver=1.0'></script>
-<script type='text/javascript' src='/gkzn48ru/wp-content/themes/medic-final/assets/js/app.js%3Fver=1.0'></script>
+        src='/public/gkzn48ru/wp-content/themes/medic-final/assets/plugins/owl-carousel/owl.carousel.js%3Fver=1.0'></script>
+<script type='text/javascript' src='/public/gkzn48ru/wp-content/themes/medic-final/assets/js/app.js%3Fver=1.0'></script>
 
 
 <script type="text/javascript">

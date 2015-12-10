@@ -34,10 +34,9 @@
                                             <div class="icon-1"><i class="fa fa-phone fa-lg"></i></div>
                                             <div class="icon-2"><i class="fa fa-shield fa-inverse fa-lg"></i></div>
                                         </div>
-                                        <div class="describe"><h4>Cardio Monitoring</h4>
+                                        <div class="describe"><h4>Комфорт и безопасность для детей и родителей</h4>
 
-                                            <p>Pellentesque ligula odio, tempor sit amet fringilla vitae, pulvinar
-                                                ullamcorper quamenatibus et magnis dis parturient montes nasce</p></div>
+                                            <p>Мы помогаем нашим клиентам обрести здоровье – физическое, психологическое и духовное. Мы несем идеи здорового образа жизни.</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -49,10 +48,9 @@
                                             <div class="icon-1"><i class="fa fa-phone fa-lg"></i></div>
                                             <div class="icon-2"><i class="fa fa-heart fa-inverse fa-lg"></i></div>
                                         </div>
-                                        <div class="describe"><h4>Medical Treatment</h4>
+                                        <div class="describe"><h4>Индивидуальный подход</h4>
 
-                                            <p>Pellentesque ligula odio, tempor sit amet fringilla vitae, pulvinar
-                                                ullamcorper quamenatibus et magnis dis parturient montes nasce</p></div>
+                                            <p>Мы помогаем нашим клиентам обрести здоровье – физическое, психологическое и духовное. Мы несем идеи здорового образа жизни.</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -64,10 +62,9 @@
                                             <div class="icon-1"><i class="fa fa-phone fa-lg"></i></div>
                                             <div class="icon-2"><i class="fa fa-star fa-inverse fa-lg"></i></div>
                                         </div>
-                                        <div class="describe"><h4>Emergency Help</h4>
+                                        <div class="describe"><h4>Качество</h4>
 
-                                            <p>Pellentesque ligula odio, tempor sit amet fringilla vitae, pulvinar
-                                                ullamcorper quamenatibus et magnis dis parturient montes nasce</p></div>
+                                            <p>Мы помогаем нашим клиентам обрести здоровье – физическое, психологическое и духовное. Мы несем идеи здорового образа жизни.</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -79,10 +76,9 @@
                                             <div class="icon-1"><i class="fa fa-phone fa-lg"></i></div>
                                             <div class="icon-2"><i class="fa fa-medkit fa-inverse fa-lg"></i></div>
                                         </div>
-                                        <div class="describe"><h4>First Aid</h4>
+                                        <div class="describe"><h4>Современное медицинское оборудование</h4>
 
-                                            <p>Pellentesque ligula odio, tempor sit amet fringilla vitae, pulvinar
-                                                ullamcorper quamenatibus et magnis dis parturient montes nasce</p></div>
+                                            <p>Мы помогаем нашим клиентам обрести здоровье – физическое, психологическое и духовное. Мы несем идеи здорового образа жизни.</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -190,7 +186,7 @@
         <div class="container xsx-width">
             <div class="vc_row wpb_row vc_row-fluid">
                 <div class="vc_col-sm-12 wpb_column vc_column_container">
-                    <div class="wpb_wrapper">
+                    <div class="wpb_wrapper p-t-20">
                         <div class="heading_e"><h3>Помощь</h3>
 
                             <p>Воспользуйтесь наши услугами прямо сейчас</p><h4><img
@@ -207,7 +203,7 @@
                                         <div class="describe"><h4>Удобное расположение</h4>
 
                                             <p>Наши центры не только удобно территориально расположены, но оснащены современными диагностическими оборудованем</p><a
-                                                    href="#">Подробнее</a></div>
+                                                    href="/feedback">Подробнее</a></div>
                                     </div>
                                 </div>
                             </div>

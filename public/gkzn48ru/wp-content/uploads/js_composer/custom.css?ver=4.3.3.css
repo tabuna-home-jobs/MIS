@@ -92,49 +92,39 @@
 }
 .social-rounded li a i.fa-facebook:hover {
     background:#2f4787;
-    border:2px solid #223874;
 }
 .social-rounded li a i.fa-twitter:hover {
     background:#2ba8e0;
-    border:2px solid #1c90c4;
 }
 .social-rounded li a i.fa-google-plus:hover {
     background:#d3482d;
-    border:2px solid #b42f15;
 }
 .social-rounded li a i.fa-dribbble:hover {
     background:#da2984;
-    border:2px solid #b71568;
 }
 .social-rounded li a i.fa-youtube:hover {
     background:#e92526;
-    border:2px solid #cf1314;
 }
 .social-rounded li a i.fa-vimeo-square:hover {
     background:#03a9ee;
-    border:2px solid #0c79a6;
 }
 .social-rounded li a i.fa-linkedin:hover {
     background:#016793;
-    border:2px solid #00475c;
 }
 .social-rounded li a i.fa-rss:hover {
     background:#f47c23;
-    border:2px solid #d26514;
 }
 
 .social-rounded li a i.fa-circle-o:hover {
     background: #f47c23;
-    border: 2px solid #d26514;
 }
 
 .social-rounded li a i.fa-vk:hover {
     background: #4b68b4;
-    border: 2px solid #223874;
 }
 
 
-.odnok:hover {
+.social-rounded li a i.fa-odnoklassniki:hover {
     background: #f47c23;
 }
 

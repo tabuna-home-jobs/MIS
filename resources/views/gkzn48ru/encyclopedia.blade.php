@@ -1,5 +1,9 @@
 @extends('gkzn48ru/headerALT')
 
+
+@section('headerTitle','Энциклопедия вашего здоровья')
+
+
 @section('content')
 
 

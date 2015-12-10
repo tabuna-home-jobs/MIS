@@ -8,6 +8,7 @@
 
 
 
+@section('headerTitle',$post->name)
 
 
 
@@ -32,8 +33,7 @@
                                 <div class="forM">
 
                                     <form method="get" action="/encypost">
-                                        <input type="text" class="form-control " name="search" placeholder="Поиск...">
-                                        <button type="submit" class="btn btn-default search-icon"><i class="fa fa-search"></i></button>
+                                        <input type="text" class="form-control"  required name="search" placeholder="Поиск...">
                                     </form>
 
                                 </div>
@@ -94,7 +94,7 @@
                                 <img src="{{ $post->avatar }}" alt="{{$post->name}}">
                                 <div class="col-xs-12">
                                         <div data-example-id="togglable-tabs" class="bs-example bs-example-tabs">
-                                            <ul role="tablist" class="nav nav-tabs nav-justified" id="myTabs">
+                                            <ul role="tablist" class="nav nav-tabs nav-justified nav-pills" id="myTabs">
                                                 <li class="active" role="presentation"><a aria-expanded="true" aria-controls="home" data-toggle="tab" role="tab" id="opisanie-tab" href="#opisanie">Описание</a></li>
                                                 <li role="presentation" class=""><a aria-controls="history" data-toggle="tab" id="history-tab" role="tab" href="#history" aria-expanded="false">История</a></li>
                                                 <li role="presentation" class=""><a aria-controls="lechenie" data-toggle="tab" id="lechenie-tab" role="tab" href="#lechenie" aria-expanded="false">Лечение</a></li>
@@ -121,9 +121,11 @@
 
 
 
-                                        <div class="share-post clearfix">
-                                            <label>Поделиться</label>
-                                            <ul class="social-rounded">
+
+
+                                    <div class="row">
+
+                                            <ul class="social-rounded pull-right">
                                                 <li><a href="http://www.facebook.com/sharer.php?u={{Request::url()}}" target="_blank"><i
                                                                 class="fa fa-facebook"></i></a></li>
                                                 <li><a href="https://twitter.com/share?url={{Request::url()}}" target="_blank"><i
@@ -133,11 +135,16 @@
                                                 <li><a href="http://vkontakte.ru/share.php?url={{Request::url()}}" target="_blank"><i
                                                                 class="fa fa-vk"></i></a></li>
                                                 <li><a href="http://www.ok.ru/dk?st.cmd=addShare&st.s=1&st._surl={{Request::url()}}"
-                                                       target="_blank"><i class="fa fa-circle-o"></i></a></li>
+                                                       target="_blank"><i class="fa fa-odnoklassniki"></i></a></li>
                                             </ul>
-                                        </div>
-                                        <p class="blog-meta pull-left">Теги: {{$post->tag}}</p>
-                                        <p class="blog-meta pull-right">{{$post->created_at}}</p>
+                                    </div>
+
+                                    <small class="pull-right">Опубликованно: {{$post->created_at->diffForHumans()}}</small>
+
+
+
+
+
 
 
 

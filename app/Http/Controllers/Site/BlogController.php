@@ -16,7 +16,7 @@ class BlogController extends Controller {
 	public function index($sitename, $sitedomen)
 	{
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
-        $getNews =$getSites->getNews()->orderBy('id', 'desc')->paginate(5);
+        $getNews =$getSites->getNews()->orderBy('id', 'desc')->paginate(6);
         return view( $sitename.$sitedomen.'/blog', ['News' => $getNews]);
 	}
 

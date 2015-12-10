@@ -22,10 +22,10 @@
 
 
 
-    <link rel='stylesheet' id='style_theme-css'  href='/gkzn48ru/wp-content/themes/medic-final/assets/css/style.css%3Fver=4.0.5.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='style-css'  href='/gkzn48ru/wp-content/themes/medic-final/style.css%3Fver=4.0.5.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='js_composer_front-css'  href='/gkzn48ru/wp-content/plugins/js_composer/assets/css/js_composer.css%3Fver=4.3.3.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='js_composer_custom_css-css'  href='/gkzn48ru/wp-content/uploads/js_composer/custom.css%3Fver=4.3.3.css' type='text/css' media='screen' />
+    <link rel='stylesheet' id='style_theme-css'  href='/public/gkzn48ru/wp-content/themes/medic-final/assets/css/style.css%3Fver=4.0.5.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css'  href='/public/gkzn48ru/wp-content/themes/medic-final/style.css%3Fver=4.0.5.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css'  href='/public/gkzn48ru/wp-content/plugins/js_composer/assets/css/js_composer.css%3Fver=4.3.3.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_custom_css-css'  href='/public/gkzn48ru/wp-content/uploads/js_composer/custom.css%3Fver=4.3.3.css' type='text/css' media='screen' />
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
@@ -33,7 +33,6 @@
 
 
 
-</head>
 
 
 
@@ -87,7 +86,7 @@
                         <li><a href="#">Личный кабинет</a></li>
                         <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li>
                         <li class="{{Active::route('blog.*')}}"><a href="/blog">Новости</a></li>
-
+                        <li class="{{Active::route('feedback.*')}}"><a href="/feedback">Контакты</a></li>
 
 
 
@@ -177,12 +176,14 @@
 
     @if (Session::has('good'))
         <div class="container alert-container">
-            <div class="alert alert-success alert-dismissable">
+            <div class="alert alert-success alert-dismissable white_alerts">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h4><i class="fa fa-check"></i> Успех!</h4>
-                {{Session::get('good')}}
+                <div class="iconCheck"><i class="fa fa-check"></i></div>
+                <div class="contenT"><strong>Успех! </strong>-  {{Session::get('good')}}</div>
             </div>
         </div>
+
+
     @elseif(Session::has('bad'))
         <div class="container alert-container">
             <div class="alert alert-danger alert-dismissable">
