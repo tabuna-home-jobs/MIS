@@ -94,7 +94,7 @@
                                 <img src="{{ $post->avatar }}" alt="{{$post->name}}">
                                 <div class="col-xs-12">
                                         <div data-example-id="togglable-tabs" class="bs-example bs-example-tabs">
-                                            <ul role="tablist" class="nav nav-tabs nav-justified nav-pills" id="myTabs">
+                                            <ul role="tablist" class="nav nav-tabs nav-pills nav-tabs-element" id="myTabs">
                                                 <li class="active" role="presentation"><a aria-expanded="true" aria-controls="home" data-toggle="tab" role="tab" id="opisanie-tab" href="#opisanie">Описание</a></li>
                                                 <li role="presentation" class=""><a aria-controls="history" data-toggle="tab" id="history-tab" role="tab" href="#history" aria-expanded="false">История</a></li>
                                                 <li role="presentation" class=""><a aria-controls="lechenie" data-toggle="tab" id="lechenie-tab" role="tab" href="#lechenie" aria-expanded="false">Лечение</a></li>

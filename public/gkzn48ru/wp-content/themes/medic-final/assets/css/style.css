@@ -1,11 +1,3 @@
-/*------------------------------------------------------------------
-[Master Stylesheet]
-
-Project:	Medic - Medical, Health and Hospital HTML Theme
-Version:	1.0
-Last change:	25/07/14
-Designed and Development by: Stylish Themes
--------------------------------------------------------------------*/
 /* =================================  */
 /* ========== GOOGLE FONTS ==========  */
 /* =================================  */
@@ -20,130 +12,6 @@ Designed and Development by: Stylish Themes
 @import url(../plugins/owl-carousel/owl.theme.css);
 @import url(../plugins/prettyphoto/css/prettyPhoto.css);
 
-/*------------------------------------------------------------------
-[Table of contents]
-
-1. Body
-
-	2. Header / .affix-menu / .style_1 .style_2 / .style_3 / .style_4 / .style_5 / .style_6 / .style_7 / .style_8 / .style_9 / .top-slider
-		2.1. Navigation / .navbar
-		2.2. BreadCrumbs_header / .breadCrumbs_header
-		2.3. Top-nav / .top-nav
-
-	3. Breadcrumbs / .breadCrumbs / breadCrumbs_1 / breadCrumbs_2 / breadCrumbs_3
-
-	4. Revolution Slider / .tp-banner-container/ .inside-slider-content
-	
-	5. Heading / .heading / .heading_e / .heading_bg / .heading_t / .heading_d / .heading_our
-	
-	6. Title / .titleC / .titleF / .titleL / .titleLD / .titleB / .titleP / .titleD / .titleSer
-	
-	7. Special Icons / .icon / .icon-1 / .icon-2 / .iconF / .iconF-1 / .iconF-2 /  .iconT / .iconT-1 / .iconT-2 / .iconV
-	
-	8. Medical and Health Section / .medicalHealth
-		8.1. Services Blocks / .service / .service_bg / .service_white / .mef-services /
-	
-	9. Quote Section / .quote / .quote_1 / .quote_2
-	
-	10. Medical Team Section / .medicalTeam
-		10.1. Elements / .elements_team / .elements_news / .doctor_filter_elements / .gallery_filter_elements / .latest_news_elements / .elements_news_c / .single_elements / .all_dp_elements
-	
-	11. Video Section / .video / .videoBg
-	
-	12. Medical News Departments / .medicalNewsDepartments
-		12.1. Left Side / .left_side
-			12.1.1. Pagination / .paginationS
-		12.2. Aside / .departamentsBlocks
-			12.2.1. Accordion / .panel-group
-	
-	13. Elements-2 Page
-		13.1. Alerts Elements / .alert-info / .alert-warning / .alert-success / .alert-danger
-		13.2. Boxes Elements / .boxes_1 / .boxes_2 /.boxes_3 / .boxes_4 / .boxes_5 /.medical_team_doctors_1
-		13.3. Testimonials Elements / .tesTimonials
-			13.1. Owl Carousel / #owl-testimonial-1 / #owl-testimonial-2 / #owl-testimonial-3
-	
-	14. Elements-3 Page 
-		14.1 Tabs, Toggles and Accordions Section / .tabs_toggles_accordions
-			14.1.1. Tabs Element / .nav-tabs-element / .tab-content-element
-			14.1.2. Skills Elements / .value_skills / .progress
-			14.1.3. Accordion Elements / .panel-group
-		14.2. Tables Plans 1 Elements / .tabels_plans_1
-			14.2.1. Label Price Elements / .label_price / .price_bg / .price_bg.price_recommended
-		14.3. Tables Plans 2 Elements / .tabels_plans_2
-			14.3.1. Label Price Elements / .label_price / .price_bg / .price_bg.price_recommended_orange
-		14.4. Circle Counter Elements / .circle_counter / .pie-progress-charts
-	
-	15. Elements-4 Page
-		15.1. Buttons and Icons Elements / .buttons_icons
-			15.1.1. Buttons / .btn
-			15.1.2. Font Awesome Icons / .font_awesome_icons
-		15.2. Lists Elements / .all_lists / .widget_list_1 / .widget-list_2 / .widget-list_3 / .widget_list_4 / .widget-categories
-		15.3. Our Clients Elements / .our_clients / .thumbnail_gray
-		15.4. Awesome Medical Team and Doctor Elements / .medical_team_doctors / .medical_team_doctors_1 / .thumbnail_awesome_team .thumbnail_awesome_team_1
-	
-	16. Elements-5 Page
-		16.1. Widgets Elements / .medical_widgets / .widget / .widget-form / .widget-form-white / .widget-form-white-short
-		16.2. Carousel Elements / .latest_news_carousel / .latest_news_carousel_2 / .doctors_carousel / .doctors_carousel_2
-	
-	17. Elements-6 Page
-		17.1. Timetable Section / .timetable_1 / .timetable_2 / #timetables / .table-responsive / .timetable_small
-	
-	18. Error Page / .cannot_find
-	
-	19. Home Page 9 and Home Page Special / #color_1
-		19.1. Sections / .medicalHealth_form / .medicalHealth_form_1 / .form_home / .form_home_1
-	
-	20. Home Page 5, 7 and 8 / .slider-content-a-s / .inside-slider-content / .features-container
-	
-	21. Home Page 6 / .tabbed-form / .twitteR / #owl-twitter
-	
-	22. Blogs and Blog Standard with Sidebar Pages
-		22.1. Blog Style Section / .blogStyle
-			22.1.1. Left Side / .elements_blogs_1 / .elements_blogs_2
-			22.1.2. Aside / .bloG
-				22.1.2.1. Widgets Blocks / .widget-recent-post / .widget-recent-tweets / .widget-tabs / .widget-tabs-semi-flat / .widget-form / .widget-categories
-	
-	23. Blog Masonery Pages / .blogMasonry / .blogMasonry_1
-	
-	24. Blog Single Page / .blogStyle_2
-		24.1. Left Side / article / .commentary / .comment-respond
-		24.2. Aside / .bloG
-	
-	25. Appointment Page / .appointments
-		25.1. Left Side / .appointment
-		25.2. Aside / .appointmentS
-	
-	26. Contact Appointment Page
-		26.1. Map Section / .big_map
-	
-	27. Our Doctors Pages / .doctors / .isotope / .filter-isotope
-	
-	28. Gallery Masonery Page / .gallery / .masonry-gallery
-	
-	29. Gallery Single Page / .photo_project / .rsMedic
-	
-	30. About Us Page / .words_about_us / .rsMedic_1 / .about_us_info
-	
-	31. Our Services Page / .dental_whitening / .our_plans
-	
-	32. Home Page 2 and Departaments Style 2 Pages / .departaments-owl / .departaments-owl_1
-	
-	33. Doctor Single Page / .doctor_single
-		33.1. Aside / .skills
-		33.2. Right Section / .presentation
-	
-	34. Departaments Pages / .all_departaments
-		34.1. Aside / .allD
-		34.2. Right Side / .all_dp_elements
-	
-	35. FAQ Page / .faq
-		35.1. Aside / .allD
-		35.2. Right Side / .intro_faq
-	
-	36. Typography Page / .typography
-	
-	37. Footer / .footer / .footer_1
--------------------------------------------------------------------*/
 
 /* =================================  */
 /* ========== FONTS ==========  */
@@ -11271,4 +11139,9 @@ table a {
 
 .archives li a{
 	padding: 10px!important;
+}
+
+.back-img-kme-s {
+	margin-bottom: -65px !important;
+	background-image: url('/gkzn48ru/images/kme-s.png') !important;
 }

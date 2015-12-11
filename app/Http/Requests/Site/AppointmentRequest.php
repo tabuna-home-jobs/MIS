@@ -31,8 +31,8 @@ class AppointmentRequest extends Request
             'firstname' => 'required|max:255',
             'lastname' => 'required|max:255',
             'email' => 'required|email',
-            'phone' => 'required|numeric|',
-            'comment' => 'required',
+            'phone' => 'required|numeric',
+            'comment' => '',
         ];
     }
 }

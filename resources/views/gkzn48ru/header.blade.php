@@ -22,10 +22,10 @@
 
 
 
-    <link rel='stylesheet' id='style_theme-css'  href='/public/gkzn48ru/wp-content/themes/medic-final/assets/css/style.css%3Fver=4.0.5.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='style-css'  href='/public/gkzn48ru/wp-content/themes/medic-final/style.css%3Fver=4.0.5.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='js_composer_front-css'  href='/public/gkzn48ru/wp-content/plugins/js_composer/assets/css/js_composer.css%3Fver=4.3.3.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='js_composer_custom_css-css'  href='/public/gkzn48ru/wp-content/uploads/js_composer/custom.css%3Fver=4.3.3.css' type='text/css' media='screen' />
+    <link rel='stylesheet' id='style_theme-css'  href='/gkzn48ru/wp-content/themes/medic-final/assets/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css'  href='/gkzn48ru/wp-content/themes/medic-final/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css'  href='/gkzn48ru/wp-content/plugins/js_composer/assets/css/js_composer.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_custom_css-css'  href='/gkzn48ru/wp-content/uploads/js_composer/custom.css' type='text/css' media='screen' />
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
@@ -62,10 +62,10 @@
                     <a class="navbar-brand" href="/">
                     <span class="logo contrast">
                         <span class="primary-logo">
-                                                            <img id="logo" src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/logo_1.png" alt="">
+                                                            <img id="logo" src="/gkzn48ru/wp-content/themes/medic-final/assets/img/logo_1.png" alt="">
                                                     </span>
                         <span class="secondary-logo">
-                            <img id="logo" src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/logo.png" alt="">
+                            <img id="logo" src="/gkzn48ru/wp-content/themes/medic-final/assets/img/logo.png" alt="">
                         </span>
                     </span>
                     </a>

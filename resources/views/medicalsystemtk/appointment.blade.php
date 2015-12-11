@@ -72,45 +72,65 @@
 
 
 
+
                                     <script>
                                         $('select[name="subdivision"]').change(function () {
 
-                                            var obj = $(this);
-                                            var Curvalue = $(':selected',this).val();
                                             var Placevalue =  $('select[name="subdivision"] :selected').val();
                                             var NameValue = $('select[name="name"] :selected').val();
                                             var Specialvalue = $('select[name="specialization"] :selected').val();
                                             var csrf = $('meta[name="csrf-token"]').attr('content');
 
 
-
                                             $.ajax({
                                                 type: "POST",
                                                 url: "/appointment/time/" + Placevalue +"/"+ Specialvalue +"/"+ NameValue ,
+                                                dataType: 'json',
                                                 beforeSend: function(request) {
                                                     request.setRequestHeader('X-CSRF-Token', csrf);
                                                 },
                                                 success: function(msg){
-
+                                                    console.log('success');
                                                     var option = "";
-                                                    for(var i = 0; msg.length > i; i++)
-                                                    {
 
-                                                        var beginning = new Date(msg[i].beginning * 1000).toLocaleString();
-                                                        var end = new Date(msg[i].end * 1000).toLocaleString();
-                                                        option += "<div class='radio'><label><input type='radio' required name='apport' value='" + msg[i].beginning + "|" + msg[i].end + "'> С " + beginning + " по " + end + "</label></div>";
+                                                    $.each(msg, function(dateStr,timeObj) {
+                                                        option += "<h5>"+dateStr+"</h5>";
 
+                                                        $.each(timeObj, function(dateStr2,timeObj2) {
+                                                            console.log(this.beginning);
+
+
+                                                            var beginning = new Date(this.beginning * 1000);
+                                                            var end = new Date(this.end * 1000);
+                                                            option += "<div class='radio'><label><input type='radio' required name='apport' value='" + this.beginning + "|" + this.end + "'> С " + beginning.getHours() +":"+  ("0"+beginning.getMinutes()).substr(-2) + " по " + end.getHours() +":"+ ("0"+end.getMinutes()).substr(-2) + "</label></div>";
+
+                                                        });
+
+                                                    });
+
+
+                                                    if(!option){
+                                                        option += "<h2>К данному специалисту нет свободной записи</h2>";
                                                     }
 
 
                                                     $('#date').html(option);
 
-                                                }
+
+                                                },
+                                                error: function()
+                                                {
+                                                    console.log('ошибка');
+                                                }/*,
+                                                 complete: function()
+                                                 {
+                                                 console.log('завершён');
+                                                 }*/
                                             });
 
 
 
-
+                                            return false;
                                         });
 
 
@@ -137,7 +157,7 @@
                                                     for(var i = 0; msg.length > i; i++)
                                                     {
                                                         option += "<option value='"+ msg[i].name + "'>"
-                                                        + msg[i].name + "</option>";
+                                                                + msg[i].name + "</option>";
                                                     }
 
                                                     $('select[name="name"]').html(option);
@@ -186,64 +206,9 @@
 
                                         });
 
-                                        /*
-                                        $('select[name="name"]').change(function () {
+                                    </script>
 
 
-                                          var obj = $(this);
-                                          var Curvalue = $(':selected',this).val();
-                                            var Placevalue = $('select[name="subdivision"] :selected').val();
-                                          var Specialvalue = $('select[name="specialization"] :selected').val();
-                                          var csrf = $('meta[name="csrf-token"]').attr('content');
-
-
-                                          $.ajax({
-                                              type: "POST",
-                                              url: "/appointment/time/" + Placevalue +"/"+ Specialvalue +"/"+ Curvalue ,
-                                              beforeSend: function(request) {
-                                                  request.setRequestHeader('X-CSRF-Token', csrf);
-                                              },
-                                              success: function(msg){
-
-                                                  var option = "";
-                                                  for(var i = 0; msg.length > i; i++)
-                                                  {
-
-                                                      var beginning = new Date(msg[i].beginning * 1000).toLocaleString();
-                                                      var end = new Date(msg[i].end * 1000).toLocaleString();
-                                                      option += "<div class='radio'><label><input type='radio' required name='apport' value='" + msg[i].beginning + "|" + msg[i].end + "'> С " + beginning + " по " + end + "</label></div>";
-
-                                                  }
-
-
-
-
-
-
-
-
-                                                  $('#date').html(option);
-
-                                              }
-                                          });
-
-
-                                      });
-                                    */
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                        </script>
 
 
 

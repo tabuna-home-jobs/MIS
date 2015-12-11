@@ -158,15 +158,15 @@
 
 
 <script type='text/javascript'
-        src='/public/gkzn48ru/wp-content/themes/medic-final/assets/plugins/bootstrap/js/bootstrap.min.js%3Fver=1.0'></script>
+        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/bootstrap/js/bootstrap.min.js'></script>
 <script type='text/javascript'
-        src='/public/gkzn48ru/wp-content/themes/medic-final/assets/plugins/smooth-scroll.js%3Fver=1.0'></script>
+        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/smooth-scroll.js'></script>
 
 <script type='text/javascript'
-        src='/public/gkzn48ru/wp-content/themes/medic-final/assets/plugins/prettyphoto/js/jquery.prettyPhoto.js%3Fver=1.0'></script>
+        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/prettyphoto/js/jquery.prettyPhoto.js'></script>
 <script type='text/javascript'
-        src='/public/gkzn48ru/wp-content/themes/medic-final/assets/plugins/owl-carousel/owl.carousel.js%3Fver=1.0'></script>
-<script type='text/javascript' src='/public/gkzn48ru/wp-content/themes/medic-final/assets/js/app.js%3Fver=1.0'></script>
+        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/owl-carousel/owl.carousel.js'></script>
+<script type='text/javascript' src='/gkzn48ru/wp-content/themes/medic-final/assets/js/app.js'></script>
 
 
 <script type="text/javascript">

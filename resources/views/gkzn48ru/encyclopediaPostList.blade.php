@@ -88,7 +88,7 @@
                                 <div class="col-xs-12">
                                     <div class="heading_e"><h3>Результат поиска:</h3>
 
-                                        <p>Тут можно тоже что то написать для превлечения внимания</p><h4><img src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
+                                        <p>Тут можно тоже что то написать для превлечения внимания</p><h4><img src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
                                     </div>
                                 </div>
 

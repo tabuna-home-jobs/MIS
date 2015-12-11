@@ -16,8 +16,8 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>27238</introspection-state-number>
-        <introspection-timestamp>2015-12-09.10:09:20.860</introspection-timestamp>
+        <introspection-state-number>360025</introspection-state-number>
+        <introspection-timestamp>2015-12-11.14:11:18.168</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="answers_id_seq">
         <object-id>24593</object-id>
@@ -49,7 +49,7 @@
       </sequence>
       <sequence id="10" parent="2" name="entry_id_seq">
         <object-id>26163</object-id>
-        <state-number>27233</state-number>
+        <state-number>359875</state-number>
       </sequence>
       <sequence id="11" parent="2" name="feedbacks_id_seq">
         <object-id>24624</object-id>
@@ -177,7 +177,7 @@
       </table>
       <table id="42" parent="2" name="entry">
         <object-id>24612</object-id>
-        <state-number>27233</state-number>
+        <state-number>359875</state-number>
       </table>
       <table id="43" parent="2" name="feedbacks">
         <object-id>24617</object-id>
@@ -257,7 +257,7 @@
       </table>
       <table id="62" parent="2" name="timetable">
         <object-id>24732</object-id>
-        <state-number>27238</state-number>
+        <state-number>360021</state-number>
       </table>
       <table id="63" parent="2" name="users">
         <object-id>24740</object-id>
@@ -412,8 +412,7 @@
         <data-type>varchar(255)</data-type>
       </column>
       <column id="94" parent="35" name="comment">
-        <state-number>3495</state-number>
-        <mandatory>1</mandatory>
+        <state-number>360025</state-number>
         <data-type>text</data-type>
       </column>
       <column id="95" parent="35" name="created_at">

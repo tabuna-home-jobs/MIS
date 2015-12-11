@@ -13,7 +13,7 @@
             <div class="heading_e"><h3>Записаться на приём к специалисту</h3>
 
                 <p>Быстрая и удобная запись в врачу где бы вы не были</p><h4><img
-                            src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
+                            src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
             </div>
 
             <div class="row">
@@ -47,63 +47,99 @@
                         <div class="row setup-content" id="step-1">
                             <div class="col-xs-12">
                                 <div class="col-md-12">
-                                    <h5> Выберите место</h5>
+                                    <h5> Выберите специализацию</h5>
 
                                     <div class="form-group row">
-                                        <label class="control-label">Место</label>
-                                        <select class="form-control" name="subdivision" required>
-                                            <option selected disabled>Выберите место</option>
-                                            @foreach($place as $placeItem)
-                                                <option value="{{$placeItem->subdivision}}">{{$placeItem->subdivision}}</option>
+                                        <label class="control-label">Специализациия</label>
+                                        <select name="specialization" required class="form-control">
+                                            <option selected disabled>Выберите специализацию</option>
+                                            @foreach($specialization as $spec)
+                                                <option value="{{$spec->specialization}}">{{$spec->specialization}}</option>
                                             @endforeach
                                         </select>
                                     </div>
+
+
                                     <div class="form-group row">
-                                        <label class="control-label">Специализациия</label>
-                                        <select class="form-control" disabled name="specialization" required>
+                                        <label class="control-label">Врач</label>
+                                        <select disabled name="name" required  class="form-control">
+                                            <option>Выберите специализацию</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group row">
+                                        <label class="control-label">Место</label>
+                                        <select disabled name="subdivision" required  class="form-control">
                                             <option>Выберите место</option>
                                         </select>
                                     </div>
 
-                                    <div class="form-group row">
-                                        <label class="control-label">Врач</label>
-                                        <select class="form-control" disabled name="name" required>
-                                            <option>Выберите специализацию</option>
-                                        </select>
-                                    </div>
+
 
 
 
                                     <script>
                                         $('select[name="subdivision"]').change(function () {
 
-                                            var obj = $(this);
-                                            var Curvalue = $(':selected',this).val();
+                                            var Placevalue =  $('select[name="subdivision"] :selected').val();
+                                            var NameValue = $('select[name="name"] :selected').val();
+                                            var Specialvalue = $('select[name="specialization"] :selected').val();
                                             var csrf = $('meta[name="csrf-token"]').attr('content');
 
 
-
                                             $.ajax({
-                                                type: "POST",
-                                                url: "/appointment/special/" + Curvalue ,
+                                                method: "POST",
+                                                url: "/appointment/time/" + Placevalue +"/"+ Specialvalue +"/"+ NameValue ,
+                                                dataType: 'json',
                                                 beforeSend: function(request) {
                                                     request.setRequestHeader('X-CSRF-Token', csrf);
                                                 },
                                                 success: function(msg){
+                                                    console.log('success');
+                                                    var option = "";
 
-                                                    var option = "<option selected disabled>Выберите специализацию</option>";
-                                                    for(var i = 0; msg.length > i; i++)
-                                                    {
-                                                        option += "<option value='"+ msg[i].specialization + "'>"
-                                                        + msg[i].specialization + "</option>";
+                                                    console.log(msg);
+
+
+                                                    $.each(msg, function(dateStr,timeObj) {
+                                                        option += "<h4>"+dateStr+"</h4>";
+
+                                                            $.each(timeObj, function(dateStr2,timeObj2) {
+                                                                console.log(this.beginning);
+
+
+                                                                var beginning = new Date(this.beginning * 1000);
+                                                                var end = new Date(this.end * 1000);
+                                                                option += "<div class='radio'><label><input type='radio' required name='apport' value='" + this.beginning + "|" + this.end + "'> С " + beginning.getHours() +":"+  ("0"+beginning.getMinutes()).substr(-2) + " по " + end.getHours() +":"+ ("0"+end.getMinutes()).substr(-2) + "</label></div>";
+
+                                                            });
+
+                                                    });
+
+
+                                                    if(!option){
+                                                        option += "<h2>К данному специалисту нет свободной записи</h2>";
                                                     }
 
-                                                    $('select[name="specialization"]').html(option);
-                                                    $('select[name="specialization"]').attr('disabled',false);
 
-                                                }
+                                                    $('#date').html(option);
+
+
+                                                },
+                                                error: function()
+                                                {
+                                                    console.log('ошибка');
+                                                }/*,
+                                                complete: function()
+                                                {
+                                                    console.log('завершён');
+                                                }*/
                                             });
 
+
+
+                                            return false;
                                         });
 
 
@@ -114,13 +150,13 @@
 
                                             var obj = $(this);
                                             var Curvalue = $(':selected',this).val();
-                                            var Placevalue = $('select[name="subdivision"] :selected').val();
+                                            //var Placevalue = $('select[name="subdivision"] :selected').val();
                                             var csrf = $('meta[name="csrf-token"]').attr('content');
 
 
                                             $.ajax({
                                                 type: "POST",
-                                                url: "/appointment/fio/" + Placevalue +"/"+ Curvalue ,
+                                                url: "/appointment/fio/" + Curvalue ,
                                                 beforeSend: function(request) {
                                                     request.setRequestHeader('X-CSRF-Token', csrf);
                                                 },
@@ -130,7 +166,7 @@
                                                     for(var i = 0; msg.length > i; i++)
                                                     {
                                                         option += "<option value='"+ msg[i].name + "'>"
-                                                        + msg[i].name + "</option>";
+                                                                + msg[i].name + "</option>";
                                                     }
 
                                                     $('select[name="name"]').html(option);
@@ -143,68 +179,48 @@
                                         });
 
 
+
                                         $('select[name="name"]').change(function () {
+                                            var Curvalue = $(':selected',this).val();
+
+                                            var NameValue = $('select[name="name"] :selected').val();
+                                            var SpecialValue = $('select[name="specialization"] :selected').val();
+                                            var csrf = $('meta[name="csrf-token"]').attr('content');
 
 
-                                          var obj = $(this);
-                                          var Curvalue = $(':selected',this).val();
-                                            var Placevalue = $('select[name="subdivision"] :selected').val();
-                                          var Specialvalue = $('select[name="specialization"] :selected').val();
-                                          var csrf = $('meta[name="csrf-token"]').attr('content');
+                                            $.ajax({
+                                                type: "POST",
+                                                url: "/appointment/place/" + SpecialValue + "/" + NameValue ,
+                                                beforeSend: function(request) {
+                                                    request.setRequestHeader('X-CSRF-Token', csrf);
+                                                },
+                                                success: function(msg){
 
 
-                                          $.ajax({
-                                              type: "POST",
-                                              url: "/appointment/time/" + Placevalue +"/"+ Specialvalue +"/"+ Curvalue ,
-                                              beforeSend: function(request) {
-                                                  request.setRequestHeader('X-CSRF-Token', csrf);
-                                              },
-                                              success: function(msg){
+                                                    var option = "<option selected disabled>Выберите место</option>";
+                                                    for(var i = 0; msg.length > i; i++)
+                                                    {
 
-                                                  var option = "";
-                                                  for(var i = 0; msg.length > i; i++)
-                                                  {
+                                                        option += "<option value='"+ msg[i].subdivision + "'>"
+                                                                + msg[i].subdivision + "</option>";
+                                                    }
 
-                                                      var beginning = new Date(msg[i].beginning * 1000).toLocaleString();
-                                                      var end = new Date(msg[i].end * 1000).toLocaleString();
-                                                      option += "<div class='radio'><label><input type='radio' required name='apport' value='" + msg[i].beginning + "|" + msg[i].end + "'> С " + beginning + " по " + end + "</label></div>";
+                                                    $('select[name="subdivision"]').html(option);
+                                                    $('select[name="subdivision"]').attr('disabled', false);
 
-                                                  }
-
-
-
-
-
+                                                }
+                                            });
 
 
 
-                                                  $('#date').html(option);
+                                        });
 
-                                              }
-                                          });
-
-
-                                      });
+                                    </script>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-                                        </script>
-
-
-
-
-                                    <button class="btn btn-default btn-normal  nextBtn btn-rounded pull-right" type="button">
+                                    <button class="btn btn-default  nextBtn btn-rounded pull-right" type="button">
                                         Далее
                                     </button>
                                 </div>
@@ -215,11 +231,11 @@
                                 <div class="col-md-12">
                                     <h5> Выберите дату</h5>
 
-                                  <div class="form-group" id="date">
+                                    <div class="form-group" id="date">
 
-                                  </div>
+                                    </div>
 
-                                    <button class="btn btn-default btn-normal nextBtn btn-rounded pull-right" type="button">Далее
+                                    <button class="btn btn-default nextBtn btn-rounded pull-right" type="button">Далее
                                     </button>
                                 </div>
                             </div>
@@ -229,25 +245,13 @@
                                 <div class="col-md-12">
                                     <h5> Информация</h5>
 
-
-                                    <div class="form-group">
-                                         <input type="text" class="form-control" name="firstname" max="255" placeholder="Имя">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="lastname" max="255" placeholder="Фамилия">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" name="email" placeholder="Email адрес">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" class="form-control" name="phone" placeholder="Номер телефона">
-                                   </div>
-                                    <div class="form-group">
-                                    <textarea rows="4" class="form-control" name="comment" placeholder="Комментарий"></textarea>
-                                    </div>
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <button class="btn btn-default btn-normal btn-4 btn-rounded pull-right" type="submit">Записаться!
+                                    <input type="text" name="firstname" max="255" placeholder="Имя"  class="form-control">
+                                    <input type="text" name="lastname" max="255" placeholder="Фамилия"  class="form-control">
+                                    <input type="email" name="email" placeholder="Email адрес"  class="form-control">
+                                    <input type="number" name="phone" placeholder="Номер телефона"  class="form-control">
+                                    <textarea rows="4" name="comment" placeholder="Комментарий"  class="form-control"></textarea>
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <button class="btn btn-default btn-rounded pull-right" type="submit">Записаться!
                                     </button>
                                 </div>
                             </div>
@@ -291,7 +295,7 @@
                         <div class="heading_e"><h3>Наша цель – здоровое зачатие, рождение и развитие человека.</h3>
 
                             <p>Мы бережно и уважительно относимся к нашим клиентам и сотрудникам.</p><h4><img
-                                        src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png"
+                                        src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png"
                                         alt="heading"></h4></div>
                         <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1409843233310">
                             <div class="vc_col-sm-4 wpb_column vc_column_container">

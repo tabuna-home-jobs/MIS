@@ -19,7 +19,7 @@
         <div class="heading_e">
 
             <p>Последнии записи центров</p><h4><img
-                        src="/public/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
+                        src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
         </div>
     </div>
 

@@ -47,8 +47,14 @@ class AppointmentController extends Controller
     public function postTime($sitename, $sitedomen, $place, $specialization, $fio)
     {
         $doctor = TimeTable::whereRaw('subdivision = ? and specialization = ? and name = ?',[$place,$specialization,$fio])->first();
-        $doctor = $doctor->entry()->select('beginning', 'end')->whereRaw(' "1c_busy" = false and ("web_busy" is NULL or "web_busy" !=TRUE ) ')->get();
-        return response()->json($doctor);
+        $doctor = $doctor->entry()->select('beginning', 'end')->whereRaw(' "1c_busy" = false and ("web_busy" is NULL or "web_busy" !=TRUE ) ')->get()->toArray();
+
+		$tmp = [];
+		foreach ($doctor as $trip) {
+			$tmp[date('d.m.Y', $trip['beginning'])][] = $trip;
+		}
+
+		return response()->json($tmp);
     }
 
 
