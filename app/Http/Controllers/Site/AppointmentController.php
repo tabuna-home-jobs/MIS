@@ -20,8 +20,8 @@ class AppointmentController extends Controller
     public function getIndex($sitename, $sitedomen)
     {
         //Получить все места
-        $place = DB::table('timetable')->select('subdivision')->distinct()->get();
-        return view($sitename . $sitedomen . '/appointment', ['place' => $place]);
+        $specialization = DB::table('timetable')->select('specialization')->distinct()->get();
+        return view($sitename . $sitedomen . '/appointment', ['specialization' => $specialization]);
     }
 
     /**
@@ -37,9 +37,9 @@ class AppointmentController extends Controller
     }
 
 
-    public function postFio($sitename, $sitedomen, $place,$specialization)
+    public function postFio($sitename, $sitedomen,$specialization)
     {
-        $fio = DB::table('timetable')->select('name')->whereRaw('subdivision = ? and specialization = ?',[$place, $specialization])->distinct()->get();
+        $fio = DB::table('timetable')->select('name')->whereRaw('specialization = ?',[$specialization])->distinct()->get();
         return response()->json($fio);
     }
 
@@ -51,6 +51,12 @@ class AppointmentController extends Controller
         return response()->json($doctor);
     }
 
+
+	public function postPlace($sitename, $sitedomen, $specialization, $fio)
+	{
+		$place = TimeTable::whereRaw('specialization = ? and name = ?',[$specialization,$fio])->distinct()->get();
+		return response()->json($place);
+	}
 
 	/**
 	 * Store a newly created resource in storage.

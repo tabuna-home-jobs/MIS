@@ -43,20 +43,15 @@
                                     <h5> Выберите специализацию</h5>
 
                                     <div class="form-group row">
-                                        <label class="control-label">Место</label>
-                                        <select name="subdivision" required>
-                                            <option selected disabled>Выберите место</option>
-                                            @foreach($place as $placeItem)
-                                                <option value="{{$placeItem->subdivision}}">{{$placeItem->subdivision}}</option>
+                                        <label class="control-label">Специализациия</label>
+                                        <select name="specialization" required>
+                                            <option selected disabled>Выберите специализацию</option>
+                                            @foreach($specialization as $spec)
+                                                <option value="{{$spec->specialization}}">{{$spec->specialization}}</option>
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="form-group row">
-                                        <label class="control-label">Специализациия</label>
-                                        <select disabled name="specialization" required>
-                                            <option>Выберите место</option>
-                                        </select>
-                                    </div>
+
 
                                     <div class="form-group row">
                                         <label class="control-label">Врач</label>
@@ -66,36 +61,55 @@
                                     </div>
 
 
+                                    <div class="form-group row">
+                                        <label class="control-label">Место</label>
+                                        <select disabled name="subdivision" required>
+                                            <option>Выберите место</option>
+                                        </select>
+                                    </div>
+
+
+
+
 
                                     <script>
                                         $('select[name="subdivision"]').change(function () {
 
                                             var obj = $(this);
                                             var Curvalue = $(':selected',this).val();
+                                            var Placevalue =  $('select[name="subdivision"] :selected').val();
+                                            var NameValue = $('select[name="name"] :selected').val();
+                                            var Specialvalue = $('select[name="specialization"] :selected').val();
                                             var csrf = $('meta[name="csrf-token"]').attr('content');
 
 
 
                                             $.ajax({
                                                 type: "POST",
-                                                url: "/appointment/special/" + Curvalue ,
+                                                url: "/appointment/time/" + Placevalue +"/"+ Specialvalue +"/"+ NameValue ,
                                                 beforeSend: function(request) {
                                                     request.setRequestHeader('X-CSRF-Token', csrf);
                                                 },
                                                 success: function(msg){
 
-                                                    var option = "<option selected disabled>Выберите специализацию</option>";
+                                                    var option = "";
                                                     for(var i = 0; msg.length > i; i++)
                                                     {
-                                                        option += "<option value='"+ msg[i].specialization + "'>"
-                                                        + msg[i].specialization + "</option>";
+
+                                                        var beginning = new Date(msg[i].beginning * 1000).toLocaleString();
+                                                        var end = new Date(msg[i].end * 1000).toLocaleString();
+                                                        option += "<div class='radio'><label><input type='radio' required name='apport' value='" + msg[i].beginning + "|" + msg[i].end + "'> С " + beginning + " по " + end + "</label></div>";
+
                                                     }
 
-                                                    $('select[name="specialization"]').html(option);
-                                                    $('select[name="specialization"]').attr('disabled',false);
+
+                                                    $('#date').html(option);
 
                                                 }
                                             });
+
+
+
 
                                         });
 
@@ -107,13 +121,13 @@
 
                                             var obj = $(this);
                                             var Curvalue = $(':selected',this).val();
-                                            var Placevalue = $('select[name="subdivision"] :selected').val();
+                                            //var Placevalue = $('select[name="subdivision"] :selected').val();
                                             var csrf = $('meta[name="csrf-token"]').attr('content');
 
 
                                             $.ajax({
                                                 type: "POST",
-                                                url: "/appointment/fio/" + Placevalue +"/"+ Curvalue ,
+                                                url: "/appointment/fio/" + Curvalue ,
                                                 beforeSend: function(request) {
                                                     request.setRequestHeader('X-CSRF-Token', csrf);
                                                 },
@@ -136,6 +150,43 @@
                                         });
 
 
+
+                                        $('select[name="name"]').change(function () {
+                                            var Curvalue = $(':selected',this).val();
+
+                                            var NameValue = $('select[name="name"] :selected').val();
+                                            var SpecialValue = $('select[name="specialization"] :selected').val();
+                                            var csrf = $('meta[name="csrf-token"]').attr('content');
+
+
+                                            $.ajax({
+                                                type: "POST",
+                                                url: "/appointment/place/" + SpecialValue + "/" + NameValue ,
+                                                beforeSend: function(request) {
+                                                    request.setRequestHeader('X-CSRF-Token', csrf);
+                                                },
+                                                success: function(msg){
+
+
+                                                    var option = "<option selected disabled>Выберите место</option>";
+                                                    for(var i = 0; msg.length > i; i++)
+                                                    {
+
+                                                        option += "<option value='"+ msg[i].subdivision + "'>"
+                                                                + msg[i].subdivision + "</option>";
+                                                    }
+
+                                                    $('select[name="subdivision"]').html(option);
+                                                    $('select[name="subdivision"]').attr('disabled', false);
+
+                                                }
+                                            });
+
+
+
+                                        });
+
+                                        /*
                                         $('select[name="name"]').change(function () {
 
 
@@ -178,7 +229,7 @@
 
 
                                       });
-
+                                    */
 
 
 
