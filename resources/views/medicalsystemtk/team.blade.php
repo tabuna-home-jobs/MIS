@@ -40,10 +40,18 @@
                             </div>
                             <div class="doctors-skils">
 
+                                 @if(empty(!$spec->opyt))
+                                    <div>
+                                        <div class="heading-doc">Должность: </div>
+                                        <div class="detail-doc">{!!$spec->opyt or ''!!}</div>
+                                    </div>
+                                @endif
+
+
                                 @if(empty(!$spec->subname))
                                 <div>
                                     <div class="heading-doc">Квалификация: </div>
-                                    <div class="detail-doc">{{$spec->subname or ''}}</div>
+                                    <div class="detail-doc">{!!$spec->subname or ''!!}</div>
 
                                 </div>
                                 @endif
@@ -64,17 +72,12 @@
                                 @endif
 
 
-                                @if(empty(!$spec->opyt))
-                                    <div>
-                                        <div class="heading-doc">Должность: </div>
-                                        <div class="detail-doc">{{$spec->opyt or ''}}</div>
-                                    </div>
-                                @endif
+                               
 
 
                                 @if(empty(!$spec->about))
                                     <div>
-                                        <div class="heading-doc">Умения:</div>
+                                        <div class="heading-doc"></div>
                                         <div class="detail-doc">{{$spec->about or ''}}</div>
                                     </div>
                                 @endif
