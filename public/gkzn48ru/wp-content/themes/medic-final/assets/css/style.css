@@ -11145,3 +11145,9 @@ table a {
 	margin-bottom: 0px !important;
 	background-image: url('/gkzn48ru/images/kme-s.png') !important;
 }
+
+.bg-login {
+	margin-top: -90px !important;
+	padding-top: 80px !important;
+	background-image: url('/gkzn48ru/images/bg-login.jpg') !important;
+}

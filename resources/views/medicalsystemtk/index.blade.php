@@ -187,19 +187,15 @@
                                                     request.setRequestHeader('X-CSRF-Token', csrf);
                                                 },
                                                 success: function(msg){
-                                                    console.log('success');
                                                     var option = "";
 
                                                     $.each(msg, function (dateStr, timeObj) {
                                                         option += "<h5>" + dateStr + "</h5>";
 
                                                         $.each(timeObj, function (dateStr2, timeObj2) {
-                                                            console.log(this.beginning);
 
 
-                                                            var beginning = new Date(this.beginning * 1000);
-                                                            var end = new Date(this.end * 1000);
-                                                            option += "<div class='radio'><label><input type='radio' required name='apport' value='" + this.beginning + "|" + this.end + "'> С " + beginning.getHours() + ":" + ("0" + beginning.getMinutes()).substr(-2) + " по " + end.getHours() + ":" + ("0" + end.getMinutes()).substr(-2) + "</label></div>";
+                                                            option += "<div class='radio'><label><input type='radio' required name='apport' value='" + this.beginning + "|" + this.end + "'> С " + this.Shours + ":" + this.Sminute + " по " + this.Ehours + ":" + this.Eminute + "</label></div>";
 
                                                         });
 
