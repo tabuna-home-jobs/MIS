@@ -20,7 +20,6 @@ class HomeController extends Controller {
         $getNews = $getSites->getNews()->orderBy('id', 'desc')->limit(4)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
 
-
 		$specialization = DB::table('timetable')->select('specialization')->distinct()->get();
 		return view($sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
