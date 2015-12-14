@@ -14,7 +14,7 @@
                 <p class="lead">широкий спектр медицинских услуг для всей семьи</p>
             </div>
 
-            <div class="creative-sec-thumb one">
+            <div class="creative-sec-thumb one hidden-xs">
                 <figure>
                 <span class="overlay"><a href="/questanswer"><i class="fa fa-eye"></i></a></span>
                 <img src="/site1.ru/images/creative-sec-img1.jpg" width="154" class="img-circle img-thumbnail img-responsive" alt="" title="">
@@ -22,7 +22,7 @@
                 </figure>
             </div>
 
-            <div class="creative-sec-thumb two">
+            <div class="creative-sec-thumb two hidden-xs">
                 <figure>
                 <span class="overlay"><a href="/gallery"><i class="fa fa-eye"></i></a></span>
                 <img src="/site1.ru/images/creative-sec-img2.jpg" width="266" class="img-circle img-thumbnail img-responsive" alt="" title="">
@@ -31,7 +31,7 @@
             </div>
 
 
-            <div class="creative-sec-thumb three">
+            <div class="creative-sec-thumb three hidden-xs">
                 <figure>
                     <span class="overlay"><a href="/reviews"><i class="fa fa-eye"></i></a></span>
                     <img width="162" title="" alt="" class="img-circle img-thumbnail img-responsive"
@@ -41,7 +41,7 @@
             </div>
 
 
-            <div class="creative-sec-thumb four">
+            <div class="creative-sec-thumb four hidden-xs">
                 <figure>
                 <span class="overlay"><a href="/team"><i class="fa fa-eye"></i></a></span>
                 <img src="/site1.ru/images/creative-sec-img4.jpg" width="305" class="img-circle img-thumbnail img-responsive" alt="" title="">
@@ -50,9 +50,9 @@
             </div>
         </div>
     </section>
-    
-    
-    <section class="medicom-awesome-features-sec" data-stellar-background-ratio="0.3">
+
+
+        <section class="medicom-awesome-features-sec hidden-xs" data-stellar-background-ratio="0.3">
     <div class="featires-overlay"></div>
     	<div class="container">
         <div class="text-center">
@@ -105,10 +105,10 @@
 
             <p class="lead">Быстрая и удобная запись к врачу</p>
             <div class="row">
-            <div class="col-md-6">
+                <div class="col-md-6 hidden-xs">
             <figure><img src="/site1.ru/images/appointment-img2.png" alt="image" title="Appointment image" class="img-responsive lady1"></figure>
             </div>
-            <div class="col-md-6">
+                <div class="col-md-6 col-xs-12">
 
 
 
@@ -157,7 +157,7 @@
                                     <div class="form-group row">
                                         <label class="control-label">Врач</label>
                                         <select disabled name="name" required>
-                                            <option>Выберите специализацию</option>
+                                            <option>Выберите врача</option>
                                         </select>
                                     </div>
 
@@ -354,11 +354,7 @@
     </section>
 
 
-
-
-
-
-        <div class="row text-center no-margin">
+        <div class="row text-center no-margin hidden-xs">
             <div class="col-md-4 ">
                 <div class="home-box bg-default">
                     <span class="fa fa-stethoscope"></span>
@@ -577,7 +573,7 @@
         </div>
 
 
-        <div class="map-on-main container">
+        <div class="map-on-main container hidden-xs">
             <div class="bage">
                 <div class="footer-widget">
                     <h4 style="font-size:18px"><span>Мы находимся</span></h4>

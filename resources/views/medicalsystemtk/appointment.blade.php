@@ -56,7 +56,7 @@
                                     <div class="form-group row">
                                         <label class="control-label">Врач</label>
                                         <select disabled name="name" required>
-                                            <option>Выберите специализацию</option>
+                                            <option>Выберите врача</option>
                                         </select>
                                     </div>
 

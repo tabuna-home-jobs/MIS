@@ -44,6 +44,10 @@ Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], funct
     Route::resource('/blog', 'BlogController');
 
     Route::resource('/', 'HomeController');
+
+
+    Route::resource('/login', 'LoginController');
+
 });
 
 

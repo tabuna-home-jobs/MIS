@@ -61,7 +61,7 @@ class Appointments extends Command {
 
 				$xml = simplexml_load_string(Storage::get($file1COUT));
 
-				DB::table('entry')->truncate();
+				//DB::table('entry')->truncate();
 
 				$date = date("Y-m-d G:i:s");
 
@@ -85,8 +85,7 @@ class Appointments extends Command {
 								'end' => (int)$zapis->attributes()->PO,
 								'1c_busy' => (int)$zapis->attributes()->BUSY,
 								'timetable_id' => (string) $value->attributes()->ID,
-								'created_at' => $date,
-								'updated_at' => $date,
+								'upload' => true,
 						];
 					}
 
@@ -95,71 +94,17 @@ class Appointments extends Command {
 
 				}
 
-
-				/*
-				 * Начало подготовки для 1 запроса
-				 */
-
-				/*
-				$sql = '';
-				foreach ($entry as $key => $value) {
-					if ($key == 0) {
-						$sql .= '
-						INSERT INTO entry("beginning", "end","1c_busy","timetable_id", "created_at", "updated_at")
-						VALUES(?, ?, ?, ?, ?, ?)';
-
-						if (isset($entry[$key + 1])) {
-							$sql .= ",";
-						}
-					}
-					else {
-						$sql .= '(?, ?, ?, ?, ?, ?),';
-					}
-				}
-
-				$sql = substr($sql, 0, -1);
-				$rs = DB::getPdo()->prepare($sql);
-
-				foreach ($entry as $key => $value) {
-					$rs->bindParam($key + 1, $value['beginning']);
-					$rs->bindParam($key + 2, $value['end']);
-					$rs->bindParam($key + 3, $value['1c_busy']);
-					$rs->bindParam($key + 4, $value['timetable_id']);
-					$rs->bindParam($key + 5, $value['created_at']);
-					$rs->bindParam($key + 6, $value['updated_at']);
-				}
-
-
-				$rs->execute();
-				*/
-
-
-
-				/*
-				$rs = DB::getPdo()->prepare('
-						INSERT INTO entry("beginning", "end","1c_busy","timetable_id", "created_at", "updated_at")
-						VALUES(?, ?, ?, ?, ?, ?)'
-				);
-
-				foreach ($entry as $key => $value) {
-					$rs->bindParam(1, $value['beginning']);
-					$rs->bindParam(2, $value['end']);
-					$rs->bindParam(3, $value['1c_busy']);
-					$rs->bindParam(4, $value['timetable_id']);
-					$rs->bindParam(5, $value['created_at']);
-					$rs->bindParam(6, $value['updated_at']);
-					$rs->execute();
-				}
-
-
-				dd('Выполнен');
-
-				 */
-
-
 				//	DB::getPdo()->prepare($entry)->insert();
 
 				DB::table('timetable')->truncate();
+
+				DB::table('entry')->where('upload', 'false')->delete();
+
+				DB::table('entry')->where('upload', true)->update([
+						'upload' => false
+				]);
+
+
 				DB::table('timetable')->insert($doctor);
 
 				Storage::delete($file1COUT);

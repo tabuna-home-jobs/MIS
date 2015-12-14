@@ -2,7 +2,7 @@
 <footer id="footer" class="light">
     <div class="container">
 
-        <div class="bottom-menu-main">
+        <div class="bottom-menu-main hidden-xs">
             <nav class="navbar navbar-default" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
