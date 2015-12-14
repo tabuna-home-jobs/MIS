@@ -44,7 +44,7 @@
                                                 <input type="hidden" name="_method" value="delete">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <button type="submit" class="btn btn-danger"><span class="fa fa-trash-o"></span></button>
-                        </form></div>
+                                            </form>
                         </td>
                         </tr>
                         @endforeach
@@ -55,17 +55,7 @@
                 </div>
 
 
-                <div class="row">
-                    <div class="col-sm-6 text-center">
-                        <small class="text-muted inline m-t-sm m-b-sm">Всего элементов: {!! $Specialisty->count() !!}</small>
-                    </div>
-                    <div class="col-sm-6 text-right text-center-xs">
-                        {!! $Specialisty->render() !!}
-                    </div>
                 </div>
-
-
-            </div>
         </div>
     </div>
     </div>

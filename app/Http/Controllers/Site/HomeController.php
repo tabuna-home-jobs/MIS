@@ -21,16 +21,11 @@ class HomeController extends Controller {
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
 
 
-
-
-
-        //Получить все места
-        $place = DB::table('timetable')->select('subdivision')->distinct()->get();
-
-        return view($sitename . $sitedomen . '/index', [
+		$specialization = DB::table('timetable')->select('specialization')->distinct()->get();
+		return view($sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShares' => $getShares,
-            'place' => $place,
+				'specialization' => $specialization,
 
         ]);
     }
