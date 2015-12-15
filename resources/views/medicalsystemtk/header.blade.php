@@ -118,8 +118,8 @@
                                 <div class="col-md-6">
                                     <div class="top-contacts">
                                         <i style="display: inline!important" class="fa fa-phone top-contacts-fa" ></i>
-                                        <a href="tel:+74742227887">(4742) 227-887</a>,
-                                        <a href="tel:+74742227888">(4742) 227-888</a>
+                                        <a href="tel:+74742227887">(4742) 227-887</a>
+                                        <!-- <a href="tel:+74742227888">(4742) 227-888</a> -->
                                     </div>
 
                                 </div>

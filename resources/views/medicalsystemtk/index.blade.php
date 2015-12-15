@@ -452,7 +452,7 @@
                       </h4>
                     </div>
 
-                      <div id="collapse{{$value['id']}}" class="panel-collapse collapse @if($key == 0) in @endif ">
+                      <div id="collapse{{$value['id']}}" class="panel-collapse collapse">
                           <div class="panel-heading">
                               <span class="text-center"><img src="{{$value['avatar']}}"></span>
                           </div>
