@@ -52,6 +52,7 @@ class AppointmentController extends Controller
 				->where('timetable_id', $doctor->id)
 				->where('upload', 'false')
 				->where('beginning', '>', time())
+				->whereRaw('subdivision = ?', [$place])
 				->whereRaw(' "1c_busy" = false and ("web_busy" is NULL or "web_busy" !=TRUE ) ')
 				->orderBy('beginning', 'ASC')
 				->get();
