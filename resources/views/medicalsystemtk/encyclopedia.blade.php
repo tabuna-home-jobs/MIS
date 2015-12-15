@@ -36,6 +36,9 @@
                             @foreach($MainElementMenu as $mainElement)
 
 
+
+                                @if($mainElement->subCategory()->count()  < 2)
+
                                 <div class="panel panel-sidebar">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
@@ -59,7 +62,19 @@
                                     </div>
                                 </div>
 
+                                @else
 
+                                    <div class="panel panel-sidebar">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                @foreach($mainElement->subCategory()->get() as $subMenu)
+                                                    <a href="/medencyclopedia/{{$subMenu->id}}"><i
+                                                                class="fa fa-angle-right"></i> {{$subMenu->name}}</a>
+                                                @endforeach
+                                            </h4>
+                                        </div>
+                                    </div>
+                                @endif
 
                             @endforeach
                         </div>
@@ -79,6 +94,8 @@
 
                 </div>
                 <div class="col-md-8">
+
+                    <!--
                     <h2 class="light bordered">Тут будут человечки</h2>
                     <div class="height20"></div>
                     <div class="big-font">
@@ -86,7 +103,7 @@
                         <p>Welcome to Medicom Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore that the power..</p>
                         <img src="http://eko-zdrav.ru/ochishenie/images/308.jpg" class="img-responsive">
                         </div>
-
+                -->
 
 
 
