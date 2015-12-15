@@ -7669,19 +7669,19 @@ video {
 .tri-sec {
     width: 33.3%;
     float: left;
-    padding: 55px 2% 50px;
+    
     color: #777;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
 }
 
-.tri-sec h4, .tri-sec h4 a {
+.tri-sec span{
     font-size: 22px;
     color: #616161;
     margin-top: 16px
 }
 
-.tri-sec h4 a:hover {
+.tri-sec>a:hover {
     color: #2B96CC
 }
 
@@ -11345,3 +11345,72 @@ label[for="nav-trigger"]:hover {
 fieldset.login-fieldset input {
     width: 100%;
 }
+
+
+/* блоки внизу страниц */
+.tri-sec>a {
+	display: block;
+	padding: 55px 2% 50px;
+}
+.tri-sec>a>span ,.tri-sec-first span{
+	display: block;
+}
+.tri-sec:hover>a>span  {
+	color: white;
+}
+.tri-sec-first {
+	position: relative;
+	padding: 55px 2% 50px;
+}
+.tri-sec-first ul {
+	
+	position: absolute;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	left: 0;
+	max-height: 0;
+	list-style-type: none;
+	height: 100%;
+	overflow: hidden;
+}
+.tri-sec-first ul li {
+	
+	border-bottom: 1px #616161 solid;
+	
+	opacity: 0.8;
+	background-color: white;
+	transition: all .5s;
+}
+.tri-sec-first ul li a {
+	padding: 6%;
+	font-style: normal;
+	font-size: 18px;
+}
+.tri-sec-first:hover ul {
+	display: block;
+	max-height: 300px;
+	transition: all 1s;
+
+	
+}
+.tri-sec-first ul li:hover {
+	background-color: #2B96CC;
+	opacity: 1;
+}
+.tri-sec-first ul li a:hover {
+	color: white;
+}
+.tri-sec-first:hover ul a {
+	color: #616161;
+	display: block;
+	
+}
+.tri-sec-first:hover {
+	background-color: white;
+}
+.tri-sec-first ul li:nth-child(1) {
+	border-top: 1px #616161 solid; 
+}
+/* блоки внизу страниц */

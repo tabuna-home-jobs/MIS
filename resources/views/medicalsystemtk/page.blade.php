@@ -45,28 +45,34 @@
 
     <div class="tri-sec-bg">
         <div class="container">
-            <div class="tri-sec text-center">
+            <div class="tri-sec text-center tri-sec-first">
+                
                 <i class="feature-icon fa fa-plus-square"></i>
-                <h4 class="relative-pos">
-                    <a id="dropserv" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="relative-pos">
+                    
                         Услуги
-                        <span class="caret"></span>
-                    </a>
-                    <ul id="menu1" class="dropdown-menu custom-dropdown-menu" aria-labelledby="dropserv">
+                        <!-- <span class="caret"></span> -->
+                    </span>
+                
+                    <ul>
                         <li><a href="/service/53">Консультация</a></li>
                         <li><a href="/service/127">Диагностика</a></li>
                         <li><a href="/service/142">Лечение</a></li>
 
                     </ul>
-                </h4>
+                
             </div>
             <div class="tri-sec text-center">
+            <a href="/reviews">
                 <i class="feature-icon fa fa-thumbs-o-up"></i>
-                <h4><a href="/reviews">Отзывы</a></h4>
+                <span>Отзывы</span>
+            </a>
             </div>
             <div class="tri-sec text-center">
+                <a href="/appointment">
                 <i class="feature-icon fa fa-stethoscope"></i>
-                <h4><a href="/appointment">Записатсья на приём</a></h4>
+                <span>Записатсья на приём</span>
+                </a>
             </div>
         </div>
     </div>
