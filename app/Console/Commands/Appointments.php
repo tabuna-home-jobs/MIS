@@ -66,6 +66,16 @@ class Appointments extends Command {
 			});
 
 
+			if ($filtered->count() > 4) {
+				foreach ($filtered as $file1COUT) {
+					Storage::delete($file1COUT);
+				}
+				$filtered = [];
+			}
+
+
+
+
 			DB::connection()->disableQueryLog();
 
 			foreach ($filtered as $file1COUT) {
