@@ -187,26 +187,39 @@
 
 
 
-    <div class="tri-sec-bg">
+   <div class="tri-sec-bg">
         <div class="container">
-            <div class="tri-sec text-center">
+            <div class="tri-sec text-center tri-sec-first">
+                
                 <i class="feature-icon fa fa-plus-square"></i>
-                <h4>Услуги</h4>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.<br><a href="/service">- Перейти</a></p>
+                <span class="relative-pos">
+                    
+                        Услуги
+                        <!-- <span class="caret"></span> -->
+                    </span>
+                
+                    <ul>
+                        <li><a href="/service/53">Консультация</a></li>
+                        <li><a href="/service/127">Диагностика</a></li>
+                        <li><a href="/service/142">Лечение</a></li>
+
+                    </ul>
+                
             </div>
             <div class="tri-sec text-center">
+            <a href="/reviews">
                 <i class="feature-icon fa fa-thumbs-o-up"></i>
-                <h4>Отзывы</h4>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.<br><a href="/reviews">- Перейти</a></p>
+                <span>Отзывы</span>
+            </a>
             </div>
             <div class="tri-sec text-center">
+                <a href="/appointment">
                 <i class="feature-icon fa fa-stethoscope"></i>
-                <h4>Записатсья на приём</h4>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.<br><a href="/appointment">- Перейти</a></p>
+                <span>Записатсья на приём</span>
+                </a>
             </div>
         </div>
     </div>
-
 
 
 
