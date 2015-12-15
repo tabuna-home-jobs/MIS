@@ -86,6 +86,7 @@ class Appointments extends Command {
 								'1c_busy' => (int)$zapis->attributes()->BUSY,
 								'timetable_id' => (string) $value->attributes()->ID,
 								'upload' => true,
+								'subdivision' => (string)$value->PODR,
 						];
 					}
 
