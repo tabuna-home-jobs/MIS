@@ -1,10 +1,4 @@
-@extends('medicalsystemtk/header')
-
-
-@section('title', $Category->title)
-@section('description', $Category->descript)
-@section('keywords', $Category->tag)
-
+@extends('zdorovie48ru/header')
 
 
 
@@ -32,7 +26,6 @@
                 <div class="col-md-4">
 
 
-
                     <div class="sidebar-widget">
                         <div class="search clearfix">
                             <form method="get" action="/encypost">
@@ -41,29 +34,6 @@
                             </form>
                         </div>
                     </div>
-
-
-
-                    @if($Category->subCategory()->first())
-                        <div class="sidebar-widget clearfix">
-                            <h2 class="bordered light">Подкатегории</h2>
-                            <ul class="tags">
-                        @foreach($Category->subCategory()->get() as $subCategory)
-                                    <li><a href="/medencyclopedia/{{$subCategory->id}}">{{$subCategory->name}}</a></li>
-                        @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
-
-
-
-
-
-
-
-
-
 
                     <div class="procedures">
                         <h3>Разделы</h3>
@@ -107,60 +77,68 @@
                         </div>
                     </div>
 
-
-                        <div class="sidebar-widget clearfix">
-                            <h2 class="bordered light">Алфавитный указатель</h2>
-                            <ul class="archives">
-                                @foreach($Index as $bukva)
-                                    <li><a href="/encypost?index={{$bukva->name}}"><i class="fa fa-long-arrow-right"></i>{{$bukva->name}}</a></li>
-                                @endforeach
-                            </ul>
-                        </div>
+                    <div class="sidebar-widget clearfix">
+                        <h2 class="bordered light">Алфавитный указатель</h2>
+                        <ul class="archives">
+                            @foreach($Index as $bukva)
+                                <li><a href="/encypost?index={{$bukva->name}}"><i class="fa fa-long-arrow-right"></i>{{$bukva->name}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
 
 
                 </div>
                 <div class="col-md-8">
-                    <h2 class="light bordered">{{$Category->name}}</h2>
 
-                    <div class="height20"></div>
-                    <div>
-                        {!! $Category->text !!}
+
+
+                    @forelse($PostList as $post)
+                        <div class="col-md-6">
+                        <article class="blog-item">
+                            <div class="blog-thumbnail">
+                                <img src="{{$post->avatar}}" alt="">
+                            </div>
+                            <div class="blog-content">
+                                <h4 class="blog-title"><a href="/encypost/{{$post->id}}">{{$post->name}}</a></h4>
+
+                                <p>
+                                    {{str_limit((strip_tags($post->opisanie)), $limit = 100, $end = '...')}}
+                                </p>
+                                <a class="btn btn-default btn-mini btn-rounded" href="/encypost/{{$post->id}}">Читать полностью</a>
+                            </div>
+                        </article>
+                            </div>
+
+                        @empty
+
+                        <h1>Ничего не найдено</h1>
+
+
+                    @endforelse
+
+
+
+
+
+
+
+
+
+
                     </div>
 
 
-                    @if($Post->first())
-                        <h2 class="light bordered">Новые материалы данной категории:</h2>
-                        <div class="height20"></div>
 
-                        @foreach($Post as $post)
 
-                            <section class="col-md-12 ">
-                                <article class="blog-item">
-                                    <div class="blog-thumbnail">
-                                        <img src="{{$post->avatar}}" alt="">
-                                    </div>
-                                    <div class="blog-content">
-                                        <h4 class="blog-title"><a href="/encypost/{{$post->id}}">{{$post->name}}</a></h4>
 
-                                        <p>
-                                            {{str_limit((strip_tags($post->opisanie)), $limit = 100, $end = '...')}}
-                                        </p>
-                                        <a class="btn btn-default btn-mini btn-rounded" href="/encypost/{{$post->id}}">Читать полностью</a>
-                                    </div>
-                                </article>
-                            </section>
-                        @endforeach
-                    @endif
-
-                    <div class="row text-center">
-                        {!! $Post->render() !!}
-                    </div>
 
                 </div>
             </div>
         </div>
 
+            {!! $PostList->render() !!}
         <div class="clr"></div>
+
     </div><!--end sub-page-content-->
 
 

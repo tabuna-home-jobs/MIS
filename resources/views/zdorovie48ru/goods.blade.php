@@ -1,4 +1,4 @@
-@extends('medicalsystemtk/header')
+@extends('zdorovie48ru/header')
 
 @section('content')
     <!--<section class="sub-page-banner text-center hidden-xs">
@@ -27,7 +27,7 @@
 
                                 <ul class="menu-catalog">
                                 @foreach($Goods->toTree() as $category)
-                                    @include('medicalsystemtk.category.category', $category)
+                                        @include('zdorovie48ru.category.category', $category)
                                 @endforeach
                                 </ul>
 

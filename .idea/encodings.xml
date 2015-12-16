@@ -21,8 +21,6 @@
     <file url="file://$PROJECT_DIR$/resources/views/karta-uspeharu/goods.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/karta-uspeharu/headerPage.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/karta-uspeharu/page.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/medicalsystemtk/appointment.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/medicalsystemtk/video.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/mother-babyru/Articles.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/mother-babyru/artItem.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/mother-babyru/blogNews.blade.php" charset="UTF-8" />
@@ -42,6 +40,8 @@
     <file url="file://$PROJECT_DIR$/resources/views/stomzn48ru/goods.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/stomzn48ru/headerPage.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/stomzn48ru/page.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/zdorovie48ru/appointment.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/zdorovie48ru/video.blade.php" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

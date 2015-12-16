@@ -211,4 +211,4 @@
 @yield('content')
 
 
-@include('medicalsystemtk/footer')
+@include('zdorovie48ru/footer')

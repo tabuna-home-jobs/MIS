@@ -1,4 +1,4 @@
-@extends('medicalsystemtk/header')
+@extends('zdorovie48ru/header')
 
 @section('content')
     <section class="sub-page-banner text-center hidden-xs">
@@ -25,7 +25,7 @@
 
                             <div class="panel-group sidebar-nav" id="accordion3">
                                 @foreach($Goods->toTree() as $category)
-                                    @include('medicalsystemtk.category.category', $category)
+                                    @include('zdorovie48ru.category.category', $category)
                                 @endforeach
 
                             </div>
