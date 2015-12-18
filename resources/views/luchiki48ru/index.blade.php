@@ -11,7 +11,7 @@
 
         <?php $i = 1; ?>
         @foreach(GoodsMain::getGoods(7,42,8) as $item)
-            <div class="circle pad-{{$i}}"><img src="{{$item['avatar']}}"><p><a href="/service/{{$item['id']}}">Развивающая и досуговая деятельность</a></p></div>
+            <div class="circle pad-{{$i}}"><img src="{{$item['avatar']}}"><p><a href="/service/{{$item['id']}}">{{$item['name']}}</a></p></div>
         <?php $i++; ?>
         @endforeach
 
