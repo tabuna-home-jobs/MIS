@@ -499,3 +499,18 @@ left: 88%;
 .page-content {
     margin-bottom: 30px;
 }
+.doctors-detail .heading {
+    font-weight: bold;
+}
+.inline-block-grids {
+    font-size: 0;
+}
+.inline-block-grids>div {
+    font-size: 16px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+}
+.doctors {
+    margin-bottom: 25px;
+}

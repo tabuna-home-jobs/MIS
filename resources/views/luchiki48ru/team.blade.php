@@ -8,27 +8,44 @@
         
         <div class="container">
         	<h2 class="light bordered main-title">Наши <span> Специалисты</span></h2>
-     		<div style="font-size: 0" class="row">
+     		<div class="row inline-block-grids">
 
 
                 @foreach($Specialisty as $spec)
-            	<div style="float: none!important;display: inline-block!important;vertical-align: top;text-align: center" class="col-sm-4 col-md-3 col-xs-12 padding-bottom-60 clearfix">
+            	<div class="doctors col-sm-4 col-md-3 col-xs-12 padding-bottom-60 clearfix">
                     <div class="doctors-img"><img src="{{$spec->avatar}}" width="234" alt="" title="">
 
                         </div>
                     <div class="doctors-detail">
                         <h4>{{$spec->fio}}<span class="text-center">{{$spec->subname}}</span></h4>
-
-                        <p><label class="heading">Специализация: </label><label
-                                    class="detail">{{$spec->special}}</label>
+                        
+                        @if(isset($spec->special) && trim($spec->special) !== "")
+                        <p>
+                            <span class="heading">Специализация: </span>
+                            <span class="detail">{{$spec->special}}</span>
                         </p>
-
-                        <p><label class="heading">Образование</label><label
-                                    class="detail">{{$spec->obrazovanie}}</label></p>
-
-                        <p><label class="heading">Опыт: </label><label class="detail">{{$spec->opyt}} </label></p>
-
-                        <p><label class="heading">Умения:</label><label class="detail">{{$spec->about}} </label></p>
+                        @endif
+                        
+                        @if(isset($spec->obrazovanie) && trim($spec->obrazovanie) !== "")
+                        <p>
+                            <span class="heading">Образование</span>
+                            <span class="detail">{{$spec->obrazovanie}}</span>
+                        </p>
+                        @endif
+                        
+                        @if(isset($spec->opyt) && trim($spec->opyt) !== "")
+                        <p>
+                            <span class="heading">Должность: </span>
+                            <span class="detail">{{$spec->opyt}} </span>
+                        </p>
+                        @endif
+                        
+                        @if(isset($spec->about) && trim($spec->about) !== "" )
+                        <p>
+                            <span class="heading">Умения:</span>
+                            <span class="detail">{{$spec->about}} </span>
+                        </p>
+                        @endif
 
                         </div>
                 </div>
