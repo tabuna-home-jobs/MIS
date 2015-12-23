@@ -307,7 +307,6 @@
             <div class="sites-slide"><img src="/stomzn48.ru/img/zn3.png"></div>
             <div class="sites-slide"><img src="/stomzn48.ru/img/zn4.png"></div>
             <div class="sites-slide"><img src="/stomzn48.ru/img/zn5.png"></div>
-            <div class="sites-slide"><img src="/stomzn48.ru/img/zn-blank.png"></div>
         </div>
         <script type="text/javascript">
             $('.responsive').slick({
