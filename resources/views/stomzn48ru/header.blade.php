@@ -13,9 +13,11 @@
     <script src="/stomzn48.ru/js/jquery.easing.min.js"></script>
     <script src="/stomzn48.ru/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/stomzn48.ru/js/slick.min.js"></script>
+    <link rel="stylesheet" href="/luchiki48.ru/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/luchiki48.ru/js/fancybox/jquery.fancybox.pack.js"></script>
     <script>
-        $(document).mousewheel(function(event) {
-            console.log(event.deltaX, event.deltaY, event.deltaFactor);
+        $(document).ready(function(){
+            $('.fancybox').fancybox();
         });
     </script>
 </head>
