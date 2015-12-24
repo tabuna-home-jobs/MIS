@@ -2,10 +2,10 @@
 
 
 
-@section('title', $Goods->title)
-@section('description', $Goods->descript)
-@section('keywords', $Goods->tag)
-@section('avatar', $Goods->avatar)
+@section('title', $Good->title)
+@section('description', $Good->descript)
+@section('keywords', $Good->tag)
+@section('avatar', $Good->avatar)
 
 
 
@@ -19,12 +19,12 @@
             <ul class="breadcrumb">
                 <li><a href="/">Главная</a> <span class="divider"></span></li>
                 <li><a href="/service">Наши услуги</a> <span class="divider"></span></li>
-                <li class="active">{{$Goods['name']}}</li>
+                <li class="active">{{$Good['name']}}</li>
             </ul>
-            <h1>{{$Goods['name']}}</h1>
+            <h1>{{$Good['name']}}</h1>
             <div class="page-text">
-                <div class="good-img"><img src="{{$Goods['avatar']}}"></div>
-                {!! $Goods['text'] !!}
+                <div class="good-img"><img src="{{$Good['avatar']}}"></div>
+                {!! $Good['text'] !!}
             </div>
         </div>
     </div>
