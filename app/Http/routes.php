@@ -166,5 +166,11 @@ Route::group(['namespace' => 'API', 'middleware' => 'cors','prefix' => 'api'], f
 });*/
 
 
+Route::get('socket', function () {
+    return view('chat.socket');
+});
+Route::get('/consult', function () {
+    return view('chat.consult');
+});
 
 

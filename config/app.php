@@ -152,6 +152,7 @@ return [
         'Watson\Active\ActiveServiceProvider',
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
+			Orchid\Socket\Providers\SocketServiceProvider::class
     ],
 
 	/*

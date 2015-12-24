@@ -218,5 +218,154 @@
 </script>
 
 
+<div id="consult-app">
+
+    <style>
+
+
+        #consult-button {
+            position: fixed;
+            top: 300px;
+            right: 0px;
+            z-index: 15;
+        }
+
+        #consult-app .rotated-text {
+            display: inline-block;
+            width: 1em;
+        }
+
+        #consult-app .rotated-text__inner {
+            display: inline-block;
+            white-space: nowrap;
+            /* this is for shity "non IE" browsers
+               that dosn't support writing-mode */
+            -webkit-transform: translate(1.1em, 0) rotate(90deg);
+            -moz-transform: translate(1.1em, 0) rotate(90deg);
+            -o-transform: translate(1.1em, 0) rotate(90deg);
+            transform: translate(1.1em, 0) rotate(90deg);
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -o-transform-origin: 0 0;
+            transform-origin: 0 0;
+            /* IE9+ */
+            -ms-transform: none;
+            -ms-transform-origin: none;
+            /* IE8+ */
+            -ms-writing-mode: tb-rl;
+            /* IE7 and below */
+            *writing-mode: tb-rl;
+        }
+
+        #consult-app .rotated-text__inner:before {
+            content: "";
+            float: left;
+            margin-top: 100%;
+        }
+
+        #consult-app .consult-hidden {
+            display: none;
+        }
+
+        #consult-app .consult-show {
+            display: block;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        #consult-app .btn-consult {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+
+        }
+
+    </style>
+
+
+    <div class="btn-consult" id="consult-button">
+        <div class="rotated-text"><span class="rotated-text__inner">Онлайн Консультант</span></div>
+    </div>
+
+    <iframe src="/consult" width="500px" height="650px" align="left" scrolling="no" frameborder="no" id="consult-frame"
+            class="consult-hidden">
+        Ваш браузер не поддерживает плавающие фреймы!
+    </iframe>
+
+    <script>
+
+
+        window.onload = function () {
+
+
+            function hideOrShow() {
+
+                if (document.getElementById("consult-frame").className == "consult-hidden") {
+                    document.getElementById("consult-frame").className = "consult-show";
+                    document.getElementById("consult-button").className = "consult-hidden";
+
+
+                }
+                else {
+                    document.getElementById("consult-frame").className = "consult-hidden";
+                    document.getElementById("consult-button").className = "btn-consult";
+                }
+            }
+
+
+            document.getElementById('consult-button').onclick = function () {
+                hideOrShow();
+            };
+
+
+            document.getElementById('consult-app')
+                    .getElementsByTagName('iframe')[0].contentWindow
+                    .document.getElementById('consult-close').onclick = function () {
+                hideOrShow();
+
+
+            }
+
+
+        }
+
+
+    </script>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
