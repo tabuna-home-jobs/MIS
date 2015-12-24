@@ -5,7 +5,7 @@
             <div class="heder-h2 col-md-12"><hr class="hidden-sm hidden-xs"><h2>ПРЕИМУЩЕСТВА НАШЕЙ КЛИНИКИ</h2></div>
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-6 col-lg-push-1">
-                    <div class="item">
+                    <div class="item anim-block1 animated">
                         <div class="item-img">
                             <img src="/stomzn48.ru/img/adv1.png">
                         </div>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 col-lg-push-1">
-                    <div class="item">
+                    <div class="item anim-block1 animated">
                         <div class="item-img">
                             <img src="/stomzn48.ru/img/adv2.png">
                         </div>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 col-lg-push-1">
-                    <div class="item">
+                    <div class="item anim-block1 animated">
                         <div class="item-img">
                             <img src="/stomzn48.ru/img/adv3.png">
                         </div>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6 col-lg-push-1">
-                    <div class="item">
+                    <div class="item anim-block1 animated">
                         <div class="item-img">
                             <img src="/stomzn48.ru/img/adv4.png">
                         </div>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-12 col-lg-push-1">
-                    <div class="item">
+                    <div class="item anim-block1 animated">
                         <div class="item-img">
                             <img src="/stomzn48.ru/img/adv5.png">
                         </div>
@@ -90,7 +90,7 @@
             <div class="heder-h2-white col-md-12"><hr><h2>НАШИ УСЛУГИ</h2></div>
 
             @foreach(GoodsMain::getGoods(10,46,4) as $item)
-            <div class="service col-md-3 col-sm-6">
+            <div class="service anim-block2 col-md-3 col-sm-6">
                 <p><img src="{{$item['avatar']}}"></p>
                 <p><a href="/service/{{$item['id']}}">{{$item['name']}}</a></p>
             </div>
@@ -319,5 +319,40 @@
                 nextArrow:'<button type="button" class="slick-next sites-next"></button>'
             });
         </script>
+<script type="text/javascript">
+    $('.anim-block1').last().on('scrollSpy:enter', function() {
+        if(!$('.anim-block1').hasClass('flipInY')){
+            var i = 0;
+                                    $('.anim-block1').each(function(){
+                                        var that = $(this);
+                                        setTimeout(function(){
+                                        that.css('opacity',1).addClass('flipInY animated');
+                                        },i+=100); 
+                                    });
+        }                             
+    });
+    $('.anim-block1').last().on('scrollSpy:exit', function() {
+        $('.anim-block1').removeClass('flipInY').css('opacity',0);
+    });
+    $('.anim-block1').scrollSpy();
+</script>
+<script type="text/javascript">
+    $('.anim-block2').last().on('scrollSpy:enter', function() {
+        if(!$('.anim-block2').hasClass('flipInX')){
+            var i = 0;
+                                    $('.anim-block2').each(function(){
+                                        var that = $(this);
+                                        setTimeout(function(){
+                                        that.css('opacity',1).addClass('flipInX animated');
+                                        },i+=100);
+                                    });
+        }                        
+    });
+    $('.anim-block2').last().on('scrollSpy:exit', function() {
+        $('.anim-block2').removeClass('flipInX').css('opacity',0);
+    });
+    $('.anim-block2').scrollSpy();
+</script>
+
     </div>
 @endsection

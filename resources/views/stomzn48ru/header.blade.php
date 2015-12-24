@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="/stomzn48.ru/css/style.css">
     <link rel="stylesheet" href="/stomzn48.ru/css/media-queries.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/css/animate.min.css">
     <script src="/stomzn48.ru/js/jquery.min.js"></script>
     <script src="/stomzn48.ru/js/jquery.mousewheel.min.js"></script>
     <script src="/stomzn48.ru/js/jquery.easing.min.js"></script>
     <script src="/stomzn48.ru/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/stomzn48.ru/js/slick.min.js"></script>
+    <script type="text/javascript" src="/stomzn48.ru/js/scrollspy.js"></script>
     <link rel="stylesheet" href="/luchiki48.ru/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/luchiki48.ru/js/fancybox/jquery.fancybox.pack.js"></script>
     <script>
