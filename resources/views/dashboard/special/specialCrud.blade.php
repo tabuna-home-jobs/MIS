@@ -128,8 +128,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Образование</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="obrazovanie"
-                                           value="{{$Spec->obrazovanie or ''}}">
+                                    <textarea class="form-control" type="text" maxlength="255" required name="obrazovanie"
+                                    >{{$Spec->obrazovanie or ''}} </textarea>
                                 </div>
 
                                 <div class="form-group">

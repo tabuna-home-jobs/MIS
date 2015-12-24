@@ -53,6 +53,8 @@ class SpecialistyController extends Controller
                 'works' => serialize($request->works),
                 'cats' => $request->cats,
                 'sort' => $request->sort,
+                'staj' => $request->staj,
+                'sertificats' => $request->sertificats,
                 'ids' => Session::get('website'),
         ]);
 
@@ -84,6 +86,8 @@ class SpecialistyController extends Controller
             'works' => serialize($request->works),
             'ids' => Session::get('website'),
             'sort' => $request->sort,
+            'staj' => $request->staj,
+            'sertificats' => $request->sertificats
         ]);
 
         if (Request::hasFile('avatar')) {

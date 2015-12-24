@@ -58,8 +58,19 @@
                         </div>
                         <div class="form-group">
                             <label>Образование</label>
-                            <input class="form-control" type="text" maxlength="255"  name="obrazovanie"
-                                   value="{{$Spec->obrazovanie or old('obrazovanie')}}">
+                            <textarea class="form-control" rows="5" required name="obrazovanie"
+                                    >{{$Spec->obrazovanie or ''}} </textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Сертификаты</label>
+                            <input class="form-control" type="text" maxlength="255"  name="sertificats"
+                                   value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Стаж работы</label>
+                            <input class="form-control" type="text" maxlength="255"  name="staj"
+                                   value="">
                         </div>
 
 
