@@ -328,6 +328,8 @@
   ga('send', 'pageview');
 
 </script>
+
+
 <!--LiveInternet counter--><script type="text/javascript"><!--
 document.write("<a href='http://www.liveinternet.ru/click' "+
 "target=_blank><img src='//counter.yadro.ru/hit?t18.6;r"+
@@ -337,7 +339,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 ";h"+escape(document.title.substring(0,80))+";"+Math.random()+
 "' alt='' title='LiveInternet: ???????? ????? ?????????? ?? 24"+
 " ????, ??????????? ?? 24 ???? ? ?? ???????' "+
-"border='0' width='88' height='31'><\/a>")
+"border='0' width='0' height='0'><\/a>")
 //--></script><!--/LiveInternet-->
 
 <!-- Yandex.Metrika counter -->
