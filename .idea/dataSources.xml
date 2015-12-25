@@ -6,12 +6,14 @@
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://193.111.141.198:5432/octavian_mis</jdbc-url>
+      <libraries />
     </data-source>
     <data-source source="LOCAL" name="PostgreSQL - octavian_mis@193.111.141.198" uuid="3578d799-d67b-4c17-958f-4955ab0f8904">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://193.111.141.198:5432/octavian_mis</jdbc-url>
+      <libraries />
     </data-source>
   </component>
 </project>

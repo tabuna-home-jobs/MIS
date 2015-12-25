@@ -14,8 +14,9 @@ class SpecCatController extends Controller
 
     public function index()
     {
-        $Category = SpecCat::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+        //$Category = SpecCat::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
 
+        $Category = SpecCat::orderBy('id', 'desc')->paginate(15);
         return view("dashboard/special/categorySpecial",['Category' => $Category ]);
     }
 
