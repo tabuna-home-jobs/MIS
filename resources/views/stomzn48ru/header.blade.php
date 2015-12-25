@@ -17,6 +17,7 @@
     <script type="text/javascript" src="/stomzn48.ru/js/scrollspy.js"></script>
     <link rel="stylesheet" href="/luchiki48.ru/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/luchiki48.ru/js/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
     <script>
         $(document).ready(function(){
             $('.fancybox').fancybox();

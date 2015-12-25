@@ -3,7 +3,10 @@
         <div class="be-careful col-md-12">
             Имеются противопоказания, необходима консультация специалистов
         </div>
-        <div class="share col-md-12">Подлелиться с друзьями с социальных сетях</div>
+        <div class="share col-md-12">
+        Подлелиться с друзьями с социальных сетях
+        <script type="text/javascript"><!--document.write(VK.Share.button());--></script>
+        </div>
     </div>
     <div class="footer-menu container">
         <nav class="navbar navbar-default footer-menu-nav">

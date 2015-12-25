@@ -13,6 +13,7 @@
     <script src="/stomzn48.ru/js/jquery.easing.min.js"></script>
     <script src="/stomzn48.ru/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/stomzn48.ru/js/slick.min.js"></script>
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
     <script>
         $(document).mousewheel(function(event) {
             console.log(event.deltaX, event.deltaY, event.deltaFactor);
