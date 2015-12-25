@@ -701,3 +701,12 @@ max-width: 100%;
 .page-content h1{
 	margin:25px 0;
 }
+.anim-block1{
+opacity: 0;
+}
+.anim-block2{
+opacity: 0;
+}
+.anim-block3{
+opacity: 0;
+}

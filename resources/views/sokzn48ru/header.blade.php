@@ -7,10 +7,12 @@
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/css/slick.css">
     <link rel="stylesheet" type="text/css" href="/luchiki48.ru/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/style.css">
+    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/css/animate.min.css">
     <title>COK</title>
     <script type="text/javascript" src="/sokzn48.ru/js/jquery.js"></script>
     <script type="text/javascript" src="/sokzn48.ru/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/sokzn48.ru/js/slick.min.js"></script>
+    <script type="text/javascript" src="/stomzn48.ru/js/scrollspy.js"></script>
 
 </head>
 <body>

@@ -7,27 +7,27 @@
         <div class="container">
             <div class="row">
                 <div class="advantages-head col-md-12"><h3><p>НАШИ</p><span>ПРЕИМУЩЕСТВА</span></h3></div>
-                <div class="advantages-single col-md-2 col-sm-4">
+                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
                     <p><img src="/sokzn48.ru/img/advantage1.png"></p>
                     <p>Высокое качество услуг</p>
                 </div>
-                <div class="advantages-single col-md-2 col-sm-4">
+                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
                     <p><img src="/sokzn48.ru/img/advantage2.png"></p>
                     <p>Высокий сервис</p>
                 </div>
-                <div class="advantages-single col-md-2 col-sm-4">
+                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
                     <p><img src="/sokzn48.ru/img/advantage3.png"></p>
                     <p>Профессиональность и высококлассность специалистов</p>
                 </div>
-                <div class="advantages-single col-md-2 col-sm-4">
+                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
                     <p><img src="/sokzn48.ru/img/advantage4.png"></p>
                     <p>Реальные цены</p>
                 </div>
-                <div class="advantages-single col-md-2 col-sm-4">
+                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
                     <p><img src="/sokzn48.ru/img/advantage5.png"></p>
                     <p>Большой перечень услуг в одном месте</p>
                 </div>
-                <div class="advantages-single col-md-2 col-sm-4">
+                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
                     <p><img src="/sokzn48.ru/img/advantage6.png"></p>
                     <p>Ориентация на клиентов всех возрастов</p>
                 </div>
@@ -183,7 +183,7 @@
 
 
                 @foreach(GoodsMain::getGoods(9,50,4) as $item)
-                <div class="single-direction col-md-3 col-sm-6">
+                <div class="single-direction anim-block2 animated col-md-3 col-sm-6">
                     <div class="direction-img">
                         <img src="{{$item['avatar']}}">
                     </div>
@@ -287,7 +287,7 @@
                 <div class="green-head"><h3>ФОТОГАЛЕРЕЯ</h3></div>
 
                 @foreach(GalleryOnMain::getItem(9,24,8) as $item)
-                <div class="gallery-img col-md-3 col-sm-6 col-xs-6">
+                <div class="gallery-img anim-block3 animaded col-md-3 col-sm-6 col-xs-6">
                     <img src="{{$item['url']}}">
                 </div>
                 @endforeach
@@ -485,5 +485,56 @@
         Имеются противопоказания, необходима консультация специалистов
     </div>
 </div>
+<script type="text/javascript">
+    $('.anim-block1').last().on('scrollSpy:enter', function() {
+        if(!$('.anim-block1').hasClass('flipInY')){
+            var i = 0;
+                                    $('.anim-block1').each(function(){
+                                        var that = $(this);
+                                        setTimeout(function(){
+                                        that.css('opacity',1).addClass('flipInY animated');
+                                        },i+=100); 
+                                    });
+        }                             
+    });
+    $('.anim-block1').last().on('scrollSpy:exit', function() {
+        $('.anim-block1').removeClass('flipInY').css('opacity',0);
+    });
+    $('.anim-block1').scrollSpy();
+</script>
+<script type="text/javascript">
+    $('.anim-block2').last().on('scrollSpy:enter', function() {
+        if(!$('.anim-block2').hasClass('flipInX')){
+            var i = 0;
+                                    $('.anim-block2').each(function(){
+                                        var that = $(this);
+                                        setTimeout(function(){
+                                        that.css('opacity',1).addClass('flipInX animated');
+                                        },i+=100); 
+                                    });
+        }                             
+    });
+    $('.anim-block2').last().on('scrollSpy:exit', function() {
+        $('.anim-block2').removeClass('flipInX').css('opacity',0);
+    });
+    $('.anim-block2').scrollSpy();
+</script>
+<script type="text/javascript">
+    $('.anim-block3').last().on('scrollSpy:enter', function() {
+        if(!$('.anim-block3').hasClass('fadeInRight')){
+            var i = 0;
+                                    $('.anim-block3').each(function(){
+                                        var that = $(this);
+                                        setTimeout(function(){
+                                        that.css('opacity',1).addClass('fadeInRight animated');
+                                        },i+=100); 
+                                    });
+        }                             
+    });
+    $('.anim-block3').last().on('scrollSpy:exit', function() {
+        $('.anim-block3').removeClass('fadeInRight').css('opacity',0);
+    });
+    $('.anim-block3').scrollSpy();
+</script>
 <!-- END MAINFIELD -->
 @endsection
