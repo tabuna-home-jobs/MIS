@@ -1,4 +1,4 @@
-@extends('karta-uspeharu/headerPage')
+@extends('stomzn48ru/headerPage')
 
 @section('content')
 
@@ -35,19 +35,14 @@
                             </ul>
                         </div>
                         <div class="doctors-detail">
+
                             <h4>{{$spec->fio}}<span class="text-center">{{$spec->subname}}</span></h4>
-
-                            <p><label class="heading">Специализация: </label><label
-                                        class="detail">{{$spec->special}}</label>
-                            </p>
-
+                            @if(isset($spec->obrazovanie) and trim($spec->obrazovanie) !=='')<p><label class="heading">Образование: </label><label class="detail">{{$spec->obrazovanie}}</label></p>@endif
+                            @if(isset($spec->opyt) and trim($spec->opyt) !=='')<p><label class="heading">Должность: </label><label class="detail">{{$spec->opyt}} </label></p>@endif
+                            @if(isset($spec->special) and trim($spec->special) !=='')<p><label class="heading">Специализация: </label><label class="detail">{{$spec->special}}</label></p>@endif
+                            @if(isset($spec->staj) and trim($spec->staj) !=='')<p><label class="heading">Стаж работы:</label><label class="detail">{{$spec->staj}} </label></p>@endif
+                            @if(isset($spec->sertificats) and trim($spec->sertificats) !=='')<p><label class="heading">Сертификаты:</label><label class="detail">{{$spec->sertificats}} </label></p>@endif
                             
-
-                            <p><label class="heading">Должность: </label><label class="detail">{{$spec->opyt}} </label></p>
-
-                            <p><label class="heading">Умения:</label><label class="detail">{{$spec->about}} </label></p>
-
-
                         </div>
                     </div>
 

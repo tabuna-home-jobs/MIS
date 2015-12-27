@@ -65,12 +65,12 @@
                         <div class="form-group">
                             <label>Сертификаты</label>
                             <input class="form-control" type="text" maxlength="255"  name="sertificats"
-                                   value="">
+                                   value="{{$Spec->sertificats or ''}}">
                         </div>
                         <div class="form-group">
                             <label>Стаж работы</label>
                             <input class="form-control" type="text" maxlength="255"  name="staj"
-                                   value="">
+                                   value="{{$Spec->staj or ''}}">
                         </div>
 
 
