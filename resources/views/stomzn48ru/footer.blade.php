@@ -4,8 +4,8 @@
             Имеются противопоказания, необходима консультация специалистов
         </div>
         <div class="share col-md-12">
-        Подлелиться с друзьями с социальных сетях
-        <script type="text/javascript"><!--document.write(VK.Share.button());--></script>
+        <div class="col-md-5">Подлелиться с друзьями с социальных сетях</div>
+        <div class=" col-md-7 ya-share2" data-services="vkontakte,facebook,odnoklassniki" data-counter=""></div>
         </div>
     </div>
     <div class="footer-menu container">
@@ -40,9 +40,9 @@
         <div class="right-footer col-md-4">
             <div class="col-md-7">Присоединяйтесь к нам в соцсетях:</div>
             <div class="col-md-5 social-links">
-                <a href="" alt="" title=""></a>
-                <a href="" alt="" title=""></a>
-                <a href="" alt="" title=""></a>
+                <a href="http://vk.com/zdorovie_nacii48" alt="Мы вконтакте" title="Мы вконтакте"></a>
+                <a href="http://www.odnoklassniki.ru/group52174602436776" alt="Мы в одноклассниках" title="Мы в одноклассниках"></a>
+                <a href="https://www.facebook.com/groups/zdorovie48/ " alt="Мы на фейсбуке" title="Мы на фейсбуке"></a>
             </div>
         </div>
         <div class="copyrights col-md-12">
@@ -51,12 +51,26 @@
                 Представленная на сайте информация носит исключительно ознакомительный характер
             </div>
             <div class="copy-octavian col-md-5">
-                <p>Разработка, поддержка и продвижение сайтов<img src="/stomzn48.ru/img/octavian.png"><p>
-                    <a href="">Сообщить об ошибке</a>
+                <p>Разработка, поддержка и продвижение сайтов<a href="http://octavian48.ru/"><img src="/stomzn48.ru/img/octavian.png"></a><p>
+                    <a href="#openModal">Сообщить об ошибке</a>
             </div>
         </div>
     </div>
 </div>
 </div>
+
+<div id="openModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Закрыть" class="close">X</a>
+        <h2>Сообщение об ошибке</h2>
+        <form action="/" method="post" id="err-form">
+            <input type="hidden" name="modal2" id="modal2" value="false" />
+            <input type = "hidden" name="page" id="page" value="">
+          <textarea name="error-req" type="text" placeholder="Опишите ошибку:" required></textarea>
+          <button>Отправить</button>
+        </form>
+    </div>
+</div>
+
 </body>
 </html>

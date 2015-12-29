@@ -13,7 +13,8 @@
     <script src="/stomzn48.ru/js/jquery.easing.min.js"></script>
     <script src="/stomzn48.ru/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/stomzn48.ru/js/slick.min.js"></script>
-    <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+    <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script src="https://yastatic.net/share2/share.js" async="async"></script>
     <script>
         $(document).mousewheel(function(event) {
             console.log(event.deltaX, event.deltaY, event.deltaFactor);
@@ -42,9 +43,9 @@
                             <div class="row">
                                 <div class="col-md-7">Присоединяйтесь к нам в соцсетях:</div>
                                 <div class="col-md-5 social-links">
-                                    <a href="" alt="" title=""></a>
-                                    <a href="" alt="" title=""></a>
-                                    <a href="" alt="" title=""></a>
+                                    <a href="http://vk.com/zdorovie_nacii48" alt="Мы вконтакте" title="Мы вконтакте"></a>
+                                    <a href="http://www.odnoklassniki.ru/group52174602436776" alt="Мы в одноклассниках" title="Мы в одноклассниках"></a>
+                                    <a href="https://www.facebook.com/groups/zdorovie48/ " alt="Мы на фейсбуке" title="Мы на фейсбуке"></a>
                                 </div>
                             </div>
                         </div>
