@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/css/slick.css">
     <link rel="stylesheet" type="text/css" href="/luchiki48.ru/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/style.css">
+    <meta name="robots" content="noindex"/>
     <title>COK</title>
     <script type="text/javascript" src="/sokzn48.ru/js/jquery.js"></script>
     <script type="text/javascript" src="/sokzn48.ru/js/bootstrap.min.js"></script>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noindex"/>
     <title></title>
     <link rel="stylesheet" href="/luchiki48.ru/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/luchiki48.ru/css/slick.css">

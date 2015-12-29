@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/karta-uspeha.ru/css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/luchiki48.ru/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/karta-uspeha.ru/style.css">
+    <meta name="robots" content="noindex"/>
     <title>Ценр психологического развития личности </title>
     <script type="text/javascript" src="/karta-uspeha.ru/js/jquery.js"></script>
     <script type="text/javascript" src="/karta-uspeha.ru/js/bootstrap.min.js"></script>

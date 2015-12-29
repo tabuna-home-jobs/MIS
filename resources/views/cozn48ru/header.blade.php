@@ -9,7 +9,7 @@
     <script type="text/javascript" src="/cozn48.ru/js/jquery.js"></script>
     <script type="text/javascript" src="/cozn48.ru/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/cozn48.ru/js/slick/slick.css"/>
-
+    <meta name="robots" content="noindex"/>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <script type="text/javascript" src="/cozn48.ru/js/slick/slick.min.js"></script>

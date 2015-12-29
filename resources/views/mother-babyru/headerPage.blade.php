@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex"/>
     <link rel="stylesheet" type="text/css" href="/karta-uspeha.ru/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/karta-uspeha.ru/css/slick.css">
     <link rel="stylesheet" href="/karta-uspeha.ru/css/animate.min.css">
