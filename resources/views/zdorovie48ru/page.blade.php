@@ -19,9 +19,13 @@
                     <h2 class="bordered light">{{$Page['name']}}</h2>
 
                     <article class="blog-item blog-full-width blog-detail">
+
+
+                        @if(!empty($Page['avatar']))
                         <div class="blog-thumbnail">
                             <img src="{{$Page['avatar']}}">
                         </div>
+                        @endif
 
                         <div class="blog-content">
                             {!! $Page['content'] !!}

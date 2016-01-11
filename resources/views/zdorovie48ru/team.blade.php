@@ -64,7 +64,7 @@
                                     </div>
                                 @endif
 
-                                @if(empty(!$spec->obrazovanie))
+                                @if(empty(!$spec->obrazovanie) && trim($spec->obrazovanie) !== '')
                                     <div>
                                         <div class="heading-doc">Образование</div>
                                         <div class="detail-doc">{{$spec->obrazovanie or ''}}</div>
