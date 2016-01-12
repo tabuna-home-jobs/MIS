@@ -26,7 +26,7 @@
                     <form action="/feedback" method="post">
                         <input type="text" name="fio" placeholder="ФИО" required>
                         <input type="email" name="email" placeholder="Email" required>
-                        <input type="text" name="phone" placeholder="Телефон" required>
+                        <input type="text" name="phone" placeholder="Телефон" data-mask="+ 9-999-999-99-99">
                         <textarea name="message" required placeholder="Текст сообщения"></textarea>
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="submit" class="btn btn-default" value="Отправить">

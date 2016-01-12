@@ -8154,7 +8154,7 @@ video {
 }
 
 .medicom-app {
-    background: url(../images/app-available-img.jpg) center top fixed;
+    background: url(../images/app-available-img.png) center top fixed;
     height: 545px;
     position: relative
 }
@@ -8283,7 +8283,8 @@ footer.light .copyright {
     background: #f5f5f5;
     border-bottom: 1px solid #e6e6e6;
     color: #646464;
-    text-align: left;
+    margin: 10px 0;
+    padding: 10px 0;
 }
 
 footer.light .footer-bottom-text {
@@ -11421,4 +11422,28 @@ fieldset.login-fieldset input {
     display: inline-block;
     float: none;
     vertical-align: top;
+}
+
+.appointment-form  textarea{
+    height: inherit;
+}
+
+.appointment-scroll {
+    max-height: 280px;
+    overflow: auto;
+    overflow-x:hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #A5A5A5;
 }

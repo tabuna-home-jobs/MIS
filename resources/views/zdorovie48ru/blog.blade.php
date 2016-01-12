@@ -74,7 +74,7 @@
             </div>
 
 
-            <div class="row">{!! $News->render() !!}</div>
+            <div class="row text-center">{!! $News->render() !!}</div>
 
         </div>
     </div>

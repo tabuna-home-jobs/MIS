@@ -35,47 +35,62 @@
                         </div>
                     </div>
 
+
+
                     <div class="procedures">
                         <h3>Разделы</h3>
-
                         <div class="panel-group sidebar-nav" id="accordion3">
 
 
                             @foreach($MainElementMenu as $mainElement)
 
 
-                                <div class="panel panel-sidebar">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion3"
-                                               href="#collapse{{$mainElement->id}}">
-                                                <i class="fa fa-angle-right"></i> {{$mainElement->name}}
-                                            </a>
-                                        </h4>
-                                    </div>
 
-                                    <div id="collapse{{$mainElement->id}}" class="panel-collapse collapse">
-                                        <div class="panel-body">
+                                @if($mainElement->subCategory()->count()  > 2)
 
 
-                                            @foreach($mainElement->subCategory()->get() as $subMenu)
+                                    <div class="panel panel-sidebar">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse{{$mainElement->id}}">
+                                                    <i class="fa fa-angle-right"></i> {{$mainElement->name}}
+                                                </a>
+                                            </h4>
+                                        </div>
 
-                                                <a href="/medencyclopedia/{{$subMenu->id}}"><i
-                                                            class="fa fa-angle-right"></i> {{$subMenu->name}}</a>
-                                            @endforeach
+                                        <div id="collapse{{$mainElement->id}}" class="panel-collapse collapse">
+                                            <div class="panel-body">
 
 
+                                                @foreach($mainElement->subCategory()->get() as $subMenu)
+
+                                                    <a href="/medencyclopedia/{{$subMenu->id}}"><i class="fa fa-angle-right"></i> {{$subMenu->name}}</a>
+                                                @endforeach
+
+
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
+                                @else
 
+                                    <div class="panel panel-sidebar">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                @foreach($mainElement->subCategory()->get() as $subMenu)
+                                                    <a href="/medencyclopedia/{{$subMenu->id}}"><i
+                                                                class="fa fa-angle-right"></i> {{$subMenu->name}}</a>
+                                                @endforeach
+                                            </h4>
+                                        </div>
+                                    </div>
+                                @endif
 
                             @endforeach
-
-
                         </div>
                     </div>
+
+
 
                     <div class="sidebar-widget clearfix">
                         <h2 class="bordered light">Алфавитный указатель</h2>

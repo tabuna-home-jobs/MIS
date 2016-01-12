@@ -18,6 +18,7 @@ class ServiceController extends Controller {
 	 */
     public function index($sitename, $sitedomen)
     {
+		/*
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
@@ -25,10 +26,7 @@ class ServiceController extends Controller {
 
 
         $requestCategory = Request::input('category');
-
         $Category = $getSites->getCategory()->where('id',$requestCategory)->orderBy('name','desc')->get();
-
-
         $getLastNews = $getSites->getNews()->orderBy('name', 'asc')->limit(5)->get();
 
 
@@ -45,6 +43,31 @@ class ServiceController extends Controller {
             'Goods' => $Goods,
             'LastNews' => $getLastNews,
         ]);
+		*/
+
+
+
+		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+		$Category = $getSites->getCategory()->get();
+
+		$requestCategory = Request::input('category');
+		$getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
+
+
+
+		if (is_null($requestCategory))
+			$Goods = $getSites->getGoods()->paginate(9);
+		else
+			$Goods = $getSites->getGoods()->where('category_id', $requestCategory)->paginate(9);
+
+		return view($sitename . $sitedomen . '/service', [
+				'Category' => $Category,
+				'Goods' => $Goods,
+				'LastNews' => $getLastNews,
+		]);
+
+
+
     }
 
 	/**

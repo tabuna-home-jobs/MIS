@@ -5,7 +5,7 @@
     <title>Здоровье Нации - @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="csrf-token" content="{{ csrf_token() }}" >
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300&subset=latin,cyrillic'
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300&subset=latin,cyrillic'
           rel='stylesheet' type='text/css'>
 
 
@@ -27,6 +27,8 @@
     <link rel="stylesheet" id="color" href="/site1.ru/css/all.css">
     <link rel="stylesheet" href="/site1.ru/fonts/font-awesome.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/site1.ru/jasny-bootstrap/css/jasny-bootstrap.min.css">
     <!-- Bootstrap -->
     <!--<link href="/site1.ru/css/bootstrap.css" rel="stylesheet">-->
 
@@ -82,10 +84,10 @@
         <div class="colourfull-row"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <a class="logo-main" href="/"><img src="/site1.ru/images/logo.png" alt="image" title="Medicom Logo"></a>
+                <div class="col-md-3 col-xs-6">
+                    <a class="logo-main" href="/"><img src="/site1.ru/images/logo.png" alt="image" title="Здоровье Нации"></a>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-9  col-xs-6">
                     <nav class="navbar navbar-default" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -100,8 +102,10 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                    <div style="overflow: hidden;" class="top_panel">
-                        <div style="overflow: hidden;" class="col-lg-3">
+                    <div class="row hidden-xs text-center">
+                        <div class="col-lg-3">
+
+
                             <div class="cocial-top-li">
                                 <a target="_blank" href="http://vk.com/zdorovie_nacii48"><i class="fa fa-vk" ></i></a>
                                 <a target="_blank" href="https://www.facebook.com/groups/zdorovie48/"><i class="fa fa-facebook" ></i></a>
@@ -112,16 +116,16 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="top-contacts top-addres">
-                                        <i class="fa fa-map-marker top-contacts-fa" ></i> г.Липецк ул.Октябрьская д.61
+                                      <a href="/feedback">  <i class="fa fa-map-marker top-contacts-fa" ></i>
+                                          г.Липецк ул.Октябрьская д.61
+                                      </a>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="top-contacts">
                                         <i style="display: inline!important" class="fa fa-phone top-contacts-fa" ></i>
                                         <a href="tel:+74742227887">(4742) 227-887</a>
-                                        <!-- <a href="tel:+74742227888">(4742) 227-888</a> -->
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -134,8 +138,6 @@
                             <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
                                 <li><a href="/page/18">Информация о нас</a></li>
                                 <li><a href="/page/55">Наши лицензии</a></li>
-
-
                             </ul>
                         </li>
                         <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>

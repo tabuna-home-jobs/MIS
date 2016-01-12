@@ -5,7 +5,7 @@
 
     <div class="content-index">
     
-    <section class="creative-sec">
+    <section class="creative-sec hidden-xs">
         <div class="container">
             <div class="text-center">
                 <h1 class="light">«многопрофильный медицинский центр»
@@ -74,13 +74,13 @@
             	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                       <div class="carousel-inner">
                         <div class="item active text-center">
-                         <img src="/site1.ru/images/tab-slider-img.jpg" alt="" title="">
+                         <img src="/site1.ru/images/tablet_1.png" alt="" title="">
                         </div>
                         <div class="item">
-                        <img src="/site1.ru/images/tab-slider-img.jpg" alt="" title="">
+                        <img src="/site1.ru/images/tablet_2.png" alt="" title="">
                         </div>
                         <div class="item">
-                        <img src="/site1.ru/images/tab-slider-img.jpg" alt="" title="">
+                        <img src="/site1.ru/images/tablet_3.png" alt="" title="">
                         </div>
                       </div>
 				</div>
@@ -314,7 +314,7 @@
                                 <div class="col-md-12">
                                     <h5> Выберите дату</h5>
 
-                                    <div class="form-group" id="date">
+                                    <div class="form-group appointment-scroll" id="date">
 
                                     </div>
 
@@ -328,11 +328,11 @@
                                 <div class="col-md-12">
                                     <h5> Информация</h5>
 
-                                    <input type="text" name="firstname" max="255" placeholder="Имя">
-                                    <input type="text" name="lastname" max="255" placeholder="Фамилия">
+                                    <input type="text" name="firstname" max="255" required placeholder="Имя">
+                                    <input type="text" name="lastname" max="255" required placeholder="Фамилия">
                                     <input type="email" name="email" placeholder="Email адрес">
-                                    <input type="number" name="phone" placeholder="Номер телефона">
-                                    <textarea rows="4" name="comment" placeholder="Комментарий"></textarea>
+                                    <input name="phone" placeholder="Номер телефона" required type="text" data-mask="+ 9-999-999-99-99">
+                                    <textarea rows="5" name="comment" placeholder="Комментарий"></textarea>
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <button class="btn btn-default btn-rounded pull-right" type="submit">Записаться!
                                     </button>
@@ -350,39 +350,74 @@
     </section>
 
 
+
+
+
         <div class="row text-center no-margin hidden-xs">
-            <div class="col-md-4 ">
-                <div class="home-box bg-default">
+            <div class="col-md-4 bg-default">
+                <div class="home-box">
                     <span class="fa fa-stethoscope"></span>
 
-                    <h3>Консультации</h3>
+                    <h3>Услуги</h3>
 
-
-                    <a class="btn-rounded btn-bordered" href="/service/53">Подробнее</a>
+                    <p>Мы оказываем качественную и проффесиональную помощь</p>
+                    <a class="btn-rounded btn-bordered" href="/service/53">Посмотреть</a>
                 </div>
             </div>
-            <div class="col-md-4 ">
-                <div class="home-box bg-default">
+            <div class="col-md-4">
+                <div class="home-box opening-hours clearfix">
                     <span class="glyphicon glyphicon-time"></span>
 
-                    <h3>Диагностика</h3>
+                    <h3>Часы приёма</h3>
 
-                    <a class="btn-rounded btn-bordered" href="/service/127">Подробнее</a>
+                    <p>Мы всегда рады видеть вас в нашем медицинском центре</p>
+                    <ul class="list-unstyled">
+                        <li class="clearfix">
+				<span>
+					Понедельник - Пятница
+				</span>
 
+                            <div class="value">
+                                8.00 - 16.00
+                            </div>
+                        </li>
+                        <li class="clearfix">
+				<span>
+					Субота
+				</span>
 
+                            <div class="value">
+                                9.30 - 15.30
+                            </div>
+                        </li>
+                        <li class="clearfix">
+				<span>
+					Воскресенье
+				</span>
+
+                            <div class="value">
+                                9.30 - 17.00
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-4 ">
-                <div class="home-box bg-default">
+            <div class="col-md-4 bg-default">
+                <div class="home-box">
                     <span class="fa fa-user-md"></span>
 
-                    <h3>Лечение</h3>
+                    <h3>Личный кабинет</h3>
 
-
-                    <a class="btn-rounded btn-bordered" href="/service/142">Подробнее</a>
+                    <p>Отслеживайте свои результаты анализов не выходя из дома</p>
+                    <a class="btn-rounded btn-bordered" href="/login">Войти</a>
                 </div>
             </div>
         </div>
+
+
+
+
+
 
 
 
@@ -491,7 +526,7 @@
 
 
 
-        <!--<section class="medicom-app" data-stellar-background-ratio="0.3">
+        <section class="medicom-app" data-stellar-background-ratio="0.3">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
@@ -514,80 +549,8 @@
                     </div>
                 </div>
             </div>
-        </section>-->
+        </section>
 
-
-
-
-        <div class="slider-companies col-md-12">
-            <div class="content-head"><h2>Сайты ГК "Здоровье нации</h2></div>
-            <div class="slider-sites autoplay">
-                <div class="sites-slide"><a target="_blank" href="http://mother-baby.ru"><img src="/karta-uspeha.ru/img/zn1.png"></a></div>
-                <div class="sites-slide"><a target="_blank" href="http://karta-uspeha.ru"><img src="/karta-uspeha.ru/img/zn2.png"></a></div>
-                <div class="sites-slide"><a target="_blank" href="http://luchiki48.ru"><img src="/karta-uspeha.ru/img/zn4.png"></a></div>
-                <div class="sites-slide"><a target="_blank" href="http://sokzn48.ru"><img src="/karta-uspeha.ru/img/zn5.png"></a></div>
-                <div class="sites-slide"><a target="_blank" href="http://stomzn48.ru"><img src="/karta-uspeha.ru/img/zn6.png"></a></div>
-                <div class="sites-slide"><a target="_blank" href="http://cokzn48.ru"><img src="/karta-uspeha.ru/img/zn7.png"></a></div>
-                <!-- остеопатии, стоматология,  -->
-            </div>
-            <script type="text/javascript">
-                $('.autoplay').slick({
-                    prevArrow:'<button type="button" class="slick-prev-custom"><i class="fa fa-angle-left"></i></button>',
-                    nextArrow:'<button type="button" class="slick-next-custom"><i class="fa fa-angle-right"></i></button>',
-                    slidesToShow: 4,
-                    slidesToScroll: 2,
-                    autoplay: true,
-                    autoplaySpeed: 2000,
-                    responsive: [
-                        {
-                            breakpoint: 1000,
-                            settings: {
-                                slidesToShow: 3,
-                                slidesToScroll: 2,
-                                infinite: true,
-                                dots: false
-                            }
-                        },
-                        {
-                            breakpoint: 600,
-                            settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 1
-                            }
-                        },
-                        {
-                            breakpoint: 480,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1
-                            }
-                        }
-                    ]
-                });
-            </script>
-
-        </div>
-
-
-        <div class="map-on-main container hidden-xs">
-            <div class="bage">
-                <div class="footer-widget">
-                    <h4 style="font-size:18px"><span>Мы находимся</span></h4>
-                    <div class="contact-widget">
-                        <i class="fa fa-home"></i><p>г.Липецк, ул.Октябрьская, д.61</p>
-                        <i class="fa fa-envelope"></i><p><a href="mailto:">mother-baby@mail.ru</a></p>
-                        <i class="fa fa-globe"></i><p><a target="_blank" href="http://zdorovie48.ru">zdorovie48.ru</a></p>
-                        <i class="fa fa-mobile"></i><p class="phone-number"><a href="tel:+7474222788">(4742) 227-887</a></p>
-                        <i class="fa fa-clock-o"></i><p class="phone-number"> Понедельник-пятница: 8:00-21:00<br>
-                            Суббота: 8:00-18:00<br>
-                            Запись на прием по телефону с 8.00 до 21.00 ежедневно </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2423.2438515896024!2d39.592403!3d52.601363!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413a14e9eece3c35%3A0xdfbc4fe617d626e0!2z0J7QutGC0Y_QsdGA0YzRgdC60LDRjyDRg9C7LiwgNjEsINCb0LjQv9C10YbQuiwg0JvQuNC_0LXRhtC60LDRjyDQvtCx0LsuLCAzOTgwNTk!5e0!3m2!1sru!2sru!4v1432638437060" width="600" height="450" frameborder="0" style="border:0"></iframe></div>
-
-        </div>
 
 
 

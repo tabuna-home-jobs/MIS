@@ -18,9 +18,15 @@
 
         <section class="features">
             <div class="container">
-                <div class="row">
+
 
                     @foreach($Reviews as $key=>$value)
+
+                        @if($key % 2 != 0)
+                        <div class="row">
+                        @endif
+
+
                         <div class="col-md-6">
                             <div class="feature">
                                 <i class="pull-left feature-icon fa fa-male"></i>
@@ -28,14 +34,20 @@
                                 <div class="feature-content">
                                     <h5>{{$value['fio']}}</h5>
 
-                                    <p>{{$value['content']}}</p>
-                                    <small> {{$value['created_at']}} </small>
+                                    <p class="text-justify">{{$value['content']}}</p>
+                                    <p  class="text-right"><small> {{$value['created_at']}} </small></p>
                                 </div>
                             </div>
                         </div>
+
+                    @if($key % 2 != 0)
+                        </div>
+                    @endif
+
+
                     @endforeach
 
-                </div>
+
 
                 <div class="row text-center">
 

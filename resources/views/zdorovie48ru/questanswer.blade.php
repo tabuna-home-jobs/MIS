@@ -91,8 +91,8 @@
                         <form action="/questanswer" method="post">
                             <input type="text" placeholder="ФИО" required name="fio" style="width: 98%">
                             <input type="email" name="email" required placeholder="Email">
-                            <input type="text" name="phone" required placeholder="Телефон">
-                            <textarea name="questions" placeholder="Ваш вопрос"></textarea>
+                            <input name="phone" required placeholder="Номер телефона" type="text" data-mask="+ 9-999-999-99-99">
+                            <textarea name="questions" rows="5" placeholder="Ваш вопрос"></textarea>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input type="submit" class="btn btn-default btn-rounded" value="Отправить">
                         </form>
@@ -108,7 +108,12 @@
                         <i class="pull-left feature-icon fa fa-user-md"></i>
                         <div class="feature-content">
                             <h5><a href="/team">Наши специалисты</a></h5>
-                            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
+
+
+                            <p>Ответственно используют проверенные и надежные технологии,
+                                постоянно работают над внедрением инноваций и
+                                добиваются положительных результатов в каждом конкретном случае с каждым конкретным клиентом.</p>
+
                             <a href="/team"><dfn>- Перейти</dfn></a>
                         </div>
                     </div>
@@ -116,7 +121,7 @@
                         <i class="pull-left feature-icon fa fa-book"></i>
                         <div class="feature-content">
                             <h5><a href="/medencyclopedia">Энциклопедия</a></h5>
-                            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
+                            <p>В нашей энциклопедии здоровья вы можете ознакомится с распространёнными проблемами</p>
                             <a href="/medencyclopedia"><dfn>- Перейти</dfn></a>
                         </div>
                     </div>

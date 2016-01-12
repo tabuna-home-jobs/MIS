@@ -37,7 +37,8 @@
 
 
 
-                                @if($mainElement->subCategory()->count()  < 2)
+                                @if($mainElement->subCategory()->count()  > 2)
+
 
                                 <div class="panel panel-sidebar">
                                     <div class="panel-heading">

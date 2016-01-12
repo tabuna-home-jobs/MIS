@@ -234,10 +234,10 @@
                                 <div class="col-md-12">
                                     <h5> Информация</h5>
 
-                                    <input type="text" name="firstname" max="255" placeholder="Имя">
-                                    <input type="text" name="lastname" max="255" placeholder="Фамилия">
+                                    <input type="text" name="firstname" max="255"  required placeholder="Имя">
+                                    <input type="text" name="lastname" max="255" required placeholder="Фамилия">
                                     <input type="email" name="email" placeholder="Email адрес">
-                                    <input type="number" name="phone" placeholder="Номер телефона">
+                                    <input name="phone" required placeholder="Номер телефона" type="text" data-mask="+ 9-999-999-99-99">
                                     <textarea rows="4" name="comment" placeholder="Комментарий"></textarea>
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <button class="btn btn-default btn-rounded pull-right" type="submit">Записаться!
@@ -255,23 +255,67 @@
 
 
 
-    <style>
-        .modal-starter {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-        }
-        .service-box {
-            position: relative;
-        }
-        .modal-body {
-            text-align: left;
-        }
-    </style>
+
+
+
+
+
+
+
+
 
 
     <section class="services-sec container">
+
+        <h2 class="light bordered">Преимущества</h2>
+        <div class="service-box one">
+            <span class="icon img-circle"><i class="fa fa-lightbulb-o"></i></span>
+            <h4><a href="#.">МНОГОПРОФИЛЬНОСТЬ</a></h4>
+
+            <p> «Здоровье нации» – это многопрофильный медицинский центр, ориентированный на оказание высококвалифицированной помощи жителям города и области.
+            </p>
+
+        </div>
+        <div class="service-box two">
+            <span class="icon img-circle"><i class="fa fa fa-flask"></i></span>
+            <h4><a href="#.">КВАЛИФИКАЦИЯ СПЕЦИАЛИСТОВ</a></h4>
+
+            <p>Наши врачи с многолетним опытом работы, среди них доктора и кандидаты медицинских наук, врачи с высшей квалификационной категорией, заслуженные врачи Российской федерации.
+
+            </p>
+        </div>
+        <div class="service-box three">
+            <span class="icon img-circle"><i class="fa fa-tint"></i></span>
+            <h4><a href="#.">БЕЗОПАСНОСТЬ</a></h4>
+
+            <p>
+                В медицинских центрах группы компаний «Здоровье нации» весь инструментарий стерилен, поэтому вы можете не волноваться о безопасности проведения процедур.
+            </p>
+        </div>
+        <div class="service-box four">
+            <span class="icon img-circle"><i class="fa fa-phone"></i></span>
+            <h4><a href="#.">ЛОЯЛЬНОСТЬ</a></h4>
+
+            <p>Мы гарантируем индивидуальный подход, высокоточную диагностику на современном оборудовании, соблюдение всех норм и правил оказания медицинской помощи.
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+    <section class="services-sec container">
+
+        <h2 class="light bordered">Service <span>style 3</span></h2>
+
         <div style="cursor:pointer;position: relative;"  class="service-box one">
             <a class="modal-starter" data-toggle="modal" data-target="#myModal1"></a>
             <span class="icon img-circle"><i class="fa fa-lightbulb-o"></i></span>
@@ -279,7 +323,6 @@
 
 
 
-            <!-- Modal -->
             <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -405,6 +448,7 @@
 
 
 
+-->
 
 
     <section class="after-booking-sec text-center">
@@ -466,10 +510,8 @@
     </section>
 
 
-    <script>
-        $('#myModal1').on('hide.bs.modal', function () {
-            alert('asd');
-        })
-    </script>
+
+
+
 
 @endsection
