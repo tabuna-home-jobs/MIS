@@ -4,27 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex"/>
-    <title></title>
-    <link rel="stylesheet" href="/stomzn48.ru/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/stomzn48.ru/css/style.css">
-    <link rel="stylesheet" href="/stomzn48.ru/css/media-queries.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/css/slick.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/css/animate.min.css">
-    <script src="/stomzn48.ru/js/jquery.min.js"></script>
-    <script src="/stomzn48.ru/js/jquery.mousewheel.min.js"></script>
-    <script src="/stomzn48.ru/js/jquery.easing.min.js"></script>
-    <script src="/stomzn48.ru/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/js/slick.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/js/scrollspy.js"></script>
-    <link rel="stylesheet" href="/luchiki48.ru/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="/luchiki48.ru/js/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-    <script src="https://yastatic.net/share2/share.js" async="async"></script>
-    <script>
-        $(document).ready(function(){
-            $('.fancybox').fancybox();
-        });
-    </script>
+    <title>WTF TITLE</title>
+
+    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/animations.css">
+    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/bootstrap.min.css">
+
 </head>
 <body>
 <div class="header">
