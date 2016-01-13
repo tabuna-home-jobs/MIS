@@ -546,13 +546,14 @@ body.sticky_header .top_nav.affix ul.top_nav_menu {
 }
 .top_nav .logo {
     position: relative;
-    padding: 27px 0 32px;
+    padding: 10px 0 32px;
 }
 .top_nav ul.top_nav_menu {
     float: right;
     list-style: none;
     margin: 0;
     padding: 37px 10px;
+    padding-right: 0;
 }
 .top_nav ul.top_nav_menu > li {
     position: relative;
@@ -560,8 +561,9 @@ body.sticky_header .top_nav.affix ul.top_nav_menu {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 500;
-    padding: 0 22px;
+    padding: 0 5px;
     line-height: 1;
+    padding-right: 18px;
 }
 .top_nav ul.top_nav_menu > li > a {
     color: #4C4C4C;
@@ -5742,4 +5744,17 @@ body .secondary_background_color {
         width: 100%;
         height: auto;
     }
+}
+.wrrr{
+    position: absolute;
+    background: #4d4d4d;
+    content: "1";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0.2;
+    z-index: 5;
+}
+.carousel-control{
+    z-index: 10;
 }
