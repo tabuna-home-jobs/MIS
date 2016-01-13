@@ -53,8 +53,8 @@
                     <h4><span>Мы находимся</span></h4>
                     <div class="contact-widget">
                         <i class="fa fa-home"></i><p>г.Липецк, ул.Октябрьская, д.61</p>
-                        <i class="fa fa-envelope"></i><p>octavian48@yandex.ru</p>
-                        <i class="fa fa-mobile"></i><p class="phone-number">(4742) 227-887, 227-8881</p>
+                        <i class="fa fa-envelope"></i><p>niki@zdorovie48.ru</p>
+                        <i class="fa fa-mobile"></i><p class="phone-number">(4742) 227-887</p>
                         <i class="fa fa-clock-o"></i><p class="phone-number"> Будние дни: 8:00-21:00<br>
                             Суббота: 8:00-18:00<br>
                             Воскресенье: 10:00-16:00</p>
