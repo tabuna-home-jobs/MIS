@@ -378,7 +378,7 @@
 				</span>
 
                             <div class="value">
-                                8.00 - 16.00
+                                8.00 - 21.00
                             </div>
                         </li>
                         <li class="clearfix">
@@ -387,7 +387,7 @@
 				</span>
 
                             <div class="value">
-                                9.30 - 15.30
+                                8.00 - 18.00
                             </div>
                         </li>
                         <li class="clearfix">
@@ -396,7 +396,7 @@
 				</span>
 
                             <div class="value">
-                                9.30 - 17.00
+                                10.00 - 16.00
                             </div>
                         </li>
                     </ul>

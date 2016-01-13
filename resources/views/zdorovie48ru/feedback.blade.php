@@ -37,8 +37,8 @@
                 	<h2 class="light bordered">Мы <span>Находимся</span></h2>
                     <div class="get-in-touch-widget">
                     	<ul class="list-unstyled">
-                        <li><i class="fa fa-phone"></i><a href="tel:+7474222788">(4742) 227-887</a></li>
-                        <li><i class="fa fa-envelope"></i><a href="mailto:">mother-baby@mail.ru</a></li>
+                        <li><i class="fa fa-phone"></i><a href="tel:+74742227887">(4742) 227-887</a></li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:niki@zdorovie48.ru">niki@zdorovie48.ru</a></li>
                         <li><i class="fa fa-globe"></i><a target="_blank" href="http://zdorovie48.ru/">zdorovie48.ru</a></li>
                         <li><i class="fa fa-clock-o"></i>Понедельник-пятница: 8:00-21:00<br>
                             Суббота: 8:00-18:00
