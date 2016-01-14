@@ -27,7 +27,9 @@
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_3.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_4.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/js_composer.css">
-
+    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/customs.css">
+    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/slick.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery1.11.js"></script>
     <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery-migrate.min.js"></script>
     <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.themepunch.tools.min.js"></script>
@@ -40,32 +42,28 @@
     <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.form.min.js"></script>
     <script type="text/javascript" src="/stomzn48.ru/theme/js/scripts.js"></script>
     <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.cookie.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/core.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/datepicker.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/widget.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/mouse.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/slider.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery-ui-timepicker-addon.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/select2.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/custom.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/js_composer_front.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/slick.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/countUp.min.js"></script>
 
 
 </head>
+<script>
+    /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+    if ( typeof WebFontConfig === "undefined" ) {
+        WebFontConfig = new Object();
+    }
+    WebFontConfig['google'] = {families: ['Roboto:100,300,400,500,700,900,100italic,300italic,400italic,500italic,700italic,900italic', 'Playfair+Display:400,700,900,400italic,700italic,900italic']};
+
+    (function() {
+        var wf = document.createElement( 'script' );
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName( 'script' )[0];
+        s.parentNode.insertBefore( wf, s );
+    })();
+</script>
 <body>
 
 <header id="header">
-
-    <div class="mobile_search">
-        <form method="get" class="search-form" action="index.html">
-            <input type="search" placeholder="Search" value="" name="s">
-            <button type="submit" class="button"><i class="stm-icon-search"></i></button>
-        </form>
-    </div>
 
     <div class="top_nav affix-top">
         <div class="container">
@@ -81,6 +79,7 @@
                     </div>
                 </div>
 
+                <!--Меню-->
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <ul id="menu-primary-menu" class="top_nav_menu">
                         <li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4">
@@ -115,9 +114,12 @@
                         </li>
                     </ul>
                 </div>
+                <!--Меню-->
 
             </div>
         </div>
+
+        <!--Мобильное меню-->
         <div class="mobile_menu">
             <ul id="menu-primary-menu-1" class="top_mobile_menu">
                 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4">
@@ -152,8 +154,11 @@
                 </li>
             </ul>
         </div>
+        <!--Мобильное меню-->
+
     </div>
 
+    <!--Блоки с контактами и временим работы-->
     <div class="top_info_boxes">
         <div class="container">
             <div class="row">
@@ -198,6 +203,9 @@
             </div>
         </div>
     </div>
+    <!--Блоки с контактами и временим работы-->
+
+    <!--Слайдер-->
     <div class="bs-example" data-example-id="simple-carousel">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
@@ -223,6 +231,8 @@
             </div>
         </div>
     </div>
+    <!--Слайдер-->
+
 </header>
 @yield('content')
 @include('stomzn48ru/footer')
