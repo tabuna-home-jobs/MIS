@@ -213,3 +213,6 @@ h5, .h5 {
     font-size: 48px;
     font-family: Roboto;
 }
+.carousel-inner .item img{
+    height: 514px;
+}
