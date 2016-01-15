@@ -94,24 +94,7 @@
                 <!--Меню-->
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <ul id="menu-primary-menu" class="top_nav_menu">
-                        <li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4">
-                            <a href="/">Главная</a>
-                        </li>
-                        <li id="menu-item-648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-648">
-                            <a href="/">О компании</a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
-                                    <a href="/">Контакты</a>
-                                </li>
-                                <li id="menu-item-750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-750">
-                                    <a href="/">О нас</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-770">
-                            <a href="/page/62">Оборудование</a>
-                        </li>                        
-                        
+                        {!!Menu::getLI('10','topmain')!!}
                     </ul>
                 </div>
                 <!--Меню-->
@@ -122,36 +105,8 @@
         <!--Мобильное меню-->
         <div class="mobile_menu">
             <ul id="menu-primary-menu-1" class="top_mobile_menu">
-                <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4">
-                    <a href="/">Главная</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-648">
-                    <a href="/">О компании</a>
-                    <span class="arrow"><i class="fa fa-chevron-down"></i></span>
-                    <ul class="sub-menu">
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
-                            <a href="/">Контакты</a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-750">
-                            <a href="/">О нас</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-889">
-                    <a href="/">Технологии</a>
-                </li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-770">
-                    <a href="/page/62">Оборудование</a>
-                </li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608">
-                    <a href="/">Материалы</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902">
-                    <a href="/">Каталог</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902">
-                    <a href="/">Новости</a>
-                </li>
+                {!!Menu::getLI('10','topmain')!!}
+
             </ul>
         </div>
         <!--Мобильное меню-->
