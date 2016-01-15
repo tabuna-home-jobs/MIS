@@ -84,7 +84,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <div class="logo">
                         <a href="/">
-                            <img src="/stomzn48.ru/img/logo_blue.png" alt="Dent-All"></a>
+                            <img src="/stomzn48.ru/img/logo_blue.png" alt="Здоровье Нации Стомотология"></a>
                         <div id="menu_toggle">
                             <button></button>
                         </div>
@@ -97,6 +97,21 @@
                         <li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4">
                             <a href="/">Главная</a>
                         </li>
+
+                        <li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902">
+                            <a href="/">Услуги</a>
+                        </li>
+
+                        <li id="menu-item-889" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-889">
+                            <a href="/">Технологии</a>
+                        </li>
+                        <li id="menu-item-770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-770">
+                            <a href="/">Оборудование</a>
+                        </li>
+                        <li id="menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608">
+                            <a href="/">Материалы</a>
+                        </li>
+
                         <li id="menu-item-648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-648">
                             <a href="/">О компании</a>
                             <ul class="sub-menu">
@@ -108,22 +123,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li id="menu-item-889" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-889">
-                            <a href="/">Технологии</a>
-                        </li>
-                        <li id="menu-item-770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-770">
-                            <a href="/">Оборудование</a>
-                        </li>
-                        <li id="menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608">
-                            <a href="/">Материалы</a>
 
-                        </li>
-                        <li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902">
-                            <a href="/">Каталог</a>
-                        </li>
-                        <li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902">
-                            <a href="/">Новости</a>
-                        </li>
+
                     </ul>
                 </div>
                 <!--Меню-->
@@ -193,8 +194,8 @@
                             <i class="stm-icon-clock"></i>
                         </div>
                         <div class="text">
-                            <strong>Рабочий день</strong>
-                            <span>Пон - Пт: 8:00 - 5:00, Сб-Вс: 9:00 - 14:00</span>
+                            <strong>График работы</strong>
+                            <span>Пн - Пт: 8:00 - 21:00, Сб: :00 - 18:00</span>
                         </div>
                     </div>
                 </div>
@@ -205,8 +206,8 @@
                             <i class="stm-icon-calculator"></i>
                         </div>
                         <div class="text">
-                            <strong>Запишитесь на приём</strong>
-                            <span>Это просто</span>
+                            <strong>Заказать звонок</strong>
+                            <span>Мы ответим на Ваши вопросы</span>
                         </div>
                         <a href="/" class="link"></a>
                     </div>
