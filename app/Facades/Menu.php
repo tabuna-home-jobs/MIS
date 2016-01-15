@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 class Menu  extends Facade {
 
-    static function getLI($site,$NameMenu,$pref)
+    static function getLI($site,$NameMenu, $pref = '')
     {
         $menu = SiteMenu::whereRaw('ids = ? and name = ?', [$site, $NameMenu])->first();
         $element = $menu->getElement()->orderBy('sort','asc')->get();

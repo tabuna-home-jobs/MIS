@@ -1,5 +1,50 @@
 @extends('stomzn48ru/header')
 @section('content')
+
+<!--Слайдер-->
+<div class="bs-example hidden-xs" data-example-id="simple-carousel">
+   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner" role="listbox">
+         <div class="item">
+            <img  src="/stomzn48.ru/img/banner1.png" alt="Альт для картинки">
+            <div class="carousel-caption">
+               Прекрасное описание для картинки
+            </div>
+            <!--Это бекграунд у картинки слайдера-->
+            <div class="wrrr"></div>
+            <!--Это бекграунд у картинки слайдера-->
+         </div>
+         <div class="item">
+            <img  src="/stomzn48.ru/img/banner2.jpg" alt="Альт для картинки2">
+            <div class="carousel-caption">
+               Прекрасное описание для картинки 2
+            </div>
+            <!--Это бекграунд у картинки слайдера-->
+            <div class="wrrr"></div>
+            <!--Это бекграунд у картинки слайдера-->
+         </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+      </a>
+
+   </div>
+   <script type="text/javascript">
+      jQuery(document).ready(function(){
+         jQuery("#carousel-example-generic .item:first-child").addClass('active');
+      });
+   </script>
+</div>
+<!--Слайдер-->
+
    <section id="content">
       <div class="content_wrapper">
          <article id="post-2" class="post-2 page type-page status-publish hentry">

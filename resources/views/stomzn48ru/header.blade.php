@@ -112,7 +112,7 @@
                             <a href="/">Технологии</a>
                         </li>
                         <li id="menu-item-770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-770">
-                            <a href="/">Оборудование</a>
+                            <a href="/page/62">Оборудование</a>
                         </li>
                         <li id="menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608">
                             <a href="/">Материалы</a>
@@ -153,7 +153,7 @@
                     <a href="/">Технологии</a>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-770">
-                    <a href="/">Оборудование</a>
+                    <a href="/page/62">Оборудование</a>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608">
                     <a href="/">Материалы</a>
@@ -194,7 +194,7 @@
                         </div>
                         <div class="text">
                             <strong>Рабочий день</strong>
-                            <span>Пон - Пт: 8:00 - 5:00, Сб-Вс: 9:00 - 14:00</span>
+                            <span>Пн - Пт: 8:00 - 17:00, Сб-Вс: 9:00 - 14:00</span>
                         </div>
                     </div>
                 </div>
@@ -217,49 +217,7 @@
     </div>
     <!--Блоки с контактами и временим работы-->
 
-    <!--Слайдер-->
-    <div class="bs-example" data-example-id="simple-carousel">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-            <div class="carousel-inner" role="listbox">
-                <div class="item">
-                    <img  src="/stomzn48.ru/img/banner1.png" alt="Альт для картинки">
-                    <div class="carousel-caption">
-                        Прекрасное описание для картинки
-                    </div>
-                    <!--Это бекграунд у картинки слайдера-->
-                    <div class="wrrr"></div>
-                    <!--Это бекграунд у картинки слайдера-->
-                </div>
-                <div class="item">
-                    <img  src="/stomzn48.ru/img/banner2.jpg" alt="Альт для картинки2">
-                    <div class="carousel-caption">
-                        Прекрасное описание для картинки 2
-                    </div>
-                    <!--Это бекграунд у картинки слайдера-->
-                    <div class="wrrr"></div>
-                    <!--Это бекграунд у картинки слайдера-->
-                </div>
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-
-        </div>
-        <script type="text/javascript">
-            jQuery(document).ready(function(){
-                jQuery("#carousel-example-generic .item:first-child").addClass('active');
-            });
-        </script>
-    </div>
-    <!--Слайдер-->
 
 
 </header>

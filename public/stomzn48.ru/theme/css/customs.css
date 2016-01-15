@@ -213,6 +213,16 @@ h5, .h5 {
     font-size: 48px;
     font-family: Roboto;
 }
-.carousel-inner .item img{
-    height: 514px;
+
+.title_box {
+    background-image: url(http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/09/header_bg_5.jpg);
+    background-repeat: repeat;
+}
+.title_wr{
+    text-shadow: 1px 1px 3px #000;
+}
+.widget_contacts.style_2 li .text strong {
+     display: block;
+    font-weight: bold;
+    color: #395261;
 }
