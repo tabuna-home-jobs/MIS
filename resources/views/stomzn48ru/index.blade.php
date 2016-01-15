@@ -660,239 +660,58 @@
                            <div class="pricing_list_header">
                               <h2>Прайс лист</h2>
 
-                              <ul class="tabs" role="tablist">
-                                 <li class="active">
-                                    <a href="#all" role="tab" data-toggle="tab" aria-expanded="true">Все</a>
-                                 </li>
-                                 <li>
-                                    <a href="#teeth-whitening" role="tab" data-toggle="tab" aria-expanded="false">
-                                      Хирургия
-                                    </a>
-                                 </li>
-                                 <li>
-                                    <a href="#childrens-teeth-2" role="tab" data-toggle="tab">
-                                       Лечение
-                                    </a>
-                                 </li>
-                                 <li>
-                                    <a href="#healthy-gums" role="tab" data-toggle="tab">
-                                       Гигиена
-                                    </a>
-                                 </li>
-                                 <li>
-                                    <a href="#ortopedia" role="tab" data-toggle="tab">
-                                       Ортопедия
-                                    </a>
-                                 </li>
+                              <ul class="tabs" role="tablist" id="tabz">
+
+                                 @foreach($categories as $categorie)
+                                    <li>
+                                       <a href="#tab{{$categorie['id']}}" role="tab" data-toggle="tab" aria-expanded="false">
+                                         {{$categorie['name']}}
+                                       </a>
+                                    </li>
+                                 @endforeach
                               </ul>
                            </div>
+                           <script type="text/javascript">
+                              jQuery(document).ready(function($){
 
+                                 $("#tabz li:first-child").addClass('active');
+                                 $(".tab-content  .tab-pane:first-child").addClass('active in');
+                              });
+                           </script>
                            <div class="tab-content">
 
-                              <div role="tabpanel" class="tab-pane fade active in" id="all">
+                              @foreach($categories as $categorie)
+                              <div role="tabpanel" class="tab-pane fade" id="tab{{$categorie['id']}}">
                                  <ul class="pricing_list clearfix">
-                                    <li class="media sale">
-
-                                       <div class="media-body">
-                                          <div class="content">
-                                             <h4>Восстановление вкладки</h4>
-                                             <p>Инкрустацией является восстановление которых лежит внутри створок зуба</p>
+                                    @foreach($categorie['goods'] as $good)
+                                       <li class="media sale">
+                                          <div class="media-body">
+                                             <div class="content">
+                                                <h4>{{$good['name']}}</h4>
+                                                <p>
+                                                   {{$good['descript']}}
+                                                </p>
+                                             </div>
                                           </div>
-                                       </div>
 
-                                       <div class="media-right">
-                                          <div class="price">
-                                             $1,190											</div>
-                                          <div class="sale_price">
-                                             $1,020											</div>
-                                       </div>
-
-                                    </li>
-                                    <li class="media sale">
-
-                                       <div class="media-body">
-                                          <div class="content">
-                                             <h4>Фиксированый имплант</h4>
-                                             <p>A fixed overdenture is attached to your jaw with dental implants. The advantage of this system is that you only need 4-6 implants to replace all the teeth on your upper or lower jaw.</p>
+                                          <div class="media-right">
+                                             <div class="sale_price">
+                                                <span>{{$good['price']}}</span>
+                                                <i class="fa fa-rub"></i>
+                                             </div>
                                           </div>
-                                       </div>
 
-                                       <div class="media-right">
-                                          <div class="price">
-                                             $779											</div>
-                                          <div class="sale_price">
-                                             $659											</div>
-                                       </div>
-
-                                    </li>
-                                    <li class="media sale">
-
-                                       <div class="media-body">
-                                          <div class="content">
-                                             <h4>Oral Health Consultation</h4>
-                                             <p>If you are looking for the best long-term, healthy option to replacing missing teeth look no further than implant supported overdentures.</p>
-                                          </div>
-                                       </div>
-
-                                       <div class="media-right">
-                                          <div class="price">
-                                             $80											</div>
-                                          <div class="sale_price">
-                                             $55											</div>
-                                       </div>
-
-                                    </li>
-                                    <li class="media sale">
-
-                                       <div class="media-body">
-                                          <div class="content">
-                                             <h4>Standard Whitening</h4>
-                                             <p>The teeth whitening process involves the use of a bleaching agent, which is applied directly to the teeth to lighten them through a chemical process.</p>
-                                          </div>
-                                       </div>
-
-                                       <div class="media-right">
-                                          <div class="price">
-                                             $99											</div>
-                                          <div class="sale_price">
-                                             $79											</div>
-                                       </div>
-
-                                    </li>
-                                 </ul>
-                              </div>
-
-                              <div role="tabpanel" class="tab-pane fade" id="teeth-whitening">
-                                 <ul class="pricing_list clearfix">
-                                    <li class="media sale">
-
-                                       <div class="media-body">
-                                          <div class="content">
-                                             <h4>Standard Whitening</h4>
-                                             <p>The teeth whitening process involves the use of a bleaching agent, which is applied directly to the teeth to lighten them through a chemical process.</p>
-                                          </div>
-                                       </div>
-
-                                       <div class="media-right">
-                                          <div class="price">
-                                             $99										</div>
-                                          <div class="sale_price">
-                                             $79										</div>
-                                       </div>
-
-                                    </li>
+                                       </li>
+                                    @endforeach
                                  </ul>
                                  <div class="full_price">
-                                    <a href="http://dentall.stylemixthemes.com/service/teeth-whitening/" class="button">Full Price</a>
+                                    <a href="/stomzn48.ru/download/price.xlsx" class="button">
+                                       Скачать прайс
+                                    </a>
                                  </div>
                               </div>
-                              <div role="tabpanel" class="tab-pane fade" id="invislign">
-                                 <ul class="pricing_list clearfix">
-                                 </ul>
-                                 <div class="full_price">
-                                    <a href="http://dentall.stylemixthemes.com/service/invislign/" class="button">Full Price</a>
-                                 </div>
-                              </div>
-                              <div role="tabpanel" class="tab-pane fade" id="dental-hygiene-2">
-                                 <ul class="pricing_list clearfix">
-                                 </ul>
-                                 <div class="full_price">
-                                    <a href="http://dentall.stylemixthemes.com/service/dental-hygiene-2/" class="button">Full Price</a>
-                                 </div>
-                              </div>
-                              <div role="tabpanel" class="tab-pane fade" id="childrens-teeth-2">
-                                 <ul class="pricing_list clearfix">
-                                    <li class="media sale">
+                              @endforeach
 
-                                       <div class="media-body">
-                                          <div class="content">
-                                             <h4>Fixed Implant</h4>
-                                             <p>A fixed overdenture is attached to your jaw with dental implants. The advantage of this system is that you only need 4-6 implants to replace all the teeth on your upper or lower jaw.</p>
-                                          </div>
-                                       </div>
-
-                                       <div class="media-right">
-                                          <div class="price">
-                                             $779										</div>
-                                          <div class="sale_price">
-                                             $659										</div>
-                                       </div>
-
-                                    </li>
-                                 </ul>
-                                 <div class="full_price">
-                                    <a href="http://dentall.stylemixthemes.com/service/childrens-teeth-2/" class="button">Full Price</a>
-                                 </div>
-                              </div>
-                              <div role="tabpanel" class="tab-pane fade" id="dental-hygiene">
-                                 <ul class="pricing_list clearfix">
-                                 </ul>
-                                 <div class="full_price">
-                                    <a href="http://dentall.stylemixthemes.com/service/dental-hygiene/" class="button">Full Price</a>
-                                 </div>
-                              </div>
-                              <div role="tabpanel" class="tab-pane fade" id="as-dental-professionals-we-believe-in-preventive-dental-care">
-                                 <ul class="pricing_list clearfix">
-                                 </ul>
-                                 <div class="full_price">
-                                    <a href="http://dentall.stylemixthemes.com/service/as-dental-professionals-we-believe-in-preventive-dental-care/" class="button">Full Price</a>
-                                 </div>
-                              </div>
-                              <div role="tabpanel" class="tab-pane fade" id="childrens-teeth">
-                                 <ul class="pricing_list clearfix">
-                                 </ul>
-                                 <div class="full_price">
-                                    <a href="http://dentall.stylemixthemes.com/service/childrens-teeth/" class="button">Full Price</a>
-                                 </div>
-                              </div>
-                              <div role="tabpanel" class="tab-pane fade" id="sensitive-teeth">
-                                 <ul class="pricing_list clearfix">
-                                 </ul>
-                                 <div class="full_price">
-                                    <a href="http://dentall.stylemixthemes.com/service/sensitive-teeth/" class="button">Full Price</a>
-                                 </div>
-                              </div>
-                              <div role="tabpanel" class="tab-pane fade" id="healthy-gums">
-                                 <ul class="pricing_list clearfix">
-                                    <li class="media sale">
-
-                                       <div class="media-body">
-                                          <div class="content">
-                                             <h4>Inlays restoration</h4>
-                                             <p>An inlay is a restoration which lies inside the cusps of the tooth</p>
-                                          </div>
-                                       </div>
-
-                                       <div class="media-right">
-                                          <div class="price">
-                                             $1,190										</div>
-                                          <div class="sale_price">
-                                             $1,020										</div>
-                                       </div>
-
-                                    </li>
-                                    <li class="media sale">
-
-                                       <div class="media-body">
-                                          <div class="content">
-                                             <h4>Oral Health Consultation</h4>
-                                             <p>If you are looking for the best long-term, healthy option to replacing missing teeth look no further than implant supported overdentures.</p>
-                                          </div>
-                                       </div>
-
-                                       <div class="media-right">
-                                          <div class="price">
-                                             $80										</div>
-                                          <div class="sale_price">
-                                             $55										</div>
-                                       </div>
-
-                                    </li>
-                                 </ul>
-                                 <div class="full_price">
-                                    <a href="http://dentall.stylemixthemes.com/service/healthy-gums/" class="button">Full Price</a>
-                                 </div>
-                              </div>
                            </div>
                         </div>
                      </div></div></div>

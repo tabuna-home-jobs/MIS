@@ -8,6 +8,7 @@ class Sites extends Model {
     use SoftDeletes;
 
     protected static $reviews = Reviews::class;
+    protected static $categories = Category::class;
     /**
      * The database table used by the model.
      *
@@ -27,6 +28,11 @@ class Sites extends Model {
     public function reviews(){
 
         return $this->hasMany(static::$reviews, 'ids','id')->where('publish', 1)->limit(9);
+    }
+
+    public function categories(){
+
+        return $this->hasMany(static::$categories, 'ids','id');
     }
 
     public function getNews()
