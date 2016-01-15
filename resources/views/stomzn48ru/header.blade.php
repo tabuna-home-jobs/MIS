@@ -108,22 +108,10 @@
                                 </li>
                             </ul>
                         </li>
-                        <li id="menu-item-889" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-889">
-                            <a href="/">Технологии</a>
-                        </li>
                         <li id="menu-item-770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-770">
                             <a href="/page/62">Оборудование</a>
-                        </li>
-                        <li id="menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608">
-                            <a href="/">Материалы</a>
-
-                        </li>
-                        <li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902">
-                            <a href="/">Каталог</a>
-                        </li>
-                        <li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902">
-                            <a href="/">Новости</a>
-                        </li>
+                        </li>                        
+                        
                     </ul>
                 </div>
                 <!--Меню-->
@@ -193,8 +181,8 @@
                             <i class="stm-icon-clock"></i>
                         </div>
                         <div class="text">
-                            <strong>Рабочий день</strong>
-                            <span>Пн - Пт: 8:00 - 17:00, Сб-Вс: 9:00 - 14:00</span>
+                            <strong>График работы</strong>
+                            <span>Пн - Пт: 8:00 - 21:00, Сб: 9:00 - 18:00</span>
                         </div>
                     </div>
                 </div>
@@ -205,8 +193,8 @@
                             <i class="stm-icon-calculator"></i>
                         </div>
                         <div class="text">
-                            <strong>Запишитесь на приём</strong>
-                            <span>Это просто</span>
+                            <strong>Заказать звонок</strong>
+                            <span>Мы ответим на Ваши вопросы</span>
                         </div>
                         <a href="/" class="link"></a>
                     </div>
@@ -216,8 +204,7 @@
         </div>
     </div>
     <!--Блоки с контактами и временим работы-->
-
-
+    
 
 
 </header>

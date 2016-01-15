@@ -129,12 +129,13 @@
                                  </a>
                                  <figcaption class="wp-caption-text">Доктор Скворцова<br> с пациентом</figcaption>
                               </figure>
-                              <p>Наша клиника Стоматологическая специализируется на предоставлении наиболее актуальную целом , ортодонтического и семейной стоматологии .</p>
-                              <p>
-                              Наша клиника выросла чтобы обеспечить мирового класса средство для лечения потери зубов , зубных косметики и передовых терапевтической стоматологии .</p>
-                              <p>
-                              Мы являемся одним из наиболее квалифицированных поставщиков имплантатов в России с более чем 35 лет качество обучения и опыта.
-                              </p>
+
+
+                             <p class="text-justify"> Стоматология «Здоровье нации» начала свою деятельность  в 2010  году и за этот период успешно зарекомендовали себя на рынке стоматологических услуг Липецка как надежная клиника, оказывающая услуги высокого качества. </p>
+
+                              <p class="text-justify"> Стоматология «Здоровье нации»  является современной стоматологией, оснащенной уникальным современным оборудованием. Препараты и материалы, которые используются для лечения, выпускаются ведущими мировыми производителям медицинской продукции. Все предлагаемые услуги клиники имеют лицензии и сертификаты в соответствии с законодательством.</p>
+
+
 
                            </div>
                         </div>
@@ -144,32 +145,32 @@
                      <div class="wpb_wrapper">
                         <div class="image_carousel vertical style_1 type_1">
 
-                           <h5 style="color: #4c4c4c">Сертификаты качества</h5>
+                           <h5 style="color: #4c4c4c">Лицензии</h5>
 
                            <div id="image_carousel-1376798397">
                               <div>
-                                 <a class="fancy" href="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/08/Museum-of-Favorite-Shirts-Certificate-of-Induction-web-1024x791.jpg">
-                                    <img class="" src="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/08/Museum-of-Favorite-Shirts-Certificate-of-Induction-web-130x100.jpg" width="130" height="100" alt="Museum-of-Favorite-Shirts-Certificate-of-Induction-web" title="Museum-of-Favorite-Shirts-Certificate-of-Induction-web" />
+                                 <a class="fancy" href="/upload/1450877714.jpg">
+                                    <img class="" src="/upload/1450877714.jpg" width="130" height="100" alt="Лицензия на осуществление медицинской деятельности" title="Лицензия на осуществление медицинской деятельности" />
                                  </a>
                               </div>
                               <div>
-                                 <a class="fancy" href="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/08/certificate11-1024x774.jpg">
-                                    <img class="" src="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/08/certificate11-130x100.jpg" width="130" height="100" alt="certificate11" title="certificate11" />
+                                 <a class="fancy" href="/upload/1450877882.jpg">
+                                    <img class="" src="/upload/1450877882.jpg" width="130" height="100" alt="Лицензия на осуществление медицинской деятельности" title="Лицензия на осуществление медицинской деятельности" />
                                  </a>
                               </div>
                               <div>
-                                 <a class="fancy" href="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/08/biblical-counseling-certificate-1024x781.jpg">
-                                    <img class="" src="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/08/biblical-counseling-certificate-130x100.jpg" width="130" height="100" alt="biblical counseling certificate" title="biblical counseling certificate" />
+                                 <a class="fancy" href="/upload/1450877989.jpg">
+                                    <img class="" src="/upload/1450877989.jpg" width="130" height="100" alt="Лицензия на осуществление медицинской деятельности" title="Лицензия на осуществление медицинской деятельности" />
                                  </a>
                               </div>
                               <div>
-                                 <a class="fancy" href="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/08/2-1024x791.jpg">
-                                    <img class="" src="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/08/2-130x100.jpg" width="130" height="100" alt="2" title="2" />
+                                 <a class="fancy" href="/upload/1450877989.jpg">
+                                    <img class="" src="/upload/1450877989.jpg" width="130" height="100" alt="Лицензия на осуществление медицинской деятельности" title="Лицензия на осуществление медицинской деятельности" />
                                  </a>
                               </div>
                               <div>
-                                 <a class="fancy" href="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/08/image002a.jpg">
-                                    <img class="" src="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/08/image002a-130x100.jpg" width="130" height="100" alt="image002a" title="image002a" />
+                                 <a class="fancy" href="/upload/1450878065.jpg">
+                                    <img class="" src="/upload/1450878065.jpg" width="130" height="100" alt="Лицензия на осуществление медицинской деятельности" title="Лицензия на осуществление медицинской деятельности" />
                                  </a>
                               </div>
                            </div>
@@ -580,40 +581,30 @@
                               <div>
                                  <div class="testimonial_wr">
                                     <div class="testimonial_text additional_font">
-                                       <p>The doctors and nurses and aides were excellent. The food was excellent. I am feeling fine, back to my old self again and it feels great. Thank God for clinics such as yours.</p>
-                                    </div>
-                                    <div class="testimonial_author">Maria Jackson</div>
-                                    <div class="testimonial_position">Teacher</div>
-                                 </div>
-                              </div>
-                              <div>
-                                 <div class="testimonial_wr">
-                                    <div class="testimonial_text additional_font">
-                                       <p>I appreciate all your kindness and good care you gave me. My maintenance treatments have done wonder for me. Thank you so much. Please enjoy the chocolates.</p>
-                                    </div>
-                                    <div class="testimonial_author">Vanessa Musk</div>
-                                    <div class="testimonial_position">Sales Manager</div>
-                                 </div>
-                              </div>
-                              <div>
-                                 <div class="testimonial_wr">
-                                    <div class="testimonial_text additional_font">
-                                       <p>Great co workers, really good environment and excellent patient care. They are continuously innovating themselves which is why they remain a premier dental clinic.</p>
-                                    </div>
-                                    <div class="testimonial_author">Nelson Tinder</div>
-                                    <div class="testimonial_position">Handyman</div>
-                                 </div>
-                              </div>
-                              <div>
-                                 <div class="testimonial_wr">
-                                    <div class="testimonial_text additional_font">
-                                       <p>I just wanted to thank you again for saving my life. If it hadn&#8217;t been for you and the ECT, I truly don&#8217;t think that I would have made it out of my depression.</p>
-                                    </div>
-                                    <div class="testimonial_author">Alexander Payn</div>
-                                    <div class="testimonial_position">Businessman</div>
-                                 </div>
-                              </div>
 
+
+                                       <p class="text-justify">
+
+                                          Большое спасибо персоналу клиники здоровье нации, и в особенности доброй девушке пародонтологу, имени которой я не запомнил)) Долго кровоточили десны, не знал, что делать, а оказывается, надо просто сделать простую чистку и попить витаминки. Сейчас я реально могу делать как в рекламе - кусать яблоки с апломбом. Спасибо огромное! Выручили.
+
+                                       </p>
+
+                                    </div>
+                                    <div class="testimonial_author">Александр Черняев</div>
+                                    <div class="testimonial_position">2015-12-24</div>
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="testimonial_wr">
+                                    <div class="testimonial_text additional_font">
+                                       <p class="text-justify">
+                                          После беременности, зубы посыпались и было очень некрасиво. Решила поставить новые, обратилась в "Здоровье Нации", к терапевту. Он меня посмотрел и сказал, что у меня еще и небольшой кариес. В общем, зубы я поставила, кариес вылечила и осталась очень довольна. Денег с меня взяли меньше даже, чем я ожидала, теперь туда на чистку хожу.)
+                                       </p>
+                                    </div>
+                                    <div class="testimonial_author">Лиана Цветочная</div>
+                                    <div class="testimonial_position">2015-12-25 </div>
+                                 </div>
+                              </div>
                            </div>
 
                         </div>
@@ -668,17 +659,22 @@
                                  </li>
                                  <li>
                                     <a href="#teeth-whitening" role="tab" data-toggle="tab" aria-expanded="false">
-                                       Отбеливание зубов
+                                      Хирургия
                                     </a>
                                  </li>
                                  <li>
                                     <a href="#childrens-teeth-2" role="tab" data-toggle="tab">
-                                       Импланты
+                                       Лечение
                                     </a>
                                  </li>
                                  <li>
                                     <a href="#healthy-gums" role="tab" data-toggle="tab">
-                                       Ортодонтия
+                                       Гигиена
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#ortopedia" role="tab" data-toggle="tab">
+                                       Ортопедия
                                     </a>
                                  </li>
                               </ul>

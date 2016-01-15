@@ -1,7 +1,9 @@
 <footer id="footer">
     <div class="copyright">
         <div class="container">
-            Copyright © 2015 Nation health Powered by <a target="_blank" href="http://www.octavian48.ru/">Octavian</a>
+            <p>© 2015 - {{date('Y')}}, г.Липецк, Стоматология</p>
+            <p><small>Представленная на сайте информация носит исключительно ознакомительный характер</small></p>
+            <p><small>Разработка, поддержка и продвижение сайтов <a target="_blank" href="http://www.octavian48.ru/">Октавиан</a></small></p>
         </div>
     </div>
 </footer>

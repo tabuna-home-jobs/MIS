@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4147444029">
+  <component name="DataSourceManagerImpl" format="xml" hash="1575274371">
     <data-source source="LOCAL" name="PostgreSQL - octavian_mis@193.111.141.198 [2]" uuid="f888dd07-4860-473e-8640-d77e8301ab85">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://193.111.141.198:5432/octavian_mis</jdbc-url>
-      <libraries />
     </data-source>
     <data-source source="LOCAL" name="PostgreSQL - octavian_mis@193.111.141.198" uuid="3578d799-d67b-4c17-958f-4955ab0f8904">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://193.111.141.198:5432/octavian_mis</jdbc-url>
-      <libraries />
     </data-source>
   </component>
 </project>
