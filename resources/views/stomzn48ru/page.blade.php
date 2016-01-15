@@ -61,7 +61,7 @@
 			</span>
 			<span class="media-body media-middle">
 				<span class="text">
-					Прайс лист<br><em>2.3 mb, PDF</em>				</span>
+					Прайс лист<br><em>Скачать в PDF</em>				</span>
 			</span>
                                                     </a>
                                                 </div>
