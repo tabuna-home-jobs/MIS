@@ -151,7 +151,7 @@
                             <strong>Заказать звонок</strong>
                             <span>Мы ответим на Ваши вопросы</span>
                         </div>
-                        <a href="/" class="link"></a>
+                        <a href="/feedback" class="link"></a>
                     </div>
                 </div>
 

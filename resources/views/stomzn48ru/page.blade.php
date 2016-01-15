@@ -55,13 +55,13 @@
                                                     </aside>
                                                 </div>
                                                 <div class="icon_button vc_custom_1441358740563">
-                                                    <a target="_self" href="#">
+                                                    <a target="_target" href="/stomzn48.ru/download/price.xlsx">
 			<span class="media-left media-middle">
 				<i style="font-size: 33px; line-height: 33px; height: 33px;" class="stm-icon stm-icon-list"></i>
 			</span>
 			<span class="media-body media-middle">
 				<span class="text">
-					Прайс лист<br><em>Скачать в PDF</em>				</span>
+					Прайс лист<br><em>Скачать в xlsx</em>				</span>
 			</span>
                                                     </a>
                                                 </div>
