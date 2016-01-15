@@ -581,44 +581,37 @@
                <!--Блок статистики-->
 
                <!--Блок наши отзывы-->
-               <div class="vc_row wpb_row vc_row-fluid vc_custom_1440049113495"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper">
+               <div class="vc_row wpb_row vc_row-fluid vc_custom_1440049113495">
+                  <div class="wpb_column vc_column_container vc_col-sm-12">
+                     <div class="wpb_wrapper">
 
                         <div class="testimonials_carousel">
                            <h2>Наши счастливые клиенты</h2>
 
                            <div class="slick_nav style_1">
-                              <div class="slick_prev" id="testimonials_carousel-511990533-prev"><i class="stm-icon-chevron-left"></i></div>
-                              <div class="slick_next" id="testimonials_carousel-511990533-next"><i class="stm-icon-chevron-right"></i></div>
+                              <div class="slick_prev" id="testimonials_carousel-511990533-prev">
+                                 <i class="stm-icon-chevron-left"></i>
+                              </div>
+                              <div class="slick_next" id="testimonials_carousel-511990533-next">
+                                 <i class="stm-icon-chevron-right"></i>
+                              </div>
                            </div>
 
                            <div id="testimonials_carousel-511990533">
-                              <div>
-                                 <div class="testimonial_wr">
-                                    <div class="testimonial_text additional_font">
 
-
-                                       <p class="text-justify">
-
-                                          Большое спасибо персоналу клиники здоровье нации, и в особенности доброй девушке пародонтологу, имени которой я не запомнил)) Долго кровоточили десны, не знал, что делать, а оказывается, надо просто сделать простую чистку и попить витаминки. Сейчас я реально могу делать как в рекламе - кусать яблоки с апломбом. Спасибо огромное! Выручили.
-
-                                       </p>
-
-                                    </div>
-                                    <div class="testimonial_author">Александр Черняев</div>
-                                    <div class="testimonial_position">2015-12-24</div>
-                                 </div>
-                              </div>
+                              @foreach($reviews as $review)
                               <div>
                                  <div class="testimonial_wr">
                                     <div class="testimonial_text additional_font">
                                        <p class="text-justify">
-                                          После беременности, зубы посыпались и было очень некрасиво. Решила поставить новые, обратилась в "Здоровье Нации", к терапевту. Он меня посмотрел и сказал, что у меня еще и небольшой кариес. В общем, зубы я поставила, кариес вылечила и осталась очень довольна. Денег с меня взяли меньше даже, чем я ожидала, теперь туда на чистку хожу.)
+                                          {{$review['content']}}
                                        </p>
                                     </div>
-                                    <div class="testimonial_author">Лиана Цветочная</div>
-                                    <div class="testimonial_position">2015-12-25 </div>
+                                    <div class="testimonial_author">{{$review['fio']}}</div>
+                                    <div class="testimonial_position">{{$review['created_at']}}</div>
                                  </div>
                               </div>
+                              @endforeach
                            </div>
 
                         </div>

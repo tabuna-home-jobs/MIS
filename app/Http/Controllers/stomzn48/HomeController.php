@@ -15,17 +15,20 @@ class HomeController extends Controller {
 	 */
     public function index($sitename = "stomzn48", $sitedomen = "ru")
     {
-        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with('reviews')->first();
+
 
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
+
+	    //Reviews::where('ids', $getSites->id)->limit(9)->get()->toArray();
 
 		$specialization = DB::table('timetable')->select('specialization')->distinct()->get();
 		return view($sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShares' => $getShares,
-				'specialization' => $specialization,
-
+			'specialization' => $specialization,
+			'reviews' => $getSites['reviews']
         ]);
     }
 

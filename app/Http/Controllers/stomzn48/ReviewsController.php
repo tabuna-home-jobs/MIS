@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\Site;
+<?php namespace App\Http\Controllers\stomzn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\ReviewsRequest;

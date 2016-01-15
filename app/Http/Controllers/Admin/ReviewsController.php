@@ -39,6 +39,20 @@ class ReviewsController extends Controller {
     }
 
 
+    //Добавление отзыва
+    public function getCreate(){
+
+        return view("dashboard/reviews/create");
+    }
+
+    //Запись отзыва
+    public function postStore(ReviewsRequest $request){
+
+        Reviews::create($request->all());
+        //Флеш сообщение
+        Session::flash('good', 'Вы успешно добавили отзыв');
+        return redirect()->route('dashboard.reviews.index');
+    }
 
 
     public  function  getRestore($Reviews = null)

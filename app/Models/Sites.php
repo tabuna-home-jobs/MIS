@@ -7,6 +7,7 @@ class Sites extends Model {
 
     use SoftDeletes;
 
+    protected static $reviews = Reviews::class;
     /**
      * The database table used by the model.
      *
@@ -19,7 +20,14 @@ class Sites extends Model {
      *
      * @var array
      */
-    protected $fillable = ['name', 'domen', 'pre'];
+    protected $fillable = ['name', 'domen', 'pre', 'id'];
+
+
+
+    public function reviews(){
+
+        return $this->hasMany(static::$reviews, 'ids','id')->where('publish', 1)->limit(9);
+    }
 
     public function getNews()
     {

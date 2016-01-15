@@ -9,8 +9,20 @@
     <div class="wrapper-md">
         <div class="panel panel-default">
             <div class="panel-heading">
-                     Отзывы
+
+                <div class="row">
+                    <div class="col-xs-9">
+                         Отзывы
+                    </div>
+                    <div class="col-xs-3 text-right">
+                        <a href="/dashboard/reviews/create">
+                            Добавить <i class="fa fa-plus-square"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
+
             <div class="table-responsive">
                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                     <div class="row">
