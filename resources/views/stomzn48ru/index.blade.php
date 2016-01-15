@@ -615,13 +615,27 @@
                <div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid vc_custom_1440411250438" style="margin-bottom: 0 !important" ><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper">	<div class="pricing_list_wr">
 
                            <div class="pricing_list_header">
-                              <h2>Price List</h2>
+                              <h2>Прайс лист</h2>
 
                               <ul class="tabs" role="tablist">
-                                 <li class="active"><a href="#all" role="tab" data-toggle="tab" aria-expanded="true">All</a></li>
-                                 <li class=""><a href="#teeth-whitening" role="tab" data-toggle="tab" aria-expanded="false">Teeth Whitening</a></li>
-                                 <li><a href="#childrens-teeth-2" role="tab" data-toggle="tab">Dental Implants</a></li>
-                                 <li><a href="#healthy-gums" role="tab" data-toggle="tab">Othodontics</a></li>
+                                 <li class="active">
+                                    <a href="#all" role="tab" data-toggle="tab" aria-expanded="true">Все</a>
+                                 </li>
+                                 <li>
+                                    <a href="#teeth-whitening" role="tab" data-toggle="tab" aria-expanded="false">
+                                       Отбеливание зубов
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#childrens-teeth-2" role="tab" data-toggle="tab">
+                                       Импланты
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#healthy-gums" role="tab" data-toggle="tab">
+                                       Ортодонтия
+                                    </a>
+                                 </li>
                               </ul>
                            </div>
 
@@ -633,8 +647,8 @@
 
                                        <div class="media-body">
                                           <div class="content">
-                                             <h4>Inlays restoration</h4>
-                                             <p>An inlay is a restoration which lies inside the cusps of the tooth</p>
+                                             <h4>Восстановление вкладки</h4>
+                                             <p>Инкрустацией является восстановление которых лежит внутри створок зуба</p>
                                           </div>
                                        </div>
 
@@ -650,7 +664,7 @@
 
                                        <div class="media-body">
                                           <div class="content">
-                                             <h4>Fixed Implant</h4>
+                                             <h4>Фиксированый имплант</h4>
                                              <p>A fixed overdenture is attached to your jaw with dental implants. The advantage of this system is that you only need 4-6 implants to replace all the teeth on your upper or lower jaw.</p>
                                           </div>
                                        </div>
