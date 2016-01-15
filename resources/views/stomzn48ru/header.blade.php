@@ -17,26 +17,26 @@
     <meta name="twitter:description" content="@yield('description')"/>
     <meta name="twitter:image:src" content="@yield('avatar')"/>
 
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/tooltipster.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/tooltipster-light.css">
+    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/tooltipster.css">
+    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/tooltipster-light.css"> -->
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/animations.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/styles-mirror.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/settings.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/stm-icomoon.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui.datepicker.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/styles-mirror.css"> -->
+    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/settings.css"> -->
+   <link rel="stylesheet" type="text/css" href="/stomzn48.ru/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/stm-icomoon.css">
+   <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui.datepicker.min.css"> -->
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui.slider.min.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui-timepicker-addon.min.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery.fancybox.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/select2.css">
+     <!-- <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui-timepicker-addon.min.css"> -->
+     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery.fancybox.css">
+      <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/select2.css">-->
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/frontend_customizer.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_2.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_3.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_4.css">
+    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/frontend_customizer.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_2.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_3.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_4.css"> -->
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/js_composer.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/customs.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/slick.css">
@@ -51,47 +51,47 @@
 
 
     <script type="text/javascript" src="/stomzn48.ru/theme/js/functions.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.form.min.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/scripts.js"></script>
-    <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.cookie.min.js"></script>
+    <!-- <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.form.min.js"></script> -->
+    <!-- <script type="text/javascript" src="/stomzn48.ru/theme/js/scripts.js"></script> -->
+     <!--<script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.cookie.min.js"></script> -->
 
 
-</head>
-<script>
-    /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
-    if ( typeof WebFontConfig === "undefined" ) {
-        WebFontConfig = new Object();
-    }
-    WebFontConfig['google'] = {families: ['Roboto:100,300,400,500,700,900,100italic,300italic,400italic,500italic,700italic,900italic', 'Playfair+Display:400,700,900,400italic,700italic,900italic']};
+ </head>
+ <script>
+     /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+     if ( typeof WebFontConfig === "undefined" ) {
+         WebFontConfig = new Object();
+     }
+     WebFontConfig['google'] = {families: ['Roboto:100,300,400,500,700,900,100italic,300italic,400italic,500italic,700italic,900italic', 'Playfair+Display:400,700,900,400italic,700italic,900italic']};
 
-    (function() {
-        var wf = document.createElement( 'script' );
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName( 'script' )[0];
-        s.parentNode.insertBefore( wf, s );
-    })();
-</script>
-<body>
+     (function() {
+         var wf = document.createElement( 'script' );
+         wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+         wf.type = 'text/javascript';
+         wf.async = 'true';
+         var s = document.getElementsByTagName( 'script' )[0];
+         s.parentNode.insertBefore( wf, s );
+     })();
+ </script>
+ <body>
 
-<header id="header">
+ <header id="header">
 
-    <div class="top_nav affix-top">
-        <div class="container">
-            <div class="row">
+     <div class="top_nav affix-top">
+         <div class="container">
+             <div class="row">
 
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="logo">
-                        <a href="/">
-                            <img src="/stomzn48.ru/img/logo_blue.png" alt="Dent-All"></a>
-                        <div id="menu_toggle">
-                            <button></button>
-                        </div>
-                    </div>
-                </div>
+                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                     <div class="logo">
+                         <a href="/">
+                             <img src="/stomzn48.ru/img/logo_blue.png" alt="Dent-All"></a>
+                         <div id="menu_toggle">
+                             <button></button>
+                         </div>
+                     </div>
+                 </div>
 
-                <!--Меню-->
+                 <!--Меню-->
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <ul id="menu-primary-menu" class="top_nav_menu">
                         {!!Menu::getLI('10','topmain')!!}
@@ -161,7 +161,26 @@
     <!--Блоки с контактами и временим работы-->
     
 
-
 </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @yield('content')
 @include('stomzn48ru/footer')

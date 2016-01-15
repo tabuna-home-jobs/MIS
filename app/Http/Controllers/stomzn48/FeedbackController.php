@@ -39,17 +39,16 @@ class FeedbackController extends Controller {
 	 */
     public function store(FeedbackRequest $request)
 	{
-		return "Привет";
         $new = new Feedback([
             'fio' => $request->fio,
             'phone' => $request->phone,
             'email' => $request->email,
             'content' => $request->message,
-            'ids' => Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id,
+            'ids' => 10,
         ]);
         $new->save();
 
-        Session::flash('good', 'Спасибо, что написали, мы обязательно ответим вам.');
+        Session::flash('good', 'Спасибо, что на	писали, мы обязательно ответим вам.');
         return redirect()->back();
 	}
 

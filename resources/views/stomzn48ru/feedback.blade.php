@@ -15,6 +15,10 @@
                 <!--.container-->
             </div>
 
+
+
+            @include("stomzn48ru.alert")
+
             <article id="post-899" class="post-899 page type-page status-publish hentry">
 
                 <div class="container">
@@ -115,7 +119,6 @@
                                                   class="wpcf7-form-control wpcf7-submit button square">
                                           </p>
 
-                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
                                     </form>
                                 </div>
                             </div>

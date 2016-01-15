@@ -7,18 +7,32 @@
 
       <div class="carousel-inner" role="listbox">
          <div class="item">
-            <img  src="/stomzn48.ru/img/banner1.png" alt="Альт для картинки">
+            <img  src="/stomzn48.ru/img/slider/1.jpg" alt="Альт для картинки">
             <div class="carousel-caption">
-               Прекрасное описание для картинки
+
+               <h3>Побуждение к действию</h3>
+               <p>  Прекрасное описание для картинки</p>
+
             </div>
             <!--Это бекграунд у картинки слайдера-->
             <div class="wrrr"></div>
             <!--Это бекграунд у картинки слайдера-->
          </div>
          <div class="item">
-            <img  src="/stomzn48.ru/img/banner2.jpg" alt="Альт для картинки2">
+            <img  src="/stomzn48.ru/img/slider/2.jpg" alt="Альт для картинки2">
             <div class="carousel-caption">
-               Прекрасное описание для картинки 2
+               <h3>Побуждение к действию</h3>
+               <p>  Прекрасное описание для картинки</p>
+            </div>
+            <!--Это бекграунд у картинки слайдера-->
+            <div class="wrrr"></div>
+            <!--Это бекграунд у картинки слайдера-->
+         </div>
+         <div class="item">
+            <img  src="/stomzn48.ru/img/slider/3.jpg" alt="Альт для картинки3">
+            <div class="carousel-caption">
+               <h3>Побуждение к действию</h3>
+               <p>  Прекрасное описание для картинки</p>
             </div>
             <!--Это бекграунд у картинки слайдера-->
             <div class="wrrr"></div>
