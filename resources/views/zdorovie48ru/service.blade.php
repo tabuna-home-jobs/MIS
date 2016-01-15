@@ -39,6 +39,7 @@
                     <div class="sidebar-widget clearfix">
                         <h2 class="bordered light">Категории</h2>
                         <ul class="tags">
+
                             @foreach($Category as $value)
 
                                 <li><a href="/service?category={{$value['id']}}">{{$value['name']}}</a></li>

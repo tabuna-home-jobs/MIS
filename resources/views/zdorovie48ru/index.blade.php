@@ -392,11 +392,11 @@
                         </li>
                         <li class="clearfix">
 				<span>
-					Воскресенье
+					Запись на прием  ежедневно
 				</span>
 
                             <div class="value">
-                                10.00 - 16.00
+                                8:00 - 21:00
                             </div>
                         </li>
                     </ul>

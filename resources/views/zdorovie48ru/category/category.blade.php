@@ -1,4 +1,5 @@
 <li>
+
     @if(count($category->children) > 0)
         <i class = "fa fa-plus-square"></i>
     @endif

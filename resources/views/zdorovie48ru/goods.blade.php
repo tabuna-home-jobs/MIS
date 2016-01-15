@@ -9,6 +9,10 @@
         </div>
     </section>-->
 
+
+
+
+
     <div class="sub-page-content">
 
         <div class="container">
@@ -41,7 +45,25 @@
                         </div>
 
                     </div>
-                    
+
+
+
+                    <div class="sidebar-widget light">
+                        <h2 class="bordered light">Последние новости</h2>
+
+                        @foreach($LastNews as $lastNew)
+                            <article style="overflow: hidden" class="popular-post col-xs-12">
+                                <img style="width: 170px" alt="{{$lastNew->title}}" src="{{$lastNew->avatar}}">
+                                <h4><a href="/blog/{{$lastNew->id}}">{{$lastNew->name}}</a></h4>
+
+                                <p class="text-justify">{{ substr(strip_tags($lastNew->content), 0, 201) }} ...</p>
+
+                                <p class="popular-date text-right">{{$lastNew->created_at}}</p>
+                            </article>
+                        @endforeach
+                    </div>
+
+
                 </aside>
 
                 <div class="col-md-8">
@@ -94,22 +116,11 @@
 
                 </div>
             </div>
-            <div class="sidebar-widget light container">
-                <h2 class="bordered light">Последние новости</h2>
-
-                @foreach($LastNews as $lastNew)
-                    <article style="overflow: hidden" class="popular-post col-xs-12">
-                        <img style="width: 170px" alt="{{$lastNew->title}}" src="{{$lastNew->avatar}}">
-                        <h4><a href="/blog/{{$lastNew->id}}">{{$lastNew->name}}</a></h4>
-
-                        <p class="text-justify">{{ substr(strip_tags($lastNew->content), 0, 201) }} ...</p>
-
-                        <p class="popular-date text-right">{{$lastNew->created_at}}</p>
-                    </article>
-                @endforeach
-            </div>
         </div>
 
 
+
+
+        </div>
 
 @endsection

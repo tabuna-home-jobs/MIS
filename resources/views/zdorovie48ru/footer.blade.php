@@ -53,11 +53,11 @@
                     <h4><span>Мы находимся</span></h4>
                     <div class="contact-widget">
                         <i class="fa fa-home"></i><p>г.Липецк, ул.Октябрьская, д.61</p>
-                        <i class="fa fa-envelope"></i><p>niki@zdorovie48.ru</p>
+                        <i class="fa fa-envelope"></i><p>mother-baby@mail.ru</p>
                         <i class="fa fa-mobile"></i><p class="phone-number">(4742) 227-887</p>
                         <i class="fa fa-clock-o"></i><p class="phone-number"> Будние дни: 8:00-21:00<br>
                             Суббота: 8:00-18:00<br>
-                            Воскресенье: 10:00-16:00</p>
+                            Запись на прием  ежедневно с 8:00 до 21:00</p>
                     </div>
                 </div>
             </div>
@@ -84,46 +84,11 @@
 
 <script src="/site1.ru/js/jquery-revolution.js"></script>
 <script src="/site1.ru/js/bootstrap.min.js"></script>
-<!--<script src="/site1.ru/js/jquery.anythingslider.js"></script>-->
-<!--<script src="/site1.ru/js/jquery.stellar.js"></script>-->
-<!--<script src="/site1.ru/js/jquery-ui-1.10.3.custom.js"></script>-->
-<!--<script src="/site1.ru/js/jquery.uniform.js"></script>-->
-<!--Nimble-->
-<script type="text/javascript" src="/site1.ru/js/jquery.isotope.min.js"></script>
-<script type="text/javascript" src="/site1.ru/js/jquery.prettyPhoto.js"></script>
-
-
 <script type="text/javascript" src="/site1.ru/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
-
-
-<!--jCarousel library-->
-<!--<script type="text/javascript" src="/site1.ru/js/jquery.jcarousel.min.js"></script>-->
-
+<link rel="stylesheet" href="/site1.ru/js/fancy/jquery.fancybox.css">
+<script src="/site1.ru/js/fancy/jquery.fancybox.pack.js"></script>
 
 <script>
-    //Portfolio
-    var $container = $('.portfolio');
-    $container.isotope({
-        filter: '*',
-        animationOptions: {
-            duration: 750,
-            easing: 'linear',
-            queue: false
-        }
-    });
-
-    $('nav.primary ul a').click(function () {
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-            filter: selector,
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-        });
-        return false;
-    });
 
     var $optionSets = $('nav.primary ul'),
             $optionLinks = $optionSets.find('a');
@@ -139,30 +104,6 @@
         $this.addClass('selected');
     });
 
-    //preetyphotoeffect
-    jQuery(document).ready(function () {
-        jQuery('a[data-gal]').each(function () {
-            jQuery(this).attr('rel', jQuery(this).data('gal'));
-        });
-        jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
-            animationSpeed: 'slow',
-            theme: 'light_square',
-            slideshow: false,
-            overlay_gallery: false,
-            social_tools: false,
-            deeplinking: false
-        });
-
-        //on click show content
-        jQuery('.link-more').click(function (e) {
-            jQuery('.content-sec').slideDown(1000);
-        });
-        //on click hide content
-        jQuery('.cross').click(function (e) {
-            jQuery('.content-sec').slideUp(1000);
-        });
-
-    });
 
 
     $(document).ready(function () {
@@ -211,9 +152,6 @@
 
 
 </script>
-
-<link rel="stylesheet" href="/site1.ru/js/fancy/jquery.fancybox.css">
-<script src="/site1.ru/js/fancy/jquery.fancybox.pack.js"></script>
 
 
 

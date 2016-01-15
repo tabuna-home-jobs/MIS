@@ -3,6 +3,8 @@
 @section('content')
 
 
+
+
     <div class="container galery-container">
         <h2 class="light bordered"> <div><a class="active" href="">Фотогалерея</a><a href="/video">Видеогалерея</a></div> </h2>
         <div class="row">
