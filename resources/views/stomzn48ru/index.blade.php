@@ -145,7 +145,7 @@
                      <div class="wpb_wrapper">
                         <div class="image_carousel vertical style_1 type_1">
 
-                           <h5 style="color: #4c4c4c">Лицензии</h5>
+                           <h5 style="color: #4c4c4c">Наши Лицензии</h5>
 
                            <div id="image_carousel-1376798397">
                               <div>

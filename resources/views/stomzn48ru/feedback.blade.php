@@ -1,55 +1,132 @@
-@extends('site1ru/header')
+@extends('stomzn48ru/header')
 
 @section('content')
 
 
-    <div class="sub-page-content">
-    	<div class="container">
-        	<h2 class="light bordered">Как<span> Добраться</span></h2>
-            <div class="row">
-            	<div class="col-md-12">
-                	<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2423.2438515896024!2d39.592403!3d52.601363!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413a14e9eece3c35%3A0xdfbc4fe617d626e0!2z0J7QutGC0Y_QsdGA0YzRgdC60LDRjyDRg9C7LiwgNjEsINCb0LjQv9C10YbQuiwg0JvQuNC_0LXRhtC60LDRjyDQvtCx0LsuLCAzOTgwNTk!5e0!3m2!1sru!2sru!4v1432638437060" width="600" height="450" frameborder="0" style="border:0"></iframe></div>
-                    	<div class="get-directions">
-                        	<form action="http://maps.google.com/maps" method="get" target="_blank">
-                               <input type="text" name="saddr" placeholder="Введите свой адрес" />
-                               <input type="hidden" name="daddr" value="Октябрьская ул., 61, Липецк, Липецкая область" />
-                               <input type="submit" value="Get directions" class="direction-btn" />
-                            </form>
-                        </div>
-                </div>
-            </div>
-            
-            <div class="row">
-            	<div class="col-md-8 contact-form">
-                	<h2 class="light bordered">Написать нам <span>сообщение</span></h2>
+    <section id="content">
+        <div class="content_wrapper">
 
-                    <form action="/feedback" method="post">
-                        <input type="text" name="fio" placeholder="ФИО" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="text" name="phone" placeholder="Телефон" required>
-                        <textarea name="message" required placeholder="Текст сообщения"></textarea>
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="submit" class="btn btn-default" value="Отправить">
-                    </form>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="col-md-4">
-                	<h2 class="light bordered">Мы <span>Находимся</span></h2>
-                    <div class="get-in-touch-widget">
-                    	<ul class="list-unstyled">
-                        <li><i class="fa fa-phone"></i>(4742) 227-887, 227-8881</li>
-                        <li><i class="fa fa-envelope"></i>octavian48@yandex.ru</li>
-                        <li><i class="fa fa-globe"></i><a href="http://zdorovie48.ru/">zdorovie48.ru</a></li>
-                        <li><i class="fa fa-clock-o"></i>Понедельник-пятница: 8:00-21:00<br>
-                            Суббота: 8:00-18:00<br>
-                            Воскресенье: 10:00-16:00</li>
-                        <li><i class="fa fa-map-marker"></i> г.Липецк ул.Октябрьская д.61 </li>
-                        </ul>
+            <div class="title_box">
+                <div class="container">
+                    <div class="title_wr">
+                        <h1>Контакты</h1>
                     </div>
                 </div>
+                <!--.container-->
             </div>
-            
-        </div>
-    </div>
-    
-    @endsection
+
+            <article id="post-899" class="post-899 page type-page status-publish hentry">
+
+                <div class="container">
+                    <div class="vc_row wpb_row vc_row-fluid vc_custom_1443297815351">
+                        <div class="wpb_column vc_column_container vc_col-sm-5 vc_col-lg-4 vc_col-md-4 vc_custom_1443298021925">
+                            <div class="wpb_wrapper">
+                                <aside class="widget widget_contacts wpb_content_element vc_widgets style_3">
+                                    <ul>
+                                        <li>
+                                            <div class="text"><strong>Мы Находимся</strong>
+
+                                                <p>г. Липецк, ул.Советская, д. 66<br>
+                                                    ул.Фрунзе, д.14</p></div>
+                                            <div class="icon"><i class="stm-icon-map-marker"></i></div>
+                                        </li>
+                                        <li>
+                                            <div class="text"><strong>E-mail</strong>
+
+                                                <p><a href="mailto:mother-baby@mail.ru">mother-baby@mail.ru</a></p>
+                                            </div>
+                                            <div class="icon"><i class="fa fa-envelope-o"></i></div>
+                                        </li>
+                                        <li>
+                                            <div class="text"><strong>Телефон</strong>
+
+                                                <p>+7 (4742) 227-887</p></div>
+                                            <div class="icon"><i class="stm-icon-roundels"></i></div>
+                                        </li>
+                                        <li>
+                                            <div class="text"><strong>Часы приёма</strong>
+
+                                                <p>Пн - Пт: 8:00 - 21:00<br>
+                                                    Сб: :00 - 18:00</p></div>
+                                            <div class="icon"><i class="stm-icon-clock"></i></div>
+                                        </li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-sm-7 vc_col-lg-8 vc_col-md-8 vc_custom_1443298031143">
+
+                            <div class="wpb_wrapper"><h3 style="color: #4c4c4c;text-align: left"
+                                                         class="vc_custom_heading vc_custom_1442473402530">Обратная связь</h3>
+
+                                <div role="form" class="wpcf7">
+                                    <div class="screen-reader-response"></div>
+                                    <form action="/feedback" method="post" class="wpcf7-form">
+
+                                        <div class="row">
+                                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                                <div class="input-group">
+                                                    <span class="wpcf7-form-control-wrap name"><input type="text"
+                                                                                                      name="fio"
+                                                                                                      value="" size="40"
+                                                                                                      class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                      aria-required="true"
+                                                                                                      aria-invalid="false"
+                                                                                                      placeholder="ФИО"></span><span
+                                                            class="input-addon"><i class="stm-icon-man"></i></span>
+                                                </div>
+
+                                                <div class="input-group">
+                                                    <span class="wpcf7-form-control-wrap email"><input type="email"
+                                                                                                       name="email"
+                                                                                                       value=""
+                                                                                                       size="40"
+                                                                                                       class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                                                                       aria-required="true"
+                                                                                                       aria-invalid="false"
+                                                                                                       placeholder="Email"></span><span
+                                                            class="input-addon"><i class="fa fa-envelope-o"></i></span>
+                                                </div>
+
+                                                <div class="input-group">
+                                                    <span class="wpcf7-form-control-wrap email"><input type="text"
+                                                                                                       name="phone"
+                                                                                                       value=""
+                                                                                                       size="40"
+                                                                                                       class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                                                                       aria-required="true"
+                                                                                                       aria-invalid="false"
+                                                                                                       placeholder="Телефон"></span><span
+                                                            class="input-addon"><i class="fa fa-phone"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                                                <div class="input-group no-bordered">
+                                                    <span class="wpcf7-form-control-wrap message"><textarea
+                                                                name="message" cols="40" rows="15"
+                                                                class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                                                aria-required="true" aria-invalid="false"
+                                                                placeholder="Ваше сообщение"></textarea></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p><input type="submit" value="Отправить"
+                                                  class="wpcf7-form-control wpcf7-submit button square">
+                                          </p>
+
+                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!--.container-->
+
+            </article> <!-- #post-## --></div>
+
+    </section>
+
+@endsection
