@@ -229,16 +229,16 @@
                            <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-3 vc_col-md-3 vc_custom_1443254710022">
                               <div class="wpb_wrapper">
                                  <div class="icon_box icon_top">
-                                    <div class="icon" style="height: 90px;">
+                                    <div class="icon text-center" style="height: 90px;">
                                        <i style="font-size: 52px;" class="stm-icon-computer"></i>
                                     </div>
 
                                     <div class="text">
-                                       <h4 style="font-size: 24px; font-weight: 300; color: #ffffff;">
+                                       <h4 style="font-size: 24px; font-weight: 300; color: #ffffff;" class=" text-center">
                                           Принимаем страховые<br/>
                                           карточки </h4>
 
-                                       <p class="p1">
+                                       <p class="p1 text-justify">
                                           <span style="color: rgba(255,255,255,0.5); font-weight: 400;">
                                              Наша клиника может легко принять клиентов со страховыми картами и создавать истории случаев для каждого.
                                           </span>
@@ -253,16 +253,16 @@
                               <div class="wpb_wrapper">
                                  <div class="icon_box icon_top">
 
-                                    <div class="icon" style="height: 90px;">
+                                    <div class="icon  text-center" style="height: 90px;">
                                        <i style="font-size: 63px;" class="stm-icon-tooth-4"></i>
                                     </div>
 
                                     <div class="text">
-                                       <h4 style="font-size: 24px; font-weight: 300;">
-                                          Используем инновационные<br/>
-                                          Технологии </h4>
+                                       <h4 style="font-size: 24px; font-weight: 300;" class=" text-center">
+                                          Современные <br/>
+                                          технологии </h4>
 
-                                       <p class="p1">
+                                       <p class="p1 text-justify">
                                           <span style="color: rgba(255,255,255,0.5); font-weight: 400;">
                                              Все наши операции оснащены современным оборудованием и поддерживается на самом высоком уровне .
                                           </span>
@@ -278,16 +278,16 @@
                                  <div class="icon_box icon_top">
 
 
-                                    <div class="icon" style="height: 90px;">
+                                    <div class="icon  text-center" style="height: 90px;">
                                        <i style="font-size: 54px;" class="stm-icon-tooth-5"></i>
                                     </div>
 
                                     <div class="text">
-                                       <h4 style="font-size: 24px; font-weight: 300;">
+                                       <h4 style="font-size: 24px; font-weight: 300;" class=" text-center">
                                           Гарантия Успеха<br/>
                                           процедур </h4>
 
-                                       <p class="p1">
+                                       <p class="p1 text-justify">
                                           <span style="color: rgba(255,255,255,0.5); font-weight: 400;">
                                              Большинство наших процедур покрыты долгосрочной гарантии , которые будут обсуждаться с вами перед началом лечения .
                                           </span>
@@ -303,17 +303,17 @@
                                  <div class="icon_box icon_top">
 
 
-                                    <div class="icon" style="height: 90px;">
+                                    <div class="icon  text-center" style="height: 90px;">
                                        <i style="font-size: 63px;" class="stm-icon-sertificate"></i>
                                     </div>
 
                                     <div class="text">
-                                       <h4 style="font-size: 24px; font-weight: 300;">
-                                          Сертифицированные Доктора<br/>
-                                          Стоматологи </h4>
+                                       <h4 style="font-size: 24px; font-weight: 300;" class=" text-center">
+                                          Сертифицированные специалисты
+                                           </h4>
 
-                                       <p class="p1">
-                                          <span style="color: rgba(255,255,255,0.5); font-weight: 400;">
+                                       <p class="p1 text-justify">
+                                          <span style="color: rgba(255,255,255,0.5); font-weight: 400;" >
                                              С более чем 30 лет стоматологического опыта и опыта с имплантатами , мы являемся экспертами во всех аспектах стоматологии .
                                           </span>
                                        </p>

@@ -110,6 +110,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        {!!csrf_field()!!}
                                         <p><input type="submit" value="Отправить"
                                                   class="wpcf7-form-control wpcf7-submit button square">
                                           </p>

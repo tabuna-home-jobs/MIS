@@ -37,9 +37,9 @@ class FeedbackController extends Controller {
 	 *
 	 * @return Response
 	 */
-    public function store($sitename, $sitedomen, FeedbackRequest $request)
+    public function store(FeedbackRequest $request)
 	{
-
+		return "Привет";
         $new = new Feedback([
             'fio' => $request->fio,
             'phone' => $request->phone,

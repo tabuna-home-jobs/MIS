@@ -79,7 +79,7 @@
                         <li>
                             <div class="text"><strong>E-mail</strong>
 
-                                <p><a href="mailto:stomzn48@yandex.ru">stomzn48@yandex.ru</a></p></div>
+                                <p><a href="mailto:mother-baby@mail.ru">mother-baby@mail.ru</a></p></div>
                             <div class="icon"><i class="fa fa-envelope-o"></i></div>
                         </li>
                         <li>
@@ -92,8 +92,8 @@
                         <li>
                             <div class="text"><strong>Адрес</strong>
 
-                                <p>г. Липецк, ул.Советская,<br>
-                                   д. 66; ул.Фрунзе, д.14</p></div>
+                                <p>ул.Советская, д. 66<br>
+                                    ул.Фрунзе, д.14</p></div>
                             <div class="icon"><i class="stm-icon-map-marker"></i></div>
                         </li>
                     </ul>
