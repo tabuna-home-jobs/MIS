@@ -71,8 +71,9 @@
                         <li>
                             <div class="text"><strong>Оффис</strong>
 
-                                <p>Пн - Пт 8.00 - 17.00<br>
-                                   Сб - Вс 9:00 - 14:00</p></div>
+                                <p>Пн - Пт 8:00 - 21:00<br>
+                                        <span class="subbclock">Сб 9:00 - 14:00</span>
+                                </p></div>
                             <div class="icon"><i class="stm-icon-clock"></i></div>
                         </li>
                         <li>
