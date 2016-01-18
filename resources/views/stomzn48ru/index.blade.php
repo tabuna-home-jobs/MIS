@@ -359,16 +359,16 @@
                                        <div class="story-images">
                                           <div class="story-images-inner">
                                              <div class="story-image story-image-first">
-                                                <img class="" src="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/09/story_1_before-250x223.jpg"
-                                                     width="250" height="223" alt="story_1_before" title="story_1_before"/>
+                                                <img class="" src="/stomzn48.ru/img/history/restavraciya-1.jpg"
+                                                     width="250" alt="story_1_before" title="story_1_before"/>
 
                                                 <div class="story-image-caption">
                                                    <div class="story__caption-title">До</div>
                                                 </div>
                                              </div>
                                              <div class="story-image story-image-second">
-                                                <img class="" src="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/09/story_1_after-250x223.jpg" width="250"
-                                                     height="223" alt="story_1_after" title="story_1_after"/>
+                                                <img class="" src="/stomzn48.ru/img/history/restavraciya-2.jpg" width="250"
+                                                     alt="story_1_after" title="story_1_after"/>
 
                                                 <div class="story-image-caption">
                                                    <div class="story__caption-title">После</div>
@@ -379,14 +379,14 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                        <div class="story-content">
-                                          <h5 class="story__title">Глубокое отбеливание зубов Ларисы</h5>
+                                          <h5 class="story__title">Реставрация зуба</h5>
 
                                           <p> Это термин, используемый при объединении одного или более зубов лечение, чтобы улучшить внешний вид вашей улыбки .</p>
 
                                           <p>Этапы лечения:</p>
                                           <ul class="stars">
-                                             <li>In-chair teeth whitening generally involves the application of a whitening.</li>
-                                             <li>Take-home teeth whitening requires a set of custom made trays to fit your teeth.</li>
+                                             <li>Такие факторы, как курение, плохая гигиена полости рта и диеты может повлиять на долговечность результатов.</li>
+                                             <li>Такие факторы, как курение, плохая гигиена полости рта и диеты может повлиять на долговечность результатов.</li>
                                              <li>Такие факторы, как курение, плохая гигиена полости рта и диеты может повлиять на долговечность результатов.</li>
                                           </ul>
                                        </div>
@@ -403,16 +403,16 @@
                                        <div class="story-images">
                                           <div class="story-images-inner">
                                              <div class="story-image story-image-first">
-                                                <img class="" src="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/09/story_2_before-250x223.jpg"
-                                                     width="250" height="223" alt="story_2_before" title="story_2_before"/>
+                                                <img class="" src="/stomzn48.ru/img/history/oleg1.jpg"
+                                                     width="250" alt="story_1_before" title="story_1_before"/>
 
                                                 <div class="story-image-caption">
                                                    <div class="story__caption-title">До</div>
                                                 </div>
                                              </div>
                                              <div class="story-image story-image-second">
-                                                <img class="" src="http://cdn.dentall.stylemixthemes.com/wp-content/uploads/2015/09/story_2_after-250x223.jpg" width="250"
-                                                     height="223" alt="story_2_after" title="story_2_after"/>
+                                                <img class="" src="/stomzn48.ru/img/history/oleg2.jpg" width="250"
+                                                     alt="story_1_after" title="story_1_after"/>
 
                                                 <div class="story-image-caption">
                                                    <div class="story__caption-title">После</div>
@@ -423,22 +423,70 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                        <div class="story-content">
-                                          <h5 class="story__title">
-                                             Пять коронок в течение 48 часов с Раисой Медведковой</h5>
+                                          <h5 class="story__title">Восстановление фронтальных зубов с помощью керамических виниров.</h5>
 
                                           <p>
-                                             Коронки необходимы, когда зуб имеет значительное количество структурных повреждений и нормальной заполнение будет недостаточно . </p>
+                                             Пациент обратился в клинику с намерением восстановить верхние фронтальные зубы (до клыков), которые из за многочисленных старых пломб и спортивной травмы стали некрасивыми. Нами было принято решение восстановить эстетику с помощью керамических виниров. В результате пациент остался очень доволен работой - восстановленные зубы смотрятся прекрасно и при этом совершенно естественно.
+                                          </p>
 
                                           <p>Этапы лечения:</p>
                                           <ul class="stars">
-                                             <li>Heavily filled teeth that have broken or that are likely to break in the near future.</li>
-                                             <li>Teeth with old amalgam fillings often crack around the filling causing pain when chewing.</li>
+                                             <li>Такие факторы, как курение, плохая гигиена полости рта и диеты может повлиять на долговечность результатов.</li>
+                                             <li>Такие факторы, как курение, плохая гигиена полости рта и диеты может повлиять на долговечность результатов.</li>
                                           </ul>
                                        </div>
                                     </div>
                                  </div>
                               </div>
                            </div>
+
+
+
+                           <div class="slider-item story-carousel-item">
+                              <div class="story story_type_slider">
+                                 <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                       <div class="story-images">
+                                          <div class="story-images-inner">
+                                             <div class="story-image story-image-first">
+                                                <img class="" src="/stomzn48.ru/img/history/lechenie-caries-1.jpg"
+                                                     width="250" alt="story_1_before" title="story_1_before"/>
+
+                                                <div class="story-image-caption">
+                                                   <div class="story__caption-title">До</div>
+                                                </div>
+                                             </div>
+                                             <div class="story-image story-image-second">
+                                                <img class="" src="/stomzn48.ru/img/history/lechenie-caries-2.jpg" width="250"
+                                                     alt="story_1_after" title="story_1_after"/>
+
+                                                <div class="story-image-caption">
+                                                   <div class="story__caption-title">После</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                       <div class="story-content">
+                                          <h5 class="story__title">Лечение кариеса</h5>
+
+                                          <p>
+                                             Самым опасным является, конечно, глубокий кариес – на этой стадии наблюдаются сильные изменения дентина. Боли, как правило, усиливаются. Зуб начинает реагировать на любые раздражители: механические (при жевании), температурные, химические (сладкая, соленая пища). Если не лечить кариес на этой стадии, то он перерастает в пульпит, когда требуется оперативное вмешательство.
+                                          </p>
+
+                                          <p>Этапы лечения:</p>
+                                          <ul class="stars">
+                                             <li>Такие факторы, как курение, плохая гигиена полости рта и диеты может повлиять на долговечность результатов.</li>
+                                             <li>Такие факторы, как курение, плохая гигиена полости рта и диеты может повлиять на долговечность результатов.</li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+
 
 
                         </div>
@@ -654,6 +702,7 @@
                      </div></div></div>
                <!--Блок наши отзывы-->
 
+
                <!--Прайс лист-->
                <div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid vc_custom_1440411250438" style="margin-bottom: 0 !important" ><div class="wpb_column vc_column_container vc_col-sm-12"><div class="wpb_wrapper">	<div class="pricing_list_wr">
 
@@ -665,7 +714,7 @@
                                  @foreach($categories as $categorie)
                                     <li>
                                        <a href="#tab{{$categorie['id']}}" role="tab" data-toggle="tab" aria-expanded="false">
-                                         {{$categorie['name']}}
+                                          {{$categorie['name']}}
                                        </a>
                                     </li>
                                  @endforeach
@@ -681,35 +730,35 @@
                            <div class="tab-content">
 
                               @foreach($categories as $categorie)
-                              <div role="tabpanel" class="tab-pane fade" id="tab{{$categorie['id']}}">
-                                 <ul class="pricing_list clearfix">
-                                    @foreach($categorie['goods'] as $good)
-                                       <li class="media sale">
-                                          <div class="media-body">
-                                             <div class="content">
-                                                <h4>{{$good['name']}}</h4>
-                                                <p>
-                                                   {{$good['descript']}}
-                                                </p>
+                                 <div role="tabpanel" class="tab-pane fade" id="tab{{$categorie['id']}}">
+                                    <ul class="pricing_list clearfix">
+                                       @foreach($categorie['goods'] as $good)
+                                          <li class="media sale">
+                                             <div class="media-body">
+                                                <div class="content">
+                                                   <h4>{{$good['name']}}</h4>
+                                                   <p>
+                                                      {{$good['descript']}}
+                                                   </p>
+                                                </div>
                                              </div>
-                                          </div>
 
-                                          <div class="media-right">
-                                             <div class="sale_price">
-                                                <span>{{$good['price']}}</span>
-                                                <i class="fa fa-rub"></i>
+                                             <div class="media-right">
+                                                <div class="sale_price">
+                                                   <span>{{$good['price']}}</span>
+                                                   <i class="fa fa-rub"></i>
+                                                </div>
                                              </div>
-                                          </div>
 
-                                       </li>
-                                    @endforeach
-                                 </ul>
-                                 <div class="full_price">
-                                    <a href="/stomzn48.ru/download/price.xlsx" class="button">
-                                       Скачать прайс
-                                    </a>
+                                          </li>
+                                       @endforeach
+                                    </ul>
+                                    <div class="full_price">
+                                       <a href="/stomzn48.ru/download/price.xlsx" class="button">
+                                          Скачать прайс
+                                       </a>
+                                    </div>
                                  </div>
-                              </div>
                               @endforeach
 
                            </div>
@@ -717,6 +766,7 @@
                      </div></div></div>
                <div class="vc_row-full-width"></div>
                <!--Прайс лист-->
+
             </div>
          </article>
       </div>
