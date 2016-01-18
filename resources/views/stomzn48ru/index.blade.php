@@ -155,7 +155,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="wpb_column vc_column_container vc_col-sm-4 vc_custom_1439899240148">
+                  <div class="wpb_column vc_column_container vc_col-sm-4 hidden-xs vc_custom_1439899240148">
                      <div class="wpb_wrapper">
                         <div class="image_carousel vertical style_1 type_1">
 

@@ -42,10 +42,15 @@ class GoodsController extends Controller {
         $Goods->name = $request->name;
         $Goods->text = $request->text;
         $Goods->tag = $request->tag;
+
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $Goods->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+        }else{
+
+            $Goods->avatar = '/dash/img/no_img.png';
         }
+
         $Goods->descript = $request->descript;
         $Goods->ids = Session::get('website');
         $Goods->price = $request->price;

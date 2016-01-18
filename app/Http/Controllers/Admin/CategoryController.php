@@ -53,7 +53,11 @@ class CategoryController extends Controller {
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $Category->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
+        }else{
+
+            $Category->avatar = '/dash/img/no_img.png';
         }
+
         $Category->descript = $request->descript;
         $Category->ids = Session::get('website');
         $Category->save();

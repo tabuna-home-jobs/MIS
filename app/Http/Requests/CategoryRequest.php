@@ -26,8 +26,8 @@ class CategoryRequest extends Request {
             'text' => 'required',
             'tag' => 'max:255',
             'descript' => 'max:255',
-				'avatar' => 'mimes:jpeg,bmp,png',
-				'parent_id' => ''
+			'avatar' => 'mimes:jpeg,bmp,png',
+			'parent_id' => ''
 		];
 	}
 
