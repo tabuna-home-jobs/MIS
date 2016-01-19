@@ -1,0 +1,26 @@
+.carousel.slide{
+    
+    background: url("../../uploads/2015/03/bg-slider-04.jpg");
+}
+.carousel.slide img{
+    margin: 0 auto;
+}
+.navbar-header{
+    position: absolute !important;
+}
+.main-menu > .menu-item > a{
+    text-shadow: 1px 1px 1px #000;
+}
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    z-index: 1000000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fdfdfd;
+    text-align: center;
+    text-shadow: 1px 1px 3px #000 !important;
+    font-size: 38px;
+
+}
