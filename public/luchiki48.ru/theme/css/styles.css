@@ -1,6 +1,8 @@
 .carousel.slide{
-    
     background: url("../../uploads/2015/03/bg-slider-04.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 .carousel.slide img{
     margin: 0 auto;
@@ -23,4 +25,28 @@
     text-shadow: 1px 1px 3px #000 !important;
     font-size: 38px;
 
+}
+.site-top {
+    background-color: #91dcd8;
+}
+.site-top-content i{
+    font-size: 17px !important;
+    margin: 0 5px;
+}
+.site-top-content li{
+    font-size: 14px;
+}
+.site-top .site-top-content {
+    margin: 0 10px;
+}
+#wrapper-content{
+    background: #fff;
+ }
+header .header_logo>a>div {
+    top: 0;
+    bottom: 0;
+    width: 371px;
+    height: auto;
+    margin: auto;
+    position: absolute;
 }
