@@ -57,7 +57,8 @@
                         <div class="header_logo">
                             <a href="/" title="CUPID | Adorable Kindergarten - Just another WordPress site" rel="home">
                                 <div><img src="/luchiki48.ru/img/logo_childs3.png" alt="CUPID | Adorable Kindergarten - Just another WordPress site"></div>
-                            </a></div>
+                            </a>
+                        </div>
                     </div>
                     <div class="icon-search-menu"><i class="fa fa-search"></i></div>
                     <div class="collapse yamm navbar-collapse">
