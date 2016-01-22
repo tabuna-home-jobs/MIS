@@ -469,7 +469,7 @@ aside.cupid-calsses-popular-widget .popular-item .month-old {
 .navbar-header{
     position: absolute !important;
 }
-.main-menu > .menu-item > a{
+.header-4  .main-menu > .menu-item > a{
     text-shadow: 1px 1px 1px #000;
 }
 .carousel-caption {
@@ -499,7 +499,7 @@ aside.cupid-calsses-popular-widget .popular-item .month-old {
     margin: 0 10px;
 }
 #wrapper-content{
-    background: #fff;
+    background: #f6f6f6;
  }
 header .header_logo>a>div {
     top: 0;
@@ -539,4 +539,11 @@ header .header_logo>a>div {
 }
 .content-middle-inner{
     text-shadow: 1px 1px 1px #000;
+}
+.bg-while{
+    background-color: #fff!important;
+}
+
+.p-t-30{
+    padding-top: 30px;
 }

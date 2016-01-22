@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex"/>
-    <meta bas>
     <title></title>
     <link rel="stylesheet" href="/luchiki48.ru/theme/css/full_styles.min.css">
     <link rel="stylesheet" type="text/css" href="/luchiki48.ru/theme/css/woocommerce-smallscreen.css">
