@@ -512,3 +512,21 @@ header .header_logo>a>div {
 .childi{
     padding: 10px;
 }
+.social-link a{
+    color:#fff;
+}
+.social-link a:hover{
+    color:#d83f63;
+}
+.site-top-content i{
+    color:#fff !important;
+}
+.site-top-content:hover, .site-top-content:hover i{
+    color:#d83f63 !important;
+}
+.site-top i {
+    font-size: 20px;
+}
+.site-top .social-link li {
+    padding-left: 10px !important;
+}

@@ -336,6 +336,171 @@
                 </div>
                 <!--Наш блог-->
 
+                <!--Отзывы-->
+                <div class="vc_row wpb_row vc_row-fluid vc_custom_1440049113495">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="wpb_wrapper">
+
+                            <div class="testimonials_carousel">
+                                <h2>Наши счастливые клиенты</h2>
+
+                                <div class="slick_nav style_1">
+                                    <div class="slick_prev" id="testimonials_carousel-511990533-prev">
+                                        <i class="stm-icon-chevron-left"></i>
+                                    </div>
+                                    <div class="slick_next" id="testimonials_carousel-511990533-next">
+                                        <i class="stm-icon-chevron-right"></i>
+                                    </div>
+                                </div>
+
+                                <div id="testimonials_carousel-511990533" class="slick-initialized slick-slider">
+
+                                    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 3900px; transform: translate3d(-1170px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 390px;">
+                                                <div class="testimonial_wr">
+                                                    <div class="testimonial_text additional_font">
+                                                        <p class="text-justify">
+                                                            Большое спасибо персоналу клиники здоровье нации, и в особенности доброй девушке пародонтологу, имени которой я не запомнил)) Долго кровоточили десны, не знал, что делать, а оказывается, надо просто сделать простую чистку и попить витаминки. Сейчас я реально могу делать как в рекламе - кусать яблоки с апломбом. Спасибо огромное! Выручили.
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial_author">Уинстон Черчил</div>
+                                                    <div class="testimonial_position">2016-01-15 11:29:14</div>
+                                                </div>
+                                            </div><div class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 390px;">
+                                                <div class="testimonial_wr">
+                                                    <div class="testimonial_text additional_font">
+                                                        <p class="text-justify">
+                                                            После беременности, зубы посыпались и было очень некрасиво. Решила поставить новые, обратилась в "Здоровье Нации", к терапевту. Он меня посмотрел и сказал, что у меня еще и небольшой кариес. В общем, зубы я поставила, кариес вылечила и осталась очень довольна. Денег с меня взяли меньше даже, чем я ожидала, теперь туда на чистку хожу.)
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial_author">Лиана Цветочная</div>
+                                                    <div class="testimonial_position">2016-01-15 11:31:23</div>
+                                                </div>
+                                            </div><div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 390px;">
+                                                <div class="testimonial_wr">
+                                                    <div class="testimonial_text additional_font">
+                                                        <p class="text-justify">
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial_author">Волга Бурлакова</div>
+                                                    <div class="testimonial_position">2016-01-15 11:52:28</div>
+                                                </div>
+                                            </div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide20" style="width: 390px;">
+                                                <div class="testimonial_wr">
+                                                    <div class="testimonial_text additional_font">
+                                                        <p class="text-justify">
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial_author">Василий Тёркин</div>
+                                                    <div class="testimonial_position">2016-01-15 09:59:32</div>
+                                                </div>
+                                            </div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide21" style="width: 390px;">
+                                                <div class="testimonial_wr">
+                                                    <div class="testimonial_text additional_font">
+                                                        <p class="text-justify">
+                                                            Большое спасибо персоналу клиники здоровье нации, и в особенности доброй девушке пародонтологу, имени которой я не запомнил)) Долго кровоточили десны, не знал, что делать, а оказывается, надо просто сделать простую чистку и попить витаминки. Сейчас я реально могу делать как в рекламе - кусать яблоки с апломбом. Спасибо огромное! Выручили.
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial_author">Уинстон Черчил</div>
+                                                    <div class="testimonial_position">2016-01-15 11:29:14</div>
+                                                </div>
+                                            </div><div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide22" style="width: 390px;">
+                                                <div class="testimonial_wr">
+                                                    <div class="testimonial_text additional_font">
+                                                        <p class="text-justify">
+                                                            После беременности, зубы посыпались и было очень некрасиво. Решила поставить новые, обратилась в "Здоровье Нации", к терапевту. Он меня посмотрел и сказал, что у меня еще и небольшой кариес. В общем, зубы я поставила, кариес вылечила и осталась очень довольна. Денег с меня взяли меньше даже, чем я ожидала, теперь туда на чистку хожу.)
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial_author">Лиана Цветочная</div>
+                                                    <div class="testimonial_position">2016-01-15 11:31:23</div>
+                                                </div>
+                                            </div><div class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide23" style="width: 390px;">
+                                                <div class="testimonial_wr">
+                                                    <div class="testimonial_text additional_font">
+                                                        <p class="text-justify">
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial_author">Волга Бурлакова</div>
+                                                    <div class="testimonial_position">2016-01-15 11:52:28</div>
+                                                </div>
+                                            </div><div class="slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" tabindex="-1" style="width: 390px;">
+                                                <div class="testimonial_wr">
+                                                    <div class="testimonial_text additional_font">
+                                                        <p class="text-justify">
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial_author">Василий Тёркин</div>
+                                                    <div class="testimonial_position">2016-01-15 09:59:32</div>
+                                                </div>
+                                            </div><div class="slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 390px;">
+                                                <div class="testimonial_wr">
+                                                    <div class="testimonial_text additional_font">
+                                                        <p class="text-justify">
+                                                            Большое спасибо персоналу клиники здоровье нации, и в особенности доброй девушке пародонтологу, имени которой я не запомнил)) Долго кровоточили десны, не знал, что делать, а оказывается, надо просто сделать простую чистку и попить витаминки. Сейчас я реально могу делать как в рекламе - кусать яблоки с апломбом. Спасибо огромное! Выручили.
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial_author">Уинстон Черчил</div>
+                                                    <div class="testimonial_position">2016-01-15 11:29:14</div>
+                                                </div>
+                                            </div><div class="slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 390px;">
+                                                <div class="testimonial_wr">
+                                                    <div class="testimonial_text additional_font">
+                                                        <p class="text-justify">
+                                                            После беременности, зубы посыпались и было очень некрасиво. Решила поставить новые, обратилась в "Здоровье Нации", к терапевту. Он меня посмотрел и сказал, что у меня еще и небольшой кариес. В общем, зубы я поставила, кариес вылечила и осталась очень довольна. Денег с меня взяли меньше даже, чем я ожидала, теперь туда на чистку хожу.)
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial_author">Лиана Цветочная</div>
+                                                    <div class="testimonial_position">2016-01-15 11:31:23</div>
+                                                </div>
+                                            </div></div></div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            <script type="text/javascript">
+                                jQuery(document).ready(function ($) {
+                                    "use strict";
+                                    var slick_511990533 = $("#testimonials_carousel-511990533");
+                                    slick_511990533.slick({
+                                        dots: false,
+                                        infinite: true,
+                                        arrows: false,
+                                        slidesToShow: 3,
+                                        responsive: [
+                                            {
+                                                breakpoint: 769,
+                                                settings: {
+                                                    slidesToShow: 2,
+                                                    slidesToScroll: 1
+                                                }
+                                            },
+                                            {
+                                                breakpoint: 479,
+                                                settings: {
+                                                    slidesToShow: 1,
+                                                    slidesToScroll: 1
+                                                }
+                                            }
+                                        ]
+                                    });
+                                    $("#testimonials_carousel-511990533-next").on('click',function () {
+                                        slick_511990533.slick('slickNext');
+                                    });
+                                    $("#testimonials_carousel-511990533-prev").on('click',function () {
+                                        slick_511990533.slick('slickPrev');
+                                    });
+                                });
+                            </script>
+
+                        </div></div></div>
+                <!--Отзывы-->
+
             </div>
         </div>
     </main>
