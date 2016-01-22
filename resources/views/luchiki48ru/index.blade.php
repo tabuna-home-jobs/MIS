@@ -250,7 +250,8 @@
                             <div class="wpb_wrapper">
                                 <div class="cupid-quote content-middle  ">
                                     <div class="content-middle-inner">
-                                        {!!$randomReview['content']!!}
+                                        <q>{{$randomReview['content']}}</q>
+                                        <p>{{$randomReview['fio']}}</p>
                                     </div>
                                 </div>
                             </div>
