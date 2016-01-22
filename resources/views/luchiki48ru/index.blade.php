@@ -1,8 +1,8 @@
 @extends('luchiki48ru/header')
 @section('content')
-<div id="wrapper-content">
+<div id="wrapper-content bg-while">
     <main role="main" class="site-content">
-        <div id="post-189" class="post-189 page type-page status-publish hentry">
+        <div class="page type-page status-publish hentry">
             <div class="entry-content">
 
                 <!--Карусель на главной-->

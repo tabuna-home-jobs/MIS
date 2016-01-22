@@ -36,8 +36,11 @@
 
         <!--Копирайт-->
         <div class="footer-copyright">
-            <div class="footer-copyright-inner"> Powered by
-                <a href="http://octavian48.ru" target="_blank">Octavian</a>
+
+            <div class="footer-copyright-inner">
+
+                <p>© Студия раннего развития детей «Лучики». Развивающие занятия. 2015</p>
+                <p><small>Разработка, поддержка и продвижение сайтов <a href="http://octavian48.ru" target="_blank">Октавиан</a></small></p>
             </div>
         </div>
         <!--Копирайт-->
