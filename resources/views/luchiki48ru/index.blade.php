@@ -181,7 +181,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="fullwidth">
                     <div class="vc_row wpb_row vc_row-fluid cupid-padding-bottom-40 cupid-border-bottom">
                         <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -190,142 +189,48 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="latest-post-col-3 latest-post-no-slider latest-post-style1  ">
-                                                <article id="post-82"
-                                                         class="post-82 post type-post status-publish format-standard has-post-thumbnail hentry category-new-event clearfix">
-                                                    <div class="entry-wrapper clearfix">
-                                                        <div class="entry-image-wrapper">
-                                                            <div class="entry-thumbnail">
-                                                                <a href="index.html%3Fp=82.html" title="Gulf Today Report On KGS Carnival – 2015">
-                                                                    <img width="560" height="345" class="img-responsive" src="/luchiki48.ru/uploads/2015/02/blog-05-560x345.jpg" alt="Gulf Today Report On KGS Carnival – 2015">
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="entry-content-wrapper clearfix">
-                                                            <div class="entry-content-container clearfix">
-                                                                <div class="entry-categories">
-                                                                    <ul class="post-categories">
-                                                                        <li>
-                                                                            <a href="/" rel="category tag">Новости</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <h3 class="entry-title">
-                                                                    <a href="/" rel="bookmark" title="Gulf Today Report On KGS Carnival – 2015">
-                                                                        Сегодня учились рисовать акварелью
+                                                @foreach($allnews as $news)
+                                                    <article id="post-82"
+                                                             class="post-82 post type-post status-publish format-standard has-post-thumbnail hentry category-new-event clearfix">
+                                                        <div class="entry-wrapper clearfix">
+                                                            <div class="entry-image-wrapper">
+                                                                <div class="entry-thumbnail">
+                                                                    <a href="/news/{{$news['id']}}" title="{{$news['title']}}">
+                                                                        <img class="img-responsive" src="{{$news['avatar']}}" alt="{{$news['title']}}">
                                                                     </a>
-                                                                </h3>
+                                                                </div>
+                                                            </div>
+                                                            <div class="entry-content-wrapper clearfix">
+                                                                <div class="entry-content-container clearfix">
 
-                                                                <div class="entry-meta">
+                                                                    <h3 class="entry-title">
+                                                                        <a href="/news/{{$news['id']}}" rel="bookmark" title="{{$news['title']}}">
+                                                                            {{$news['name']}}
+                                                                        </a>
+                                                                    </h3>
+
+                                                                    <div class="entry-meta">
 
                                                                     <span class="entry-meta-date"> Дата
-                                                                        <a href="/" rel="bookmark" title="Gulf Today Report On KGS Carnival – 2015">
-                                                                            Февраль 28, 2015 </a>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="entry-excerpt">
-                                                                    <p>
-                                                                        В том числе семей , школьников и людей из разных слоев общества приняли участие в " забава для Причина ' карнавал , организованный детский сад стартеров.</p>
-                                                                </div>
-                                                                <div class="entry-read-more">
-                                                                    <a href="/" rel="bookmark" title="Read more">Читать дальше
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article id="post-78" class="post-78 post type-post status-publish format-standard has-post-thumbnail hentry category-new-event clearfix">
-                                                    <div class="entry-wrapper clearfix">
-                                                        <div class="entry-image-wrapper">
-                                                            <div class="entry-thumbnail">
-                                                                <a href="/" title="Blue Ribbon Award for the year 2014-2015">
-                                                                    <img width="560" height="345" class="img-responsive" src="/luchiki48.ru/uploads/2015/02/blog-04-560x345.jpg" alt="Blue Ribbon Award for the year 2014-2015">
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="entry-content-wrapper clearfix">
-                                                            <div class="entry-content-container clearfix">
-                                                                <div class="entry-categories">
-                                                                    <ul class="post-categories">
-                                                                        <li>
-                                                                            <a href="/" rel="category tag">
-                                                                                Новости
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <h3 class="entry-title">
-                                                                    <a href="/" rel="bookmark" title="Blue Ribbon Award for the year 2014-2015">Голубая лента премия за год 2014-2015
-                                                                    </a>
-                                                                </h3>
-
-                                                                <div class="entry-meta">
-
-                                                                    <span class="entry-meta-date"> Дата
-                                                                        <a href="/" rel="bookmark" title="Blue Ribbon Award for the year 2014-2015">
-                                                                            Февраль 28, 2015
+                                                                        <a href="/" rel="bookmark" title="{{$news['title']}}">
+                                                                            {{$news['created_at']}}
                                                                         </a>
                                                                     </span>
-                                                                </div>
-                                                                <div class="entry-excerpt">
-                                                                    <p>
-                                                                        Совершенство некогда скучать . Это всегда результат высокого намерения и интеллектуального исполнения; он представляет собой правильный выбор многих альтернатив .
-                                                                    </p>
-                                                                </div>
-                                                                <div class="entry-read-more">
-                                                                    <a href="/" rel="bookmark" title="Read more">
-                                                                        Читать дальше
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article id="post-74" class="post-74 post type-post status-publish format-standard has-post-thumbnail hentry category-new-event clearfix">
-                                                    <div class="entry-wrapper clearfix">
-                                                        <div class="entry-image-wrapper">
-                                                            <div class="entry-thumbnail">
-                                                                <a href="/" title="The KGS Kindness Mural and Friendship Bands">
-                                                                    <img width="560" height="345" class="img-responsive" src="/luchiki48.ru/uploads/2015/02/blog-03-560x345.jpg" alt="The KGS Kindness Mural and Friendship Bands">
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="entry-content-wrapper clearfix">
-                                                            <div class="entry-content-container clearfix">
-                                                                <div class="entry-categories">
-                                                                    <ul class="post-categories">
-                                                                        <li>
-                                                                            <a href="/" rel="category tag">
-                                                                                Новости
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <h3 class="entry-title">
-                                                                    <a href="/" rel="bookmark" title="The KGS Kindness Mural and Friendship Bands">
-                                                                        Отмечаем день рождения наших воспитанников
-                                                                    </a>
-                                                                </h3>
-
-                                                                <div class="entry-meta">
-                                                                    <span class="entry-meta-date"> Дата
-                                                                        <a href="/" rel="bookmark" title="The KGS Kindness Mural and Friendship Bands">
-                                                                            Февраль 28, 2015
+                                                                    </div>
+                                                                    <div class="entry-excerpt">
+                                                                        <p>
+                                                                            {{str_limit(strip_tags($news['descript']), 300, '...')}}
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="entry-read-more">
+                                                                        <a href="/news/{{$news['id']}}" rel="bookmark" title="Read more">Читать дальше
                                                                         </a>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="entry-excerpt">
-                                                                    <p>At The Kindergarten Starters, we tried several ways of bringing a little joy to the less privileged members of our society, as part of our SEWA endeavours.
-                                                                    </p>
-                                                                </div>
-                                                                <div class="entry-read-more">
-                                                                    <a href="/" rel="bookmark" title="Read more">Читать дальше
-                                                                    </a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
+                                                    </article>
+                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -337,169 +242,121 @@
                 <!--Наш блог-->
 
                 <!--Отзывы-->
-                <div class="vc_row wpb_row vc_row-fluid vc_custom_1440049113495">
-                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                        <div class="wpb_wrapper">
-
-                            <div class="testimonials_carousel">
-                                <h2>Наши счастливые клиенты</h2>
-
-                                <div class="slick_nav style_1">
-                                    <div class="slick_prev" id="testimonials_carousel-511990533-prev">
-                                        <i class="stm-icon-chevron-left"></i>
-                                    </div>
-                                    <div class="slick_next" id="testimonials_carousel-511990533-next">
-                                        <i class="stm-icon-chevron-right"></i>
+                <div class="fullwidth">
+                    <div data-vc-parallax="1.5" data-overlay-color="rgba(0,0,0,0.3)"
+                         class="vc_row wpb_row vc_row-fluid vc_custom_1444210607896 vc_general vc_parallax vc_parallax-content-moving overlay-bg-vc-wapper">
+                        <div class="overlay-bg-vc" style="background-color: rgba(0,0,0,0.3)"></div>
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="wpb_wrapper">
+                                <div class="cupid-quote content-middle  ">
+                                    <div class="content-middle-inner">
+                                        {!!$randomReview['content']!!}
                                     </div>
                                 </div>
-
-                                <div id="testimonials_carousel-511990533" class="slick-initialized slick-slider">
-
-                                    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 3900px; transform: translate3d(-1170px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 390px;">
-                                                <div class="testimonial_wr">
-                                                    <div class="testimonial_text additional_font">
-                                                        <p class="text-justify">
-                                                            Большое спасибо персоналу клиники здоровье нации, и в особенности доброй девушке пародонтологу, имени которой я не запомнил)) Долго кровоточили десны, не знал, что делать, а оказывается, надо просто сделать простую чистку и попить витаминки. Сейчас я реально могу делать как в рекламе - кусать яблоки с апломбом. Спасибо огромное! Выручили.
-                                                        </p>
-                                                    </div>
-                                                    <div class="testimonial_author">Уинстон Черчил</div>
-                                                    <div class="testimonial_position">2016-01-15 11:29:14</div>
-                                                </div>
-                                            </div><div class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 390px;">
-                                                <div class="testimonial_wr">
-                                                    <div class="testimonial_text additional_font">
-                                                        <p class="text-justify">
-                                                            После беременности, зубы посыпались и было очень некрасиво. Решила поставить новые, обратилась в "Здоровье Нации", к терапевту. Он меня посмотрел и сказал, что у меня еще и небольшой кариес. В общем, зубы я поставила, кариес вылечила и осталась очень довольна. Денег с меня взяли меньше даже, чем я ожидала, теперь туда на чистку хожу.)
-                                                        </p>
-                                                    </div>
-                                                    <div class="testimonial_author">Лиана Цветочная</div>
-                                                    <div class="testimonial_position">2016-01-15 11:31:23</div>
-                                                </div>
-                                            </div><div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 390px;">
-                                                <div class="testimonial_wr">
-                                                    <div class="testimonial_text additional_font">
-                                                        <p class="text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                                        </p>
-                                                    </div>
-                                                    <div class="testimonial_author">Волга Бурлакова</div>
-                                                    <div class="testimonial_position">2016-01-15 11:52:28</div>
-                                                </div>
-                                            </div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide20" style="width: 390px;">
-                                                <div class="testimonial_wr">
-                                                    <div class="testimonial_text additional_font">
-                                                        <p class="text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                                        </p>
-                                                    </div>
-                                                    <div class="testimonial_author">Василий Тёркин</div>
-                                                    <div class="testimonial_position">2016-01-15 09:59:32</div>
-                                                </div>
-                                            </div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide21" style="width: 390px;">
-                                                <div class="testimonial_wr">
-                                                    <div class="testimonial_text additional_font">
-                                                        <p class="text-justify">
-                                                            Большое спасибо персоналу клиники здоровье нации, и в особенности доброй девушке пародонтологу, имени которой я не запомнил)) Долго кровоточили десны, не знал, что делать, а оказывается, надо просто сделать простую чистку и попить витаминки. Сейчас я реально могу делать как в рекламе - кусать яблоки с апломбом. Спасибо огромное! Выручили.
-                                                        </p>
-                                                    </div>
-                                                    <div class="testimonial_author">Уинстон Черчил</div>
-                                                    <div class="testimonial_position">2016-01-15 11:29:14</div>
-                                                </div>
-                                            </div><div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide22" style="width: 390px;">
-                                                <div class="testimonial_wr">
-                                                    <div class="testimonial_text additional_font">
-                                                        <p class="text-justify">
-                                                            После беременности, зубы посыпались и было очень некрасиво. Решила поставить новые, обратилась в "Здоровье Нации", к терапевту. Он меня посмотрел и сказал, что у меня еще и небольшой кариес. В общем, зубы я поставила, кариес вылечила и осталась очень довольна. Денег с меня взяли меньше даже, чем я ожидала, теперь туда на чистку хожу.)
-                                                        </p>
-                                                    </div>
-                                                    <div class="testimonial_author">Лиана Цветочная</div>
-                                                    <div class="testimonial_position">2016-01-15 11:31:23</div>
-                                                </div>
-                                            </div><div class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide23" style="width: 390px;">
-                                                <div class="testimonial_wr">
-                                                    <div class="testimonial_text additional_font">
-                                                        <p class="text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                                        </p>
-                                                    </div>
-                                                    <div class="testimonial_author">Волга Бурлакова</div>
-                                                    <div class="testimonial_position">2016-01-15 11:52:28</div>
-                                                </div>
-                                            </div><div class="slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" tabindex="-1" style="width: 390px;">
-                                                <div class="testimonial_wr">
-                                                    <div class="testimonial_text additional_font">
-                                                        <p class="text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                                        </p>
-                                                    </div>
-                                                    <div class="testimonial_author">Василий Тёркин</div>
-                                                    <div class="testimonial_position">2016-01-15 09:59:32</div>
-                                                </div>
-                                            </div><div class="slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 390px;">
-                                                <div class="testimonial_wr">
-                                                    <div class="testimonial_text additional_font">
-                                                        <p class="text-justify">
-                                                            Большое спасибо персоналу клиники здоровье нации, и в особенности доброй девушке пародонтологу, имени которой я не запомнил)) Долго кровоточили десны, не знал, что делать, а оказывается, надо просто сделать простую чистку и попить витаминки. Сейчас я реально могу делать как в рекламе - кусать яблоки с апломбом. Спасибо огромное! Выручили.
-                                                        </p>
-                                                    </div>
-                                                    <div class="testimonial_author">Уинстон Черчил</div>
-                                                    <div class="testimonial_position">2016-01-15 11:29:14</div>
-                                                </div>
-                                            </div><div class="slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 390px;">
-                                                <div class="testimonial_wr">
-                                                    <div class="testimonial_text additional_font">
-                                                        <p class="text-justify">
-                                                            После беременности, зубы посыпались и было очень некрасиво. Решила поставить новые, обратилась в "Здоровье Нации", к терапевту. Он меня посмотрел и сказал, что у меня еще и небольшой кариес. В общем, зубы я поставила, кариес вылечила и осталась очень довольна. Денег с меня взяли меньше даже, чем я ожидала, теперь туда на чистку хожу.)
-                                                        </p>
-                                                    </div>
-                                                    <div class="testimonial_author">Лиана Цветочная</div>
-                                                    <div class="testimonial_position">2016-01-15 11:31:23</div>
-                                                </div>
-                                            </div></div></div>
-
-
-
-                                </div>
-
                             </div>
-
-                            <script type="text/javascript">
-                                jQuery(document).ready(function ($) {
-                                    "use strict";
-                                    var slick_511990533 = $("#testimonials_carousel-511990533");
-                                    slick_511990533.slick({
-                                        dots: false,
-                                        infinite: true,
-                                        arrows: false,
-                                        slidesToShow: 3,
-                                        responsive: [
-                                            {
-                                                breakpoint: 769,
-                                                settings: {
-                                                    slidesToShow: 2,
-                                                    slidesToScroll: 1
-                                                }
-                                            },
-                                            {
-                                                breakpoint: 479,
-                                                settings: {
-                                                    slidesToShow: 1,
-                                                    slidesToScroll: 1
-                                                }
-                                            }
-                                        ]
-                                    });
-                                    $("#testimonials_carousel-511990533-next").on('click',function () {
-                                        slick_511990533.slick('slickNext');
-                                    });
-                                    $("#testimonials_carousel-511990533-prev").on('click',function () {
-                                        slick_511990533.slick('slickPrev');
-                                    });
-                                });
-                            </script>
-
-                        </div></div></div>
+                        </div>
+                        <div class="vc_parallax-inner skrollable skrollable-between" data-bottom-top="top: -50%;" data-top-bottom="top: 0%;"
+                             style="height: 150%; top: -11.868%;"></div>
+                    </div>
+                </div>
                 <!--Отзывы-->
+                <!--Учителя-->
+                <div class="container">
+                    <div class="vc_row wpb_row vc_row-fluid cupid-margin-bottom-85 cupid-margin-top-35">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="wpb_wrapper">
+                                <div class="cupid-heading"><h2>Наши <b>Учителя</b></h2>
+                                    <span>Каждый из них профессионал в своём деле</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="vc_row wpb_row vc_row-fluid cupid-margin-bottom-90">
+                        <div class="wpb_column vc_column_container vc_col-sm-8">
+                            <div class="wpb_wrapper">
+                                <div class="cupid-our-staffs  our-staffs-margin-right" >
+                                    <div class="row">
+
+                                        <div id="carousel-example-generic" class="slide" data-ride="carousel">
+
+                                            <div class="carousel-inner" role="listbox">
+                                                <div class="item active">
+                                                    <div class="col-xs-4">
+                                                        <div class="our-staffs-item">
+                                                            <div class="our-staffs-image">
+                                                                <a href="index.html%3Fp=33.html" title="Ruth Richie" >
+                                                                    <img width="200" height="200" src="/luchiki48.ru/uploads/2015/02/our-staffs-10.png" class="attachment-full  img-circle" alt="Ruth Richie" title="Ruth Richie" />
+                                                                </a>
+                                                            </div>
+                                                            <a class="our-staffs-name" href="index.html%3Fp=33.html" title="Ruth Richie" >Ruth Richie</a><p>Teacher</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="our-staffs-item">
+                                                            <div class="our-staffs-image"><a href="index.html%3Fp=34.html" title="Kailo" >
+                                                                    <img width="200" height="200" src="/luchiki48.ru/uploads/2015/02/our-staffs-09.png" class="attachment-full  img-circle" alt="Kailo" title="Kailo" /></a>
+                                                            </div>
+                                                            <a class="our-staffs-name" href="index.html%3Fp=34.html" title="Kailo" >Kailo</a><p>Teacher</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="our-staffs-item">
+                                                            <div class="our-staffs-image"><a href="index.html%3Fp=35.html" title="Smith" >
+                                                                    <img width="200" height="200" src="/luchiki48.ru/uploads/2015/02/our-staffs-11.png" class="attachment-full  img-circle" alt="Smith" title="Smith" /></a>
+                                                            </div>
+                                                            <a class="our-staffs-name" href="index.html%3Fp=35.html" title="Smith" >Smith</a><p>Teacher</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="col-xs-4">
+                                                        <div class="our-staffs-item">
+                                                            <div class="our-staffs-image"><a href="index.html%3Fp=36.html" title="Taylor" >
+                                                                    <img width="200" height="200" src="/luchiki48.ru/uploads/2015/02/our-staffs-07.png" class="attachment-full  img-circle" alt="Taylor" title="Taylor" /></a>
+                                                            </div> <a class="our-staffs-name" href="index.html%3Fp=36.html" title="Taylor" >Taylor</a><p>Teacher</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                    <div class="our-staffs-item">
+                                                        <div class="our-staffs-image"><a href="index.html%3Fp=135.html" title="Lona" >
+                                                                <img width="200" height="200" src="/luchiki48.ru/uploads/2015/03/our-staffs-06.png" class="attachment-full  img-circle" alt="Lona" title="Lona" /></a>
+                                                        </div> <a class="our-staffs-name" href="index.html%3Fp=135.html" title="Lona" >Lona</a><p>Teacher</p>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="our-staffs-item">
+                                                            <div class="our-staffs-image">
+                                                                <a href="index.html%3Fp=33.html" title="Ruth Richie" >
+                                                                    <img width="200" height="200" src="/luchiki48.ru/uploads/2015/02/our-staffs-10.png" class="attachment-full  img-circle" alt="Ruth Richie" title="Ruth Richie" />
+                                                                </a>
+                                                            </div>
+                                                            <a class="our-staffs-name" href="index.html%3Fp=33.html" title="Ruth Richie" >Ruth Richie</a><p>Teacher</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-sm-4">
+                            <div class="wpb_wrapper">
+                                <div class="cupid-introduction left "><h3>Our staff consists of <b>three teachers and one assistant</b> with <b>experience in early
+                                                                                                                                                childhood care.</b></h3>
+
+                                    <p>All staff have access to professional opportunities that include international placement, training and professional development
+                                       programmes.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Учителя-->
+
 
             </div>
         </div>

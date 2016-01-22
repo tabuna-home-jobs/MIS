@@ -31,6 +31,18 @@ Route::group(['domain' => 'stomzn48.ru','namespace' => 'stomzn48'], function()
     Route::resource('/', 'HomeController');
 });
 
+Route::group(['domain' => 'luchiki48.ru','namespace' => 'luchiki48'], function()
+{
+    Route::resource('/articles', 'ArticlesController');
+    Route::resource('/answers', 'AnswersController');
+    Route::resource('/reviews', 'ReviewsController');
+    Route::resource('/service', 'ServiceController');
+    Route::resource('/page', 'PageController');
+    Route::resource('/feedback', 'FeedbackController');
+    Route::resource('/blog', 'BlogController');
+    Route::resource('/', 'HomeController');
+});
+
 
 Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], function()
 {

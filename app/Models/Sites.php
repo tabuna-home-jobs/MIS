@@ -40,6 +40,11 @@ class Sites extends Model {
         return $this->hasOne('App\Models\News','ids');
     }
 
+    public function allnews(){
+
+        return $this->hasMany('App\Models\News','ids');
+    }
+
     public function getArts()
     {
         return $this->hasOne('App\Models\Articles','ids');
@@ -58,6 +63,11 @@ class Sites extends Model {
 
     public function getReviews()
     {
+        return $this->hasOne('App\Models\Reviews', 'ids');
+    }
+
+    public function randomReview(){
+
         return $this->hasOne('App\Models\Reviews', 'ids');
     }
 
