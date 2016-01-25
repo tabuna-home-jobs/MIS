@@ -4962,6 +4962,12 @@ body .base_background_color {
 body .secondary_background_color {
     background-color: #f57e57 !important;
 }
+
+
+body .four_background_color {
+    background-color: #636 !important;
+}
+
 .rev_slider > ul > li.overlay:after {
     content: '';
     position: absolute;

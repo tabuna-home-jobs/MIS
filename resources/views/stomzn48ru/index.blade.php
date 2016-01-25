@@ -7,11 +7,11 @@
 
         <div class="carousel-inner" role="listbox">
             <div class="item">
-                <img src="/stomzn48.ru/img/slider/1.jpg" alt="Альт для картинки">
+                <img src="/stomzn48.ru/img/slider/1.jpg" alt="Пусть до старости здоровье будет по зубам!">
 
                 <div class="carousel-caption">
 
-                    <p> Пусть до старости здоровье будет по зубам! или Здоровые зубы - это не роскошь!</p>
+                    <p>Пусть до старости здоровье будет по зубам!</p>
 
                 </div>
                 <!--Это бекграунд у картинки слайдера-->
@@ -19,10 +19,10 @@
                 <!--Это бекграунд у картинки слайдера-->
             </div>
             <div class="item">
-                <img src="/stomzn48.ru/img/slider/2.jpg" alt="Альт для картинки2">
+                <img src="/stomzn48.ru/img/slider/2.jpg" alt="Здоровые зубы - это не роскошь!">
 
                 <div class="carousel-caption">
-                    <p> Пусть до старости здоровье будет по зубам! или Здоровые зубы - это не роскошь!</p>
+                    <p>Здоровые зубы - это не роскошь!</p>
 
                 </div>
                 <!--Это бекграунд у картинки слайдера-->
@@ -30,10 +30,10 @@
                 <!--Это бекграунд у картинки слайдера-->
             </div>
             <div class="item">
-                <img src="/stomzn48.ru/img/slider/3.jpg" alt="Альт для картинки3">
+                <img src="/stomzn48.ru/img/slider/3.jpg" alt="Ваша улыбка - ваш престиж">
 
                 <div class="carousel-caption">
-                    <p> Пусть до старости здоровье будет по зубам! или Здоровые зубы - это не роскошь!</p>
+                    <p>Ваша улыбка - ваш престиж</p>
 
                 </div>
                 <!--Это бекграунд у картинки слайдера-->
@@ -45,11 +45,11 @@
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span class="sr-only">Назад</span>
         </a>
         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span class="sr-only">Вперёд</span>
         </a>
 
     </div>
@@ -67,20 +67,20 @@
             <div class="container">
                 <!--Блоки под слайдером-->
                 <div class="vc_row wpb_row vc_row-fluid overflowed_content vc_custom_1439880673570">
-                    <div class="wpb_column vc_column_container vc_col-sm-4 vc_custom_1439878727322">
+                    <div class="wpb_column vc_column_container vc_col-sm-3 vc_custom_1439878727322">
                         <div class="wpb_wrapper">
                             <div class="icon_box vc_custom_1443700113643 base_background_color mobile_adaptive icon_right media animated_on_hover">
 
                                 <div class="text media-body media-middle">
                                     <h4 style="font-size: 20px; font-weight: 500;">
-                                        Имплантация зубов
+                                        Терапия
                                     </h4>
 
-                                    <p class="p1">Предзаказ сегодня всего $879 за зуб</p>
+                                    <p class="p1">Полный комплекс мер по восстановлению</p>
                                 </div>
 
                                 <div class="icon media-right">
-                                    <i style="font-size: 110px;" class="stm-icon-tooth-1"></i>
+                                    <i style="font-size: 110px;" class="stm-icon-tooth-6"></i>
                                 </div>
 
                                 <a class="link" target="_self" href="/"></a>
@@ -88,13 +88,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-4 vc_custom_1439878731029">
+                    <div class="wpb_column vc_column_container vc_col-sm-3 vc_custom_1439878731029">
                         <div class="wpb_wrapper">
                             <div class="icon_box vc_custom_1443254226875 secondary_background_color mobile_adaptive icon_right media animated_on_hover">
                                 <div class="text media-body media-middle">
-                                    <h4 style="font-size: 20px; font-weight: 500;">Косметические брекеты</h4>
+                                    <h4 style="font-size: 20px; font-weight: 500;">Ортопедия</h4>
 
-                                    <p class="p1">Доступные французкие брекеты для детей и взрослых</p>
+                                    <p class="p1">Сто процентное использование импортного материала</p>
                                 </div>
 
                                 <div class="icon media-right">
@@ -107,14 +107,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-4 vc_custom_1439878734259">
+                    <div class="wpb_column vc_column_container vc_col-sm-3 vc_custom_1439878731029">
+                        <div class="wpb_wrapper">
+                            <div class="icon_box vc_custom_1443254226875 four_background_color mobile_adaptive icon_right media animated_on_hover">
+                                <div class="text media-body media-middle">
+                                    <h4 style="font-size: 20px; font-weight: 500;">Хирургия</h4>
+
+                                    <p class="p1">Сохранение и восстановление проблемных составляющих</p>
+                                </div>
+
+                                <div class="icon media-right">
+                                    <i style="font-size: 110px;" class="stm-icon-tooth-1"></i>
+                                </div>
+
+                                <a class="link" target="_self" href="/"></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-3 vc_custom_1439878734259">
                         <div class="wpb_wrapper">
                             <div class="icon_box vc_custom_1443254233576 mobile_adaptive icon_right media animated_on_hover">
 
                                 <div class="text media-body media-middle">
-                                    <h4 style="font-size: 20px; font-weight: 500;">Зубное отбеливание</h4>
+                                    <h4 style="font-size: 20px; font-weight: 500;">Гигиена</h4>
 
-                                    <p class="p1">Лучшие стандарты и высокое качество</p>
+                                    <p class="p1">Индивидуальный профессиональный курс отбеливания</p>
                                 </div>
 
                                 <div class="icon media-right">
@@ -126,6 +145,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!--Блоки под слайдером-->
 
@@ -140,8 +160,7 @@
                                 <div class="wpb_wrapper">
                                     <figure id="attachment_158" style="width: 300px;" class="wp-caption alignleft">
                                      <img class="full_width_mobile wp-image-158 size-medium"
-                                                 src="/stomzn48.ru/img/publicpreview.jpg"
-                                     >
+                                                 src="/stomzn48.ru/img/publicpreview.jpg">
                                         <figcaption class="wp-caption-text">Доктор <br> с пациентом
                                         </figcaption>
                                     </figure>
