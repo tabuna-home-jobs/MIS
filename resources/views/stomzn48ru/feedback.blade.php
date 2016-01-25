@@ -30,8 +30,7 @@
                                         <li>
                                             <div class="text"><strong>Мы Находимся</strong>
 
-                                                <p>г. Липецк, ул.Советская, д. 66<br>
-                                                    ул.Фрунзе, д.14</p></div>
+                                                <p>г. Липецк, ул. Октябрьская 61</p></div>
                                             <div class="icon"><i class="stm-icon-map-marker"></i></div>
                                         </li>
                                         <li>
