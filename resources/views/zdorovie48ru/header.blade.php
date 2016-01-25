@@ -141,7 +141,7 @@
                             </ul>
                         </li>
                         <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
-                        <li class="{{Active::route('login')}}"><a href="/login">Личный кабинет</a></li>
+                        <!--<li class="{{Active::route('login')}}"><a href="/login">Личный кабинет</a></li>-->
                        <!-- <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li> -->
                         <li role="presentation" class="dropdown" style="padding-bottom: 5px;">
                             <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
