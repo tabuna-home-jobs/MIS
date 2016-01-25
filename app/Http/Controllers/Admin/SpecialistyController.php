@@ -21,9 +21,9 @@ class SpecialistyController extends Controller
 
     public function index()
     {
-        //$Specialisty = Specialisty::where('ids', Session::get('website'))->orderBy('id', 'desc')->get();
+        $Specialisty = Specialisty::where('ids', Session::get('website'))->orderBy('id', 'desc')->get();
 
-        $Specialisty = Specialisty::orderBy('id', 'desc')->get();
+        //$Specialisty = Specialisty::orderBy('id', 'desc')->get();
         return view("dashboard/special/special", ['Specialisty' => $Specialisty]);
     }
 

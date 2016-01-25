@@ -13,7 +13,7 @@
     <script src="/luchiki48.ru/theme/js/all.min.js"></script>
     <script src="/luchiki48.ru/theme/js/cloudflare.min.js"></script>
     <script src="/luchiki48.ru/js/bootstrap.min.js"></script>
-
+    <script src="/luchiki48.ru/js/custom.js"></script>
 </head>
 <body>
     <!--Верхняя плашка с адресами-->

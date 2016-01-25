@@ -19,13 +19,19 @@ class HomeController extends Controller {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with(
 	        ['allnews' => function($query){
 
+		                    //Последние 3 новости
                             $query->limit(3)->orderBy('id','DESC');
                         },
 	        'randomReview' => function($query){
 
+		                    //рандомный коммент
 		                    $query->where('publish',1)->orderBy(DB::raw('RANDOM()'));
-	        }]
+	        },
+	        //Все специалисты
+	        'allspecs'
+	        ]
         )->first();
+
 
 
 
@@ -38,7 +44,8 @@ class HomeController extends Controller {
             'getShares' => $getShares,
 			'specialization' => $specialization,
 			'allnews' => $getSites['allnews'],
-			'randomReview' => $getSites['randomReview']
+			'randomReview' => $getSites['randomReview'],
+			'allspecs' => $getSites['allspecs']
         ]);
     }
 
