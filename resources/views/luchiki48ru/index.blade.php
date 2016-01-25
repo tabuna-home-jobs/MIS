@@ -282,76 +282,43 @@
 
                                         <div id="carousel-example-generic" class="slide" data-ride="carousel">
 
-                                            <div class="carousel-inner" role="listbox">
-                                                <div class="item active">
-                                                    <div class="col-xs-4">
-                                                        <div class="our-staffs-item">
-                                                            <div class="our-staffs-image">
-                                                                <a href="index.html%3Fp=33.html" title="Ruth Richie" >
-                                                                    <img width="200" height="200" src="/luchiki48.ru/uploads/2015/02/our-staffs-10.png" class="attachment-full  img-circle" alt="Ruth Richie" title="Ruth Richie" />
-                                                                </a>
-                                                            </div>
-                                                            <a class="our-staffs-name" href="index.html%3Fp=33.html" title="Ruth Richie" >Ruth Richie</a><p>Teacher</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-4">
-                                                        <div class="our-staffs-item">
-                                                            <div class="our-staffs-image"><a href="index.html%3Fp=34.html" title="Kailo" >
-                                                                    <img width="200" height="200" src="/luchiki48.ru/uploads/2015/02/our-staffs-09.png" class="attachment-full  img-circle" alt="Kailo" title="Kailo" /></a>
-                                                            </div>
-                                                            <a class="our-staffs-name" href="index.html%3Fp=34.html" title="Kailo" >Kailo</a><p>Teacher</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-4">
-                                                        <div class="our-staffs-item">
-                                                            <div class="our-staffs-image"><a href="index.html%3Fp=35.html" title="Smith" >
-                                                                    <img width="200" height="200" src="/luchiki48.ru/uploads/2015/02/our-staffs-11.png" class="attachment-full  img-circle" alt="Smith" title="Smith" /></a>
-                                                            </div>
-                                                            <a class="our-staffs-name" href="index.html%3Fp=35.html" title="Smith" >Smith</a><p>Teacher</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="carousel-inner caruselTeachers" role="listbox">
 
                                                 <div class="item">
-                                                    <div class="col-xs-4">
-                                                        <div class="our-staffs-item">
-                                                            <div class="our-staffs-image"><a href="index.html%3Fp=36.html" title="Taylor" >
-                                                                    <img width="200" height="200" src="/luchiki48.ru/uploads/2015/02/our-staffs-07.png" class="attachment-full  img-circle" alt="Taylor" title="Taylor" /></a>
-                                                            </div> <a class="our-staffs-name" href="index.html%3Fp=36.html" title="Taylor" >Taylor</a><p>Teacher</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-4">
-                                                    <div class="our-staffs-item">
-                                                        <div class="our-staffs-image"><a href="index.html%3Fp=135.html" title="Lona" >
-                                                                <img width="200" height="200" src="/luchiki48.ru/uploads/2015/03/our-staffs-06.png" class="attachment-full  img-circle" alt="Lona" title="Lona" /></a>
-                                                        </div> <a class="our-staffs-name" href="index.html%3Fp=135.html" title="Lona" >Lona</a><p>Teacher</p>
-                                                    </div>
-                                                    </div>
-                                                    <div class="col-xs-4">
-                                                        <div class="our-staffs-item">
-                                                            <div class="our-staffs-image">
-                                                                <a href="index.html%3Fp=33.html" title="Ruth Richie" >
-                                                                    <img width="200" height="200" src="/luchiki48.ru/uploads/2015/02/our-staffs-10.png" class="attachment-full  img-circle" alt="Ruth Richie" title="Ruth Richie" />
-                                                                </a>
-                                                            </div>
-                                                            <a class="our-staffs-name" href="index.html%3Fp=33.html" title="Ruth Richie" >Ruth Richie</a><p>Teacher</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                    @foreach($allspecs as $key => $spec)
+                                                        <div class="col-xs-4">
+                                                            <div class="our-staffs-item">
+                                                                <div class="our-staffs-image">
 
+                                                                    <img src="{{$spec['avatar']}}" class="attachment-full  img-circle img-responsive" alt="{{$spec['fio']}}" title="{{$spec['fio']}}" />
+
+                                                                </div>
+                                                                <span class="our-staffs-name"  title="{{$spec['fio']}}" >{{$spec['fio']}}</span><p>{{$spec['opyt']}}</p>
+                                                            </div>
+                                                        </div>
+                                                        @if(($key+1) % 3 == 0)
+                                                        </div><div class="item">
+                                                        @endif
+                                                    @endforeach
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="wpb_column vc_column_container vc_col-sm-4">
                             <div class="wpb_wrapper">
-                                <div class="cupid-introduction left "><h3>Our staff consists of <b>three teachers and one assistant</b> with <b>experience in early
-                                                                                                                                                childhood care.</b></h3>
+                                <div class="cupid-introduction left ">
+                                    <h3>
+                                        Наши воспитатели
+                                        <b>прекрасно знают свою работу</b> и
+                                        <b>имеют большой опыт взращивания талантов</b>
+                                    </h3>
 
-                                    <p>All staff have access to professional opportunities that include international placement, training and professional development
-                                       programmes.</p></div>
+                                    <p>Все преподователи сертифицированы, имеют многолетний опыт рыботы с детьми в разных возрастных категориях. Наши воспитатели найдут подход к любому ребёнку.</p>
+                                </div>
                             </div>
                         </div>
                     </div>

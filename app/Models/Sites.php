@@ -105,6 +105,11 @@ class Sites extends Model {
         return $this->hasOne('App\Models\Specialisty', 'ids');
     }
 
+    public function allspecs(){
+
+        return $this->hasMany('App\Models\Specialisty', 'ids');
+    }
+
 
     public function getSurveys()
     {
