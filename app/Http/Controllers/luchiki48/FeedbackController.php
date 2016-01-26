@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\stomzn48;
+<?php namespace App\Http\Controllers\luchiki48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;

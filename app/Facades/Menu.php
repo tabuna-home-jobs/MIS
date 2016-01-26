@@ -22,4 +22,21 @@ class Menu  extends Facade {
         return $html;
     }
 
+
+    static function getMenuByLayout($site,$NameMenu, $pref = '', $template)
+    {
+        $menu = SiteMenu::whereRaw('ids = ? and name = ? and parent = ?', [$site, $NameMenu, 0])->first();
+        $element = $menu->getElement()->orderBy('sort','asc')->get();
+
+
+        return view('luchiki48ru/_layout/'.$template, [
+
+            'elems' => $element,
+        ]);
+    }
+
+
+
+
+
 }
