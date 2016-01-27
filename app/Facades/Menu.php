@@ -2,6 +2,7 @@
 
 
 use App\Models\Menu as SiteMenu;
+use App\Models\MenuItem;
 use Illuminate\Support\Facades\Facade;
 
 class Menu  extends Facade {
@@ -25,8 +26,17 @@ class Menu  extends Facade {
 
     static function getMenuByLayout($site,$NameMenu, $pref = '', $template)
     {
-        $menu = SiteMenu::whereRaw('ids = ? and name = ? and parent = ?', [$site, $NameMenu, 0])->first();
-        $element = $menu->getElement()->orderBy('sort','asc')->get();
+        $menu = SiteMenu::with('items')->whereRaw('ids = ? and name = ?', [$site, $NameMenu])->first();
+
+        $menuParents = collect($menu->items);
+
+        foreach($menu->items as $item){
+
+            //dd(MenuItem::where('parent',$item['id'])->get());
+            $menuParents->keyBy($item['id'])->push(MenuItem::where('parent',$item['id'])->get());
+        }
+        dd($menuParents);
+        //$element = $menu->getElement()->where('parent', 0)->with('childs')->orderBy('sort','asc')->get();
 
 
         return view('luchiki48ru/_layout/'.$template, [
