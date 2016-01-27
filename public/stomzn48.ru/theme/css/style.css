@@ -2082,7 +2082,7 @@ div.wpcf7-response-output.wpcf7-mail-sent-ok {
     position: relative;
     padding: 0 0 0 38px;
     line-height: 30px;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
     font-weight: 300;
 }
@@ -2100,7 +2100,7 @@ div.wpcf7-response-output.wpcf7-mail-sent-ok {
 .wpb_text_column ul li:before,
 .comment-body ul li:before,
 .story-content ul li:before {
-    content: 'вЂў';
+    content: '*';
 }
 .wpb_text_column ol li:before,
 .comment-body ol li:before,
