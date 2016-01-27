@@ -436,7 +436,7 @@
     	<div class="row">
                 <div class="col-md-7">
                     <div class="latest-news2">
-                        <h2 class="light bordered">Последнии <a href="/blog" style="text-decoration: underline"><span>Новости</span></a></h2>
+                        <h2 class="light bordered">Последние <a href="/blog" style="text-decoration: underline"><span>Новости</span></a></h2>
                         <ul id="mycarousel" class="jcarousel-skin-tango blog-style2 list-unstyled">
 
                             @foreach($getNews as $key => $value)
