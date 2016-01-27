@@ -72,14 +72,14 @@
                             <div class="text"><strong>Оффис</strong>
 
                                 <p>Пн - Пт 8:00 - 21:00<br>
-                                        <span class="subbclock">Сб 9:00 - 14:00</span>
+                                        <span class="subbclock">Сб 8:00 - 14:00</span>
                                 </p></div>
                             <div class="icon"><i class="stm-icon-clock"></i></div>
                         </li>
                         <li>
                             <div class="text"><strong>E-mail</strong>
 
-                                <p><a href="mailto:mother-baby@mail.ru">mother-baby@mail.ru</a></p></div>
+                                <p><a href="stom@zdorovie48.ru">stom@zdorovie48.ru</a></p></div>
                             <div class="icon"><i class="fa fa-envelope-o"></i></div>
                         </li>
                         <li>
@@ -92,8 +92,8 @@
                         <li>
                             <div class="text"><strong>Адрес</strong>
 
-                                <p>ул.Советская, д. 66<br>
-                                    ул.Фрунзе, д.14</p></div>
+                                <p>г. Липецк, <br>
+                                   ул. Октябрьская 61</p></div>
                             <div class="icon"><i class="stm-icon-map-marker"></i></div>
                         </li>
                     </ul>
