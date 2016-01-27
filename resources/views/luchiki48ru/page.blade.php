@@ -1,19 +1,10 @@
 @extends('luchiki48ru/ALTheader')
 @section('content')
 
-
-
-
-
-
-
-
-
-
 <div id="wrapper-content">
     <section class="page-title-wrapper">
         <div class="container clearfix">
-            <div class="cupid-heading"><h2>{{$Page['name']}}</h2>
+            <div class="cupid-heading"><h2>{{$Page['name']}}123</h2>
             </div>
         </div>
     </section>
