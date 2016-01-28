@@ -14,23 +14,39 @@
                     <div class="panel-body">
 
 
-                        <form action="/dashboard/gallery" method="post" class="row">
+                        <form action="/dashboard/gallery" method="post" class="row" enctype="multipart/form-data">
 
                             @if(isset($Album->id))
                                 <input type="hidden" name="id" value="{{$Album->id}}">
                             @endif
 
 
-                            <div class="col-md-12">
+        <div class="col-md-12">
+            <div class="form-group text-left">
+                <label>Изображение альбома</label>
+                <div class="fileinput fileinput-new" data-provides="fileinput">
+                    <div data-trigger="fileinput" class="fileinput-preview thumbnail"
+                         style="line-height: 150px;">
+                        <img src="{{$Album->poster}}">
+                    </div>
 
-                                <div class="form-group">
-                                    <label>Имя</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="name" value="{{$Album->name or ''}}">
-                                </div>
+                    <div>
+                        <span class="btn btn-default btn-file">
+                        <span class="fileinput-new">Выбрать изображение</span>
+                        <span class="fileinput-exists">Изменить</span>
+                        <input type="file" name="url" value="{{$Album->poster}}"></span>
+                    </div>
+                </div>
+            </div>
 
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <button type="submit" class="btn btn-default">Отправить</button>
-                            </div>
+            <div class="form-group">
+                <label>Имя</label>
+                <input class="form-control" type="text" maxlength="255" required name="name" value="{{$Album->name or ''}}">
+            </div>
+
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <button type="submit" class="btn btn-default">Отправить</button>
+        </div>
 
 
 

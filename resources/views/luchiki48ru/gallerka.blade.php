@@ -5,7 +5,7 @@
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="cupid-heading"><h2>{{$albums[0]->name}}</h2>
+                <div class="cupid-heading"><h2>{{$album->name}}</h2>
                 </div>
             </div>
         </section>
@@ -18,43 +18,41 @@
                                 <div class="wpb_wrapper">
 
 
-                            <div class="cupid-gallery">
+                                    <div class="cupid-gallery">
 
 
-                            <div  class="gallery-wrapper gallery-infinite-scroll">
+                    <div  class="gallery-wrapper gallery-infinite-scroll">
 
-                                @forelse($albums as $album)
-                                <div class="gallery-item gallery-col-3">
-                                    <div class="entry-thumbnail title">
-            <img src="{{$album['poster']}}" alt="{{$album['name']}}">
+                    @forelse($photos as $photo)
+
+                        <div class="gallery-item gallery-col-3">
+                            <div class="entry-thumbnail title">
+                                <img src="{{$photo['url']}}">
 
             <!--Описание фотоальбома-->
             <div class="entry-thumbnail-hover">
                 <div class="entry-hover-wrapper">
                     <div class="entry-hover-inner">
-                        <a href="/gallery/{{$album['id']}}"  title="{{$album['name']}}">
-                            <h5 class="class-name">{{$album['name']}}</h5>
-                            <span class="excerpt">
-                                <!--тут можно добавить описание-->
-                            </span>
+                        <a href="{{$photo['url']}}" class="fancybox" rel="gallery{{$photo['album_id']}}">
+                            <h4 class="class-name">Посмотреть</h4>
                         </a>
                     </div>
                 </div>
             </div>
             <!--Описание фотоальбома-->
+                            </div>
+                        </div>
+                    @empty
+                        <p>Нет фотографий</p>
+                    @endforelse
+
+
+
+                                        </div>
+
+
                                     </div>
                                 </div>
-                                @empty
-                                    <p>Нет фотоальбомов</p>
-                                @endforelse
-
-
-
-                            </div>
-
-
-                                            </div>
-                                        </div>
 
                             </div>
                         </div>

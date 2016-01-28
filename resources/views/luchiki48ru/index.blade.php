@@ -6,7 +6,7 @@
             <div class="entry-content">
 
                 <!--Карусель на главной-->
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <div id="carousel-example-generic" class="top-carousel carousel slide" data-ride="carousel">
 
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
@@ -190,47 +190,47 @@
                                         <div class="row">
                                             <div class="latest-post-col-3 latest-post-no-slider latest-post-style1  ">
                                                 @foreach($allnews as $news)
-                                                    <article id="post-82"
-                                                             class="post-82 post type-post status-publish format-standard has-post-thumbnail hentry category-new-event clearfix">
-                                                        <div class="entry-wrapper clearfix">
-                                                            <div class="entry-image-wrapper">
-                                                                <div class="entry-thumbnail">
-                                                                    <a href="/news/{{$news['id']}}" title="{{$news['title']}}">
-                                                                        <img class="img-responsive" src="{{$news['avatar']}}" alt="{{$news['title']}}">
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="entry-content-wrapper clearfix">
-                                                                <div class="entry-content-container clearfix">
+            <article id="post-82"
+                     class="post-82 post type-post status-publish format-standard has-post-thumbnail hentry category-new-event clearfix">
+                <div class="entry-wrapper clearfix">
+                    <div class="entry-image-wrapper">
+                        <div class="entry-thumbnail">
+                            <a href="/news/{{$news['id']}}" title="{{$news['title']}}">
+                                <img class="img-responsive" src="{{$news['avatar']}}" alt="{{$news['title']}}">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="entry-content-wrapper clearfix">
+                        <div class="entry-content-container clearfix">
 
-                                                                    <h3 class="entry-title">
-                                                                        <a href="/news/{{$news['id']}}" rel="bookmark" title="{{$news['title']}}">
-                                                                            {{$news['name']}}
-                                                                        </a>
-                                                                    </h3>
+                            <h3 class="entry-title">
+                                <a href="/news/{{$news['id']}}" rel="bookmark" title="{{$news['title']}}">
+                                    {{$news['name']}}
+                                </a>
+                            </h3>
 
-                                                                    <div class="entry-meta">
+                            <div class="entry-meta">
 
-                                                                    <span class="entry-meta-date"> Дата
-                                                                        <a href="/" rel="bookmark" title="{{$news['title']}}">
-                                                                            {{$news['created_at']}}
-                                                                        </a>
-                                                                    </span>
-                                                                    </div>
-                                                                    <div class="entry-excerpt">
-                                                                        <p>
-                                                                            {{str_limit(strip_tags($news['descript']), 300, '...')}}
-                                                                        </p>
-                                                                    </div>
-                                                                    <div class="entry-read-more">
-                                                                        <a href="/news/{{$news['id']}}" rel="bookmark" title="Read more">Читать дальше
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                @endforeach
+                            <span class="entry-meta-date"> Дата
+                                <a href="/" rel="bookmark" title="{{$news['title']}}">
+                                    {{$news['created_at']}}
+                                </a>
+                            </span>
+                            </div>
+                            <div class="entry-excerpt">
+                                <p>
+                                    {{str_limit(strip_tags($news['descript']), 300, '...')}}
+                                </p>
+                            </div>
+                            <div class="entry-read-more">
+                                <a href="/news/{{$news['id']}}" rel="bookmark" title="Read more">Читать дальше
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -293,7 +293,7 @@
                                                                     <img src="{{$spec['avatar']}}" class="attachment-full  img-circle img-responsive" alt="{{$spec['fio']}}" title="{{$spec['fio']}}" />
 
                                                                 </div>
-                                                                <span class="our-staffs-name"  title="{{$spec['fio']}}" >{{$spec['fio']}}</span><p>{{$spec['opyt']}}</p>
+                                                                <span class="our-staffs-name"  title="{{$spec['fio']}}" >{{$spec['fio']}}</span>
                                                             </div>
                                                         </div>
                                                         @if(($key+1) % 3 == 0)

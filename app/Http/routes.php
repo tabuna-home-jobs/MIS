@@ -40,6 +40,8 @@ Route::group(['domain' => 'luchiki48.ru','namespace' => 'luchiki48'], function()
     Route::resource('/page', 'PageController');
     Route::resource('/feedback', 'FeedbackController');
     Route::resource('/blog', 'BlogController');
+	Route::resource('/gallery', 'GalleryController');
+	Route::resource('/news', 'BlogController');
     Route::resource('/', 'HomeController');
 });
 

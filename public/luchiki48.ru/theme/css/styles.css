@@ -1,4 +1,4 @@
-.fixed {
+    .fixed {
     -webkit-backface-visibility: visible;
     -moz-backface-visibility: visible;
     -ms-backface-visibility: visible;
@@ -16,7 +16,7 @@ a:hover, a:focus, a:active, a.active {
 }
 
 #go-top > i {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 #go-top > i:hover {
@@ -44,7 +44,7 @@ a:hover, a:focus, a:active, a.active {
 }
 
 .site-top {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 .site-top .language-selector .title:hover {
@@ -56,7 +56,7 @@ a:hover, a:focus, a:active, a.active {
 }
 
 header .icon-search-menu > i {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 header .icon-search-menu > i:hover {
@@ -76,7 +76,7 @@ header .shopping-cart-wrapper .widget_shopping_cart_icon {
 }
 
 header .shopping-cart-wrapper .widget_shopping_cart_icon:hover {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 header .widget_shopping_cart_content ul.cart_list.product_list_widget > li > a:hover {
@@ -100,7 +100,7 @@ header .navbar-default ul.main-menu li > a > i.fa {
 }
 
 header .widget_shopping_cart_content a.button.wc-forward {
-    background: #91dcd8
+    background: #8059CE
 }
 
 header .widget_shopping_cart_content a.button.wc-forward:hover {
@@ -158,7 +158,7 @@ header.header-6 .cupid-login-link li > a > i {
 }
 
 header.header-6 .main-menu > li.icon-search-button > a > i.fa.fa-search {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 header.header-6 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
@@ -183,7 +183,7 @@ header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon > span,
 
 @media screen and (max-width: 991px) {
     header .navbar-default .navbar-toggle .icon-bar {
-        background-color: #91dcd8
+        background-color: #8059CE
     }
 
     header.header-4 .navbar-default ul.main-menu > li > a:hover {
@@ -209,16 +209,16 @@ header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon > span,
 
 @media (min-width: 992px) {
     .site-top.site-top-2 .container {
-        background-color: #91dcd8
+        background-color: #8059CE
     }
 
     .site-top.site-top-2 .cupid-login-link ul li {
-        background-color: #91dcd8
+        background-color: #8059CE
     }
 }
 
 .footer-bottom {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 .footer-bottom ul.sub-menu li.menu-item-has-children:after {
@@ -370,35 +370,35 @@ header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon > span,
 }
 
 .cupid-btn-2:hover {
-    color: #91dcd8
+    color: #8059CE
 }
 
 .cupid-icon-box.style1 a {
-    color: #91dcd8
+    color: #8059CE
 }
 
 .cupid-icon-box.style1 a:hover {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 .cupid-icon-box.style1:hover a {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 .cupid-icon-box.style1:hover a:after {
-    border-top: 17px solid #91dcd8
+    border-top: 17px solid #8059CE
 }
 
 .cupid-icon-box.style2 i {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 .cupid-icon-box.style2 i:after {
-    -webkit-box-shadow: 0 0 0 2px #91dcd8;
-    -moz-box-shadow: 0 0 0 2px #91dcd8;
-    -o-box-shadow: 0 0 0 2px #91dcd8;
-    -ms-box-shadow: 0 0 0 2px #91dcd8;
-    box-shadow: 0 0 0 2px #91dcd8
+    -webkit-box-shadow: 0 0 0 2px #8059CE;
+    -moz-box-shadow: 0 0 0 2px #8059CE;
+    -o-box-shadow: 0 0 0 2px #8059CE;
+    -ms-box-shadow: 0 0 0 2px #8059CE;
+    box-shadow: 0 0 0 2px #8059CE
 }
 
 .cupid-heading h2:before {
@@ -406,7 +406,7 @@ header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon > span,
 }
 
 .cupid-services:hover {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 .cupid-contact-info h4:after {
@@ -426,15 +426,15 @@ header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon > span,
 }
 
 .owl-theme .owl-controls .owl-page span {
-    background-color: #91dcd8 !important
+    background-color: #8059CE !important
 }
 
 .archive-cupid-class .classes-nav .classes-search .keyword-wrapper span i.fa-close:hover {
-    color: #91dcd8
+    color: #8059CE
 }
 
 .archive-cupid-class .classes-nav .classes-search button {
-    background-color: #91dcd8
+    background-color: #8059CE
 }
 
 .archive-cupid-class .classes-switcher-wrapper a.classes-switcher-active {
@@ -486,7 +486,7 @@ aside.cupid-calsses-popular-widget .popular-item .month-old {
 
 }
 .site-top {
-    background-color: #91dcd8;
+    background-color: #8059CE;
 }
 .site-top-content i{
     font-size: 17px !important;
@@ -516,13 +516,13 @@ header .header_logo>a>div {
     color:#fff;
 }
 .social-link a:hover{
-    color:#d83f63;
+    color:#91dcd8;
 }
 .site-top-content i{
     color:#fff !important;
 }
 .site-top-content:hover, .site-top-content:hover i{
-    color:#d83f63 !important;
+ /*   color:#d83f63 !important;*/
 }
 .site-top i {
     font-size: 20px;
@@ -546,4 +546,30 @@ header .header_logo>a>div {
 
 .p-t-30{
     padding-top: 30px;
+}
+.top-carousel .item{
+    padding-top: 100px;
+}
+
+.page-title-wrapper{
+    background: url("../../uploads/2015/02/counter-bg.jpg") 10% -10%;
+
+    background-attachment: fixed;
+}
+
+.cupid-heading h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+    display: inline;
+    padding-right: 18px;
+    position: relative;
+    color: #444;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.about-us-padding{
+    padding-top: 20px;
+}
+.entry-thumbnail .entry-thumbnail-hover {
+    background: rgba(255,167,60,0.95);
 }

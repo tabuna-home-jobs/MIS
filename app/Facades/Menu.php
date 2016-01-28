@@ -26,23 +26,39 @@ class Menu  extends Facade {
 
     static function getMenuByLayout($site,$NameMenu, $pref = '', $template)
     {
-        $menu = SiteMenu::with('items')->whereRaw('ids = ? and name = ?', [$site, $NameMenu])->first();
+        $menu = SiteMenu::with('items')->where(['ids' => $site, 'name' =>$NameMenu])->first();
 
+
+	    /*
         $menuParents = collect($menu->items);
 
-        foreach($menu->items as $item){
+        foreach($menu->items as $key => $item){
 
-            //dd(MenuItem::where('parent',$item['id'])->get());
-            $menuParents->keyBy($item['id'])->push(MenuItem::where('parent',$item['id'])->get());
-        }
-        dd($menuParents);
+            $child = MenuItem::where(['parent' => $item['id'], 'menu' => $item['menu']])->get();
+
+
+
+	        if($child->count() == 0){
+
+	        }else{
+
+		        dd($child->toArray(),'wsd');
+		        $menuParents->push($child->toArray());
+	        }
+
+	       // $menuParents->get($key)->push(MenuItem::where('parent',$item['id'])->toArray()->get());
+            //$menuParents->keyBy($item['id'])->push(MenuItem::where('parent',$item['id'])->get());
+        }*/
+        //dd($menuParents);
         //$element = $menu->getElement()->where('parent', 0)->with('childs')->orderBy('sort','asc')->get();
+/*
+        return view("luchiki48ru/_layout/".$template, [
 
+            'items' => $menu->items->toArray(),
+        ]);*/
 
-        return view('luchiki48ru/_layout/'.$template, [
+	    echo view("luchiki48ru/_layout/".$template, ['items' => $menu->items->toArray()])->render();
 
-            'elems' => $element,
-        ]);
     }
 
 

@@ -58,6 +58,15 @@ class GalleryController extends Controller {
         else
             $album = new Album();
 
+
+	    if (Request::hasFile('url')) {
+		    Image::make(Request::file('url'))->save('upload/' . time() . '.' . Request::file('url')->getClientOriginalExtension());
+		    $album->poster = '/upload/' . time() . '.' . Request::file('url')->getClientOriginalExtension();
+	    }else{
+
+		    $album->poster = '/upload/no_img.png';
+	    }
+
         $album->name = $request->name;
         $album->ids = Session::get('website');
         $album->save();
@@ -88,6 +97,7 @@ class GalleryController extends Controller {
 
     public function postPhoto(PhotoRequest $request)
     {
+
         if(!is_null($request->id))
             $photo = Photo::find($request->id);
         else
@@ -100,7 +110,7 @@ class GalleryController extends Controller {
         }
 
 
-        $photo->photoalbum_id = $request->album;
+        $photo->album_id = $request->album;
         $photo->ids = Session::get('website');
         $photo->videourl = $request->videourl;
         $photo->save();
