@@ -69,7 +69,7 @@
                     <div class="widget_title"><h5>Контакты</h5></div>
                     <ul>
                         <li>
-                            <div class="text"><strong>Оффис</strong>
+                            <div class="text"><strong>Офис</strong>
 
                                 <p>Пн - Пт 8:00 - 21:00<br>
                                         <span class="subbclock">Сб 8:00 - 14:00</span>
