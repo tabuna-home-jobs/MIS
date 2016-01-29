@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\Site;
+<?php namespace App\Http\Controllers\luchiki48;
 
 use App\Http\Controllers\Controller;
 use App\Models\Sites;
@@ -16,57 +16,14 @@ class ServiceController extends Controller {
 	 *
 	 * @return Response
 	 */
-    public function index($sitename, $sitedomen)
+    public function index($sitename = "luchiki48", $sitedomen = "ru")
     {
-		/*
 
-        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-
-
-
-
-        $requestCategory = Request::input('category');
-        $Category = $getSites->getCategory()->where('id',$requestCategory)->orderBy('name','desc')->get();
-        $getLastNews = $getSites->getNews()->orderBy('name', 'asc')->limit(5)->get();
-
-
-
-        if (is_null($requestCategory))
-            $Goods = $getSites->getGoods();
-        else
-            $Goods = $getSites->getGoods()->where('category_id', $requestCategory)->orderBy('name','asc')->get();
-
-
-
-        return view($sitename . $sitedomen . '/service', [
-            'thisCategory' => $Category,
-            'Goods' => $Goods,
-            'LastNews' => $getLastNews,
-        ]);
-		*/
-
-
-
-		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-		$Category = $getSites->getCategory()->get();
-
-		$requestCategory = Request::input('category');
-		$getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
-
-
-
-		if (is_null($requestCategory))
-			$Goods = $getSites->getGoods()->paginate(9);
-		else
-			$Goods = $getSites->getGoods()->where('category_id', $requestCategory)->paginate(9);
+		$query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with('categories.goods')->first();
 
 		return view($sitename . $sitedomen . '/service', [
-				'Category' => $Category,
-				'Goods' => $Goods,
-				'LastNews' => $getLastNews,
+				'data' => $query->categories
 		]);
-
-
 
     }
 
@@ -86,7 +43,7 @@ class ServiceController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store($sitename, $sitedomen, CommentRequest $request)
+	public function store(CommentRequest $request, $sitename = "luchiki48", $sitedomen = "ru")
 	{
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
@@ -111,7 +68,7 @@ class ServiceController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-    public function show($sitename, $sitedomen, $id)
+    public function show($id, $sitename = "luchiki48", $sitedomen = "ru")
 	{
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();

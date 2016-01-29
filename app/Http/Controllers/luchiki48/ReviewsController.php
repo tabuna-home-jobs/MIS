@@ -14,10 +14,12 @@ class ReviewsController extends Controller
      *
      * @return Response
      */
-    public function index($sitename, $sitedomen)
+    public function index($sitename = "luchiki48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Reviews = $getSites->getReviews()->where('publish', true)->orderBy('id', 'desc')->paginate(6);
+
+
         return view($sitename . $sitedomen . '/reviews', ['Reviews' => $Reviews]);
     }
 
@@ -36,7 +38,7 @@ class ReviewsController extends Controller
      *
      * @return Response
      */
-    public function store($sitename, $sitedomen, ReviewsRequest $requests)
+    public function store(ReviewsRequest $requests, $sitename = "luchiki48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Reviews = new Reviews([

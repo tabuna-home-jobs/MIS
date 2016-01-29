@@ -17,7 +17,7 @@ class FeedbackController extends Controller {
 	 */
     public function index()
     {
-        return view('stomzn48ru.feedback');
+        return view('luchiki48ru.feedback');
     }
 
 	/**

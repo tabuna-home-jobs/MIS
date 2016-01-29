@@ -10,24 +10,7 @@
                         </a>
                     </div>
                     <div class="footer-menu-container">
-                        <ul id="footer-menu" class="footer-menu">
-                            <li id="menu-item-1009" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1009">
-                                <a href="/">Главная</a></li>
-                            <li id="menu-item-1006" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1006">
-                                <a href="/">Блог</a>
-                            </li>
-                            <li id="menu-item-1007" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1007">
-                                <a href="/">
-                                    Наши учителя
-                                </a>
-                            </li>
-                            <li id="menu-item-1008" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1008">
-                                <a href="/">Классы</a>
-                            </li>
-                            <li id="menu-item-1010" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1010">
-                                <a href="/">О нас</a>
-                            </li>
-                        </ul>
+                        {!!Menu::getMenuByLayout('7','bottom','','footMenu')!!}
                     </div>
                 </div>
             </div>
@@ -36,9 +19,7 @@
 
         <!--Копирайт-->
         <div class="footer-copyright">
-
             <div class="footer-copyright-inner">
-
                 <p>© Студия раннего развития детей «Лучики». Развивающие занятия. 2015</p>
                 <p><small>Разработка, поддержка и продвижение сайтов <a href="http://octavian48.ru" target="_blank">Октавиан</a></small></p>
             </div>

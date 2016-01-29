@@ -573,3 +573,6 @@ header .header_logo>a>div {
 .entry-thumbnail .entry-thumbnail-hover {
     background: rgba(255,167,60,0.95);
 }
+.our-staffs-name a{
+    color:#000;
+}

@@ -286,14 +286,20 @@
 
                                                 <div class="item">
                                                     @foreach($allspecs as $key => $spec)
+
                                                         <div class="col-xs-4">
                                                             <div class="our-staffs-item">
                                                                 <div class="our-staffs-image">
 
-                                                                    <img src="{{$spec['avatar']}}" class="attachment-full  img-circle img-responsive" alt="{{$spec['fio']}}" title="{{$spec['fio']}}" />
-
+                                                                    <a href="team/{{$spec['id']}}">
+                                                                        <img src="{{$spec['avatar']}}" class="attachment-full  img-circle img-responsive" alt="{{$spec['fio']}}" title="{{$spec['fio']}}" />
+                                                                    </a>
                                                                 </div>
-                                                                <span class="our-staffs-name"  title="{{$spec['fio']}}" >{{$spec['fio']}}</span>
+                                                                <span class="our-staffs-name"  title="{{$spec['fio']}}" >
+                                                                    <a href="team/{{$spec['id']}}">
+                                                                        {{$spec['fio']}}
+                                                                    </a>
+                                                                </span>
                                                             </div>
                                                         </div>
                                                         @if(($key+1) % 3 == 0)

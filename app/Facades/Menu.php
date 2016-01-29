@@ -24,7 +24,7 @@ class Menu  extends Facade {
     }
 
 
-    static function getMenuByLayout($site,$NameMenu, $pref = '', $template)
+    static function getMenuByLayout($site, $NameMenu, $pref = '', $template)
     {
         $menu = SiteMenu::with('items')->where(['ids' => $site, 'name' =>$NameMenu])->first();
 

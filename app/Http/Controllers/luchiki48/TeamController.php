@@ -1,35 +1,34 @@
 <?php namespace App\Http\Controllers\luchiki48;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\Album;
-use App\Models\Photo;
-use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\Models\Sites;
-
-class GalleryController extends Controller {
+use App\Models\SpecCat;
+use Request;
+class TeamController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-    public function index($sitename = "luchiki48", $sitedomen = "ru")
-    {
+	public function index($sitename = "luchiki48", $sitedomen = "ru")
+	{
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $albums  =  $getSites->getAlbums()->select('*')->get();
-        //$photo = $getSites->getPhoto()->paginate(20);
+        //$Specialisty = $getSites->getTeam()->orderBy('sort', 'desc')->paginate(6);
+		$SpecCat = $getSites->getSpecCat()->get();
 
-	    $videoAlbums  =  $getSites->getVideoAlbums()->select('*')->get();
-	    //$video  =  $getSites->getVideo()->select('*')->get();
 
-        return view( $sitename.$sitedomen.'/gallery', [
-                'albums' => $albums,
-          //      'photos'  => $photo,
-	           'videoalbums' => $videoAlbums,
-		  //     'video' => $video
-            ]);
-    }
+		$requestCategory = Request::input('catspec');
+		if (is_null($requestCategory))
+			$Specialisty = $getSites->getTeam()->orderBy('sort', 'asc')->paginate(8);
+		else
+			$Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->orderBy('sort', 'asc')->paginate(8);
+
+		//dd($requestCategory);
+        return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty,'SpCat' => $SpecCat]);
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -59,14 +58,15 @@ class GalleryController extends Controller {
 	public function show($id, $sitename = "luchiki48", $sitedomen = "ru")
 	{
 		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-		$album  =  $getSites->getAlbums()->select('name')->first();
-		$photo = $getSites->getPhoto()->where('album_id',$id)->paginate(20);
 
-		return view( $sitename.$sitedomen.'/gallerka', [
-			'album' => $album,
-			'photos'  => $photo,
-			'id' =>$id
+		$Specialist = $getSites->allspecs()->where('id', $id)->first();
+
+		return view($sitename . $sitedomen . '/spec', [
+
+			'Spec' => $Specialist
 		]);
+
+
 	}
 
 	/**

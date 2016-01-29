@@ -14,7 +14,7 @@
                     <div class="panel-body">
 
 
-                        <form action="/dashboard/video" method="post" class="row">
+                        <form action="/dashboard/video" method="post" class="row" enctype="multipart/form-data">
 
                             @if(isset($Album->id))
                                 <input type="hidden" name="id" value="{{$Album->id}}">
@@ -22,6 +22,23 @@
 
 
                             <div class="col-md-12">
+
+                                <div class="form-group text-left">
+                                    <label>Изображение видеоальбома</label>
+                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                        <div data-trigger="fileinput" class="fileinput-preview thumbnail"
+                                             style="line-height: 150px;">
+                                            <img src="{{$Album->poster or '/upload/no_img.png'}}">
+                                        </div>
+
+                                        <div>
+                                            <span class="btn btn-default btn-file">
+                                            <span class="fileinput-new">Выбрать изображение</span>
+                                            <span class="fileinput-exists">Изменить</span>
+                                            <input type="file" name="url" value="{{$Album->poster or ''}}"></span>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="form-group">
                                     <label>Имя</label>

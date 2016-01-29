@@ -92,7 +92,6 @@ class Sites extends Model {
     }
 
 
-
     /*
     public function getSpecCat()
     {

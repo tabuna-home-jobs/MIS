@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\VideoAlbum as Album;
 use App\Models\Video as Video;
 use Session;
+use Image;
 
 class VideoGalleryController extends Controller
 {
@@ -32,11 +33,29 @@ class VideoGalleryController extends Controller
 
         if($request->id){
             $alb = $AlbumPhoto = Album::find($request->id);
+
+	        if ($request->hasFile('url')) {
+		        Image::make($request->file('url'))->save('upload/' . time() . '.' . $request->file('url')->getClientOriginalExtension());
+		        $alb->poster = '/upload/' . time() . '.' . $request->file('url')->getClientOriginalExtension();
+	        }else{
+
+		        $alb->poster = '/upload/no_img.png';
+	        }
+
             $alb->name = $request->name;
             $alb->ids = Session::get('website');
             $alb->save();
         }else {
             $alb = new Album();
+
+	        if ($request->hasFile('url')) {
+		        Image::make($request->file('url'))->save('upload/' . time() . '.' . $request::file('url')->getClientOriginalExtension());
+		        $alb->poster = '/upload/' . time() . '.' . $request->file('url')->getClientOriginalExtension();
+	        }else{
+
+		        $alb->poster = '/upload/no_img.png';
+	        }
+
             $alb->name = $request->name;
             $alb->ids = Session::get('website');
             $alb->save();

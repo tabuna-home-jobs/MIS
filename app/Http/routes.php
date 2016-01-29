@@ -42,6 +42,8 @@ Route::group(['domain' => 'luchiki48.ru','namespace' => 'luchiki48'], function()
     Route::resource('/blog', 'BlogController');
 	Route::resource('/gallery', 'GalleryController');
 	Route::resource('/news', 'BlogController');
+	Route::resource('/video', 'VideoGalleryController');
+	Route::resource('/team', 'TeamController');
     Route::resource('/', 'HomeController');
 });
 
