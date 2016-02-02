@@ -167,6 +167,7 @@
                         <!--  <li class="{{Active::route('reviews.*')}}"><a href="/reviews">Отзывы</a></li> -->
                        <!-- <li class="{{Active::route('team.*')}}"><a href="/team">Специалисты</a></li> -->
                         <li class="{{Active::route('feedback.*')}}"><a href="/feedback">Контакты</a></li>
+                        <li><a href="/page/63">Прейскурант цен</a></li>
 
                     </ul>
 
