@@ -6,25 +6,23 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Session;
-use App\Models\Answers;
 
-class AnswersController extends Controller
+class SurveysController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($sitename = "luchiki48", $sitedomen = "ru")
     {
-        //
+        //Нахуя я его создал ?
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -34,30 +32,19 @@ class AnswersController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
-     * @return Response
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $answers = new Answers([
-            'answer' => serialize($request->answer),
-            'fio' => $request->fio,
-            'phone' => $request->phone,
-            'email' => $request->email,
-            'surveys_id' => $request->id,
-        ]);
-
-        $answers->save();
-
-        Session::flash('good', 'Спасибо за уделённое нам время');
-        return redirect()->back();
+        //
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
@@ -68,7 +55,7 @@ class AnswersController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
@@ -78,9 +65,9 @@ class AnswersController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
+     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
@@ -91,7 +78,7 @@ class AnswersController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {

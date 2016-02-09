@@ -28,24 +28,26 @@ class HomeController extends Controller {
 		                    $query->where('publish',1)->orderBy(DB::raw('RANDOM()'));
 	        },
 	        //Все специалисты
-	        'allspecs'
+	        'allspecs',
+	        //Опросы
+	        'getSurveys.quest'
 	        ]
         )->first();
-
-
-
 
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
 
 		$specialization = DB::table('timetable')->select('specialization')->distinct()->get();
+
+
 		return view($sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShares' => $getShares,
 			'specialization' => $specialization,
 			'allnews' => $getSites['allnews'],
 			'randomReview' => $getSites['randomReview'],
-			'allspecs' => $getSites['allspecs']
+			'allspecs' => $getSites['allspecs'],
+			'getSurveys' => $getSites['getSurveys']
         ]);
     }
 

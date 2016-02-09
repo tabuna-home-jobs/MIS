@@ -553,7 +553,7 @@ header .header_logo>a>div {
 
 .page-title-wrapper{
     background: url("../../uploads/2015/02/counter-bg.jpg") 10% -10%;
-
+    position: relative;
     background-attachment: fixed;
 }
 
@@ -564,8 +564,8 @@ header .header_logo>a>div {
     display: inline;
     padding-right: 18px;
     position: relative;
-    color: #444;
-    text-shadow: 1px 1px 1px #ccc;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
 }
 .about-us-padding{
     padding-top: 20px;
@@ -575,4 +575,54 @@ header .header_logo>a>div {
 }
 .our-staffs-name a{
     color:#000;
+}
+.wrrr{
+    position: absolute;
+    background: #4d4d4d;
+    content: "1";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0.4;
+    z-index: 5;
+}
+.cupid-heading h2+span{
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
+.wrappmain .cupid-heading h2+span{
+    color: #000;
+    text-shadow: none;
+}
+.wrappmain .cupid-heading h2{
+    color:#000;
+    text-shadow: none;
+}
+#submit{
+    padding: 0 10px;
+    width: 100%;
+    border-radius: 6px;
+}
+.cupid-heading{
+    z-index: 10;
+    position: relative;
+}
+.sub-block{
+    background: #fff;
+}
+textarea{
+    background: #F6f6f6 !important;
+
+    font-size: 12px !important;
+    padding: 10px 10px 9px 10px !important;
+    color: #999 !important;
+}
+.sub-block{
+    padding: 20px 15px;
+}
+.footer-bottom ul.footer-menu li>a{
+    padding: 0 8px;
+}
+.luchstep2{
+    display: none;
 }

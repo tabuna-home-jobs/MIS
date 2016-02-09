@@ -2,23 +2,29 @@
 
 namespace App\Http\Controllers\luchiki48;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Requests\Site\QuestAnswerRequest;
+use App\Models\QuestAnswer;
+use App\Models\Sites;
+use Illuminate\Http\Request;
 use Session;
-use App\Models\Answers;
 
-class AnswersController extends Controller
+class QuestAnswerController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-    public function index()
+    public function index($sitename = "luchiki48", $sitedomen = "ru")
     {
-        //
+        $QuestAnswers = QuestAnswer::whereRaw('ids = ? and publish = ?', [Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id, true])
+            ->orderBy('id', 'desc')
+            ->with('getCategory', 'getDoctor')
+            ->simplePaginate(8);
+
+        return view( $sitename.$sitedomen.'/questanswer', ['QuestAnswers' => $QuestAnswers]);
     }
 
     /**
@@ -37,19 +43,16 @@ class AnswersController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $sitename = "luchiki48", $sitedomen = "ru")
     {
-        $answers = new Answers([
-            'answer' => serialize($request->answer),
-            'fio' => $request->fio,
-            'phone' => $request->phone,
-            'email' => $request->email,
-            'surveys_id' => $request->id,
-        ]);
+        $new = new QuestAnswer(
+            $request->only('fio', 'questions', 'phone', 'email')
+        );
 
-        $answers->save();
+        $new->ids = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id;
+        $new->save();
 
-        Session::flash('good', 'Спасибо за уделённое нам время');
+        Session::flash('good', 'Спасибо, что написали, мы обязательно ответим вам.');
         return redirect()->back();
     }
 

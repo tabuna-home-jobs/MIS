@@ -7,6 +7,7 @@
             <div class="cupid-heading"><h2>{{$Page['name']}}</h2>
             </div>
         </div>
+        <div class="wrrr"></div>
     </section>
     <main role="main" class="site-content">
         <div class="page type-page status-publish hentry">

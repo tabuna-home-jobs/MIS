@@ -7,6 +7,7 @@
                 <div class="cupid-heading"><h2>Контакты</h2> <span>Свяжитесь с нами с нами, когда вам нужно</span>
                 </div>
             </div>
+            <div class="wrrr"></div>
         </section>
         <main role="main" class="site-content">
             <div id="post-254" class="post-254 page type-page status-publish hentry">

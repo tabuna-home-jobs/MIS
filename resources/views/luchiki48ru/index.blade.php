@@ -1,6 +1,6 @@
 @extends('luchiki48ru/header')
 @section('content')
-<div id="wrapper-content bg-while">
+<div id="wrapper-content bg-while" class="wrappmain">
     <main role="main" class="site-content">
         <div class="page type-page status-publish hentry">
             <div class="entry-content">
@@ -261,6 +261,7 @@
                     </div>
                 </div>
                 <!--Отзывы-->
+
                 <!--Учителя-->
                 <div class="container">
                     <div class="vc_row wpb_row vc_row-fluid cupid-margin-bottom-85 cupid-margin-top-35">
@@ -316,6 +317,82 @@
 
                         <div class="wpb_column vc_column_container vc_col-sm-4">
                             <div class="wpb_wrapper">
+                                @if(isset($getSurveys))
+                                <!--Опросы-->
+
+                                <div class="cupid-introduction left ">
+                                    <h3>
+                                        {{$getSurveys->name}}
+                                    </h3>
+
+                                    @if(isset($getSurveys))
+                                        <form method="post" action="/answers">
+                                            <div class="luchstep1">
+                                            @foreach($getSurveys->quest as $ques)
+                                                <h3>{{$ques->quest}}</h3>
+
+                                                @if($ques->type == 'one')
+
+                                                    @foreach(unserialize($ques->answer) as $answer)
+                                                        <div class="radio">
+                                                            <label>
+                                                                <input type="radio" name="answer[{{$ques->id}}][]" value="{{$answer}}" required>
+                                                                {{$answer}}
+                                                            </label>
+                                                        </div>
+
+                                                    @endforeach
+
+                                                @else
+
+                                                    @foreach(unserialize($ques->answer) as $answer)
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="answer[{{$ques->id}}][]" value="{{$answer}}">
+                                                                {{$answer}}
+                                                            </label>
+                                                        </div>
+
+                                                    @endforeach
+
+
+                                                @endif
+
+                                            @endforeach
+
+                                                <input type="hidden" name="id" value="{{$getSurveys->id}}">
+                                            {{csrf_field()}}
+                                                <button class="btn btn-primary" onclick="luchstep2()">Голосовать</button>
+                                            </div>
+
+                                            <div class="row setup-content luchstep2" id="step-end">
+                                                <div class="col-xs-12">
+                                                    <div class="col-md-12">
+                                                        <h6 class="text-justify">Контакты для обратной связи</h6>
+
+                                                        <div class="form-group">
+                                                            <input type="text" name="fio" placeholder="ФИО" required="" style="width: 100%">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="email" name="email" placeholder="E-mail" required="" style="width: 100%">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" name="phone" placeholder="Телефон" required="" style="width: 100%">
+                                                        </div>
+
+
+
+                                                        <button type="submit" class="btn btn-primary" onclick="luchstep1()">Назад</button>
+                                                        <button type="submit" class="btn btn-primary">Проголосовать</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    @endif
+                                </div>
+
+                                <!--Опросы-->
+                                @else
                                 <div class="cupid-introduction left ">
                                     <h3>
                                         Наши воспитатели
@@ -325,6 +402,7 @@
 
                                     <p>Все преподователи сертифицированы, имеют многолетний опыт рыботы с детьми в разных возрастных категориях. Наши воспитатели найдут подход к любому ребёнку.</p>
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>
