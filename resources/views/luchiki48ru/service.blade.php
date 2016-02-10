@@ -11,48 +11,48 @@
             </div>
             <div class="wrrr"></div>
         </section>
-        <main role="main" class="site-content-archive">
+        <main role="main" class="site-content-archive wrapp-review">
             <div class="container clearfix">
                 <div class="blog-wrapper">
                     <div class="blog-inner blog-single clearfix">
                         <article id="post-">
                             <div class="page-single-our-staffs">
                                 <div class="row">
+                                    <div class="gallery-wrapper gallery-infinite-scroll">
+
                         @foreach($data as $item)
 
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 service-wrapper">
                                 <h2>{{$item->name}}</h2>
                                 @foreach($item->goods as $key => $good)
+                                    <div class="gallery-item gallery-col-3 service-img">
+                                        <div class="entry-thumbnail title">
+                                            <img src="{{$good->avatar}}" alt="{{$good->name}}">
 
-                                    <div class="col-md-4 item-row">
-                                        <div>
-                                            <div>
-                                                <img src="{{$good->avatar}}" alt="{{$good->name}}"></div>
-                                            <h4>
-                                                <a href="/service/{{$good->id}}">
-                                                    {{str_limit((strip_tags($good->name)), 80, '...')}}
-                                                </a>
-                                            </h4>
-                                            <p class="day"></p>
-                                            <div>
-                                                {{str_limit((strip_tags($good->content)), 130, '...')}}
+                                            <!--Описание фотоальбома-->
+                                            <div class="entry-thumbnail-hover">
+                                                <div class="entry-hover-wrapper">
+                                                    <div class="entry-hover-inner">
+                                                        <a href="/service/{{$good->id}}" title="{{$good->name}}">
+                                                            <h5 class="class-name">{{$good->name}}</h5>
+                                                            <span class="excerpt">
+                                                                {{str_limit((strip_tags($good->content)), 130, '...')}}
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="seeall">
-                                                <a href="/service/{{$good->id}}" class="btn btn-primary btn-default">
-                                                    <span class="glyphicon glyphicon-eye-open"></span> Посмотреть
-                                                </a>
-                                            </div>
+                                            <!--Описание фотоальбома-->
                                         </div>
                                     </div>
-                                    @if(($key+1) % 3 == 0)
-                                        <div class="clearfix"></div>
-                                    @endif
+
 
                                 @endforeach
                             </div>
 
 
                         @endforeach
+                                        </div>
                                 </div>
                         </div>
                     </article>

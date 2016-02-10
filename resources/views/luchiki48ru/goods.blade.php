@@ -10,8 +10,9 @@
                     </h2>
                 </div>
             </div>
+            <div class="wrrr"></div>
         </section>
-        <main role="main" class="site-content">
+        <main role="main" class="site-content wrapp-goods">
             <div class="page type-page status-publish hentry">
                 <div class="entry-content">
                     <div class="container">
@@ -19,6 +20,10 @@
                             <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
                                 <div class="wpb_wrapper">
                                     <div class=" row">
+                                        <div class="col-xs-4">
+                                            <img src="{{$Good['avatar']}}" title="{{$Good['name']}}" alt="{{$Good['name']}}" class="img-thumbnail">
+                                        </div>
+
                                         {!! $Good['text'] !!}
                                     </div>
                                 </div>

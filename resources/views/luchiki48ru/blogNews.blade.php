@@ -16,6 +16,9 @@
                         <div class="vc_row wpb_row vc_row-fluid bg-content-box cupid-margin-top-35 bg-while">
                             <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
                                 <div class="wpb_wrapper">
+                                    <div class="col-xs-4">
+                                        <img src="{{$New['avatar']}}" title="{{$New['name']}}" alt="{{$New['name']}}">
+                                    </div>
                                     {!! $New['content'] !!}
                                 </div>
                             </div>

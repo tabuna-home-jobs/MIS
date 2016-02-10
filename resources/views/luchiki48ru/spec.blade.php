@@ -8,8 +8,9 @@
                     <h2>Наш учитель: <span class="lastWord">{{$Spec->fio}}</span></h2>
                 </div>
             </div>
+            <div class="wrrr"></div>
         </section>
-        <main role="main" class="site-content-archive">
+        <main role="main" class="site-content-archive wrapp-review">
             <div class="container clearfix">
                 <div class="blog-wrapper">
                     <div class="blog-inner blog-single clearfix">
@@ -18,7 +19,7 @@
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12 our-staffs-image">
 
-                                        <img  src="{{$Spec->avatar}}" class="img-circle img-responsive" alt="{{$Spec->fio}}" title="{{$Spec->fio}}">
+                                        <img  src="{{$Spec->avatar}}" class="img-responsive" alt="{{$Spec->fio}}" title="{{$Spec->fio}}">
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12 our-staffs-contact">
                                         <h3 class="our-staffs-name">{{$Spec->fio}}</h3>

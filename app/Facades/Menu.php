@@ -29,26 +29,24 @@ class Menu  extends Facade {
         $menu = SiteMenu::with('items')->where(['ids' => $site, 'name' =>$NameMenu])->first();
 
 
-	    /*
+
         $menuParents = collect($menu->items);
 
-        foreach($menu->items as $key => $item){
+        foreach($menuParents as $key => $item){
 
-            $child = MenuItem::where(['parent' => $item['id'], 'menu' => $item['menu']])->get();
-
-
+            $child = MenuItem::where(['parent' => $item->id, 'menu' => $item->menu])->get();
 
 	        if($child->count() == 0){
 
 	        }else{
+                $item['child'] = $child->toArray();
 
-		        dd($child->toArray(),'wsd');
-		        $menuParents->push($child->toArray());
 	        }
 
 	       // $menuParents->get($key)->push(MenuItem::where('parent',$item['id'])->toArray()->get());
             //$menuParents->keyBy($item['id'])->push(MenuItem::where('parent',$item['id'])->get());
-        }*/
+        }
+
         //dd($menuParents);
         //$element = $menu->getElement()->where('parent', 0)->with('childs')->orderBy('sort','asc')->get();
 /*
@@ -57,7 +55,7 @@ class Menu  extends Facade {
             'items' => $menu->items->toArray(),
         ]);*/
 
-	    echo view("luchiki48ru/_layout/".$template, ['items' => $menu->items->toArray()])->render();
+	    echo view("luchiki48ru/_layout/".$template, ['items' => $menuParents->toArray()])->render();
 
     }
 

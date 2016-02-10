@@ -116,45 +116,45 @@ header .widget_shopping_cart_content a.button.checkout.wc-forward:hover {
 }
 
 header .navbar-default ul.main-menu li:hover > a, header .navbar-default ul.main-menu li.current-menu-ancestor > a, header .navbar-default ul.main-menu li.current-menu-item > a {
-    color: #d83f63
+    color: #18B526
 }
 
 header .navbar-default ul.main-menu > li.menu-item-has-children > a:after {
-    border-bottom: solid 8px #d83f63
+    border-bottom: solid 8px #18B526
 }
 
 @media (min-width: 992px) {
     header .navbar-default ul.dropdown-menu {
-        border-top-color: #d83f63
+        border-top-color: #18B526
     }
 }
 
 header .navbar-default ul.dropdown-menu a > b.caret:after {
-    color: #d83f63
+    color: #18B526
 }
 
 header.header-2 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
-    color: #d83f63
+    color: #18B526
 }
 
 header.header-3 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
-    color: #d83f63
+    color: #18B526
 }
 
 header.header-4 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
-    color: #d83f63
+    color: #18B526
 }
 
 header.header-4 .navbar-default ul.main-menu > li > a:hover {
-    color: #d83f63
+    color: #18B526
 }
 
 header.header-5 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
-    color: #d83f63
+    color: #18B526
 }
 
 header.header-6 .cupid-login-link li > a > i {
-    color: #d83f63
+    color: #18B526
 }
 
 header.header-6 .main-menu > li.icon-search-button > a > i.fa.fa-search {
@@ -162,7 +162,7 @@ header.header-6 .main-menu > li.icon-search-button > a > i.fa.fa-search {
 }
 
 header.header-6 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
-    background-color: #d83f63
+    background-color: #18B526
 }
 
 header.header-6 .navbar-header .header_logo {
@@ -625,4 +625,39 @@ textarea{
 }
 .luchstep2{
     display: none;
+}
+.super-color>h3{
+    color:#d83f63;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.luchstep1 h3{
+    padding-left: 15px;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.luchstep1{
+    padding-left: 10px;
+}
+.wrapp-surv{
+    padding-left: 25px;
+}
+.wrap-review{
+    border-bottom: 1px solid #ccc;
+}
+.wrapp-review{
+    padding-top: 0;
+    margin-top: -60px;
+}
+.service-img img{
+    height: 225px;
+}
+.service-wrapper h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+li{
+    list-style-position: inside;
+}
+.wrapp-goods{
+    margin-top: -40px;
 }

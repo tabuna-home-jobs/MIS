@@ -28,6 +28,9 @@
 
 <div class="wrap">
 <div class="manage-menus">
+    <div class="alert alert-success" id="success-changes">
+        Изменения успешно вступили в силу
+    </div>
     <form method="get" action="{{route('wmenuindex')}}">
 <label for="menu" class="selected-menu">Выберите меню для редактирования:</label>
 

@@ -320,7 +320,7 @@
                                 @if(isset($getSurveys))
                                 <!--Опросы-->
 
-                                <div class="cupid-introduction left ">
+                                <div class="cupid-introduction left super-color">
                                     <h3>
                                         {{$getSurveys->name}}
                                     </h3>
@@ -332,7 +332,7 @@
                                                 <h3>{{$ques->quest}}</h3>
 
                                                 @if($ques->type == 'one')
-
+                                                    <div class="wrapp-surv">
                                                     @foreach(unserialize($ques->answer) as $answer)
                                                         <div class="radio">
                                                             <label>
@@ -342,9 +342,10 @@
                                                         </div>
 
                                                     @endforeach
+                                                    </div>
 
                                                 @else
-
+                                                    <div class="wrapp-surv">
                                                     @foreach(unserialize($ques->answer) as $answer)
                                                         <div class="checkbox">
                                                             <label>
@@ -354,6 +355,7 @@
                                                         </div>
 
                                                     @endforeach
+                                                    </div>
 
 
                                                 @endif
@@ -362,7 +364,9 @@
 
                                                 <input type="hidden" name="id" value="{{$getSurveys->id}}">
                                             {{csrf_field()}}
-                                                <button class="btn btn-primary" onclick="luchstep2()">Голосовать</button>
+                                                <div class="text-right">
+                                                    <button class="btn btn-primary" onclick="luchstep2()">Голосовать</button>
+                                                </div>
                                             </div>
 
                                             <div class="row setup-content luchstep2" id="step-end">

@@ -1,6 +1,6 @@
 var arraydata = [];
 function getmenus() {
-    $("#spinsavemenu").show()
+    $("#spinsavemenu").show();
 
     var cont = 0;
     $("#menu-to-edit li").each(function(index) {
@@ -11,21 +11,35 @@ function getmenus() {
             if (n != -1) {
                 dept = i;
             }
-        };
+        }
+		var parentid = '0';
+		//Берём родителя
+		if(dept != 0){
+			parentid = $(this).prev('li').attr('id');
+		}
+
         var textoiner = $(this).find(".item-edit").context.id;
-        console.log(textoiner);
+
+
+
 	  var id = this.id.split("-");
-        var textoexplotado = textoiner.split("|"); 
-        var padre = 0;  
+        var textoexplotado = textoiner.split("|");
+
+		/*
+        var padre = 0;
+
         if (!!textoexplotado[textoexplotado.length-2] && textoexplotado[textoexplotado.length-2]!= id[2]) {  
             padre = textoexplotado[textoexplotado.length-2]
-        }
+        }*/
+
+
         arraydata.push({
             depth : dept,
             id : id[2],
-            parent : padre,
-            sort : cont
-        })
+            //parent : padre,
+            sort : cont,
+			parent : +parentid.replace(/\D+/g,"")
+        });
         cont++;
     });
  actualizarmenu();
@@ -48,6 +62,7 @@ function getmenus() {
                             return request.setRequestHeader('X-CSRF-Token', $("meta[name='token']").attr('content'));
                         },
 						success : function(response) {
+							$("#success-changes").slideDown('slow');
 							$("#spincustomu").hide();
 							window.location = "";
 
@@ -57,9 +72,13 @@ function getmenus() {
 
 				function updateitem(id) {
 
-					var label = $("#idlabelmenu_" + id).val()
-					var clases = $("#clases_menu_" + id).val()
-					var url = $("#url_menu_" + id).val()
+					var label = $("#idlabelmenu_" + id).val();
+					var clases = $("#clases_menu_" + id).val();
+					var url = $("#url_menu_" + id).val();
+
+
+
+
 					$.ajax({
 						data : {
 							label : label,
@@ -75,15 +94,17 @@ function getmenus() {
                         },
 						success : function(response) {
 
-							$("#menutitletemp_" + id).val(label)
-
-							console.log("aqu llega")
+							$("#menutitletemp_" + id).val(label);
+							$("#success-changes").slideDown('slow');
+							//console.log("aqu llega")
 							//$("#spinsavemenu").hide();
 						}
 					});
 				}
 
 				function actualizarmenu() {
+
+
 
 					$.ajax({
 						dataType : "json",
@@ -100,8 +121,8 @@ function getmenus() {
                         },
 						success : function(response) {
 
-							console.log("aqu llega")
 							$("#spinsavemenu").hide();
+							$("#success-changes").slideDown('slow');
 						}
 					});
 				}
@@ -120,7 +141,7 @@ function getmenus() {
                             return request.setRequestHeader('X-CSRF-Token', $("meta[name='token']").attr('content'));
                         },
 						success : function(response) {
-
+							$("#success-changes").slideDown('slow');
 						}
 					});
 				}
@@ -147,6 +168,7 @@ function getmenus() {
 								if (!!response.error) {
 									alert(response.resp)
 								}
+								$("#success-changes").slideDown('slow');
 
 							}
 						});
@@ -164,7 +186,7 @@ function getmenus() {
 							dataType : "json",
 
 							data : {
-								menuname : $("#menu-name").val(),
+								menuname : $("#menu-name").val()
 							},
 
 							url :createnewmenur,
@@ -174,12 +196,13 @@ function getmenus() {
                             },
 							success : function(response) {
 
+								$("#success-changes").slideDown('slow');
 								window.location = menuwr+"?menu=" + response.resp
 
 							}
 						});
 					} else {
-						alert("Введите название меню!")
+						alert("Введите название меню!");
 						$("#menu-name").focus();
 						return false;
 					}

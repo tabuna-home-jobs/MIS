@@ -40,10 +40,11 @@ class ReviewsController extends Controller
      */
     public function store(ReviewsRequest $requests, $sitename = "luchiki48", $sitedomen = "ru")
     {
+
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Reviews = new Reviews([
             'fio' => $requests->fio,
-         //   'content' => $requests->content,
+            'content' => $requests->mess,
             'publish' => 0
         ]);
         $getSites->getReviews()->save($Reviews);

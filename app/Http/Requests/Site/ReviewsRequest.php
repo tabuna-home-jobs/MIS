@@ -25,7 +25,7 @@ class ReviewsRequest extends Request
     {
         return [
             'fio' => 'required|max:255',
-            'content' => 'required',
+            'mess' => 'required',
         ];
     }
 }
