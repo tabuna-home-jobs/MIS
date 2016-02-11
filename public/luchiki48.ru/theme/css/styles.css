@@ -661,3 +661,12 @@ li{
 .wrapp-goods{
     margin-top: -40px;
 }
+.title-comment-serv{
+    margin: 0;
+    color:#8059CE;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.entry-excerpt{
+    color:#1f1f1f;
+    padding: 5px;
+}
