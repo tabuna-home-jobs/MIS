@@ -143,7 +143,6 @@
                         -->
 
                         <li><a href="/page/18">Информация о нас</a></li>
-                        <li><a href="/page/55">Наши лицензии</a></li>
 
                         <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
                         <!--<li class="{{Active::route('login')}}"><a href="/login">Личный кабинет</a></li>-->
@@ -166,9 +165,7 @@
                         <!--  <li class="{{Active::route('gallery.*')}}"><a href="/gallery">Галерея</a></li> -->
                         <!--  <li class="{{Active::route('reviews.*')}}"><a href="/reviews">Отзывы</a></li> -->
                        <!-- <li class="{{Active::route('team.*')}}"><a href="/team">Специалисты</a></li> -->
-                        <li><a href="/page/106">Вакансии</a></li>
                         <li class="{{Active::route('feedback.*')}}"><a href="/feedback">Контакты</a></li>
-                        <li><a href="/page/63">Прейскурант цен</a></li>
 
                     </ul>
 
