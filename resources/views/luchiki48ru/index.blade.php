@@ -10,15 +10,17 @@
 
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="/luchiki48.ru/uploads/revslider/slider_02/img-slider-01_resize.png" alt="слайд1">
+                            <img src="/luchiki48.ru/img/slider1.png" alt="слайд1">
                             <div class="carousel-caption">
                                 Прекрасное описание для слайда
+                                <p>Небольшая подпись <small>классное форматирование</small></p>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="/luchiki48.ru/uploads/revslider/slider_04/img-slider-04.png" alt="слайд2">
+                            <img src="/luchiki48.ru/img/slider2.png" alt="слайд2">
                             <div class="carousel-caption">
                                 Прекрасное описание для слайда 2
+                                <p>Небольшая подпись <small>классное форматирование</small></p>
                             </div>
                         </div>
 
@@ -26,11 +28,11 @@
 
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                        <span class="sr-only">Назад</span>
                     </a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                        <span class="sr-only">Вперёд</span>
                     </a>
                 </div>
                 <!--Карусель на главной-->
@@ -38,17 +40,7 @@
                 <!--Учиться легко и с удовольствием-->
                 <div class="container">
                     <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-50 luchiki-margin-top-50">
-                        <div class="wpb_column vc_column_container vc_col-sm-4">
-                            <div class="wpb_wrapper">
-                                <div class="wpb_single_image wpb_content_element vc_align_center">
-                                    <div class="wpb_wrapper">
-                                        <div class="vc_single_image-wrapper  vc_box_border_grey">
-                                            <img width="350" height="363" src="/luchiki48.ru/uploads/2015/02/bg-services.jpg" class="vc_single_image-img attachment-full" alt="bg-services">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="luchiki-padding-left-35 wpb_column vc_column_container vc_col-sm-8">
                             <div class="wpb_wrapper">
                                 <div class="luchiki-introduction left luchiki-margin-bottom-35">
@@ -112,6 +104,17 @@
                                                     <h4>Круглосуточно</h4>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-sm-4">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_single_image wpb_content_element vc_align_center">
+                                    <div class="wpb_wrapper">
+                                        <div class="vc_single_image-wrapper  vc_box_border_grey">
+                                            <img width="" height="" src="/luchiki48.ru/img/child.jpg" class="vc_single_image-img attachment-full" alt="bg-services">
                                         </div>
                                     </div>
                                 </div>

@@ -218,7 +218,9 @@ header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon > span,
 }
 
 .footer-bottom {
-    background-color: #8059CE
+    background-color: #8059CE;
+    background: url('/luchiki48.ru/img/footerbg-2.png');
+    background-size: cover;
 }
 
 .footer-bottom ul.sub-menu li.menu-item-has-children:after {
@@ -450,7 +452,7 @@ aside.luchiki-calsses-popular-widget .popular-item .month-old {
 }
 
 .vc_custom_1444210165609 {
-    background-image: url("../../uploads/2015/02/counter-bg.jpg") !important
+    background-image: url("/luchiki48.ru/img/circle-bg.png") !important
 }
 
 .vc_custom_1425263113761 {
@@ -674,6 +676,14 @@ li{
 }
 
 
-.carousel-inner, .carousel-inner > .item, .carousel-inner>.item>a>img, .carousel-inner>.item>img{
-    height: 100% !important;
+.top-carousel .carousel-inner,
+.top-carousel .carousel-inner > .item,
+.top-carousel .carousel-inner>.item>a>img,
+.top-carousel .carousel-inner>.item>img{
+    /* height: 100% !important; */
+    top:60px !important;
+}
+
+.caruselTeachers{
+    top:inherit!important;
 }

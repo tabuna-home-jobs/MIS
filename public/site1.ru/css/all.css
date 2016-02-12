@@ -8237,9 +8237,9 @@ footer h4 span {
 }
 
 .footer-nav li {
-    float: left;
-    width: 50%;
-    line-height: 38px
+    /*float: left;
+    width: 50%;*/
+    line-height: 26px
 }
 
 .footer-nav li a, .footer-nav li a:hover {
@@ -11015,6 +11015,7 @@ div.facebook .pp_content, div.light_rounded .pp_bottom .pp_middle, div.light_rou
     text-align: center;
     margin-bottom: 19px;
     overflow: hidden;
+    width: 150px;
 }
 .cocial-top-li a {
     display: table;
@@ -11429,7 +11430,7 @@ fieldset.login-fieldset input {
 }
 
 .appointment-scroll {
-    max-height: 280px;
+    max-height: 320px;
     overflow: auto;
     overflow-x:hidden;
 }
@@ -11447,3 +11448,4 @@ fieldset.login-fieldset input {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px #A5A5A5;
 }
+

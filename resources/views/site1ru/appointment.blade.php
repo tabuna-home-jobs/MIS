@@ -208,7 +208,7 @@
                                 <div class="col-md-12">
                                     <h5> Выберите дату</h5>
 
-                                  <div class="form-group" id="date">
+                                  <div class="form-group appointment-scroll" id="date">
 
                                   </div>
 
