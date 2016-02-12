@@ -37,7 +37,7 @@
 
                 <!--Учиться легко и с удовольствием-->
                 <div class="container">
-                    <div class="vc_row wpb_row vc_row-fluid cupid-margin-bottom-50 cupid-margin-top-50">
+                    <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-50 luchiki-margin-top-50">
                         <div class="wpb_column vc_column_container vc_col-sm-4">
                             <div class="wpb_wrapper">
                                 <div class="wpb_single_image wpb_content_element vc_align_center">
@@ -49,9 +49,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cupid-padding-left-35 wpb_column vc_column_container vc_col-sm-8">
+                        <div class="luchiki-padding-left-35 wpb_column vc_column_container vc_col-sm-8">
                             <div class="wpb_wrapper">
-                                <div class="cupid-introduction left cupid-margin-bottom-35">
+                                <div class="luchiki-introduction left luchiki-margin-bottom-35">
                                     <h3>
                                         Мы воспитываем детей <b>более пятнадцати лет.</b><br>
                                         Мы - место <b>где развивается каждый ребенок.</b>
@@ -65,7 +65,7 @@
                                     <div class="vc_row wpb_row vc_inner vc_row-fluid childi">
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
-                                                <div id="icon-box-3019-5054" class="cupid-icon-box style2 left ">
+                                                <div id="icon-box-3019-5054" class="luchiki-icon-box style2 left ">
                                                     <a href="index.html%3Fp=189.html"><i class="fa fa-tags"></i></a>
                                                     <h4>Спортзалы</h4>
                                                 </div>
@@ -73,7 +73,7 @@
                                         </div>
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
-                                                <div id="icon-box-2878-8462" class="cupid-icon-box style2 left ">
+                                                <div id="icon-box-2878-8462" class="luchiki-icon-box style2 left ">
                                                     <a href="index.html%3Fp=189.html"><i class="fa fa-plane"></i></a>
                                                     <h4>Разнообразные классы</h4>
                                                 </div>
@@ -81,7 +81,7 @@
                                         </div>
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
-                                                <div id="icon-box-9590-2325" class="cupid-icon-box style2 left ">
+                                                <div id="icon-box-9590-2325" class="luchiki-icon-box style2 left ">
                                                     <a href="index.html%3Fp=189.html"><i class="fa fa-thumb-tack"></i>
                                                     </a><h4>Муз. и худ. классы</h4>
                                                 </div>
@@ -89,7 +89,7 @@
                                         </div>
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
-                                                <div id="icon-box-4851-4352" class="cupid-icon-box style2 left ">
+                                                <div id="icon-box-4851-4352" class="luchiki-icon-box style2 left ">
                                                     <a href="index.html%3Fp=189.html"><i class="fa fa-gamepad"></i></a>
                                                     <h4>Мультимедиа центр</h4>
                                                 </div>
@@ -97,7 +97,7 @@
                                         </div>
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
-                                                <div id="icon-box-9456-7143" class="cupid-icon-box style2 left ">
+                                                <div id="icon-box-9456-7143" class="luchiki-icon-box style2 left ">
                                                     <a href="index.html%3Fp=189.html"><i class="fa fa-cube"></i>
                                                     </a>
                                                     <h4>Игровые места</h4>
@@ -106,7 +106,7 @@
                                         </div>
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
-                                                <div id="icon-box-2417-4927" class="cupid-icon-box style2 left ">
+                                                <div id="icon-box-2417-4927" class="luchiki-icon-box style2 left ">
                                                     <a href="index.html%3Fp=189.html"><i class="fa fa-bullhorn"></i>
                                                     </a>
                                                     <h4>Круглосуточно</h4>
@@ -124,7 +124,7 @@
                 <!--Счётчик с паралаксом-->
                 <div class="fullwidth">
                     <div data-vc-parallax="1.5" data-overlay-color="rgba(0,0,0,0.3)"
-                         class="vc_row wpb_row vc_row-fluid cupid-margin-bottom-95 vc_custom_1444210165609 vc_general vc_parallax vc_parallax-content-moving overlay-bg-vc-wapper">
+                         class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-95 vc_custom_1444210165609 vc_general vc_parallax vc_parallax-content-moving overlay-bg-vc-wapper">
                         <div class="overlay-bg-vc" style="background-color: rgba(0,0,0,0.3)"></div>
                         <div class="wpb_column vc_column_container vc_col-sm-12">
                             <div class="wpb_wrapper">
@@ -132,28 +132,28 @@
                                     <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1425263113761">
                                         <div class="wpb_column vc_column_container vc_col-sm-3">
                                             <div class="wpb_wrapper">
-                                                <div class="cupid-counter "><span class="display-percentage" data-percentage="545">545</span>
+                                                <div class="luchiki-counter "><span class="display-percentage" data-percentage="545">545</span>
 
                                                     <p class="counter-title">Учебных часов</p></div>
                                             </div>
                                         </div>
                                         <div class="wpb_column vc_column_container vc_col-sm-3">
                                             <div class="wpb_wrapper">
-                                                <div class="cupid-counter "><span class="display-percentage" data-percentage="1324">1324</span>
+                                                <div class="luchiki-counter "><span class="display-percentage" data-percentage="1324">1324</span>
 
                                                     <p class="counter-title">Питание в год</p></div>
                                             </div>
                                         </div>
                                         <div class="wpb_column vc_column_container vc_col-sm-3">
                                             <div class="wpb_wrapper">
-                                                <div class="cupid-counter "><span class="display-percentage" data-percentage="368">368</span>
+                                                <div class="luchiki-counter "><span class="display-percentage" data-percentage="368">368</span>
 
                                                     <p class="counter-title">Утренние Сессии</p></div>
                                             </div>
                                         </div>
                                         <div class="wpb_column vc_column_container vc_col-sm-3">
                                             <div class="wpb_wrapper">
-                                                <div class="cupid-counter "><span class="display-percentage" data-percentage="183">183</span>
+                                                <div class="luchiki-counter "><span class="display-percentage" data-percentage="183">183</span>
 
                                                     <p class="counter-title">Полный Дневной</p></div>
                                             </div>
@@ -170,10 +170,10 @@
 
                 <!--Наш блог-->
                 <div class="container">
-                    <div class="vc_row wpb_row vc_row-fluid cupid-margin-bottom-35">
+                    <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-35">
                         <div class="wpb_column vc_column_container vc_col-sm-12">
                             <div class="wpb_wrapper">
-                                <div class="cupid-heading">
+                                <div class="luchiki-heading">
                                     <h2>Из нашего <b>Блога</b></h2>
                                     <span>Последние новости событий нашей школы</span>
                                 </div>
@@ -182,7 +182,7 @@
                     </div>
                 </div>
                 <div class="fullwidth">
-                    <div class="vc_row wpb_row vc_row-fluid cupid-padding-bottom-40 cupid-border-bottom">
+                    <div class="vc_row wpb_row vc_row-fluid luchiki-padding-bottom-40 luchiki-border-bottom">
                         <div class="wpb_column vc_column_container vc_col-sm-12">
                             <div class="wpb_wrapper">
                                 <div class="latest-post-wrapper">
@@ -195,8 +195,8 @@
                 <div class="entry-wrapper clearfix">
                     <div class="entry-image-wrapper">
                         <div class="entry-thumbnail">
-                            <a href="/news/{{$news['id']}}" title="{{$news['title']}}">
-                                <img class="img-responsive" src="{{$news['avatar']}}" alt="{{$news['title']}}">
+                            <a href="/news/{{$news['id']}}" title="{{$news['title']}}" class="thumbnail">
+                                <img class="img-rounded img-responsive" src="{{$news['avatar']}}" alt="{{$news['title']}}">
                             </a>
                         </div>
                     </div>
@@ -211,9 +211,9 @@
 
                             <div class="entry-meta">
 
-                            <span class="entry-meta-date"> Дата
+                            <span class="entry-meta-date"><i class="fa fa-clock-o"></i> Опубликованно
                                 <a href="/" rel="bookmark" title="{{$news['title']}}">
-                                    {{$news['created_at']}}
+                                    {{$news['created_at']->diffForHumans()}}
                                 </a>
                             </span>
                             </div>
@@ -223,7 +223,7 @@
                                 </p>
                             </div>
                             <div class="entry-read-more">
-                                <a href="/news/{{$news['id']}}" rel="bookmark" title="Read more">Читать дальше
+                                <a href="/news/{{$news['id']}}" rel="bookmark" title="Read more">Читать дальше <i class="fa fa-angle-double-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -248,7 +248,7 @@
                         <div class="overlay-bg-vc" style="background-color: rgba(0,0,0,0.3)"></div>
                         <div class="wpb_column vc_column_container vc_col-sm-12">
                             <div class="wpb_wrapper">
-                                <div class="cupid-quote content-middle  ">
+                                <div class="luchiki-quote content-middle  ">
                                     <div class="content-middle-inner">
                                         <q>{{$randomReview['content']}}</q>
                                         <p>{{$randomReview['fio']}}</p>
@@ -264,10 +264,10 @@
 
                 <!--Учителя-->
                 <div class="container">
-                    <div class="vc_row wpb_row vc_row-fluid cupid-margin-bottom-85 cupid-margin-top-35">
+                    <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-85 luchiki-margin-top-35">
                         <div class="wpb_column vc_column_container vc_col-sm-12">
                             <div class="wpb_wrapper">
-                                <div class="cupid-heading"><h2>Наши <b>Учителя</b></h2>
+                                <div class="luchiki-heading"><h2>Наши <b>Учителя</b></h2>
                                     <span>Каждый из них профессионал в своём деле</span>
                                 </div>
                             </div>
@@ -275,10 +275,10 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="vc_row wpb_row vc_row-fluid cupid-margin-bottom-90">
+                    <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-90">
                         <div class="wpb_column vc_column_container vc_col-sm-8">
                             <div class="wpb_wrapper">
-                                <div class="cupid-our-staffs  our-staffs-margin-right" >
+                                <div class="luchiki-our-staffs  our-staffs-margin-right" >
                                     <div class="row">
 
                                         <div id="carousel-example-generic" class="slide" data-ride="carousel">
@@ -293,7 +293,7 @@
                                                                 <div class="our-staffs-image">
 
                                                                     <a href="team/{{$spec['id']}}">
-                                                                        <img src="{{$spec['avatar']}}" class="attachment-full  img-circle img-responsive" alt="{{$spec['fio']}}" title="{{$spec['fio']}}" />
+                                                                        <img src="{{$spec['avatar']}}" class="attachment-full img-rounded img-responsive" alt="{{$spec['fio']}}" title="{{$spec['fio']}}" />
                                                                     </a>
                                                                 </div>
                                                                 <span class="our-staffs-name"  title="{{$spec['fio']}}" >
@@ -320,7 +320,7 @@
                                 @if(isset($getSurveys))
                                 <!--Опросы-->
 
-                                <div class="cupid-introduction left super-color">
+                                <div class="luchiki-introduction left super-color">
                                     <h3>
                                         {{$getSurveys->name}}
                                     </h3>
@@ -384,8 +384,6 @@
                                                             <input type="text" name="phone" placeholder="Телефон" required="" style="width: 100%">
                                                         </div>
 
-
-
                                                         <button type="submit" class="btn btn-primary" onclick="luchstep1()">Назад</button>
                                                         <button type="submit" class="btn btn-primary">Проголосовать</button>
                                                     </div>
@@ -397,7 +395,7 @@
 
                                 <!--Опросы-->
                                 @else
-                                <div class="cupid-introduction left ">
+                                <div class="luchiki-introduction left ">
                                     <h3>
                                         Наши воспитатели
                                         <b>прекрасно знают свою работу</b> и

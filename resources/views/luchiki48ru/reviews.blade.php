@@ -5,7 +5,7 @@
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="cupid-heading">
+                <div class="luchiki-heading">
                     <h2>Отзывы</h2>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                                                 </h3>
 
                                                 <div class="entry-meta">
-                                                     <span class="entry-meta-date"> Размещено {{$review->created_at}}</span>
+                                                     <span class="entry-meta-date"> Размещено {{$review->created_at->diffForHumans()}}</span>
                                                 </div>
                                                 <div class="entry-excerpt">
                                                     <p>
@@ -81,10 +81,8 @@
                             <textarea name="mess" cols="4" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" id="your-message" aria-required="true" aria-invalid="false" placeholder="Ваше сообщение...*"></textarea></span>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 contact-form-submit">
-                                                    <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit cupid-button button-sm" id="submit">
-
-                                                    <img class="ajax-loader" src="http://themes.g5plus.net/cupid/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
-                                                </div>
+                                                    <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit luchiki-button button-sm" id="submit">
+ </div>
                                             </div>
                                         </div>
                                     </div>

@@ -6,7 +6,7 @@
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="cupid-heading">
+                <div class="luchiki-heading">
                     <h2>Наши учителя</h2>
                 </div>
             </div>

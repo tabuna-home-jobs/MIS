@@ -64,8 +64,8 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span> <span
                                 class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
                     <div class="header_logo">
-                        <a href="/" title="CUPID | Adorable Kindergarten - Just another WordPress site" rel="home">
-                            <div><img src="/luchiki48.ru/img/logo-color.png" alt="CUPID | Adorable Kindergarten - Just another WordPress site"></div>
+                        <a href="/" title="luchiki" rel="home">
+                            <div><img src="/luchiki48.ru/img/logo-color.png" alt=""></div>
                         </a>
                     </div>
                 </div>

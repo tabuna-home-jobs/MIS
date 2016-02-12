@@ -4,7 +4,7 @@
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="cupid-heading">
+                <div class="luchiki-heading">
                     <h2>
                         {{$Good['name']}}
                     </h2>
@@ -16,7 +16,7 @@
             <div class="page type-page status-publish hentry">
                 <div class="entry-content">
                     <div class="container">
-                        <div class="vc_row wpb_row vc_row-fluid bg-content-box cupid-margin-top-35 bg-while">
+                        <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
                             <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
                                 <div class="wpb_wrapper">
                                     <div class=" row">
@@ -109,9 +109,7 @@
                             <textarea name="comment" cols="4" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" id="your-message" aria-required="true" aria-invalid="false" placeholder="Ваше сообщение...*"></textarea></span>
                                     </div>
                                     <div class="col-md-12 col-sm-12 contact-form-submit">
-                                        <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit cupid-button button-sm" id="submit">
-
-                                        <img class="ajax-loader" src="http://themes.g5plus.net/cupid/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
+                                        <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit luchiki-button button-sm" id="submit">
                                     </div>
                                 </div>
                             </div>

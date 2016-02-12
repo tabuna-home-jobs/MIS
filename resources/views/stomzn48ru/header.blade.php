@@ -17,26 +17,15 @@
     <meta name="twitter:description" content="@yield('description')"/>
     <meta name="twitter:image:src" content="@yield('avatar')"/>
 
-    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/tooltipster.css">
-    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/tooltipster-light.css"> -->
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/animations.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/responsive.css">
-    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/styles-mirror.css"> -->
-    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/settings.css"> -->
    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/stm-icomoon.css">
    <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui.min.css">
-    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui.datepicker.min.css"> -->
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui.slider.min.css">
-     <!-- <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery-ui-timepicker-addon.min.css"> -->
      <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/jquery.fancybox.css">
-      <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/select2.css">-->
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/style.css">
-    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/frontend_customizer.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_2.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_3.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/skin_4.css"> -->
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/js_composer.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/customs.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/slick.css">
@@ -51,9 +40,6 @@
 
 
     <script type="text/javascript" src="/stomzn48.ru/theme/js/functions.js"></script>
-    <!-- <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.form.min.js"></script> -->
-    <!-- <script type="text/javascript" src="/stomzn48.ru/theme/js/scripts.js"></script> -->
-     <!--<script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.cookie.min.js"></script> -->
 
 
  </head>

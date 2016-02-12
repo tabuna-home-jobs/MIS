@@ -1123,7 +1123,7 @@ img {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 .img-rounded {
   border-radius: 6px;
@@ -6244,6 +6244,7 @@ button.close {
   position: relative;
   width: 100%;
   overflow: hidden;
+  height: 100%;
 }
 .carousel-inner > .item {
   position: relative;
@@ -6255,6 +6256,7 @@ button.close {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   line-height: 1;
+  height: 100%;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {

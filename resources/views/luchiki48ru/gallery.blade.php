@@ -5,7 +5,7 @@
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="cupid-heading">
+                <div class="luchiki-heading">
                     <h2>
                         Фото-Видео Галерея
                     </h2>
@@ -18,12 +18,12 @@
             <div class="page type-page status-publish hentry">
                 <div class="entry-content">
                     <div class="container">
-                        <div class="vc_row wpb_row vc_row-fluid bg-content-box cupid-margin-top-35 bg-while">
+                        <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
                             <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
                                 <div class="wpb_wrapper">
 
 
-                            <div class="cupid-gallery row">
+                            <div class="luchiki-gallery row">
 
 
                                 <h3>Фотоальбомы</h3>
@@ -59,7 +59,7 @@
                             </div>
                         </div>
 
-                        <div class="cupid-gallery row">
+                        <div class="luchiki-gallery row">
                             <h3>Видеоальбомы</h3>
 
                             <div  class="gallery-wrapper gallery-infinite-scroll">

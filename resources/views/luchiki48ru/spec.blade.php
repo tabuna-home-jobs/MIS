@@ -4,7 +4,7 @@
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="cupid-heading">
+                <div class="luchiki-heading">
                     <h2>Наш учитель: <span class="lastWord">{{$Spec->fio}}</span></h2>
                 </div>
             </div>
@@ -61,10 +61,10 @@
                                         {{$Spec->about}}
                                     </p>
                                 </div>
-                                <div class="cupid-call-action   content-middle">
+                                <div class="luchiki-call-action   content-middle">
                                     <div class="content-middle-inner">
                                         <p>Посмотреть коллег
-                                            <a class="cupid-button button-lg" href="/team" target="_self">
+                                            <a class="luchiki-button button-lg" href="/team" target="_self">
                                                 Смотреть
                                             </a>
                                         </p>

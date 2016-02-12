@@ -4,7 +4,7 @@
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="cupid-heading"><h2>Контакты</h2> <span>Свяжитесь с нами с нами, когда вам нужно</span>
+                <div class="luchiki-heading"><h2>Контакты</h2> <span>Свяжитесь с нами с нами, когда вам нужно</span>
                 </div>
             </div>
             <div class="wrrr"></div>
@@ -13,10 +13,10 @@
             <div id="post-254" class="post-254 page type-page status-publish hentry">
                 <div class="entry-content">
                     <div class="container p-t-30">
-                        <div class="vc_row wpb_row vc_row-fluid cupid-margin-bottom-65">
+                        <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-65">
                             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 wpb_column vc_column_container vc_col-sm-4 vc_custom_1425691979898">
                                 <div class="wpb_wrapper">
-                                    <div class="cupid-contact-info  ">
+                                    <div class="luchiki-contact-info  ">
                                         <div class="contact-icon"><i class="fa fa-location-arrow"></i></div>
                                         <h4>Мы распологаемся</h4>
 
@@ -30,7 +30,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 wpb_column vc_column_container vc_col-sm-4 vc_custom_1425691985513">
                                 <div class="wpb_wrapper">
-                                    <div class="cupid-contact-info  ">
+                                    <div class="luchiki-contact-info  ">
                                         <div class="contact-icon"><i class="fa fa-phone-square"></i></div>
                                         <h4>Номера телефонов</h4>
 
@@ -44,7 +44,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 wpb_column vc_column_container vc_col-sm-4 vc_custom_1425691992270">
                                 <div class="wpb_wrapper">
-                                    <div class="cupid-contact-info  ">
+                                    <div class="luchiki-contact-info  ">
                                         <div class="contact-icon"><i class="fa fa-envelope-o"></i></div>
                                         <h4>Электронный адрес</h4>
 
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="container">
-                        <div class="vc_row wpb_row vc_row-fluid bg-content-box cupid-margin-bottom-125 vc_custom_1425694368902">
+                        <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-bottom-125 vc_custom_1425694368902">
                             <div class="wpb_column vc_column_container vc_col-sm-12">
                                 <div class="wpb_wrapper">
                                     <div class="wpcf7" id="wpcf7-f272-p254-o1" lang="en-US" dir="ltr">
@@ -99,10 +99,8 @@
                             <textarea name="message" cols="4" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" id="your-message" aria-required="true" aria-invalid="false" placeholder="Ваше сообщение...*"></textarea></span>
                                                         </div>
                                     <div class="col-md-12 col-sm-12 contact-form-submit">
-                                                    <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit cupid-button button-sm" id="submit">
-
-                                                            <img class="ajax-loader" src="http://themes.g5plus.net/cupid/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
-                                                        </div>
+                                                    <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit luchiki-button button-sm" id="submit">
+                                    </div>
                                                     </div>
                                                 </div>
                                             </div>
