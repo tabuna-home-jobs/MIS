@@ -18,16 +18,16 @@ class GalleryController extends Controller {
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $albums  =  $getSites->getAlbums()->select('*')->get();
-        //$photo = $getSites->getPhoto()->paginate(20);
+        $photo = $getSites->getPhoto()->paginate(20);
 
 	    $videoAlbums  =  $getSites->getVideoAlbums()->select('*')->get();
-	    //$video  =  $getSites->getVideo()->select('*')->get();
+	    $video  =  $getSites->getVideo()->select('*')->get();
 
         return view( $sitename.$sitedomen.'/gallery', [
                 'albums' => $albums,
-          //      'photos'  => $photo,
+                'photos'  => $photo,
 	           'videoalbums' => $videoAlbums,
-		  //     'video' => $video
+		       'video' => $video
             ]);
     }
 	/**

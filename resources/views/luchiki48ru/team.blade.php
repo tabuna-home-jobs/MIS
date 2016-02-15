@@ -1,77 +1,54 @@
-@extends('luchiki48ru/ALTheader')
+@extends('luchiki48ru/header')
 
 @section('content')
 
 
-    <div id="wrapper-content">
-        <section class="page-title-wrapper">
-            <div class="container clearfix">
-                <div class="luchiki-heading">
-                    <h2>Наши учителя</h2>
-                </div>
-            </div>
-            <div class="wrrr"></div>
-        </section>
-        <main role="main" class="site-content-archive wrapp-review">
-            <div class="container clearfix">
-                <div class="blog-wrapper">
-                    <div class="blog-inner blog-single clearfix">
-                        <article id="post-">
-                            <div class="page-single-our-staffs">
-                                <div class="row">
+    <div class="sub-page-content">
+    	
+        
+        <div class="container">
+        	<h2 class="light bordered main-title">Наши <span> Специалисты</span></h2>
+     		<div class="row inline-block-grids">
 
 
-                @foreach($Specialisty as $key => $spec)
+                @foreach($Specialisty as $spec)
             	<div class="doctors col-sm-4 col-md-3 col-xs-12 padding-bottom-60 clearfix">
-                    <div class="doctors-img">
-                        <a href="team/{{$spec['id']}}">
-                            <img src="{{$spec->avatar}}"  alt="{{$spec->fio}}" title="{{$spec->fio}}" class="img-responsive">
-                        </a>
+                    <div class="doctors-img"><img src="{{$spec->avatar}}" width="234" alt="" title="">
+
                         </div>
                     <div class="doctors-detail">
-                        <h4>
-                            <a href="team/{{$spec['id']}}">
-                                {{$spec->fio}}
-                            </a>
-                            <span class="text-center">
-                                {{str_limit($spec->subname, 50 ,'...')}}
-                            </span>
-                        </h4>
-
+                        <h4>{{$spec->fio}}<span class="text-center">{{$spec->subname}}</span></h4>
+                        
                         @if(isset($spec->special) && trim($spec->special) !== "")
                         <p>
                             <span class="heading">Специализация: </span>
-                            <span class="detail">{{str_limit($spec->special,50,'...')}}</span>
+                            <span class="detail">{{$spec->special}}</span>
                         </p>
                         @endif
-
+                        
                         @if(isset($spec->obrazovanie) && trim($spec->obrazovanie) !== "")
                         <p>
                             <span class="heading">Образование</span>
-                            <span class="detail">{{str_limit($spec->obrazovanie,100,'...')}}</span>
+                            <span class="detail">{{$spec->obrazovanie}}</span>
                         </p>
                         @endif
-
+                        
                         @if(isset($spec->opyt) && trim($spec->opyt) !== "")
                         <p>
                             <span class="heading">Должность: </span>
-                            <span class="detail">{{str_limit($spec->opyt, 50, '...')}} </span>
+                            <span class="detail">{{$spec->opyt}} </span>
                         </p>
                         @endif
-
+                        
                         @if(isset($spec->about) && trim($spec->about) !== "" )
                         <p>
                             <span class="heading">Умения:</span>
-                            <span class="detail">{{str_limit($spec->about,50,'...')}} </span>
+                            <span class="detail">{{$spec->about}} </span>
                         </p>
                         @endif
 
                         </div>
                 </div>
-                    @if(($key+1) % 4 == 0)
-                    <div class="clearfix"></div>
-                    @endif
-
 
                 @endforeach
 
@@ -86,13 +63,12 @@
 
 
         </div>
-        </article>
 
 
-    </div>
-                </div>
-            </div>
-    </main>
-    </div>
-
-@endsection
+    </div><!--end sub-page-content-->
+    
+    
+    
+    
+    
+    @endsection
