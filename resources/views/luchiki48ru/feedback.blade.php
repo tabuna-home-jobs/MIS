@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('luchiki48ru/header')
 
 @section('content')
 
@@ -22,14 +22,28 @@
             <div class="row">
             	<div class="col-md-8 contact-form">
                 	<h2 class="light bordered">Написать нам <span>сообщение</span></h2>
-
+                    <div class="row">
+                        @if(Session::has('good'))
+                            <div class="alert alert-success">
+                                {{ Session::get('good') }}
+                            </div>
+                        @endif
+                    </div>
                     <form action="/feedback" method="post">
-                        <input type="text" name="fio" placeholder="ФИО" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="text" name="phone" placeholder="Телефон" required>
-                        <textarea name="message" required placeholder="Текст сообщения"></textarea>
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="submit" class="btn btn-default" value="Отправить">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="fio" placeholder="ФИО" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control"  name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="phone" placeholder="Телефон" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" required placeholder="Текст сообщения"></textarea>
+                        </div>
+                        {{csrf_field()}}
+                        <input type="submit" class="btn btn-primary" value="Отправить">
                     </form>
                     <div class="clearfix"></div>
                 </div>

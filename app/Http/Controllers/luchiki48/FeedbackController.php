@@ -39,6 +39,7 @@ class FeedbackController extends Controller {
 	 */
     public function store(FeedbackRequest $request)
 	{
+
         $new = new Feedback([
             'fio' => $request->fio,
             'phone' => $request->phone,

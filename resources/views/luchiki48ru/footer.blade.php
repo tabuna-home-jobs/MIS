@@ -22,16 +22,7 @@
             </div><!-- /.container-fluid -->
         </nav>
         <div class="footer-block-1 col-md-3">
-            <ul>
-                <li><a>Развивающая и досуговая деятельность</a></li>
-                <li><a>Развивающие занятия для детей от 1,5 лет</a></li>
-                <li><a>Адаптация и подготовка детей к школе</a></li>
-                <li><a>Веселый английский</a></li>
-                <li><a>Йога</a></li>
-                <li><a>Детский психолог</a></li>
-                <li><a>Логопед-дефектолог</a></li>
-                <li><a>Организация и проведение детских праздников</a></li>
-            </ul>
+            {!!Menu::getMenuByLayout('7','bottom','','footMenu')!!}
         </div>
         <div class="footer-block-2 col-md-3">
             <div class="phone-footer">
