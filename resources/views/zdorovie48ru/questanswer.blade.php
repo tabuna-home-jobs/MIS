@@ -54,6 +54,9 @@
                                         {!! nl2br(e($QA->answer)) !!}
                                         <p class="text-right">
                                             <small>С уважением {{$QA->getDoctor->fio or ''}}</small>
+                                            <small><br>
+                                                <date>{{$QA->updated_at->diffForHumans()}}</date>
+                                            </small>
                                         </p>
                                     </div>
                                 </div>
