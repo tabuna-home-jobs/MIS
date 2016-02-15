@@ -18,7 +18,11 @@
                     }
                 </style>
                 <div class="row">
-
+                    @if(Session::has('good'))
+                        <div class="alert alert-success">
+                            {{ Session::get('good') }}
+                        </div>
+                    @endif
                     @foreach($Reviews as $item)
                     <div class="single-review col-md-12">
                         <div class="rev-img col-md-2 col-sm-2"><i class="feature-icon fa fa-commenting"></i></div>
@@ -62,18 +66,20 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        {{csrf_field()}}
 
                         <!-- Button -->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="singlebutton">Оставить отзыв</label>
                             <div class="col-md-4">
-                                <button id="singlebutton" name="singlebutton" class="btn btn-primary">ОТПРАВИТЬ</button>
+                                <button name="singlebutton" type="submit" class="btn btn-primary">ОТПРАВИТЬ</button>
                             </div>
                         </div>
 
                     </fieldset>
                 </form>
+
+
 
 
 

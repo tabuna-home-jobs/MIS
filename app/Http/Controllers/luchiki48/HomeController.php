@@ -34,6 +34,8 @@ class HomeController extends Controller {
 	        ]
         )->first();
 
+
+
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
 

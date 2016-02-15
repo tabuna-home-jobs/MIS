@@ -97,12 +97,21 @@
         </div>
         <div class="request-img col-md-6"><img src="/luchiki48.ru/img/request.png"></div>
         <div class="form col-md-6">
-            <form>
-                <select></select>
-                <select></select>
-                <select></select>
-                <textarea></textarea>
-                <button>ДАЛЕЕ</button>
+            <form action="/feedback" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="fio" placeholder="ФИО" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control"  name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="phone" placeholder="Телефон" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-control" required placeholder="Текст сообщения"></textarea>
+                </div>
+                {{csrf_field()}}
+                <input type="submit" class="btn btn-primary" value="Отправить">
             </form>
         </div>
         <div class="steps col-md-12 col-sm-12 hidden-xs">
