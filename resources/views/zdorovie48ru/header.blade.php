@@ -109,7 +109,8 @@
                             <div class="cocial-top-li">
                                 <a target="_blank" href="http://vk.com/zdorovie_nacii48"><i class="fa fa-vk" ></i></a>
                                 <a target="_blank" href="https://www.facebook.com/groups/zdorovie48/"><i class="fa fa-facebook" ></i></a>
-                                <a target="_blank" href="http://ok.ru/group52174602436776"><i class="fa fa-odnoklassniki" ></i></a>
+                                <a target="_blank" href="http://ok.ru/group/52174602436776"><i
+                                            class="fa fa-odnoklassniki"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-9">
@@ -140,7 +141,7 @@
                                 <li><a href="/page/55">Наши лицензии</a></li>
                             </ul>
                         </li>
-                        -->
+                    -->
 
                         <li><a href="/page/18">Информация о нас</a></li>
 

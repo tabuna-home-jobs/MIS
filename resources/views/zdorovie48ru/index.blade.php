@@ -84,7 +84,6 @@
                         </div>
                       </div>
 				</div>
-            	<span class="hand"></span>
             </div>
             <ul class="awesome-features list-unstyled pull-right text-left">
                 <li><i class="pull-left img-circle fa fa-user-md"></i><span>Отличная</span>квалификация специалистов

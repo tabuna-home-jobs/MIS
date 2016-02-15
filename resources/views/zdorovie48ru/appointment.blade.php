@@ -220,7 +220,7 @@
                                 <div class="col-md-12">
                                     <h5> Выберите дату</h5>
 
-                                  <div class="form-group" id="date">
+                                    <div class="form-group appointment-scroll" id="date">
 
                                   </div>
 
@@ -265,7 +265,9 @@
                 <li><i class="fa fa-check medicom-check"></i>Вы можете записаться на прием к любому врачу/специалисту нашего центра. Познакомиться с нашими врачами можно в разделе специалисты.</li>
                 <li><i class="fa fa-check medicom-check"></i>Ваша заявка является предварительной.</li>
                 <li><i class="fa fa-check medicom-check"></i>Указанная Вами дата приема может быть изменена в связи с действующим расписанием и существующей записью</li>
-                <li><i class="fa fa-check medicom-check"></i>В течение часа с момента подачи заявки с Вами свяжется сотрудник нашего центра и согласует окончательную дату приема</li>
+                <li><i class="fa fa-check medicom-check"></i>В момента подачи заявки с Вами свяжется сотрудник нашего
+                    центра и согласует окончательную дату приема
+                </li>
                 <li><i class="fa fa-check medicom-check"></i>Для иногородних: просим Вас планировать приезд в  медицинский центр только после подтверждения даты приема.</li>
                 <li><i class="fa fa-check medicom-check"></i>Будьте внимательны, указывайте правильный, действующий контактный номер телефона.</li>
                 <li><i class="fa fa-check medicom-check"></i>Вы можете указать свой адрес электронной почты для того, чтобы получать информацию о скидках и специальных предложениях  медицинского центра «Здоровье Нации».</li>
@@ -495,7 +497,7 @@
                 <div class="col-md-3">
                     <div class="counter">
                         <span class="quantity-counter3 highlight">71</span>
-                        <h6 class="counter-details">Кабинетов</h6>
+                        <h6 class="counter-details">Кабинет</h6>
                     </div>
                 </div>
                 <div class="col-md-3">

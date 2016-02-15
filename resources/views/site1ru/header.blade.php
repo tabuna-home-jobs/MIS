@@ -89,7 +89,7 @@
                     <ul class="nav navbar-nav">
 
                         <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
-                        <li><a href="#">Личный кабинет</a></li>
+                        <!-- <li><a href="#">Личный кабинет</a></li> -->
                         <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li>
                         <li class="{{Active::route('service.*')}}"><a href="/service">Услуги</a></li>
                         <!--  <li class="{{Active::route('gallery.*')}}"><a href="/gallery">Галерея</a></li> -->
