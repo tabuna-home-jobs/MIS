@@ -24,7 +24,7 @@
                            <h2>{{$item->name}}</h2>
                            @foreach($item->goods as $key => $good)
 
-                               <div class="col-md-4 item-row">
+                               <div class="col-md-4 item-row item-serv">
                                    <div>
                                        <div>
                                            <img src="{{$good->avatar}}" alt="{{$good->name}}"></div>
