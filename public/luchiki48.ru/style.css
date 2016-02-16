@@ -581,3 +581,9 @@ left: 88%;
 .footer-block-2>img{
     margin-top: 20px;
 }
+.our-staffs-phone, .our-staffs-email, .our-staffs-phone{
+    margin-bottom: 20px;
+}
+.license-img img{
+    max-width: 100%;
+}
