@@ -251,24 +251,33 @@
 
                             <ul class="nav nav-sub dk">
 
-                                <li class="{{Active::route('dashboard.page.*')}}">
-                                    <a href="{{URL::route('dashboard.page.index')}}">
-                                        <i class="glyphicon glyphicon-file icon"></i>
-                                        <span>Страницы</span>
-                                    </a>
-                                </li>
+
+                                @if(Config::get('dashboard.'.Session::get('SiteName').'.Страницы'))
+                                    <li class="{{Active::route('dashboard.page.*')}}">
+                                        <a href="{{URL::route('dashboard.page.index')}}">
+                                            <i class="glyphicon glyphicon-file icon"></i>
+                                            <span>Страницы</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                                @if(Config::get('dashboard.'.Session::get('SiteName').'.Новости'))
                                 <li class="{{Active::route('dashboard.news.*')}}">
                                     <a href="{{URL::route('dashboard.news.index')}}">
                                         <i class="fa fa-newspaper-o icon"></i>
                                         <span>Новости</span>
                                     </a>
                                 </li>
+                                @endif
+
+                                @if(Config::get('dashboard.'.Session::get('SiteName').'.Акции'))
                                 <li class="{{Active::route('dashboard.shares.*')}}">
                                     <a href="{{URL::route('dashboard.shares.index')}}">
                                         <i class="fa fa-star"></i>
                                         <span>Акции</span>
                                     </a>
                                 </li>
+                                @endif
 
                             </ul>
                         </li>
@@ -303,15 +312,17 @@
                         </li>
 
 
-
+                        @if(Config::get('dashboard.'.Session::get('SiteName').'.Отзывы'))
                         <li class="{{Active::route('dashboard.reviews.*')}}">
                             <a href="{{URL::route('dashboard.reviews.index')}}">
                                 <i class="fa fa-bullhorn"></i>
                                 <span>Отзывы</span>
                             </a>
                         </li>
+                        @endif
 
 
+                        @if(Config::get('dashboard.'.Session::get('SiteName').'.Галереи'))
                         <li>
                             <a href="">
                                 <i class="fa fa-film "></i>
@@ -333,21 +344,25 @@
                                 </a>
                             </li>
 
+
                         </ul>
                         </li>
+                        @endif
 
 
+                        @if(Config::get('dashboard.'.Session::get('SiteName').'.Опросы'))
                         <li class="{{Active::route('*surveys*')}}">
                             <a href="{{URL::route('surveys')}}">
                                 <i class="fa fa-question"></i>
                                 <span>Опросы</span>
                             </a>
                         </li>
+                        @endif
 
 
 
 
-
+                        @if(Config::get('dashboard.'.Session::get('SiteName').'.Специалисты'))
                         <li class="{{Active::route('dashboard.special.*')}}">
                             <a href="{{URL::route('dashboard.special.index')}}">
                                 <i class="fa fa-user-md"></i>
@@ -370,11 +385,11 @@
                                     </a>
                                 </li>
                             </ul>
-
                         </li>
+                        @endif
 
 
-
+                        @if(Config::get('dashboard.'.Session::get('SiteName').'.Услуги'))
                         <li class="{{Active::route(['dashboard.category.*','dashboard.goods.*','dashboard.comments.*'])}}">
                             <a href class="auto">
                   <span class="pull-right text-muted">
@@ -408,10 +423,11 @@
 
                             </ul>
                         </li>
+                        @endif
 
 
 
-
+                        @if(Config::get('dashboard.'.Session::get('SiteName').'.Энциклопедия'))
                         <li class="{{Active::route(['dashboard.encyclopediaCategory.*','dashboard.encyclopedia.*'])}}">
                             <a href class="auto">
                   <span class="pull-right text-muted">
@@ -440,8 +456,10 @@
 
                             </ul>
                         </li>
+                        @endif
 
 
+                        @if(Config::get('dashboard.'.Session::get('SiteName').'.Вопрос/Ответ'))
                         <li class="{{Active::route(['dashboard.questanswer.*','dashboard.categoryanswer.*'])}}">
                             <a href class="auto">
                   <span class="pull-right text-muted">
@@ -469,7 +487,7 @@
 
                             </ul>
                         </li>
-
+                        @endif
 
                         <li class="{{Active::route('dashboard.options.*')}}">
                             <a href="{{URL::route('dashboard.options.index')}}">
