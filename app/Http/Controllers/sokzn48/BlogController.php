@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\luchiki48;
+<?php namespace App\Http\Controllers\sokzn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
@@ -47,7 +47,7 @@ class BlogController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function show($id, $sitename = "luchiki48", $sitedomen = "ru")
+    public function show($id, $sitename = "sokzn48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
@@ -64,7 +64,7 @@ class BlogController extends Controller
             $getSurveys = null;
         }
 
-        return view($sitename . $sitedomen . '/blogNews', [
+        return view($sitename . $sitedomen . '/page', [
             'New' => $getNews,
             'LastNews' => $getLastNews,
             'getQuests' => $getQuests,

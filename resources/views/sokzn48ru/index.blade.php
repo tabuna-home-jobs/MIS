@@ -61,12 +61,12 @@
 
 
 
-    <section id="features" class="bg-white-only">
-        <div class="container">
-            <div class="row ">
+    <section id="features" class="container-fluid bg-white-only">
+        <div class="row">
+            <div class="container">
 
 
-                <div class="col-sm-6 wrapper-xl">
+                <div class="col-sm-4 wrapper-xl">
                     <div class="m-t-xxl text-center">
                         <span class="text-2x text-muted"><i class="fa fa-futbol-o text-2x"></i></span>
                         <span class="text-3x text-muted"><span class="text-2x"><i
@@ -76,7 +76,7 @@
                 </div>
 
 
-                <div class="col-sm-6 wrapper-xl">
+                <div class="col-sm-8 wrapper-xl">
                     <h3 class="text-dark font-bold m-b-lg">Акции оздоровительного комплекса</h3>
                     <ul class="list-unstyled  m-t-xl">
 
@@ -99,6 +99,13 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
 
 
     <section class="bg-info text-center">
