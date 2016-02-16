@@ -1,540 +1,267 @@
-@extends('sokzn48ru/header')
+@extends('sokzn48ru.app')
+
+
 @section('content')
-<!-- MAINFIELD -->
-<div class="mainfield">
-    <!-- ADVANTAGES -->
-    <div class="advantages">
-        <div class="container">
-            <div class="row">
-                <div class="advantages-head col-md-12"><h3><p>НАШИ</p><span>ПРЕИМУЩЕСТВА</span></h3></div>
-                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
-                    <p><img src="/sokzn48.ru/img/advantage1.png"></p>
-                    <p>Высокое качество услуг</p>
-                </div>
-                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
-                    <p><img src="/sokzn48.ru/img/advantage2.png"></p>
-                    <p>Высокий сервис</p>
-                </div>
-                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
-                    <p><img src="/sokzn48.ru/img/advantage3.png"></p>
-                    <p>Профессиональность и высококлассность специалистов</p>
-                </div>
-                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
-                    <p><img src="/sokzn48.ru/img/advantage4.png"></p>
-                    <p>Реальные цены</p>
-                </div>
-                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
-                    <p><img src="/sokzn48.ru/img/advantage5.png"></p>
-                    <p>Большой перечень услуг в одном месте</p>
-                </div>
-                <div class="advantages-single anim-block1 animated col-md-2 col-sm-4">
-                    <p><img src="/sokzn48.ru/img/advantage6.png"></p>
-                    <p>Ориентация на клиентов всех возрастов</p>
-                </div>
+
+
+
+    <section class="well well-lg main-bg text-white h-full m-b-none">
+
+
+        <div class="container text-center">
+            <div class="lead">
+                <h1 class="fa fa-5x icon-soc-logo"></h1>
+
+                <p>
+                    <small>семейный оздоровительный комплекс</small>
+                </p>
             </div>
-        </div>
-    </div>
-    <!-- END ADVANTAGES -->
-
-    <!-- тест -->
-    <div class="application_main">
 
 
-        <div class="container">
-            <h2>ОСТАВИТЬ ЗАЯВКУ ON-LINE</h2>
+            <div class="row  hidden-sm-down">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="#" class="square-block">
+                        <span class="fa fa-5x icon-soc-embrion"></span>
 
-            <div class="row">
-
-                <div class="col-md-4">
-
-                    <div class="application_img">
-
-                        <img src="/sokzn48.ru/img/request-img.png">
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-8">
-
-                    <!-- Tab panes -->
-                    <form action="">
-                        <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="home">
-                                    <div class="form-group">
-                                        <select class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                            <option>Выберите специализацию</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <select class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                            <option>Выберите услугу</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <select class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                            <option>Выберите специалиста</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="exampleInputEmail1" rows="8">Подробнее</textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">ДАЛЕЕ</a>
-                                    </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="profile">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Check me out
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Check me out
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Check me out
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <a href="#messages" aria-controls="profile" role="tab" data-toggle="tab">ДАЛЕЕ</a>
-                                    </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="messages">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">ФИО</label>
-                                        <input type="text" class="form-control" id="exampleInputFIO" placeholder="ФИО">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Телефон</label>
-                                        <input type="text" class="form-control" id="exampleInputPhone" placeholder="Телефон">
-                                    </div>
-                                    <div class="form-group">
-                                        <button>ОТПРАВИТЬ</button>
-                                    </div>
-                                </div>
-                        </div>
-                    </form>
-
+                        <p class="text-uppercase">До рождения</p>
+                    </a>
                 </div>
 
 
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="#" class="square-block">
+                        <span class="fa fa-5x icon-soc-embrion"></span>
+
+                        <p class="text-uppercase">ДЕТСТВО</p>
+                    </a>
+                </div>
 
 
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="#" class="square-block">
+                        <span class="fa fa-5x icon-soc-embrion"></span>
+
+                        <p class="text-uppercase">ОСОБЕННЫЕ ДЕТИ</p>
+                    </a>
+                </div>
 
 
-            </div>
-            <div class="row">
-                <!-- Nav tabs -->
-                <ul class="step-control col-md-7 col-md-push-3" role="tablist">
-                    <li role="presentation" class="active col-md-4">
-                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-                            <img src="/sokzn48.ru/img/1step.png">
-                            <p><strong>1-Й ШАГ</strong></p>
-                        </a>
-                        <p>
-                            Выберите специализацию,
-                            услугу и специалиста
-                        </p>
-                    </li>
-                    <li role="presentation" class="col-md-4">
-                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
-                            <img src="/sokzn48.ru/img/2step.png">
-                            <p><strong>2-Й ШАГ</strong></p>
-                        </a>
-                        <p>
-                            Выберите специализацию,
-                            услугу и специалиста
-                        </p>
-                    </li>
-                    <li role="presentation" class="col-md-4">
-                        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
-                            <img src="/sokzn48.ru/img/3step.png">
-                            <p><strong>3-Й ШАГ</strong></p>
-                        </a>
-                        <p>
-                            Выберите специализацию,
-                            услугу и специалиста
-                        </p>
-                    </li>
-                </ul>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="#" class="square-block">
+                        <span class="fa fa-5x icon-soc-embrion"></span>
+
+                        <p class="text-uppercase">ВЗРОСЛЕНИЕ</p>
+                    </a>
+                </div>
             </div>
 
 
         </div>
-    </div>
-    <!-- тест -->
+    </section>
 
 
 
-    <!-- ОСНОВНЫЕ НАПРАВЛЕНИЯ ЦЕНТРА -->
-    <div class="directions">
+    <section id="features" class="bg-white-only">
         <div class="container">
-            <div class="row">
-                <div class="green-head"><h3>ОСНОВНЫЕ НАПРАВЛЕНИЯ ЦЕНТРА</h3></div>
+            <div class="row ">
 
 
-
-                @foreach(GoodsMain::getGoods(9,50,4) as $item)
-                <div class="single-direction anim-block2 animated col-md-3 col-sm-6">
-                    <div class="direction-img">
-                        <img src="{{$item['avatar']}}">
-                    </div>
-                    <div class="direction-text">
-                        <h4><a>ДО РОЖДЕНИЯ</a></h4>
-                        {!! $item['text'] !!}
+                <div class="col-sm-6 wrapper-xl">
+                    <div class="m-t-xxl text-center">
+                        <span class="text-2x text-muted"><i class="fa fa-futbol-o text-2x"></i></span>
+                        <span class="text-3x text-muted"><span class="text-2x"><i
+                                        class="fa fa-child text-2x"></i></span></span>
+                        <span class="text-3x text-muted"><i class="fa fa-rocket text-2x"></i></span>
                     </div>
                 </div>
-                @endforeach
 
 
+                <div class="col-sm-6 wrapper-xl">
+                    <h3 class="text-dark font-bold m-b-lg">Акции оздоровительного комплекса</h3>
+                    <ul class="list-unstyled  m-t-xl">
 
-            </div>
-        </div>
-    </div>
-    <!-- END ОСНОВНЫЕ НАПРАВЛЕНИЯ ЦЕНТРА -->
+                        @foreach($getShares as $share)
+                            <li>
+                                <i class="fa fa-star-o pull-left text-lg m-r m-t-sm"></i>
 
-
-
-
-
-    <!-- СЕМЕЙНЫЙ ОЗДОРОВИТЕЛЬНЫЙ КОМПЛЕКС «СОК» -->
-    <div class="healthy">
-        <div class="container">
-            <div class="row">
-                @foreach(CustomPage::getPage(9,47) as $item)
-                <div class="orange-head"><h3>СЕМЕЙНЫЙ ОЗДОРОВИТЕЛЬНЫЙ КОМПЛЕКС «СОК»</h3></div>
-                <div class="healthy-video col-md-6">
-
-
-                    <div class="embed-responsive embed-responsive-16by9">
-                        {!! $item['descript'] !!}
-                    </div>
-
-                </div>
-                <div class="healthy-text col-md-6">
-                    {!! $item['content'] !!}
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-    <!-- END СЕМЕЙНЫЙ ОЗДОРОВИТЕЛЬНЫЙ КОМПЛЕКС «СОК» -->
-    <!-- Видео слайдер -->
-    <div class="video-slider">
-        <div class="container">
-            <div class="slider-video autoplay">
-
-                @foreach(GalleryOnMain::getItem(9,25,10) as $item)
-                    <div class="video-slide">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="{{$item['videourl']}}"></iframe>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-        <script type="text/javascript">
-            $('.autoplay').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                responsive: [
-                    {
-                        breakpoint: 1000,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            dots: false
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        </script>
-        <div class="video-slider-icon">
-            <img src="/sokzn48.ru/img/tv.png">
-        </div>
-    </div>
-    <!-- END Видео слайдер -->
-    <!-- ФОТОГАЛЕРЕЯ -->
-    <div class="gallery">
-        <div class="container">
-            <div class="row">
-                <div class="green-head"><h3>ФОТОГАЛЕРЕЯ</h3></div>
-
-                @foreach(GalleryOnMain::getItem(9,24,8) as $item)
-                <div class="gallery-img anim-block3 animaded col-md-3 col-sm-6 col-xs-6">
-                    <img src="{{$item['url']}}">
-                </div>
-                @endforeach
-                <div class="all-photoes col-md-12 col-sm-12 col-xs-12">
-                    <div class="all-photoes-link"><a href="">Все фото</a></div>
-                    <div class="all-photoes-img">
-                        <img src="/sokzn48.ru/img/photo-icon.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END ФОТОГАЛЕРЕЯ -->
-    <!-- АКЦИИ И НОВИНКИ -->
-    <div class="shares">
-        <div class="container">
-            <div class="row">
-                <div class="orange-head"><h3>АКЦИИ И НОВИНКИ</h3></div>
-
-
-                @foreach(sharesOnMain::getShare(9,4) as $item)
-                <div class="single-share col-md-3">
-                    <div class="shares-img">
-                        <img src="{{$item['avatar']}}">
-                    </div>
-                    <div class="shares-text">
-                        <a href="/shares/{{$item['id']}}">{{$item['name']}}</a>
-                        <p>{!! str_limit($item['content'],150,'...') !!}<a href="/shares/{{$item['id']}}">Подробнее</a></p>
-                        <span>{{$item['created_at']}}</span>
-                    </div>
-                </div>
-                @endforeach
-
-
-                <div class="all-shares"><a href="/shares">Все акции</a></div>
-            </div>
-        </div>
-    </div>
-    <!-- END АКЦИИ И НОВИНКИ -->
-    <!-- НОВОСТИ -->
-    <div class="news">
-        <div class="container">
-            <div class="row">
-                <div class="green-head"><h3>НОВОСТИ</h3></div>
-
-
-                @foreach(newsOnMain::getNews(9,4) as $item)
-                <div class="single-news col-md-3">
-                    <a href="/blog/{{$item['id']}}">{{$item['name']}}</a>
-                    <p>{!! str_limit($item['content'],150,'...') !!}<a href="/blog/{{$item['id']}}">Подробнее</a></p>
-                    <span>{{$item['created_at']}}</span>
-                </div>
-                @endforeach
-
-
-                <div class="all-news col-md-12"><a href="/blog">Все новости</a></div>
-            </div>
-        </div>
-    </div>
-    <!-- END НОВОСТИ -->
-    <!-- НАШИ ЛИЦЕНЗИИ -->
-    <div class="license">
-        <div class="container">
-            <div class="row">
-                <div class="orange-head"><h3>НАШИ ЛИЦЕНЗИИ</h3></div>
-                <div class="license-slider multiple-items">
-                    <div class="license-slide"><img src="/sokzn48.ru/img/license1.png"><p><a>Лицензия на осуществление медицинской деятельности</a></p></div>
-                    <div class="license-slide"><img src="/sokzn48.ru/img/license2.png"><p><a>Лицензия на осуществление медицинской деятельности</a></p></div>
-                    <div class="license-slide"><img src="/sokzn48.ru/img/license3.png"><p><a>Лицензия на осуществление медицинской деятельности</a></p></div>
-                    <div class="license-slide"><img src="/sokzn48.ru/img/license3.png"><p><a>Лицензия на осуществление медицинской деятельности</a></p></div>
-                </div>
-                <script type="text/javascript">
-                    $(document).ready(function(){
-                        $('.multiple-items').slick({
-                            infinite: true,
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                            prevArrow:'<button type="button" class="slick-prev license-prev"></button>',
-                            nextArrow:'<button type="button" class="slick-next license-next"></button>',
-                            responsive: [
-                                {
-                                    breakpoint: 1000,
-                                    settings: {
-                                        slidesToShow: 2,
-                                        slidesToScroll: 1,
-                                        infinite: true,
-                                        dots: false
-                                    }
-                                },
-                                {
-                                    breakpoint: 600,
-                                    settings: {
-                                        slidesToShow: 2,
-                                        slidesToScroll: 1
-                                    }
-                                },
-                                {
-                                    breakpoint: 480,
-                                    settings: {
-                                        slidesToShow: 1,
-                                        slidesToScroll: 1
-                                    }
-                                }
-                            ]
-                        });
-                    });
-
-                </script>
-                <div class="all-license"><a href="">Все лицензии</a></div>
-            </div>
-        </div>
-    </div>
-    <!-- END НАШИ ЛИЦЕНЗИИ -->
-    <!-- ОТЗЫВЫ И ВОПРОСЫ-ОТВЕТЫ -->
-    <div class="reviews-questions">
-        <div class="container">
-            <div class="row">
-                <div class="reviews col-md-6">
-                    <div class="orange-head"><h3>ОТЗЫВЫ</h3></div>
-                    <div class="reviews-body">
-                        @foreach(reviewsOnMain::getReview(9,4) as $item)
-                        <div class="single-review col-md-12">
-                            <div class="review-img col-md-3">
-                                <i class="feature-icon fa fa-commenting"></i>
-                            </div>
-                            <div class="review-text col-md-9">
-                                <h5>{{$item['fio']}}</h5>
-                                <p>{!! str_limit($item['content'],300,'...') !!}<a href="">Подробнее</a></p>
-                                <span>{{$item['created_at']}}</span>
-                            </div>
-                        </div>
+                                <p class="clear m-b-lg"><strong>{{$share->name}}</strong>
+                                    {{str_limit(strip_tags($share->content), 100, '...')}}
+                                </p>
+                            </li>
                         @endforeach
-                        <div class="all-reviews">
-                            <a href="/reviews">Все отзывы</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="questions col-md-6">
-                    <div class="green-head"><h3>ВОПРОСЫ-ОТВЕТЫ</h3></div>
-                    <div class="questions-body">
-                        @foreach(qaMain::getQA(9,2) as $item)
-                        <div class="single-question col-md-12">
-                            <h5>{{$item['fio']}}</h5>
-                            <p>{{$item['questions']}}</p>
-                            <span>{{$item['created_at']}}</span>
-                        </div>
-                        <div class="single-answer col-md-12">
-                            <div class="answer-img col-md-3">
-                                <img src="/sokzn48.ru/img/questions1.png">
-                            </div>
-                            <div class="answer-text col-md-9">
-                                <h5>Ответ специалиста центра</h5>
-                                <p><span>Сертифицированный специалист центра</span></p>
-                                <p>{{$item['answer']}}</p>
-                            </div>
-                        </div>
-                        @endforeach
-                        <div class="all-questions"><a href="">Все вопросы</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END ОТЗЫВЫ И ВОПРОСЫ-ОТВЕТЫ -->
-    <!-- слайдер сайты -->
-    <div class="container">
-        <div class="slider-companies col-md-12">
-            <div class="green-head"><h3>САЙТЫ ГРУППЫ КОМПАНИЙ «ЗДОРОВЬЕ НАЦИИ»</h3></div>
-            <div class="slider-sites responsive">
-                <div class="sites-slide"><img src="/sokzn48.ru/img/zn1.png"></div>
-                <div class="sites-slide"><img src="/sokzn48.ru/img/zn2.png"></div>
-                <div class="sites-slide"><img src="/sokzn48.ru/img/zn3.png"></div>
-                <div class="sites-slide"><img src="/sokzn48.ru/img/zn4.png"></div>
-                <div class="sites-slide"><img src="/sokzn48.ru/img/zn5.png"></div>
-                <div class="sites-slide"><img src="/sokzn48.ru/img/zn-blank.png"></div>
-            </div>
-            <script type="text/javascript">
-                $('.responsive').slick({
-                    dots: false,
-                    infinite: false,
-                    speed: 300,
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    prevArrow:'<button type="button" class="slick-prev sites-prev"></button>',
-                    nextArrow:'<button type="button" class="slick-next sites-next"></button>'
-                });
-            </script>
-        </div>
-    </div>
-    <!-- конец слайдер сайты -->
-    <div class="map">
+                    </ul>
 
+                    <p class="text-center">
+                        <a class="btn btn-white text-info b-info bg-empty" href="#">все акции</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-info text-center">
+        <div class="container padder-v">
+            <h1 class="text-uppercase text-while padder-v">НАШИ ПРЕИМУЩЕСТВА</h1>
+
+            <div class="col-md-2">
+                <p class="h3 m-b-md inline b b-light rounded wrapper-lg">
+                    <i class="fa w-1x  fa-2x icon-soc-ages"></i>
+                </p>
+
+                <div class="m-b-xl">
+                    <h5 class="m-t-none">Высокое качество
+                        услуг</h5>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+                <p class="h3 m-b-md inline b b-light rounded wrapper-lg">
+                    <i class="fa w-1x   fa-2x icon-soc-ages"></i>
+                </p>
+
+                <div class="m-b-xl">
+                    <h5 class="m-t-none">Высокое качество
+                        услуг</h5>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+                <p class="h3 m-b-md inline b b-light rounded wrapper-lg">
+                    <i class="fa w-1x   fa-2x icon-soc-money"></i>
+                </p>
+
+                <div class="m-b-xl">
+                    <h5 class="m-t-none">Высокое качество
+                        услуг</h5>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+                <p class="h3 m-b-md inline b b-light rounded wrapper-lg">
+                    <i class="fa w-1x  fa-2x icon-soc-list"></i>
+                </p>
+
+                <div class="m-b-xl">
+                    <h5 class="m-t-none">Высокое качество
+                        услуг</h5>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+                <p class="h3 m-b-md inline b b-light rounded wrapper-lg">
+                    <i class="fa w-1x  fa-2x icon-soc-ages"></i>
+                </p>
+
+                <div class="m-b-xl">
+                    <h5 class="m-t-none">Высокое качество
+                        услуг</h5>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+                <p class="h3 m-b-md inline b b-light rounded wrapper-lg">
+                    <i class="fa w-1x   fa-2x icon-soc-ages"></i>
+                </p>
+
+                <div class="m-b-xl">
+                    <h5 class="m-t-none">Высокое качество
+                        услуг</h5>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
+
+    <section class="container main-news padder-v text-center">
+
+        <h2 class="header-h padder-v ">Новости комплекса</h2>
+
+
+        <div class="row">
+
+
+            @foreach($getNews as $news)
+                <div class="col-md-3">
+                    <div class="blog-post">
+                        <div class="panel">
+                            <a href="/blog/{{$news->id}}"> <img src="{{$news->avatar}}" class="img-full"></a>
+
+                            <div class="wrapper-lg">
+                                <h4 class="m-t-none"><a
+                                            href="/blog/{{$news->id}}">{{str_limit($news->name,50,'...')}}</a></h4>
+
+                                <div>
+                                    {{str_limit(strip_tags($news->content), 150, '...')}}
+                                </div>
+                                <div class="line line-lg b-b b-light"></div>
+                                <div class="text-muted">
+                                    <i class="fa fa-clock-o text-muted"></i> {{$news->created_at->diffForHumans()}}
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+            @endforeach
+
+
+        </div>
+    </section>
+
+
+    <div class="container-fluid three-steps bg-info">
+        <div class="container">
+            <div class="container">
+                <div class="row text-center wrapper-lg">
+
+                    <div class="col-sm-6 text-white big-white-txt">
+                        <h4 class="m-b">Запись на прием в три шага</h4>
+                    </div>
+                    <div class="col-sm-6 btn-zapis">
+                        <a href="" class="btn btn-lg btn-default">Записаться на прием</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="be-careful">
-        Имеются противопоказания, необходима консультация специалистов
-    </div>
-</div>
-<script type="text/javascript">
-    $('.anim-block1').last().on('scrollSpy:enter', function() {
-        if(!$('.anim-block1').hasClass('flipInY')){
-            var i = 0;
-                                    $('.anim-block1').each(function(){
-                                        var that = $(this);
-                                        setTimeout(function(){
-                                        that.css('opacity',1).addClass('flipInY animated');
-                                        },i+=100); 
-                                    });
-        }                             
-    });
-    $('.anim-block1').last().on('scrollSpy:exit', function() {
-        $('.anim-block1').removeClass('flipInY').css('opacity',0);
-    });
-    $('.anim-block1').scrollSpy();
-</script>
-<script type="text/javascript">
-    $('.anim-block2').last().on('scrollSpy:enter', function() {
-        if(!$('.anim-block2').hasClass('flipInX')){
-            var i = 0;
-                                    $('.anim-block2').each(function(){
-                                        var that = $(this);
-                                        setTimeout(function(){
-                                        that.css('opacity',1).addClass('flipInX animated');
-                                        },i+=100); 
-                                    });
-        }                             
-    });
-    $('.anim-block2').last().on('scrollSpy:exit', function() {
-        $('.anim-block2').removeClass('flipInX').css('opacity',0);
-    });
-    $('.anim-block2').scrollSpy();
-</script>
-<script type="text/javascript">
-    $('.anim-block3').last().on('scrollSpy:enter', function() {
-        if(!$('.anim-block3').hasClass('fadeInRight')){
-            var i = 0;
-                                    $('.anim-block3').each(function(){
-                                        var that = $(this);
-                                        setTimeout(function(){
-                                        that.css('opacity',1).addClass('fadeInRight animated');
-                                        },i+=100); 
-                                    });
-        }                             
-    });
-    $('.anim-block3').last().on('scrollSpy:exit', function() {
-        $('.anim-block3').removeClass('fadeInRight').css('opacity',0);
-    });
-    $('.anim-block3').scrollSpy();
-</script>
-<!-- END MAINFIELD -->
+
+    <section class="container reviews padder-v text-center">
+        <h2 class="header-h padder-v ">О нас говорят</h2>
+
+        <div class="row">
+
+            @foreach($getReviews as $review)
+                <div class="col-md-3">
+                    <div class="blog-post">
+                        <div class="panel">
+                            <div class="wrapper-lg">
+                                <h4 class="m-t-none"><a href="">{{$review->fio}}</a></h4>
+
+                                <div>
+                                    {{strip_tags($review->content)}}
+                                </div>
+                                <div class="line line-lg b-b b-light"></div>
+                                <div class="text-muted">
+                                    <i class="fa fa-clock-o text-muted"></i> {{$review->created_at->diffForHumans()}}
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </section>
+
 @endsection
