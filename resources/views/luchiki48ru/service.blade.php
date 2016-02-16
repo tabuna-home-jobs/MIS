@@ -17,31 +17,43 @@
             <h1>Услуги</h1>
             <div class="page-text">
 
-                <div class="btn-group" role="group" aria-label="...">
-                    @foreach($Category as $value)
+               <div class="row">
+                   @foreach($data as $item)
+
+                       <div class="col-xs-12">
+                           <h2>{{$item->name}}</h2>
+                           @foreach($item->goods as $key => $good)
+
+                               <div class="col-md-4 item-row">
+                                   <div>
+                                       <div>
+                                           <img src="{{$good->avatar}}" alt="{{$good->name}}"></div>
+                                       <h4>
+                                           <a href="/service/{{$good->id}}">
+                                               {{str_limit((strip_tags($good->name)), 80, '...')}}
+                                           </a>
+                                       </h4>
+                                       <p class="day"></p>
+                                       <div>
+                                           {{str_limit((strip_tags($good->content)), 130, '...')}}
+                                       </div>
+                                       <div class="seeall">
+                                           <a href="/service/{{$good->id}}" class="btn btn-primary btn-default">
+                                               <span class="glyphicon glyphicon-eye-open"></span> Посмотреть
+                                           </a>
+                                       </div>
+                                   </div>
+                               </div>
+                               @if(($key+1) % 3 == 0)
+                                   <div class="clearfix"></div>
+                               @endif
+
+                           @endforeach
+                       </div>
 
 
-                        <a href="/service?category={{$value['id']}}" type="button" class="btn btn-default">{{$value['name']}}</a>
-
-                    @endforeach
-
-
-                </div>
-
-                <div class="row">
-                    @foreach($Goods as $item)
-                        <div class="col-md-4 item-row">
-                            <div>
-                                <div><img src="{{$item['avatar']}}" alt=""></div>
-                                <h3><a href="/service/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
-                                <p class="day"></p>
-                                <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
-                                <div class="seeall"><a href="/service/{{$item['id']}}" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-eye-open"></span> Посмотреть</a></div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                {!! $Goods->render() !!}
+                   @endforeach
+               </div>
             </div>
         </div>
 

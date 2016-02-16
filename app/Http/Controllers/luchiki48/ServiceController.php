@@ -25,6 +25,7 @@ class ServiceController extends Controller {
 				'data' => $query->categories
 		]);
 
+
     }
 
 	/**
