@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('luchiki48ru/header')
 
 
 @section('title', $post->title)
@@ -94,22 +94,6 @@
                         </ul>
                     </div>
 
-
-
-                    <div class="sidebar-widget light">
-                        <h2 class="bordered light">Последние новости</h2>
-
-                        @foreach($LastNews as $lastNew)
-                            <article class="popular-post">
-                                <img alt="{{$lastNew->title}}" src="{{$lastNew->avatar}}">
-                                <h4><a href="/blog/{{$lastNew->id}}">{{$lastNew->name}}</a></h4>
-
-                                <p class="text-justify">{{ substr(strip_tags($lastNew->content), 0, 201) }} ...</p>
-
-                                <p class="popular-date text-right">{{$lastNew->created_at}}</p>
-                            </article>
-                        @endforeach
-                    </div>
 
 
 

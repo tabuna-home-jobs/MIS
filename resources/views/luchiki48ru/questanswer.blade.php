@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('luchiki48ru/header')
 
 @section('content')
 
@@ -25,12 +25,20 @@
 
                     <div class="appointment-form clearfix">
                         <form action="/questanswer" method="post">
-                            <input type="text" placeholder="ФИО" required name="fio" style="width: 98%">
-                            <input type="email" name="email" required placeholder="Email">
-                            <input type="text" name="phone" required placeholder="Телефон">
-                            <textarea name="questions" placeholder="Ваш вопрос"></textarea>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="ФИО" required name="fio">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" required placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="phone" required placeholder="Телефон">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="questions" class="form-control" placeholder="Ваш вопрос"></textarea>
+                            </div>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <input type="submit" class="btn btn-default btn-rounded" value="Отправить">
+                            <input type="submit" class="btn btn-primary" value="Отправить">
                         </form>
                     </div>
 
@@ -48,20 +56,13 @@
                             <a href="/team"><dfn>- Перейти</dfn></a>
                         </div>
                     </div>
-                    <div class="feature">
-                        <i class="pull-left feature-icon fa fa-book"></i>
-                        <div class="feature-content">
-                            <h5><a href="/medencyclopedia">Энциклопедия</a></h5>
-                            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
-                            <a href="/medencyclopedia"><dfn>- Перейти</dfn></a>
-                        </div>
-                    </div>
+
                     <div class="feature">
                         <i class="pull-left feature-icon fa fa-phone-square"></i>
                         <div class="feature-content">
-                            <h5><a href="/appointment">Записаться на приём</a></h5>
+                            <h5><a href="/feedback">Записаться на приём</a></h5>
                             <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
-                            <a href="/appointment"><dfn>-  Перейти</dfn></a>
+                            <a href="/feedback"><dfn>-  Перейти</dfn></a>
                         </div>
                     </div>
                 </div>

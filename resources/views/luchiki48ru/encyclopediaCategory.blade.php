@@ -1,4 +1,4 @@
-@extends('site1ru/header')
+@extends('luchiki48ru/header')
 
 
 @section('title', $Category->title)
