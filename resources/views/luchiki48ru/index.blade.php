@@ -140,7 +140,7 @@
     <div class="container">
         <div class="news col-md-8 col-sm-12 col-xs-12">
 
-            @foreach(newsOnMain::getNews(7,5) as $item)
+            @foreach($allnews as $item)
             <div class="single-news col-md-12 col-sm-12">
                 <div class="table-news col-md-11 col-sm-11">
                     <div class="news-img col-md-4 col-sm-4"><img src="{{$item['avatar']}}"></div>

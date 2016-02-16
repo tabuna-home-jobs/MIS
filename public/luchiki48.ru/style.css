@@ -493,8 +493,20 @@ left: 96%;
 left: 88%;
 }
 }
+.item-galery{
+    text-align: center;
+    padding-bottom: 15px;
+}
 .item-galery img {
-    width: 100%;
+    max-width: 100%;
+    height: 150px;
+}
+.item-row{
+    padding-bottom: 15px;
+}
+.item-row img{
+    max-width: 100%;
+    height: 150px;
 }
 .page-content {
     margin-bottom: 30px;
