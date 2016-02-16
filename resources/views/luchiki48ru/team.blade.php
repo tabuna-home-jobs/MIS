@@ -13,11 +13,15 @@
 
                 @foreach($Specialisty as $spec)
             	<div class="doctors col-sm-4 col-md-3 col-xs-12 padding-bottom-60 clearfix">
-                    <div class="doctors-img"><img src="{{$spec->avatar}}" width="234" alt="" title="">
-
-                        </div>
+                    <div class="doctors-img">
+                        <a href="/team/{{$spec['id']}}">
+                            <img src="{{$spec->avatar}}" width="234" alt="" title="">
+                        </a>
+                    </div>
                     <div class="doctors-detail">
-                        <h4>{{$spec->fio}}<span class="text-center">{{$spec->subname}}</span></h4>
+                        <a href="/team/{{$spec['id']}}">
+                            <h4>{{$spec->fio}}<span class="text-center">{{$spec->subname}}</span></h4>
+                        </a>
                         
                         @if(isset($spec->special) && trim($spec->special) !== "")
                         <p>
@@ -26,12 +30,7 @@
                         </p>
                         @endif
                         
-                        @if(isset($spec->obrazovanie) && trim($spec->obrazovanie) !== "")
-                        <p>
-                            <span class="heading">Образование</span>
-                            <span class="detail">{{$spec->obrazovanie}}</span>
-                        </p>
-                        @endif
+
                         
                         @if(isset($spec->opyt) && trim($spec->opyt) !== "")
                         <p>
@@ -39,13 +38,7 @@
                             <span class="detail">{{$spec->opyt}} </span>
                         </p>
                         @endif
-                        
-                        @if(isset($spec->about) && trim($spec->about) !== "" )
-                        <p>
-                            <span class="heading">Умения:</span>
-                            <span class="detail">{{$spec->about}} </span>
-                        </p>
-                        @endif
+
 
                         </div>
                 </div>

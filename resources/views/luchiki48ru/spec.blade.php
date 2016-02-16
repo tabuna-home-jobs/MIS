@@ -1,4 +1,4 @@
-@extends('luchiki48ru/ALTheader')
+@extends('luchiki48ru/header')
 @section('content')
 
     <div id="wrapper-content">
@@ -22,14 +22,29 @@
                                         <img  src="{{$Spec->avatar}}" class="img-responsive" alt="{{$Spec->fio}}" title="{{$Spec->fio}}">
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12 our-staffs-contact">
-                                        <h3 class="our-staffs-name">{{$Spec->fio}}</h3>
+                                        <!--<h3 class="our-staffs-name">{{$Spec->fio}}</h3>-->
 
-                                        <p class="our-staffs-job">
-                                            {{$Spec->subname}}
-                                        </p>
+                                        @if(isset($Spec->subname) && trim($Spec->subname) !== "")
+                                            <p>
+                                                <span class="heading">Должность: </span>
+                                                <span class="detail">{{$Spec->subname}} </span>
+                                            </p>
+                                        @endif
 
-                                        <div class="our-staffs-phone"><p>Образование:</p>{{$Spec->obrazovanie}}</div>
-                                        <div class="our-staffs-email"><p>Специализация:</p>{{$Spec->special}}</div>
+                                        @if(isset($Spec->opyt) && trim($Spec->opyt) !== "")
+                                            <p>
+                                                <span class="heading">Должность: </span>
+                                                <span class="detail">{{$Spec->opyt}} </span>
+                                            </p>
+                                        @endif
+
+                                        @if(isset($Spec->obrazovanie) && trim($Spec->obrazovanie) !== "")
+                                            <div class="our-staffs-phone"><p>Образование:</p>{{$Spec->obrazovanie}}</div>
+                                        @endif
+
+                                        @if(isset($Spec->special) && trim($Spec->special) !== "")
+                                            <div class="our-staffs-email"><p>Специализация:</p>{{$Spec->special}}</div>
+                                        @endif
                                         <div class="our-staffs-phone">
                                             <p>Дни работы:</p>
                                             @if($days = unserialize($Spec->works))
