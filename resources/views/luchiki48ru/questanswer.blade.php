@@ -70,7 +70,8 @@
         </div>
 
 
-        <div class="container padding-top-35">
+        <div class="container padding-top-35 after-booking-sec text-center">
+            <!--
             <div class="row">
 
                 @foreach($QuestAnswers as $QA)
@@ -97,6 +98,56 @@
                     {!! $QuestAnswers->render() !!}
 
             </div>
+            -->
+
+            <ul class="medicom-feature-list list-inline text-left" id="accordion" role="tablist"
+                aria-multiselectable="true">
+
+                @foreach($QuestAnswers as $QA)
+                    <li><i class="fa fa-user medicom-check pull-left"></i>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading-answer-{{$QA->id}}">
+
+
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                       href="#collapse-answer-{{$QA->id}}" aria-expanded="true"
+                                       aria-controls="collapse-answer-{{$QA->id}}">
+                                        {{$QA->questions}}
+                                    </a>
+
+
+                                    <p class="text-right">
+                                        <small class="light bordered main-title text-right"> {{$QA->getCategory->name or ''}}
+                                            <br>{{$QA->fio}} </small>
+                                    </p>
+
+                                </h4>
+
+
+                            </div>
+
+                            <div id="collapse-answer-{{$QA->id}}" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="heading-answer-{{$QA->id}}">
+                                <div class="panel-body blog-content">
+                                    {{$QA->answer}}
+                                    <p class="text-right">
+                                        <small>С уважением {{$QA->getDoctor->fio or ''}}</small>
+                                        <small><br>
+                                            <date>{{$QA->updated_at->diffForHumans()}}</date>
+                                        </small>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </li>
+                @endforeach
+
+
+            </ul>
         </div>
 
 
