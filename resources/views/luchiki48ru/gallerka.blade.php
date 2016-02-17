@@ -1,4 +1,4 @@
-@extends('luchiki48ru/ALTheader')
+@extends('luchiki48ru/header')
 @section('content')
 
 
@@ -26,7 +26,7 @@
 
                     @forelse($photos as $photo)
 
-                        <div class="gallery-item gallery-col-3">
+                        <div class="gallery-item  gallery-item-fix col-md-3 col-sm-6 col-xs-12">
                             <div class="entry-thumbnail title">
                                 <img src="{{$photo['url']}}">
 

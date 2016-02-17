@@ -1,4 +1,4 @@
-@extends('luchiki48ru/ALTheader')
+@extends('luchiki48ru/header')
 @section('content')
 
 
