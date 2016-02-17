@@ -768,3 +768,26 @@ i.feature-icon {
 .gallery-item-fix .entry-hover-wrapper{
     max-height: 150px;
 }
+
+.doctors-img{
+    overflow: hidden;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.37);
+    border-radius: 5px;
+}
+.doctors-img h4 {
+    width: 100%;
+    background-color: rgba(66, 139, 202, 0.56);
+    color: #FFF;
+    padding: 5px;
+    font-size: 20px;
+    margin: 0px;
+    height: 57px;
+    text-align: center;
+    line-height: 1.2;
+
+
+}
+.doctors-detail {
+    padding: 10px;
+}

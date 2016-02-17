@@ -12,10 +12,11 @@ class TeamController extends Controller {
 	 *
 	 * @return Response
 	 */
+
 	public function index($sitename = "luchiki48", $sitedomen = "ru")
 	{
-        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        //$Specialisty = $getSites->getTeam()->orderBy('sort', 'desc')->paginate(6);
+		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+		//$Specialisty = $getSites->getTeam()->orderBy('sort', 'desc')->paginate(6);
 		$SpecCat = $getSites->getSpecCat()->get();
 
 
@@ -26,7 +27,7 @@ class TeamController extends Controller {
 			$Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->orderBy('sort', 'asc')->paginate(8);
 
 		//dd($requestCategory);
-        return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty,'SpCat' => $SpecCat]);
+		return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty,'SpCat' => $SpecCat]);
 	}
 
 	/**

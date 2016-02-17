@@ -11,13 +11,13 @@ class SpecCat extends Model {
 
     protected $fillable = ['name', 'ids'];
 
-    //Связь категории со специалистами
+    //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     public function spec()
     {
-        return $this->hasMany('App\Models\Specialisty');
+        return $this->hasMany('App\Models\Specialisty', 'cats');
     }
 
-    //Обратная Зависимость от сайта
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     public function site()
     {
         return $this->belongsTo('App\Models\Sites', 'ids');
