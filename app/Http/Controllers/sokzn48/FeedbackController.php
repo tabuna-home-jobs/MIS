@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\luchiki48;
+<?php namespace App\Http\Controllers\sokzn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
@@ -18,7 +18,7 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        return view('luchiki48ru.feedback');
+        return view('sokzn48.feedback');
     }
 
     /**

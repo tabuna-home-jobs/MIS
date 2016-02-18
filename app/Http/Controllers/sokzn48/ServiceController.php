@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\luchiki48;
+<?php namespace App\Http\Controllers\sokzn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\CommentRequest;
@@ -16,7 +16,7 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function index($sitename = "luchiki48", $sitedomen = "ru")
+    public function index($sitename = "sokzn48", $sitedomen = "ru")
     {
 
         $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with('categories.goods')->first();
@@ -43,7 +43,7 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function store(CommentRequest $request, $sitename = "luchiki48", $sitedomen = "ru")
+    public function store(CommentRequest $request, $sitename = "sokzn48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
@@ -68,7 +68,7 @@ class ServiceController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function show($id, $sitename = "luchiki48", $sitedomen = "ru")
+    public function show($id, $sitename = "sokzn48", $sitedomen = "ru")
     {
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();

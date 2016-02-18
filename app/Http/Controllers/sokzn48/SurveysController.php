@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\luchiki48;
+namespace App\Http\Controllers\sokzn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
@@ -13,7 +13,7 @@ class SurveysController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($sitename = "luchiki48", $sitedomen = "ru")
+    public function index($sitename = "sokzn48", $sitedomen = "ru")
     {
         //Нахуя я его создал ?
     }

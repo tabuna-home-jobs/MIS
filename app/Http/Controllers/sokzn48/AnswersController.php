@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\luchiki48;
+namespace App\Http\Controllers\sokzn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\luchiki48;
+namespace App\Http\Controllers\sokzn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
@@ -14,7 +14,7 @@ class VideoGalleryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($sitename = "luchiki48", $sitedomen = "ru")
+    public function index($sitename = "sokzn48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $albums = $getSites->getVideoAlbums()->select('*')->get();
@@ -53,7 +53,7 @@ class VideoGalleryController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, $sitename = "luchiki48", $sitedomen = "ru")
+    public function show($id, $sitename = "sokzn48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $albums = $getSites->getVideoAlbums()->select('*')->first();

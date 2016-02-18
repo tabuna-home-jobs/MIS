@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\luchiki48;
+<?php namespace App\Http\Controllers\sokzn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\ReviewsRequest;
@@ -14,7 +14,7 @@ class ReviewsController extends Controller
      *
      * @return Response
      */
-    public function index($sitename = "luchiki48", $sitedomen = "ru")
+    public function index($sitename = "sokzn48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Reviews = $getSites->getReviews()->where('publish', true)->orderBy('id', 'desc')->paginate(6);
@@ -36,7 +36,7 @@ class ReviewsController extends Controller
      *
      * @return Response
      */
-    public function store(ReviewsRequest $requests, $sitename = "luchiki48", $sitedomen = "ru")
+    public function store(ReviewsRequest $requests, $sitename = "sokzn48", $sitedomen = "ru")
     {
 
 

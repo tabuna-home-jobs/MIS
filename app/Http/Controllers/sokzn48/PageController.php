@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\luchiki48;
+<?php namespace App\Http\Controllers\sokzn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\CommentRequest;
@@ -14,11 +14,11 @@ class PageController extends Controller
     public function show($Pages)
     {
 
-        $getSites = Sites::where('domen', '=', "luchiki48.ru")->first();
+        $getSites = Sites::where('domen', '=', "sokzn48.ru")->first();
 
         $Page = $getSites->getPages()->find($Pages->id);
 
-        return view('luchiki48ru/page', [
+        return view('sokzn48ru/page', [
             'Page' => $Page,
         ]);
     }
