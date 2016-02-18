@@ -9,8 +9,8 @@
         <div class="container text-center text-middle">
             <div class="lead">
                 <h2>
-                    {{$New->name}}
-                    семейный оздоровительный комплекс ооо
+                    {{$Shares->name}}
+                    семейный оздоровительный комплекс
                 </h2>
             </div>
         </div>
@@ -26,17 +26,14 @@
                 <div class="col-sm-9">
                     <div class="blog-post">
                         <div class="panel">
-                            <div>
-                                <img src="{{$New->avatar}}" class="img-full">
-                            </div>
                             <div class="wrapper-lg">
 
 
-                                <div>{!! $New->content !!}</div>
+                                <div>{!! $Shares->content !!}</div>
 
                                 <div class="line line-lg b-b b-light"></div>
                                 <div class="text-muted">
-                                    <i class="fa fa-clock-o text-muted"></i> {{$New->created_at->toDateString()}}
+                                    <i class="fa fa-clock-o text-muted"></i> {{$Shares->created_at->toDateString()}}
                                 </div>
                             </div>
                         </div>
@@ -45,7 +42,7 @@
                 <div class="col-sm-3">
                     <h5 class="font-bold">Последние новости</h5>
                     <div>
-                        @foreach($LastNews as $new)
+                         @foreach($LastNews as $new)
                             <div>
                                 <a class="pull-left thumb thumb-wrapper m-r" href="/blog/{{$new->id}}">
                                     <img src="{{$new->avatar}}">
