@@ -1,22 +1,16 @@
 @extends('sokzn48ru.app')
-
-
 @section('content')
-
-
 
     <section class="well page-bg well-lg blog-bg text-white m-b-none">
         <div class="container text-center text-middle">
             <div class="lead">
-                <h2>
-                    {{$New->name}}
-                    семейный оздоровительный комплекс ооо
-                </h2>
+                <h1>
+
+                    Акции
+                </h1>
             </div>
         </div>
     </section>
-
-
 
     <section class="container">
 
@@ -26,18 +20,19 @@
                 <div class="col-sm-9">
                     <div class="blog-post">
                         <div class="panel">
-                            <div>
-                                <img src="{{$New->avatar}}" class="img-full">
-                            </div>
                             <div class="wrapper-lg">
 
 
-                                <div>{!! $New->content !!}</div>
-
-                                <div class="line line-lg b-b b-light"></div>
-                                <div class="text-muted">
-                                    <i class="fa fa-clock-o text-muted"></i> {{$New->created_at->toDateString()}}
-                                </div>
+                                @foreach($Shares as $item)
+                                    <div class="col-md-4">
+                                        <div>
+                                            <h3>{{$item['name']}}</h3>
+                                            <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
+                                            <div class="seeall"><a href="/shares/{{$item['id']}}" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-eye-open"></span> Посмотреть</a></div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                                <div class="clearfix"></div>
                             </div>
                         </div>
                     </div>
@@ -70,6 +65,8 @@
 
 
     </section>
+
+
 
 
 

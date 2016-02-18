@@ -1,3 +1,4 @@
+
 @extends('luchiki48ru/header')
 @section('content')
     <div class="page-content">

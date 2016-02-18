@@ -26,9 +26,7 @@
             <div class="col-sm-9">
                 <div class="blog-post">
                     <div class="panel">
-                        <div>
-                            <img src="{{$New->avatar}}" class="img-full">
-                        </div>
+
                         <div class="wrapper-lg">
 
 

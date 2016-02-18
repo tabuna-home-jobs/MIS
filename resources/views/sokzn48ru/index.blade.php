@@ -84,7 +84,7 @@
                             <li>
                                 <i class="fa fa-star-o pull-left text-lg m-r m-t-sm"></i>
 
-                                <p class="clear m-b-lg"><strong>{{$share->name}}</strong>
+                                <p class="clear m-b-lg"><a href="/shares/{{$share->id}}"><strong>{{$share->name}}</strong></a>
                                     {{str_limit(strip_tags($share->content), 100, '...')}}
                                 </p>
                             </li>
@@ -92,7 +92,7 @@
                     </ul>
 
                     <p class="text-center">
-                        <a class="btn btn-white text-info b-info bg-empty" href="#">все акции</a>
+                        <a class="btn btn-white text-info b-info bg-empty" href="/shares">все акции</a>
                     </p>
 
                 </div>
