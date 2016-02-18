@@ -7,7 +7,7 @@
             Развивающие занятия. Если Вы  хотите гордиться успехами своего ребёнка, то наша студия для Вас!
         </div>
 
-        <div class="cirleses">
+        <div class="cirleses hidden-xs">
 
         <?php $i = 1; ?>
         @foreach(GoodsMain::getGoods(7,42,8) as $item)
@@ -98,7 +98,7 @@
         <div class="header-label-small col-md-12">
             Вы можете быстро и удобно оставить свою заявку где бы вы не были
         </div>
-        <div class="request-img col-md-6"><img src="/luchiki48.ru/img/request.png"></div>
+        <div class="request-img col-md-6 hidden-xs"><img src="/luchiki48.ru/img/request.png"></div>
         <div class="form col-md-6">
             <form action="/feedback" method="post">
                 <div class="form-group">
@@ -196,7 +196,7 @@
         <!-- END акции-->
     </div>
 </div>
-<div class="studio">
+<div class="studio hidden-xs">
     <div class="container">
         <div class="studio-head-big col-md-12">СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ»</div>
         <div class="studio-head-small col-md-12">
@@ -257,7 +257,7 @@
 
     @foreach(reviewsOnMain::getReview(7,4) as $item)
     <div class="single-review col-md-12">
-        <div class="rev-img col-md-2 col-sm-2"><i class="feature-icon fa fa-commenting"></i></div>
+        <div class="rev-img col-md-2 col-sm-2 hidden-xs"><i class="feature-icon fa fa-commenting"></i></div>
         <div class="rev-text col-md-10 col-sm-10">
             <h4>{{$item['fio']}}</h4>
             <span>{{$item['created_at']}}</span>

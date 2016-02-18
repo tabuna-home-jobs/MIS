@@ -20,6 +20,10 @@ a,img{
 .header-top{
 background-color: #5eaef7;
 color: white;
+
+}
+.header-top>div>div{
+    padding: 10px 0;
 }
 .nav>li>a {
     position: relative;
@@ -70,6 +74,7 @@ width: 16%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1760px auto;
+    padding: 30px 0px;
 }
 .stud{
     background-color: #737c7e;
@@ -196,6 +201,12 @@ font-size: 11px;
 }
 .social-header{
 font-size: 12px;
+}
+.social-header>img{
+    max-width: 100%;
+}
+.logo{
+    text-align: center;
 }
 .logo img{
 max-width: 100%;

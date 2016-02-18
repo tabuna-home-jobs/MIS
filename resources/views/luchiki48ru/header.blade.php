@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex"/>
-    <title></title>
+    <title>СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ» - @yield('title')</title>
     <link rel="stylesheet" href="/luchiki48.ru/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/luchiki48.ru/css/slick.css">
     <link rel="stylesheet" href="/luchiki48.ru/style.css">
@@ -13,37 +13,42 @@
     <script type="text/javascript" src="/luchiki48.ru/js/slick.min.js"></script>
     <link rel="stylesheet" href="/luchiki48.ru/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/luchiki48.ru/js/fancybox/jquery.fancybox.pack.js"></script>
+
+    <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
+    <meta property="og:title" content="@yield('title')">
+    <meta property="og:description" content="@yield('description')">
+    <meta property="og:image" content="@yield('avatar')">
+    <meta name="twitter:title" content="@yield('title')">
+    <meta name="twitter:description" content="@yield('description')"/>
+    <meta name="twitter:image:src" content="@yield('avatar')"/>
 </head>
 <body>
 <!-- HEADER -->
 <div class="header">
     <div class="header-top">
         <div class="container">
-            <div class="phone-header col-md-2 col-xs-4">
+            <div class="phone-header col-md-3 col-sm-6  col-xs-12">
                 <img src="/luchiki48.ru/img/phone.png">
                 +7 (4742) 77 03 97
             </div>
-            <div class="adr-header col-md-3 col-xs-5">
+            <div class="adr-header col-md-4 col-sm-6 col-xs-12">
                 <img src="/luchiki48.ru/img/adr.png">
                 г. Липецк, ул. Неделина, 15-а
             </div>
-            <div class="mail-header col-md-2 col-xs-3">
+            <div class="mail-header col-md-3 col-sm-6 col-xs-12">
                 <img src="/luchiki48.ru/img/mail.png">
                 info@luchiki.ru
             </div>
-            <div class="eye-header col-md-4 col-xs-8">
-                <img src="/luchiki48.ru/img/eye.png">
-                <a href="">Обычная версия сайта</a> | Цвет:  <a href="">A</a> <a href="">A</a><a href="">A</a>   Шрифт: <a href="">М</a>
-                <a>С</a> <a>Б</a>   Картинки: <input type="checkbox">
-            </div>
-            <div class="social-header col-md-1 col-xs-4">
+
+            <div class="social-header col-md-2 col-sm-6 col-xs-12">
                 <img src="/luchiki48.ru/img/social.png">
             </div>
         </div>
     </div>
     <div class="header-top-menu container">
-        <div class="logo col-md-2 col-sm-2 col-xs-2"><a href="/"><img src="/luchiki48.ru/img/logo.png"></a></div>
-        <div class="menu-block col-md-10 col-sm-10 col-xs-10">
+        <div class="logo col-md-2 col-sm-2 col-xs-12"><a href="/"><img src="/luchiki48.ru/img/logo.png"></a></div>
+        <div class="menu-block col-md-10 col-sm-10 col-xs-12">
             <!-- ВЕРХНЕЕ МЕНЮ -->
             <div class="menu-header col-md-12 col-sm-12 col-xs-12">
                 <nav class="navbar navbar-default menu1">
