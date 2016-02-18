@@ -126,9 +126,7 @@
                 <div class="description-form">Выберите место</div>
                 <div class="input-form"><select name="subdivision" required>
                         <option selected disabled>Выберите место</option>
-                        @foreach($place as $placeItem)
-                            <option value="{{$placeItem->subdivision}}">{{$placeItem->subdivision}}</option>
-                        @endforeach
+
                     </select></div>
                 <div class="description-form">Специализация</div>
                 <div class="input-form"><select disabled name="specialization" required>
