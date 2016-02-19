@@ -5,15 +5,14 @@ use App\Http\Requests;
 use App\Models\Sites;
 use App\Models\SpecCat;
 use Request;
-
-class TeamController extends Controller
-{
+class TeamController extends Controller {
 
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
+
     public function index($sitename = "sokzn48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
@@ -22,14 +21,13 @@ class TeamController extends Controller
 
 
         $requestCategory = Request::input('catspec');
-        if (is_null($requestCategory)) {
+        if (is_null($requestCategory))
             $Specialisty = $getSites->getTeam()->orderBy('sort', 'asc')->paginate(8);
-        } else {
+        else
             $Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->orderBy('sort', 'asc')->paginate(8);
-        }
 
-        //dd($requestCategory);
-        return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty, 'SpCat' => $SpecCat]);
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
+        return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty,'SpCat' => $SpecCat,'LastNews' => $getLastNews]);
     }
 
     /**
@@ -55,7 +53,7 @@ class TeamController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return Response
      */
     public function show($id, $sitename = "sokzn48", $sitedomen = "ru")
@@ -63,10 +61,11 @@ class TeamController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
         $Specialist = $getSites->allspecs()->where('id', $id)->first();
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
 
         return view($sitename . $sitedomen . '/spec', [
 
-            'Spec' => $Specialist
+            'Spec' => $Specialist, 'LastNews' => $getLastNews
         ]);
 
 
@@ -75,7 +74,7 @@ class TeamController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return Response
      */
     public function edit($id)
@@ -86,7 +85,7 @@ class TeamController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return Response
      */
     public function update($id)
@@ -97,7 +96,7 @@ class TeamController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return Response
      */
     public function destroy($id)

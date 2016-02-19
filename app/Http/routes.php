@@ -56,6 +56,7 @@ Route::group(['domain' => 'sokzn48.ru', 'namespace' => 'sokzn48'], function () {
     Route::resource('/answers', 'AnswersController');
     Route::resource('/reviews', 'ReviewsController');
     Route::resource('/service', 'ServiceController');
+    Route::resource('/team', 'TeamController');
     Route::resource('/page', 'PageController');
     Route::resource('/feedback', 'FeedbackController');
     Route::resource('/blog', 'BlogController');
