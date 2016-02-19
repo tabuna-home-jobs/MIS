@@ -6,7 +6,7 @@
             <div class="lead">
                 <h1>
 
-                    Акции
+                    Акции Комплекса
                 </h1>
             </div>
         </div>
@@ -21,16 +21,31 @@
                     <div class="blog-post">
                         <div class="panel">
                             <div class="wrapper-lg">
+                                @foreach($Shares as $key=>$item)
+                                    <div class="col-md-4 item-row">
+                                        <div class="blog-post">
+                                            <div class="panel">
+                                                <a href="/blog/{{$item->id}}"> <img src="{{$item->avatar}}" class="img-full"></a>
 
+                                                <div class="wrapper-lg">
+                                                    <h4 class="m-t-none"><a
+                                                                href="/blog/{{$item->id}}">{{str_limit($item->name,50,'...')}}</a></h4>
 
-                                @foreach($Shares as $item)
-                                    <div class="col-md-4">
-                                        <div>
-                                            <h3>{{$item['name']}}</h3>
-                                            <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
-                                            <div class="seeall"><a href="/shares/{{$item['id']}}" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-eye-open"></span> Посмотреть</a></div>
+                                                    <div>
+                                                        {{str_limit(strip_tags($item->content), 150, '...')}}
+                                                    </div>
+                                                    <div class="line line-lg b-b b-light"></div>
+                                                    <div class="text-muted">
+                                                        <i class="fa fa-clock-o text-muted"></i> {{$item->created_at->diffForHumans()}}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+
                                     </div>
+                                    @if(($key+1) % 3 == 0)
+                                        <div class="clearfix"></div>
+                                    @endif
                                 @endforeach
                                 <div class="clearfix"></div>
                             </div>
@@ -68,7 +83,42 @@
 
 
 
+    <script>
+        var resized = function (height) {
 
+            $('.item-row').each(function(){
+                var height_this = $(this).height();
+                height_this > height ? height = height_this:'';
+            });
 
+            $('.item-row').height(height);
+        };
 
+        $(window).resize(function(){
+            var height = 0;
+            $('.item-row').each(function(){
+                var height_this = $(this).height();
+                //height_this > height ? height = height_this:'';
+                if(height_this > height){
+                    height = height_this;
+                }
+            });
+
+            $('.item-row').height(height);
+        });
+
+        $(document).ready(function(){
+            var height = 0;
+            $('.item-row').each(function(){
+                var height_this = $(this).height();
+                //height_this > height ? height = height_this:'';
+                if(height_this > height){
+                    height = height_this;
+                }
+            });
+
+            $('.item-row').height(height);
+        });
+
+    </script>
 @endsection

@@ -3,6 +3,7 @@
 <head>
 
     <meta charset="utf-8">
+    <title>семейный оздоровительный комплекс - @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,300,700&subset=latin,cyrillic'
@@ -10,6 +11,14 @@
     <link rel="stylesheet" href="/sokzn48.ru/components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/sokzn48.ru/css/style.css">
     <link rel="stylesheet" href="/sokzn48.ru/css/app.css">
+    <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
+    <meta property="og:title" content="@yield('title')">
+    <meta property="og:description" content="@yield('description')">
+    <meta property="og:image" content="@yield('avatar')">
+    <meta name="twitter:title" content="@yield('title')">
+    <meta name="twitter:description" content="@yield('description')"/>
+    <meta name="twitter:image:src" content="@yield('avatar')"/>
 
 </head>
 <body>

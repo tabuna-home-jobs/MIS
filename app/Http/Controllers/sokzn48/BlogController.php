@@ -18,7 +18,8 @@ class BlogController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getNews = $getSites->getNews()->orderBy('id', 'desc')->paginate(6);
-        return view($sitename . $sitedomen . '/blog', ['News' => $getNews]);
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
+        return view($sitename . $sitedomen . '/blog', ['News' => $getNews,'LastNews' => $getLastNews]);
     }
 
     /**
