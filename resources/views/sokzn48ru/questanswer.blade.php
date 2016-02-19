@@ -67,7 +67,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row after-booking-sec">
                                         <ul class="medicom-feature-list list-inline text-left" id="accordion" role="tablist"
                                             aria-multiselectable="true">
                                             @foreach($QuestAnswers as $QA)
