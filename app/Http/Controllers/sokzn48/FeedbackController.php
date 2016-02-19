@@ -16,9 +16,11 @@ class FeedbackController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index($sitename = "sokzn48", $sitedomen = "ru")
     {
-        return view('sokzn48.feedback');
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
+        return view($sitename . $sitedomen . '/feedback',['LastNews' => $getLastNews]);
     }
 
     /**

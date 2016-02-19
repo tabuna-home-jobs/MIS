@@ -62,6 +62,7 @@ Route::group(['domain' => 'sokzn48.ru', 'namespace' => 'sokzn48'], function () {
     Route::resource('/blog', 'BlogController');
     Route::resource('/shares', 'SharesController');
     Route::resource('/', 'HomeController');
+
 });
 
 Route::group(['domain' => 'cozn48.ru', 'namespace' => 'cozn48'], function()
