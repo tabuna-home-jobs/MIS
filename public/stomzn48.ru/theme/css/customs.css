@@ -45,6 +45,7 @@ vc_custom_1439796249329 {
     margin-bottom: 60px !important;
     padding-top: 70px !important;
     padding-bottom: 70px !important;
+    background: url(../../img/footbg.jpg) no-repeat;
 }
 
 .vc_custom_1440411640422 {
@@ -215,8 +216,8 @@ h5, .h5 {
 
 .title_box {
     background-image: url(../../img/header_bg_5.jpg);
-    background-repeat: repeat;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
+
 }
 .title_wr{
     text-shadow: 1px 1px 3px #000;
