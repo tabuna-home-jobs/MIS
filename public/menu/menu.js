@@ -15,7 +15,8 @@ function getmenus() {
 		var parentid = '0';
 		//Берём родителя
 		if(dept != 0){
-			parentid = $(this).prev('li').attr('id');
+			//console.log($(this).prevAll('li.menu-item-depth-0').attr('id'));
+			parentid = $(this).prevAll('li.menu-item-depth-0').attr('id');
 		}
 
         var textoiner = $(this).find(".item-edit").context.id;
