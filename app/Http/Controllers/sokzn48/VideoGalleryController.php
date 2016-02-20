@@ -20,9 +20,12 @@ class VideoGalleryController extends Controller
         $albums = $getSites->getVideoAlbums()->select('*')->get();
         $video = $getSites->getVideo()->paginate(20);
 
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
+
         return view($sitename . $sitedomen . '/video', [
             'album' => $albums,
             'videos' => $video,
+            'LastNews' => $getLastNews,
         ]);
     }
 
@@ -59,10 +62,13 @@ class VideoGalleryController extends Controller
         $albums = $getSites->getVideoAlbums()->select('*')->first();
         $video = $getSites->getVideo()->where('album_id', $id)->paginate(20);
 
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
+
         return view($sitename . $sitedomen . '/video', [
             'album' => $albums,
             'videos' => $video,
-            'id' => $id
+            'id' => $id,
+            'LastNews' => $getLastNews
         ]);
     }
 

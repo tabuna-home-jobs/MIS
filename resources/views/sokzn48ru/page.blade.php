@@ -8,10 +8,10 @@
     <section class="well page-bg well-lg blog-bg text-white m-b-none">
         <div class="container text-center text-middle">
             <div class="lead">
-                <h2>
+                <h1>
                     {{$New->name}}
                    семейный оздоровительный комплекс
-                </h2>
+                </h1>
             </div>
         </div>
     </section>

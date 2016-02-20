@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="/sokzn48.ru/components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/sokzn48.ru/css/style.css">
     <link rel="stylesheet" href="/sokzn48.ru/css/app.css">
+
+
+
     <meta name="description" content="@yield('description')">
     <meta name="keywords" content="@yield('keywords')">
     <meta property="og:title" content="@yield('title')">
@@ -109,12 +112,16 @@
 
 <script src="/sokzn48.ru/components/jquery/dist/jquery.min.js"></script>
 <script src="/sokzn48.ru/components/bootstrap/dist/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" href="/sokzn48.ru/components/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/sokzn48.ru/components/fancybox/jquery.fancybox.pack.js"></script>
 
 <script>
     $("a[href='#top']").click(function () {
         $("html, body").animate({scrollTop: 0}, "slow");
         return false;
+    });
+    $(document).ready(function(){
+        $(".fancybox").fancybox();
     });
 </script>
 
