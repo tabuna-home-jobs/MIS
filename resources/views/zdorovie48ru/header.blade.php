@@ -131,44 +131,9 @@
                             </div>
                         </div>
                     </div>
-                    <ul class="nav navbar-nav">
 
-                    <!--
-                        <li style="padding-bottom: 5px;" role="presentation" class=" dropdown" >
-                            <a id="onas" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">О нас</a>
-                            <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
-                                <li><a href="/page/18">Информация о нас</a></li>
-                                <li><a href="/page/55">Наши лицензии</a></li>
-                            </ul>
-                        </li>
-                    -->
+                    {!!Menu::getZdorovieNacii('2','Верхнее меню','','menu')!!}
 
-                        <li><a href="/page/18">Информация о нас</a></li>
-
-                        <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
-                        <!--<li class="{{Active::route('login')}}"><a href="/login">Личный кабинет</a></li>-->
-                       <!-- <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li> -->
-                        <li role="presentation" class="dropdown" style="padding-bottom: 5px;">
-                            <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Услуги
-                                <span class="caret"></span>
-                            </a>
-                            <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
-                                <li><a href="/service/53">Консультация</a></li>
-                                <li><a href="/service/127">Диагностика</a></li>
-                                <li><a href="/service/142">Лечение</a></li>
-
-                            </ul>
-                        </li>
-                        <!--<li class="{{Active::route('service.*')}}"><a href="/service">Услуги</a></li>-->
-
-
-                        <!--  <li class="{{Active::route('gallery.*')}}"><a href="/gallery">Галерея</a></li> -->
-                        <!--  <li class="{{Active::route('reviews.*')}}"><a href="/reviews">Отзывы</a></li> -->
-                       <!-- <li class="{{Active::route('team.*')}}"><a href="/team">Специалисты</a></li> -->
-                        <li class="{{Active::route('feedback.*')}}"><a href="/feedback">Контакты</a></li>
-
-                    </ul>
 
                 </div><!-- /.navbar-collapse -->
             </nav>
