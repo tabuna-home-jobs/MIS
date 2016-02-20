@@ -21,8 +21,10 @@ class ServiceController extends Controller
 
         $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with('categories.goods')->first();
 
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
         return view($sitename . $sitedomen . '/service', [
-            'data' => $query->categories
+            'data' => $query->categories, 'LastNews' => $getLastNews
         ]);
 
     }
@@ -79,7 +81,7 @@ class ServiceController extends Controller
         $Comments = $Goods->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
         $GoodsCat = $getSites->getGoods()->where('category_id', $Goods->category_id)->orderBy('name', 'asc')->get();
 
-        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
         return view($sitename . $sitedomen . '/goods', [
             'Good' => $Goods,
             'Category' => $Category,
