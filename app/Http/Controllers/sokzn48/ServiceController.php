@@ -19,7 +19,12 @@ class ServiceController extends Controller
     public function index($sitename = "sokzn48", $sitedomen = "ru")
     {
 
-        $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with('categories.goods')->first();
+        $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with(['categories' => function($query){
+            $query->orderBy('id','ASC')->with(['goods' => function($query){
+
+                $query->orderBy('id','desc');
+            }]);
+        }])->first();
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();

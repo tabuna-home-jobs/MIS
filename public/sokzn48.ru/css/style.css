@@ -331,3 +331,62 @@ i.feature-icon {
 .gallery-item-fix .entry-hover-wrapper{
     max-height: 150px;
 }
+.servlist h2{
+    font-size: 25px;
+}
+.servlist h3{
+    font-size: 18px;
+}
+.servlist>.row{
+    padding: 20px 0;
+    text-transform: uppercase;
+
+}
+.servlist>.row, .servlist>.row h2, .servlist>.row h3, .servlist>.row a{
+    font-weight: 300;
+}
+.serv-desk>img{
+    max-width: 100%;
+}
+.serv-col .item-serv{
+    width: 33%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.serv-col>.serv-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.serv-col>.serv-desk{
+    text-align: center;
+
+}
+.servlist>.row:nth-child(odd){
+    background: #fff;
+}
+.servlist>.row:nth-child(odd) .serv-desk{
+    color: #31a0c9;
+}
+.servlist>.row:nth-child(odd) a{
+    border-bottom: 1px solid #fff;
+}
+.servlist>.row:nth-child(odd) a:hover{
+    border-bottom: 1px solid #31a0c9;
+}
+
+.servlist>.row:nth-child(even){
+    background: #31a0c9;
+    color:#fff;
+}
+.servlist>.row:nth-child(even) a{
+    color:#fff !important;
+    border-bottom: 1px solid #31a0c9;
+}
+
+.servlist>.row:nth-child(even) a:hover{
+    border-bottom: 1px solid #fff;
+}

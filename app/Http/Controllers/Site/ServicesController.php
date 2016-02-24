@@ -9,7 +9,7 @@ use App\Http\Requests\Site\CommentRequest;
 use Session;
 use Kalnoy\Nestedset\Collection as Colect;
 
-class ServiceController extends Controller {
+class ServicesController extends Controller {
 
 	/**
 	 * Display a listing of the resource.

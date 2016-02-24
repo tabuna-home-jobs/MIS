@@ -51,7 +51,12 @@ class CategoryController extends Controller {
         $Category->parent_id = $request->parent_id;
 
         if (Request::hasFile('avatar')) {
-            Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            if((Image::make(Request::file('avatar'))->width() > 300) ||(Image::make(Request::file('avatar'))->height() > 300) ){
+                Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            }else{
+                Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            }
+
             $Category->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
         }else{
 

@@ -92,7 +92,7 @@ Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], funct
     Route::resource('/articles', 'ArticlesController');
     Route::resource('/answers', 'AnswersController');
     Route::resource('/reviews', 'ReviewsController');
-    Route::resource('/service', 'ServiceController');
+    Route::resource('/service', 'ServicesController');
     Route::resource('/shares', 'SharesController');
     Route::resource('/page', 'PageController');
     Route::resource('/gallery', 'GalleryController');
