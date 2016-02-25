@@ -186,7 +186,7 @@
                 </div>
                 <div class="step3">
                     <h5> Информация</h5>
-                    <div>
+                    <div class="wrapper-form">
                         <input type="text" name="firstname" max="255" required placeholder="Имя">
                         <input type="text" name="lastname" max="255" required placeholder="Фамилия">
                         <input type="email" name="email" required placeholder="Email адрес">
