@@ -77,7 +77,12 @@ Route::group(['domain' => 'cozn48.ru', 'namespace' => 'cozn48'], function()
     Route::resource('/page', 'PageController');
     Route::resource('/feedback', 'FeedbackController');
     Route::resource('/blog', 'BlogController');
+    Route::resource('/team', 'TeamController');
+    Route::resource('/shares', 'SharesController');
     Route::resource('/', 'HomeController');
+    Route::controller('/appointment', 'AppointmentController', [
+        'getIndex' => 'appointment',
+    ]);
 });
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Site;
+namespace App\Http\Controllers\Cozn48;
 
 use Illuminate\Http\Request;
 

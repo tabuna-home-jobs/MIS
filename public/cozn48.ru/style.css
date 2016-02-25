@@ -137,7 +137,7 @@ text-align: left;
 .everypeople{
 	vertical-align: top;
 	display: inline-block;
-
+	padding-bottom: 10px;
 }
 .best{
 	vertical-align: top;
@@ -459,7 +459,7 @@ background-repeat: no-repeat;
     border:none;
 }
 div,a,img {
-    outline: none !important; /* РЈР±РёСЂР°РµР�? РіСЂР°РЅРёС†Сѓ РІРѕРєСЂСѓРі СЃСЃС‹Р»РѕРє  */
+    outline: none !important; /* РЈР±РёСЂР°РµР�? РіСЂР°РЅРёС†Сѓ РІРѕРєСЂСѓРі СЃСЃС‹Р»РѕРє  */
 }
 div:focus{outline:none !important;}
 a:focus{outline:none !important;}
@@ -495,4 +495,71 @@ button:focus{outline:none !important;}
 #date {
 	max-height: 300px;
 	overflow: scroll;
+}
+.item-row-good-img img{
+	width:100px;
+}
+
+
+.page-content {
+	padding-bottom: 20px;
+}
+.seeall {
+	text-align: left;
+	margin:10px 0;
+}
+.item-row-good-img {
+	text-align: center;
+}
+.nav-good-category {
+	margin:30px 0;
+	text-align: center;
+}
+.item-row-good {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.item-row-good h3{
+	background-color: rgba(0, 0, 0, 0.75);
+	transition: 0.3s linear;
+	height: 55px;
+	overflow: hidden;
+}
+.item-row-good h3:hover{
+	transition: 0.3s linear;
+	background: #970841;
+}
+.item-row-good h3 > a:hover{
+	text-decoration: none;
+}
+.item-row-good h3:before{
+	content: ' ';
+	display: inline-block;
+	vertical-align: middle;  /* vertical alignment of the inline element */
+	height: 100%;
+}
+.item-row-good h3  a {
+	color: white;
+	font-size: 16px;
+	padding: 10px;
+	width:100%;
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+.nav-good-category-container {
+	text-align: center;
+}
+.seeall a{
+	color: #000;
+}
+.main-all div{
+	text-align: right !important;
+}
+.modal-body .form-group{
+	text-align: left;
+}
+.bg-inactive-step{
+	background: tan;
 }

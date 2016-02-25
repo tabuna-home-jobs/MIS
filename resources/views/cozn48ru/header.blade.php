@@ -77,24 +77,30 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 <h4 class="modal-title" id="myModalLabel">Обратный звонок</h4>
                             </div>
+                            <form action="/feedback" method="post">
                             <div class="modal-body">
-                                <form action="">
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon1">ФИО</span>
-                                        <input type="text" class="form-control" placeholder="ФИО" aria-describedby="basic-addon1">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon1">@</span>
-                                        <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon1">99-99-99</span>
-                                        <input type="text" class="form-control" placeholder="Телефон" aria-describedby="basic-addon1">
-                                    </div>
+
+                                <div class="form-group">
+                                    <label>ФИО</label>
+                                    <input type="text" name="fio" class="form-control" placeholder="ФИО" >
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" name="email" class="form-control" placeholder="Email" >
+                                </div>
+                                <div class="form-group">
+                                    <label>Телефон</label>
+                                    <input type="text" name="phone" class="form-control" placeholder="Телефон" >
+                                </div>
+                                <div class="form-group">
+                                    <label>Сообщение</label>
+                                    <textarea name="message" class="form-control" placeholder="Ваше сообщение"></textarea>
+                                </div>
+                                {{csrf_field()}}
 
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">Отправить</button>
+                                <button  type="submit" class="btn button1">Отправить</button>
                             </div>
                             </form>
                         </div>
@@ -106,6 +112,24 @@
             </div>
         </div>
     </div>
+    @if(Session::has('good'))
+        <div class="alert alert-success">
+            {{ Session::get('good') }}
+        </div>
+    @endif
+    @if (count($errors) > 0)
+        <div class="container alert-container">
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Ошибка!</strong> Пожалуйста проверте вводимые данные.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    @endif
     <div class="buttons">
         <nav class="navbar navbar-default container">
             <div class="container-fluid">

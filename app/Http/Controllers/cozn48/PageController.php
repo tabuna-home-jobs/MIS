@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\stomzn48;
+<?php namespace App\Http\Controllers\cozn48;
 
 use App\Http\Controllers\Controller;
 use App\Models\Sites;
@@ -13,11 +13,11 @@ class PageController extends Controller {
     public function show($Pages)
     {
 
-        $getSites = Sites::where('domen', '=', "stomzn48.ru")->first();
+        $getSites = Sites::where('domen', '=', "cozn48.ru")->first();
 
         $Page = $getSites->getPages()->find($Pages->id);
 
-         return view('stomzn48ru/page', [
+         return view('cozn48ru/page', [
              'Page' => $Page,
          ]);
     }

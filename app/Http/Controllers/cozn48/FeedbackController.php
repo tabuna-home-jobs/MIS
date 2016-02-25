@@ -1,7 +1,8 @@
-<?php namespace App\Http\Controllers\stomzn48;
+<?php namespace App\Http\Controllers\cozn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
+use Illuminate\Http\Request;
 use App\Http\Requests\Site\FeedbackRequest;
 use App\Models\Feedback;
 use App\Models\Sites;
@@ -25,7 +26,7 @@ class FeedbackController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create($sitename, $sitedomen)
+	public function create($sitename = "cozn48", $sitedomen = "ru")
 	{
         // Тут должна быть обработка
 
@@ -37,14 +38,17 @@ class FeedbackController extends Controller {
 	 *
 	 * @return Response
 	 */
-    public function store(FeedbackRequest $request)
+    public function store(Request $request, $sitename = "cozn48", $sitedomen = "ru")
 	{
+
+		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+
         $new = new Feedback([
             'fio' => $request->fio,
             'phone' => $request->phone,
             'email' => $request->email,
             'content' => $request->message,
-            'ids' => 10,
+            'ids' => $getSites->id,
         ]);
         $new->save();
 

@@ -3,19 +3,23 @@
 namespace App\Http\Controllers\cozn48;
 
 use Illuminate\Http\Request;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Sites;
 
-class ArticlesController extends Controller
+class SharesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($sitename = "cozn48", $sitedomen = "ru")
     {
-        //
+        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
+        $getShares =$getSites->getShares()->orderBy('id', 'desc')->paginate(5);
+        return view( $sitename.$sitedomen.'/shares', ['Shares' => $getShares]);
     }
 
     /**
@@ -45,9 +49,14 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($Share, $sitename = "cozn48", $sitedomen = "ru")
     {
-        //
+        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
+
+
+        $getShares = $getSites->getShares()->findorFail($Share->id);
+
+        return view( $sitename.$sitedomen.'/sharesItem', ['Shares' => $getShares]);
     }
 
     /**

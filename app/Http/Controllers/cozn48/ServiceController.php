@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\Site;
+<?php namespace App\Http\Controllers\cozn48;
 
 use App\Http\Controllers\Controller;
 use App\Models\Sites;
@@ -16,7 +16,7 @@ class ServiceController extends Controller {
 	 *
 	 * @return Response
 	 */
-    public function index($sitename, $sitedomen)
+    public function index($sitename = "cozn48", $sitedomen = "ru")
     {
 		/*
 
@@ -86,7 +86,7 @@ class ServiceController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store($sitename, $sitedomen, CommentRequest $request)
+	public function store( CommentRequest $request, $sitename = "cozn48", $sitedomen = "ru")
 	{
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
@@ -111,11 +111,18 @@ class ServiceController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-    public function show($sitename, $sitedomen, $id)
+    public function show($id, $sitename = "cozn48", $sitedomen = "ru")
 	{
 
-        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)
+            ->with(['getAllShares','getGoods' => function($query) use ($id){
 
+                $query->where('id',$id);
+            }])
+            ->first();
+
+
+        /*
         $Goods = $getSites->getGoods()->where('id', $id)->first();
         $Category = $getSites->getCategory()->findorFail($Goods->category_id);
 
@@ -123,7 +130,12 @@ class ServiceController extends Controller {
         $GoodsCat = $getSites->getGoods()->where('category_id', $Goods->category_id)->orderBy('name','asc')->get();
 
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
-        return view($sitename . $sitedomen . '/goods', ['Good' => $Goods,'Category' => $Category, 'Goods' => $GoodsCat, 'Comments' => $Comments,  'LastNews' => $getLastNews]);
+        */
+        return view($sitename . $sitedomen . '/goods',
+            [
+             'Goods' => $getSites->getGoods,
+             'shares' => $getSites->getAllShares
+            ]);
 	}
 
 	/**

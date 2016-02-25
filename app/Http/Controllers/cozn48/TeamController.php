@@ -3,32 +3,32 @@
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Models\Sites;
-use DB;
-use App\Models\Page as Page;
+use App\Models\SpecCat;
+use Request;
 
-class HomeController extends Controller {
+class TeamController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-    public function index($sitename = "cozn48", $sitedomen = "ru")
-    {
-        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with('reviews','categories.goods')->first();
+	public function index($sitename = 'cozn48', $sitedomen = 'ru')
+	{
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        //$Specialisty = $getSites->getTeam()->orderBy('sort', 'desc')->paginate(6);
+		$SpecCat = $getSites->getSpecCat()->get();
 
-        $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
-        $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
 
-		$specialization = DB::table('timetable')->select('specialization')->distinct()->get();
-		return view($sitename . $sitedomen . '/index', [
-            'getNews' => $getNews,
-            'getShares' => $getShares,
-			'specialization' => $specialization,
-			'reviews' => $getSites['reviews'],
-			'categories' => $getSites['categories']
-        ]);
-    }
+		$requestCategory = Request::input('catspec');
+		if (is_null($requestCategory))
+			$Specialisty = $getSites->getTeam()->orderBy('sort', 'asc')->paginate(8);
+		else
+			$Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->orderBy('sort', 'asc')->paginate(8);
+
+		//dd($requestCategory);
+        return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty,'SpCat' => $SpecCat]);
+	}
 
 	/**
 	 * Show the form for creating a new resource.

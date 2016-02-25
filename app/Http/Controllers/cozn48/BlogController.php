@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\Site;
+<?php namespace App\Http\Controllers\cozn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
@@ -13,7 +13,7 @@ class BlogController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index($sitename, $sitedomen)
+	public function index($sitename = "cozn48", $sitedomen = "ru")
 	{
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
         $getNews =$getSites->getNews()->orderBy('id', 'desc')->paginate(6);
@@ -46,7 +46,7 @@ class BlogController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($sitename, $sitedomen,$id)
+	public function show($id, $sitename = "cozn48", $sitedomen = "ru")
 	{
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
         $getNews =$getSites->getNews()->find($id);

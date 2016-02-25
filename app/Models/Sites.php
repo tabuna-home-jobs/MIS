@@ -60,6 +60,10 @@ class Sites extends Model {
     {
         return $this->hasOne('App\Models\Shares', 'ids');
     }
+    public function getAllShares(){
+
+        return $this->hasMany('App\Models\Shares', 'ids');
+    }
 
     public function getReviews()
     {

@@ -31,9 +31,11 @@
                                 <div class="item-row-good-img">
                                     <img src="{{$item['avatar']}}" alt="">
                                 </div>
-                                <h3><a href="/blog/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
+                                <h3><a href="/service/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
                                 <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
-                                <div class="seeall"><img src="/cozn48.ru/img/minibutton.png"><a href="/service/{{$item['id']}}">Перейти к услуге</a><br></div>
+                                <div class="seeall">
+                                    <img src="/cozn48.ru/img/minibutton.png">
+                                    <a href="/service/{{$item['id']}}">Перейти к услуге</a><br></div>
                             </div>
                         </div>
                     @endforeach
@@ -49,36 +51,6 @@
 
     </div>
 
-    <style>
-        .page-content {
-            padding-bottom: 20px;
-        }
-        .seeall {
-            text-align: left;
-            margin:10px 0;
-        }
-        .item-row-good-img {
-            text-align: center;
-        }
-        .nav-good-category {
-            margin:30px 0;
-            text-align: center;
-        }
-        .item-row-good {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .item-row-good h3>a {
-            background-color: rgba(0, 0, 0, 0.75);
-            color: white;
-            padding: 10px;
-            display: inline-block;
-        }
-        .nav-good-category-container {
-            text-align: center;
-        }
-    </style>
     <script>
         var resized = function (height) {
 
