@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\site;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Models\Sites as Sites;
+use Illuminate\Http\Request;
 
 class VideoGalleryController extends Controller
 {
@@ -14,7 +14,7 @@ class VideoGalleryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($sitename, $sitedomen)
+    public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $albums  =  $getSites->getVideoAlbums()->select('*')->get();
@@ -53,7 +53,7 @@ class VideoGalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($sitename,$sitedomen,$id)
+    public function show($sitename = 'zdorovie48', $sitedomen = 'ru', $id)
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $albums  =  $getSites->getVideoAlbums()->select('*')->get();

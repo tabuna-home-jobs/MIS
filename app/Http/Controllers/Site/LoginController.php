@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Site;
 
-use Illuminate\Http\Request;
-use App\Models\Sites;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Models\Sites;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -14,7 +14,7 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($sitename, $sitedomen)
+    public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         return view($sitename . $sitedomen . '/login', []);

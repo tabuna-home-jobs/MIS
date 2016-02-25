@@ -1,11 +1,11 @@
 <?php namespace App\Http\Controllers\Site;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Models\Album;
 use App\Models\Photo;
-use Illuminate\Http\Request;
 use App\Models\Sites;
+use Illuminate\Http\Request;
 
 class GalleryController extends Controller {
 
@@ -14,7 +14,7 @@ class GalleryController extends Controller {
 	 *
 	 * @return Response
 	 */
-    public function index($sitename, $sitedomen)
+	public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $albums  =  $getSites->getAlbums()->select('*')->get();
@@ -51,7 +51,7 @@ class GalleryController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($sitename,$sitedomen,$id)
+	public function show($id, $sitename, $sitedomen)
 	{
 		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 		$albums  =  $getSites->getAlbums()->select('*')->get();

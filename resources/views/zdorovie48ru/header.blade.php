@@ -2,24 +2,25 @@
 <html>
 
 <head>
-    <title>Здоровье Нации - @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="csrf-token" content="{{ csrf_token() }}" >
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300&subset=latin,cyrillic'
           rel='stylesheet' type='text/css'>
 
 
-
-
-    <meta name="description" content="@yield('description')">
-    <meta name="keywords" content="@yield('keywords')">
-    <meta property="og:title" content="@yield('title')">
-    <meta property="og:description" content="@yield('description')">
-    <meta property="og:image" content="@yield('avatar')">
-    <meta name="twitter:title" content="@yield('title')">
-    <meta name="twitter:description" content="@yield('description')"/>
-    <meta name="twitter:image:src" content="@yield('avatar')"/>
-
+    @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
+        <title>Здоровье Нации - @yield('title')</title>
+        <meta name="description" content="@yield('description')">
+        <meta name="keywords" content="@yield('keywords')">
+        <meta property="og:title" content="@yield('title')">
+        <meta property="og:description" content="@yield('description')">
+        <meta property="og:image" content="@yield('avatar')">
+        <meta name="twitter:title" content="@yield('title')">
+        <meta name="twitter:description" content="@yield('description')"/>
+        <meta name="twitter:image:src" content="@yield('avatar')"/>
+        @else
+        {!! $meta !!}
+        @endif
 
 
     <!--theme colour-->

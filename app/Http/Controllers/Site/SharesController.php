@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Site;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Models\Sites;
+use Illuminate\Http\Request;
 
 class SharesController extends Controller
 {
@@ -15,7 +14,7 @@ class SharesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($sitename, $sitedomen)
+    public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
         $getShares =$getSites->getShares()->orderBy('id', 'desc')->paginate(5);
@@ -49,7 +48,7 @@ class SharesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($sitename, $sitedomen,$Share)
+    public function show($Share, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
 

@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
+use App\Models\Page as Page;
 use App\Models\Sites;
 use DB;
-use App\Models\Page as Page;
 
 class HomeController extends Controller {
 
@@ -13,7 +13,7 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-    public function index($sitename, $sitedomen)
+	public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 

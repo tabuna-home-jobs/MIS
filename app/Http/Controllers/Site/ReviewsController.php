@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\ReviewsRequest;
+use App\Models\Reviews;
 use App\Models\Sites;
 use Session;
-use App\Models\Reviews;
 
 class ReviewsController extends Controller
 {
@@ -14,7 +14,7 @@ class ReviewsController extends Controller
      *
      * @return Response
      */
-    public function index($sitename, $sitedomen)
+    public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Reviews = $getSites->getReviews()->where('publish', true)->orderBy('id', 'desc')->paginate(6);
@@ -36,7 +36,7 @@ class ReviewsController extends Controller
      *
      * @return Response
      */
-    public function store($sitename, $sitedomen, ReviewsRequest $requests)
+    public function store(ReviewsRequest $requests, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Reviews = new Reviews([

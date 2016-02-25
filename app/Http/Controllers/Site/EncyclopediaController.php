@@ -15,7 +15,7 @@ class EncyclopediaController extends Controller
      *
      * @return Response
      */
-    public function index($sitename,$sitedomen)
+    public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $LastNews = EncyPost::limit(6)->get();
         $MainElementMenu = EncyCategory::where('encycategory_id','0')->select('id','name')->get();
@@ -59,7 +59,7 @@ class EncyclopediaController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($sitename,$sitedomen,$model)
+    public function show($model, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
 
 

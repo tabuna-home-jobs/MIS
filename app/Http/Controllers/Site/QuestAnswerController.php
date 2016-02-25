@@ -17,7 +17,7 @@ class QuestAnswerController extends Controller
      *
      * @return Response
      */
-    public function index($sitename,$sitedomen)
+    public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
 
         $QuestAnswers = QuestAnswer::whereRaw('ids = ? and publish = ?', [Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id, true])
@@ -44,7 +44,7 @@ class QuestAnswerController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store($sitename, $sitedomen, QuestAnswerRequest $request)
+    public function store(QuestAnswerRequest $request, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $new = new QuestAnswer(
             $request->only('fio', 'questions', 'phone', 'email')

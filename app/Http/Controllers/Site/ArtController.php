@@ -7,7 +7,7 @@ use App\Models\Sites;
 class ArtController extends Controller {
 
 
-    public function index($sitename, $sitedomen)
+    public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
         $getArts =$getSites->getArts()->orderBy('id', 'desc')->paginate(5);
@@ -27,7 +27,7 @@ class ArtController extends Controller {
     }
 
 
-    public function show($sitename, $sitedomen,$id)
+    public function show($id, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
 
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();

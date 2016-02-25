@@ -1,13 +1,12 @@
 <?php namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Models\Sites;
-use App\Models\Category as Cats;
-use Request;
-use App\Models\Comments;
 use App\Http\Requests\Site\CommentRequest;
+use App\Models\Category as Cats;
+use App\Models\Comments;
+use App\Models\Sites;
+use Request;
 use Session;
-use Kalnoy\Nestedset\Collection as Colect;
 
 class ServicesController extends Controller {
 
@@ -16,7 +15,7 @@ class ServicesController extends Controller {
 	 *
 	 * @return Response
 	 */
-    public function index($sitename, $sitedomen)
+	public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
 		/*
 
@@ -86,7 +85,7 @@ class ServicesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store($sitename, $sitedomen, CommentRequest $request)
+	public function store(CommentRequest $request, $sitename = 'zdorovie48', $sitedomen = 'ru')
 	{
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
@@ -111,7 +110,7 @@ class ServicesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-    public function show($sitename, $sitedomen, $id)
+	public function show($id, $sitename = 'zdorovie48', $sitedomen = 'ru')
 	{
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();

@@ -16,7 +16,7 @@ class EncyPostController extends Controller
      *
      * @return Response
      */
-    public function index($sitename,$sitedomen )
+    public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
 
         //Алфавитный указатель
@@ -78,7 +78,7 @@ class EncyPostController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($sitename,$sitedomen,$model)
+    public function show($model, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(2)->get();

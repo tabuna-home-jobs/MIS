@@ -8,17 +8,21 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300&subset=latin,cyrillic'
           rel='stylesheet' type='text/css'>
 
+    @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
+        <meta name="description" content="@yield('description')">
+        <meta name="keywords" content="@yield('keywords')">
+        <meta property="og:title" content="@yield('title')">
+        <meta property="og:description" content="@yield('description')">
+        <meta property="og:image" content="@yield('avatar')">
+        <meta name="twitter:title" content="@yield('title')">
+        <meta name="twitter:description" content="@yield('description')"/>
+        <meta name="twitter:image:src" content="@yield('avatar')"/>
+        @else
+        {!! $meta !!}
+        @endif
 
 
 
-    <meta name="description" content="@yield('description')">
-    <meta name="keywords" content="@yield('keywords')">
-    <meta property="og:title" content="@yield('title')">
-    <meta property="og:description" content="@yield('description')">
-    <meta property="og:image" content="@yield('avatar')">
-    <meta name="twitter:title" content="@yield('title')">
-    <meta name="twitter:description" content="@yield('description')"/>
-    <meta name="twitter:image:src" content="@yield('avatar')"/>
 
 
 

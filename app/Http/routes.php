@@ -81,9 +81,7 @@ Route::group(['domain' => 'cozn48.ru', 'namespace' => 'cozn48'], function()
 });
 
 
-
-
-Route::group(['domain' => '{sitename}.{sitedomen}','namespace' => 'Site'], function()
+Route::group(['domain' => 'zdorovie48.ru', 'namespace' => 'Site'], function ()
 {
     Route::resource('/video', 'VideoGalleryController');
     Route::resource('/questanswer', 'QuestAnswerController');
@@ -189,7 +187,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefi
     ]);
 
 
-
+    Route::resource('seostatic', 'SeoSaticController');
 
     Route::get('/wmenuindex', array('as' => 'wmenuindex','uses'=>'WmenuController@wmenuindex'));
     Route::post('/addcustommenu', array('as' => 'addcustommenu','uses'=>'WmenuController@addcustommenu'));

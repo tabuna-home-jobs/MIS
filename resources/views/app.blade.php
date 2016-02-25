@@ -489,20 +489,34 @@
                         </li>
                         @endif
 
-                        <li class="{{Active::route('dashboard.options.*')}}">
-                            <a href="{{URL::route('dashboard.options.index')}}">
-                                <i class="fa fa-cog"></i>
+
+                        <li class="{{Active::route(['dashboard.options.*','dashboard.seostatic.*'])}}">
+                            <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                                <i class="fa fa-cogs icon"></i>
                                 <span>Настройки</span>
                             </a>
+
+                            <ul class="nav nav-sub dk">
+
+                                <li class="{{Active::route('dashboard.options.*')}}">
+                                    <a href="{{URL::route('dashboard.options.index')}}">
+                                        <i class="fa fa-cog icon"></i>
+                                        <span>Константы</span>
+                                    </a>
+                                </li>
+                                <li class="{{Active::route('dashboard.seostatic.*')}}">
+                                    <a href="{{URL::route('dashboard.seostatic.index')}}">
+                                        <i class="fa fa-globe"></i>
+                                        <span>SEO</span>
+                                    </a>
+                                </li>
+
+                            </ul>
                         </li>
-
-
-
-
-
-
-
-
                     </ul>
                 </nav>
                 <!-- nav -->

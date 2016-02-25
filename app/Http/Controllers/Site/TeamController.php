@@ -5,6 +5,7 @@ use App\Http\Requests;
 use App\Models\Sites;
 use App\Models\SpecCat;
 use Request;
+
 class TeamController extends Controller {
 
 	/**
@@ -12,7 +13,7 @@ class TeamController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index($sitename, $sitedomen)
+	public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
 	{
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         //$Specialisty = $getSites->getTeam()->orderBy('sort', 'desc')->paginate(6);

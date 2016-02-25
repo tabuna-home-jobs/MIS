@@ -1,16 +1,16 @@
 <?php namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Site\CommentRequest;
+use App\Models\Comments;
 use App\Models\Sites;
 use Request;
-use App\Models\Comments;
-use App\Http\Requests\Site\CommentRequest;
 use Session;
 
 class PageController extends Controller {
 
 
-    public function show($sitename, $sitedomen, $Pages)
+    public function show($sitename = 'zdorovie48', $sitedomen = 'ru', $Pages)
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 

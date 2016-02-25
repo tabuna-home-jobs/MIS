@@ -218,6 +218,9 @@ return [
 		'GalleryOnMain'=> \App\Facades\GalleryOnMain::class,
 		'qaMain'=> \App\Facades\QAMain::class,
 		'catOnMain'=> \App\Facades\categoryOnMain::class,
+
+			'SEO' => App\Facades\SEOFacades::class,
+
     ],
 
 ];

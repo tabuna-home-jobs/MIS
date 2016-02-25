@@ -4,10 +4,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Http\Requests\Site\AppointmentRequest;
 use App\Models\Appointments;
+use App\Models\Entry;
 use App\Models\TimeTable;
 use DB;
 use Session;
-use App\Models\Entry;
 
 class AppointmentController extends Controller
 {
@@ -17,7 +17,7 @@ class AppointmentController extends Controller
      *
      * @return Response
      */
-    public function getIndex($sitename, $sitedomen)
+	public function getIndex($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         //Получить все места
 		$specialization = DB::table('timetable')->select('specialization')->distinct()->orderBy('specialization', 'ASC')->get();
@@ -30,21 +30,21 @@ class AppointmentController extends Controller
      * @return Response
      */
 
-    public function postSpecial($sitename, $sitedomen, $place)
+	public function postSpecial($place, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
 		$specialization = DB::table('timetable')->select('specialization')->where('subdivision', $place)->distinct()->orderBy('specialization', 'ASC')->get();
         return response()->json($specialization);
     }
 
 
-    public function postFio($sitename, $sitedomen,$specialization)
+	public function postFio($sitename = 'zdorovie48', $sitedomen = 'ru', $specialization)
     {
 		$fio = DB::table('timetable')->select('name')->whereRaw('specialization = ?', [$specialization])->distinct()->orderBy('name', 'ASC')->get();
         return response()->json($fio);
     }
 
 
-    public function postTime($sitename, $sitedomen, $place, $specialization, $fio)
+	public function postTime($sitename = 'zdorovie48', $sitedomen = 'ru', $place, $specialization, $fio)
     {
         $doctor = TimeTable::whereRaw('subdivision = ? and specialization = ? and name = ?',[$place,$specialization,$fio])->first();
 		$doctor = DB::table('entry')
@@ -70,7 +70,7 @@ class AppointmentController extends Controller
     }
 
 
-	public function postPlace($sitename, $sitedomen, $specialization, $fio)
+	public function postPlace($specialization, $fio, $sitename = 'zdorovie48', $sitedomen = 'ru')
 	{
 		$place = TimeTable::whereRaw('specialization = ? and name = ?', [$specialization, $fio])->distinct()->orderBy('subdivision', 'ASC')->get();
 		return response()->json($place);

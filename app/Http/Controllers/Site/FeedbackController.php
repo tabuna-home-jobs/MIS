@@ -15,7 +15,7 @@ class FeedbackController extends Controller {
 	 *
 	 * @return Response
 	 */
-    public function index($sitename, $sitedomen)
+	public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         return view( $sitename.$sitedomen.'/feedback');
     }
@@ -25,7 +25,7 @@ class FeedbackController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create($sitename, $sitedomen)
+	public function create($sitename = 'zdorovie48', $sitedomen = 'ru')
 	{
         // Тут должна быть обработка
 
@@ -37,7 +37,7 @@ class FeedbackController extends Controller {
 	 *
 	 * @return Response
 	 */
-    public function store($sitename, $sitedomen, FeedbackRequest $request)
+	public function store(FeedbackRequest $request, $sitename = 'zdorovie48', $sitedomen = 'ru')
 	{
 
         $new = new Feedback([
