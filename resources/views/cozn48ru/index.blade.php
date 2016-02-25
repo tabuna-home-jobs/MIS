@@ -153,7 +153,7 @@
                 <div class="step1">
                 <div class="description-form">Специализация</div>
                 <div class="input-form">
-                    <select name="specialization" required>
+                    <select name="specialization" required class="form-control">
                         <option selected disabled>Выберите специализацию</option>
                         @foreach($specialization as $spec)
                             <option value="{{$spec->specialization}}">{{$spec->specialization}}</option>
@@ -161,37 +161,43 @@
                     </select></div>
                 <div class="description-form">Врач</div>
                 <div class="input-form">
-                    <select disabled name="name" required>
+                    <select disabled name="name" required class="form-control">
                         <option>Выберите врача</option>
                     </select>
                 </div>
 
 
                 <div class="description-form">Выберите место</div>
-                    <div class="input-form">
-                        <select disabled  name="subdivision" required>
-                            <option selected disabled>Выберите место</option>
-                        </select>
+                <div class="input-form">
+                    <select disabled  name="subdivision" required class="form-control">
+                        <option selected disabled>Выберите место</option>
+                    </select>
+                </div>
+
+
+                    <div class="fbtn butnstep">
+                        <a class="" onclick="secondStep()" disabled>ДАЛЕЕ</a>
                     </div>
-                <div class="fbtn">
-                    <a class="" onclick="secondStep()" disabled>ДАЛЕЕ</a>
+
                 </div>
-                </div>
+
                 <div class="step2">
                     <h5> Врач может принять вас в следующие дни:</h5>
-                    <div id="date"></div>
-                    <div class="fbtn">
+                    <div id="date">
+                        <h5>Пусто</h5>
+                    </div>
+                    <div class="fbtn butnstep">
                         <a class="" onclick="thirdStep()">ДАЛЕЕ</a>
                     </div>
                 </div>
                 <div class="step3">
                     <h5> Информация</h5>
                     <div class="wrapper-form">
-                        <input type="text" name="firstname" max="255" required placeholder="Имя">
-                        <input type="text" name="lastname" max="255" required placeholder="Фамилия">
-                        <input type="email" name="email" required placeholder="Email адрес">
-                        <input type="number" name="phone" required placeholder="Номер телефона">
-                        <textarea rows="4" name="comment" required placeholder="Комментарий"></textarea>
+                        <input type="text" class="form-control" name="firstname" max="255" required placeholder="Имя">
+                        <input type="text" class="form-control" name="lastname" max="255" required placeholder="Фамилия">
+                        <input type="email" class="form-control" name="email" required placeholder="Email адрес">
+                        <input type="text" class="form-control" name="phone" required placeholder="Номер телефона">
+                        <textarea rows="4" class="form-control" name="comment" required placeholder="Комментарий"></textarea>
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="fbtn"><button class="btn-block" type="submit" >ЗАПИСАТЬСЯ</button></div>
                     </div>

@@ -566,3 +566,27 @@ button:focus{outline:none !important;}
 .wrapper-form{
 	padding-bottom: 10px;
 }
+#date h5{
+	padding: 10px 0;
+	box-shadow: 0px 1px 1px #ccc;
+	background: #eee;
+}
+#date {
+	max-height: 300px;
+	overflow: auto;
+	box-shadow: inset 0 0 6px;
+	padding: 10px;
+	border-radius: 6px;
+	/* padding-right: 25px; */
+}
+.fbtn>a, .fbtn>button{
+	text-align: center;
+}
+.butnstep{
+	text-align: left !important;
+	margin-bottom: 2px;
+	margin-top: 10px;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+	color:#fff;
+}
