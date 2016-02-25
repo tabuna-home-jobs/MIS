@@ -23,26 +23,32 @@ class ServiceController extends Controller
 
 
         $requestCategory = Request::input('category');
-        //dd($requestCategory);
-        if (is_null($requestCategory))
-            $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with(['categories' => function($query){
-                $query->orderBy('id','ASC')->with(['goods' => function($query){
+        $blue = "";
+        if (is_null($requestCategory)) {
 
-                    $query->orderBy('id','desc');
-                }]);
-            }])->first();
-        else
-            $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with(['categories' => function($query) use($requestCategory)  {
-                $query->where('id', $requestCategory)->orderBy('id','ASC')->with(['goods' => function($query){
+            $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with(['categories' => function ($query) {
+                $query->orderBy('id', 'ASC')->with(['goods' => function ($query) {
 
-                    $query->orderBy('id','desc');
+                    $query->orderBy('id', 'desc');
                 }]);
             }])->first();
 
+        }else {
+
+            $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with(['categories' => function ($query) use ($requestCategory) {
+                $query->where('id', $requestCategory)->orderBy('id', 'ASC')->with(['goods' => function ($query) {
+
+                    $query->orderBy('id', 'desc');
+                }]);
+            }])->first();
+            if( ($requestCategory % 2 ) == 1 ){
+                $blue = "blue";
+            }
+        }
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
         return view($sitename . $sitedomen . '/service', [
-            'data' => $query->categories, 'LastNews' => $getLastNews
+            'data' => $query->categories, 'LastNews' => $getLastNews, 'blue' => $blue
         ]);
 
     }

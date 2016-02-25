@@ -5,7 +5,6 @@
         <div class="container text-center text-middle">
             <div class="lead">
                 <h1>
-
                    Новости комплекса
                 </h1>
             </div>
@@ -17,46 +16,32 @@
 
         <div class="wrapper-md">
             <div class="row">
-                <div class="col-sm-9">
-                    <div class="blog-post">
-                        <div class="panel">
-                            <div class="wrapper-lg">
-                    @foreach($News as $key=>$item)
-                                    <div class="col-md-4 item-row">
+                                @foreach($News as $key=>$item)
+                                    <div class="col-md-4 item-row padder-v">
                                         <div class="blog-post">
-                                            <div class="panel">
-                                                <a href="/blog/{{$item->id}}"> <img src="{{$item->avatar}}" class="img-full"></a>
-
-                                                <div class="wrapper-lg">
-                                                    <h4 class="m-t-none"><a
-                                                                href="/blog/{{$item->id}}">{{str_limit($item->name,50,'...')}}</a></h4>
-
-                                                    <div>
-                                                        {{str_limit(strip_tags($item->content), 150, '...')}}
-                                                    </div>
-                                                    <div class="line line-lg b-b b-light"></div>
-                                                    <div class="text-muted">
-                                                        <i class="fa fa-clock-o text-muted"></i> {{$item->created_at->diffForHumans()}}
-                                                    </div>
-                                                </div>
+                                            <a href="/blog/{{$item->id}}"><h4 class="m-t-none">
+                                                {{str_limit($item->name,50,'...')}}
+                                            </h4></a>
+                                            <div class="text-smal">
+                                                {{$item->created_at->diffForHumans()}}
                                             </div>
+
+                                            <a href="/blog/{{$item->id}}">
+                                                <img src="{{$item->avatar}}" class="img-full">
+                                            </a>
+
+                                            <div class="padder-v">
+                                                {{str_limit(strip_tags($item->content), 150, '...')}}
+                                            </div>
+
                                         </div>
 
                                     </div>
                                     @if(($key+1) % 3 == 0)
                                         <div class="clearfix"></div>
                                     @endif
-                    @endforeach
-                        <div class="clearfix"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    @if(isset($LastNews))
-                        @include('sokzn48ru._layouts.newslsit',['listnews' => $LastNews])
-                    @endif
-                </div>
+                                 @endforeach
+                                <div class="clearfix"></div>
             </div>
         </div>
 

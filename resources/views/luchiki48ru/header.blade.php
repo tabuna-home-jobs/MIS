@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex"/>
-    <title>СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ» - @yield('title')</title>
+
+    @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
+        <title>СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ» - @yield('title')</title>
+        <meta name="description" content="@yield('description')">
+        <meta name="keywords" content="@yield('keywords')">
+        <meta property="og:title" content="@yield('title')">
+        <meta property="og:description" content="@yield('description')">
+        <meta property="og:image" content="@yield('avatar')">
+        <meta name="twitter:title" content="@yield('title')">
+        <meta name="twitter:description" content="@yield('description')"/>
+        <meta name="twitter:image:src" content="@yield('avatar')"/>
+    @else
+        {!! $meta !!}
+    @endif
     <link rel="stylesheet" href="/luchiki48.ru/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/luchiki48.ru/css/slick.css">
     <link rel="stylesheet" href="/luchiki48.ru/style.css">

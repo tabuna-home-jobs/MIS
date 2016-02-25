@@ -23,7 +23,6 @@
         <div class="wrapper-md">
             <div class="row">
                 <div class="col-sm-9">
-                    <div class="blog-post">
                         <div class="panel">
 
                             <div class="wrapper-lg">
@@ -82,7 +81,6 @@
                                     <div class="clearfix"></div>
                             </div>
                         </div>
-                    </div>
                 </div>
                 <div class="col-sm-3">
                     <nav class="primary-albums clearfix">
