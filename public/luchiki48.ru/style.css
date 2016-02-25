@@ -17,6 +17,9 @@ a,div,button {
 a,img{
     outline: none !important;
 }
+.center{
+    text-align: center;
+}
 .header-top{
 background-color: #5eaef7;
 color: white;
@@ -529,10 +532,18 @@ left: 88%;
 }
 .item-row img{
     max-width: 100%;
-    max-height: 150px;
+    /*max-height: 150px;*/
 }
 .item-serv{
     text-align: center;
+}
+.service-list h1{
+    color: #337AB7;
+    text-transform: uppercase;
+}
+.service-list a{
+    color: #fff;
+    background: #337AB7;
 }
 .blog-wrapper{
     margin-bottom: 15px;

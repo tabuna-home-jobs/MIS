@@ -13,10 +13,9 @@
         }
     </style>
     <div class="page-content">
-        <div class="container">
-            <h1>Услуги</h1>
+        <div class="container service-list">
+            <div class="center"> <h1>Услуги</h1></div>
             <div class="page-text">
-
                <div class="row">
                    @foreach($data as $item)
 
@@ -27,21 +26,22 @@
                                <div class="col-md-4 item-row item-serv">
                                    <div>
                                        <div>
-                                           <img src="{{$good->avatar}}" alt="{{$good->name}}"></div>
-                                       <h4>
-                                           <a href="/service/{{$good->id}}">
+                                           <img src="{{$good->avatar}}" alt="{{$good->name}}">
+                                       </div>
+                                       <a href="/service/{{$good->id}}">
+                                           <h4>
                                                {{str_limit((strip_tags($good->name)), 80, '...')}}
-                                           </a>
-                                       </h4>
+                                           </h4>
+                                       </a>
                                        <p class="day"></p>
                                        <div>
                                            {{str_limit((strip_tags($good->content)), 130, '...')}}
                                        </div>
-                                       <div class="seeall">
+                                      <!-- <div class="seeall">
                                            <a href="/service/{{$good->id}}" class="btn btn-primary btn-default">
                                                <span class="glyphicon glyphicon-eye-open"></span> Посмотреть
                                            </a>
-                                       </div>
+                                       </div>-->
                                    </div>
                                </div>
                                @if(($key+1) % 3 == 0)
