@@ -192,6 +192,17 @@ textarea.form-control{
 .after-booking-sec .blog-content{
     font-size: 16px;
 }
+.blog-post h4{
+    text-transform: uppercase;
+    color: #31A0C9;
+}
+.blog-post>a>img{
+    margin-top: 10px;
+    border-top: 5px solid #31A0C9;
+}
+.text-smal{
+    color:#31A0C9;
+}
 .medicom-feature-list li {
     padding-left: 55px !important;
     padding-bottom: 20px;
@@ -354,6 +365,12 @@ i.feature-icon {
     vertical-align: middle;
     text-align: center;
 }
+
+@media(max-width: 700px){
+    .serv-col .item-serv{
+        width: 100%;
+    }
+}
 .serv-col>.serv-center{
     position: absolute;
     top: 50%;
@@ -363,7 +380,6 @@ i.feature-icon {
 }
 .serv-col>.serv-desk{
     text-align: center;
-
 }
 .servlist>.row:nth-child(odd){
     background: #fff;
@@ -378,15 +394,18 @@ i.feature-icon {
     border-bottom: 1px solid #31a0c9;
 }
 
-.servlist>.row:nth-child(even){
+.servlist > .row.blue .serv-desk{
+    color: #fff;
+}
+.servlist>.row:nth-child(even), .servlist>.row.blue {
     background: #31a0c9;
     color:#fff;
 }
-.servlist>.row:nth-child(even) a{
+.servlist>.row:nth-child(even) a, .servlist>.row.blue a{
     color:#fff !important;
     border-bottom: 1px solid #31a0c9;
 }
 
-.servlist>.row:nth-child(even) a:hover{
+.servlist>.row:nth-child(even) a:hover, .servlist>.row.blue a:hover{
     border-bottom: 1px solid #fff;
 }

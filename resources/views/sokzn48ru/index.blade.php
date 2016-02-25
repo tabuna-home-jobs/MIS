@@ -20,7 +20,7 @@
 
             <div class="row  hidden-sm-down">
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                    <a href="#" class="square-block">
+                    <a href="/service?category=106" class="square-block">
                         <span class="fa fa-5x icon-soc-embrion"></span>
 
                         <p class="text-uppercase">До рождения</p>
@@ -29,7 +29,7 @@
 
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                    <a href="#" class="square-block">
+                    <a href="/service?category=109" class="square-block">
                         <span class="fa fa-5x icon-soc-embrion"></span>
 
                         <p class="text-uppercase">ДЕТСТВО</p>
@@ -38,7 +38,7 @@
 
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                    <a href="#" class="square-block">
+                    <a href="/service?category=110" class="square-block">
                         <span class="fa fa-5x icon-soc-embrion"></span>
 
                         <p class="text-uppercase">ОСОБЕННЫЕ ДЕТИ</p>
@@ -47,7 +47,7 @@
 
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                    <a href="#" class="square-block">
+                    <a href="/service?category=111" class="square-block">
                         <span class="fa fa-5x icon-soc-embrion"></span>
 
                         <p class="text-uppercase">ВЗРОСЛЕНИЕ</p>

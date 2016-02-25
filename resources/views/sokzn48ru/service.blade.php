@@ -17,9 +17,8 @@
 
     <section class="servlist">
 
-
                                     @foreach($data as $item)
-                                    <div class="row">
+                                    <div class="row {{$blue}}">
                                         <div class="container">
                                             <div class="col-md-3 serv-img serv-col">
                                                 <div class="serv-desk">

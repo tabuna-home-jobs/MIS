@@ -4,7 +4,20 @@
 
     <meta charset="utf-8">
     <meta name="robots" content="noindex"/>
-    <title>семейный оздоровительный комплекс - @yield('title')</title>
+
+    @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
+        <title>семейный оздоровительный комплекс - @yield('title')</title>
+        <meta name="description" content="@yield('description')">
+        <meta name="keywords" content="@yield('keywords')">
+        <meta property="og:title" content="@yield('title')">
+        <meta property="og:description" content="@yield('description')">
+        <meta property="og:image" content="@yield('avatar')">
+        <meta name="twitter:title" content="@yield('title')">
+        <meta name="twitter:description" content="@yield('description')"/>
+        <meta name="twitter:image:src" content="@yield('avatar')"/>
+    @else
+        {!! $meta !!}
+    @endif
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,300,700&subset=latin,cyrillic'
