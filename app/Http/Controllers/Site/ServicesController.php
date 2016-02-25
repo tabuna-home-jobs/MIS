@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\CommentRequest;
 use App\Models\Category as Cats;
 use App\Models\Comments;
+use App\Models\Goods;
 use App\Models\Sites;
 use Request;
 use Session;
@@ -115,9 +116,14 @@ class ServicesController extends Controller {
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
-        $Goods = $getSites->getGoods()->where('id', $id)->first();
-        $Category = $getSites->getCategory()->findorFail($Goods->category_id);
 
+		if (intval($id)) {
+			$Goods = $getSites->getGoods()->where('id', $id)->first();
+		} else {
+			$Goods = $getSites->getGoods()->where('slug', $id)->firstOrFail();
+		}
+
+		$Category = $getSites->getCategory()->findorFail($Goods->category_id);
         $Comments = $Goods->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
         $GoodsCat = $getSites->getGoods()->where('category_id', $Goods->category_id)->orderBy('name','asc')->get();
 

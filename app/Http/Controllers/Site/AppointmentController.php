@@ -37,14 +37,14 @@ class AppointmentController extends Controller
     }
 
 
-	public function postFio($sitename = 'zdorovie48', $sitedomen = 'ru', $specialization)
+	public function postFio($specialization, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
 		$fio = DB::table('timetable')->select('name')->whereRaw('specialization = ?', [$specialization])->distinct()->orderBy('name', 'ASC')->get();
         return response()->json($fio);
     }
 
 
-	public function postTime($sitename = 'zdorovie48', $sitedomen = 'ru', $place, $specialization, $fio)
+	public function postTime($place, $specialization, $fio, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $doctor = TimeTable::whereRaw('subdivision = ? and specialization = ? and name = ?',[$place,$specialization,$fio])->first();
 		$doctor = DB::table('entry')
