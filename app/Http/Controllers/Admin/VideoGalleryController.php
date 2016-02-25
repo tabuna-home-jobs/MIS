@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\admin;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\VideoAlbum as Album;
+use App\Http\Requests;
 use App\Models\Video as Video;
-use Session;
+use App\Models\VideoAlbum as Album;
+use Illuminate\Http\Request;
 use Image;
+use Session;
 
 class VideoGalleryController extends Controller
 {
@@ -22,8 +22,6 @@ class VideoGalleryController extends Controller
 
     public function create()
     {
-
-
         return view("dashboard/Video/galleryCrud");
     }
 

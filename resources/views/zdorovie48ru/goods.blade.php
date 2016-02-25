@@ -1,5 +1,13 @@
 @extends('zdorovie48ru/header')
 
+
+@section('title', $Good['title'])
+@section('description', $Good['descript'])
+@section('keywords', $Good['tag'])
+@section('avatar', $Good['avatar'])
+
+
+
 @section('content')
     <!--<section class="sub-page-banner text-center hidden-xs">
         <div class="overlay"></div>
