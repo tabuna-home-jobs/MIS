@@ -10,7 +10,7 @@ use Session;
 class PageController extends Controller {
 
 
-    public function show($sitename = 'zdorovie48', $sitedomen = 'ru', $Pages)
+    public function show($Pages, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
