@@ -51,6 +51,7 @@ class GoodsController extends Controller {
             $Goods->avatar = '/dash/img/no_img.png';
         }
 
+        $Goods->id = $request->id;
         $Goods->descript = $request->descript;
         $Goods->ids = Session::get('website');
         $Goods->price = $request->price;

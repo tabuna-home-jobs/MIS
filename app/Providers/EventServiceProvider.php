@@ -2,13 +2,12 @@
 
 use App\Models\Category;
 use App\Models\Goods;
+use App\Models\Observer\GoodsObserver;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
 
 //ОБсерверы!
-use App\Models\Observer\GoodsObserver;
-use App\Models\Observer\CategoryObserver;
 //!обсерверы
 
 class EventServiceProvider extends ServiceProvider {
@@ -33,6 +32,8 @@ class EventServiceProvider extends ServiceProvider {
 	public function boot(DispatcherContract $events)
 	{
 		parent::boot($events);
+
+		Goods::observe(new GoodsObserver);
 	}
 
 }
