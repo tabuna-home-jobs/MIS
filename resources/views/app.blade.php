@@ -279,6 +279,18 @@
                                 </li>
                                 @endif
 
+                                    @if(Config::get('dashboard.'.Session::get('SiteName').'.Статьи'))
+                                        <li class="{{Active::route('dashboard.art.*')}}">
+                                            <a href="{{URL::route('dashboard.art.index')}}">
+                                                <i class="fa fa-file-word-o"></i>
+                                                <span>Статьи</span>
+                                            </a>
+                                        </li>
+                                    @endif
+
+
+
+
                             </ul>
                         </li>
 

@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\site;
+namespace App\Http\Controllers\luchiki48;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Articles;
+use App\Models\Sites;
 
 class ArticlesController extends Controller
 {
@@ -14,9 +16,12 @@ class ArticlesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($sitename = "luchiki48", $sitedomen = "ru")
     {
-        //
+
+        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
+        $art = $getSites->getArts()->paginate(10);
+        return view( $sitename.$sitedomen.'/articles', ['Articles' => $art]);
     }
 
     /**
@@ -46,9 +51,11 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $sitename = "luchiki48", $sitedomen = "ru")
     {
-        //
+        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
+        $art = $getSites->getArts()->findOrFail($id);
+        return view( $sitename.$sitedomen.'/article', ['Article' => $art]);
     }
 
     /**
