@@ -9,7 +9,7 @@
 
 
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
-        <title>@yield('title')- Медицинский центр «Здоровье Нации»</title>
+        <title>@yield('title') - Медицинский центр «Здоровье Нации»</title>
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
         <meta property="og:title" content="@yield('title')">
@@ -30,19 +30,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="/site1.ru/jasny-bootstrap/css/jasny-bootstrap.min.css">
-    <!-- Bootstrap -->
-    <!--<link href="/site1.ru/css/bootstrap.css" rel="stylesheet">-->
 
-    <!-- medicom style -->
-    <!--<link href="/site1.ru/css/medicom.css" rel="stylesheet">-->
 
-    <!-- masonary -->
-    <!--  <link href="/site1.ru/css/style-masonary.css" rel="stylesheet">-->
+    <script src="/site1.ru/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/site1.ru/sweetalert/dist/sweetalert.css">
 
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-     <!--Madonary CSS-->
-    <!--<link rel="stylesheet" href="/site1.ru/css/reset.css" />-->
-   <!-- <link rel="stylesheet" type="text/css" href="/site1.ru/css/prettyPhoto.css" />-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -146,21 +139,13 @@
 
 
     @if (Session::has('good'))
-        <div class="container alert-container">
-            <div class="alert alert-success alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h4><i class="fa fa-check"></i> Успех!</h4>
-                {{Session::get('good')}}
-            </div>
-        </div>
+        <script>
+            swal("Успех!", " {{Session::get('good')}}", "success")
+        </script>
     @elseif(Session::has('bad'))
-        <div class="container alert-container">
-            <div class="alert alert-danger alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h4><i class="fa fa-ban"></i> Что то пошло не так!</h4>
-                {{Session::get('bad')}}
-            </div>
-        </div>
+        <script>
+            swal("Что то пошло не так!", " {{Session::get('bad')}}", "error");
+        </script>
     @endif
 </div>
 

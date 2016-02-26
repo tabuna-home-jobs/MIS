@@ -121,9 +121,9 @@ class AppointmentController extends Controller
             'comment' => $request->comment,
 			'spec_id' => $timetable->first()->id,
         ]);
-        $appointments->save();
+       // $appointments->save();
 
-        Session::flash('good', 'Вы успешно записались на приём');
+        Session::flash('good', ' Ваша запись является предварительной, с Вами свяжется сотрудник нашего центра и согласует окончательную дату приема!');
         return redirect()->back();
 	}
 
