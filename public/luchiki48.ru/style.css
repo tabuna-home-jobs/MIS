@@ -244,6 +244,9 @@ color: white;
 .blueBg{
     background: #479DED;
 }
+.blueText{
+    color: #479DED;
+}
 .single-st p{
 
 font-family: Arimo;
@@ -830,5 +833,10 @@ i.feature-icon {
 
 }
 .doctors-detail {
+    padding: 10px;
+}
+
+.feedHead{
+    text-transform: uppercase;
     padding: 10px;
 }

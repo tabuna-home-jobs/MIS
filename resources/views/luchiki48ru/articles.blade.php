@@ -8,10 +8,10 @@
                     @foreach($Articles as $item)
                         <div class="col-md-4 item-row">
                             <div>
-                                <h3><a href="/blog/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
+                                <h3><a href="/articles/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
                                 <p class="day">{{$item['created_at']}}</p>
                                 <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
-                                <div class="seeall"><img src="/cozn48.ru/img/minibutton.png"><a href="/blog/{{$item['id']}}">Читать полностью</a><br></div>
+                                <div class="seeall"><img src="/cozn48.ru/img/minibutton.png"><a href="/articles/{{$item['id']}}">Читать полностью</a><br></div>
                             </div>
                         </div>
                     @endforeach
