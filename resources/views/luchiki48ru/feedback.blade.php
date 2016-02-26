@@ -4,21 +4,14 @@
 
 
     <div class="sub-page-content">
-    	<div class="container">
-        	<h2 class="light bordered">Как<span> Добраться</span></h2>
+
+        	<h1 class="blueBg center white">Мы на карте</h1>
             <div class="row">
             	<div class="col-md-12">
                 	<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2423.2438515896024!2d39.592403!3d52.601363!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413a14e9eece3c35%3A0xdfbc4fe617d626e0!2z0J7QutGC0Y_QsdGA0YzRgdC60LDRjyDRg9C7LiwgNjEsINCb0LjQv9C10YbQuiwg0JvQuNC_0LXRhtC60LDRjyDQvtCx0LsuLCAzOTgwNTk!5e0!3m2!1sru!2sru!4v1432638437060"  height="450" frameborder="0" style="border:0; width: 100%"></iframe></div>
-                    	<div class="get-directions">
-                        	<form action="http://maps.google.com/maps" method="get" target="_blank">
-                               <input type="text" name="saddr" placeholder="Введите свой адрес" />
-                               <input type="hidden" name="daddr" value="Октябрьская ул., 61, Липецк, Липецкая область" />
-                               <input type="submit" value="Get directions" class="direction-btn" />
-                            </form>
-                        </div>
                 </div>
             </div>
-            
+        <div class="container">
             <div class="row">
             	<div class="col-md-8 contact-form">
                 	<h2 class="light bordered">Написать нам <span>сообщение</span></h2>

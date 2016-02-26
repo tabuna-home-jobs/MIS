@@ -241,6 +241,9 @@ margin-top: 103px;
 .white{
 color: white;
 }
+.blueBg{
+    background: #479DED;
+}
 .single-st p{
 
 font-family: Arimo;
@@ -536,14 +539,30 @@ left: 88%;
 }
 .item-serv{
     text-align: center;
+    margin: 15px 0px !important;
+}
+.item-serv>div>div{
+    max-height: 197px;
+    overflow: hidden;
 }
 .service-list h1{
-    color: #337AB7;
+    color: #479DED;
     text-transform: uppercase;
 }
 .service-list a{
-    color: #fff;
-    background: #337AB7;
+    color: #FFF;
+    display: table;
+    width: 100%;
+    background: #479DED;
+    height: 70px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.service-list a h4{
+    background: #479DED;
+    display: table-cell;
+    padding: 0px 10px;
+    vertical-align: middle;
 }
 .blog-wrapper{
     margin-bottom: 15px;

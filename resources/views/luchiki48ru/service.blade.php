@@ -33,15 +33,16 @@
                                                {{str_limit((strip_tags($good->name)), 80, '...')}}
                                            </h4>
                                        </a>
+                                       <!--
                                        <p class="day"></p>
                                        <div>
                                            {{str_limit((strip_tags($good->content)), 130, '...')}}
                                        </div>
-                                      <!-- <div class="seeall">
+                                        <div class="seeall">
                                            <a href="/service/{{$good->id}}" class="btn btn-primary btn-default">
                                                <span class="glyphicon glyphicon-eye-open"></span> Посмотреть
                                            </a>
-                                       </div>-->
+                                        </div>-->
                                    </div>
                                </div>
                                @if(($key+1) % 3 == 0)

@@ -58,7 +58,8 @@ class ArticlesController extends Controller
             'ids'=> Session::get('website'),
         ]);
 
-        //���� ������� ���
+
+
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $art->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
@@ -67,12 +68,6 @@ class ArticlesController extends Controller
         $art->save();
 
 
-
-
-
-        /*
-         * ��������
-         */
 
         $Social = new Social([
             'descript' => $art->descript,
@@ -83,8 +78,6 @@ class ArticlesController extends Controller
         ]);
         $Social->pushAll();
 
-
-        //���� ���������
         Session::flash('good', '�� ������� �������� ��������');
         return redirect()->route('dashboard.art.index');
     }
@@ -113,7 +106,6 @@ class ArticlesController extends Controller
             'ids'=> Session::get('website'),
         ]);
 
-        //���� ������� ���
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $art->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
@@ -121,8 +113,7 @@ class ArticlesController extends Controller
 
         $art->save();
 
-        //���� ���������
-        Session::flash('good', '�� ������� �������� ��������');
+        Session::flash('good', 'Вы успешно создали\изменили статью');
         return redirect()->route('dashboard.art.index');
     }
 
@@ -135,7 +126,7 @@ class ArticlesController extends Controller
     public function destroy(Articles $art)
     {
         $art->delete();
-        Session::flash('good', '�� ������� ������� ��������');
+        Session::flash('good', 'Вы успешно удалили статью');
         return redirect()->route('dashboard.art.index');
     }
 }
