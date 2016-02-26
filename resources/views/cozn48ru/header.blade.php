@@ -48,13 +48,13 @@
                 <img src="/cozn48.ru/img/adress.png"> Липецк, ул. Фрунзе 14
             </div>
             <div class="socialnetwork col-sm-2 col-xs-12">
-                <a href="http://vk.com">
+                <a href="http://vk.com" target="_blank">
                     <img src="/cozn48.ru/img/vk.png">
                 </a>
-                <a href="http://ok.ru">
+                <a href="http://ok.ru"  target="_blank">
                     <img src="/cozn48.ru/img/ok.png">
                 </a>
-                <a href="http://facebook.com">
+                <a href="http://facebook.com"  target="_blank">
                     <img src="/cozn48.ru/img/fb.png">
                 </a>
             </div>

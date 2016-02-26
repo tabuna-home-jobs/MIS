@@ -39,9 +39,6 @@
             <a href="#"><img src="/cozn48.ru/img/octavian.png"></a>
         </div>
     </div>
-    <div class="error">
-        <a href="#" data-toggle="modal" data-target="#myModal">сообщить об ошибке</a>
-    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

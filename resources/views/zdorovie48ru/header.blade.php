@@ -9,7 +9,7 @@
 
 
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
-        <title>Здоровье Нации - @yield('title')</title>
+        <title>@yield('title')- Медицинский центр «Здоровье Нации»</title>
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
         <meta property="og:title" content="@yield('title')">

@@ -502,7 +502,10 @@ button:focus{outline:none !important;}
 
 
 .page-content {
+	padding-top: 20px;
 	padding-bottom: 20px;
+	height: 100%;
+	min-height: 100%;
 }
 .seeall {
 	text-align: left;
@@ -563,6 +566,18 @@ button:focus{outline:none !important;}
 .bg-inactive-step{
 	background: tan;
 }
+
+.page-text{
+	padding-top: 20px;
+}
+
+a{
+	color: #B20137;
+}
+a:hover{
+	color: #8C0A46;
+}
+
 .wrapper-form{
 	padding-bottom: 10px;
 }

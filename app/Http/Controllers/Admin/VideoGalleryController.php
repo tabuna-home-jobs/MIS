@@ -47,7 +47,7 @@ class VideoGalleryController extends Controller
             $alb = new Album();
 
 	        if ($request->hasFile('url')) {
-		        Image::make($request->file('url'))->save('upload/' . time() . '.' . $request::file('url')->getClientOriginalExtension());
+		        Image::make($request->file('url'))->save('upload/' . time() . '.' . $request->file('url')->getClientOriginalExtension());
 		        $alb->poster = '/upload/' . time() . '.' . $request->file('url')->getClientOriginalExtension();
 	        }else{
 
