@@ -133,9 +133,8 @@
 
                                     <div>
                                                 <span class="btn btn-default btn-file"><span class="fileinput-new">Выбрать изображение</span><span
-                                                            class="fileinput-exists">Изменить</span><input type="file"
-                                                                                                           name="avatar"
-                                                                                                           value="{{$Spec->avatar or ''}}"></span>
+                                                            class="fileinput-exists">Изменить</span>
+                            <input type="file" name="avatar" value="{{$Spec->avatar or ''}}"></span>
                                         <a href="#" class="btn btn-default fileinput-exists"
                                            data-dismiss="fileinput">Удалить</a>
                                     </div>
@@ -149,6 +148,17 @@
                             <label>Умения</label>
                                     <textarea class="form-control" name="about"
                                               rows="5">{!! $Spec->about or '' !!}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="best"
+                                            @if($Spec->best == 1)
+                                                checked
+                                           @endif
+                                            > Лучший
+                                </label>
+                            </div>
                         </div>
 
                         <input type="hidden" name="_method" value="PUT">

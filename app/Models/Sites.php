@@ -94,6 +94,11 @@ class Sites extends Model {
         return $this->hasMany('App\Models\SpecCat', 'ids');
     }
 
+    public function getBestSpec()
+    {
+        return $this->hasOne('App\Models\Specialisty', 'ids')->where(['best' => 1]);
+    }
+
     public function getAnswersCategory()
     {
         return $this->hasOne('App\Models\CategoryAnswers', 'ids');
