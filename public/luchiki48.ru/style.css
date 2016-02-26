@@ -536,14 +536,30 @@ left: 88%;
 }
 .item-serv{
     text-align: center;
+    margin: 15px 0px !important;
+}
+.item-serv>div>div{
+    max-height: 197px;
+    overflow: hidden;
 }
 .service-list h1{
     color: #337AB7;
     text-transform: uppercase;
 }
 .service-list a{
-    color: #fff;
+    color: #FFF;
+    display: table;
+    width: 100%;
     background: #337AB7;
+    height: 70px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.service-list a h4{
+    background: #337AB7;
+    display: table-cell;
+    padding: 0px 10px;
+    vertical-align: middle;
 }
 .blog-wrapper{
     margin-bottom: 15px;
