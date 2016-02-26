@@ -605,3 +605,15 @@ a:hover{
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
 	color:#fff;
 }
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img{
+	width:100%;
+}
+.btn.btn-lg.button1:focus, .btn.btn-lg.button1:hover, .btn.button1:focus, .btn.button1:hover{
+	background-image: url(img/button1.png);
+}
+.fbtn a:hover{
+	color:#fff;
+}
+.best_avatar img{
+	width:200px;
+}

@@ -83,7 +83,8 @@
         <h2>ПРИЧИНЫ ДЛЯ ОБРАЩЕНИЯ К ОСТЕОПАТУ</h2>
 
         <div class="crosses col-sm-12">
-            <div class="block1 col-sm-6 col-xs-12">
+
+            <div class="block1 col-sm-offset-1 col-sm-5 col-xs-12">
                 <div><img src="cozn48.ru/img/cross.png"> Невралгии, радикулиты</div>
                 <div><img src="cozn48.ru/img/cross.png"> Боли в суставах и различных отделах позвоночника</div>
                 <div><img src="cozn48.ru/img/cross.png"> Грыжи межпозвонковых дисков</div>
@@ -93,7 +94,7 @@
                 <div><img src="cozn48.ru/img/cross.png"> Последствия травм</div>
                 <div><img src="cozn48.ru/img/cross.png"> Заболевания ЖКТ, печени и желчевыводящих путей</div>
             </div>
-            <div class="block2 col-sm-6 col-xs-12">
+            <div class="block2 col-sm-offset-1 col-sm-5 col-xs-12">
                 <div><img src="cozn48.ru/img/cross.png"> Болезни органов малого таза</div>
                 <div><img src="cozn48.ru/img/cross.png"> Гаймориты, отиты, этмоидиты</div>
                 <div><img src="cozn48.ru/img/cross.png"> Бронхит, бронхиальную астму</div>
@@ -131,6 +132,7 @@
                 //Возвращение на второй шаг
                 function gotosecond(){
 
+                    $(".stepr2").removeClass("bg-inactive-step");
                     $(".stepr3").addClass("bg-inactive-step");
                 }
                 //Переход на последний
@@ -150,35 +152,33 @@
                 <div class="step">Шаг 3</div>
             </div>
             <form action="appointment/store" method="post">
+
                 <div class="step1">
-                <div class="description-form">Специализация</div>
-                <div class="input-form">
-                    <select name="specialization" required class="form-control">
-                        <option selected disabled>Выберите специализацию</option>
-                        @foreach($specialization as $spec)
-                            <option value="{{$spec->specialization}}">{{$spec->specialization}}</option>
-                        @endforeach
-                    </select></div>
-                <div class="description-form">Врач</div>
-                <div class="input-form">
-                    <select disabled name="name" required class="form-control">
-                        <option>Выберите врача</option>
-                    </select>
-                </div>
+                    <div class="description-form">Специализация</div>
+                    <div class="input-form">
+                        <select name="specialization" required class="form-control">
+                            <option selected disabled>Выберите специализацию</option>
+                            @foreach($specialization as $spec)
+                                <option value="{{$spec->specialization}}">{{$spec->specialization}}</option>
+                            @endforeach
+                        </select></div>
+                    <div class="description-form">Врач</div>
+                    <div class="input-form">
+                        <select disabled name="name" required class="form-control">
+                            <option>Выберите врача</option>
+                        </select>
+                    </div>
 
-
-                <div class="description-form">Выберите место</div>
-                <div class="input-form">
-                    <select disabled  name="subdivision" required class="form-control">
-                        <option selected disabled>Выберите место</option>
-                    </select>
-                </div>
-
+                    <div class="description-form">Выберите место</div>
+                    <div class="input-form">
+                        <select disabled  name="subdivision" required class="form-control">
+                            <option selected disabled>Выберите место</option>
+                        </select>
+                    </div>
 
                     <div class="fbtn butnstep">
                         <a class="" onclick="secondStep()" disabled>ДАЛЕЕ</a>
                     </div>
-
                 </div>
 
                 <div class="step2">
@@ -378,21 +378,20 @@
     <div class="container">
 
         <div class="best col-lg-3">
-            <div class="bpart1">
-                <img src="cozn48.ru/img/sotrudnik_main.png">
+            <div class="bpart1 best_avatar">
+                <img src="{!! $bestspec->avatar or 'cozn48.ru/img/sotrudnik_main.png' !!}">
             </div>
             <div class="bpart2">
                 <img src="cozn48.ru/img/figurephoto.png">
             </div>
             <div class="textmonth"> ВРАЧ МЕСЯЦА</div>
-            <div class="textstepname"><strong>Кедровская</strong><br> Наталья Борисовна</div>
+            <div class="textstepname">{!! $bestspec->fio or 'Кедровская Наталья Борисовна'  !!}</div>
             <div class="tsspec">
-                Специалист по массажу<br> высшей категории,<br>
-                специализация:<br> медицинский массаж
+                {!! $bestspec->subname or 'Специалист по массажу' !!}
             </div>
         </div>
         <div class="everypeople col-lg-9">
-            @foreach(SpecialOnMain::getSpec(6) as $item )
+            @foreach($allspecs as $item )
                 <div class="col-md-4">
                     <img src="{{$item['avatar']}}">
 

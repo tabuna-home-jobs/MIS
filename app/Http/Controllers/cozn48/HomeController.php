@@ -15,7 +15,7 @@ class HomeController extends Controller {
 	 */
     public function index($sitename = "cozn48", $sitedomen = "ru")
     {
-        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with('reviews','categories.goods')->first();
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with('reviews','categories.goods','allspecs','getBestSpec')->first();
 
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
@@ -26,7 +26,9 @@ class HomeController extends Controller {
             'getShares' => $getShares,
 			'specialization' => $specialization,
 			'reviews' => $getSites['reviews'],
-			'categories' => $getSites['categories']
+			'categories' => $getSites['categories'],
+			'allspecs' => $getSites['allspecs'],
+			'bestspec' => $getSites['getBestSpec']
         ]);
     }
 

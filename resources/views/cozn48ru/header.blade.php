@@ -82,19 +82,19 @@
 
                                 <div class="form-group">
                                     <label>ФИО</label>
-                                    <input type="text" name="fio" class="form-control" placeholder="ФИО" >
+                                    <input type="text" required name="fio" class="form-control" placeholder="ФИО" >
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="text" name="email" class="form-control" placeholder="Email" >
+                                    <input type="text" required name="email" class="form-control" placeholder="Email" >
                                 </div>
                                 <div class="form-group">
                                     <label>Телефон</label>
-                                    <input type="text" name="phone" class="form-control" placeholder="Телефон" >
+                                    <input type="text" required name="phone" class="form-control" placeholder="Телефон" >
                                 </div>
                                 <div class="form-group">
                                     <label>Сообщение</label>
-                                    <textarea name="message" class="form-control" placeholder="Ваше сообщение"></textarea>
+                                    <textarea name="message" required class="form-control" placeholder="Ваше сообщение"></textarea>
                                 </div>
                                 {{csrf_field()}}
 

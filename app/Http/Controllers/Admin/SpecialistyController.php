@@ -45,6 +45,8 @@ class SpecialistyController extends Controller
 
     public function store(SpecialRequest $request)
     {
+        (isset($request->best)) ? $request['best'] = 1 : $request['best'] = 0;
+
         $special = new Specialisty([
                 'fio' => $request->fio,
                 'subname' => $request->subname,
@@ -57,6 +59,7 @@ class SpecialistyController extends Controller
                 'sort' => $request->sort,
                 'staj' => $request->staj,
                 'sertificats' => $request->sertificats,
+                'best' => $request->best,
                 'ids' => Session::get('website'),
         ]);
 
@@ -77,6 +80,8 @@ class SpecialistyController extends Controller
     public function update(Specialisty $special, SpecialRequest $request)
     {
 
+        (isset($request->best)) ? $request['best'] = 1 : $request['best'] = 0;
+
         $special->fill([
             'fio' => $request->fio,
             'subname' => $request->subname,
@@ -89,7 +94,8 @@ class SpecialistyController extends Controller
             'ids' => Session::get('website'),
             'sort' => $request->sort,
             'staj' => $request->staj,
-            'sertificats' => $request->sertificats
+            'sertificats' => $request->sertificats,
+            'best' => $request->best
         ]);
 
         if (Request::hasFile('avatar')) {
