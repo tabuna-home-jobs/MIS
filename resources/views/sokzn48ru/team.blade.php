@@ -28,11 +28,14 @@
                             <div class="wrapper-lg">
 
 
+
+
+
                                 @foreach($Specialisty as $key => $spec)
-                                    <div class="doctors col-sm-6 col-md-6 col-xs-12 padding-bottom-60 clearfix">
-                                        <div class="doctors-img">
+                                    <div class="doctors col-md-6 col-sm-12 col-xs-12 padding-bottom-60 clearfix">
+                                        <div class="doctors-img text-center">
                                             <a href="/team/{{$spec['id']}}">
-                                                <img src="{{$spec->avatar}}" width="234" alt="" title="">
+                                                <img src="{{$spec->avatar}}" alt="{{$spec->fio}}" class="img-thumbnail">
                                             </a>
                                             <a href="/team/{{$spec['id']}}">
                                                 <h4>{{$spec->fio}}<span class="text-center">{{$spec->subname}}</span></h4>
@@ -42,7 +45,7 @@
 
 
                                             @if(isset($spec->special) && trim($spec->special) !== "")
-                                                <p>
+                                                <p class="help-block m-b-none">
                                                     <span class="heading">Специализация: </span>
                                                     <span class="detail">{{$spec->special}}</span>
                                                 </p>
@@ -51,21 +54,21 @@
 
 
                                             @if(isset($spec->opyt) && trim($spec->opyt) !== "")
-                                                <p>
+                                                <p class="help-block m-b-none">
                                                     <span class="heading">Должность: </span>
                                                     <span class="detail">{{str_limit($spec->opyt, 50, '...')}} </span>
                                                 </p>
                                             @endif
 
                                             @if(isset($spec->obrazovanie) && trim($spec->obrazovanie) !== "")
-                                                <p>
+                                                <p class="help-block m-b-none">
                                                     <span class="heading">Образование</span>
                                                     <span class="detail">{{str_limit($spec->obrazovanie, 50, '...')}}</span>
                                                 </p>
                                             @endif
 
                                             @if(isset($spec->about) && trim($spec->about) !== "" )
-                                                <p>
+                                                <p class="help-block m-b-none">
                                                     <span class="heading">Умения:</span>
                                                     <span class="detail">{{str_limit($spec->about, 50, '...')}} </span>
                                                 </p>
@@ -75,7 +78,7 @@
                                         </div>
                                     </div>
                                     @if(($key+1) % 2 == 0)
-                                        <div class="clearfix"></div>
+                                        <div class="line line-dashed b-b line-lg"></div>
                                     @endif
                                 @endforeach
                                     <div class="clearfix"></div>
@@ -87,7 +90,6 @@
                         <div class="list-group">
                             <a style="z-index: 99" href="/team" class="list-group-item @if(!isset($id))active @endif">Все</a>
                             @foreach($SpCat as $album)
-
                                 <a class="list-group-item @if(isset($id) && $id==$album->id)active @endif"
                                    href="/team?catspec={{$album['id']}}">{{$album->name}}</a>
                             @endforeach

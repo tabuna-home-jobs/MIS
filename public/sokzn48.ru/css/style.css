@@ -143,9 +143,16 @@ textarea.form-control{
 }
 
 .doctors{
-    text-align: center;
     margin-bottom: 15px;
+    font-size: 12px;
+    padding: 10px 40px;
 }
+
+.detail {
+    float: right;
+}
+
+
 .our-staffs-phone, .our-staffs-email{
     margin-bottom: 15px;
 }

@@ -13,7 +13,7 @@
                 <h1 class="fa fa-5x icon-soc-logo"></h1>
 
                 <p>
-                    <small>семейный оздоровительный комплекс</small>
+                    <small class="text-white">семейный оздоровительный комплекс</small>
                 </p>
             </div>
 
@@ -193,7 +193,7 @@
 
     <section class="container main-news padder-v text-center">
 
-        <h2 class="header-h padder-v ">Новости комплекса</h2>
+        <h2 class="header-h padder-v">Новости комплекса</h2>
 
 
         <div class="row">

@@ -19,34 +19,112 @@
                 <div class="col-sm-9">
                     <div class="blog-post">
                         <div class="panel">
-                            <div class="wrapper-lg">
-                                    <style>
-                                        .single-review>div:nth-child(1) {
-                                            overflow: hidden;
-                                        }
-                                        .single-review i {
-                                            display: block;
-                                            font-size: 4em;
-                                            text-align: center;
-                                        }
-                                    </style>
+                            <div class="wrapper">
+
+
+
+                                <ul class="timeline">
+                                    <li class="tl-header">
+                                        <div class="btn btn-info">Now</div>
+                                    </li>
+                                    <li class="tl-item">
+                                        <div class="tl-wrap b-info">
+                                            <span class="tl-date">5s ago</span>
+                                            <div class="tl-content">
+                                                Just a title
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    @foreach($Reviews as $item)
+
+
+                                    <li class="tl-item">
+                                        <div class="tl-wrap  b-info">
+                                            <span class="tl-date">{{$item['created_at']}}</span>
+                                            <div class="tl-content panel padder b-a w-md w-auto-xs">
+                                                <span class="arrow left pull-up"></span>
+                                                <div class="text-lt m-b-sm">{{$item['fio']}}</div>
+                                                <div class="panel-body pull-in b-t b-light">
+                                                    <div class="clear">
+                                                        {!! str_limit($item['content'],300,'...') !!}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    @endforeach
+                                    <li class="tl-item tl-left">
+                                        <div class="tl-wrap  b-info">
+                                            <span class="tl-date">04.2014</span>
+                                            <div class="tl-content panel padder b-a block">
+                                                <span class="arrow left pull-up hidden-left"></span>
+                                                <span class="arrow right pull-up visible-left"></span>
+                                                <div class="text-lt m-b-sm">Напишите свой отзыв</div>
+                                                <div class="panel-body pull-in b-t b-light">
+                                                    <p>I'm working on a realy amazing application, It will be available soon. here is a little tease. </p>
+                                                    <div class="panel panel-default m-t-md m-b-n-sm pos-rlt">
+                                                        <span class="arrow top pull-left"></span>
+                                                        <form>
+                                                            <textarea class="form-control no-border" rows="3" placeholder="Your comment..."></textarea>
+                                                        </form>
+                                                        <div class="panel-footer bg-light lter">
+                                                            <button class="btn btn-info pull-right btn-sm">Отправить</button>
+                                                            <ul class="nav nav-pills nav-sm">
+                                                                <li><a href=""><i class="fa fa-camera text-muted"></i></a></li>
+                                                                <li><a href=""><i class="fa fa-video-camera text-muted"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tl-header">
+                                        <div class="btn btn-sm btn-default btn-rounded">2014</div>
+                                    </li>
+                                    <li class="tl-item">
+                                        <div class="tl-wrap">
+                                            <span class="tl-date">10.08.2013</span>
+                                            <div class="tl-content panel padder b-a">
+                                                <span class="arrow left pull-up hidden-left"></span>
+                                                <span class="arrow right pull-up visible-left"></span>
+                                                <div class="text-lt">A good story to hear.</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tl-header">
+                                        <div class="btn btn-icon btn-rounded btn-default"><i class="fa fa-twitter"></i></div>
+                                    </li>
+                                    <li class="tl-item tl-left">
+                                        <div class="tl-wrap b-white">
+                                            <span class="tl-date">5.07.2013</span>
+                                            <div class="tl-content panel padder b-a">
+                                                <span class="arrow left pull-up hidden-left"></span>
+                                                <span class="arrow right pull-up visible-left"></span>
+                                                <div class="text-lt">Yesterday is History</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tl-header">
+                                        <div class="btn btn-sm btn-default btn-rounded">more</div>
+                                    </li>
+                                </ul>
+
+
+
+
+
                                     <div class="row">
                                         @if(Session::has('good'))
                                             <div class="alert alert-success">
                                                 {{ Session::get('good') }}
                                             </div>
                                         @endif
-                                        @foreach($Reviews as $item)
-                                        <div class="single-review col-md-12">
-                                            <div class="rev-img col-md-2 col-sm-2"><i class="feature-icon fa fa-commenting"></i></div>
-                                            <div class="rev-text col-md-10 col-sm-10">
-                                                <h4>{{$item['fio']}}</h4>
-                                                <span>{{$item['created_at']}}</span>
-                                                <p>{!! str_limit($item['content'],300,'...') !!}
-                                                    </p>
-                                            </div>
-                                        </div>
-                                        @endforeach
+
 
                                     </div>
                                     <div class="row">
