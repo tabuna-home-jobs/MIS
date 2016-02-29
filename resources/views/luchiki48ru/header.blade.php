@@ -35,6 +35,11 @@
     <meta name="twitter:title" content="@yield('title')">
     <meta name="twitter:description" content="@yield('description')"/>
     <meta name="twitter:image:src" content="@yield('avatar')"/>
+    <script>
+        $(document).ready(function(){
+            $('.highslide').fancybox();
+        });
+    </script>
 </head>
 <body>
 <!-- HEADER -->
