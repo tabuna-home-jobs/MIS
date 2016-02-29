@@ -846,3 +846,6 @@ i.feature-icon {
     text-transform: uppercase;
     padding: 10px;
 }
+.blog-content .img-responsive{
+    display: inline-block;
+}
