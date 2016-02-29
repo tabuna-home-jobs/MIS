@@ -7627,7 +7627,7 @@ video {
     border: 2px solid #00475c
 }
 
-.social-rounded li a i.fa-circle-o:hover, .social-rounded li a i.fa-rss:hover {
+.social-rounded li a i.fa-circle-o:hover, .social-rounded li a i.fa-rss:hover,.social-rounded li a i.fa-odnoklassniki:hover{
     background: #f47c23;
     border: 2px solid #d26514
 }

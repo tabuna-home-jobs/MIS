@@ -14,7 +14,10 @@
                     <div class="products">
 
 
+
                         @foreach($Goods as $good)
+
+                            {{dd($Goods)}}
 
                         <div class="product">
                             <div class="product-thumb">
