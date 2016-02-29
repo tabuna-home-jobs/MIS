@@ -117,7 +117,7 @@ class ServicesController extends Controller {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
 
-		if (intval($id)) {
+		if (intval($id) && (strlen($id)== strlen(intval($id)) )) {
 			$Goods = $getSites->getGoods()->where('id', $id)->first();
 		} else {
 			$Goods = $getSites->getGoods()->where('slug', $id)->firstOrFail();
