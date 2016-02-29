@@ -83,7 +83,7 @@ class AppointmentController extends Controller
 	 */
     public function postStore(AppointmentRequest $request)
 	{
-		/*
+
         $beginning = strstr($request->apport, '|', true);
         $end = str_replace('|', '', strstr($request->apport, '|'));
 
@@ -123,7 +123,7 @@ class AppointmentController extends Controller
 			'spec_id' => $timetable->first()->id,
         ]);
         $appointments->save();
-*/
+
         Session::flash('good', ' Ваша запись является предварительной, с Вами свяжется сотрудник нашего центра и согласует окончательную дату приема!');
         return redirect()->back();
 	}
