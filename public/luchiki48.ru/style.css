@@ -238,6 +238,9 @@ margin-top: 202px;
 .pad-8{
 margin-top: 103px;
 }
+.pad-b-1{
+    margin-bottom: 15px;
+}
 .white{
 color: white;
 }
@@ -246,6 +249,9 @@ color: white;
 }
 .blueText{
     color: #479DED;
+}
+.fa.fa-big{
+    font-size: 70px;
 }
 .single-st p{
 
