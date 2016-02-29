@@ -4,19 +4,19 @@
 
 
 
-    <section data-stellar-background-ratio="0.3" class="sub-page-banner sub-page-banner-med text-center">
+    <!--<section data-stellar-background-ratio="0.3" class="sub-page-banner sub-page-banner-med text-center">
         <div class="overlay"></div>
         <div class="container">
-            <h1 class="entry-title">Вопросы и ответы</h1>
+
             <p>Задайте любой интересующий вас вопрос и наш специалист найдёт ответ</p>
         </div>
-    </section>
+    </section>-->
 
 
 
     <div class="sub-page-content">
 
-
+        <h1 class="blueText center">Вопросы и ответы</h1>
 
         <div class="container padding-top-35">
             <div class="row">
@@ -70,7 +70,7 @@
         </div>
 
 
-        <div class="container padding-top-35 after-booking-sec text-center">
+        <div class="padding-top-35 after-booking-sec text-center">
             <!--
             <div class="row">
 
@@ -104,11 +104,11 @@
                 aria-multiselectable="true">
 
                 @foreach($QuestAnswers as $QA)
-                    <li><i class="fa fa-user medicom-check pull-left"></i>
+                    <li>
 
-                        <div class="panel panel-default">
+                        <div class="container panel panel-default">
                             <div class="panel-heading" role="tab" id="heading-answer-{{$QA->id}}">
-
+                                <i class="fa fa-question medicom-check pull-left hidden-xs"></i>
 
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion"
@@ -119,8 +119,10 @@
 
 
                                     <p class="text-right">
-                                        <small class="light bordered main-title text-right"> {{$QA->getCategory->name or ''}}
-                                            <br>{{$QA->fio}} </small>
+                                        <strong class=" text-right">
+                                            <!--{{$QA->getCategory->name or ''}}-->
+                                            <br>- {{$QA->fio}}
+                                        </strong>
                                     </p>
 
                                 </h4>
@@ -152,7 +154,7 @@
 
 
 
-
+        {!! $QuestAnswers->render() !!}
 
     </div>
 
