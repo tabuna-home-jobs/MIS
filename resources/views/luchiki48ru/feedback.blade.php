@@ -44,14 +44,14 @@
                     <div class="col-md-6 col-xs-6 center">
                         <i class="fa fa-map-marker fa-big blueText"></i><br><br><br>
                         (4742) 77-03-97.<br><br>
-                        <!--octavian48@yandex.ru<br><br>-->
+                        info@luchiki.ru<br><br>
                         г. Липецк, ул. Неделина, 15-а
 
                     </div>
                     <div class="col-md-6 col-xs-6 center">
                         <i class="fa fa-clock-o fa-big blueText"></i><br><br><br>
                         Понедельник-пятница: 8:30-20:30<br><br>
-                        Суббота: 8:30-19:00<br><br>
+                        Суббота: 8:30-17:00<br><br>
                         Воскресенье: 9:30-15:30
                     </div>
                     <!-- <div class="get-in-touch-widget">
