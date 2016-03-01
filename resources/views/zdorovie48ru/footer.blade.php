@@ -36,8 +36,13 @@
                     <h4><span>Мы на Facebook</span></h4>
 
                     <div class="newsletter clearfix">
-
+                        <div class="header-facebook">
+                            <a href="https://www.facebook.com/zdorovie48/">Facebook</a>
+                        </div>
                         <div class="fb-page" data-href="https://www.facebook.com/zdorovie48/" data-width="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/zdorovie48/"><a href="https://www.facebook.com/zdorovie48/">Здоровье нации</a></blockquote></div></div>
+                        <div class="footer-facebook">
+                            Здоровье нации
+                        </div>
                     </div>
 
                 </div>
