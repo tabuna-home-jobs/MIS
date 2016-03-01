@@ -17,15 +17,50 @@
 
     <section class="container">
         <div class="wrapper-md">
+
             <div class="row">
                 <div class="col-sm-9">
                     <div class="blog-post">
                         <div class="panel">
                             <div class="wrapper-lg">
-                                <p>Задайте любой интересующий вас вопрос и наш специалист найдёт ответ</p>
+                                <p class="text-center">Задайте любой интересующий вас вопрос и наш специалист найдёт ответ</p>
                                 <div class="sub-page-content">
+
+                                    <div class="faq-content">
+                                        <div aria-multiselectable="true" role="tablist" id="accordion" class="panel-group faq-panel">
+                                            @foreach($QuestAnswers as $QA)
+                                            <div class="panel">
+                                                <div id="headingOne" role="tab" class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a aria-controls="heading-answer-{{$QA->id}}" aria-expanded="true" href="#heading-answer-{{$QA->id}}" data-parent="#accordion" data-toggle="collapse" class="collapsed">
+                                                            {{$QA->questions}}
+                                                            <p class="text-right">
+                                                                <small class="light bordered main-title text-right">
+                                                                    {{$QA->getCategory->name or ''}}
+                                                                    <br>{{$QA->fio}} </small>
+                                                            </p>
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div aria-labelledby="heading-answer-{{$QA->id}}" role="tabpanel" class="panel-collapse collapse" id="heading-answer-{{$QA->id}}">
+                                                    <div class="panel-body">
+                                                        {{$QA->answer}}
+                                                        <p class="text-right">
+                                                            <small>С уважением {{$QA->getDoctor->fio or ''}}</small>
+                                                            <small><br>
+                                                                <date>{{$QA->updated_at->diffForHumans()}}</date>
+                                                            </small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+
+
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 col-md-offset-3">
                                             <h2 class="light bordered">Напиши и узнаешь</h2>
                                             <div class="appointment-form clearfix">
                                                 <form action="/questanswer" method="post">
@@ -47,74 +82,9 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-md-6">
-                                            <h2 class="light bordered">Уверенность и  качество</h2>
-                                            <div class="feature">
-                                                <i class="pull-left feature-icon fa fa-user-md"></i>
-                                                <div class="feature-content">
-                                                    <h5><a href="/team">Наши специалисты</a></h5>
-                                                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
-                                                    <a href="/team"><dfn>- Перейти</dfn></a>
-                                                </div>
-                                            </div>
-                                            <div class="feature">
-                                                <i class="pull-left feature-icon fa fa-phone-square"></i>
-                                                <div class="feature-content">
-                                                    <h5><a href="/feedback">Записаться на приём</a></h5>
-                                                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
-                                                        <a href="/feedback"><dfn>-  Перейти</dfn></a>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
-                                    <div class="row after-booking-sec">
-                                        <ul class="medicom-feature-list list-inline text-left" id="accordion" role="tablist"
-                                            aria-multiselectable="true">
-                                            @foreach($QuestAnswers as $QA)
-                                                <li>
-                                                    <i class="fa fa-user medicom-check pull-left"></i>
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading" role="tab" id="heading-answer-{{$QA->id}}">
 
-
-                                                            <h4 class="panel-title">
-                                                                <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                                                   href="#collapse-answer-{{$QA->id}}" aria-expanded="true"
-                                                                   aria-controls="collapse-answer-{{$QA->id}}">
-                                                                    {{$QA->questions}}
-                                                                </a>
-
-
-                                                                <p class="text-right">
-                                                                    <small class="light bordered main-title text-right"> {{$QA->getCategory->name or ''}}
-                                                                        <br>{{$QA->fio}} </small>
-                                                                </p>
-
-                                                            </h4>
-
-                                                        </div>
-
-                                                        <div id="collapse-answer-{{$QA->id}}" class="panel-collapse collapse" role="tabpanel"
-                                                             aria-labelledby="heading-answer-{{$QA->id}}">
-                                                            <div class="panel-body blog-content">
-                                                                {{$QA->answer}}
-                                                                <p class="text-right">
-                                                                    <small>С уважением {{$QA->getDoctor->fio or ''}}</small>
-                                                                    <small><br>
-                                                                        <date>{{$QA->updated_at->diffForHumans()}}</date>
-                                                                    </small>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-
-
-                                                    </div>
-                                                </li>
-                                            @endforeach
-
-
-                                        </ul>
-                                    </div>
 
                                 </div>
                             </div>

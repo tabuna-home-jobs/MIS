@@ -18,7 +18,7 @@
             </div>
 
 
-            <div class="row  hidden-sm-down">
+            <div class="row  hidden-xs hidden-sm">
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <a href="/service?category=106" class="square-block">
                         <span class="fa fa-5x icon-soc-embrion"></span>
