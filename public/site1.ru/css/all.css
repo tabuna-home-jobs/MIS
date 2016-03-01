@@ -11470,3 +11470,18 @@ fieldset.login-fieldset input {
     background-color: #278fc3!important;
     color: #fff!important;
 }
+.header-facebook, .footer-facebook{
+    background-color: rgb(58, 87, 149);
+
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    color:#fff;
+    padding: 5px;
+}
+.header-facebook a, .footer-facebook a, .header-facebook a:hover, .footer-facebook a:hover{
+    color:#fff;
+    text-decoration: none;
+}
