@@ -610,7 +610,7 @@ left: 88%;
     vertical-align: top;
 }
 .doctors {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 .contact-form{
     padding: 10px;
@@ -845,27 +845,18 @@ i.feature-icon {
 
 .doctors-img{
     overflow: hidden;
-    border: 1px solid #F2F2F2;
-    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.37);
-    border-radius: 5px;
+    padding-right: 10px;
 }
-.doctors-img h4 {
-    width: 100%;
-    background-color: rgba(66, 139, 202, 0.56);
-    color: #FFF;
-    padding: 5px;
-    font-size: 20px;
-    margin: 0px;
-    height: 57px;
-    text-align: center;
-    line-height: 1.2;
-
-
+.doctors-img img{
+    max-width: 100%;
 }
 .doctors-detail {
-    padding: 10px;
+    padding: 15px;
+    background: #E8F3F3;
 }
-
+.doctors-detail>.specName{
+    color: #333 !important;
+}
 .feedHead{
     text-transform: uppercase;
     padding: 10px;
@@ -877,4 +868,39 @@ i.feature-icon {
     background: url('img/vopros.jpg') no-repeat;
     background-size: cover;
     margin-bottom: 50px;
+}
+ul.specNav{
+    list-style: none;
+    font-size: 14px;
+}
+.specNav>li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.specNav>li>a{
+    display: inline-block;
+    text-transform: uppercase;
+}
+.specNav .list-group-item{
+    border-radius: 0;
+    border:none;
+    background-color: #E8F3F3;
+}
+.specNav .list-group-item.active, .specNav .list-group-item.active:focus,.specNav .list-group-item.active:hover{
+    background-color: #479DED;
+}
+.moreBtn{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-left: -15px;
+    text-align: center;
+    padding: 10px;
+    color: rgb(255, 255, 255) !important;
+    background: rgb(71, 157, 237) ;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.moreBtn:hover{
+    background: #4B90D2 ;
 }

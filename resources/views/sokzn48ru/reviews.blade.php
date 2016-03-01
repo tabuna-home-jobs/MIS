@@ -22,18 +22,20 @@
                             <div class="wrapper">
 
 
+                                <div class="row">
+                                    @if(Session::has('good'))
+                                        <div class="alert alert-success">
+                                            {{ Session::get('good') }}
+                                        </div>
+                                    @endif
+
+
+                                </div>
+
 
                                 <ul class="timeline">
                                     <li class="tl-header">
-                                        <div class="btn btn-info">Now</div>
-                                    </li>
-                                    <li class="tl-item">
-                                        <div class="tl-wrap b-info">
-                                            <span class="tl-date">5s ago</span>
-                                            <div class="tl-content">
-                                                Just a title
-                                            </div>
-                                        </div>
+                                        <div class="btn btn-info">Последние отзывы</div>
                                     </li>
 
 
@@ -43,7 +45,7 @@
 
                                     <li class="tl-item">
                                         <div class="tl-wrap  b-info">
-                                            <span class="tl-date">{{$item['created_at']}}</span>
+                                            <span class="tl-date">{{$item['created_at']->diffForHumans()}}</span>
                                             <div class="tl-content panel padder b-a w-md w-auto-xs">
                                                 <span class="arrow left pull-up"></span>
                                                 <div class="text-lt m-b-sm">{{$item['fio']}}</div>
@@ -59,116 +61,48 @@
                                     @endforeach
                                     <li class="tl-item tl-left">
                                         <div class="tl-wrap  b-info">
-                                            <span class="tl-date">04.2014</span>
+                                            <span class="tl-date">{{date("m.d.y")}}</span>
                                             <div class="tl-content panel padder b-a block">
                                                 <span class="arrow left pull-up hidden-left"></span>
                                                 <span class="arrow right pull-up visible-left"></span>
                                                 <div class="text-lt m-b-sm">Напишите свой отзыв</div>
                                                 <div class="panel-body pull-in b-t b-light">
-                                                    <p>I'm working on a realy amazing application, It will be available soon. here is a little tease. </p>
+                                                    <form  role="form" action="/reviews" method="post">
+                                                        <input id="textinput" name="fio" type="text" max="255" placeholder="Имя" class="form-control input-md">
                                                     <div class="panel panel-default m-t-md m-b-n-sm pos-rlt">
-                                                        <span class="arrow top pull-left"></span>
-                                                        <form>
-                                                            <textarea class="form-control no-border" rows="3" placeholder="Your comment..."></textarea>
-                                                        </form>
+
+
+                                                        <textarea class="form-control no-border" rows="3" id="textarea" name="content" placeholder="Комментарий"></textarea>
+
+                                                        {{csrf_field()}}
+
                                                         <div class="panel-footer bg-light lter">
-                                                            <button class="btn btn-info pull-right btn-sm">Отправить</button>
-                                                            <ul class="nav nav-pills nav-sm">
-                                                                <li><a href=""><i class="fa fa-camera text-muted"></i></a></li>
-                                                                <li><a href=""><i class="fa fa-video-camera text-muted"></i></a></li>
-                                                            </ul>
+                                                            <p class="text-right"><button class="btn btn-info btn-sm" type="submit">Отправить</button></p>
+
                                                         </div>
                                                     </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="tl-header">
-                                        <div class="btn btn-sm btn-default btn-rounded">2014</div>
+                                        <div class="btn btn-icon btn-rounded btn-default"><i class="fa fa fa-envelope"></i></div>
                                     </li>
-                                    <li class="tl-item">
-                                        <div class="tl-wrap">
-                                            <span class="tl-date">10.08.2013</span>
-                                            <div class="tl-content panel padder b-a">
-                                                <span class="arrow left pull-up hidden-left"></span>
-                                                <span class="arrow right pull-up visible-left"></span>
-                                                <div class="text-lt">A good story to hear.</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="tl-header">
-                                        <div class="btn btn-icon btn-rounded btn-default"><i class="fa fa-twitter"></i></div>
-                                    </li>
-                                    <li class="tl-item tl-left">
-                                        <div class="tl-wrap b-white">
-                                            <span class="tl-date">5.07.2013</span>
-                                            <div class="tl-content panel padder b-a">
-                                                <span class="arrow left pull-up hidden-left"></span>
-                                                <span class="arrow right pull-up visible-left"></span>
-                                                <div class="text-lt">Yesterday is History</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="tl-header">
-                                        <div class="btn btn-sm btn-default btn-rounded">more</div>
-                                    </li>
+
+
                                 </ul>
 
 
 
 
 
-                                    <div class="row">
-                                        @if(Session::has('good'))
-                                            <div class="alert alert-success">
-                                                {{ Session::get('good') }}
-                                            </div>
-                                        @endif
 
-
-                                    </div>
                                     <div class="row">
                                         {!! $Reviews->render() !!}
                                     </div>
 
 
-
-
-                                    <form class="form-horizontal" role="form" action="/reviews" method="post">
-                                        <fieldset>
-
-                                            <!-- Form Name -->
-                                            <legend>Напишите свой отзыв</legend>
-
-                                            <!-- Text input-->
-                                            <div class="form-group">
-                                                <label class="col-md-4 control-label" for="textinput">Имя</label>
-                                                <div class="col-md-5">
-                                                    <input id="textinput" name="fio" type="text" max="255" placeholder="Имя" class="form-control input-md">
-                                                    <span class="help-block"></span>
-                                                </div>
-                                            </div>
-
-                                            <!-- Textarea -->
-                                            <div class="form-group">
-                                                <label class="col-md-4 control-label" for="textarea">Комментарий</label>
-                                                <div class="col-md-5">
-                                                    <textarea class="form-control" id="textarea" name="content" placeholder="Комментарий"></textarea>
-                                                </div>
-                                            </div>
-
-                                            {{csrf_field()}}
-
-                                            <!-- Button -->
-                                            <div class="form-group">
-                                                <label class="col-md-4 control-label" for="singlebutton">Оставить отзыв</label>
-                                                <div class="col-md-5">
-                                                    <button name="singlebutton" type="submit" class="btn btn-info">ОТПРАВИТЬ</button>
-                                                </div>
-                                            </div>
-
-                                        </fieldset>
-                                    </form>
 
                                 <div class="clearfix"></div>
                             </div>

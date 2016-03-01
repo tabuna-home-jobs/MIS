@@ -3,7 +3,7 @@
 @section('content')
     <div class="page-content blog-content">
         <div class="container">
-            <h1>{{$New['name']}}</h1>
+            <h1 class="blueText center">{{$New['name']}}</h1>
             <div class="page-text">
                 {!! $New['content'] !!}
             </div>
