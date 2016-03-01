@@ -59,14 +59,32 @@
 
 <!-- Фейсбук -->
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '186467828393487',
+            xfbml      : true,
+            version    : 'v2.5'
+        });
+    };
+
+    (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
+        if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.4&appId=1674409386111897";
+        js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 <!-- !Фейсбук -->
+
+
+
+
+<div class="fb-page" data-href="https://www.facebook.com/groups/zdorovie48/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/groups/zdorovie48/"><a href="https://www.facebook.com/groups/zdorovie48/">Facebook</a></blockquote></div></div>
+
+
+
 
 
 
