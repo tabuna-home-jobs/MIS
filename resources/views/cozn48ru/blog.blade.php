@@ -11,14 +11,23 @@
                         <div class="col-sm-6 col-md-4">
                             <div class="thumbnail">
                                 <a href="/blog/{{$item['id']}}"><img src="{{$item['avatar']}}" alt="{{$item['name']}}"></a>
-                                <div class="caption">
-                                    <h4 class="text-center"><a href="/blog/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h4>
-                                    <p>{{str_limit((strip_tags($item['content'])), $limit = 200, $end = '...')}}</p>
-                                    <div class="seeall"><img src="/cozn48.ru/img/minibutton.png"><a href="/blog/{{$item['id']}}">Читать полностью</a><br></div>
+                                <div class="caption cap-news">
+                                    <h4 class="text-left">
+                                        <a href="/blog/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a>
+                                    </h4>
+                                    <p>{{str_limit((strip_tags($item['content'])), $limit = 100, $end = '...')}}</p>
+                                    <hr>
+                                    <div class="text-left date_created">
+                                        {{date('d-m-Y', strtotime($item['created_at']))}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        @if($i % 3 == 0)
+                            <div class="clearfix"></div>
+                        @endif
 
+                        <?php $i++?>
 
 
 
