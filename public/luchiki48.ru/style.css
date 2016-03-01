@@ -242,6 +242,9 @@ margin-top: 103px;
 .white{
 color: white;
 }
+.black{
+    color: #000;
+}
 .blueBg{
     background: #479DED;
 }
@@ -366,7 +369,7 @@ line-height: 32px;
     background-size: cover;
     color:#fff;
 }
-.reviews-form .container{
+.reviews-form .container, .quest-form .container{
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -677,11 +680,13 @@ left: 88%;
 .after-booking-sec .panel{
     margin-bottom: 20px;
     background-color: #FFF;
-    border-bottom: 1px solid #DDD;
+    /*border-bottom: 1px solid #DDD;*/
 }
 .after-booking-sec .panel-heading{
     background-image: none;
     background-color: #fff;
+    border: 1px solid #479DED;
+    padding: 15px;
 }
 .after-booking-sec  .panel-title{
     font-size: 18px;
@@ -694,13 +699,19 @@ left: 88%;
 .after-booking-sec .blog-content{
     font-size: 16px;
 }
+.after-booking-sec .panel-collapse{
+    margin-top: 15px;
+    margin-left: 30%;
+    background: rgb(232, 243, 243) none repeat scroll 0% 0%;
+    padding: 20px;
+}
 .medicom-feature-list li {
     padding-left: 55px !important;
     padding-bottom: 20px;
     font-size: 18px;
 }
 .medicom-feature-list li i {
-    margin-left: -55px;
+    margin-left: -40px;
     width: 50px;
     height: 50px;
     border-radius: 100%;
@@ -709,6 +720,7 @@ left: 88%;
     font-size: 2em;
     line-height: 50px;
     margin-right: 17px;
+    margin-top: 20px;
 }
 .medicom-feature-list li i {
     border: 1px solid #1A7CAE;
@@ -860,4 +872,9 @@ i.feature-icon {
 }
 .blog-content .img-responsive{
     display: inline-block;
+}
+.quest-form{
+    background: url('img/vopros.jpg') no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
 }
