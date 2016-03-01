@@ -37,15 +37,9 @@
 
                     <div class="newsletter clearfix">
 
-                        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-height="300"
-                             data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
-                             data-show-facepile="true" data-show-posts="false">
-                            <div class="fb-xfbml-parse-ignore">
-                                <blockquote cite="https://www.facebook.com/facebook"><a
-                                            href="https://www.facebook.com/facebook">Facebook</a></blockquote>
-                            </div>
-                        </div>
+                        <div class="fb-page" data-href="https://www.facebook.com/zdorovie48/" data-width="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/zdorovie48/"><a href="https://www.facebook.com/zdorovie48/">Здоровье нации</a></blockquote></div></div>
                     </div>
+
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
