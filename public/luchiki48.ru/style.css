@@ -610,7 +610,7 @@ left: 88%;
     vertical-align: top;
 }
 .doctors {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 .contact-form{
     padding: 10px;
@@ -846,6 +846,9 @@ i.feature-icon {
 .doctors-img{
     overflow: hidden;
     padding-right: 10px;
+}
+.doctors-img img{
+    max-width: 100%;
 }
 .doctors-detail {
     padding: 15px;
