@@ -5,12 +5,12 @@
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="luchiki-heading"><h2>{{$album->name}}</h2>
+                <div class="luchiki-heading"><h1 class="blueText center">{{$album->name}}</h1>
                 </div>
             </div>
             <div class="wrrr"></div>
         </section>
-        <main role="main" class="site-content">
+        <main role="main" class="site-content padding-top-35">
             <div class="page type-page status-publish hentry">
                 <div class="entry-content">
                     <div class="container">

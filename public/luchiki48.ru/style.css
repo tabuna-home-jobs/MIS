@@ -1,9 +1,9 @@
 @font-face {
     font-family: "PTSerif";
-    src: url("../fonts/PTSerifRegular/PTSerifRegular.eot");
-    src: url("../fonts/PTSerifRegular/PTSerifRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/PTSerifRegular/PTSerifRegular.woff") format("woff"),
-    url("../fonts/PTSerifRegular/PTSerifRegular.ttf") format("truetype");
+    src: url("fonts/PTSerifRegular/PTSerifRegular.eot");
+    src: url("fonts/PTSerifRegular/PTSerifRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/PTSerifRegular/PTSerifRegular.woff") format("woff"),
+    url("fonts/PTSerifRegular/PTSerifRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -568,6 +568,21 @@ left: 88%;
 .item-serv>div>div{
     max-height: 197px;
     overflow: hidden;
+}
+.newsList .item-row{
+    padding: 10px;
+}
+.item-blog{
+    border: 1px solid #479DED;
+    height: 100%;
+}
+.item-blog>div{
+    padding: 15px;
+}
+.item-blog>a{
+    width: 100%;
+    border-bottom: 5px solid #479DED;
+    display: block;
 }
 .service-list h1{
     color: #479DED;

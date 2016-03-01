@@ -5,12 +5,12 @@
         <section class="page-title-wrapper">
             <div class="container clearfix">
                 <div class="luchiki-heading">
-                    <h2>Наш учитель: <span class="lastWord">{{$Spec->fio}}</span></h2>
+                    <h1  class="blueText center">Наш учитель: {{$Spec->fio}} </h1>
                 </div>
             </div>
             <div class="wrrr"></div>
         </section>
-        <main role="main" class="site-content-archive wrapp-review">
+        <main role="main" class="site-content-archive wrapp-review  padding-top-35">
             <div class="container clearfix">
                 <div class="blog-wrapper">
                     <div class="blog-inner blog-single clearfix">
@@ -26,27 +26,27 @@
 
                                         @if(isset($Spec->subname) && trim($Spec->subname) !== "")
                                             <p>
-                                                <span class="heading">Должность: </span>
+                                                <span class="black">Должность: </span>
                                                 <span class="detail">{{$Spec->subname}} </span>
                                             </p>
                                         @endif
 
                                         @if(isset($Spec->opyt) && trim($Spec->opyt) !== "")
                                             <p>
-                                                <span class="heading">Должность: </span>
+                                                <span class="black">Должность: </span>
                                                 <span class="detail">{{$Spec->opyt}} </span>
                                             </p>
                                         @endif
 
                                         @if(isset($Spec->obrazovanie) && trim($Spec->obrazovanie) !== "")
-                                            <div class="our-staffs-phone"><p>Образование:</p>{{$Spec->obrazovanie}}</div>
+                                            <div class="our-staffs-phone"><p class="black">Образование:</p>{{$Spec->obrazovanie}}</div>
                                         @endif
 
                                         @if(isset($Spec->special) && trim($Spec->special) !== "")
-                                            <div class="our-staffs-email"><p>Специализация:</p>{{$Spec->special}}</div>
+                                            <div class="our-staffs-email"><p class="black">Специализация:</p>{{$Spec->special}}</div>
                                         @endif
                                         <div class="our-staffs-phone">
-                                            <p>Дни работы:</p>
+                                            <p class="black">Дни работы:</p>
                                             @if($days = unserialize($Spec->works))
                                                 @foreach($days as $day)
                                                     <span>{{$day}}; </span>
