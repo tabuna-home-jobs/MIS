@@ -30,7 +30,7 @@
                             <p>{!! str_limit($item['content'],300,'...') !!}
                                 </p>
                             <div class="text-right rev-name">
-                               <strong>- {{$item['fio']}}</strong>
+                               <div class="black">- {{$item['fio']}}</div>
                             </div>
                         </div>
                     </div>

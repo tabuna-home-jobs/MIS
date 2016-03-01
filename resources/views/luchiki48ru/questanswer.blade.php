@@ -19,12 +19,17 @@
                                 <i class="fa fa-question medicom-check pull-left hidden-xs"></i>
 
                                 <h4 class="panel-title">
+                                   <!-- <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                       href="#collapse-answer-{{$QA->id}}" aria-expanded="true"
+                                       aria-controls="collapse-answer-{{$QA->id}}">
+                                        {{$QA->questions}}
+                                    </a>-->
+
                                     <a role="button" data-toggle="collapse" data-parent="#accordion"
                                        href="#collapse-answer-{{$QA->id}}" aria-expanded="true"
                                        aria-controls="collapse-answer-{{$QA->id}}">
                                         {{$QA->questions}}
                                     </a>
-
 
                                     <p class="text-right">
                                         <div class="text-right black">
@@ -42,7 +47,7 @@
                                  aria-labelledby="heading-answer-{{$QA->id}}">
                                 <div class="panel-body blog-content">
                                     {{$QA->answer}}
-                                    <p class="text-right black">
+                                    <p class="text-right">
                                         - {{$QA->getDoctor->fio or ''}}
                                         <!--<small><br>
                                             <date>{{$QA->updated_at->diffForHumans()}}</date>
