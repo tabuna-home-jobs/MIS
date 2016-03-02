@@ -33,6 +33,7 @@ class GoodsController extends Controller {
     public function postIndex(GoodsRequest $request)
     {
 
+
         if(!is_null($request->id))
             $Goods = Goods::find($request->id);
         else
@@ -51,7 +52,7 @@ class GoodsController extends Controller {
             $Goods->avatar = '/dash/img/no_img.png';
         }
 
-        $Goods->id = $request->id;
+        //$Goods->id = $request->id;
         $Goods->descript = $request->descript;
         $Goods->ids = Session::get('website');
         $Goods->price = $request->price;
@@ -66,6 +67,7 @@ class GoodsController extends Controller {
 
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
+
         return redirect()->route('goods');
     }
 

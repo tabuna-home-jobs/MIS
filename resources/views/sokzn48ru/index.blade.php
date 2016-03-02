@@ -114,7 +114,7 @@
 
             <div class="col-md-2">
                 <p class="h3 m-b-md inline b b-light rounded wrapper-lg">
-                    <i class="fa w-1x  fa-2x icon-soc-ages"></i>
+                    <i class="fa w-1x  fa-2x icon-soc-kachestvo"></i>
                 </p>
 
                 <div class="m-b-xl">
@@ -126,12 +126,11 @@
 
             <div class="col-md-2">
                 <p class="h3 m-b-md inline b b-light rounded wrapper-lg">
-                    <i class="fa w-1x   fa-2x icon-soc-ages"></i>
+                    <i class="fa w-1x   fa-2x icon-soc-specialist"></i>
                 </p>
 
                 <div class="m-b-xl">
-                    <h5 class="m-t-none">Высокое качество
-                        услуг</h5>
+                    <h5 class="m-t-none">Квалифицированные специалисты</h5>
                 </div>
             </div>
 
