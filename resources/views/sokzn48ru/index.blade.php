@@ -141,8 +141,7 @@
                 </p>
 
                 <div class="m-b-xl">
-                    <h5 class="m-t-none">Высокое качество
-                        услуг</h5>
+                    <h5 class="m-t-none">Реальные цены</h5>
                 </div>
             </div>
 
@@ -153,7 +152,7 @@
                 </p>
 
                 <div class="m-b-xl">
-                    <h5 class="m-t-none">Высокое качество
+                    <h5 class="m-t-none">Большой выбор
                         услуг</h5>
                 </div>
             </div>
@@ -165,8 +164,7 @@
                 </p>
 
                 <div class="m-b-xl">
-                    <h5 class="m-t-none">Высокое качество
-                        услуг</h5>
+                    <h5 class="m-t-none">Ориентация на клиентов всех возрастов</h5>
                 </div>
             </div>
 
@@ -177,8 +175,7 @@
                 </p>
 
                 <div class="m-b-xl">
-                    <h5 class="m-t-none">Высокое качество
-                        услуг</h5>
+                    <h5 class="m-t-none">Индивидуальный подход к каждому клиенту</h5>
                 </div>
             </div>
 
@@ -236,7 +233,7 @@
                         <h4 class="m-b">Запись на прием в три шага</h4>
                     </div>
                     <div class="col-sm-6 btn-zapis">
-                        <a href="" class="btn btn-lg btn-default">Записаться на прием</a>
+                        <a  data-toggle="modal" data-target="#myfeedback" class="btn btn-lg btn-default">Записаться на прием</a>
                     </div>
                 </div>
             </div>
@@ -269,5 +266,7 @@
             @endforeach
         </div>
     </section>
+
+
 
 @endsection

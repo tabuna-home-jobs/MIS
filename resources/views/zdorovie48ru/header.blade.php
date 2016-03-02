@@ -81,11 +81,6 @@
 
 
 
-<div class="fb-page" data-href="https://www.facebook.com/groups/zdorovie48/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/groups/zdorovie48/"><a href="https://www.facebook.com/groups/zdorovie48/">Facebook</a></blockquote></div></div>
-
-
-
-
 
 
 

@@ -24,7 +24,7 @@
                         </ul>
                         </div>
                     <div class="doctors-detail text-center">
-                        <h4>{{$spec->fio}}</h4>
+                        <a href="/team/{{$spec['id']}}"><h4>{{$spec->fio}}</h4></a>
 
                         <p>
                             <span class="text-center subname-team">{{$spec->subname}}</span>

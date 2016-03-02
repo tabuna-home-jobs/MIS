@@ -40,15 +40,16 @@ class FeedbackController extends Controller
      *
      * @return Response
      */
-    public function store(FeedbackRequest $request)
+    public function store(FeedbackRequest $request,$sitename = "sokzn48", $sitedomen = "ru")
     {
 
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $new = new Feedback([
             'fio' => $request->fio,
             'phone' => $request->phone,
             'email' => $request->email,
             'content' => $request->message,
-            'ids' => 10,
+            'ids' => $getSites->id,
         ]);
         $new->save();
 
