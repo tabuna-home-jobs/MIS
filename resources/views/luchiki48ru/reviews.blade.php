@@ -25,14 +25,15 @@
                     @endif
                     @foreach($Reviews as $item)
                     <div class="single-review col-md-6">
-                        <div class="rev-img col-md-3 col-sm-3 hidden-xs"><i class="feature-icon fa fa-commenting"></i></div>
-                        <div class="rev-text col-md-9 col-sm-9">
+                        <div class="rev-img col-md-2 col-sm-3 hidden-xs"><i class="feature-icon fa fa-commenting"></i></div>
+                        <div class="rev-text col-md-10 col-sm-9">
                             <p>{!! str_limit($item['content'],300,'...') !!}
                                 </p>
                             <div class="text-right rev-name">
                                <div class="black">- {{$item['fio']}}</div>
                             </div>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                     @endforeach
 
