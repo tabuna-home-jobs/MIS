@@ -92,9 +92,6 @@
                                 <h6>
                                     <small>Категория: {{$Good->category()->first()->name}}</small>
                                 </h6>
-                                <h6>
-                                    <small>Cтоимость: {{$Good->price}} <i class="fa fa-rub"></i></small>
-                                </h6>
                             </div>
 
                         </div>
