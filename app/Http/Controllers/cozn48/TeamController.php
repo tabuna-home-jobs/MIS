@@ -56,9 +56,16 @@ class TeamController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($id, $sitename = "cozn48", $sitedomen = "ru")
 	{
-		//
+		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+
+		$Specialist = $getSites->allspecs()->where('id', $id)->first();
+
+		return view($sitename . $sitedomen . '/spec', [
+
+			'Spec' => $Specialist
+		]);
 	}
 
 	/**

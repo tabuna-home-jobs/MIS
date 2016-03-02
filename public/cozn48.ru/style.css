@@ -271,6 +271,13 @@ h2 {
 	margin-bottom: 22%;
 	color: #7d7d7d
 }
+.black{
+	color:#000;
+	font-weight: bold;
+}
+.our-staffs-phone, .our-staffs-email, .our-staffs-phone{
+	margin-bottom: 15px;
+}
 .specialisation {
 	margin-top: 5%;
 	color: #7d7d7d;
