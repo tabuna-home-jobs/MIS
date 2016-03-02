@@ -57,6 +57,7 @@
 
                             </div>
                         </div>
+                        {!! $photos->render() !!}
                     </div>
                 </div>
             </div>

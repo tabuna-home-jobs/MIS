@@ -21,7 +21,7 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        <div class="footer-block-1 col-md-3">
+        <div class="footer-block-1 col-md-3 hidden-xs">
             {!!Menu::getMenuByLayout('7','bottom','','footMenu')!!}
         </div>
         <div class="footer-block-2 col-md-3">

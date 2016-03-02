@@ -795,6 +795,8 @@ i.feature-icon {
 }
 .entry-thumbnail {
     position: relative;
+    max-height: 200px;
+    overflow: hidden;
 }
 .gallery-wrapper .gallery-item img {
     max-width: 100%;
@@ -919,4 +921,15 @@ ul.specNav{
 }
 .moreBtn:hover{
     background: #4B90D2 ;
+}
+.map{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .entry-thumbnail {
+        height: 200px;
+    }
+
 }

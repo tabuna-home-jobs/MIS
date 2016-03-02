@@ -62,7 +62,7 @@ class GalleryController extends Controller {
 	public function show($id, $sitename = "sokzn48", $sitedomen = "ru")
 	{
 		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-		$album  =  $getSites->getAlbums()->select('name')->first();
+		$album  =  $getSites->getAlbums()->where('id',$id)->select('name')->first();
 		$photo = $getSites->getPhoto()->where('album_id',$id)->paginate(20);
 
 		$getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
