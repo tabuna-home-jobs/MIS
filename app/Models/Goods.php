@@ -53,4 +53,11 @@ class Goods extends Node {
         return $this->hasMany('App\Models\Comments');
     }
 
+
+    public function getParent()
+    {
+        return $this->hasMany('App\Models\Goods','id','parent_id');
+    }
+
+
 }

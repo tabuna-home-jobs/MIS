@@ -78,9 +78,15 @@
                     <h2 class="bordered light">{{$Good->name}}</h2>
 
 
+
+
+
+
                     <ol class="breadcrumb">
                         <li><a href="/">Главная</a></li>
-                        <li><a href="/service/{{$Good->category()->first()->slug}}">{{$Good->category()->first()->name}}</a></li>
+
+                        {{-- @include('zdorovie48ru.category.break', $Good) --}}
+
                         <li class="active">{{$Good->name}}</li>
                     </ol>
 
