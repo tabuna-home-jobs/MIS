@@ -84,7 +84,7 @@
 
                     <ol class="breadcrumb">
                         <li><a href="/">Главная</a></li>
-                        <li><a href="/service/{{$Good->category()->first()->id}}">{{$Good->category()->first()->name}}</a></li>
+                        <li><a href="/service?category={{$Good->category()->first()->id}}">{{$Good->category()->first()->name}}</a></li>
                         {{--dd($Good->getParent()->first()->id)--}}
                         @if(!is_null($Good->getParent()->first()))
                             @include('zdorovie48ru.category.break',$Good)

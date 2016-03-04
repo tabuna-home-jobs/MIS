@@ -25,10 +25,10 @@
                             </div>
                             <h4>{{$good['name']}}</h4>
 
-                            <div class="price-rating">
+                            <!--<div class="price-rating">
                                 <p class="price"><i class="fa fa-rub"></i> {{$good['price']}}</p>
                                 <div class="clearfix"></div>
-                            </div>
+                            </div>-->
                             <span class="sperator"></span>
                             <a class="ad-to-cart" href="/service/{{$good['id']}}"><i class="fa fa-hospital-o"></i>Подробнее</a>
                         </div>
