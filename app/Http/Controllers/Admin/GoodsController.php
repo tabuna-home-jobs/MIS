@@ -47,8 +47,7 @@ class GoodsController extends Controller {
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $Goods->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
-        }else{
-
+        }elseif(is_null($Goods->avatar)){
             $Goods->avatar = '/dash/img/no_img.png';
         }
 
