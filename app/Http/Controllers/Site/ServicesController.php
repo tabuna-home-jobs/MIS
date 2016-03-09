@@ -55,15 +55,23 @@ class ServicesController extends Controller {
 
 
 
-		if (is_null($requestCategory))
+		if (is_null($requestCategory)){
 			$Goods = $getSites->getGoods()->paginate(9);
-		else
-			$Goods = $getSites->getGoods()->where('category_id', $requestCategory)->paginate(9);
+			$thisCategory = null;
+		}
+
+		else{
+			$Goods = $getSites->getGoods()->where('category_id', $requestCategory)->orderBy('name','asc')->get();
+			$thisCategory = $getSites->getCategory()->where('id',$requestCategory)->get()->first();
+		}
+
+
 
 		return view($sitename . $sitedomen . '/service', [
 				'Category' => $Category,
 				'Goods' => $Goods,
 				'LastNews' => $getLastNews,
+				'thisCategory' => $thisCategory,
 		]);
 
 
