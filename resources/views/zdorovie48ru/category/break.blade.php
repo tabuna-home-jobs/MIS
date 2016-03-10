@@ -1,8 +1,24 @@
-@if(isset($Good->getParent()->first()->slug))
-    <li><a href="/service/{{$Good->getParent()->first()->slug}}">{{$Good->getParent()->first()->name}}</a></li>
-@else
-    <li><a href="/service/{{$Good->getParent()->first()->id}}">{{$Good->getParent()->first()->name}}</a></li>
+
+
+@if(!is_null($NewGood = $Good->getParent()->first()))
+    @include('zdorovie48ru.category.break',[
+        'Good'=> $NewGood,
+    ])
 @endif
+
+@if(isset($Good->slug))
+    <li><a href="/service/{{$Good->slug}}">{{$Good->name}}</a></li>
+@else
+    <li><a href="/service/{{$Good->id}}">{{$Good->name}}</a></li>
+@endif
+
+
+
+
+
+
+
+
 {{--dd($Good,'<br>',$Good->getParent()->first(),'<br>',$Good->getParent()->getParent()->first())--}}
 {{--
     ;(

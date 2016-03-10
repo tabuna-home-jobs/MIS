@@ -87,7 +87,9 @@
                         <li><a href="/service?category={{$Good->category()->first()->id}}">{{$Good->category()->first()->name}}</a></li>
                         {{--dd($Good->getParent()->first()->id)--}}
                         @if(!is_null($Good->getParent()->first()))
-                            @include('zdorovie48ru.category.break',$Good)
+                            @include('zdorovie48ru.category.break',[
+                                'Good' => $Good->getParent()->first()
+                                ])
                         @endif
 
 
