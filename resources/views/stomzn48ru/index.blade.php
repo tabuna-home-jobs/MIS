@@ -648,7 +648,7 @@
                                             </ul>
                                             <div class="full_price">
                                                 <a href="/stomzn48.ru/download/price.xlsx" class="button">
-                                                    Скачать прайс
+                                                    Скачать полный прайс
                                                 </a>
                                             </div>
                                         </div>
