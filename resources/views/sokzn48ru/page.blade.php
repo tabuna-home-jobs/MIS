@@ -9,7 +9,7 @@
         <div class="container text-center text-middle">
             <div class="lead">
                 <h1>
-                    {{$New->name}}
+                    {{$Page->name}}
                    семейный оздоровительный комплекс
                 </h1>
             </div>
@@ -28,11 +28,11 @@
                     <div class="panel">
                         <div class="wrapper-lg">
 
-                            <div>{!! $New->content !!}</div>
+                            <div>{!! $Page->content !!}</div>
 
                             <div class="line line-lg b-b b-light"></div>
                             <div class="text-muted">
-                                <i class="fa fa-clock-o text-muted"></i> {{$New->created_at->toDateString()}}
+                                <i class="fa fa-clock-o text-muted"></i> {{$Page->created_at->toDateString()}}
                           </div>
                         </div>
                     </div>

@@ -17,9 +17,9 @@ class PageController extends Controller
         $getSites = Sites::where('domen', '=', "sokzn48.ru")->first();
 
         $Page = $getSites->getPages()->find($Pages->id);
-
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
         return view('sokzn48ru/page', [
-            'Page' => $Page,
+            'Page' => $Page,'LastNews' => $getLastNews
         ]);
     }
 
