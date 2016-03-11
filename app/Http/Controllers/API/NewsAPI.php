@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Models\Appointments;
 use App\Models\News;
 use Illuminate\Http\Request;
+use Orchid\Orchid;
 
 class NewsAPI extends Controller
 {
