@@ -1,5 +1,11 @@
 @extends('luchiki48ru/header')
 
+@section('title', $Good['title'])
+@section('description', $Good['descript'])
+@section('keywords', $Good['tag'])
+@section('avatar', $Good['avatar'])
+
+
 @section('content')
 
     <div class="page-content">

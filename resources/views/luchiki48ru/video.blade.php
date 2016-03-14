@@ -1,4 +1,10 @@
 @extends('luchiki48ru/header')
+
+@section('title', $album['title'])
+@section('description', $album['descript'])
+@section('keywords', $album['tag'])
+@section('avatar', $album['avatar'])
+
 @section('content')
 
 
@@ -28,7 +34,7 @@
 
 
             <div class="col-xs-6">
-                <div class="entry-thumbnail title">
+                <div class=" title">
                     <h4>{{$video->name}}</h4>
                     {!!$video->code!!}
                 </div>

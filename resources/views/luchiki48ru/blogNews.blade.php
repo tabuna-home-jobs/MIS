@@ -1,5 +1,10 @@
-
 @extends('luchiki48ru/header')
+
+@section('title', $New['title'])
+@section('description', $New['descript'])
+@section('keywords', $New['tag'])
+@section('avatar', $New['avatar'])
+
 @section('content')
     <div class="page-content blog-content">
         <div class="container">

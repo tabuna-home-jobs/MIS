@@ -1,4 +1,10 @@
 @extends('luchiki48ru/header')
+
+@section('title', $Spec['title'])
+@section('description', $Spec['descript'])
+@section('keywords', $Spec['tag'])
+@section('avatar', $Spec['avatar'])
+
 @section('content')
 
     <div id="wrapper-content">

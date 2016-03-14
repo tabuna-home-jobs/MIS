@@ -1,4 +1,10 @@
 @extends('luchiki48ru/header')
+
+@section('title', $album['title'])
+@section('description', $album['descript'])
+@section('keywords', $album['tag'])
+@section('avatar', $album['avatar'])
+
 @section('content')
 
 
@@ -57,7 +63,9 @@
 
                             </div>
                         </div>
+                        <div class="clearfix"></div>
                         {!! $photos->render() !!}
+
                     </div>
                 </div>
             </div>

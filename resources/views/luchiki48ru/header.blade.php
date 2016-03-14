@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex"/>
 
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
-        <title>СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ» - @yield('title')</title>
+        <title>@yield('title') - СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ»</title>
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
         <meta property="og:title" content="@yield('title')">
