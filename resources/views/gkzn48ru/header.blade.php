@@ -133,27 +133,34 @@
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию. </p></div>
 
                             <div class="departament-item-owl">
-                                <img src="/gkzn48ru/images/logo/luch_w.png">
-                                <h3><a href="#">Лучики</a></h3>
+                                <a href="http://luchiki48.ru/" target="_blank" class="no-u">
+                                    <img src="/gkzn48ru/images/logo/luch_w.png">
+                                </a>
+                                <h3><a href="http://luchiki48.ru/" target="_blank">Лучики</a></h3>
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию. </p></div>
 
 
                         </li>
                         <li>
                             <div class="departament-item-owl">
-
-                                <img src="/gkzn48ru/images/logo/osteo_w.png">
-                                <h3><a href="#">Центр Остеопатии</a></h3>
+                                <a href="http://cozn48.ru/" target="_blank" class="no-u">
+                                    <img src="/gkzn48ru/images/logo/osteo_w.png">
+                                </a>
+                                <h3><a href="http://cozn48.ru/" target="_blank">Центр Остеопатии</a></h3>
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию.</p></div>
 
                             <div class="departament-item-owl">
-                                <img src="/gkzn48ru/images/logo/sok_w.png">
-                                <h3><a href="#">СОК</a></h3>
+                                <a href="http://sokzn48.ru/" target="_blank" class="no-u">
+                                    <img src="/gkzn48ru/images/logo/sok_w.png">
+                                </a>
+                                <h3><a href="http://sokzn48.ru/" target="_blank">СОК</a></h3>
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию.</p></div>
                         </li>
                         <li>
                             <div class="departament-item-owl">
-                                <img src="/gkzn48ru/images/logo/diagnos.png">
+
+                                    <img src="/gkzn48ru/images/logo/diagnos.png">
+
                                 <h3><a href="#">Центр Диагностики</a></h3>
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию.</p>
                             </div>
