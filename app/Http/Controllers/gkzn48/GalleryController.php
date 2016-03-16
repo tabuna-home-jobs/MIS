@@ -51,7 +51,7 @@ class GalleryController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id, $sitename, $sitedomen)
+	public function show($id, $sitename = 'gkzn48', $sitedomen = 'ru')
 	{
 		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 		$albums  =  $getSites->getAlbums()->select('*')->get();
