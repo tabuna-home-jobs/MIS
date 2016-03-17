@@ -6,7 +6,7 @@
             <h1>Услуги центра Остеопатии</h1>
             <div class="page-text">
 
-                <div class="nav-good-category-container">
+                <div class="nav-good-category-container" style="display: none;">
 
                     <div class="btn-group nav-good-category" role="group" aria-label="...">
                         <a href="/service" type="button" class="btn btn-default">Все</a>
