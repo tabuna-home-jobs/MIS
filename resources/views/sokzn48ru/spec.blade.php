@@ -35,7 +35,7 @@
 
                                         @if(isset($Spec->subname) && trim($Spec->subname) !== "")
                                             <p>
-                                                <span class="heading">Должность: </span>
+                                                <span class="heading">Квалификация: </span>
                                                 <span class="detail">{{$Spec->subname}} </span>
                                             </p>
                                         @endif
