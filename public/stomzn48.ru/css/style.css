@@ -814,3 +814,6 @@ resize:none;
 .modalDialog>div{
 text-align: center;
 }
+.our-staffs-image img, .doctors-img img {
+    max-width: 100%;
+}
