@@ -5737,3 +5737,7 @@ body .four_background_color {
 .carousel-control{
     z-index: 10;
 }
+
+.our-staffs-image img, .doctors-img img {
+    max-width: 100%;
+}
