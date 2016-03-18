@@ -11,7 +11,7 @@
      		<div class="row">
 
 
-                @foreach($Specialisty as $spec)
+                @foreach($Specialisty as $key =>$spec)
             	<div class="col-md-4 padding-bottom-60 clearfix wrapper-team-elem">
                     <div class="doctors-img text-center">
                         <img src="{{$spec->avatar}}" class="img-circle" width="234" alt="{{$spec->fio}}" title="{{$spec->fio}}">
@@ -32,7 +32,9 @@
 
                     </div>
                 </div>
-
+                    @if(($key+1) % 3 == 0)
+                        <div class="clearfix"></div>
+                    @endif
                 @endforeach
 
 
