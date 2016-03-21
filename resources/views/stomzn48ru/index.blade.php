@@ -83,7 +83,7 @@
                                     <i style="font-size: 110px;" class="stm-icon-tooth-6"></i>
                                 </div>
 
-                                <a class="link" target="_self" href="/"></a>
+                                <a class="link" target="_self" href="/category/98"></a>
 
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                                     <i style="font-size: 110px;" class="stm-icon-tooth-2"></i>
                                 </div>
 
-                                <a class="link" target="_self" href="/"></a>
+                                <a class="link" target="_self" href="/category/100"></a>
 
 
                             </div>
@@ -120,7 +120,7 @@
                                     <i style="font-size: 110px;" class="stm-icon-tooth-1"></i>
                                 </div>
 
-                                <a class="link" target="_self" href="/"></a>
+                                <a class="link" target="_self" href="/category/97"></a>
 
 
                             </div>
@@ -140,7 +140,7 @@
                                     <i style="font-size: 110px;" class="stm-icon-tooth-3"></i>
                                 </div>
 
-                                <a class="link" target="_self" href="/"></a>
+                                <a class="link" target="_self" href="/category/99"></a>
 
                             </div>
                         </div>

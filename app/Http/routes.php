@@ -29,6 +29,7 @@ Route::group(['domain' => 'stomzn48.ru','namespace' => 'stomzn48'], function()
     Route::resource('/feedback', 'FeedbackController');
     Route::resource('/blog', 'BlogController');
     Route::resource('/team', 'TeamController');
+    Route::resource('/category', 'CategoryController');
     Route::resource('/', 'HomeController');
 });
 
