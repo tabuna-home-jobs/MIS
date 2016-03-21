@@ -348,7 +348,7 @@
 
 
 
-<div class="skidki">
+<div class="skidki off-block">
     <br>
 
     <h2>СКИДКИ И АКЦИИ</h2>
@@ -391,7 +391,8 @@
             </div>
         </div>
         <div class="everypeople col-lg-9">
-            @foreach($allspecs as $item )
+            @foreach($allspecs as $key => $item )
+
                 <div class="col-md-4">
                     <img src="{{$item['avatar']}}">
 
@@ -399,6 +400,9 @@
                         <div class="specialisation">{{$item['subname']}}</div>
                     </div>
                 </div>
+                @if(($key+1) % 3 == 0)
+                <div class="clearfix"></div>
+                @endif
             @endforeach
         </div>
         <div class="main-all"><!--end of specialists-->
@@ -408,7 +412,7 @@
     </div>
 </div>
 
-<div class="news">
+<div class="news off-block">
     <h2>НОВОСТИ</h2>
 
     <div class="container">

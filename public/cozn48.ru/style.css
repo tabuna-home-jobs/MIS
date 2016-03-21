@@ -718,3 +718,6 @@ a:hover{
     font-size: 14px;
     font-weight: 400;
 }
+.off-block{
+	display: none;
+}
