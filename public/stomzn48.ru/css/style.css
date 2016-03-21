@@ -817,3 +817,7 @@ text-align: center;
 .our-staffs-image img, .doctors-img img {
     max-width: 100%;
 }
+
+.doctors{
+    margin-bottom: 20px;
+}

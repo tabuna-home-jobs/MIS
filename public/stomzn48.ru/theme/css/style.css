@@ -5741,3 +5741,13 @@ body .four_background_color {
 .our-staffs-image img, .doctors-img img {
     max-width: 100%;
 }
+
+.doctors{
+    margin-bottom: 20px;
+}
+span.heading{
+    font-weight: bold;
+}
+.specName h4{
+    margin-bottom: 10px;
+}

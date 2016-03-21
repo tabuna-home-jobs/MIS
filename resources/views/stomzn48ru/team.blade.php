@@ -54,35 +54,17 @@
                                                         <h4>{{$spec->fio}}<span class="text-center">{{$spec->subname}}</span></h4>
                                                     </a>
 
-                                                    @if(isset($spec->special) && trim($spec->special) !== "")
-                                                        <p>
-                                                            <span class="heading">Специализация: </span>
-                                                            <span class="detail">{{$spec->special}}</span>
-                                                        </p>
-                                                    @endif
-
-
-
                                                     @if(isset($spec->opyt) && trim($spec->opyt) !== "")
                                                         <p>
                                                             <span class="heading">Должность: </span>
+                                                            <br>
                                                             <span class="detail">{{str_limit($spec->opyt, 50, '...')}} </span>
                                                         </p>
                                                     @endif
 
-                                                    @if(isset($spec->obrazovanie) && trim($spec->obrazovanie) !== "")
-                                                        <p>
-                                                            <span class="heading">Образование</span>
-                                                            <span class="detail">{{str_limit($spec->obrazovanie, 50, '...')}}</span>
-                                                        </p>
-                                                    @endif
 
-                                                    @if(isset($spec->about) && trim($spec->about) !== "" )
-                                                        <p>
-                                                            <span class="heading">Умения:</span>
-                                                            <span class="detail">{{str_limit($spec->about, 50, '...')}} </span>
-                                                        </p>
-                                                    @endif
+
+
 
                                                     <a href="/team/{{$spec['id']}}" class="moreBtn">Подробнее</a>
                                                 </div>
