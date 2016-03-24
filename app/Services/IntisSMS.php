@@ -53,7 +53,7 @@ class IntisSMS
 
         $arr = json_decode($this->request('https://new.sms16.ru/get/balance.php', $params), TRUE);
 
-        if(!$arr['error']){
+        if(!isset($arr['error'])){
             return $arr['money'];
         }else{
             $arr['money'] = 0;
