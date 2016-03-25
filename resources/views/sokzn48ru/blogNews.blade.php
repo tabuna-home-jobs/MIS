@@ -1,60 +1,31 @@
-@extends('sokzn48ru.app')
-
-
+@extends('sokzn48ru/ALTheader')
 @section('content')
 
-
-
-    <section class="well page-bg well-lg blog-bg text-white m-b-none">
-        <div class="container text-center text-middle">
-            <div class="lead">
-                <h2>
-                    {{$New->name}}
-                    семейный оздоровительный комплекс ооо
-                </h2>
+    <div id="wrapper-content">
+        <section class="page-title-wrapper">
+            <div class="container clearfix">
+                <div class="luchiki-heading"><h2>{{$New['name']}}</h2>
+                </div>
             </div>
-        </div>
-    </section>
-
-
-
-    <section class="container">
-
-
-        <div class="wrapper-md">
-            <div class="row">
-                <div class="col-sm-9">
-                    <div class="blog-post">
-                        <div class="panel">
-                            <div>
-                                <img src="{{$New->avatar}}" class="img-full">
-                            </div>
-                            <div class="wrapper-lg">
-
-
-                                <div>{!! $New->content !!}</div>
-
-                                <div class="line line-lg b-b b-light"></div>
-                                <div class="text-muted">
-                                    <i class="fa fa-clock-o text-muted"></i> {{$New->created_at->toDateString()}}
+            <div class="wrrr"></div>
+        </section>
+        <main role="main" class="site-content">
+            <div class="page type-page status-publish hentry">
+                <div class="entry-content">
+                    <div class="container">
+                        <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
+                            <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
+                                <div class="wpb_wrapper">
+                                    <div class="col-xs-4">
+                                        <img src="{{$New['avatar']}}" title="{{$New['name']}}" alt="{{$New['name']}}">
+                                    </div>
+                                    {!! $New['content'] !!}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    @if(isset($LastNews))
-                        @include('sokzn48ru._layouts.newslsit',['listnews' => $LastNews])
-                    @endif
-                </div>
             </div>
-        </div>
-
-
-
-    </section>
-
-
-
-
+        </main>
+    </div>
 @endsection

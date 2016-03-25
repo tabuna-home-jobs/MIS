@@ -1,35 +1,59 @@
-@extends('sokzn48ru/ALTheader')
+@extends('sokzn48ru.app')
 @section('content')
 
-    <div id="wrapper-content">
-        <section class="page-title-wrapper">
-            <div class="container clearfix">
-                <div class="luchiki-heading">
-                    <h2>Наш учитель: <span class="lastWord">{{$Spec->fio}}</span></h2>
-                </div>
+
+    <section class="well page-bg well-lg blog-bg text-white m-b-none">
+        <div class="container text-center text-middle">
+            <div class="lead">
+                <h2>
+                    Наш учитель: <span class="lastWord">{{$Spec->fio}}</span>
+                </h2>
+
             </div>
-            <div class="wrrr"></div>
-        </section>
-        <main role="main" class="site-content-archive wrapp-review">
-            <div class="container clearfix">
-                <div class="blog-wrapper">
-                    <div class="blog-inner blog-single clearfix">
-                        <article id="post-">
-                            <div class="page-single-our-staffs">
+        </div>
+    </section>
+
+
+
+    <section class="container">
+
+
+        <div class="wrapper-md">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="blog-post">
+                        <div class="panel">
+
+                            <div class="wrapper-lg">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12 our-staffs-image">
 
                                         <img  src="{{$Spec->avatar}}" class="img-responsive" alt="{{$Spec->fio}}" title="{{$Spec->fio}}">
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12 our-staffs-contact">
-                                        <h3 class="our-staffs-name">{{$Spec->fio}}</h3>
+                                        <!--<h3 class="our-staffs-name">{{$Spec->fio}}</h3>-->
 
-                                        <p class="our-staffs-job">
-                                            {{$Spec->subname}}
-                                        </p>
+                                        @if(isset($Spec->subname) && trim($Spec->subname) !== "")
+                                            <p>
+                                                <span class="heading">Квалификация: </span>
+                                                <span class="detail">{{$Spec->subname}} </span>
+                                            </p>
+                                        @endif
 
-                                        <div class="our-staffs-phone"><p>Образование:</p>{{$Spec->obrazovanie}}</div>
-                                        <div class="our-staffs-email"><p>Специализация:</p>{{$Spec->special}}</div>
+                                        @if(isset($Spec->opyt) && trim($Spec->opyt) !== "")
+                                            <p>
+                                                <span class="heading">Должность: </span>
+                                                <span class="detail">{{$Spec->opyt}} </span>
+                                            </p>
+                                        @endif
+
+                                        @if(isset($Spec->obrazovanie) && trim($Spec->obrazovanie) !== "")
+                                            <div class="our-staffs-phone"><p>Образование:</p>{{$Spec->obrazovanie}}</div>
+                                        @endif
+
+                                        @if(isset($Spec->special) && trim($Spec->special) !== "")
+                                            <div class="our-staffs-email"><p>Специализация:</p>{{$Spec->special}}</div>
+                                        @endif
                                         <div class="our-staffs-phone">
                                             <p>Дни работы:</p>
                                             @if($days = unserialize($Spec->works))
@@ -61,21 +85,20 @@
                                         {{$Spec->about}}
                                     </p>
                                 </div>
-                                <div class="luchiki-call-action   content-middle">
-                                    <div class="content-middle-inner">
-                                        <p>Посмотреть коллег
-                                            <a class="luchiki-button button-lg" href="/team" target="_self">
-                                                Смотреть
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
                             </div>
-                        </article>
+                        </div>
                     </div>
                 </div>
+                <div class="col-sm-3">
+                    @if(isset($LastNews))
+                        @include('sokzn48ru._layouts.newslsit',['listnews' => $LastNews])
+                    @endif
+                </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </section>
+
+
+
 
 @endsection

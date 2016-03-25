@@ -1,56 +1,25 @@
-@extends('sokzn48ru.app')
+@extends('sokzn48ru/header')
 @section('content')
-
-    <section class="well page-bg well-lg blog-bg text-white m-b-none">
-        <div class="container text-center text-middle">
-            <div class="lead">
-                <h1>
-                   Новости комплекса
-                </h1>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-
-
-        <div class="wrapper-md">
-            <div class="row">
-                                @foreach($News as $key=>$item)
-                                    <div class="col-md-4 item-row padder-v">
-                                        <div class="blog-post">
-                                            <a href="/blog/{{$item->id}}"><h4 class="m-t-none">
-                                                {{str_limit($item->name,50,'...')}}
-                                            </h4></a>
-                                            <div class="text-smal">
-                                                {{$item->created_at->diffForHumans()}}
-                                            </div>
-
-                                            <a href="/blog/{{$item->id}}">
-                                                <img src="{{$item->avatar}}" class="img-full">
-                                            </a>
-
-                                            <div class="padder-v">
-                                                {{str_limit(strip_tags($item->content), 150, '...')}}
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    @if(($key+1) % 3 == 0)
-                                        <div class="clearfix"></div>
-                                    @endif
-                                 @endforeach
-                                <div class="clearfix"></div>
+    <div class="page-content">
+        <div class="container">
+            <h1>Новости</h1>
+            <div class="page-text">
+                <div class="row">
+                    @foreach($News as $item)
+                        <div class="col-md-4 item-row">
+                            <div>
+                                <h3><a href="/blog/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
+                                <p class="day">{{$item['created_at']}}</p>
+                                <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
+                                <div class="seeall"><img src="/cozn48.ru/img/minibutton.png"><a href="/blog/{{$item['id']}}">Читать полностью</a><br></div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
 
-
-
-    </section>
-
-
-
+    </div>
     <script>
         var resized = function (height) {
 

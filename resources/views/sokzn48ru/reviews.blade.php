@@ -1,162 +1,102 @@
-@extends('sokzn48ru.app')
+@extends('sokzn48ru/ALTheader')
 
 @section('content')
 
-    <section class="well page-bg well-lg blog-bg text-white m-b-none">
-        <div class="container text-center text-middle">
-            <div class="lead">
-                <h1>
-                    О нас говорят
-                </h1>
+    <div id="wrapper-content">
+        <section class="page-title-wrapper">
+            <div class="container clearfix">
+                <div class="luchiki-heading">
+                    <h2>Отзывы</h2>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="wrrr"></div>
+        </section>
+        <main role="main" class="site-content-archive wrapp-review">
 
-    <section class="container">
-
-        <div class="wrapper-md">
-            <div class="row">
-                <div class="col-sm-9">
-                    <div class="blog-post">
-                        <div class="panel">
-                            <div class="wrapper">
-
-
+            <div class="container clearfix">
+                <div class="blog-wrapper">
+                    <div class="blog-inner blog-single clearfix">
+                        <article id="post-">
+                            <div class="page-single-our-staffs">
                                 <div class="row">
                                     @if(Session::has('good'))
                                         <div class="alert alert-success">
                                             {{ Session::get('good') }}
                                         </div>
                                     @endif
+                                    @foreach($Reviews as $review)
+                                    <div class="entry-wrapper clearfix wrap-review">
 
+                                        <div class="entry-content-wrapper clearfix">
+                                            <div class="entry-content-container clearfix">
+
+                                                <h3 class="entry-title">
+                                                    {{$review->fio}}
+                                                </h3>
+
+                                                <div class="entry-meta">
+                                                     <span class="entry-meta-date"> Размещено {{$review->created_at->diffForHumans()}}</span>
+                                                </div>
+                                                <div class="entry-excerpt">
+                                                    <p>
+                                                        {{$review->content}}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
 
                                 </div>
+                                <div class="row">
+                                    {!! $Reviews->render() !!}
+                                </div>
+                            </div>
+                        </article>
 
+                        <div>
+                            <div class="col-md-12">
 
-                                <ul class="timeline">
-                                    <li class="tl-header">
-                                        <div class="btn btn-info">Последние отзывы</div>
-                                    </li>
+                                <form action="/reviews" method="post" class="wpcf7-form">
 
+                                    <div class="row contact-form-contact-us row bg-while">
+                                        <div class="col-md-3 col-sm-12 contact-form-contact-us-left">
+                                            <h3>Напишите отзыв</h3>
 
+                                            <p>мы учитываем каждое мнение</p>
 
-                                    @foreach($Reviews as $item)
-
-
-                                    <li class="tl-item">
-                                        <div class="tl-wrap  b-info">
-                                            <span class="tl-date">{{$item['created_at']->diffForHumans()}}</span>
-                                            <div class="tl-content panel padder b-a w-md w-auto-xs">
-                                                <span class="arrow left pull-up"></span>
-                                                <div class="text-lt m-b-sm">{{$item['fio']}}</div>
-                                                <div class="panel-body pull-in b-t b-light">
-                                                    <div class="clear">
-                                                        {!! str_limit($item['content'],300,'...') !!}
-                                                    </div>
+                                            <p></p>
+                                        </div>
+                                        <div class="col-md-9 col-sm-12 contact-form-contact-us-right">
+                                            <div class="row">
+                                                <div class="col-md-12 col-sm-12 contact-form-input">
+                        <span class="wpcf7-form-control-wrap your-name">
+                            <input type="text" name="fio" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="your-name" aria-required="true" aria-invalid="false" placeholder="ФИО*"></span>
                                                 </div>
+
+
+
+                                                <div class="col-md-12 col-sm-12 contact-form-input">
+                        <span class="wpcf7-form-control-wrap your-message">
+                            <textarea name="mess" cols="4" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" id="your-message" aria-required="true" aria-invalid="false" placeholder="Ваше сообщение...*"></textarea></span>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 contact-form-submit">
+                                                    <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit luchiki-button button-sm" id="submit">
+ </div>
                                             </div>
                                         </div>
-                                    </li>
-
-                                    @endforeach
-                                    <li class="tl-item tl-left">
-                                        <div class="tl-wrap  b-info">
-                                            <span class="tl-date">{{date("m.d.y")}}</span>
-                                            <div class="tl-content panel padder b-a block">
-                                                <span class="arrow left pull-up hidden-left"></span>
-                                                <span class="arrow right pull-up visible-left"></span>
-                                                <div class="text-lt m-b-sm">Напишите свой отзыв</div>
-                                                <div class="panel-body pull-in b-t b-light">
-                                                    <form  role="form" action="/reviews" method="post">
-                                                        <input id="textinput" name="fio" type="text" max="255" placeholder="Имя" class="form-control input-md">
-                                                    <div class="panel panel-default m-t-md m-b-n-sm pos-rlt">
-
-
-                                                        <textarea class="form-control no-border" rows="3" id="textarea" name="content" placeholder="Комментарий"></textarea>
-
-                                                        {{csrf_field()}}
-
-                                                        <div class="panel-footer bg-light lter">
-                                                            <p class="text-right"><button class="btn btn-info btn-sm" type="submit">Отправить</button></p>
-
-                                                        </div>
-                                                    </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="tl-header">
-                                        <div class="btn btn-icon btn-rounded btn-default"><i class="fa fa fa-envelope"></i></div>
-                                    </li>
-
-
-                                </ul>
-
-
-
-
-
-
-                                    <div class="row">
-                                        {!! $Reviews->render() !!}
                                     </div>
+                                    <div class="wpcf7-response-output wpcf7-display-none"></div>
+
+                                    {{csrf_field()}}
+                                </form>
 
 
-
-                                <div class="clearfix"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    @if(isset($LastNews))
-                        @include('sokzn48ru._layouts.newslsit',['listnews' => $LastNews])
-                    @endif
-                </div>
             </div>
-        </div>
-
-    </section>
-
-
-
-    <script>
-        var resized = function (height) {
-
-            $('.item-row').each(function(){
-                var height_this = $(this).height();
-                height_this > height ? height = height_this:'';
-            });
-
-            $('.item-row').height(height);
-        };
-
-        $(window).resize(function(){
-            var height = 0;
-            $('.item-row').each(function(){
-                var height_this = $(this).height();
-                //height_this > height ? height = height_this:'';
-                if(height_this > height){
-                    height = height_this;
-                }
-            });
-
-            $('.item-row').height(height);
-        });
-
-        $(document).ready(function(){
-            var height = 0;
-            $('.item-row').each(function(){
-                var height_this = $(this).height();
-                //height_this > height ? height = height_this:'';
-                if(height_this > height){
-                    height = height_this;
-                }
-            });
-
-            $('.item-row').height(height);
-        });
-
-    </script>
+        </main>
+    </div>
 @endsection

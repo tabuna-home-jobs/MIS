@@ -20,12 +20,12 @@ class HomeController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->limit(2)->get();
-        $getReviews = $getSites->getReviews()->where('publish', true)->orderBy('id', 'desc')->limit(4)->get();
+        $getReviews = $getSites->getReviews()->where('publish', true)->orderBy(DB::raw('RANDOM()'))->limit(1)->get();
 
         return view($sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShares' => $getShares,
-            'getReviews' => $getReviews,
+            'randomReview' => $getReviews,
         ]);
     }
 

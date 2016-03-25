@@ -146,7 +146,7 @@
                     <div class="news-text col-md-8 col-sm-8">
                         <h4><a href="blog/{{$item['id']}}">{{$item['name']}}</a></h4>
                         <span>{{$item['created_at']}}</span>
-                        <p>{!! str_limit($item['content'],150,'...') !!}<a href="blog/{{$item['id']}}">Подробнее</a></p>
+                        <p>{!! str_limit(strip_tags($item['content']),150,'...') !!}<a href="blog/{{$item['id']}}">Подробнее</a></p>
                     </div>
                 </div>
                 <div class="table-href col-md-1 col-sm-1"><a href="blog/{{$item['id']}}"><img src="/luchiki48.ru/img/news-icon.png"></a></div>
