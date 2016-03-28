@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Models\Page as Page;
 use App\Models\Sites;
+use App\Models\SpecCat;
 use DB;
 
 class HomeController extends Controller
@@ -18,14 +19,15 @@ class HomeController extends Controller
     public function index($sitename = "sokzn48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
+        $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(3)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->limit(2)->get();
-        $getReviews = $getSites->getReviews()->where('publish', true)->orderBy(DB::raw('RANDOM()'))->limit(1)->get();
-
+        $getReviews = $getSites->getReviews()->where('publish', true)->orderBy(DB::raw('RANDOM()'))->limit(1)->get()->first();
+        $getSpec = $getSites->getTeam()->orderBy('sort', 'asc')->limit(8)->get();
         return view($sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShares' => $getShares,
             'randomReview' => $getReviews,
+            'allspecs' =>$getSpec,
         ]);
     }
 

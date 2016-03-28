@@ -1,61 +1,80 @@
-@extends('sokzn48ru/header')
+@extends('sokzn48ru/ALTheader')
 @section('content')
-    <div class="page-content">
-        <div class="container">
-            <h1>Новости</h1>
-            <div class="page-text">
-                <div class="row">
-                    @foreach($News as $item)
-                        <div class="col-md-4 item-row">
-                            <div>
-                                <h3><a href="/blog/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
-                                <p class="day">{{$item['created_at']}}</p>
-                                <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
-                                <div class="seeall"><img src="/cozn48.ru/img/minibutton.png"><a href="/blog/{{$item['id']}}">Читать полностью</a><br></div>
-                            </div>
-                        </div>
-                    @endforeach
+
+
+    <div id="wrapper-content">
+        <section class="page-title-wrapper">
+            <div class="container clearfix">
+                <div class="luchiki-heading"><h2>Новости</h2>
                 </div>
             </div>
-        </div>
+            <div class="wrrr"></div>
+        </section>
+        <main role="main" class="site-content">
+            <div class="page type-page status-publish hentry">
+                <div class="entry-content">
+                    <div class="container">
+                        <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
+                            <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
+                                <div class="wpb_wrapper">
+                                    <div class="latest-post-wrapper">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="latest-post-col-3 latest-post-no-slider latest-post-style1  ">
+                                                    @foreach($News as $item)
+                                                        <article id="post-82"
+                                                                 class="post-82 post type-post status-publish format-standard has-post-thumbnail hentry category-new-event clearfix">
+                                                            <div class="entry-wrapper clearfix">
+                                                                <div class="entry-image-wrapper">
+                                                                    <div class="entry-thumbnail">
+                                                                        <a href="/blog/{{$item['id']}}" title="{{$item['title']}}" class="thumbnail">
+                                                                            <img class="img-rounded img-responsive" src="{{$item['avatar']}}" alt="{{$item['title']}}">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="entry-content-wrapper clearfix">
+                                                                    <div class="entry-content-container clearfix">
 
+                                                                        <h3 class="entry-title">
+                                                                            <a href="/blog/{{$item['id']}}" rel="bookmark" title="{{$item['title']}}">
+                                                                                {{$item['name']}}
+                                                                            </a>
+                                                                        </h3>
+
+                                                                        <div class="entry-meta">
+
+                                                                            <span class="entry-meta-date"><i class="fa fa-clock-o"></i> Опубликованно
+                                                                                <a href="/" rel="bookmark" title="{{$item['title']}}">
+                                                                                    {{$item['created_at']->diffForHumans()}}
+                                                                                </a>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="entry-excerpt">
+                                                                            <p>
+                                                                                {{str_limit(strip_tags($item['descript']), 300, '...')}}
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="entry-read-more">
+                                                                            <a href="/blog/{{$item['id']}}" rel="bookmark" title="Read more">Читать дальше <i class="fa fa-angle-double-right"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-    <script>
-        var resized = function (height) {
 
-            $('.item-row').each(function(){
-                var height_this = $(this).height();
-                height_this > height ? height = height_this:'';
-            });
-
-            $('.item-row').height(height);
-        };
-
-        $(window).resize(function(){
-            var height = 0;
-            $('.item-row').each(function(){
-                var height_this = $(this).height();
-                //height_this > height ? height = height_this:'';
-                if(height_this > height){
-                    height = height_this;
-                }
-            });
-
-            $('.item-row').height(height);
-        });
-
-        $(document).ready(function(){
-            var height = 0;
-            $('.item-row').each(function(){
-                var height_this = $(this).height();
-                //height_this > height ? height = height_this:'';
-                if(height_this > height){
-                    height = height_this;
-                }
-            });
-
-            $('.item-row').height(height);
-        });
-
-    </script>
 @endsection

@@ -1,23 +1,39 @@
-@extends('sokzn48ru/header')
+@extends('sokzn48ru/ALTheader')
 @section('content')
-    <div class="page-content">
-        <div class="container">
-            <h1>Акции центра Остеопатии</h1>
-            <div class="page-text">
-                <div class="row">
-                    @foreach($Shares as $item)
-                        <div class="col-md-4">
-                            <div>
-                                <h3>{{$item['name']}}</h3>
-                                <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
-                                <div class="seeall"><a href="/shares/{{$item['id']}}" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-eye-open"></span> Посмотреть</a></div>
-                            </div>
-                        </div>
-                    @endforeach
+
+
+    <div id="wrapper-content">
+        <section class="page-title-wrapper">
+            <div class="container clearfix">
+                <div class="luchiki-heading"><h2>Акции</h2>
                 </div>
             </div>
-        </div>
+            <div class="wrrr"></div>
+        </section>
+        <main role="main" class="site-content">
+            <div class="page type-page status-publish hentry">
+                <div class="entry-content">
+                    <div class="container">
+                        <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
+                            <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
+                                <div class="wpb_wrapper">
+                                    @foreach($Shares as $item)
+                                        <div class="col-md-4">
+                                            <div>
+                                                <h3>{{$item['name']}}</h3>
+                                                <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
+                                                <div class="seeall"><a href="/shares/{{$item['id']}}" ><span class="glyphicon glyphicon-eye-open"></span> Посмотреть</a></div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
 @endsection

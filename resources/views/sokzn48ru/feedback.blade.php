@@ -57,6 +57,13 @@
                         </div>
                     </div>
                     <div class="container">
+                        <div class="row">
+                            @if(Session::has('good'))
+                                <div class="alert alert-success">
+                                    {{ Session::get('good') }}
+                                </div>
+                            @endif
+                        </div>
                         <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-bottom-125 vc_custom_1425694368902">
                             <div class="wpb_column vc_column_container vc_col-sm-12">
                                 <div class="wpb_wrapper">

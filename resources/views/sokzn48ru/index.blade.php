@@ -198,7 +198,7 @@
                 <div class="entry-wrapper clearfix">
                     <div class="entry-image-wrapper">
                         <div class="entry-thumbnail">
-                            <a href="/news/{{$news['id']}}" title="{{$news['title']}}" class="thumbnail">
+                            <a href="/blog/{{$news['id']}}" title="{{$news['title']}}" class="thumbnail">
                                 <img class="img-rounded img-responsive" src="{{$news['avatar']}}" alt="{{$news['title']}}">
                             </a>
                         </div>
@@ -207,7 +207,7 @@
                         <div class="entry-content-container clearfix">
 
                             <h3 class="entry-title">
-                                <a href="/news/{{$news['id']}}" rel="bookmark" title="{{$news['title']}}">
+                                <a href="/blog/{{$news['id']}}" rel="bookmark" title="{{$news['title']}}">
                                     {{$news['name']}}
                                 </a>
                             </h3>
@@ -226,7 +226,7 @@
                                 </p>
                             </div>
                             <div class="entry-read-more">
-                                <a href="/news/{{$news['id']}}" rel="bookmark" title="Read more">Читать дальше <i class="fa fa-angle-double-right"></i>
+                                <a href="/blog/{{$news['id']}}" rel="bookmark" title="Read more">Читать дальше <i class="fa fa-angle-double-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -253,6 +253,7 @@
                             <div class="wpb_wrapper">
                                 <div class="luchiki-quote content-middle  ">
                                     <div class="content-middle-inner">
+
                                         <q>{{$randomReview['content']}}</q>
                                         <p>{{$randomReview['fio']}}</p>
                                     </div>

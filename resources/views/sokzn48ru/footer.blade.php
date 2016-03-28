@@ -6,11 +6,11 @@
                 <div class="footer-bottom-inner">
                     <div class="footer-logo">
                         <a href="/" title="Home Page">
-                            <img src="/luchiki48.ru/img/logo_childs3.png" alt="Home Page">
+                            <img src="/sokzn48.ru/img/logo_white.png" alt="Home Page">
                         </a>
                     </div>
                     <div class="footer-menu-container">
-                        {!!Menu::getMenuByLayout('7','bottom','','footMenu')!!}
+                        {!!Menu::getMenuByLayout('9','Нижнее меню','','footMenu')!!}
                     </div>
                 </div>
             </div>

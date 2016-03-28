@@ -65,7 +65,7 @@ class BlogController extends Controller
             $getSurveys = null;
         }
 
-        return view($sitename . $sitedomen . '/page', [
+        return view($sitename . $sitedomen . '/blogNews', [
             'New' => $getNews,
             'LastNews' => $getLastNews,
             'getQuests' => $getQuests,

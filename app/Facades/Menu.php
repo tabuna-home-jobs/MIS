@@ -55,7 +55,7 @@ class Menu  extends Facade {
             'items' => $menu->items->toArray(),
         ]);*/
 
-	    echo view("luchiki48ru/_layout/".$template, ['items' => $menuParents->toArray()])->render();
+	    echo view("sokzn48ru/_layout/".$template, ['items' => $menuParents->toArray()])->render();
 
     }
 

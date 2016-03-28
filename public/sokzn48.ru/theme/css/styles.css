@@ -1,0 +1,687 @@
+    .fixed {
+    -webkit-backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    -ms-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+::selection {
+    background-color: #d83f63
+}
+
+a:hover, a:focus, a:active, a.active {
+    color: #d83f63
+}
+
+#go-top > i {
+    background-color: #8059CE
+}
+
+#go-top > i:hover {
+    background-color: #d83f63
+}
+
+#luchiki-popup-login-wrapper input[type="text"]:focus, #luchiki-popup-login-wrapper input[type="email"]:focus, #luchiki-popup-login-wrapper input[type="password"]:focus {
+    border: solid 1px #d83f63
+}
+
+#luchiki-popup-login-wrapper input[type="checkbox"]:checked + label {
+    background-color: #d83f63
+}
+
+#luchiki-popup-login-wrapper .modal-footer-right button.button {
+    background-color: #d83f63
+}
+
+.page404 .search-wrapper i:hover {
+    color: #d83f63
+}
+
+.wpb_content_element .wpb_accordion_header a:hover {
+    color: #d83f63
+}
+
+.site-top {
+    background-color: #8059CE
+}
+
+.site-top .language-selector .title:hover {
+    color: #d83f63
+}
+
+.site-top #lang_sel_list li > a > span:hover {
+    color: #d83f63
+}
+
+header .icon-search-menu > i {
+    background-color: #8059CE
+}
+
+header .icon-search-menu > i:hover {
+    background-color: #d83f63
+}
+
+header .widget_shopping_cart_content .cart_list_wrapper {
+    border-top: 5px solid #d83f63
+}
+
+header .widget_shopping_cart_content .cart_list_wrapper:after {
+    border-bottom: solid 8px #d83f63
+}
+
+header .shopping-cart-wrapper .widget_shopping_cart_icon {
+    background: #d83f63
+}
+
+header .shopping-cart-wrapper .widget_shopping_cart_icon:hover {
+    background-color: #8059CE
+}
+
+header .widget_shopping_cart_content ul.cart_list.product_list_widget > li > a:hover {
+    color: #d83f63
+}
+
+header .widget_shopping_cart_content ul.cart_list.product_list_widget > li > span.quantity {
+    color: #d83f63
+}
+
+header .widget_shopping_cart_content p.total {
+    border-bottom: solid 1px #eee
+}
+
+header .widget_shopping_cart_content p.total .amount {
+    color: #d83f63
+}
+
+header .navbar-default ul.main-menu li > a > i.fa {
+    color: #d83f63
+}
+
+header .widget_shopping_cart_content a.button.wc-forward {
+    background: #8059CE
+}
+
+header .widget_shopping_cart_content a.button.wc-forward:hover {
+    background: rgba(145, 220, 216, 0.8)
+}
+
+header .widget_shopping_cart_content a.button.checkout.wc-forward {
+    background: #d83f63
+}
+
+header .widget_shopping_cart_content a.button.checkout.wc-forward:hover {
+    background: rgba(216, 63, 99, 0.8)
+}
+
+header .navbar-default ul.main-menu li:hover > a, header .navbar-default ul.main-menu li.current-menu-ancestor > a, header .navbar-default ul.main-menu li.current-menu-item > a {
+    color: #18B526
+}
+
+header .navbar-default ul.main-menu > li.menu-item-has-children > a:after {
+    border-bottom: solid 8px #18B526
+}
+
+@media (min-width: 992px) {
+    header .navbar-default ul.dropdown-menu {
+        border-top-color: #18B526
+    }
+}
+
+header .navbar-default ul.dropdown-menu a > b.caret:after {
+    color: #18B526
+}
+
+header.header-2 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
+    color: #18B526
+}
+
+header.header-3 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
+    color: #18B526
+}
+
+header.header-4 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
+    color: #18B526
+}
+
+header.header-4 .navbar-default ul.main-menu > li > a:hover {
+    color: #18B526
+}
+
+header.header-5 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
+    color: #18B526
+}
+
+header.header-6 .luchiki-login-link li > a > i {
+    color: #18B526
+}
+
+header.header-6 .main-menu > li.icon-search-button > a > i.fa.fa-search {
+    background-color: #8059CE
+}
+
+header.header-6 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover {
+    background-color: #18B526
+}
+
+header.header-6 .navbar-header .header_logo {
+    background-color: #d83f63
+}
+
+header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon:hover > i, header.header-3 .widget_shopping_cart_content .widget_shopping_cart_icon:hover > i, header.header-4 .widget_shopping_cart_content .widget_shopping_cart_icon:hover > i, header.header-5 .widget_shopping_cart_content .widget_shopping_cart_icon:hover > i {
+    color: #d83f63
+}
+
+header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon > span, header.header-3 .widget_shopping_cart_content .widget_shopping_cart_icon > span, header.header-4 .widget_shopping_cart_content .widget_shopping_cart_icon > span, header.header-5 .widget_shopping_cart_content .widget_shopping_cart_icon > span {
+    background: #d83f63
+}
+
+#luchiki-modal-search .luchiki-dismiss-modal:hover {
+    color: #d83f63
+}
+
+@media screen and (max-width: 991px) {
+    header .navbar-default .navbar-toggle .icon-bar {
+        background-color: #8059CE
+    }
+
+    header.header-4 .navbar-default ul.main-menu > li > a:hover {
+        color: #d83f63
+    }
+}
+
+.site-top.site-top-3 .language-selector .title:before, .site-top.site-top-3 .site-top-left i {
+    color: #d83f63
+}
+
+.site-top.site-top-3 .luchiki-login-link li > a > i.fa {
+    color: #d83f63
+}
+
+.site-top.site-top-4 .language-selector .title:before, .site-top.site-top-4 .site-top-left i {
+    color: #d83f63
+}
+
+.site-top.site-top-4 .luchiki-login-link li > a > i.fa {
+    color: #d83f63
+}
+
+@media (min-width: 992px) {
+    .site-top.site-top-2 .container {
+        background-color: #8059CE
+    }
+
+    .site-top.site-top-2 .luchiki-login-link ul li {
+        background-color: #8059CE
+    }
+}
+
+.footer-bottom {
+    background-color: #8059CE;
+    background: url('/luchiki48.ru/img/footerbg-2.png');
+    background-size: cover;
+}
+
+.footer-bottom ul.sub-menu li.menu-item-has-children:after {
+    color: #d83f63
+}
+
+.footer-bottom ul.footer-menu li:hover > a, .footer-bottom ul.footer-menu ul.sub-menu > li:hover > a {
+    color: #d83f63
+}
+
+.luchiki-search-form input[type="text"]:focus + button i {
+    color: #d83f63
+}
+
+#wp-calendar tbody td:hover {
+    background-color: #d83f63
+}
+
+#wp-calendar tbody a {
+    color: #d83f63
+}
+
+.widget_tag_cloud .tagcloud a:hover {
+    background-color: #d83f63
+}
+
+.primary-sidebar .widget_archive li:hover > a, .primary-sidebar .widget_categories li:hover > a, .primary-sidebar .widget_nav_menu > div li:hover > a, .primary-sidebar .widget_meta li:hover > a, .primary-sidebar .widget_pages li:hover > a, .primary-sidebar .widget_recent_comments li:hover > a, .primary-sidebar .widget_recent_entries li:hover > a, .primary-sidebar .widget_rss li:hover > a {
+    color: #d83f63
+}
+
+.footer-top-widget-area .widget_archive li:hover > a, .footer-top-widget-area .widget_categories li:hover > a, .footer-top-widget-area .widget_nav_menu > div li:hover > a, .footer-top-widget-area .widget_meta li:hover > a, .footer-top-widget-area .widget_pages li:hover > a, .footer-top-widget-area .widget_recent_comments li:hover > a, .footer-top-widget-area .widget_recent_entries li:hover > a, .footer-top-widget-area .widget_rss li:hover > a {
+    color: #d83f63
+}
+
+.entry-thumbnail {
+    position: relative
+}
+
+.entry-thumbnail .entry-thumbnail-hover {
+    background: rgba(145, 220, 216, 0.95)
+}
+
+.blog-wrapper .entry-categories ul.post-categories li a {
+    background-color: #d83f63
+}
+
+.blog-wrapper h3.entry-title a:hover {
+    color: #d83f63
+}
+
+.blog-wrapper .edit-link {
+    color: #d83f63
+}
+
+.blog-wrapper .entry-meta-author a {
+    color: #d83f63
+}
+
+.blog-wrapper .entry-read-more a {
+    color: #d83f63
+}
+
+.blog-wrapper .jp-audio a:hover, .blog-wrapper .jp-play-bar, .blog-wrapper .jp-play-bar, .blog-wrapper .jp-volume-bar-value {
+    color: #d83f63
+}
+
+.blog-wrapper .jp-play-bar, .blog-wrapper .jp-volume-bar-value {
+    background-color: #d83f63
+}
+
+.blog-nav ul.breadcrumbs li a:hover {
+    color: #d83f63
+}
+
+.blog-nav ul.breadcrumbs li:after {
+    color: #d83f63
+}
+
+.blog-nav .blog-switcher:hover {
+    color: #d83f63
+}
+
+.blog-nav .blog-switcher-active {
+    color: #d83f63
+}
+
+.blog-wrapper .owl-theme .owl-controls .owl-buttons div:hover, .latest-post-wrapper .owl-theme .owl-controls .owl-buttons div:hover {
+    background-color: #d83f63
+}
+
+.entry-share ul li a:hover i {
+    color: #d83f63
+}
+
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover, .pagination > li > span.current {
+    background-color: #d83f63
+}
+
+.comment .date a, .pingback .date a {
+    color: #d83f63
+}
+
+.comment-navigation .page-numbers.current, .comment-navigation .page-numbers:hover {
+    background-color: #d83f63
+}
+
+.luchiki-page-links .luchiki-page-link:hover, .luchiki-page-links > .luchiki-page-link {
+    background-color: #d83f63
+}
+
+.post-navigation .post-navigation-icon {
+    color: #d83f63
+}
+
+.post-navigation-label {
+    color: #d83f63
+}
+
+.entry-content a {
+    color: #6384df;
+}
+
+.format-quote .entry-content cite a {
+    border-bottom: 1px dotted #d83f63
+}
+
+.format-link .entry-title a {
+    color: #d83f63
+}
+
+.latest-post-wrapper h3.entry-title a:hover {
+    color: #d83f63
+}
+
+.latest-post-wrapper .entry-read-more a {
+    color: #6384df
+}
+
+.luchiki-our-staffs .our-staffs-item .our-staffs-name:hover {
+    color: #d83f63
+}
+
+.luchiki-button {
+    background-color: #a273b9;
+}
+
+.luchiki-btn-2 {
+    background-color: #a273b9;
+}
+
+.luchiki-btn-2:hover {
+    color: #8059CE;
+}
+
+.luchiki-icon-box.style1 a {
+    color: #8059CE;
+}
+
+.luchiki-icon-box.style1 a:hover {
+    background-color: #8059CE;
+}
+
+.luchiki-icon-box.style1:hover a {
+    background-color: #8059CE;
+}
+
+.luchiki-icon-box.style1:hover a:after {
+    border-top: 17px solid #8059CE;
+}
+
+.luchiki-icon-box.style2 i {
+    background-color: #59c2ce;
+}
+
+.luchiki-icon-box.style2 i:after {
+    -webkit-box-shadow: 0 0 0 2px #59c2ce;
+    -moz-box-shadow: 0 0 0 2px #59c2ce;
+    -o-box-shadow: 0 0 0 2px #59c2ce;
+    -ms-box-shadow: 0 0 0 2px #59c2ce;
+    box-shadow: 0 0 0 2px #59c2ce
+}
+
+.luchiki-heading h2:before {
+    background-color: #739ab9;
+}
+
+.luchiki-services:hover {
+    background-color: #8059CE;
+}
+
+.luchiki-contact-info h4:after {
+    border-bottom: 1px solid #eee;
+}
+
+.wpb_tabs .wpb_tabs_nav li:hover a {
+    color: #d83f63;
+}
+
+.wpb_tabs .ui-tabs-active a {
+    color: #d83f63 !important;
+}
+
+.classes-wrapper .classes-item h6 a:hover {
+    color: #d83f63
+}
+
+.owl-theme .owl-controls .owl-page span {
+    background-color: #8059CE !important
+}
+
+.archive-luchiki-class .classes-nav .classes-search .keyword-wrapper span i.fa-close:hover {
+    color: #8059CE
+}
+
+.archive-luchiki-class .classes-nav .classes-search button {
+    background-color: #8059CE
+}
+
+.archive-luchiki-class .classes-switcher-wrapper a.classes-switcher-active {
+    color: #d83f63
+}
+
+.archive-luchiki-class .blog-load-more-wrapper button {
+    color: #a273b9
+}
+
+aside.luchiki-calsses-popular-widget .popular-item .month-old {
+    color: #d83f63
+}
+
+.vc_custom_1444210165609 {
+    background-image: url("/luchiki48.ru/img/circle-bg.png") !important
+}
+
+.vc_custom_1425263113761 {
+    padding-top: 127px !important;
+    padding-bottom: 78px !important
+}
+.carousel.slide{
+    background: url("../../img/topbg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 700px;
+}
+.carousel.slide img{
+    margin: 0 auto;
+    height: 100%;
+}
+.navbar-header{
+    position: absolute !important;
+}
+.header-4  .main-menu > .menu-item > a{
+   /* text-shadow: 1px 1px 1px #000;*/
+}
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    z-index: 1000000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fdfdfd;
+    text-align: center;
+    text-shadow: 1px 1px 3px #000 !important;
+    font-size: 38px;
+
+}
+.site-top {
+    background-color: #7099d5;
+}
+.site-top-content i{
+    font-size: 17px !important;
+    margin: 0 5px;
+}
+.site-top-content li{
+    font-size: 14px;
+}
+.site-top .site-top-content {
+    margin: 0 10px;
+}
+#wrapper-content{
+    background: #f6f6f6;
+ }
+header .header_logo>a>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.childi{
+    padding: 10px;
+}
+.social-link a{
+    color:#fff;
+}
+.social-link a:hover{
+    color:#91dcd8;
+}
+.site-top-content i{
+    color:#fff !important;
+}
+.site-top-content:hover, .site-top-content:hover i{
+ /*   color:#d83f63 !important;*/
+}
+.site-top i {
+    font-size: 20px;
+}
+.site-top .social-link li {
+    padding-left: 10px !important;
+}
+.vc_custom_1444210607896{
+    background-image:url("/luchiki48.ru/img/luchiki-quote.png")!important
+}
+.luchiki-quote p {
+    font-size: 25px;
+    font-weight: 400;
+}
+.content-middle-inner{
+    text-shadow: 1px 1px 1px #000;
+}
+.bg-while{
+    background-color: #fff!important;
+}
+
+.p-t-30{
+    padding-top: 30px;
+}
+.top-carousel .item{
+    padding-top: 100px;
+}
+
+.page-title-wrapper{
+    background: url("../../uploads/2015/02/counter-bg.jpg") 10% -10%;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.luchiki-heading h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+    display: inline;
+    padding-right: 18px;
+    position: relative;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
+.about-us-padding{
+    padding-top: 20px;
+}
+.entry-thumbnail .entry-thumbnail-hover {
+    background: rgba(255,167,60,0.95);
+}
+.our-staffs-name a{
+    color:#000;
+}
+.wrrr{
+    position: absolute;
+    background: #4d4d4d;
+    content: "1";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0.4;
+    z-index: 5;
+}
+.luchiki-heading h2+span{
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
+.wrappmain .luchiki-heading h2+span{
+    color: #000;
+    text-shadow: none;
+}
+.wrappmain .luchiki-heading h2{
+    color:#000;
+    text-shadow: none;
+}
+#submit{
+    padding: 0 10px;
+    width: 100%;
+    border-radius: 6px;
+}
+.luchiki-heading{
+    z-index: 10;
+    position: relative;
+}
+.sub-block{
+    background: #fff;
+}
+textarea{
+    background: #F6f6f6 !important;
+
+    font-size: 12px !important;
+    padding: 10px 10px 9px 10px !important;
+    color: #999 !important;
+}
+.sub-block{
+    padding: 20px 15px;
+}
+.footer-bottom ul.footer-menu li>a{
+    padding: 0 8px;
+}
+.luchstep2{
+    display: none;
+}
+.super-color>h3{
+    color:#d83f63;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.luchstep1 h3{
+    padding-left: 15px;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.luchstep1{
+    padding-left: 10px;
+}
+.wrapp-surv{
+    padding-left: 25px;
+}
+.wrap-review{
+    border-bottom: 1px solid #ccc;
+}
+.wrapp-review{
+    padding-top: 0;
+    margin-top: -60px;
+}
+.service-img img{
+    height: 225px;
+}
+.service-wrapper h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+li{
+    list-style-position: inside;
+}
+.wrapp-goods{
+    margin-top: -40px;
+}
+.title-comment-serv{
+    margin: 0;
+    color:#8059CE;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.entry-excerpt{
+    color:#1f1f1f;
+    padding: 5px;
+}
+
+
+.top-carousel .carousel-inner,
+.top-carousel .carousel-inner > .item,
+.top-carousel .carousel-inner>.item>a>img,
+.top-carousel .carousel-inner>.item>img{
+    /* height: 100% !important; */
+    top:60px !important;
+}
+
+.caruselTeachers{
+    top:inherit!important;
+}
