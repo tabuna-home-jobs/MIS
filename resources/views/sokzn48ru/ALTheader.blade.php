@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex"/>
-    <title></title>
+    @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
+        <title>Семейный оздоровительный комплекс - @yield('title')</title>
+        <meta name="description" content="@yield('description')">
+        <meta name="keywords" content="@yield('keywords')">
+        <meta property="og:title" content="@yield('title')">
+        <meta property="og:description" content="@yield('description')">
+        <meta property="og:image" content="@yield('avatar')">
+        <meta name="twitter:title" content="@yield('title')">
+        <meta name="twitter:description" content="@yield('description')"/>
+        <meta name="twitter:image:src" content="@yield('avatar')"/>
+    @else
+        {!! $meta !!}
+    @endif
     <link rel="stylesheet" href="/sokzn48.ru/theme/css/full_styles.min.css">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/theme/css/woocommerce-smallscreen.css">
     <link rel="stylesheet" href="/sokzn48.ru/theme/css/styles.css">
