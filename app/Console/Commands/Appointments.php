@@ -138,15 +138,14 @@ class Appointments extends Command
                 $this->info('xml файл не существует');
             }
 
-
-            $Apportointments = Appoint::where('updated_at', '>', Carbon::now()->subWeeks(1))->get();
-            $Views = view('XML.appointments', [
-                'Record' => $Apportointments
-            ])->render();
-            Storage::put(time() . '-export.xml', $Views);
-
         }
 
+
+        $Apportointments = Appoint::where('updated_at', '>', Carbon::now()->subWeeks(1))->get();
+        $Views = view('XML.appointments', [
+            'Record' => $Apportointments
+        ])->render();
+        Storage::put(time() . '-export.xml', $Views);
 
     }
 
