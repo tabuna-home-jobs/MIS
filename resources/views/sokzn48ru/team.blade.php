@@ -13,14 +13,14 @@
             <div class="page type-page status-publish hentry">
                 <div class="entry-content">
                     <div class="container">
-                        <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
-                            <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_row wpb_row vc_row-fluid bg-content-box ">
+                            <div class="about-us-padding   vc_col-sm-8 luchiki-margin-top-35 bg-while">
                                 <div class="wpb_wrapper">
                                 <div class="row">
 
 
                 @foreach($Specialisty as $key => $spec)
-            	<div class="doctors col-sm-4 col-md-3 col-xs-12 padding-bottom-60 clearfix">
+            	<div class="doctors col-sm-4 col-md-4 col-xs-12 padding-bottom-60 clearfix">
                     <div class="doctors-img">
                         <a href="team/{{$spec['id']}}">
                             <img src="{{$spec->avatar}}"  alt="{{$spec->fio}}" title="{{$spec->fio}}" class="img-responsive">
@@ -71,8 +71,8 @@
 
                         </div>
                 </div>
-                    @if(($key+1) % 4 == 0)
-                    <div class="clearfix"></div>
+                    @if(($key+1) % 3 == 0)
+                    <div class="clearfix separator"></div>
                     @endif
 
 
@@ -90,6 +90,21 @@
 
                                 </div>
                             </div>
+
+                            <div class="  vc_col-sm-4 luchiki-margin-top-35 ">
+                                <div class= "padding-top-20 bg-while cat-list">
+                                        <div class="cat_list_head">Категории</div>
+                                        <ul class="spec-category">
+
+                                            @foreach($SpCat as $album)
+                                                <li><a class="@if(isset($id) && $id==$album->id)active @endif"
+                                                   href="/team?catspec={{$album['id']}}">{{$album->name}}</a>
+                                                </li>
+                                            @endforeach
+
+                                        </ul>
+                                </div>
+                                </div>
                         </div>
                     </div>
                 </div>

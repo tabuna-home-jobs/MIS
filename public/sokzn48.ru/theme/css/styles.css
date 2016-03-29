@@ -39,6 +39,9 @@ a:hover, a:focus, a:active, a.active {
     color: #d83f63
 }
 
+.padding-top-20{
+    padding-top: 20px;
+}
 .wpb_content_element .wpb_accordion_header a:hover {
     color: #d83f63
 }
@@ -691,4 +694,44 @@ li{
 
 .caruselTeachers{
     top:inherit!important;
+}
+
+.cat-list{
+    font-size: 18px;
+}
+.cat_list_head{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 60px;
+}
+.spec-category{
+    padding: 10px 60px;
+    list-style: none;
+}
+.spec-category li{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.spec-category li:last-child{
+    border-bottom: none;
+}
+.spec-category li a{
+    color: #878686;
+}
+.spec-category li a:hover{
+    color: #575555;
+    text-decoration: none;
+
+}
+.doctors{
+    text-align: center;
+}
+.doctors-detail h4 a{
+    color:#000;
+}
+.doctors-detail p{
+    color: #878686;
+}
+
+.separator{
+    border-bottom: 1px solid #ccc;
 }
