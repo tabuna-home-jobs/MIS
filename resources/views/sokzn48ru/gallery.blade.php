@@ -1,108 +1,105 @@
 @extends('sokzn48ru/ALTheader')
-@section('content')
 
+@section('content')
 
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
                 <div class="luchiki-heading">
-                    <h2>
-                        Фото-Видео Галерея
-                    </h2>
+                    <h2>Услуги</h2>
                 </div>
             </div>
             <div class="wrrr"></div>
         </section>
+        <main role="main" class="luchiki-margin-top-35">
+            <div class="container clearfix">
+                <div class="blog-wrapper">
+                    <div class="clearfix">
+                        <article id="post-">
+                            <div class="about-us-padding">
+                                <div class="row">
+                                    <div class="gallery-wrapper gallery-infinite-scroll">
 
-        <main role="main" class="site-content">
-            <div class="page type-page status-publish hentry">
-                <div class="entry-content">
-                    <div class="container">
-                        <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
-                            <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
-                                <div class="wpb_wrapper">
+                                    <!-- photo -->
+                                    <div class="col-xs-12 service-wrapper">
 
+                                       <h2>Фотоальбомы</h2>
 
-                            <div class="luchiki-gallery row">
+                                        @forelse($albums as $album)
+                                            <div class="gallery-item gallery-col-3 service-img">
+                                                <div class="entry-thumbnail title">
+                                                    <img src="{{$album['poster']}}" alt="{{$album['name']}}">
 
-
-                                <h3>Фотоальбомы</h3>
-                            <div  class="gallery-wrapper gallery-infinite-scroll">
-
-                                @forelse($albums as $album)
-                                <div class="gallery-item gallery-col-3">
-                                    <div class="entry-thumbnail title">
-            <img src="{{$album['poster']}}" alt="{{$album['name']}}">
-
-            <!--Описание фотоальбома-->
-            <div class="entry-thumbnail-hover">
-                <div class="entry-hover-wrapper">
-                    <div class="entry-hover-inner">
-                        <a href="/gallery/{{$album['id']}}"  title="{{$album['name']}}">
-                            <h5 class="class-name">{{$album['name']}}</h5>
-                            <span class="excerpt">
-                                <!--тут можно добавить описание-->
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!--Описание фотоальбома-->
-                                    </div>
-                                </div>
-                                @empty
-                                    <p>Нет фотоальбомов</p>
-                                @endforelse
-
-
-
-                            </div>
-                        </div>
-
-                        <div class="luchiki-gallery row">
-                            <h3>Видеоальбомы</h3>
-
-                            <div  class="gallery-wrapper gallery-infinite-scroll">
-
-                                @forelse($videoalbums as $album)
-
-                                    <div class="gallery-item gallery-col-3">
-                                        <div class="entry-thumbnail title">
-                                            <img src="{{$album['poster']}}" alt="{{$album['name']}}">
-
-                                            <!--Описание альбома-->
-                                            <div class="entry-thumbnail-hover">
-                                                <div class="entry-hover-wrapper">
-                                                    <div class="entry-hover-inner">
-                                                        <a href="/video/{{$album['id']}}"  title="{{$album['name']}}">
-                                                            <h5 class="class-name">{{$album['name']}}</h5>
-                            <span class="excerpt">
-                                <!--тут можно добавить описание-->
-                            </span>
-                                                        </a>
+                                                    <!--Описание фотоальбома-->
+                                                    <div class="entry-thumbnail-hover">
+                                                        <div class="entry-hover-wrapper">
+                                                            <div class="entry-hover-inner">
+                                                                <a href="/gallery/{{$album['id']}}"  title="{{$album['name']}}">
+                                                                    <h5 class="class-name">{{$album['name']}}</h5>
+                                                                    <span class="excerpt">
+                                                                        <!--тут можно добавить описание-->
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                    <!--Описание фотоальбома-->
                                                 </div>
                                             </div>
-                                            <!--Описание альбома-->
-                                        </div>
+                                        @empty
+                                            <p>Нет фотоальбомов</p>
+                                        @endforelse
                                     </div>
-                                @empty
-                                    <p>Нет видеоальбомов</p>
-                                @endforelse
+                                    <!-- end photo -->
 
 
 
+
+                                    <!-- video -->
+                                    <div class="col-xs-12 service-wrapper">
+                                        <h2>Видеоальбомы</h2>
+                                            @forelse($videoalbums as $album)
+
+                                                <div class="gallery-item gallery-col-3 service-img">
+                                                    <div class="entry-thumbnail title">
+                                                        <img src="{{$album['poster']}}" alt="{{$album['name']}}">
+
+                                                        <!--Описание альбома-->
+                                                        <div class="entry-thumbnail-hover">
+                                                            <div class="entry-hover-wrapper">
+                                                                <div class="entry-hover-inner">
+                                                                    <a href="/video/{{$album['id']}}"  title="{{$album['name']}}">
+                                                                        <h5 class="class-name">{{$album['name']}}</h5>
+                                                                        <span class="excerpt">
+                                                                            <!--тут можно добавить описание-->
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--Описание альбома-->
+                                                    </div>
+                                                </div>
+                                            @empty
+                                                <p>Нет видеоальбомов</p>
+                                            @endforelse
+
+                                    </div>
+                                    <!-- end video -->
+
+
+
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-                                        </div>
-
-                            </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </main>
     </div>
 
+
 @endsection
+
+
