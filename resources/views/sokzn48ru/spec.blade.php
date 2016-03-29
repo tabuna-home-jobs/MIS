@@ -24,10 +24,8 @@
                                     <div class="col-md-9 col-sm-6 col-xs-12 our-staffs-contact">
                                         <h3 class="our-staffs-name">{{$Spec->fio}}</h3>
 
-                                        <p class="our-staffs-job">
-                                            {{$Spec->subname}}
-                                        </p>
 
+                                        <div class="our-staffs-phone"><p>Квалификация:</p>{{$Spec->subname}}</div>
                                         <div class="our-staffs-phone"><p>Образование:</p>{{$Spec->obrazovanie}}</div>
                                         <div class="our-staffs-email"><p>Специализация:</p>{{$Spec->special}}</div>
                                         <div class="our-staffs-phone">

@@ -364,11 +364,11 @@ header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon > span,
 }
 
 .luchiki-button {
-    background-color: #a273b9;
+    background-color: #739ab9;
 }
 
 .luchiki-btn-2 {
-    background-color: #a273b9;
+    background-color: #739ab9;
 }
 
 .luchiki-btn-2:hover {
@@ -608,6 +608,13 @@ header .header_logo>a>div {
 .luchiki-heading{
     z-index: 10;
     position: relative;
+}
+span.heading{
+    font-weight: bold;
+}
+.our-staffs-phone>p, .our-staffs-email>p{
+    font-weight: bold !important;
+    margin: 5px 0 !important;
 }
 .sub-block{
     background: #fff;

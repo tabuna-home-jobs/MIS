@@ -1,23 +1,21 @@
 @extends('sokzn48ru/ALTheader')
-
 @section('content')
-
 
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="luchiki-heading">
-                    <h2>Наши учителя</h2>
+                <div class="luchiki-heading"><h2>Наши учителя</h2>
                 </div>
             </div>
             <div class="wrrr"></div>
         </section>
-        <main role="main" class="site-content-archive wrapp-review">
-            <div class="container clearfix">
-                <div class="blog-wrapper">
-                    <div class="blog-inner blog-single clearfix">
-                        <article id="post-">
-                            <div class="page-single-our-staffs">
+        <main role="main" class="site-content">
+            <div class="page type-page status-publish hentry">
+                <div class="entry-content">
+                    <div class="container">
+                        <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
+                            <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
+                                <div class="wpb_wrapper">
                                 <div class="row">
 
 
@@ -33,10 +31,15 @@
                             <a href="team/{{$spec['id']}}">
                                 {{$spec->fio}}
                             </a>
-                            <span class="text-center">
-                                {{str_limit($spec->subname, 50 ,'...')}}
-                            </span>
+
                         </h4>
+
+                        @if(isset($spec->subname) && trim($spec->subname) !== "")
+                            <p>
+                                <span class="heading">Квалификация: </span>
+                                <span class="detail">{{str_limit($spec->subname,50,'...')}}</span>
+                            </p>
+                        @endif
 
                         @if(isset($spec->special) && trim($spec->special) !== "")
                         <p>
@@ -85,14 +88,12 @@
             </div>
 
 
-        </div>
-        </article>
-
-
-    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-    </main>
+        </main>
     </div>
-
 @endsection
