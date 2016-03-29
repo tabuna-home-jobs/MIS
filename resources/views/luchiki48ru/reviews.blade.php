@@ -38,6 +38,9 @@
                     @endforeach
 
                 </div>
+                <div class="row">
+                    {!! $Reviews->render() !!}
+                </div>
 
             </div>
         </div>
@@ -45,13 +48,9 @@
     <div class="reviews-form">
         <h2 class="blueBg center white feedHead">ОСТАВИТЬ ОТЗЫВ</h2>
         <div class="container">
-            <div class="row">
-                {!! $Reviews->render() !!}
-            </div>
-            <div class="col-md-6 col-sm-6 hidden-xs">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut enim ipsum. Sed malesuada convallis eros quis accumsan. Aliquam erat volutpat. Nam id bibendum libero. Vestibulum auctor in urna vitae pretium. Nam tempor sit amet quam nec ullamcorper. Ut quam nisi, tristique nec euismod ut, bibendum sit amet ligula. Sed semper, augue nec dignissim elementum, tortor est varius lacus, id ullamcorper lectus arcu vel ante. Aliquam erat volutpat. In magna libero, iaculis ac mollis a, blandit ut risus. Nam metus odio, bibendum vel interdum et, vehicula vel eros. In interdum sit amet dui eget pharetra. Nulla facilisi.
 
-                In eget ante sed arcu viverra mattis sit amet vestibulum est. Nam porttitor bibendum ex vitae scelerisque. Phasellus fermentum ullamcorper justo eu accumsan. Vestibulum in metus non turpis iaculis rhoncus at ut metus. Quisque mattis tortor eget diam cursus, eu laoreet ante consequat. In mollis nisi eget felis varius tempus. Suspendisse gravida tincidunt nulla a blandit. Donec venenatis blandit eros. Sed suscipit neque vitae nibh vehicula semper. Aliquam eu vestibulum mauris, convallis pretium leo. Mauris tristique, leo ut ultricies egestas, dui risus tincidunt risus, sit amet dapibus mauris lectus ac neque. Cras vitae efficitur dolor. Ut ut odio ante.
+            <div class="col-md-6 col-sm-6 hidden-xs big textst">
+                Здесь Вы можете оставить свой отзыв
 
             </div>
 

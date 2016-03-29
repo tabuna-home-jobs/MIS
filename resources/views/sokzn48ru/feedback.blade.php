@@ -13,7 +13,7 @@
             <div id="post-254" class="post-254 page type-page status-publish hentry">
                 <div class="entry-content">
                     <div class="container p-t-30">
-                        <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-65">
+                        <div class="vc_row wpb_row vc_row-fluid bg-while luchiki-margin-0">
                             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 wpb_column vc_column_container vc_col-sm-4 vc_custom_1425691979898">
                                 <div class="wpb_wrapper">
                                     <div class="luchiki-contact-info  ">
@@ -64,7 +64,7 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-bottom-125 vc_custom_1425694368902">
+                        <div class="vc_row wpb_row vc_row-fluid bg-content-box vc_custom_1425694368902">
                             <div class="wpb_column vc_column_container vc_col-sm-12">
                                 <div class="wpb_wrapper">
                                     <div class="wpcf7" id="wpcf7-f272-p254-o1" lang="en-US" dir="ltr">
