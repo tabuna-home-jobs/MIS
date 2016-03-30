@@ -704,7 +704,7 @@ li{
     padding: 10px 60px;
 }
 .spec-category{
-    padding: 10px 60px;
+    padding: 10px 20px 10px 60px;
     list-style: none;
 }
 .spec-category li{
@@ -734,4 +734,12 @@ li{
 
 .separator{
     border-bottom: 1px solid #ccc;
+}
+
+.rew-data{
+    font-size: 13px;
+    color:#868686;
+}
+.rew-text{
+    color: #333;
 }

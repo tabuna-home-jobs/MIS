@@ -4,7 +4,7 @@
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="luchiki-heading"><h2>Наши учителя</h2>
+                <div class="luchiki-heading"><h2>Наши специалисты</h2>
                 </div>
             </div>
             <div class="wrrr"></div>

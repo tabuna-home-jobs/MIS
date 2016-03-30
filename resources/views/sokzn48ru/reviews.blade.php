@@ -35,9 +35,9 @@
                                                 </h3>
 
                                                 <div class="entry-meta">
-                                                     <span class="entry-meta-date"> Размещено {{$review->created_at->diffForHumans()}}</span>
+                                                     <span class="rew-data"> Размещено {{$review->created_at->diffForHumans()}}</span>
                                                 </div>
-                                                <div class="entry-excerpt">
+                                                <div class="rew-text">
                                                     <p>
                                                         {{$review->content}}
                                                     </p>
