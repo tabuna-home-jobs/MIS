@@ -28,20 +28,21 @@
                                     <div class="entry-wrapper clearfix wrap-review">
 
                                         <div class="entry-content-wrapper clearfix">
-                                            <div class="entry-content-container clearfix">
-
-                                                <h3 class="entry-title">
-                                                    {{$review->fio}}
-                                                </h3>
-
-                                                <div class="entry-meta">
-                                                     <span class="rew-data"> Размещено {{$review->created_at->diffForHumans()}}</span>
-                                                </div>
+                                            <div class="entry-content-container clearfix rew-wraper">
                                                 <div class="rew-text">
-                                                    <p>
+
                                                         {{$review->content}}
-                                                    </p>
+
                                                 </div>
+
+
+                                                <div class="entry-meta rew-meta">
+                                                     <span class="rew-data">{{$review->created_at->diffForHumans()}}</span>
+                                                    <span class="entry-title">
+                                                       -  {{$review->fio}}
+                                                    </span>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>

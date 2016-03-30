@@ -16,10 +16,11 @@
     @else
         {!! $meta !!}
     @endif
+    <link rel="stylesheet" type="text/css" href="/sokzn48.ru/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/sokzn48.ru/theme/css/full_styles.min.css">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/theme/css/woocommerce-smallscreen.css">
     <link rel="stylesheet" href="/sokzn48.ru/theme/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="/sokzn48.ru/css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <script src="/sokzn48.ru/theme/js/all.min.js"></script>
@@ -42,7 +43,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="icon-search-menu"><i class="fa fa-search"></i></div>
+                    <!--<div class="icon-search-menu"><i class="fa fa-search"></i></div>-->
                     <div class="collapse yamm navbar-collapse">
                         <!--Меню-->
                         {!!Menu::getMenuByLayout('9','Верхнее меню','','menu')!!}

@@ -33,21 +33,22 @@
                             </a>
 
                         </h4>
-
+                        {{--
                         @if(isset($spec->subname) && trim($spec->subname) !== "")
                             <p>
                                 <span class="heading">Квалификация: </span>
                                 <span class="detail">{{str_limit($spec->subname,50,'...')}}</span>
                             </p>
                         @endif
-
+                        --}}
                         @if(isset($spec->special) && trim($spec->special) !== "")
                         <p>
-                            <span class="heading">Специализация: </span>
+                            {{--<span class="heading">Специализация: </span>--}}
                             <span class="detail">{{str_limit($spec->special,50,'...')}}</span>
+
                         </p>
                         @endif
-
+                        {{--
                         @if(isset($spec->obrazovanie) && trim($spec->obrazovanie) !== "")
                         <p>
                             <span class="heading">Образование</span>
@@ -68,7 +69,7 @@
                             <span class="detail">{{str_limit($spec->about,50,'...')}} </span>
                         </p>
                         @endif
-
+                        --}}
                         </div>
                 </div>
                     @if(($key+1) % 3 == 0)
