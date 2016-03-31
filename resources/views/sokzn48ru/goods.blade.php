@@ -19,6 +19,42 @@
                         <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
                             <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
                                 <div class="wpb_wrapper">
+
+                                    @if($ChildGoods)
+                                    <div class="row luchiki-margin-bottom-30">
+                                        <div class="gallery-wrapper gallery-infinite-scroll">
+                                            <div class="col-xs-12 service-wrapper">
+                                                @foreach($ChildGoods as $key => $good)
+                                                    <div class="gallery-item gallery-col-3 service-img">
+                                                        <div class="entry-thumbnail title">
+                                                            <img src="{{$good->avatar}}" alt="{{$good->name}}">
+
+                                                            <!--Описание фотоальбома-->
+                                                            <div class="entry-thumbnail-hover">
+                                                                <div class="entry-hover-wrapper">
+                                                                    <div class="entry-hover-inner">
+                                                                        <a href="/service/{{$good->id}}" title="{{$good->name}}">
+                                                                            <h5 class="class-name">{{$good->name}}</h5>
+                                                                                    <span class="excerpt">
+                                                                                        {{str_limit((strip_tags($good->content)), 130, '...')}}
+                                                                                    </span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--Описание фотоальбома-->
+                                                        </div>
+                                                    </div>
+
+
+                                                @endforeach
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    @endif
+
+
                                     <div class=" row">
                                         @if(Session::has('good'))
                                             <div class="alert alert-success">

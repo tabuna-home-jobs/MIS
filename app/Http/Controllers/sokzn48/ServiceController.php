@@ -29,9 +29,10 @@ class ServiceController extends Controller
             $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with(['categories' => function ($query) {
                 $query->orderBy('id', 'ASC')->with(['goods' => function ($query) {
 
-                    $query->orderBy('id', 'desc');
+                    $query->where('parent_id',null)->orderBy('id', 'desc');
                 }]);
             }])->first();
+            //dd($query->categories);
 
         }else {
 
@@ -44,7 +45,9 @@ class ServiceController extends Controller
             if( ($requestCategory % 2 ) == 1 ){
                 $blue = "blue";
             }
+
         }
+
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
         return view($sitename . $sitedomen . '/service', [
@@ -100,6 +103,7 @@ class ServiceController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
         $Goods = $getSites->getGoods()->where('id', $id)->first();
+        $ChildGoods =$getSites->getGoods()->where('parent_id',$id)->get();
         $Category = $getSites->getCategory()->findorFail($Goods->category_id);
 
         $Comments = $Goods->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
@@ -111,6 +115,7 @@ class ServiceController extends Controller
             'Category' => $Category,
             'Goods' => $GoodsCat,
             'Comments' => $Comments,
+            'ChildGoods' => $ChildGoods,
             'LastNews' => $getLastNews
         ]);
     }
