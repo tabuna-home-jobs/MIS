@@ -267,7 +267,7 @@ header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon > span,
 }
 
 .entry-thumbnail .entry-thumbnail-hover {
-    background: rgba(145, 220, 216, 0.95)
+    background: rgba(145, 220, 216, 0.95);
 }
 
 .blog-wrapper .entry-categories ul.post-categories li a {
@@ -578,7 +578,8 @@ header .header_logo>a>div {
     padding-top: 20px;
 }
 .entry-thumbnail .entry-thumbnail-hover {
-    background: rgba(255,167,60,0.95);
+    background: rgba(4, 37, 82, 0.42);
+    opacity: 1;
 }
 .our-staffs-name a{
     color:#000;
@@ -792,3 +793,4 @@ li{
     .panel-primary > .panel-heading + .panel-collapse > .panel-body{
         border-top: none;
     }
+

@@ -31,6 +31,8 @@
                                                         <div class="entry-thumbnail title">
                                                             <img src="{{$good->avatar}}" alt="{{$good->name}}">
 
+
+
                                                             <!--Описание фотоальбома-->
                                                             <div class="entry-thumbnail-hover">
                                                                 <div class="entry-hover-wrapper">

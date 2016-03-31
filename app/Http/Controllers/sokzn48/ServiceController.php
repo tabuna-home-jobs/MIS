@@ -29,7 +29,7 @@ class ServiceController extends Controller
             $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with(['categories' => function ($query) {
                 $query->orderBy('id', 'ASC')->with(['goods' => function ($query) {
 
-                    $query->where('parent_id',null)->orderBy('id', 'desc');
+                    $query->where('parent_id',null)->orderBy('sort', 'asc');
                 }]);
             }])->first();
             //dd($query->categories);
