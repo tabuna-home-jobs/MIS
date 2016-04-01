@@ -53,7 +53,7 @@
                                     <div class="panel-body blog-content">
                                         {!! nl2br(e($QA->answer)) !!}
                                         <p class="text-right">
-                                            <small>С уважением и заботой, Здоровье Нации!  {{$QA->getDoctor->fio or ''}}</small>
+                                            <small>С уважением и заботой, Здоровье Нации!  {{--$QA->getDoctor->fio or ''--}}</small>
                                             <small><br>
                                                 <date>{{$QA->updated_at->diffForHumans()}}</date>
                                             </small>
