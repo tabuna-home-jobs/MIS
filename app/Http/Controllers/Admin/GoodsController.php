@@ -14,7 +14,9 @@ class GoodsController extends Controller {
     public function getIndex()
     {
         Goods::fixTree();
-        $Goods = Goods::where('ids', Session::get('website'))->orderBy('name', 'asc')->paginate(15);
+        $Goods = Goods::where('ids', Session::get('website'))
+            ->orderBy('name', 'asc')
+            ->paginate(15);
         return view("dashboard/goods/goods",['Goods' => $Goods ]);
     }
 

@@ -28,22 +28,14 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <!--@foreach ($Goods as $good)
-                                    <tr>
-                                        <td>{{ $good->id }}</td>
-                                        <td><img src="{{ $good->avatar }}" class="img-responsive" width="100px" height="50px"></td>
-                                        <td>{{ $good->name }}</td>
-                                        <td>{{ $good->category()->first()->name or '' }}</td>
-                                        <td>
-                                            <a href="/dashboard/goods/add/{{ $good->id }}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
-                                            <a href="/dashboard/goods/destroy/{{ $good->id }}" class="btn btn-danger"><span class="fa fa-trash-o"></span></a>
-                                        </td>
-                                    </tr>
-                                @endforeach-->
 
-                                @foreach ($Goods->toTree() as $category)
+
+
+
+                                @foreach ($Goods->toTree() as  $key => $category)
                                     @include('dashboard.goods._partials.category', $category)
                                 @endforeach
+
 
                                 </tbody>
                             </table>

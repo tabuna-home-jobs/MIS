@@ -11,6 +11,11 @@ class GoodsObserver
     }
 
 
+    public function created($model){
+        return $this->saving($model);
+    }
+
+
     public function saving($model)
     {
         if (!empty($model->name)) {
