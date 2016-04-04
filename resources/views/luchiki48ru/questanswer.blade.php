@@ -5,6 +5,11 @@
     <div class="sub-page-content">
 
         <h1 class="blueText center">Вопросы и ответы</h1>
+        @if(Session::has('good'))
+            <div class="alert alert-success">
+                {{ Session::get('good') }}
+            </div>
+        @endif
 
 
         <div class="padding-top-35 after-booking-sec text-center">
