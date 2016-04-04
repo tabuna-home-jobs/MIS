@@ -124,7 +124,7 @@
                         </div>
                     @endif
                 @endforeach
-                @if(count($QuestAnswers)==0)
+                @if(count($QuestAnswers)<2)
 
                         <div class="quest-form white">
                             <h2 class="blueBg center  feedHead">Напиши и узнаешь</h2>
