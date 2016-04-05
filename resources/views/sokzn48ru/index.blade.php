@@ -1,4 +1,4 @@
-@extends('sokzn48ru/header')
+@extends('sokzn48ru/ALTheader')
 @section('content')
 <div id="wrapper-content bg-while" class="wrappmain">
     <main role="main" class="site-content">

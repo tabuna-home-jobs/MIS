@@ -54,6 +54,7 @@ Route::group(['domain' => 'luchiki48.ru','namespace' => 'luchiki48'], function()
 
 
 Route::group(['domain' => 'sokzn48.ru', 'namespace' => 'sokzn48'], function () {
+    Route::resource('/search', 'SearchController');
     Route::resource('/articles', 'ArticlesController');
     Route::resource('/answers', 'AnswersController');
     Route::resource('/blog', 'BlogController');
@@ -67,6 +68,7 @@ Route::group(['domain' => 'sokzn48.ru', 'namespace' => 'sokzn48'], function () {
     Route::resource('/shares', 'SharesController');
     Route::resource('/video', 'VideoGalleryController');
     Route::resource('/', 'HomeController');
+
 
 });
 

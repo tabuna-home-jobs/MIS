@@ -38,8 +38,8 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span> <span
                                     class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
                         <div class="header_logo">
-                            <a href="/" title="luchiki | Adorable Kindergarten - Just another WordPress site" rel="home">
-                                <div><img src="/sokzn48.ru/img/logo_blue.png" alt="luchiki | Adorable Kindergarten - Just another WordPress site"></div>
+                            <a href="/" rel="home">
+                                <div><img src="/sokzn48.ru/img/logo_blue.png" alt=""></div>
                             </a>
                         </div>
                     </div>
@@ -48,6 +48,10 @@
                         <!--Меню-->
                         {!!Menu::getMenuByLayout('9','Верхнее меню','','menu')!!}
                         <!--Меню-->
+
+
+
+
                     </div>
                 </div>
             </nav>

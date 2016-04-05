@@ -2,10 +2,12 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Remoblaser\Search\SearchableTrait;
+
 
 class Page extends Model {
 
-    use SoftDeletes;
+    use SoftDeletes,SearchableTrait;
     /**
      * The database table used by the model.
      *
@@ -21,5 +23,28 @@ class Page extends Model {
     protected $fillable = ['title', 'name', 'content', 'tag', 'descript', 'ids'];
 
 
+    /**
+     * @var array
+     */
+    protected $searchFields = ['title', 'name', 'content'];
+
+
+
+    public $SlugName = 'page';
+
+    /**
+     * Searchable rules.
+     *
+     * @var array
+     */
+    protected $searchable = [
+        'columns' => [
+            'title' => 10,
+            'name' => 10,
+            'content' => 20,
+            'tag' => 5,
+            'descript' => 2,
+        ]
+    ];
 
 }

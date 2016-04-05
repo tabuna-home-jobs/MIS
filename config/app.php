@@ -152,7 +152,8 @@ return [
         'Watson\Active\ActiveServiceProvider',
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
-			Orchid\Socket\Providers\SocketServiceProvider::class
+		Orchid\Socket\Providers\SocketServiceProvider::class,
+		Remoblaser\Search\SearchServiceProvider::class
     ],
 
 	/*
@@ -219,8 +220,8 @@ return [
 		'qaMain'=> \App\Facades\QAMain::class,
 		'catOnMain'=> \App\Facades\categoryOnMain::class,
 
-			'SEO' => App\Facades\SEOFacades::class,
-
+		'SEO' => App\Facades\SEOFacades::class,
+		'Search' => Remoblaser\Search\Facades\Search::class
     ],
 
 ];

@@ -5,8 +5,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Appointments extends Model
 {
-
     use SoftDeletes;
+
     public $incrementing = false;
     /**
      * The database table used by the model.
@@ -15,6 +15,7 @@ class Appointments extends Model
      */
 
     protected $primaryKey = null;
+
     protected $table = 'appointments';
 
     /**

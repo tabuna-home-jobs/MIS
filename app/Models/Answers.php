@@ -20,5 +20,4 @@ class Answers extends Model {
     protected $fillable = ['answer', 'surveys_id', 'fio', 'phone', 'email'];
 
 
-
 }

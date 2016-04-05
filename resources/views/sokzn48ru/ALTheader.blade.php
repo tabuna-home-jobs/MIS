@@ -54,6 +54,8 @@
                 <i class="fa fa-at"></i>info@luchiki.ru
             </div>
 
+
+
         </div>
         <div class="site-top-right">
             <ul class="social-link">
@@ -86,7 +88,28 @@
                     <!--Меню-->
                     {!!Menu::getMenuByLayout('9','Верхнее меню','','menu')!!}
                     <!--Меню-->
+
+
+
+                    <form class="navbar-form navbar-form-sm pull-right nav-search"  role="search" action="/search" method="post">
+                        {!! csrf_field() !!}
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Поиск по ...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+      </span>
+                        </div>
+                    </form>
+
                 </div>
+
+
+
+
+
+
+
+
             </div>
         </nav>
     </div>
