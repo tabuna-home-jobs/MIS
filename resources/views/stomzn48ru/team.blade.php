@@ -19,6 +19,7 @@
                 <div class="container">
                     <div class="vc_row wpb_row vc_row-fluid">
                         <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-9 vc_col-md-9">
+                            <div class="wpb_text_column wpb_content_element ">
                             <div class="wpb_wrapper">
                                 <div class="row inline-block-grids padding-top-35">
                                     <!-- <div class="col-sm-12 col-xs-12 col-md-12 of-canvas-xs  padding-top-35">
@@ -83,6 +84,7 @@
                                     {!! $Specialisty->appends(\Input::except('page'))->render() !!}
                                 </div>
 
+                            </div>
                             </div>
                         </div>
                         <div class="wpb_column vc_column_container vc_col-sm-3 vc_hidden-sm vc_hidden-xs">

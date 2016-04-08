@@ -123,6 +123,10 @@ a.button.bordered:hover {
 a.button.bordered:active {
     border-color: #3C98AD;
 }
+.black{
+    /*color: #000;*/
+    font-weight: bold;
+}
 #header {
     position: relative;
     z-index: 30;

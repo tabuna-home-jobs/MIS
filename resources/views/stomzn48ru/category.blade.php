@@ -23,19 +23,20 @@
                 <div class="container">
                     <div class="vc_row wpb_row vc_row-fluid">
                         <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-9 vc_col-md-9">
-                            <div class="wpb_wrapper">
-                                <div class="page-single-our-staffs">
+                            <div class="wpb_text_column wpb_content_element ">
+                                <div class="wpb_wrapper">
 
-                                    <div class="row">
-                                        <div class="our-staffs-content">
-                                            <p>
+                                    <p class="p1">
+                                            <span class="s1">
+
                                                 {!! $category->text !!}
-                                            </p>
-                                        </div>
-                                   </div>
+                                     </span>
+                                    </p>
 
                                 </div>
                             </div>
+
+
                         </div>
                         <div class="wpb_column vc_column_container vc_col-sm-3 vc_hidden-sm vc_hidden-xs">
                             <div class="wpb_wrapper">
