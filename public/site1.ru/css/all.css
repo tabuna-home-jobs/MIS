@@ -6582,624 +6582,6 @@ td.hidden-lg, th.hidden-lg {
     display: table-cell !important
 }
 
-@media (max-width: 767px) {
-    .h1, h1 {
-        font-size: 3em
-    }
-
-    .hidden-lg.hidden-xs, td.hidden-lg.hidden-xs, th.hidden-lg.hidden-xs, tr.hidden-lg.hidden-xs {
-        display: none !important
-    }
-
-    .fixed-header .medicom-header {
-        position: relative
-    }
-
-    .fixed-header .content-index, .fixed-header .sub-page-banner {
-        margin-top: 0
-    }
-
-    .fixed-header.small-header .medicom-header {
-        min-height: 0;
-        height: auto;
-        top: 0
-    }
-
-    .fixed-header .anythingSlider {
-        top: 0
-    }
-
-    .slider-caption {
-        top: 20% !important
-    }
-
-    #slider li {
-        background-size: auto 500px !important
-    }
-
-    .slider-caption p {
-        font-size: 2em !important;
-        padding: 15px 30px 10px !important
-    }
-
-    .anythingSlider {
-        height: 500px !important
-    }
-
-    .appointment-form input[type=text] {
-        width: 47.5%
-    }
-
-    .lady1 {
-        left: 0
-    }
-
-    .about-sec {
-        height: auto
-    }
-
-    .medicom-app .col-md-5 {
-        display: none
-    }
-
-    .medicom-app-content {
-        margin-top: 24%
-    }
-
-    .medicom-app-content .app-buttons li {
-        margin: 0 3px 0 0
-    }
-
-    .footer-widget {
-        padding-bottom: 20px
-    }
-
-    footer.dark .copyright, footer.light .copyright {
-        margin: 10px 0 30px
-    }
-
-    .service-box {
-        float: none;
-        padding: 30px 6% 0;
-        width: auto
-    }
-
-    .service-box.one, .service-box.three, .service-box.two {
-        border: 0;
-        border-bottom: 1px solid #E5E5E5
-    }
-
-    .video-inner-content {
-        display: none
-    }
-
-    .creative-sec {
-        background: 0 0
-    }
-
-    .creative-sec-thumb.four, .creative-sec-thumb.one, .creative-sec-thumb.three, .creative-sec-thumb.two {
-        position: static;
-        display: block
-    }
-
-    .creative-sec-thumb figure {
-        position: relative
-    }
-
-    .creative-sec-thumb.four, .creative-sec-thumb.one, .creative-sec-thumb.three, .creative-sec-thumb.two {
-        width: 300px;
-        margin: 20px auto 0
-    }
-
-    .creative-sec-thumb.one .overlay {
-        left: 50%;
-        margin-left: -73px
-    }
-
-    .creative-sec-thumb.two .overlay {
-        left: 50%;
-        margin-left: -128px
-    }
-
-    .creative-sec-thumb.three .overlay {
-        left: 50%;
-        margin-left: -76px
-    }
-
-    .creative-sec-thumb.four .overlay {
-        height: 290px;
-        left: 50%;
-        margin-left: -145px;
-        width: 290px
-    }
-
-    .medicom-awesome-features-sec {
-        height: auto;
-        padding-bottom: 0
-    }
-
-    .tab-slider {
-        display: none
-    }
-
-    .awesome-features {
-        padding-top: 0;
-        width: 100%
-    }
-
-    .media.pull-left, .media.pull-right {
-        float: none !important;
-        margin: 0 0 40px !important
-    }
-
-    .piechart-section .chart {
-        display: block;
-        margin: 80px auto 50px !important
-    }
-
-    .blog-style2 li {
-        margin-bottom: 5px !important
-    }
-
-    .top-sec-detail .social2 {
-        float: none
-    }
-
-    .latest-news2 .jcarousel-container {
-        width: auto
-    }
-
-    .jcarousel-container {
-        width: 480px;
-        margin: 0 auto
-    }
-
-    .team-description .jcarousel-skin-tango .jcarousel-item-horizontal {
-        width: 480px
-    }
-
-    .team-description {
-        padding-left: 0
-    }
-
-    .team-description .doctors-img {
-        max-width: 480px;
-        margin-bottom: 30px
-    }
-
-    .team-description .doctors-detail {
-        padding-left: 0
-    }
-
-    .after-booking-sec li {
-        padding-right: 0;
-        width: 100%
-    }
-
-    .pricing-table {
-        float: none;
-        width: 100%
-    }
-
-    .contact-form {
-        padding-bottom: 30px
-    }
-
-    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], .contact-form textarea, .contact-form2 input[type=text], .contact-form2 input[type=email], .contact-form2 input[type=number] {
-        width: 100%;
-        margin-right: 0
-    }
-
-    .get-directions input[type=text] {
-        width: 60%;
-        font-size: 20px
-    }
-
-    .social-rounded.contact {
-        padding-bottom: 30px
-    }
-
-    .error-text p span strong {
-        font-size: 245px;
-        display: block
-    }
-
-    .tri-sec {
-        float: none;
-        width: 100%
-    }
-
-    .carousel-caption {
-        font-size: 30px;
-        top: 20%
-    }
-
-    .carousel-caption p {
-        line-height: 35px !important
-    }
-
-    .media img {
-        width: 100%
-    }
-
-    .meet-the-doctors {
-        background: 0 0
-    }
-
-    .meet-the-doctors .team-member-description {
-        display: none
-    }
-}
-
-@media (max-width: 480px) {
-    .anythingSlider {
-        height: 420px !important
-    }
-
-    .slider-caption {
-        top: 16% !important
-    }
-
-    .slider-caption p {
-        padding: 15px 10px 10px !important;
-        font-size: 1.6em !important
-    }
-
-    .appointment-form input[type=text], .appointment-form input[type=email], .appointment-form input[type=number], .appointment-form select, .appointment-form textarea {
-        width: 100%;
-        margin-right: 0
-    }
-
-    .appointment-form div.selector {
-        width: 100% !important
-    }
-
-    .h1, h1 {
-        font-size: 2.5em
-    }
-
-    .medicom-app-content .app-buttons li {
-        margin: 0 0 20px;
-        float: none
-    }
-
-    .blog2-item {
-        width: 86%;
-        padding: 7px 15px 2px
-    }
-
-    .blog-full-width-date, .blog2-thumbnail, .testimonials2-img {
-        display: none
-    }
-
-    .blog-full-width .blog-content, .blog2-content, .testimonials2-content {
-        padding-left: 0 !important
-    }
-
-    .appointment-sec2 {
-        padding: 31px 0 35px
-    }
-
-    .appointment-sec2 input[type=text], .appointment-sec2 input[type=email], .appointment-sec2 input[type=number], .appointment-sec2 textarea {
-        width: 61%
-    }
-
-    .appointment-sec2 .selector {
-        width: 61% !important
-    }
-
-    .testimonials2 {
-        padding: 20px 10px
-    }
-
-    .testimonials2 .carousel-indicators {
-        left: 20%
-    }
-
-    .awesome-features {
-        padding-top: 0;
-        width: 100%
-    }
-
-    .latest-news2 .jcarousel-container {
-        width: auto
-    }
-
-    .jcarousel-container {
-        width: 300px;
-        margin: 0 auto
-    }
-
-    .team-description .jcarousel-skin-tango .jcarousel-item-horizontal {
-        width: 300px
-    }
-
-    .doctors-detail p {
-        display: block
-    }
-
-    .doctors-detail p label {
-        width: 100%
-    }
-
-    .error-text p span strong {
-        font-size: 165px;
-        display: block
-    }
-
-    .carousel-caption {
-        display: none
-    }
-
-    #slider li {
-        background-size: auto 420px !important
-    }
-
-    .doctors-img {
-        float: none;
-        width: 100%;
-        margin-bottom: 30px
-    }
-
-    .doctors-img img {
-        width: 100%
-    }
-
-    .doctors-detail {
-        padding-left: 0
-    }
-
-    .home-box {
-        padding-bottom: 50px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .hidden-lg.hidden-sm, td.hidden-lg.hidden-sm, th.hidden-lg.hidden-sm, tr.hidden-lg.hidden-sm {
-        display: none !important
-    }
-
-    .nav > li > a {
-        padding: 10px 17px
-    }
-
-    .navbar-collapse.navbar-right {
-        padding-left: 0
-    }
-
-    .navbar-nav li .mega-menu ul {
-        width: 100%;
-        float: none;
-        padding-top: 30px
-    }
-
-    .navbar-nav li .mega-menu img {
-        float: none
-    }
-
-    .slider-caption {
-        top: 30% !important
-    }
-
-    .slider-caption p {
-        font-size: 3em!important;
-    }
-
-.about-sec {
-     height: auto
- }
-
-    .about-sec #counters .col-md-3 {
-        display: inline-block;
-        width: 49%
-    }
-
-    .medicom-app .col-md-5 {
-        display: none
-    }
-
-    .creative-sec {
-        background: 0 0
-    }
-
-    .creative-sec-thumb.four, .creative-sec-thumb.one, .creative-sec-thumb.three, .creative-sec-thumb.two {
-        position: static;
-        display: block
-    }
-
-    .creative-sec-thumb figure {
-        position: relative
-    }
-
-    .creative-sec-thumb.four, .creative-sec-thumb.one, .creative-sec-thumb.three, .creative-sec-thumb.two {
-        width: 300px;
-        margin: 20px auto 0
-    }
-
-    .creative-sec-thumb.one .overlay {
-        left: 50%;
-        margin-left: -73px
-    }
-
-    .creative-sec-thumb.two .overlay {
-        left: 50%;
-        margin-left: -128px
-    }
-
-    .creative-sec-thumb.three .overlay {
-        left: 50%;
-        margin-left: -76px
-    }
-
-    .creative-sec-thumb.four .overlay {
-        height: 290px;
-        left: 50%;
-        margin-left: -145px;
-        width: 290px
-    }
-
-    .medicom-awesome-features-sec {
-        height: auto;
-        padding-bottom: 0
-    }
-
-    .tab-slider {
-        display: none
-    }
-
-    .awesome-features {
-        padding-top: 0;
-        width: 45%
-    }
-
-    .media.pull-left, .media.pull-right {
-        float: none !important;
-        margin: 0 0 40px !important
-    }
-
-    .media img {
-        width: 100%
-    }
-
-    .chart, .piechart-section .chart {
-        display: block !important;
-        margin: 80px auto 50px !important
-    }
-
-    .team-description .jcarousel-skin-tango .jcarousel-item-horizontal {
-        width: 720px
-    }
-
-    .team-description .doctors-img {
-        max-width: 480px;
-        margin-bottom: 30px;
-        float: none
-    }
-
-    .team-description .doctors-detail {
-        padding-left: 0
-    }
-
-    .jcarousel-skin-tango .jcarousel-item-horizontal {
-        width: 722px !important
-    }
-
-    .footer-widget {
-        padding-bottom: 20px
-    }
-
-    .contact-form, .social-rounded.contact {
-        padding-bottom: 30px
-    }
-
-    .error-text p span strong {
-        font-size: 245px;
-        display: block
-    }
-
-    .tri-sec {
-        float: none;
-        width: 100%
-    }
-
-    .carousel-caption {
-        font-size: 30px;
-        top: 25%
-    }
-
-    .carousel-caption p {
-        line-height: 50px !important
-    }
-
-    .meet-the-doctors {
-        background: 0 0
-    }
-
-    .meet-the-doctors .team-member-description {
-        display: none
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .hidden-lg.hidden-md, td.hidden-lg.hidden-md, th.hidden-lg.hidden-md, tr.hidden-lg.hidden-md {
-        display: none !important
-    }
-
-    .nav > li > a {
-        padding: 10px 15px
-    }
-
-    .navbar-nav li .mega-menu img {
-        width: 39%
-    }
-
-    .appointment-form input[type=text] {
-        width: 47.6%
-    }
-
-    .awesome-features {
-        width: 31%
-    }
-
-    .tab-slider {
-        margin: 94px auto 0 4px
-    }
-
-    .awesome-features li {
-        margin: 49px 0
-    }
-
-    .creative-sec-thumb.two {
-        left: 200px
-    }
-
-    .creative-sec-thumb.three {
-        left: 460px
-    }
-
-    .chart, .piechart-section .chart {
-        margin: 80px 0 50px 4px !important
-    }
-
-    .team-description .jcarousel-skin-tango .jcarousel-item-horizontal {
-        width: 944px
-    }
-
-    .team-description .doctors-img {
-        width: 400px
-    }
-
-
-    .get-directions.small input[type=text] {
-        width: 80%
-    }
-
-    .error-text p span strong {
-        font-size: 245px
-    }
-
-    .team-member-description.three {
-        left: 400px
-    }
-
-    .team-member-description.four {
-        left: 535px
-    }
-
-    .team-member-description.five {
-        left: 720px
-    }
-
-    .meet-the-doctors .owl-carousel.two {
-        display: none !important
-    }
-}
-
-@media (min-width: 1200px) {
-    .hidden-lg, .meet-the-doctors .owl-carousel.two, td.hidden-lg, th.hidden-lg, tr.hidden-lg {
-        display: none !important
-    }
-}
 
 .visible-print, td.visible-print, th.visible-print, tr.visible-print {
     display: none !important
@@ -8764,7 +8146,7 @@ footer.dark .footer-bottom-text {
 }
 
 .creative-sec {
-    background: url(../images/creative-sec-bg.png) center 100px no-repeat;
+    background: url(../images/creative-sec-bg.png) center 140px no-repeat;
     min-height: 738px;
     padding: 36px 0;
     color: #646464
@@ -8789,22 +8171,22 @@ footer.dark .footer-bottom-text {
 
 .creative-sec-thumb.one {
     left: 0;
-    top: 115px
+    top: 155px
 }
 
 .creative-sec-thumb.two {
     left: 260px;
-    top: 106px
+    top: 146px
 }
 
 .creative-sec-thumb.three {
     left: 599px;
-    top: 188px
+    top: 228px
 }
 
 .creative-sec-thumb.four {
     right: 0;
-    top: 182px
+    top: 222px
 }
 
 .creative-sec-thumb figure {
@@ -11487,4 +10869,626 @@ fieldset.login-fieldset input {
 }
 .modal_header_mamau4eg button{
     min-width: auto;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .h1, h1 {
+        font-size: 3em
+    }
+
+    .hidden-lg.hidden-xs, td.hidden-lg.hidden-xs, th.hidden-lg.hidden-xs, tr.hidden-lg.hidden-xs {
+        display: none !important
+    }
+
+    .fixed-header .medicom-header {
+        position: relative
+    }
+
+    .fixed-header .content-index, .fixed-header .sub-page-banner {
+        margin-top: 0
+    }
+
+    .fixed-header.small-header .medicom-header {
+        min-height: 0;
+        height: auto;
+        top: 0
+    }
+
+    .fixed-header .anythingSlider {
+        top: 0
+    }
+
+    .slider-caption {
+        top: 20% !important
+    }
+
+    #slider li {
+        background-size: auto 500px !important
+    }
+
+    .slider-caption p {
+        font-size: 2em !important;
+        padding: 15px 30px 10px !important
+    }
+
+    .anythingSlider {
+        height: 500px !important
+    }
+
+    .appointment-form input[type=text] {
+        width: 47.5%
+    }
+
+    .lady1 {
+        left: 0
+    }
+
+    .about-sec {
+        height: auto
+    }
+
+    .medicom-app .col-md-5 {
+        display: none
+    }
+
+    .medicom-app-content {
+        margin-top: 24%
+    }
+
+    .medicom-app-content .app-buttons li {
+        margin: 0 3px 0 0
+    }
+
+    .footer-widget {
+        padding-bottom: 20px
+    }
+
+    footer.dark .copyright, footer.light .copyright {
+        margin: 10px 0 30px
+    }
+
+    .service-box {
+        float: none;
+        padding: 30px 6% 0;
+        width: auto
+    }
+
+    .service-box.one, .service-box.three, .service-box.two {
+        border: 0;
+        border-bottom: 1px solid #E5E5E5
+    }
+
+    .video-inner-content {
+        display: none
+    }
+
+    .creative-sec {
+        background: 0 0
+    }
+
+    .creative-sec-thumb.four, .creative-sec-thumb.one, .creative-sec-thumb.three, .creative-sec-thumb.two {
+        position: static;
+        display: block
+    }
+
+    .creative-sec-thumb figure {
+        position: relative
+    }
+
+    .creative-sec-thumb.four, .creative-sec-thumb.one, .creative-sec-thumb.three, .creative-sec-thumb.two {
+        width: 300px;
+        margin: 20px auto 0
+    }
+
+    .creative-sec-thumb.one .overlay {
+        left: 50%;
+        margin-left: -73px
+    }
+
+    .creative-sec-thumb.two .overlay {
+        left: 50%;
+        margin-left: -128px
+    }
+
+    .creative-sec-thumb.three .overlay {
+        left: 50%;
+        margin-left: -76px
+    }
+
+    .creative-sec-thumb.four .overlay {
+        height: 290px;
+        left: 50%;
+        margin-left: -145px;
+        width: 290px
+    }
+
+    .medicom-awesome-features-sec {
+        height: auto;
+        padding-bottom: 0
+    }
+
+    .tab-slider {
+        display: none
+    }
+
+    .awesome-features {
+        padding-top: 0;
+        width: 100%
+    }
+
+    .media.pull-left, .media.pull-right {
+        float: none !important;
+        margin: 0 0 40px !important
+    }
+
+    .piechart-section .chart {
+        display: block;
+        margin: 80px auto 50px !important
+    }
+
+    .blog-style2 li {
+        margin-bottom: 5px !important
+    }
+
+    .top-sec-detail .social2 {
+        float: none
+    }
+
+    .latest-news2 .jcarousel-container {
+        width: auto
+    }
+
+    .jcarousel-container {
+        width: 480px;
+        margin: 0 auto
+    }
+
+    .team-description .jcarousel-skin-tango .jcarousel-item-horizontal {
+        width: 480px
+    }
+
+    .team-description {
+        padding-left: 0
+    }
+
+    .team-description .doctors-img {
+        max-width: 480px;
+        margin-bottom: 30px
+    }
+
+    .team-description .doctors-detail {
+        padding-left: 0
+    }
+
+    .after-booking-sec li {
+        padding-right: 0;
+        width: 100%
+    }
+
+    .pricing-table {
+        float: none;
+        width: 100%
+    }
+
+    .contact-form {
+        padding-bottom: 30px
+    }
+
+    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], .contact-form textarea, .contact-form2 input[type=text], .contact-form2 input[type=email], .contact-form2 input[type=number] {
+        width: 100%;
+        margin-right: 0
+    }
+
+    .get-directions input[type=text] {
+        width: 60%;
+        font-size: 20px
+    }
+
+    .social-rounded.contact {
+        padding-bottom: 30px
+    }
+
+    .error-text p span strong {
+        font-size: 245px;
+        display: block
+    }
+
+    .tri-sec {
+        float: none;
+        width: 100%
+    }
+
+    .carousel-caption {
+        font-size: 30px;
+        top: 20%
+    }
+
+    .carousel-caption p {
+        line-height: 35px !important
+    }
+
+    .media img {
+        width: 100%
+    }
+
+    .meet-the-doctors {
+        background: 0 0
+    }
+
+    .meet-the-doctors .team-member-description {
+        display: none
+    }
+}
+
+@media (max-width: 480px) {
+    .anythingSlider {
+        height: 420px !important
+    }
+
+    .slider-caption {
+        top: 16% !important
+    }
+
+    .slider-caption p {
+        padding: 15px 10px 10px !important;
+        font-size: 1.6em !important
+    }
+
+    .appointment-form input[type=text], .appointment-form input[type=email], .appointment-form input[type=number], .appointment-form select, .appointment-form textarea {
+        width: 100%;
+        margin-right: 0
+    }
+
+    .appointment-form div.selector {
+        width: 100% !important
+    }
+
+    .h1, h1 {
+        font-size: 2.5em
+    }
+
+    .medicom-app-content .app-buttons li {
+        margin: 0 0 20px;
+        float: none
+    }
+
+    .blog2-item {
+        width: 86%;
+        padding: 7px 15px 2px
+    }
+
+    .blog-full-width-date, .blog2-thumbnail, .testimonials2-img {
+        display: none
+    }
+
+    .blog-full-width .blog-content, .blog2-content, .testimonials2-content {
+        padding-left: 0 !important
+    }
+
+    .appointment-sec2 {
+        padding: 31px 0 35px
+    }
+
+    .appointment-sec2 input[type=text], .appointment-sec2 input[type=email], .appointment-sec2 input[type=number], .appointment-sec2 textarea {
+        width: 61%
+    }
+
+    .appointment-sec2 .selector {
+        width: 61% !important
+    }
+
+    .testimonials2 {
+        padding: 20px 10px
+    }
+
+    .testimonials2 .carousel-indicators {
+        left: 20%
+    }
+
+    .awesome-features {
+        padding-top: 0;
+        width: 100%
+    }
+
+    .latest-news2 .jcarousel-container {
+        width: auto
+    }
+
+    .jcarousel-container {
+        width: 300px;
+        margin: 0 auto
+    }
+
+    .team-description .jcarousel-skin-tango .jcarousel-item-horizontal {
+        width: 300px
+    }
+
+    .doctors-detail p {
+        display: block
+    }
+
+    .doctors-detail p label {
+        width: 100%
+    }
+
+    .error-text p span strong {
+        font-size: 165px;
+        display: block
+    }
+
+    .carousel-caption {
+        display: none
+    }
+
+    #slider li {
+        background-size: auto 420px !important
+    }
+
+    .doctors-img {
+        float: none;
+        width: 100%;
+        margin-bottom: 30px
+    }
+
+    .doctors-img img {
+        width: 100%
+    }
+
+    .doctors-detail {
+        padding-left: 0
+    }
+
+    .home-box {
+        padding-bottom: 50px
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-lg.hidden-sm, td.hidden-lg.hidden-sm, th.hidden-lg.hidden-sm, tr.hidden-lg.hidden-sm {
+        display: none !important
+    }
+
+    .nav > li > a {
+        padding: 10px 17px
+    }
+
+    .navbar-collapse.navbar-right {
+        padding-left: 0
+    }
+
+    .navbar-nav li .mega-menu ul {
+        width: 100%;
+        float: none;
+        padding-top: 30px
+    }
+
+    .navbar-nav li .mega-menu img {
+        float: none
+    }
+
+    .slider-caption {
+        top: 30% !important
+    }
+
+    .slider-caption p {
+        font-size: 3em!important;
+    }
+
+    .about-sec {
+        height: auto
+    }
+
+    .about-sec #counters .col-md-3 {
+        display: inline-block;
+        width: 49%
+    }
+
+    .medicom-app .col-md-5 {
+        display: none
+    }
+
+    .creative-sec {
+        background: 0 0
+    }
+
+    .creative-sec-thumb.four, .creative-sec-thumb.one, .creative-sec-thumb.three, .creative-sec-thumb.two {
+        position: static;
+        display: block
+    }
+
+    .creative-sec-thumb figure {
+        position: relative
+    }
+
+    .creative-sec-thumb.four, .creative-sec-thumb.one, .creative-sec-thumb.three, .creative-sec-thumb.two {
+        width: 300px;
+        margin: 20px auto 0
+    }
+
+    .creative-sec-thumb.one .overlay {
+        left: 50%;
+        margin-left: -73px
+    }
+
+    .creative-sec-thumb.two .overlay {
+        left: 50%;
+        margin-left: -128px
+    }
+
+    .creative-sec-thumb.three .overlay {
+        left: 50%;
+        margin-left: -76px
+    }
+
+    .creative-sec-thumb.four .overlay {
+        height: 290px;
+        left: 50%;
+        margin-left: -145px;
+        width: 290px
+    }
+
+    .medicom-awesome-features-sec {
+        height: auto;
+        padding-bottom: 0
+    }
+
+    .tab-slider {
+        display: none
+    }
+
+    .awesome-features {
+        padding-top: 0;
+        width: 45%
+    }
+
+    .media.pull-left, .media.pull-right {
+        float: none !important;
+        margin: 0 0 40px !important
+    }
+
+    .media img {
+        width: 100%
+    }
+
+    .chart, .piechart-section .chart {
+        display: block !important;
+        margin: 80px auto 50px !important
+    }
+
+    .team-description .jcarousel-skin-tango .jcarousel-item-horizontal {
+        width: 720px
+    }
+
+    .team-description .doctors-img {
+        max-width: 480px;
+        margin-bottom: 30px;
+        float: none
+    }
+
+    .team-description .doctors-detail {
+        padding-left: 0
+    }
+
+    .jcarousel-skin-tango .jcarousel-item-horizontal {
+        width: 722px !important
+    }
+
+    .footer-widget {
+        padding-bottom: 20px
+    }
+
+    .contact-form, .social-rounded.contact {
+        padding-bottom: 30px
+    }
+
+    .error-text p span strong {
+        font-size: 245px;
+        display: block
+    }
+
+    .tri-sec {
+        float: none;
+        width: 100%
+    }
+
+    .carousel-caption {
+        font-size: 30px;
+        top: 25%
+    }
+
+    .carousel-caption p {
+        line-height: 50px !important
+    }
+
+    .meet-the-doctors {
+        background: 0 0
+    }
+
+    .meet-the-doctors .team-member-description {
+        display: none
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-lg.hidden-md, td.hidden-lg.hidden-md, th.hidden-lg.hidden-md, tr.hidden-lg.hidden-md {
+        display: none !important
+    }
+
+    .nav > li > a {
+        padding: 10px 15px
+    }
+
+    .navbar-nav li .mega-menu img {
+        width: 39%
+    }
+
+    .appointment-form input[type=text] {
+        width: 47.6%
+    }
+
+    .awesome-features {
+        width: 31%
+    }
+
+    .tab-slider {
+        margin: 94px auto 0 4px
+    }
+
+    .awesome-features li {
+        margin: 49px 0
+    }
+
+    .creative-sec-thumb.two {
+        left: 200px
+    }
+
+    .creative-sec-thumb.three {
+        left: 460px
+    }
+
+    .chart, .piechart-section .chart {
+        margin: 80px 0 50px 4px !important
+    }
+
+    .team-description .jcarousel-skin-tango .jcarousel-item-horizontal {
+        width: 944px
+    }
+
+    .team-description .doctors-img {
+        width: 400px
+    }
+
+
+    .get-directions.small input[type=text] {
+        width: 80%
+    }
+
+    .error-text p span strong {
+        font-size: 245px
+    }
+
+    .team-member-description.three {
+        left: 400px
+    }
+
+    .team-member-description.four {
+        left: 535px
+    }
+
+    .team-member-description.five {
+        left: 720px
+    }
+
+    .meet-the-doctors .owl-carousel.two {
+        display: none !important
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-lg, .meet-the-doctors .owl-carousel.two, td.hidden-lg, th.hidden-lg, tr.hidden-lg {
+        display: none !important
+    }
 }
