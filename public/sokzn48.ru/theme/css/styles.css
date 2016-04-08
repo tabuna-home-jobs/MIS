@@ -763,7 +763,7 @@ li{
 .header-1 {
     min-height: 68px;
 }
-    @media (max-width: 991px) and (min-width: 768px){
+    @media (max-width: 1199px) and (min-width: 768px){
         .navbar-header{float:none; position: relative !important;}
         .navbar-collapse{border-top:solid 1px #eee}
         .navbar-collapse.collapse{display:none !important;visibility:hidden !important}
@@ -772,6 +772,38 @@ li{
         .navbar-nav{float:none}
         .navbar-nav>li{float:none !important;}
         header .navbar-default ul.main-menu{width: 100%}
+
+
+
+
+        .site-top>.container{display:block;min-height:60px;height:auto;padding-top:10px;padding-bottom:10px}
+        .site-top .site-top-left,.site-top .site-top-right{width:100%;text-align:center;display:inline-block}
+        header .main-menu>li.icon-search-button{display:none !important}
+        header .navbar-header{height:90px}
+        header .header_logo>a{height:90px}
+        header .navbar-default .navbar-toggle{position:absolute;left:0;top:0;bottom:0;margin:auto;height:50px;background:transparent;border:none;padding:0}
+        header .navbar-default .navbar-toggle:hover,header .navbar-default .navbar-toggle:focus{background:transparent}
+        header .navbar-default .navbar-toggle .icon-bar{background-color:#8059CE;width:32px;height:4px}header .navbar-toggle .icon-bar+.icon-bar{margin-top:6px}
+        header .navbar-default .navbar-toggle:hover .icon-bar{background-color:#d93f63}
+        header .icon-search-menu{position:absolute;height:49px;width:49px;right:15px;top:20px}
+        header .widget_shopping_cart_content{display:none}
+        header .widget_shopping_cart_content+.icon-search-menu{right:15px}
+        header .navbar-default .navbar-collapse{float:none;margin-right:0;padding-left:0;padding-right:0}
+        header .navbar-default ul.main-menu{display:block;margin:0;padding:15px;position:static;background:#fff;left:0;right:0;z-index:999}
+        header .navbar-default ul.main-menu>li>a{padding:15px 0 !important}
+        header .navbar-default ul.main-menu>li+li{border-top:solid 1px #eee}
+        header .navbar-default ul.main-menu>li.menu-item-has-children>a:after{display:none}
+        header .navbar-default ul.main-menu li>a>b.caret{float:right;width:20px;height:20px}
+        header .navbar-default ul.main-menu li:hover>ul.dropdown-menu{display:none}
+        header .navbar-default ul.main-menu li>ul.dropdown-menu{-webkit-animation:none !important;-moz-animation:none !important;-ms-animation:none !important;-o-animation:none !important;animation:none !important}
+        header .navbar-default ul.dropdown-menu{position:static;float:none}
+        header .navbar-default ul.dropdown-menu{box-shadow:none;border-top:solid 1px #eee}
+        header .navbar-default .mega-menu-item ul.list-unstyled li+li{border-top:solid 1px #eee}
+        header .navbar-default .mega-menu-item+.mega-menu-item{border-top:solid 1px #eee}
+        header .navbar-default .mega-menu-item{padding-left:0;padding-right:0;margin-left:15px;margin-right:15px;float:none;width:auto}
+
+
+
     }
     @media(max-width: 768px){
         .navbar-header{float:none; position: relative !important;}
@@ -798,5 +830,6 @@ li{
 
 .nav-search{
     padding: 10px;
+    margin-left: 15px;
 }
 

@@ -84,14 +84,14 @@
                         </a>
                     </div>
                 </div>
-                <div class="collapse yamm navbar-collapse menu-margin-right-2">
+                <div class="collapse yamm navbar-collapse ">
                     <!--Меню-->
                     {!!Menu::getMenuByLayout('9','Верхнее меню','','menu')!!}
                     <!--Меню-->
 
 
 
-                    <form class="navbar-form navbar-form-sm pull-right nav-search"  role="search" action="/search" method="post">
+                    <form class="navbar-form navbar-form-sm pull-left nav-search"  role="search" action="/search" method="post">
                         {!! csrf_field() !!}
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Поиск по ...">

@@ -6,7 +6,7 @@
             <div class="entry-content">
 
                 <!--Карусель на главной-->
-                <div id="carousel-example-generic" class="top-carousel carousel slide" data-ride="carousel">
+                <div id="carousel-example-generic" class="top-carousel carousel slide hidden-xs" data-ride="carousel">
 
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">

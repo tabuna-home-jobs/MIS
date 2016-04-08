@@ -1,4 +1,4 @@
-@extends('karta-uspeharu/headerPage')
+@extends('stomzn48ru/header')
 
 @section('content')
 
