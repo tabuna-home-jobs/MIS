@@ -5751,3 +5751,9 @@ span.heading{
 .specName h4{
     margin-bottom: 10px;
 }
+
+@media only screen and (min-width: 671px) and (max-width: 1061px ){
+    .icon_box.mobile_adaptive .icon{
+        display: none;
+    }
+}
