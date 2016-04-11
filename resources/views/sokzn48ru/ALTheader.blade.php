@@ -44,11 +44,11 @@
 
             <div class="site-top-content">
                 <ul>
-                    <li><i class="fa fa-phone-square"></i>+7 (4742) 77 03 97</li>
+                    <li><i class="fa fa-phone-square"></i>+7 (4742) 71 51 15</li>
                 </ul>
             </div>
             <div class="site-top-content">
-                <i class="fa fa-home"></i>г. Липецк, ул. Неделина, 15-а
+                <i class="fa fa-home"></i>г. Липецк, ул. Октябрьская, 61
             </div>
             <div class="site-top-content">
                 <i class="fa fa-at"></i>info@luchiki.ru
@@ -59,7 +59,7 @@
         </div>
         <div class="site-top-right">
             <ul class="social-link">
-                <li><a href="http://www.vk.com" target="_blank"><i class="fa fa-vk"></i></a></li>
+                <li><a href="https://vk.com/club48185728" target="_blank"><i class="fa fa-vk"></i></a></li>
                 <li><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="http://www.ok.ru" target="_blank"><i class="fa fa-odnoklassniki"></i></a></li>
                 <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>

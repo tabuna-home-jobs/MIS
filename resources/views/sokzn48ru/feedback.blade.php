@@ -24,7 +24,7 @@
 
 
 
-                                            <p>г. Липецк, <br>ул. Неделина, 15-а</p></div>
+                                            <p>г. Липецк, <br>ул. Октябрьская, 61</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -34,11 +34,13 @@
                                         <div class="contact-icon"><i class="fa fa-phone-square"></i></div>
                                         <h4>Номера телефонов</h4>
 
-                                        <div class="contact-info"><i class="fa fa-phone"></i>
+                                        <div class="contact-info">
+                                            <i class="fa fa-phone"></i>
+                                            <p>+7 (4742) 71 51 15</p><br>
 
-                                            <p>+7 (4742) 77 03 97</p><br><i class="fa fa-mobile"></i>
-
-                                            <p>+7 (4742) 22 78 87</p></div>
+                                            <!--<i class="fa fa-mobile"></i>
+                                            <p>+7 (4742) 22 78 87</p>-->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
