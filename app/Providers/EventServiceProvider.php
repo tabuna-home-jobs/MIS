@@ -3,6 +3,8 @@
 use App\Models\Category;
 use App\Models\Goods;
 use App\Models\Observer\GoodsObserver;
+use App\Models\Observer\QuestAnswerObserver;
+use App\Models\QuestAnswer;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -34,6 +36,7 @@ class EventServiceProvider extends ServiceProvider {
 		parent::boot($events);
 
 		Goods::observe(new GoodsObserver);
+		QuestAnswer::observe(new QuestAnswerObserver);
 	}
 
 }

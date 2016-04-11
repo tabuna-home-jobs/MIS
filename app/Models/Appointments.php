@@ -34,7 +34,8 @@ class Appointments extends Model
         'email',
         'phone',
         'comment',
-        'spec_id'
+        'spec_id',
+        'export',
     ];
 
 
