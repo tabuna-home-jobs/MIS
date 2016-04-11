@@ -58,6 +58,8 @@ class SpecialistyController extends Controller
                 'cats' => $request->cats,
                 'sort' => $request->sort,
                 'staj' => $request->staj,
+                'dopinfo' => $request->dopinfo,
+                'napravlenie' => $request->napravlenie,
                 'sertificats' => $request->sertificats,
                 'best' => $request->best,
                 'ids' => Session::get('website'),
@@ -94,6 +96,8 @@ class SpecialistyController extends Controller
             'ids' => Session::get('website'),
             'sort' => $request->sort,
             'staj' => $request->staj,
+            'dopinfo' => $request->dopinfo,
+            'napravlenie' => $request->napravlenie,
             'sertificats' => $request->sertificats,
             'best' => $request->best
         ]);

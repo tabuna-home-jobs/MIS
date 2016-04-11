@@ -26,9 +26,29 @@
                                             <h3 class="our-staffs-name">{{$Spec->fio}}</h3>
 
 
+                                            @if(isset($Spec->opyt) && trim($Spec->opyt) !== "" )
+                                            <div class="our-staffs-phone"><p>Должность:</p>{{$Spec->opyt}}</div>
+                                            @endif
+
+
+                                            @if(isset($Spec->subname) && trim($Spec->subname) !== "" )
                                             <div class="our-staffs-phone"><p>Квалификация:</p>{{$Spec->subname}}</div>
+                                            @endif
+
+                                            @if(isset($Spec->obrazovanie) && trim($Spec->obrazovanie) !== "" )
                                             <div class="our-staffs-phone"><p>Образование:</p>{{$Spec->obrazovanie}}</div>
+
+                                            @endif
+
+                                            @if(isset($Spec->special) && trim($Spec->special) !== "" )
                                             <div class="our-staffs-email"><p>Специализация:</p>{{$Spec->special}}</div>
+                                            @endif
+
+                                            @if(isset($Spec->napravlenie) && trim($Spec->napravlenie) !== "" )
+                                                <div class="our-staffs-email"><p>Направление:</p>{{$Spec->napravlenie}}</div>
+                                            @endif
+
+
                                             <div class="our-staffs-phone">
                                                 <p>Дни работы:</p>
                                                 @if($days = unserialize($Spec->works))

@@ -41,10 +41,10 @@
                             </p>
                         @endif
                         --}}
-                        @if(isset($spec->special) && trim($spec->special) !== "")
+                        @if(isset($spec->opyt) && trim($spec->opyt) !== "")
                         <p>
                             {{--<span class="heading">Специализация: </span>--}}
-                            <span class="detail">{{str_limit($spec->special,50,'...')}}</span>
+                            <span class="detail">{{str_limit($spec->opyt,50,'...')}}</span>
 
                         </p>
                         @endif
