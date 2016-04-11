@@ -131,10 +131,10 @@
                                                     <div class="contentEditableContainer contentTextEditable">
                                                         <div class="contentEditable" align='center'>
                                                             <p style='text-align:left;color:#999999;font-size:14px;font-weight:normal;line-height:19px;'>
-                                                                {{$questions}}
-                                                                <span style='color:#222222;'>{{$fio}}</span><br>
-                                                                <span style='color:#222222;'>{{$phone}}</span><br>
-                                                                <span style='color:#222222;'>{{$email}}</span><br>
+                                                                {{$questions}}<br><br>
+                                                                <span style='color:#222222;font-size:12px;'>{{$fio}}</span><br>
+                                                                <span style='color:#222222;font-size:12px;'>{{$phone}}</span><br>
+                                                                <span style='color:#222222;font-size:12px;'>{{$email}}</span><br>
                                                             </p>
                                                         </div>
                                                     </div>
