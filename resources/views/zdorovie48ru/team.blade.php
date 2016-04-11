@@ -40,6 +40,14 @@
                             </div>
                             <div class="doctors-skils">
 
+                                @if(empty(!$spec->dopinfo))
+                                    <div>
+                                        <div class="heading-doc">{!!$spec->dopinfo or ''!!}</div>
+
+                                    </div>
+                                @endif
+
+
                                  @if(empty(!$spec->opyt))
                                     <div>
                                         <div class="heading-doc">Должность: </div>

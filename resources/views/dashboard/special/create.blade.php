@@ -70,7 +70,16 @@
                             <input class="form-control" type="text" maxlength="255"  name="staj"
                                    value="">
                         </div>
-
+                        <div class="form-group">
+                            <label>Направление</label>
+                            <input class="form-control" type="text" maxlength="255"  name="napravlenie"
+                                   value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Дополнительная информация</label>
+                            <input class="form-control" type="text" maxlength="255"  name="dopinfo"
+                                   value="">
+                        </div>
 
 
                         <div class="form-group">

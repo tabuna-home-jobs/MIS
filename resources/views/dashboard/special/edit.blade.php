@@ -72,6 +72,16 @@
                             <input class="form-control" type="text" maxlength="255"  name="staj"
                                    value="{{$Spec->staj or ''}}">
                         </div>
+                        <div class="form-group">
+                            <label>Направление</label>
+                            <input class="form-control" type="text" maxlength="255"  name="napravlenie"
+                                   value="{{$Spec->napravlenie or ''}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Дополнительная информация</label>
+                            <input class="form-control" type="text" maxlength="255"  name="dopinfo"
+                                   value="{{$Spec->dopinfo or ''}}">
+                        </div>
 
 
 
