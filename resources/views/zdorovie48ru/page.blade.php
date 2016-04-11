@@ -75,7 +75,7 @@
             <div class="tri-sec text-center">
                 <a href="/appointment">
                 <i class="feature-icon fa fa-stethoscope"></i>
-                <span>Записатсья на приём</span>
+                <span>Записаться на приём</span>
                 </a>
             </div>
         </div>
