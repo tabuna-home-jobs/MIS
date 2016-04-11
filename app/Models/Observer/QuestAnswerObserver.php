@@ -9,7 +9,7 @@ class QuestAnswerObserver
     {
         Mail::send('emails.questanswer', $model->toArray(), function($message)
         {
-            $message->to('octavian48@yandex.ru', 'Джон Смит')->subject('Вопрос требует ответа!');
+            $message->to('octavian48@yandex.ru')->subject('Вопрос требует ответа!');
         });
         return $model;
     }
