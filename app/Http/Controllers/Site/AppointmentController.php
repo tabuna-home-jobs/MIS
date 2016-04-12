@@ -19,7 +19,7 @@ class AppointmentController extends Controller
      */
 	public function getIndex($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-		return response()->redirectTo('http://zdorovie48.ru');
+		//return response()->redirectTo('http://zdorovie48.ru');
 
         //Получить все места
 		$specialization = DB::table('timetable')->select('specialization')->distinct()->orderBy('specialization', 'ASC')->get();

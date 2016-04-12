@@ -15,7 +15,7 @@ class Appointments extends Command
      *
      * @var string
      */
-    protected $name = 'xml:Appointments';
+    protected $name = 'xml:AppointmentsOLD';
 
     /**
      * The console command description.
