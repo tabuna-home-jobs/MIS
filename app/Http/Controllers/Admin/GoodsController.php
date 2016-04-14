@@ -5,19 +5,31 @@ use App\Http\Requests\GoodsRequest;
 use App\Models\Category;
 use App\Models\Goods;
 use Image;
-use Request;
 use Session;
+use Search;
+use Illuminate\Http\Request;
 
 class GoodsController extends Controller {
 
 
-    public function getIndex()
+    public function getIndex(Request $request)
     {
-        Goods::fixTree();
-        $Goods = Goods::where('ids', Session::get('website'))
-            ->orderBy('name', 'asc')
-            ->paginate(15);
-        return view("dashboard/goods/goods",['Goods' => $Goods ]);
+        $query = $request->input('query');
+        if(is_null($query) || empty($query))
+        {
+            $Goods = Goods::where('ids', Session::get('website'))
+                ->orderBy('name', 'asc')
+                ->paginate(15);
+            return view("dashboard/goods/goods",['Goods' => $Goods ]);
+        }
+        else{
+            $Goods = Goods::where('ids', Session::get('website'))
+                ->where('name', 'LIKE', '%'.$query.'%')
+                ->whereOr('title', 'LIKE', '%'.$query.'%')
+                ->orderBy('name', 'asc')
+                ->paginate(15);
+            return view("dashboard/goods/goods",['Goods' => $Goods ]);
+        }
     }
 
 
@@ -64,6 +76,8 @@ class GoodsController extends Controller {
         if(!is_null($request->fieldsAttr))
         $Goods->attribute = serialize(array_filter($request->fieldsAttr));
 
+
+        Goods::fixTree();
         $Goods->save();
 
         //Флеш сообщение
@@ -81,6 +95,8 @@ class GoodsController extends Controller {
     public  function  getRestore($Category = null)
     {
         Goods::withTrashed()->find($Category)->restore();
+
+        Goods::fixTree();
         Session::flash('good', 'Вы успешно востановили запись');
         return redirect()->route('goods');
     }
@@ -96,6 +112,8 @@ class GoodsController extends Controller {
     {
         $Category = Goods::find($Goods);
         $Category->delete('cascade');
+
+        Goods::fixTree();
         Session::flash('good', 'Вы успешно удалили значения');
         return redirect()->route('goods');
     }
@@ -103,6 +121,8 @@ class GoodsController extends Controller {
     public  function  getUnset($Goods = null)
     {
         Goods::withTrashed()->find($Goods)->forceDelete();
+
+        Goods::fixTree();
         Session::flash('good', 'Вы успешно окончательно удалили запись');
         return redirect()->route('goods');
     }

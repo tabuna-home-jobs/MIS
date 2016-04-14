@@ -43,6 +43,13 @@ class Goods extends Node {
         'slug'
     ];
 
+
+    /**
+     * @var array
+     */
+    protected $searchFields = ['title', 'name'];
+
+
     public function category()
     {
         return $this->belongsTo('App\Models\Category');

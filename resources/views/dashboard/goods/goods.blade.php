@@ -12,6 +12,18 @@
 
                 <a href="/dashboard/goods/add/" class="btn btn-link btn-sm"><span class="fa fa-plus"></span> Добавить новую запись </a>
 
+                <div class="pull-right">
+                <form class="form-inline" action="/dashboard/goods">
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" maxlength="255" required name="query" placeholder="Поиск ...">
+                        <button type="submit" class="btn btn-default">Найти</button>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    </div>
+                </form>
+                    </div>
+
+
             </div>
             <div class="table-responsive">
                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
