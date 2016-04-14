@@ -7,12 +7,13 @@ use App\Models\Goods;
 use Image;
 use Session;
 use Search;
-use Illuminate\Http\Request;
+use Request;
+use Illuminate\Http\Request as RequestIlluminate;
 
 class GoodsController extends Controller {
 
 
-    public function getIndex(Request $request)
+    public function getIndex(RequestIlluminate $request)
     {
         $query = $request->input('query');
         if(is_null($query) || empty($query))
