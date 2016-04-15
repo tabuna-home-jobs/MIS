@@ -120,6 +120,7 @@
                             <a href="/team"><dfn>- Перейти</dfn></a>
                         </div>
                     </div>
+                    <!--
                     <div class="feature">
                         <i class="pull-left feature-icon fa fa-book"></i>
                         <div class="feature-content">
@@ -128,6 +129,7 @@
                             <a href="/medencyclopedia"><dfn>- Перейти</dfn></a>
                         </div>
                     </div>
+                    -->
                     <div class="feature">
                         <i class="pull-left feature-icon fa fa-phone-square"></i>
                         <div class="feature-content">

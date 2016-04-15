@@ -98,7 +98,6 @@
     </section>
     
 
-        <!--
     <section class="appointment-sec text-center bg-gray">
         <div class="container">
             <h1>Записаться на приём</h1>
@@ -348,7 +347,7 @@
         </div>
 
     </section>
-    -->
+
 
 
 
