@@ -52,7 +52,7 @@
 
                                         <div class="contact-info"><i class="fa fa-envelope"></i>
 
-                                            <p>info@luchiki.ru<br> mother-baby@mail.ru</p></div>
+                                            <p>sok@zdorovie48.ru</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                                 <div class="wpb_wrapper">
                                     <div class="wpcf7" id="wpcf7-f272-p254-o1" lang="en-US" dir="ltr">
                                         <div class="screen-reader-response"></div>
-                                        <form name="" action="/feedback" method="post" class="wpcf7-form" novalidate="novalidate">
+                                        <form name="" action="/feedback" method="post" class="wpcf7-form" >
                                             <div style="display: none;">
                                                 <input type="hidden" name="_wpcf7" value="272">
                                                 <input type="hidden" name="_wpcf7_version" value="4.0.2">

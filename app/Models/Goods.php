@@ -3,10 +3,11 @@
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Kalnoy\Nestedset\Node;
+use Remoblaser\Search\SearchableTrait;
 
 class Goods extends Node {
 
-    use SoftDeletes;
+    use SoftDeletes,SearchableTrait;
     /**
      * The database table used by the model.
      *
@@ -48,6 +49,7 @@ class Goods extends Node {
      * @var array
      */
     protected $searchFields = ['title', 'name'];
+    public $SlugName = 'service';
 
 
     public function category()

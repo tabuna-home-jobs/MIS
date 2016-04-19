@@ -22,9 +22,9 @@ class TeamController extends Controller {
 
         $requestCategory = Request::input('catspec');
         if (is_null($requestCategory))
-            $Specialisty = $getSites->getTeam()->orderBy('sort', 'asc')->paginate(8);
+            $Specialisty = $getSites->getTeam()->orderBy('sort', 'asc')->paginate(9);
         else
-            $Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->orderBy('sort', 'asc')->paginate(8);
+            $Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->orderBy('sort', 'asc')->paginate(9);
 
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
         return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty,'SpCat' => $SpecCat,'LastNews' => $getLastNews]);

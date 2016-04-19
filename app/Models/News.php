@@ -42,7 +42,7 @@ class News extends Model {
     ];
 
 
-    public $SlugName = 'news';
+    public $SlugName = 'blog';
 
     public function getSite()
     {
