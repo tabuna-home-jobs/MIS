@@ -30,12 +30,14 @@
     <link rel="stylesheet" href="/sokzn48.ru/theme/css/source/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/sokzn48.ru/theme/css/source/jquery.fancybox.pack.js"></script>
 
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+            $(".fancybox, .highslide").fancybox();
+        });
+    </script>
+
 </head>
-<script type="text/javascript">
-    jQuery(document).ready(function($){
-        $(".fancybox").fancybox();
-    });
-</script>
+
 <body>
 <!--Верхняя плашка с адресами-->
 <div class="site-top site-top-4 header-4">
