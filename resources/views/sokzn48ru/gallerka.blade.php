@@ -54,12 +54,13 @@
 
                                     </div>
                                 </div>
+                                {!! $photos->render() !!}
                             </div>
                         </article>
                     </div>
                 </div>
 
-                {!! $photos->render() !!}
+
             </div>
         </main>
     </div>
