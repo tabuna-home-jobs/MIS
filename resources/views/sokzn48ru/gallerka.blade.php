@@ -58,6 +58,8 @@
                         </article>
                     </div>
                 </div>
+
+                {!! $photos->render() !!}
             </div>
         </main>
     </div>
