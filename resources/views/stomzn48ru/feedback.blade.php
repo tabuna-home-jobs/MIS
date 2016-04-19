@@ -36,7 +36,7 @@
                                         <li>
                                             <div class="text"><strong>E-mail</strong>
 
-                                                <p><a href="mailto:mother-baby@mail.ru">mother-baby@mail.ru</a></p>
+                                                <p><a href="mailto:stom@zdorovie48.ru">stom@zdorovie48.ru</a></p>
                                             </div>
                                             <div class="icon"><i class="fa fa-envelope-o"></i></div>
                                         </li>
@@ -50,7 +50,7 @@
                                             <div class="text"><strong>Часы приёма</strong>
 
                                                 <p>Пн - Пт: 8:00 - 21:00<br>
-                                                    Сб: :00 - 18:00</p></div>
+                                                    Сб: 8:00 - 14:00</p></div>
                                             <div class="icon"><i class="stm-icon-clock"></i></div>
                                         </li>
                                     </ul>
