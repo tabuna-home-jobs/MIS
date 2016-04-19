@@ -62,16 +62,16 @@
             <div class="social-header col-md-2 col-sm-6 hidden-xs">
                 <!--<img src="/luchiki48.ru/img/social.png">-->
                 <div class="col-sm-3 col-md-3 col-xs-3">
-                    <a href=""><img src="/luchiki48.ru/img/vk.png"></a>
+                    <a href="http://vk.com/club58100338"><img src="/luchiki48.ru/img/vk.png"></a>
                 </div>
-                <div class="col-sm-3 col-md-3 col-xs-3">
+                <!--<div class="col-sm-3 col-md-3 col-xs-3">
                     <a href=""><img src="/luchiki48.ru/img/twit.png"></a>
-                </div>
+                </div>-->
                 <div class="col-sm-3 col-md-3 col-xs-3">
                     <a href=""><img src="/luchiki48.ru/img/ok.png"></a>
                 </div>
                 <div class="col-sm-3 col-md-3 col-xs-3">
-                    <a href=""><img src="/luchiki48.ru/img/face.png"></a>
+                    <a href="https://www.facebook.com/groups/676658982456131/ "><img src="/luchiki48.ru/img/face.png"></a>
                 </div>
             </div>
         </div>

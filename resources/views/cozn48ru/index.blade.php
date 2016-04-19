@@ -439,11 +439,27 @@
     <div class="container">
         <h2>САЙТЫ ГУППЫ КОМПАНИЙ «ЗДОРОВЬЕ НАЦИИ»</h2>
         <div class="autoplay">
-            <div class="sl-img"><img src="cozn48.ru/img/zn1.png"></div>
+            <div class="sl-img">
+                <a href="http://mother-baby.ru/" target="_blank">
+                    <img src="cozn48.ru/img/zn1.png">
+                </a>
+            </div>
             <div class="sl-img"><img src="cozn48.ru/img/zn2.png"></div>
-            <div class="sl-img"><img src="cozn48.ru/img/zn3.png"></div>
-            <div class="sl-img"><img src="cozn48.ru/img/zn4.png"></div>
-            <div class="sl-img"><img src="cozn48.ru/img/zn5.png"></div>
+            <div class="sl-img">
+                <a href="http://zdorovie48.ru/" target="_blank">
+                    <img src="cozn48.ru/img/zn3.png">
+                </a>
+            </div>
+            <div class="sl-img">
+                <a href="http://luchiki48.ru/" target="_blank" >
+                    <img src="cozn48.ru/img/zn4.png">
+                </a>
+            </div>
+            <div class="sl-img">
+                <a href="http://sokzn48.ru/" target="_blank">
+                    <img src="cozn48.ru/img/zn5.png">
+                </a>
+            </div>
         </div>
         <script type="text/javascript">
             $('.autoplay').slick({

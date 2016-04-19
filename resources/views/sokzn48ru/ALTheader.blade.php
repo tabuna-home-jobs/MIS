@@ -51,7 +51,7 @@
                 <i class="fa fa-home"></i>г. Липецк, ул. Октябрьская, 61
             </div>
             <div class="site-top-content">
-                <i class="fa fa-at"></i>info@luchiki.ru
+                <i class="fa fa-at"></i>sok@zdorovie48.ru
             </div>
 
 
@@ -60,9 +60,9 @@
         <div class="site-top-right">
             <ul class="social-link">
                 <li><a href="https://vk.com/club48185728" target="_blank"><i class="fa fa-vk"></i></a></li>
-                <li><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+               <!-- <li><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>-->
                 <li><a href="http://www.ok.ru" target="_blank"><i class="fa fa-odnoklassniki"></i></a></li>
-                <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.facebook.com/groups/1533000573664695/" target="_blank"><i class="fa fa-facebook"></i></a></li>
             </ul>
         </div>
     </div>
