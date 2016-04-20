@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex"/>
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
-        <title>@yield('title') - Семейный оздоровительный комплекс &laquo;СОК&raquo;</title>
+        <title>@yield('title') - Семейный оздоровительный комплекс «СОК»</title>
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
         <meta property="og:title" content="@yield('title')">
