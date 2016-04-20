@@ -6,7 +6,7 @@
     <meta name="robots" content="noindex"/>
 
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
-        <title>Стоматология - @yield('title')</title>
+        <title>@yield('title') - Стоматология «Здоровье нации»</title>
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
         <meta property="og:title" content="@yield('title')">
