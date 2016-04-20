@@ -1,4 +1,9 @@
 @extends('stomzn48ru/header')
+@section('title', $Page['title'])
+@section('description', $Page['descript'])
+@section('keywords', $Page['tag'])
+@section('avatar', $Page['avatar'])
+
 
 @section('content')
 

@@ -1,4 +1,9 @@
 @extends('cozn48ru/header')
+@section('title', $Spec['fio'])
+@section('description', $Spec['descript'])
+@section('keywords', $Spec['tag'])
+@section('avatar', $Spec['avatar'])
+
 @section('content')
     <div class="page-content">
         <div class="container">

@@ -1,4 +1,10 @@
 @extends('cozn48ru/header')
+
+@section('title', $Goods['title'])
+@section('description', $Goods['descript'])
+@section('keywords', $Goods['tag'])
+@section('avatar', $Goods['avatar'])
+
 @section('content')
     <div class="page-content">
         <div class="container">

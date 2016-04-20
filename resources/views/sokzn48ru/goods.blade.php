@@ -1,5 +1,11 @@
 @extends('sokzn48ru/ALTheader')
 
+@section('title', $Good['title'])
+@section('description', $Good['descript'])
+@section('keywords', $Good['tag'])
+@section('avatar', $Good['avatar'])
+
+
 @section('content')
     <div id="wrapper-content">
         <section class="page-title-wrapper">

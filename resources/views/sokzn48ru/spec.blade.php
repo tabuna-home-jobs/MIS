@@ -1,4 +1,8 @@
 @extends('sokzn48ru/ALTheader')
+@section('title', $Spec['fio'])
+@section('description', $Spec['descript'])
+@section('keywords', $Spec['tag'])
+@section('avatar', $Spec['avatar'])
 @section('content')
 
     <div id="wrapper-content">

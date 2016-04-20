@@ -6,7 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/cozn48.ru/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/cozn48.ru/style.css">
-    <title>Центр остеопатии</title>
+    @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
+        <title>Центр остеопатии - @yield('title')</title>
+        <meta name="description" content="@yield('description')">
+        <meta name="keywords" content="@yield('keywords')">
+        <meta property="og:title" content="@yield('title')">
+        <meta property="og:description" content="@yield('description')">
+        <meta property="og:image" content="@yield('avatar')">
+        <meta name="twitter:title" content="@yield('title')">
+        <meta name="twitter:description" content="@yield('description')"/>
+        <meta name="twitter:image:src" content="@yield('avatar')"/>
+    @else
+        {!! $meta !!}
+    @endif
     <script type="text/javascript" src="/cozn48.ru/js/jquery.js"></script>
     <script type="text/javascript" src="/cozn48.ru/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/cozn48.ru/js/slick/slick.css"/>

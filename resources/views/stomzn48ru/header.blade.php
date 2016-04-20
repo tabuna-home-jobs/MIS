@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex"/>
-    <title>Стоматология @yield('title')</title>
+
+    @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
+        <title>Стоматология - @yield('title')</title>
+        <meta name="description" content="@yield('description')">
+        <meta name="keywords" content="@yield('keywords')">
+        <meta property="og:title" content="@yield('title')">
+        <meta property="og:description" content="@yield('description')">
+        <meta property="og:image" content="@yield('avatar')">
+        <meta name="twitter:title" content="@yield('title')">
+        <meta name="twitter:description" content="@yield('description')"/>
+        <meta name="twitter:image:src" content="@yield('avatar')"/>
+    @else
+        {!! $meta !!}
+    @endif
+
 
     <meta name="csrf-token" content="{{ csrf_token() }}" >
 
-    <meta name="description" content="@yield('description')">
-    <meta name="keywords" content="@yield('keywords')">
-    <meta property="og:title" content="@yield('title')">
-    <meta property="og:description" content="@yield('description')">
-    <meta property="og:image" content="@yield('avatar')">
-    <meta name="twitter:title" content="@yield('title')">
-    <meta name="twitter:description" content="@yield('description')"/>
-    <meta name="twitter:image:src" content="@yield('avatar')"/>
+
 
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/animations.css">
     <link rel="stylesheet" type="text/css" href="/stomzn48.ru/theme/css/styles.css">

@@ -1,4 +1,10 @@
 @extends('cozn48ru/header')
+
+@section('title', $Shares['title'])
+@section('description', $Shares['descript'])
+@section('keywords', $Shares['tag'])
+@section('avatar', $Shares['avatar'])
+
 @section('content')
     <div class="page-content">
 

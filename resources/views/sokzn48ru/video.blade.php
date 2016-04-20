@@ -1,4 +1,10 @@
 @extends('sokzn48ru/ALTheader')
+
+@section('title', $album['name'])
+@section('description', $album['descript'])
+@section('keywords', $album['tag'])
+@section('avatar', $album['avatar'])
+
 @section('content')
 
 

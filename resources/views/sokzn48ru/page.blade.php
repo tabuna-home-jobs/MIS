@@ -1,4 +1,8 @@
 @extends('sokzn48ru/ALTheader')
+@section('title', $Page['title'])
+@section('description', $Page['descript'])
+@section('keywords', $Page['tag'])
+@section('avatar', $Page['avatar'])
 @section('content')
 
 <div id="wrapper-content">
