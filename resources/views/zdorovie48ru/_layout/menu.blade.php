@@ -7,7 +7,7 @@
 
         @if(isset($item['child']))
 
-            <li role="presentation" class="dropdown" style="padding-bottom: 5px;">
+            <li role="presentation" class="dropdown">
                 <a id="drop-{{$item['id']}}" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                    aria-haspopup="true" aria-expanded="false">
                     {{$item['label']}}

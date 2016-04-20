@@ -4,114 +4,167 @@
 
 
 
-    <div class="sub-page-content">
 
 
-        <section class="meet-the-doctors text-center">
-            <div class="container">
-                <h1 class="light">Ваша <span>идеальная</span> команда</h1>
-
-                <p class="lead">врачи первой, высшей квалификационной категории, соискатели научной степени, кандидаты
-                    медицинских наук, заслуженные врачи Российской Федерации</p>
-            </div>
-        </section>
-
-        <section class="features">
-            <div class="container">
+        <!-- Отзывы -->
+<section class="container-fluid">
+    <div class="row">
 
 
-                    @foreach($Reviews as $key=>$value)
-
-                        @if($key % 2 != 0)
-                        <div class="row">
-                        @endif
+        <div class="container">
 
 
-                        <div class="col-md-6">
-                            <div class="feature">
-                                <i class="pull-left feature-icon fa fa-male"></i>
-
-                                <div class="feature-content">
-                                    <h5>{{$value['fio']}}</h5>
-
-                                    <p class="text-justify">{{$value['content']}}</p>
-                                    <p  class="text-right"><small> {{$value['created_at']}} </small></p>
-                                </div>
-                            </div>
-                        </div>
-
-                    @if($key % 2 != 0)
-                        </div>
-                    @endif
+            <div class="app-content-body ">
 
 
-                    @endforeach
-
-
-
-                <div class="row text-center">
-
-                    {!! $Reviews->render() !!}
+                <div class="page-header">
+                    <h1 class="font-thin m-b">Отзывы</h1>
                 </div>
-            </div>
-        </section>
+
+
+                <div class="wrapper-md">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="mansory">
+
+                                <div class="row">
 
 
 
+                                    @foreach($Reviews as $key=>$value)
 
 
+                                    <div class="item">
+                                        <div class="panel wrapper-md b">
+                                            <p class="text-center">
+                                                <b>{{$value['fio']}}</b>
+                                            </p>
+                                            <p class="text-justify">
+                                                <i class="fa fa-quote-left  fa-pull-left text-success" aria-hidden="true"></i>
+                                                {{$value['content']}}
+                                                <i class="fa fa-quote-right  fa-pull-right text-success" aria-hidden="true"></i>
+                                            </p>
 
-
-
-
-        <section class="appointment-sec text-center">
-            <div class="container">
-                <h1>Оставьте отзыв</h1>
-
-                <p class="lead">Мы благодарны вам, за ваши слова, для нас они много значат</p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <figure><img src="/site1.ru/images/doctorrewews.png" alt="image" title="Appointment image" class="img-responsive lady1"></figure>
-                    </div>
-                    <div class="col-md-6">
-
-                            <form role="form" action="/reviews" method="post">
-                                    <div class="col-xs-12">
-                                        <div class="col-md-12">
-                                            <input type="text" name="fio" max="255" placeholder="Имя" style="width: 100%;">
-                                            <textarea rows="4" name="content" placeholder="Комментарий"></textarea>
-                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                            <button class="btn btn-default btn-rounded pull-right" type="submit">Отправить
-                                            </button>
+                                            <p class="text-right">
+                                                <small><i class="fa fa-clock-o"></i> {{$value['created_at']->toDateString()}}</small>
+                                            </p>
                                         </div>
                                     </div>
+
+                                @endforeach
+
+
+
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+
+
+                            <div class="text-center m-t-md m-b-md">
+
+                                {!! $Reviews->render() !!}
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="page-header">
+                    <h2 class="font-thin m-b">Оставьте отзыв. <small>Мы благодарны вам, за ваши слова, для нас они много значат</small></h2>
+                </div>
+
+                <div class="panel">
+                <div class="wrapper-md">
+
+
+                    <div class="row">
+                        <div class="col-md-5">
+
+
+                            <h4 class="text-dark font-bold m-b-lg">С Вами мы становимся лучше!</h4>
+                            <ul class="list-unstyled  m-t-xl">
+                                <li>
+                                    <i class="fa fa-check pull-left text-lg m-r m-t-sm text-success "></i>
+                                    <p class="clear m-b-lg text-justify"><strong>Наши специалисты</strong>
+                                        ответственно используют проверенные и надежные технологии, постоянно работают над внедрением инноваций и добиваются положительных результатов в каждом конкретном случае с каждым конкретным клиентом.
+                                    </p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check pull-left text-lg m-r m-t-sm text-success"></i>
+                                    <p class="clear m-b-lg"><strong>Постоянная работа</strong> над качеством услуг, позволяет не разочаровывать наших клиентов</p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check pull-left text-lg m-r m-t-sm text-success"></i>
+                                    <p class="clear m-b-lg"><strong>Постоянная работа</strong> над качеством услуг, позволяет не разочаровывать наших клиентов</p>
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+                        <div class="col-md-7">
+
+                            <form role="form"  class="form-horizontal" action="/reviews" method="post">
+                                <div class="col-xs-12">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">Как Вас зовут?</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="fio" max="255" class="form-control" placeholder="Имя">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label  class="col-sm-4 control-label">Какие впечатления?</label>
+                                            <div class="col-sm-8">
+                                                <textarea rows="10" name="content" placeholder="Комментарий"  class="form-control"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-4 col-sm-8">
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <button class="btn btn-default btn-void-primary pull-right" type="submit">Отправить
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
 
 
+                        </div>
                     </div>
+
+
                 </div>
+                    </div>
+
+
             </div>
-        </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
     </div>
+</section>
+<!-- Отзывы -->
+
 
 
 @endsection

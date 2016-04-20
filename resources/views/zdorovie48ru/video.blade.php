@@ -3,131 +3,133 @@
 @section('content')
 
 
-<div class="container galery-container">
-    <h2 class="light bordered"> <div><a  href="/gallery">Фотогалерея</a><a class="active">Видеогалерея</a></div> </h2>
+
+        <!-- Галлерея -->
+<section class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-xs-12 col-md-3">
-            <nav class="primary-albums clearfix">
-                <div class="list-group">
-                    <a style="z-index: 99" href="/video" class="list-group-item @if(!isset($id))active @endif">Все</a>
-                    @foreach($albums as $album)
 
-                    <a class="list-group-item @if(isset($id) && $id==$album->id)active @endif" href="/video/{{$album->id}}">{{$album->name}}</a>
-                    @endforeach
 
-                </div>
-            </nav>
-        </div>
+        <div class="container">
 
-        <div class="col-sm-8 col-xs-12 col-md-9">
-            <div class="row">
-                @foreach($videos as $video)
-                <div class="col-md-3 photo-item-container">
-                    <a rel="group" href="{{$video->code}}" class="photo-item fancybox fancybox.iframe">
-                        <i style="z-index:999;" class="fa fa-eye"></i>
-                        {{--<iframe src="{{preg_replace("/autoplay=1/",'autoplay=0',$video->code)}}" frameborder="0"></iframe>--}}
-                        <img src="http://img.youtube.com/vi{{preg_replace("/(.*)embed/",'',$video->code)}}/hqdefault.jpg" alt="">
-                    </a>
+
+            <div class="app-content-body ">
+
+
+                <div class="page-header">
+                    <h1 class="font-thin m-b">Галерея</h1>
                 </div>
 
-                @endforeach
+
+
+                <span id="overlay-suggestions"></span>
+
+                <div class="search-results">
+
+                    <div class="row">
+
+
+                        <div class="col-sm-9">
+                            <section class="vbox">
+                                <section class="scrollable padder-lg w-f-md" id="bjax-target">
+
+
+
+
+                                    <div class="row row-sm">
+
+
+                                        <div class="mansory">
+
+                                            <div class="row">
+
+                                                @foreach($videos as $video)
+
+                                                    <div class="item">
+                                                        <div class="pos-rlt">
+                                                            <a class="fancybox  fancybox.iframe" href="{{$video->code}}">
+                                                                <img src="http://img.youtube.com/vi{{preg_replace("/(.*)embed/",'',$video->code)}}/hqdefault.jpg" class="r r-2x img-full" alt="">
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="clearfix visible-xs"></div>
+                                                @endforeach
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="row row-sm text-center">
+                                        {!! $videos->render() !!}
+                                    </div>
+
+
+                                </section>
+                            </section>
+                        </div>
+
+
+
+                        <div class="col-sm-3">
+
+                            <div class="row m-b-md">
+                                <div class="col-md-6 text-center">
+                                    <a href="/gallery" class="opacity">
+                                        <i class="fa fa-camera fa-2x text-primary m-r-xs" aria-hidden="true"></i>  <span class="h3"> Фото</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <a href="/video">
+                                        <i class="fa fa-video-camera fa-2x  text-primary m-r-xs" aria-hidden="true"></i>  <span class="h3"> Видео</span>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <ul class="list-group">
+
+                                <div class="list-group">
+                                    <a href="/gallery" class="list-group-item @if(!isset($id))active @endif">Все</a>
+                                    @foreach($albums as $album)
+                                        <li class="list-group-item  text-center @if(isset($id) && $id==$album->id)active @endif">
+                                            <a href="/video/{{$album->id}}">{{$album->name}}</a>
+                                        </li>
+                                    @endforeach
+
+                                </div>
+
+
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
             </div>
-            {!! $videos->render() !!}
         </div>
-
     </div>
+</section>
+
+<!-- Галлерея -->
 
 
-
-</div>
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $(".fancybox").fancybox();
+        $(".fancybox").fancybox({
+        });
     });
 </script>
 
-<style>
-    .galery-container {
-        padding-top: 50px;
-    }
-
-
-
-    .galery-container .light.bordered a {
-        display: inline-block;
-        padding: 10px;
-        /* border: 1px #DDDDDD solid; */
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom: none;
-        background-color: white;
-        padding-top: 4px;
-    }
-    .galery-container .light.bordered div {
-        border-bottom: 1px #DDDDDD solid;
-        display: inline-block;
-    }
-    .galery-container .light.bordered a.active {
-        display: inline-block;
-        padding: 10px;
-        border: 1px #DDDDDD solid;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom: none;
-        background-color: #428BCA;
-        color: white;
-    }
-
-    .photo-item-container {
-        margin-bottom: 20px;
-    }
-    .photo-item-container .photo-item  {
-        position: relative;
-        height: 200px;
-        overflow: hidden;
-        display: block;
-        border: 2px white solid;
-        -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.37);
-        -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.37);
-        box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.37);
-        text-align: center;
-        BACKGROUND-COLOR: #E5E9EC;
-
-    }
-
-    @keyframes rotate {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0.5;
-        }
-
-    }
-
-    .photo-item-container img {
-        height: 100%;
-        width: auto;
-        max-width: 9999px;
-        transition: all .5s;
-    }
-    .photo-item-container a:hover iframe{
-        opacity:0.5;
-    }
-    .photo-item-container a i{
-        opacity: 0;
-        position: absolute;
-        padding-top: 40%;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        font-size: 50px;
-        transition: all .5s;
-    }
-    .photo-item-container a:hover i{
-        opacity:1;
-    }
-</style>
 @endsection
+
+

@@ -16,17 +16,15 @@ class TeamController extends Controller {
 	public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
 	{
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        //$Specialisty = $getSites->getTeam()->orderBy('sort', 'desc')->paginate(6);
 		$SpecCat = $getSites->getSpecCat()->get();
-
 
 		$requestCategory = Request::input('catspec');
 		if (is_null($requestCategory))
-			$Specialisty = $getSites->getTeam()->orderBy('sort', 'asc')->paginate(8);
+			$Specialisty = $getSites->getTeam()->orderBy('sort', 'asc')->paginate(12);
 		else
-			$Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->orderBy('sort', 'asc')->paginate(8);
+			$Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->orderBy('sort', 'asc')->paginate(12);
 
-		//dd($requestCategory);
+
         return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty,'SpCat' => $SpecCat]);
 	}
 

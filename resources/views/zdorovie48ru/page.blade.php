@@ -11,75 +11,63 @@
 @section('content')
 
 
-    <div class="sub-page-content">
+
+
+
+        <!-- Страница -->
+<section class="container-fluid">
+    <div class="row">
+
 
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 blog-wrapper clearfix">
-                    <h2 class="bordered light">{{$Page['name']}}</h2>
-
-                    <article class="blog-item blog-full-width blog-detail">
 
 
-                        @if(!empty($Page['avatar']))
-                        <div class="blog-thumbnail">
-                            <img src="{{$Page['avatar']}}">
-                        </div>
-                        @endif
-
-                        <div class="blog-content">
-                            {!! $Page['content'] !!}
-                        </div>
+            <div class="app-content-body ">
 
 
-                    </article>
-
+                <div class="page-header">
+                    <h1 class="font-thin m-b">{{$Page['name']}}</h1>
                 </div>
 
+                <div class="panel">
+                <div class="wrapper-md">
+                    <div class="row">
+                        <div class="col-sm-12 wrapper-lg">
+
+                            @if(!empty($Page['avatar']))
+                                <div class="blog-thumbnail">
+                                    <img src="{{$Page['avatar']}}">
+                                </div>
+                            @endif
+                            <div class="blog-post">
+                                    {!! $Page['content'] !!}
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                    </div>
+
+
             </div>
-        </div>
 
 
-        <div class="clr"></div>
-    </div><!--end sub-page-content-->
-
-
-
-
-
-    <div class="tri-sec-bg">
-        <div class="container">
-            <div class="tri-sec text-center tri-sec-first">
-                
-                <i class="feature-icon fa fa-plus-square"></i>
-                <span class="relative-pos">
-                    
-                        Услуги
-                        <!-- <span class="caret"></span> -->
-                    </span>
-                
-                    <ul>
-                        <li><a href="/service/53">Консультация</a></li>
-                        <li><a href="/service/127">Диагностика</a></li>
-                        <li><a href="/service/142">Лечение</a></li>
-
-                    </ul>
-                
-            </div>
-            <div class="tri-sec text-center">
-            <a href="/reviews">
-                <i class="feature-icon fa fa-thumbs-o-up"></i>
-                <span>Отзывы</span>
-            </a>
-            </div>
-            <div class="tri-sec text-center">
-                <a href="/appointment">
-                <i class="feature-icon fa fa-stethoscope"></i>
-                <span>Записаться на приём</span>
-                </a>
-            </div>
         </div>
     </div>
+</section>
+<!-- Страница -->
+
+
+
+
+
+
+
+
+
+
 
 
 
