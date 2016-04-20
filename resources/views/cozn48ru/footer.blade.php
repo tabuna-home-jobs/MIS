@@ -30,7 +30,7 @@
 
 
     <div class="container">
-        <div class="footer1 col-sm-6">© ООО «Центр остеопатии» 2015</div>
+        <div class="footer1 col-sm-6">© ООО «Центр остеопатии» 2015 - {{date('Y')}}</div>
         <div class="octavian col-sm-5">
             Разработка, поддержка
             и продвижение сайта

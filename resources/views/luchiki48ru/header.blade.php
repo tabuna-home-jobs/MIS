@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex"/>
+    <link href="/luchiki48.ru/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
         <title>@yield('title') - СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ»</title>

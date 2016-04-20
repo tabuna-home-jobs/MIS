@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex"/>
 
+    <link href="/stomzn48.ru/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
         <title>@yield('title') - Стоматология «Здоровье нации»</title>
         <meta name="description" content="@yield('description')">

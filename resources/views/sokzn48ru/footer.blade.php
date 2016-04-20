@@ -20,7 +20,7 @@
         <!--Копирайт-->
         <div class="footer-copyright">
             <div class="footer-copyright-inner">
-                <p>© Студия раннего развития детей «Лучики». Развивающие занятия. 2015</p>
+                <p>© Семейный оздоровительный комплекс «СОК»  2015 - {{date('Y')}}</p>
                 <p><small>Разработка, поддержка и продвижение сайтов <a href="http://octavian48.ru" target="_blank">Октавиан</a></small></p>
             </div>
         </div>

@@ -108,7 +108,7 @@
                             <textarea name="message" cols="4" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" id="your-message" aria-required="true" aria-invalid="false" placeholder="Ваше сообщение...*"></textarea></span>
                                                         </div>
                                     <div class="col-md-12 col-sm-12 contact-form-submit">
-                                                    <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit luchiki-button button-sm" id="submit">
+                                                    <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit luchiki-button" id="submit">
                                     </div>
                                                     </div>
                                                 </div>
