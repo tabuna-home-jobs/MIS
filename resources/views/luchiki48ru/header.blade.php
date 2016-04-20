@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex"/>
+    <link href="/luchiki48.ru/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
         <title>@yield('title') - СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ»</title>
@@ -27,14 +28,7 @@
     <link rel="stylesheet" href="/luchiki48.ru/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/luchiki48.ru/js/fancybox/jquery.fancybox.pack.js"></script>
 
-    <meta name="description" content="@yield('description')">
-    <meta name="keywords" content="@yield('keywords')">
-    <meta property="og:title" content="@yield('title')">
-    <meta property="og:description" content="@yield('description')">
-    <meta property="og:image" content="@yield('avatar')">
-    <meta name="twitter:title" content="@yield('title')">
-    <meta name="twitter:description" content="@yield('description')"/>
-    <meta name="twitter:image:src" content="@yield('avatar')"/>
+
     <script>
         $(document).ready(function(){
             $('.highslide').fancybox();

@@ -1,6 +1,6 @@
 @extends('stomzn48ru/header')
 
-@section('title', $Spec['title'])
+@section('title', $Spec['fio'])
 @section('description', $Spec['descript'])
 @section('keywords', $Spec['tag'])
 @section('avatar', $Spec['avatar'])

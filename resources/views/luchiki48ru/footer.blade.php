@@ -37,7 +37,7 @@
                 <img src="/luchiki48.ru/img/mail.png">
                 <a href="">info@luchiki.ru</a>
             </div>
-            <img src="/luchiki48.ru/img/minobr.png">
+
         </div>
         <div class="footer-block-3 col-md-3">
             <!--<script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>-->
@@ -48,8 +48,11 @@
             </script>-->
         </div>
         <div class="footer-block-4 col-md-3">
-            <h5>Студия раннего развития детей «Лучики»</h5>
-            <p>Развивающие занятия. Если Вы хотите гордиться успехами своего ребёнка, то наша студия для Вас!</p>
+            <h5>© Студия раннего развития детей «Лучики». Развивающие занятия. <br> 2015 - {{date('Y')}}</h5>
+            <br>
+            <img src="/luchiki48.ru/img/minobr.png">
+            <br>
+
         </div>
     </div>
 </div>
