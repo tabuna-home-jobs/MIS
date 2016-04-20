@@ -65,7 +65,7 @@
             <ul class="social-link">
                 <li><a href="https://vk.com/club48185728" target="_blank"><i class="fa fa-vk"></i></a></li>
                <!-- <li><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>-->
-                <li><a href="http://www.ok.ru" target="_blank"><i class="fa fa-odnoklassniki"></i></a></li>
+                <li><a href="https://www.ok.ru/blagorozhd" target="_blank"><i class="fa fa-odnoklassniki"></i></a></li>
                 <li><a href="https://www.facebook.com/groups/1533000573664695/" target="_blank"><i class="fa fa-facebook"></i></a></li>
             </ul>
         </div>

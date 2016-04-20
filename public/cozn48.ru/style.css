@@ -721,3 +721,29 @@ a:hover{
 .off-block{
 	display: none;
 }
+
+.feature{
+	margin-bottom: 20px;
+	text-align: justify;
+}
+.feature-head{
+	font-size: 20px;
+	margin-bottom: 3px;
+}
+.feature .fa{
+	color: #9a093f;
+}
+
+.feature-date{
+	text-align: right;
+}
+.feature-date .fa{
+	margin-right: .3em;
+
+}
+
+.formblock{
+	margin-top: 20px;
+	border-top: 1px solid rgb(154, 9, 63);
+	padding-top: 30px;
+}

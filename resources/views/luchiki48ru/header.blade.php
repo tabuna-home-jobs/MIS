@@ -62,7 +62,7 @@
                     <a href=""><img src="/luchiki48.ru/img/twit.png"></a>
                 </div>-->
                 <div class="col-sm-3 col-md-3 col-xs-3">
-                    <a href=""><img src="/luchiki48.ru/img/ok.png"></a>
+                    <a href="https://www.ok.ru/luchikistu"><img src="/luchiki48.ru/img/ok.png"></a>
                 </div>
                 <div class="col-sm-3 col-md-3 col-xs-3">
                     <a href="https://www.facebook.com/groups/676658982456131/ "><img src="/luchiki48.ru/img/face.png"></a>
