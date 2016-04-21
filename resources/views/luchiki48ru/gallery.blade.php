@@ -4,6 +4,11 @@
         <div class="container">
             <h1 class="blueText center">Фото-Видео Галерея</h1>
             <div class="page-text padding-top-35">
+                <ul class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li>Фото-Видео Галерея</li>
+
+                </ul>
                 <div class="row">
                    <!-- @foreach($photos as $item)
                         <div class="col-md-3 item-galery">

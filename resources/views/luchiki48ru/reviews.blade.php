@@ -5,6 +5,12 @@
     <div class="page-content">
         <div class="container">
             <h1 class="blueText center">ОТЗЫВЫ О НАС</h1>
+            <div class="padding-top-35">
+                <ul class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li>Отзывы о нас</li>
+                </ul>
+            </div>
             <div class="page-text">
 
                 <style>

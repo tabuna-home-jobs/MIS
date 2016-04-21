@@ -20,6 +20,11 @@
                     <div class="container">
                         <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
                             <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
+                                <ul class="breadcrumb">
+                                    <li><a href="/">Главная</a></li>
+                                    <li><a href="/team/">Специалисты</a></li>
+                                    <li>{{$Spec->fio}}</li>
+                                </ul>
                                 <div class="wpb_wrapper">
                                     <div class="row">
                                         <div class="col-md-3 col-sm-6 col-xs-12 our-staffs-image">

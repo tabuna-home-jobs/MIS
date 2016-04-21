@@ -8,8 +8,14 @@
         
         <div class="container">
         	<h1 class="blueText center">НАШИ СПЕЦИАЛИСТЫ</h1>
-     		<div class="row inline-block-grids padding-top-35">
-                <div class="col-sm-12 col-xs-12 col-md-12 of-canvas-xs  padding-top-35">
+            <div class="padding-top-35">
+                <ul class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li>Наши специалисты</li>
+                </ul>
+            </div>
+     		<div class="row inline-block-grids">
+                <div class="col-sm-12 col-xs-12 col-md-12 of-canvas-xs">
 
                     <nav class="primary-albums clearfix">
                         <ul class="list-group specNav">

@@ -7,6 +7,10 @@
 <div class="page-content">
     <div class="container">
         <h1>{{$Page['name']}}</h1>
+        <ul class="breadcrumb">
+            <li><a href="/">Главная</a></li>
+            <li>{{$Page->name}}</li>
+        </ul>
         <div class="page-text">
             {!! $Page['content'] !!}
         </div>

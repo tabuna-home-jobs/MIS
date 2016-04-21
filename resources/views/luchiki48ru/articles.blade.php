@@ -4,6 +4,11 @@
         <div class="container">
             <h1 class="blueText center"> ПОЛЕЗНЫЕ СТАТЬИ</h1>
             <div class="page-text padding-top-35">
+                <ul class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+
+                    <li>Полезные статьи</li>
+                </ul>
                 <div class="row newsList">
                     @foreach($Articles as $item)
                         <div class="col-md-4 item-row ">

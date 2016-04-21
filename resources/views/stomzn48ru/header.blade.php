@@ -79,7 +79,7 @@
                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                      <div class="logo">
                          <a href="/">
-                             <img src="/stomzn48.ru/img/logo_blue.png" alt="Dent-All"></a>
+                             <img src="/stomzn48.ru/img/logo_blue.png" alt="Стоматология «Здоровье нации»"></a>
                          <div id="menu_toggle">
                              <button></button>
                          </div>
@@ -157,23 +157,6 @@
     
 
 </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

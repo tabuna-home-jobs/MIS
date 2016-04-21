@@ -18,6 +18,11 @@
         </section>
         <main role="main" class="site-content-archive wrapp-review  padding-top-35">
             <div class="container clearfix">
+                <ul class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/team/">Нани специалисты</a></li>
+                    <li>{{$Spec->fio}}</li>
+                </ul>
                 <div class="blog-wrapper">
                     <div class="blog-inner blog-single clearfix">
                         <article id="post-">

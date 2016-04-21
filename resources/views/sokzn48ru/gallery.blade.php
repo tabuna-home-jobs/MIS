@@ -6,7 +6,7 @@
         <section class="page-title-wrapper">
             <div class="container clearfix">
                 <div class="luchiki-heading">
-                    <h2>Услуги</h2>
+                    <h2>Галерея</h2>
                 </div>
             </div>
             <div class="wrrr"></div>
@@ -17,6 +17,12 @@
                     <div class="clearfix">
                         <article id="post-">
                             <div class="about-us-padding">
+                                <ul class="breadcrumb">
+                                    <li><a href="/">Главная</a></li>
+
+                                    <li>Галерея</li>
+
+                                </ul>
                                 <div class="row">
                                     <div class="gallery-wrapper gallery-infinite-scroll">
 

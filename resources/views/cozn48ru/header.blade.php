@@ -5,6 +5,7 @@
     <meta name="robots" content="noindex"/>
     <link href="/cozn48.ru/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/cozn48.ru/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/cozn48.ru/style.css">
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
@@ -61,6 +62,7 @@
                 <img src="/cozn48.ru/img/adress.png"> Липецк, ул. Фрунзе 14
             </div>
             <div class="socialnetwork col-sm-2 col-xs-12">
+                <!--
                 <a href="http://vk.com" target="_blank">
                     <img src="/cozn48.ru/img/vk.png">
                 </a>
@@ -70,6 +72,7 @@
                 <a href="http://facebook.com"  target="_blank">
                     <img src="/cozn48.ru/img/fb.png">
                 </a>
+                -->
             </div>
             <div class="phone col-sm-3 col-xs-12">
                 <img src="/cozn48.ru/img/phone.png"> (4742) <span class="tel">227-887</span>

@@ -24,6 +24,24 @@
                     <div class="container">
                         <div class="vc_row wpb_row vc_row-fluid bg-content-box luchiki-margin-top-35 bg-while">
                             <div class="about-us-padding wpb_column vc_column_container vc_col-sm-12">
+                                <!--<ul class="breadcrumb">
+                                    <li><a href="/">Главная</a></li>
+
+                                    <li><a href="/service/">Услуги</a></li>
+                                    <li>{{$Good->name}}</li>
+                                </ul>-->
+                                <ol class="breadcrumb">
+                                    <li><a href="/">Главная</a></li>
+                                    <li><a href="/service/">Услуги</a></li>
+                                    @if(!is_null($Good->getParent()->first()))
+                                        @include('sokzn48ru.category.break',[
+                                            'Good' => $Good->getParent()->first()
+                                            ])
+                                    @endif
+
+
+                                    <li class="active">{{$Good->name}}</li>
+                                </ol>
                                 <div class="wpb_wrapper">
 
                                     @if($ChildGoods)

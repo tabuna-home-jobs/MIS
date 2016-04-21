@@ -7,7 +7,12 @@
 
         	<h1 class="blueBg center white feedHead">Мы на карте</h1>
             <div class="row">
-            	<div class="container">
+            	<div class="container padding-top-35">
+                    <ul class="breadcrumb">
+                        <li><a href="/">Главная</a></li>
+
+                        <li>Контакты</li>
+                    </ul>
                 	<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2423.409015326709!2d39.58208250461453!3d52.59837735796068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413a14c15913a36b%3A0x1e0c7ae23f078194!2z0YPQuy4g0J3QtdC00LXQu9C40L3QsCwgMTXQkCwg0JvQuNC_0LXRhtC6LCDQm9C40L_QtdGG0LrQsNGPINC-0LHQuy4sIDM5ODA1OQ!5e0!3m2!1sru!2sru!4v1450430447138"  height="450" frameborder="0" style="border:0; width: 100%"></iframe></div>
                 </div>
             </div>

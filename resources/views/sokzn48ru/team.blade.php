@@ -15,6 +15,11 @@
                     <div class="container">
                         <div class="vc_row wpb_row vc_row-fluid bg-content-box ">
                             <div class="about-us-padding   vc_col-sm-8 luchiki-margin-top-35 bg-while">
+                                <ul class="breadcrumb">
+                                    <li><a href="/">Главная</a></li>
+                                    <li>Специалисты</li>
+
+                                </ul>
                                 <div class="wpb_wrapper">
                                 <div class="row">
 
@@ -102,7 +107,7 @@
                                                    href="/team?catspec={{$album['id']}}">{{$album->name}}</a>
                                                 </li>
                                             @endforeach
-
+                                                <li><a class="@if(!isset($id))active @endif"  href="/team/">Все специалисты</a></li>
                                         </ul>
                                 </div>
                                 </div>
