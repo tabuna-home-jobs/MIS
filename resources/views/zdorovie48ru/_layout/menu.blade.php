@@ -15,8 +15,7 @@
                 </a>
                 <ul id="menu1" class="dropdown-menu" aria-labelledby="drop-{{$item['id']}}">
                     @foreach($item['child'] as $child)
-
-                        <li><a href="{{$child['link']}}">{{$child['label']}}</a></li>
+                        <li class="sub-li"><a href="{{$child['link']}}">{{$child['label']}}</a></li>
                     @endforeach
                 </ul>
             </li>

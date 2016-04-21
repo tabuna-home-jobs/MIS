@@ -464,10 +464,10 @@
 
                                         <div class="row form-group">
                                         <div class="col-md-6">
-                                        <input type="text" name="firstname" max="255" required class="form-control" placeholder="Имя">
+                                        <input type="text" name="firstname" max="255" required class="form-control rounded" placeholder="Имя">
                                             </div>
                                             <div class="col-md-6">
-                                        <input type="text" name="lastname" max="255" required class="form-control" placeholder="Фамилия">
+                                        <input type="text" name="lastname" max="255" required class="form-control rounded" placeholder="Фамилия">
                                         </div>
 
                                         </div>
@@ -475,16 +475,16 @@
 
                                         <div class="form-group row">
                                             <div class="col-md-6">
-                                        <input type="email" name="email" placeholder="Email адрес"  class="form-control">
+                                        <input type="email" name="email" placeholder="Email адрес"  class="form-control rounded">
                                       </div>
 
                                             <div class="col-md-6">
-                                                <input name="phone" placeholder="Номер телефона"  class="form-control" required type="text" data-mask="+ 9-999-999-99-99">
+                                                <input name="phone" placeholder="Номер телефона"  class="form-control rounded" required type="text" data-mask="+ 9-999-999-99-99">
                                             </div>
                                        </div>
 
                                         <div class="form-group">
-                                        <textarea rows="5" name="comment"  class="form-control" placeholder="Комментарий"></textarea>
+                                        <textarea rows="5" name="comment"  class="form-control rounded" placeholder="Комментарий"></textarea>
                                        </div>
 
                                         <div class="form-group">

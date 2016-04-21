@@ -125,14 +125,14 @@
                                         <div class="form-group">
                                             <label class="col-sm-4 control-label">Как Вас зовут?</label>
                                             <div class="col-sm-8">
-                                                <input type="text" name="fio" max="255" class="form-control" placeholder="Имя">
+                                                <input type="text" name="fio" max="255" class="form-control rounded" placeholder="Имя">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label  class="col-sm-4 control-label">Какие впечатления?</label>
                                             <div class="col-sm-8">
-                                                <textarea rows="10" name="content" placeholder="Комментарий"  class="form-control"></textarea>
+                                                <textarea rows="10" name="content" placeholder="Комментарий"  class="form-control rounded"></textarea>
                                             </div>
                                         </div>
 

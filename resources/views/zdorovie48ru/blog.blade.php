@@ -19,14 +19,15 @@
             <div class="app-content-body ">
 
 
-                <div class="page-header">
-                    <h1 class="font-thin m-b">Новости нашего центра</h1>
-                </div>
 
 
                 <div class="wrapper-md">
                     <div class="row">
                         <div class="col-sm-9">
+
+                            <div class="page-header">
+                                <h1 class="font-thin m-b">Новости нашего центра</h1>
+                            </div>
                             <div class="blog-post">
 
 
@@ -55,12 +56,24 @@
 
 
                                                 <div class="col-md-6 text-right">
-                                                    <a href="http://www.facebook.com/sharer.php?u={{Request::url()}}" target="_blank" class="btn btn-icon"><i class="fa fa-facebook"></i></a>
-                                                    <a href="https://twitter.com/share?url={{Request::url()}}" target="_blank" class="btn btn-icon"><i class="fa fa-twitter"></i></a>
-                                                    <a href="https://plus.google.com/share?url={{Request::url()}}" target="_blank" class="btn btn-icon"><i class="fa fa-google-plus"></i></a>
-                                                    <a href="http://vk.com/share.php?url={{Request::url()}}" target="_blank" class="btn btn-icon"><i class="fa fa-vk"></i></a>
-                                                    <a href="http://www.ok.ru/dk?st.cmd=addShare&st.s=1&st._surl={{Request::url()}}"
-                                                       target="_blank" class="btn btn-icon"><i class="fa fa-odnoklassniki"></i></a>
+
+
+
+
+
+                                                    <a onClick='window.open ("http://www.facebook.com/sharer.php?u={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");' class="btn btn-icon"><i class="fa fa-facebook"></i></a>
+
+                                                    <a onClick='window.open ("https://twitter.com/share?url={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
+                                                            class="btn btn-icon"><i class="fa fa-twitter"></i></a>
+
+                                                    <a onClick='window.open ("https://plus.google.com/share?url={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
+                                                       class="btn btn-icon"><i class="fa fa-google-plus"></i></a>
+
+                                                    <a onClick='window.open ("http://vk.com/share.php?url={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
+                                                             class="btn btn-icon"><i class="fa fa-vk"></i></a>
+
+                                                    <a onClick='window.open ("http://www.ok.ru/dk?st.cmd=addShare&st.s=1&st._surl={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
+                                                            class="btn btn-icon"><i class="fa fa-odnoklassniki"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -89,222 +102,30 @@
                         <div class="col-sm-3">
 
 
-                            <div class="">
-
-                                <h5 class="font-bold">Опрос</h5>
-                                <div class="stepwizard">
-                                    <div class="stepwizard-row setup-panel">
-
-                                        <div class="stepwizard-step">
-                                            <a href="#step-1" type="button"
-                                               class="btn btn-circle btn-default btn-primary">1</a>
-                                        </div>
-
-
-                                        <div class="stepwizard-step">
-                                            <a href="#step-2" type="button" class="btn btn-circle btn-default"
-                                               disabled="disabled">2</a>
-                                        </div>
-
-
-
-                                        <div class="stepwizard-step">
-                                            <a href="#step-end" type="button" class="btn btn-circle btn-default"
-                                               disabled="disabled">10</a>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-                                <form role="form" method="post" action="/answers">
-
-
-                                    <div class="row setup-content" id="step-1" style="display: block;">
-                                        <div class="col-xs-12">
-                                            <div class="col-md-12">
-                                                <h6 class="text-justify">Что наиболее важно для Вас при выборе
-                                                    медицинского центра?</h6>
-
-
-
-                                                <div class="checkbox">
-                                                    <label class="i-checks">
-                                                        <input type="checkbox" name="answer[22][]" value="Цена">
-                                                        <i></i>
-                                                        Цена
-                                                    </label>
-                                                </div>
-
-
-                                                <div class="checkbox">
-                                                    <label class="i-checks">
-                                                        <input type="checkbox" name="answer[22][]" value="Качество">
-                                                        <i></i>
-                                                        Качество
-                                                    </label>
-                                                </div>
-
-
-                                                <div class="checkbox">
-                                                    <label class="i-checks">
-                                                        <input type="checkbox" name="answer[22][]"
-                                                               value="Территориальная близость">
-                                                        <i></i>
-                                                        Территориальная близость
-                                                    </label>
-                                                </div>
-
-
-                                                <div class="checkbox">
-                                                    <label class="i-checks">
-                                                        <input type="checkbox" name="answer[22][]" value="Надежность">
-                                                        <i></i>
-                                                        Надежность
-                                                    </label>
-                                                </div>
-
-
-                                                <div class="checkbox">
-                                                    <label class="i-checks">
-                                                        <input type="checkbox" name="answer[22][]"
-                                                               value="Многопрофильность">
-                                                        <i></i>
-                                                        Многопрофильность
-                                                    </label>
-                                                </div>
-
-
-                                                <div class="checkbox">
-                                                    <label class="i-checks">
-                                                        <input type="checkbox" name="answer[22][]" value="Другое ">
-                                                        <i></i>
-                                                        Другое
-                                                    </label>
-                                                </div>
-
-
-                                                <button class="btn btn-primary nextBtn pull-right  btn-sm"
-                                                        type="button">Далее
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="row setup-content" id="step-2" style="display: none;">
-                                        <div class="col-xs-12">
-                                            <div class="col-md-12">
-                                                <h6 class="text-justify">Какой период времени Вы являетесь клиентом
-                                                    нашего медицинского центра?</h6>
-
-
-
-                                                <div class="checkbox">
-                                                    <label class="i-checks">
-                                                        <input type="checkbox" name="answer[13][]" value="менее 1 года">
-                                                        <i></i>
-                                                        менее 1 года
-                                                    </label>
-                                                </div>
-
-
-                                                <div class="checkbox">
-                                                    <label class="i-checks">
-                                                        <input type="checkbox" name="answer[13][]" value="1 год">
-                                                        <i></i>
-                                                        1 год
-                                                    </label>
-                                                </div>
-
-
-                                                <div class="checkbox">
-                                                    <label class="i-checks">
-                                                        <input type="checkbox" name="answer[13][]" value="более 1 года">
-                                                        <i></i>
-                                                        более 1 года
-                                                    </label>
-                                                </div>
-
-
-                                                <button class="btn btn-primary nextBtn pull-right  btn-sm"
-                                                        type="button">Далее
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row setup-content" id="step-end" style="display: none;">
-                                        <div class="col-xs-12">
-                                            <div class="col-md-12">
-                                                <h6 class="text-justify">Контакты для обратной связи</h6>
-
-                                                <div class="form-group">
-                                                    <input type="text" name="fio" placeholder="ФИО" class="form-control" required=""
-                                                           style="width: 100%">
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="email" name="email" placeholder="E-mail" class="form-control" required=""
-                                                           style="width: 100%">
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="text" name="phone" placeholder="Телефон" class="form-control" required=""
-                                                           style="width: 100%">
-                                                </div>
-                                                <input type="hidden" name="id" value="10">
-                                                <input type="hidden" name="_token"
-                                                       value="gVVZkrbjyy0WR1MiyfJVUKshOQgkG6lNCh6iA9DS">
-                                                <button class="btn btn-info pull-right btn-sm" type="submit">Отправить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                            <div class="page-header">
+                                <h3 class="h1 font-thin m-b"><span class="h3">Последние Акции</span></h3>
                             </div>
 
 
-
-
-
-
-
-                            <h5 class="font-bold">Последние Новости</h5>
-
                             <div>
+                                @foreach($Shares as $share)
                                 <div>
                                     <a class="pull-left thumb thumb-wrapper m-r">
-                                        <img src="/dist/img/news/post1.jpg">
+                                        <img src="{{$share->avatar}}">
                                     </a>
 
                                     <div class="clear">
-                                        <a href="" class="font-semibold text-ellipsis">Выпускной в Семейном клубе «СОЛО»</a>
+                                        <a href="#" class="font-semibold text-ellipsis">{{$share->name}}</a>
 
-                                        <div class="text-xs block m-t-xs">«Апрельский микст» запестрел по-весеннему яркими красками в стиле танца. Прекрасные и лучезарные, эксце ...</div>
+                                        <div class="text-xs block m-t-xs">
+                                            {{str_limit(strip_tags($share->content), 100, '...')}}
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="line"></div>
-                                <div>
-                                    <a class="pull-left thumb thumb-wrapper m-r">
-                                        <img src="/dist/img/news/post2.jpg">
-                                    </a>
 
-                                    <div class="clear">
-                                        <a href="" class="font-semibold text-ellipsis">«Узнай свое здоровье»</a>
+                                    <div class="line"></div>
+                                @endforeach
 
-                                        <div class="text-xs block m-t-xs">«Апрельский микст» запестрел по-весеннему яркими красками в стиле танца. Прекрасные и лучезарные, эксце ...</div>
-                                    </div>
-                                </div>
-                                <div class="line"></div>
-                                <div>
-                                    <a class="pull-left thumb thumb-wrapper m-r">
-                                        <img src="/dist/img/news/post3.jpg">
-                                    </a>
-
-                                    <div class="clear">
-                                        <a href="" class="font-semibold text-ellipsis">«Апрельский микст»</a>
-
-                                        <div class="text-xs block m-t-xs">«Апрельский микст» запестрел по-весеннему яркими красками в стиле танца. Прекрасные и лучезарные, эксце ...</div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

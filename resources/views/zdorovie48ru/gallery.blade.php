@@ -15,13 +15,8 @@
             <div class="app-content-body ">
 
 
-                <div class="page-header">
-                    <h1 class="font-thin m-b">Галерея</h1>
-                </div>
 
 
-
-                <span id="overlay-suggestions"></span>
 
                 <div class="search-results">
 
@@ -29,6 +24,13 @@
 
 
                         <div class="col-sm-9">
+
+
+                            <div class="page-header">
+                                <h1 class="font-thin m-b">Галерея</h1>
+                            </div>
+
+
                             <section class="vbox">
                                 <section class="scrollable padder-lg w-f-md" id="bjax-target">
 
@@ -76,18 +78,25 @@
 
                         <div class="col-sm-3">
 
-                            <div class="row m-b-md">
-                                <div class="col-md-6 text-center">
-                                    <a href="/gallery">
-                                        <i class="fa fa-camera fa-2x text-primary m-r-xs" aria-hidden="true"></i>  <span class="h3"> Фото</span>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 text-center">
-                                    <a href="/video" class="opacity">
-                                        <i class="fa fa-video-camera fa-2x  text-primary m-r-xs" aria-hidden="true"></i>  <span class="h3"> Видео</span>
-                                    </a>
+
+
+                            <div class="page-header">
+                                <div class="row m-b">
+                                    <div class="col-md-6 text-center">
+                                        <a href="/gallery">
+                                            <i class="fa fa-camera fa-2x text-primary m-r-xs" aria-hidden="true"></i>  <span class="h3"> Фото</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <a href="/video" class="opacity">
+                                            <i class="fa fa-video-camera fa-2x  text-primary m-r-xs" aria-hidden="true"></i>  <span class="h3"> Видео</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+
+
+
 
 
                             <ul class="list-group">
@@ -122,12 +131,5 @@
 <!-- Галлерея -->
 
 
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".fancybox").fancybox({
-            });
-        });
-    </script>
 
 @endsection

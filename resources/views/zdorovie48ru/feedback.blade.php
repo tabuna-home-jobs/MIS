@@ -86,25 +86,25 @@
                                 <form action="/feedback" method="post">
                                     <div class="form-group">
                                         <label>Как Вас зовут?</label>
-                                        <input type="text" name="fio" placeholder="ФИО" class="form-control" required>
+                                        <input type="text" name="fio" placeholder="ФИО" class="form-control rounded" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Как Вас зовут?</label>
-                                        <input type="email" name="email" placeholder="Email" class="form-control"
+                                        <input type="email" name="email" placeholder="Email" class="form-control rounded"
                                                required>
                                     </div>
 
                                     <div class="form-group">
 
                                         <label>Как Вас зовут?</label>
-                                        <input type="text" name="phone" placeholder="Телефон" class="form-control"
+                                        <input type="text" name="phone" placeholder="Телефон" class="form-control rounded"
                                                data-mask="+ 9-999-999-99-99">
                                     </div>
 
                                     <div class="form-group">
 
                                         <label>Как Вас зовут?</label>
-                                        <textarea name="message" required class="form-control"
+                                        <textarea name="message" required class="form-control rounded"
                                                   placeholder="Текст сообщения"></textarea>
                                     </div>
 

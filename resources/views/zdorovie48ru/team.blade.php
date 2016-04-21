@@ -113,65 +113,6 @@
 
 
 
-{{--
-
-
-                                                <div class="doctors-skils">
-
-                                                    @if(empty(!$spec->dopinfo))
-                                                        <div>
-                                                            <div class="heading-doc">{!!$spec->dopinfo or ''!!}</div>
-
-                                                        </div>
-                                                    @endif
-
-
-                                                    @if(empty(!$spec->opyt))
-                                                        <div>
-                                                            <div class="heading-doc">Должность: </div>
-                                                            <div class="detail-doc">{!!$spec->opyt or ''!!}</div>
-                                                        </div>
-                                                    @endif
-
-
-                                                    @if(empty(!$spec->subname))
-                                                        <div>
-                                                            <div class="heading-doc">Квалификация: </div>
-                                                            <div class="detail-doc">{!!$spec->subname or ''!!}</div>
-
-                                                        </div>
-                                                    @endif
-
-
-                                                    @if(empty(!$spec->special) && trim($spec->special) !== '')
-                                                        <div>
-                                                            <div class="heading-doc">Специализация: </div>
-                                                            <div class="detail-doc">{{$spec->special or ''}}</div>
-                                                        </div>
-                                                    @endif
-
-                                                    @if(empty(!$spec->obrazovanie) && trim($spec->obrazovanie) !== '')
-                                                        <div>
-                                                            <div class="heading-doc">Образование</div>
-                                                            <div class="detail-doc">{{$spec->obrazovanie or ''}}</div>
-                                                        </div>
-                                                    @endif
-
-
-
-
-
-                                                    @if(empty(!$spec->about))
-                                                        <div>
-                                                            <div class="heading-doc"></div>
-                                                            <div class="detail-doc">{{$spec->about or ''}}</div>
-                                                        </div>
-                                                    @endif
-
-                                                </div>
-
---}}
-
 
 
 

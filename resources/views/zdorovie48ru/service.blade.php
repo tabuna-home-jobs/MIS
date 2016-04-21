@@ -324,15 +324,15 @@
                                                 <h6 class="text-justify">Контакты для обратной связи</h6>
 
                                                 <div class="form-group">
-                                                    <input type="text" name="fio" placeholder="ФИО" class="form-control" required=""
+                                                    <input type="text" name="fio" placeholder="ФИО" class="form-control rounded" required=""
                                                            style="width: 100%">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="email" name="email" placeholder="E-mail" class="form-control" required=""
+                                                    <input type="email" name="email" placeholder="E-mail" class="form-control rounded" required=""
                                                            style="width: 100%">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" name="phone" placeholder="Телефон" class="form-control" required=""
+                                                    <input type="text" name="phone" placeholder="Телефон" class="form-control rounded" required=""
                                                            style="width: 100%">
                                                 </div>
                                                 <input type="hidden" name="id" value="10">

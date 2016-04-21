@@ -32,14 +32,18 @@
             <div class="app-content-body ">
 
 
-                <div class="page-header">
-                    <h1 class="font-thin m-b">Новости нашего центра</h1>
-                </div>
+
 
 
                 <div class="wrapper-md">
                     <div class="row">
                         <div class="col-sm-9">
+
+                            <div class="page-header">
+                                <h1 class="font-thin m-b">Новости нашего центра</h1>
+                            </div>
+
+
                             <div class="blog-post">
 
 
@@ -62,12 +66,22 @@
                                                 </div>
 
                                                 <div class="col-md-6 text-right">
-                                                    <a href="http://www.facebook.com/sharer.php?u={{Request::url()}}" target="_blank" class="btn btn-icon"><i class="fa fa-facebook"></i></a>
-                                                    <a href="https://twitter.com/share?url={{Request::url()}}" target="_blank" class="btn btn-icon"><i class="fa fa-twitter"></i></a>
-                                                    <a href="https://plus.google.com/share?url={{Request::url()}}" target="_blank" class="btn btn-icon"><i class="fa fa-google-plus"></i></a>
-                                                    <a href="http://vk.com/share.php?url={{Request::url()}}" target="_blank" class="btn btn-icon"><i class="fa fa-vk"></i></a>
-                                                    <a href="http://www.ok.ru/dk?st.cmd=addShare&st.s=1&st._surl={{Request::url()}}"
-                                                       target="_blank" class="btn btn-icon"><i class="fa fa-odnoklassniki"></i></a>
+
+
+
+                                                    <a onClick='window.open ("http://www.facebook.com/sharer.php?u={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");' class="btn btn-icon"><i class="fa fa-facebook"></i></a>
+
+                                                    <a onClick='window.open ("https://twitter.com/share?url={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
+                                                       class="btn btn-icon"><i class="fa fa-twitter"></i></a>
+
+                                                    <a onClick='window.open ("https://plus.google.com/share?url={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
+                                                       class="btn btn-icon"><i class="fa fa-google-plus"></i></a>
+
+                                                    <a onClick='window.open ("http://vk.com/share.php?url={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
+                                                       class="btn btn-icon"><i class="fa fa-vk"></i></a>
+
+                                                    <a onClick='window.open ("http://www.ok.ru/dk?st.cmd=addShare&st.s=1&st._surl={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
+                                                       class="btn btn-icon"><i class="fa fa-odnoklassniki"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -84,17 +98,12 @@
                         </div>
                         <aside class="col-sm-3">
 
-
-
-
-
-
-
-
+                            <div class="page-header">
+                                <h3 class="h1 font-thin m-b"><span class="h3">Опрос</span></h3>
+                            </div>
 
                             <div class="">
-                                <h5 class="font-bold">Опрос</h5>
-                                <div class="stepwizard">
+                                <div class="stepwizard hide">
                                     <div class="stepwizard-row setup-panel">
 
                                         <div class="stepwizard-step">
@@ -126,7 +135,9 @@
                                         <div class="row setup-content" id="step-{{$key+1}}">
                                             <div class="col-xs-12">
                                                 <div class="col-md-12">
-                                                    <h6 class="text-justify">{{$quest->quest}}</h6>
+
+                                                    <h4 class="m-n">Шаг {{$key+1}} из {{$getQuests->count() +1}}</h4>
+                                                    <h6 class="padder-v text-justify">{{$quest->quest}}</h6>
 
 
                                                     @if($quest->type == 'one')
@@ -158,7 +169,7 @@
 
                                                     @endif
 
-                                                    <button class="btn btn-primary nextBtn pull-right  btn-sm" type="button">Далее</button>
+                                                    <button class="btn btn-primary nextBtn pull-right btn-void-primary btn-sm" type="button">Далее</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -171,17 +182,17 @@
                                                 <h6 class="text-justify">Контакты для обратной связи</h6>
 
                                                 <div class="form-group">
-                                                    <input type="text" name="fio" placeholder="ФИО" class="form-control  input-sm" required>
+                                                    <input type="text" name="fio" placeholder="ФИО" class=" form-control rounded input-sm" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="email" name="email" placeholder="E-mail" class="form-control  input-sm" required>
+                                                    <input type="email" name="email" placeholder="E-mail" class="form-control rounded input-sm" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" name="phone" placeholder="Телефон" class="form-control  input-sm" required>
+                                                    <input type="text" name="phone" placeholder="Телефон" class="form-control rounded  input-sm" required>
                                                 </div>
                                                 <input type="hidden" name="id" value="{{$getSurveys->id}}">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <button class="btn btn-success btn-sm" type="submit">Отправить</button>
+                                                <button class="btn btn-success btn-void-primary btn-sm" type="submit">Отправить</button>
                                             </div>
                                         </div>
                                     </div>
@@ -192,8 +203,9 @@
 
 
 
-
-                            <h5 class="font-bold">Последние Новости</h5>
+                            <div class="page-header">
+                                <h3 class="h1 font-thin m-b"><span class="h3">Последние Новости</span></h3>
+                            </div>
 
                             <div>
 

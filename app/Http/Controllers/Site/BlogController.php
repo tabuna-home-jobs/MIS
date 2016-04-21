@@ -15,8 +15,13 @@ class BlogController extends Controller {
 	public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
 	{
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
-        $getNews =$getSites->getNews()->orderBy('id', 'desc')->paginate(6);
-        return view( $sitename.$sitedomen.'/blog', ['News' => $getNews]);
+        $getNews =$getSites->getNews()->orderBy('id', 'desc')->paginate(3);
+		$getShares = $getSites->getShares()->orderBy('id', 'desc')->limit(3)->get();
+
+        return view( $sitename.$sitedomen.'/blog', [
+				'News' => $getNews,
+				'Shares' => $getShares,
+		]);
 	}
 
 	/**
@@ -49,7 +54,12 @@ class BlogController extends Controller {
 	{
         $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
         $getNews =$getSites->getNews()->find($id);
-        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
+
+        $getLastNews = $getSites->getNews()
+				->where('id','!=',$id)
+				->orderBy('id', 'desc')
+				->limit(3)
+				->get();
 
 
         //Опросы
