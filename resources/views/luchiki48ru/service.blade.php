@@ -13,9 +13,15 @@
         }
     </style>
     <div class="page-content">
-        <div class="container service-list">
+        <div class="container">
             <div class="center"> <h1>Услуги</h1></div>
-            <div class="page-text">
+            <div class="padding-top-35">
+                <ul class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li>Услуги</li>
+                </ul>
+            </div>
+            <div class="page-text  service-list">
                <div class="row">
                    @foreach($data as $item)
 

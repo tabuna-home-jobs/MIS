@@ -4,6 +4,10 @@
     <div class="page-content">
         <div class="container">
             <h1>Услуги центра Остеопатии</h1>
+            <ul class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li>Услуги</li>
+            </ul>
             <div class="page-text">
 
                 <div class="nav-good-category-container" style="display: none;">

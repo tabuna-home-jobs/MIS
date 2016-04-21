@@ -50,7 +50,7 @@
         <div class="footer-block-4 col-md-3">
             <h5>© Студия раннего развития детей «Лучики». Развивающие занятия. <br> 2015 - {{date('Y')}}</h5>
             <br>
-            <img src="/luchiki48.ru/img/minobr.png">
+            <img src="/luchiki48.ru/img/minobr.png" class="img-responsive">
             <br>
 
         </div>

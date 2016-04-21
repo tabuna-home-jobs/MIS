@@ -9,6 +9,11 @@
     <div class="page-content">
         <div class="container">
             <h1>{{$Goods['name']}}</h1>
+            <ul class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/service/">Наши специалисты</a></li>
+                <li>{{$Goods->name}}</li>
+            </ul>
             <div class="page-text">
                 {!! $Goods['text'] !!}
             </div>

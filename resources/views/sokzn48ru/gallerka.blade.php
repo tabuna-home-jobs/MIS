@@ -21,6 +21,12 @@
                     <div class="clearfix">
                         <article id="post-">
                             <div class="about-us-padding">
+                                <ul class="breadcrumb">
+                                    <li><a href="/">Главная</a></li>
+
+                                    <li><a href="/gallery/">Галерея</a></li>
+                                    <li>{{$album->name}}</li>
+                                </ul>
                                 <div class="row">
                                     <div class="gallery-wrapper gallery-infinite-scroll">
 

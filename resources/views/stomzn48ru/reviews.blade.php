@@ -5,7 +5,7 @@
     <div class="page-content">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="/">Главная</a> <span class="divider"></span></li>
+                <li><a href="/">Главная</a></li>
                 <li class="active">Отзывы о нас</li>
             </ul>
             <h1>Отзывы о нас</h1>

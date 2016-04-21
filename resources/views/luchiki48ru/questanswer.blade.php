@@ -11,8 +11,14 @@
             </div>
         @endif
 
-
+        <div class="container padding-top-35">
+            <ul class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li>Вопросы и ответы</li>
+            </ul>
+        </div>
         <div class="padding-top-35 after-booking-sec text-center">
+
             <ul class="medicom-feature-list list-inline text-left" id="accordion" role="tablist"
                 aria-multiselectable="true">
 

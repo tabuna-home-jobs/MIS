@@ -3,6 +3,10 @@
     <div class="page-content">
         <div class="container">
             <h1>Акции центра Остеопатии</h1>
+            <ul class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li>Акции</li>
+            </ul>
             <div class="page-text">
                 <div class="row">
                     @foreach($Shares as $item)

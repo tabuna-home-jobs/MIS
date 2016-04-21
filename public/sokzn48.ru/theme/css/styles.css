@@ -833,3 +833,6 @@ li{
     margin-left: 15px;
 }
 
+.breadcrumb a{
+    color: #6384df;
+}

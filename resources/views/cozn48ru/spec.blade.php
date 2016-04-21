@@ -8,6 +8,11 @@
     <div class="page-content">
         <div class="container">
             <h1>{{$Spec->fio}}</h1>
+            <ul class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/team/">Наши специалисты</a></li>
+                <li>{{$Spec->fio}}</li>
+            </ul>
             <div class="page-text">
                 <div class="page-single-our-staffs">
                     <div class="row">

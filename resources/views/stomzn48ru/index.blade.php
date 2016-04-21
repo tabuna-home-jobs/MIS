@@ -161,8 +161,8 @@
                                     <figure id="attachment_158" style="width: 300px;" class="wp-caption alignleft">
                                      <img class="full_width_mobile wp-image-158 size-medium"
                                                  src="/stomzn48.ru/img/publicpreview.jpg">
-                                        <figcaption class="wp-caption-text">Доктор <br> с пациентом
-                                        </figcaption>
+                                        <!--<figcaption class="wp-caption-text">Доктор <br> с пациентом
+                                        </figcaption>-->
                                     </figure>
 
 

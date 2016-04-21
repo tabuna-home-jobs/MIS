@@ -10,6 +10,11 @@
 
         <div class="container">
             <h1>{{$Shares['name']}}</h1>
+            <ul class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/shares/">Акции</a></li>
+                <li>{{$Shares->name}}</li>
+            </ul>
             <div class="page-text">
                 {!! $Shares['content'] !!}
             </div>

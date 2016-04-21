@@ -12,7 +12,7 @@
             <div class="title_box">
                 <div class="container">
                     <div class="title_wr">
-                        <h1>{{$category->title}}</h1>
+                        <h1>{{$category->name}}</h1>
                     </div>
                 </div>
                 <!--.container-->
@@ -21,6 +21,10 @@
             <article id="post-817" class="post-817 page type-page status-publish hentry">
 
                 <div class="container">
+                    <ul class="breadcrumb">
+                        <li><a href="/">Главная</a></li>
+                        <li>{{$category['name']}}</li>
+                    </ul>
                     <div class="vc_row wpb_row vc_row-fluid">
                         <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-9 vc_col-md-9">
                             <div class="wpb_text_column wpb_content_element ">

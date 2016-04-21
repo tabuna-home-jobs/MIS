@@ -19,6 +19,14 @@
                         <article id="post-">
                             <div class="page-single-our-staffs">
                                 <div class="row">
+                                    <br>
+                                    <ul class="breadcrumb">
+                                        <li><a href="/">Главная</a></li>
+
+                                        <li>Отзывы</li>
+                                    </ul>
+
+
                                     @if(Session::has('good'))
                                         <div class="alert alert-success">
                                             {{ Session::get('good') }}
