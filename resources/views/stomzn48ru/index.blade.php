@@ -637,10 +637,10 @@
                                                         </div>
 
                                                         <div class="media-right">
-                                                            <div class="sale_price">
+                                                            <!--<div class="sale_price">
                                                                 <span>{{$good['price']}}</span>
                                                                 <i class="fa fa-rub"></i>
-                                                            </div>
+                                                            </div>-->
                                                         </div>
 
                                                     </li>
