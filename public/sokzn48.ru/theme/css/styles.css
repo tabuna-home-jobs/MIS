@@ -836,3 +836,41 @@ li{
 .breadcrumb a{
     color: #6384df;
 }
+.videoSection{
+    position: relative;
+    overflow: hidden;
+
+}
+.video-bg-before{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 5000px;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    background-color: rgba(32, 43, 54, 0.5);
+}
+.video-bg {
+
+    min-width: 100%;
+   /* min-height: 100%;*/
+    width: auto;
+    height: auto;
+    z-index: 0;
+}
+
+.video-caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:#fff;
+    font-size: 20px;
+    z-index: 2;
+}
+    .video-caption h3{
+        color: #fff;
+    }

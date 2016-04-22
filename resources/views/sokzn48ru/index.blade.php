@@ -4,9 +4,22 @@
     <main role="main" class="site-content">
         <div class="page type-page status-publish hentry">
             <div class="entry-content">
+                <div class="videoSection">
+                    <div class="video-bg-before"></div>
+                    <video class="video-bg" autoplay loop class="fillWidth fadeIn animated">
+                        <source src="/sokzn48.ru/video/bg-video.mp4" type="video/mp4">
+                        Ваш браузер устарел, пожалуйста обновите его.
+                    </video>
+                    <div class="video-caption">
+                        <div class="container">
+                           <h3>Заголовок</h3>
+                            <p>Небольшая подпись <small>классное форматирование</small></p>
+                        </div>
+                    </div>
 
+                </div>
                 <!--Карусель на главной-->
-                <div id="carousel-example-generic" class="top-carousel carousel slide hidden-xs" data-ride="carousel">
+                <!--<div id="carousel-example-generic" class="top-carousel carousel slide hidden-xs" data-ride="carousel">
 
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
@@ -34,7 +47,7 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Вперёд</span>
                     </a>
-                </div>
+                </div>-->
                 <!--Карусель на главной-->
 
                 <!--Учиться легко и с удовольствием-->
