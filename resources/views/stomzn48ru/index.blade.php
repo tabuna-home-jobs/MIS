@@ -462,7 +462,7 @@
                                 </div>
                                 <script type="text/javascript">
                                     jQuery(document).ready(function ($) {
-                                        var counter_1350870248 = new countUp("counter_1350870248", 0, 100, 0, 2.5, {
+                                        var counter_1350870248 = new countUp("counter_1350870248", 0, 135, 0, 2.5, {
                                             useEasing: true,
                                             useGrouping: false
                                         });
@@ -490,7 +490,7 @@
                                 </div>
                                 <script type="text/javascript">
                                     jQuery(document).ready(function ($) {
-                                        var counter_707673056 = new countUp("counter_707673056", 0, 2000, 0, 2.5, {
+                                        var counter_707673056 = new countUp("counter_707673056", 0, 2179, 0, 2.5, {
                                             useEasing: true,
                                             useGrouping: false
                                         });
