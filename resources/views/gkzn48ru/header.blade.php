@@ -77,19 +77,7 @@
 
                     <ul id="menu-medic" class="nav navbar-nav navbar-right">
 
-
-
-
-
-
-                        <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
-                        <li class="{{Active::route('login.*')}}"><a href="/login">Личный кабинет</a></li>
-                        <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li>
-                        <li class="{{Active::route('blog.*')}}"><a href="/blog">Новости</a></li>
-                        <li class="{{Active::route('feedback.*')}}"><a href="/feedback">Контакты</a></li>
-
-
-
+                        {!!Menu::getLIActive('3','top', '')!!}
 
                     </ul>
                 </div>
