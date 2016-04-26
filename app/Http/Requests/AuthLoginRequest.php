@@ -23,9 +23,8 @@ class AuthLoginRequest extends Request
     public function rules()
     {
         return [
-            'email' => 'required|email|max:255',
+            'phone' => 'required|max:255',
             'password' => 'required|min:6',
         ];
     }
-
 }

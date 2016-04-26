@@ -3,7 +3,8 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEnciklopTable extends Migration {
+class CreateEnciklopTable extends Migration
+{
 
     /**
      * Run the migrations.
@@ -12,8 +13,7 @@ class CreateEnciklopTable extends Migration {
      */
     public function up()
     {
-        Schema::create('encycategory', function(Blueprint $table)
-        {
+        Schema::create('encycategory', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('encycategory_id');
             $table->string('title');
@@ -35,5 +35,4 @@ class CreateEnciklopTable extends Migration {
     {
         Schema::drop('encycategory');
     }
-
 }

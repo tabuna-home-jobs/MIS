@@ -4,7 +4,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Remoblaser\Search\SearchableTrait;
 
-class Shares extends Model {
+class Shares extends Model
+{
 
     use SoftDeletes, SearchableTrait;
     /**
@@ -22,12 +23,10 @@ class Shares extends Model {
     protected $fillable = ['title', 'name', 'content', 'avatar', 'start', 'end', 'tag', 'descript', 'ids'];
 
 
-
     /**
      * @var array
      */
     protected $searchFields = ['title', 'name', 'content'];
-
 
 
     public $SlugName = 'shares';

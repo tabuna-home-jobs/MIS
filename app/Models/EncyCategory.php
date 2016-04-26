@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class EncyCategory extends Model {
+class EncyCategory extends Model
+{
 
     use SoftDeletes;
     /**
@@ -23,7 +24,7 @@ class EncyCategory extends Model {
 
     public function subCategory()
     {
-        return $this->hasMany('App\Models\EncyCategory','encycategory_id');
+        return $this->hasMany('App\Models\EncyCategory', 'encycategory_id');
     }
 
     public function mainCategory()
@@ -33,9 +34,6 @@ class EncyCategory extends Model {
 
     public function Post()
     {
-        return $this->hasMany('App\Models\EncyPost','encycategory_id');
+        return $this->hasMany('App\Models\EncyPost', 'encycategory_id');
     }
-
-
-
 }

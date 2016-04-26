@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Album extends Model {
+class Album extends Model
+{
 
     use SoftDeletes;
     /**
@@ -34,7 +35,4 @@ class Album extends Model {
     {
         return $this->hasOne('App\Models\Video', 'album_id');
     }
-
-
-
 }

@@ -2,7 +2,8 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class SitesServiceProvider extends ServiceProvider {
+class SitesServiceProvider extends ServiceProvider
+{
     /**
      * Bootstrap the application services.
      *
@@ -10,8 +11,8 @@ class SitesServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-
     }
+
     /**
      * Register the application services.
      *

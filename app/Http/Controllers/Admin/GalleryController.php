@@ -5,13 +5,14 @@ use App\Http\Requests\Admin\AlbumRequest;
 use App\Http\Requests\Admin\PhotoRequest;
 use App\Models\Album;
 use App\Models\Photo;
+use Image;
 use Redirect;
 use Request;
 use Session;
 use Validator;
-use Image;
 
-class GalleryController extends Controller {
+class GalleryController extends Controller
+{
 
     public function getIndex()
     {
@@ -23,7 +24,7 @@ class GalleryController extends Controller {
     {
         $album = Album::find($album);
 
-        return view("dashboard/gallery/galleryCrud", ['Album' => $album ]);
+        return view("dashboard/gallery/galleryCrud", ['Album' => $album]);
     }
 
 
@@ -34,7 +35,7 @@ class GalleryController extends Controller {
     }
 
 
-    public function  getRestore($Album = null)
+    public function getRestore($Album = null)
     {
         Album::withTrashed()->find($Album)->restore('cascade');
         Session::flash('good', 'Вы успешно востановили запись');
@@ -42,7 +43,7 @@ class GalleryController extends Controller {
     }
 
 
-    public  function  getUnset($Album = null)
+    public function getUnset($Album = null)
     {
         Page::withTrashed()->find($Album)->forceDelete('cascade');
         Session::flash('good', 'Вы успешно окончательно удалили запись');
@@ -52,20 +53,19 @@ class GalleryController extends Controller {
     //Добовление и изменение данных
     public function postIndex(AlbumRequest $request)
     {
-
-        if(!is_null($request->id))
+        if (!is_null($request->id)) {
             $album = Album::find($request->id);
-        else
+        } else {
             $album = new Album();
+        }
 
 
-	    if (Request::hasFile('url')) {
-		    Image::make(Request::file('url'))->save('upload/' . time() . '.' . Request::file('url')->getClientOriginalExtension());
-		    $album->poster = '/upload/' . time() . '.' . Request::file('url')->getClientOriginalExtension();
-	    }else{
-
-		    $album->poster = '/upload/no_img.png';
-	    }
+        if (Request::hasFile('url')) {
+            Image::make(Request::file('url'))->save('upload/' . time() . '.' . Request::file('url')->getClientOriginalExtension());
+            $album->poster = '/upload/' . time() . '.' . Request::file('url')->getClientOriginalExtension();
+        } else {
+            $album->poster = '/upload/no_img.png';
+        }
 
         $album->name = $request->name;
         $album->ids = Session::get('website');
@@ -75,7 +75,6 @@ class GalleryController extends Controller {
         Session::flash('good', 'Вы успешно изменили значения');
         return redirect()->route('dashboard.gallery.index');
     }
-
 
 
     //Удаление
@@ -90,18 +89,19 @@ class GalleryController extends Controller {
 
     public function getShow($id)
     {
-        $AlbumPhoto = Album::whereRaw('id = ? and ids = ? ',[$id,Session::get('website')])->first()->getPhoto()->orderBy('id', 'desc')->paginate(8);
+        $AlbumPhoto = Album::whereRaw('id = ? and ids = ? ',
+            [$id, Session::get('website')])->first()->getPhoto()->orderBy('id', 'desc')->paginate(8);
         return view("dashboard/gallery/Photo", ['AlbumPhoto' => $AlbumPhoto, 'Album' => $id]);
     }
 
 
     public function postPhoto(PhotoRequest $request)
     {
-
-        if(!is_null($request->id))
+        if (!is_null($request->id)) {
             $photo = Photo::find($request->id);
-        else
+        } else {
             $photo = new Photo();
+        }
 
 
         if (Request::hasFile('url')) {
@@ -123,12 +123,9 @@ class GalleryController extends Controller {
 
     public function getDeletephote($id)
     {
-        $album = Photo::whereRaw('id = ? and ids = ?',[$id, Session::get('website')])->first();
+        $album = Photo::whereRaw('id = ? and ids = ?', [$id, Session::get('website')])->first();
         $album->forceDelete();
         Session::flash('good', 'Вы успешно удалили запись');
         return redirect()->back();
-
     }
-
-
 }

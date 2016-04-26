@@ -2,8 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-
-class QuestAnswer extends Model {
+class QuestAnswer extends Model
+{
 
     /**
      * The database table used by the model.
@@ -17,7 +17,17 @@ class QuestAnswer extends Model {
      *
      * @var array
      */
-    protected $fillable = ['fio', 'questions', 'answer', 'publish', 'ids', 'email', 'phone', 'category_id', 'doctor_id'];
+    protected $fillable = [
+        'fio',
+        'questions',
+        'answer',
+        'publish',
+        'ids',
+        'email',
+        'phone',
+        'category_id',
+        'doctor_id'
+    ];
 
 
     public function getDoctor()
@@ -29,6 +39,4 @@ class QuestAnswer extends Model {
     {
         return $this->hasOne('App\Models\CategoryAnswers', 'id', 'category_id');
     }
-
-
 }

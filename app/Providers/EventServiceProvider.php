@@ -8,35 +8,34 @@ use App\Models\QuestAnswer;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
-
 //ОБсерверы!
 //!обсерверы
 
-class EventServiceProvider extends ServiceProvider {
+class EventServiceProvider extends ServiceProvider
+{
 
-	/**
-	 * The event handler mappings for the application.
-	 *
-	 * @var array
-	 */
-	protected $listen = [
-		'event.name' => [
-			'EventListener',
-		],
-	];
+    /**
+     * The event handler mappings for the application.
+     *
+     * @var array
+     */
+    protected $listen = [
+        'event.name' => [
+            'EventListener',
+        ],
+    ];
 
-	/**
-	 * Register any other events for your application.
-	 *
-	 * @param  \Illuminate\Contracts\Events\Dispatcher  $events
-	 * @return void
-	 */
-	public function boot(DispatcherContract $events)
-	{
-		parent::boot($events);
+    /**
+     * Register any other events for your application.
+     *
+     * @param  \Illuminate\Contracts\Events\Dispatcher $events
+     * @return void
+     */
+    public function boot(DispatcherContract $events)
+    {
+        parent::boot($events);
 
-		Goods::observe(new GoodsObserver);
-		QuestAnswer::observe(new QuestAnswerObserver);
-	}
-
+        Goods::observe(new GoodsObserver);
+        QuestAnswer::observe(new QuestAnswerObserver);
+    }
 }

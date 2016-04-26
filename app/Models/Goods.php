@@ -1,13 +1,13 @@
 <?php namespace App\Models;
 
-
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Kalnoy\Nestedset\Node;
 use Remoblaser\Search\SearchableTrait;
 
-class Goods extends Node {
+class Goods extends Node
+{
 
-    use SoftDeletes,SearchableTrait;
+    use SoftDeletes, SearchableTrait;
     /**
      * The database table used by the model.
      *
@@ -65,8 +65,6 @@ class Goods extends Node {
 
     public function getParent()
     {
-        return $this->hasMany('App\Models\Goods','id','parent_id');
+        return $this->hasMany('App\Models\Goods', 'id', 'parent_id');
     }
-
-
 }

@@ -32,5 +32,4 @@ class CreateQuestanswerTable extends Migration
     {
         Schema::drop('questanswer');
     }
-
 }

@@ -158,15 +158,15 @@
 
 
 <script type='text/javascript'
-        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/bootstrap/js/bootstrap.min.js'></script>
+        src='/gkzn48ru/wp-content/themes/assets/plugins/bootstrap/js/bootstrap.min.js'></script>
 <script type='text/javascript'
-        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/smooth-scroll.js'></script>
+        src='/gkzn48ru/wp-content/themes/assets/plugins/smooth-scroll.js'></script>
 
 <script type='text/javascript'
-        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/prettyphoto/js/jquery.prettyPhoto.js'></script>
+        src='/gkzn48ru/wp-content/themes/assets/plugins/prettyphoto/js/jquery.prettyPhoto.js'></script>
 <script type='text/javascript'
-        src='/gkzn48ru/wp-content/themes/medic-final/assets/plugins/owl-carousel/owl.carousel.js'></script>
-<script type='text/javascript' src='/gkzn48ru/wp-content/themes/medic-final/assets/js/app.js'></script>
+        src='/gkzn48ru/wp-content/themes/assets/plugins/owl-carousel/owl.carousel.js'></script>
+<script type='text/javascript' src='/gkzn48ru/wp-content/themes/assets/js/app.js'></script>
 
 
 <script type="text/javascript">

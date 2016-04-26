@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Feedback extends Model {
+class Feedback extends Model
+{
 
     use SoftDeletes;
     /**
@@ -19,5 +20,4 @@ class Feedback extends Model {
      * @var array
      */
     protected $fillable = ['fio', 'phone', 'email', 'content', 'ids'];
-
 }

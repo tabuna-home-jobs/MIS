@@ -40,5 +40,4 @@ class CreateEncypostTable extends Migration
     {
         Schema::drop('encypost');
     }
-
 }

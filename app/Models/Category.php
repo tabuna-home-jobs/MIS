@@ -22,8 +22,6 @@ class Category extends Node
     protected $fillable = ['title', 'name', 'text', 'tag', 'descript', 'avatar', 'ids', '_lft', '_rgt', 'parent_id'];
 
 
-
-
     //Связь категории с товаром
     public function goods()
     {
@@ -43,9 +41,4 @@ class Category extends Node
     {
         return $this->belongsTo('App\Models\Sites', 'ids');
     }
-
-
-
-
-
 }

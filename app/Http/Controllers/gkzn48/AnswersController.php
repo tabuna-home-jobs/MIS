@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\gkzn48;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Session;
+use App\Http\Requests;
 use App\Models\Answers;
+use Illuminate\Http\Request;
+use Session;
 
 class AnswersController extends Controller
 {
@@ -34,7 +33,7 @@ class AnswersController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param  Request $request
      * @return Response
      */
     public function store(Request $request)
@@ -56,7 +55,7 @@ class AnswersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function show($id)
@@ -67,7 +66,7 @@ class AnswersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function edit($id)
@@ -78,8 +77,8 @@ class AnswersController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  int  $id
+     * @param  Request $request
+     * @param  int $id
      * @return Response
      */
     public function update(Request $request, $id)
@@ -90,7 +89,7 @@ class AnswersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function destroy($id)

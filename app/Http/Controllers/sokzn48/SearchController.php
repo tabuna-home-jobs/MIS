@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\sokzn48;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Models\News;
 use App\Models\Page;
 use App\Models\Shares;
 use App\Models\Sites;
 use Illuminate\Http\Request;
 use Search;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class SearchController extends Controller
 {
@@ -36,10 +36,10 @@ class SearchController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,$sitename = "sokzn48", $sitedomen = "ru")
+    public function store(Request $request, $sitename = "sokzn48", $sitedomen = "ru")
     {
         $query = $request->input('query');
         $site = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id;
@@ -47,23 +47,21 @@ class SearchController extends Controller
 
         $search = array_flatten($search);
 
-        foreach($search as $key =>$value)
-        {
+        foreach ($search as $key => $value) {
             $filtered = $value->where('ids', $site);
             $search[$key] = $filtered->all();
         }
 
         return view($sitename . $sitedomen . '/search', [
-            'query'=>$query,
-            'search'=>$search,
+            'query' => $query,
+            'search' => $search,
         ]);
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -74,7 +72,7 @@ class SearchController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -85,8 +83,8 @@ class SearchController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -97,7 +95,7 @@ class SearchController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

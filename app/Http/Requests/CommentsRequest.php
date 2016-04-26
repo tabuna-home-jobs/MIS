@@ -1,6 +1,7 @@
 <?php namespace App\Http\Requests;
 
-class CommentsRequest extends Request {
+class CommentsRequest extends Request
+{
 
     /**
      * Determine if the user is authorized to make this request.
@@ -28,5 +29,4 @@ class CommentsRequest extends Request {
             'status' => 'required|boolean'
         ];
     }
-
 }

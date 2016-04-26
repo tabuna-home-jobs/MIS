@@ -14,7 +14,6 @@ class AppointmentsController extends Controller
      */
     public function getIndex()
     {
-
         $Calendar = array();
         foreach (TimeTable::all() as $time) {
             $test = $time->entry()->where('1c_busy', '=', 'false')->get();
@@ -27,7 +26,6 @@ class AppointmentsController extends Controller
                     'borderColor' => substr(md5($time->name), 6, 6),
                 ]);
             }
-
         }
         return view("dashboard/calendar/view", ['Calendar' => $Calendar]);
     }
@@ -95,5 +93,4 @@ class AppointmentsController extends Controller
     {
         //
     }
-
 }

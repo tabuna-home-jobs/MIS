@@ -21,12 +21,14 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        if(!Request::input('noread'))
+        if (!Request::input('noread')) {
             $Feedback = Feedback::where('ids', Session::get('website'))->orderBy('id', 'desc')->simplePaginate(15);
-        else
-             $Feedback = Feedback::whereRaw('ids = ? and read = ?', [Session::get('website'), false])->orderBy('id', 'desc')->simplePaginate(15);
+        } else {
+            $Feedback = Feedback::whereRaw('ids = ? and read = ?', [Session::get('website'), false])->orderBy('id',
+                'desc')->simplePaginate(15);
+        }
 
-        return view("dashboard/feedback/feedback",['Feedback' => $Feedback ]);
+        return view("dashboard/feedback/feedback", ['Feedback' => $Feedback]);
     }
 
     /**
@@ -34,7 +36,7 @@ class FeedbackController extends Controller
      *
      * @return Response
      */
-    public function create($Email= null)
+    public function create($Email = null)
     {
         $Feedback = Feedback::whereRaw('ids = ? and id = ?', [Session::get('website'), $Email])->first();
         return view("dashboard/feedback/send", ['Feedback' => $Feedback]);
@@ -47,13 +49,12 @@ class FeedbackController extends Controller
      */
     public function store(FeedBackSend $request)
     {
-        $sites = Sites::find( Session::get('website' ) );
+        $sites = Sites::find(Session::get('website'));
 
-        Mail::raw($request->contentmess, function($message) use ($sites, $request)
-        {
+        Mail::raw($request->contentmess, function ($message) use ($sites, $request) {
             $message->from($sites->email, $sites->name);
 
-            $message->to($request->email );
+            $message->to($request->email);
         });
         Session::flash('good', 'Вы успешно отправили письмо');
         return redirect()->route('dashboard.feedback.index');
@@ -62,7 +63,7 @@ class FeedbackController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function show($Feedback)
@@ -70,13 +71,13 @@ class FeedbackController extends Controller
         $Feedback = Feedback::find($Feedback);
         $Feedback->read = true;
         $Feedback->save();
-        return view("dashboard/feedback/view",['Feedback' => $Feedback ]);
+        return view("dashboard/feedback/view", ['Feedback' => $Feedback]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function edit($id)
@@ -87,7 +88,7 @@ class FeedbackController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function update($id)
@@ -98,7 +99,7 @@ class FeedbackController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function destroy($Feedback = null)

@@ -1,24 +1,24 @@
 <?php namespace App\Http\Controllers\cozn48;
 
 use App\Http\Controllers\Controller;
-use App\Models\Sites;
-use App\Models\Category as Cats;
-use Request;
-use App\Models\Comments;
 use App\Http\Requests\Site\CommentRequest;
+use App\Models\Category as Cats;
+use App\Models\Comments;
+use App\Models\Sites;
+use Request;
 use Session;
-use Kalnoy\Nestedset\Collection as Colect;
 
-class ServiceController extends Controller {
+class ServiceController extends Controller
+{
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
     public function index($sitename = "cozn48", $sitedomen = "ru")
     {
-		/*
+        /*
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
@@ -43,57 +43,52 @@ class ServiceController extends Controller {
             'Goods' => $Goods,
             'LastNews' => $getLastNews,
         ]);
-		*/
+        */
 
 
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $Category = $getSites->getCategory()->get();
 
-		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-		$Category = $getSites->getCategory()->get();
-
-		$requestCategory = Request::input('category');
-		$getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
-
+        $requestCategory = Request::input('category');
+        $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(5)->get();
 
 
-		if (is_null($requestCategory))
-			$Goods = $getSites->getGoods()->paginate(9);
-		else
-			$Goods = $getSites->getGoods()->where('category_id', $requestCategory)->paginate(9);
+        if (is_null($requestCategory)) {
+            $Goods = $getSites->getGoods()->paginate(9);
+        } else {
+            $Goods = $getSites->getGoods()->where('category_id', $requestCategory)->paginate(9);
+        }
 
-		return view($sitename . $sitedomen . '/service', [
-				'Category' => $Category,
-				'Goods' => $Goods,
-				'LastNews' => $getLastNews,
-		]);
-
-
-
+        return view($sitename . $sitedomen . '/service', [
+            'Category' => $Category,
+            'Goods' => $Goods,
+            'LastNews' => $getLastNews,
+        ]);
     }
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create()
+    {
+        //
     }
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store( CommentRequest $request, $sitename = "cozn48", $sitedomen = "ru")
-	{
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store(CommentRequest $request, $sitename = "cozn48", $sitedomen = "ru")
+    {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
         $comment = new Comments([
             'fio' => $request->fio,
-            'phone'=> $request->phone,
-            'email'=> $request->email,
+            'phone' => $request->phone,
+            'email' => $request->email,
             'content' => $request->comment,
             'comments_id' => 0, // Вложенные комментарии никому не нужны
             'goods_id' => $request->goods,
@@ -102,23 +97,24 @@ class ServiceController extends Controller {
         $comment->save();
         Session::flash('good', 'Спасибо, что написали, ваше сообщение будет опубликовано после модерации.');
         return redirect()->back();
+    }
 
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+    /**
+     * Display the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
     public function show($id, $sitename = "cozn48", $sitedomen = "ru")
-	{
-
+    {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)
-            ->with(['getAllShares','getGoods' => function($query) use ($id){
+            ->with([
+                'getAllShares',
+                'getGoods' => function ($query) use ($id) {
 
-                $query->where('id',$id);
-            }])
+                    $query->where('id', $id);
+                }
+            ])
             ->first();
 
 
@@ -133,42 +129,41 @@ class ServiceController extends Controller {
         */
         return view($sitename . $sitedomen . '/goods',
             [
-             'Goods' => $getSites->getGoods,
-             'shares' => $getSites->getAllShares
+                'Goods' => $getSites->getGoods,
+                'shares' => $getSites->getAllShares
             ]);
-	}
+    }
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function edit($id)
+    {
+        //
+    }
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function update($id)
+    {
+        //
+    }
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
 }

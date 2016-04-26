@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\luchiki48;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Models\Sites as Sites;
+use Illuminate\Http\Request;
 
 class VideoGalleryController extends Controller
 {
@@ -17,12 +17,12 @@ class VideoGalleryController extends Controller
     public function index($sitename = "luchiki48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $albums  =  $getSites->getVideoAlbums()->select('*')->get();
+        $albums = $getSites->getVideoAlbums()->select('*')->get();
         $video = $getSites->getVideo()->paginate(20);
 
-        return view($sitename.$sitedomen.'/video', [
+        return view($sitename . $sitedomen . '/video', [
             'album' => $albums,
-            'videos'  => $video,
+            'videos' => $video,
         ]);
     }
 
@@ -39,7 +39,7 @@ class VideoGalleryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -50,26 +50,26 @@ class VideoGalleryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id, $sitename = "luchiki48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $albums  =  $getSites->getVideoAlbums()->select('*')->first();
-        $video = $getSites->getVideo()->where('album_id',$id)->paginate(20);
+        $albums = $getSites->getVideoAlbums()->select('*')->first();
+        $video = $getSites->getVideo()->where('album_id', $id)->paginate(20);
 
-        return view( $sitename.$sitedomen.'/video', [
+        return view($sitename . $sitedomen . '/video', [
             'album' => $albums,
-            'videos'  => $video,
-            'id' =>$id
+            'videos' => $video,
+            'id' => $id
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -80,8 +80,8 @@ class VideoGalleryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -92,7 +92,7 @@ class VideoGalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

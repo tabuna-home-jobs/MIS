@@ -4,12 +4,12 @@ use App\Console\Commands\AppointmentsCommand;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\QuestionRequest;
 use App\Http\Requests\SurveysRequest;
+use App\Models\Answers;
 use App\Models\Question;
 use App\Models\Surveys;
 use Redirect;
 use Request;
 use Session;
-use App\Models\Answers;
 
 class SurveysController extends Controller
 {
@@ -40,7 +40,6 @@ class SurveysController extends Controller
 
     public function postStore(QuestionRequest $request)
     {
-
         $newQuest = new Question([
             'quest' => $request->quest,
             'type' => $request->type,
@@ -51,22 +50,18 @@ class SurveysController extends Controller
         $newQuest->save();
         Session::flash('good', 'Вы успешно создали вопрос');
         return redirect()->back();
-
     }
 
 
     public function postUpdate()
     {
-
         $newQuest = Question::find(Request::get('id'));
         $newQuest->fill(Request::all());
         $newQuest->answer = serialize(Request::get('fieldsAttr'));
         $newQuest->save();
         Session::flash('good', 'Вы успешно создали вопрос');
         return redirect()->back();
-
     }
-
 
 
     public function postAdd(SurveysRequest $request)
@@ -98,8 +93,6 @@ class SurveysController extends Controller
     }
 
 
-
-
     public function getShowstatquest($id)
     {
         $quest = Question::find($id);
@@ -108,15 +101,14 @@ class SurveysController extends Controller
         //Общая коллекция
         $collection = collect();
 
-        foreach($Answers as $Answ)
-        {
+        foreach ($Answers as $Answ) {
             $AnswerThis = unserialize($Answ->answer);
             $collection->push($AnswerThis[$id]); // Добавляем элементы к коллекции
         }
 
         $collection = array_flatten($collection); //Делаем массив плоским
 
-        if(is_array($collection)) {
+        if (is_array($collection)) {
             $collection = array_count_values($collection); // Узнаём количество повторяющихся элементов массива
             arsort($collection, SORT_NUMERIC);
         }
@@ -137,7 +129,4 @@ class SurveysController extends Controller
         $Quest = new Question;
         return view("dashboard/surveys/answerUser", ['Answers' => $Answers, 'Quest' => $Quest]);
     }
-
-
-
 }

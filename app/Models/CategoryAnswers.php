@@ -14,6 +14,4 @@ class CategoryAnswers extends Model
      * @var array
      */
     protected $fillable = ['name'];
-
-
 }

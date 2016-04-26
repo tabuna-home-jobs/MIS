@@ -5,7 +5,6 @@ use App\Http\Requests;
 use App\Http\Requests\CodeRequest;
 use Storage;
 
-
 class CodeEditorController extends Controller
 {
 
@@ -20,7 +19,6 @@ class CodeEditorController extends Controller
         $files = Storage::disk('views')->files();
         $dir = Storage::disk('views')->directories();
         return view("dashboard/codeedit/codeedit", ['files' => $files, 'dir' => $dir]);
-
     }
 
     /**
@@ -40,7 +38,6 @@ class CodeEditorController extends Controller
      */
     public function store()
     {
-
     }
 
     /**
@@ -93,5 +90,4 @@ class CodeEditorController extends Controller
     {
         //
     }
-
 }

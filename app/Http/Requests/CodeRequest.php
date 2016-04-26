@@ -27,5 +27,4 @@ class CodeRequest extends Request
             'text' => 'min:1'
         ];
     }
-
 }

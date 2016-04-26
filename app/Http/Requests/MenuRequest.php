@@ -28,5 +28,4 @@ class MenuRequest extends Request
             'type' => 'required|max:255',
         ];
     }
-
 }

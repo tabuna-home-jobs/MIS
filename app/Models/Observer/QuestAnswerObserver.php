@@ -7,14 +7,9 @@ class QuestAnswerObserver
 
     public function created($model)
     {
-        Mail::send('emails.questanswer', $model->toArray(), function($message)
-        {
+        Mail::send('emails.questanswer', $model->toArray(), function ($message) {
             $message->to('niki@zdorovie48.ru')->subject('Вопрос требует ответа!');
         });
         return $model;
     }
-
-
-
-
 }

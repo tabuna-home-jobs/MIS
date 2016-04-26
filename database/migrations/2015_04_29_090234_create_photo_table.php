@@ -33,5 +33,4 @@ class CreatePhotoTable extends Migration
     {
         Schema::drop('photo');
     }
-
 }

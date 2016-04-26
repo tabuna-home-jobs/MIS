@@ -4,10 +4,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Remoblaser\Search\SearchableTrait;
 
+class Page extends Model
+{
 
-class Page extends Model {
-
-    use SoftDeletes,SearchableTrait;
+    use SoftDeletes, SearchableTrait;
     /**
      * The database table used by the model.
      *
@@ -29,7 +29,6 @@ class Page extends Model {
     protected $searchFields = ['title', 'name', 'content'];
 
 
-
     public $SlugName = 'page';
 
     /**
@@ -46,5 +45,4 @@ class Page extends Model {
             'descript' => 2,
         ]
     ];
-
 }

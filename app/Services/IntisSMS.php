@@ -10,7 +10,6 @@
 
 namespace App\Services;
 
-
 class IntisSMS
 {
     /**
@@ -29,7 +28,7 @@ class IntisSMS
     /**
      * Метод инициализации
      */
-    function init()
+    public function init()
     {
         parent::init();
     }
@@ -51,11 +50,11 @@ class IntisSMS
 
         $params['signature'] = $sign;
 
-        $arr = json_decode($this->request('https://new.sms16.ru/get/balance.php', $params), TRUE);
+        $arr = json_decode($this->request('https://new.sms16.ru/get/balance.php', $params), true);
 
-        if(!isset($arr['error'])){
+        if (!isset($arr['error'])) {
             return $arr['money'];
-        }else{
+        } else {
             $arr['money'] = 0;
             return $arr['money'];
         }
@@ -71,12 +70,12 @@ class IntisSMS
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, "https://new.sms16.ru/get/timestamp.php");
-        curl_setopt($ch, CURLOPT_HEADER, FALSE);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
         curl_setopt($ch, CURLOPT_USERAGENT, 'PHP Bot (http://etru.ru)');
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         $data = curl_exec($ch);
         curl_close($ch);
 
@@ -110,12 +109,12 @@ class IntisSMS
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, $url . '?' . http_build_query($body));
-        curl_setopt($ch, CURLOPT_HEADER, FALSE);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
         curl_setopt($ch, CURLOPT_USERAGENT, 'PHP Bot (http://etru.ru)');
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         $data = curl_exec($ch);
         curl_close($ch);
 
@@ -132,7 +131,6 @@ class IntisSMS
      */
     public function send($number, $text)
     {
-
         $params = array(
             'login' => self::$login,
             'phone' => $number,
@@ -147,7 +145,7 @@ class IntisSMS
         $params['signature'] = $sign;
 
 
-        $res = json_decode(self::request('https://new.sms16.ru/get/send.php', $params), TRUE);
+        $res = json_decode(self::request('https://new.sms16.ru/get/send.php', $params), true);
 
         //$res = $res[$number]['id_sms'];
 
@@ -173,19 +171,18 @@ class IntisSMS
 
         $params['signature'] = $sign;
 
-        $res = json_decode($this->request('https://new.sms16.ru/get/status.php', $params), TRUE);
+        $res = json_decode($this->request('https://new.sms16.ru/get/status.php', $params), true);
 
         return $res[$id];
     }
 
-    public  function statistic($data = null)
+    public function statistic($data = null)
     {
-
         $params = array(
             'timestamp' => $this->timestamp(),
             'login' => self::$login,
             'return' => 'json',
-            'month' =>  ($data == null) ? date("Y-m") : $data
+            'month' => ($data == null) ? date("Y-m") : $data
         );
 
         //dd($params);
@@ -193,13 +190,8 @@ class IntisSMS
 
         $params['signature'] = $sign;
 
-        $arr = json_decode($this->request('https://new.sms16.ru/get/stat_by_month.php', $params), TRUE);
+        $arr = json_decode($this->request('https://new.sms16.ru/get/stat_by_month.php', $params), true);
 
         return $arr;
     }
-
-
-
 }
-
-?>

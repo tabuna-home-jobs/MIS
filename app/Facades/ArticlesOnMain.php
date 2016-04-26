@@ -4,15 +4,11 @@ namespace App\Facades;
 use App\Models\Articles as Articles;
 use Illuminate\Support\Facades\Facade;
 
-class ArticlesOnMain  extends Facade {
+class ArticlesOnMain extends Facade
+{
 
-    static function getArts($siteId,$lim = 6)
+    public static function getArts($siteId, $lim = 6)
     {
-
-
-        return Articles::where('ids',$siteId)->limit($lim)->get()->toArray();
-
+        return Articles::where('ids', $siteId)->limit($lim)->get()->toArray();
     }
-
-
 }

@@ -29,5 +29,4 @@ class FeedbackRequest extends Request
             'message' => 'required',
         ];
     }
-
 }

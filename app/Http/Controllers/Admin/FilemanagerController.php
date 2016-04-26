@@ -15,5 +15,4 @@ class FilemanagerController extends Controller
     {
         return view("dashboard/filemanager/index");
     }
-
 }

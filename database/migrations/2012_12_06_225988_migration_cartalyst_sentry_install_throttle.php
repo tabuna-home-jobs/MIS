@@ -57,5 +57,4 @@ class MigrationCartalystSentryInstallThrottle extends Migration
     {
         Schema::drop('throttle');
     }
-
 }

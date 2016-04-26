@@ -17,7 +17,7 @@ class ReviewsController extends Controller
     public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $Reviews = $getSites->getReviews()->where('publish', true)->orderBy('id', 'desc')->paginate(12);
+        $Reviews = $getSites->getReviews()->where('publish', true)->orderBy('id', 'desc')->paginate(6);
         return view($sitename . $sitedomen . '/reviews', ['Reviews' => $Reviews]);
     }
 
@@ -48,7 +48,6 @@ class ReviewsController extends Controller
 
         Session::flash('good', 'Спасибо, что написали, ваше мнение очень важно для нас.');
         return redirect()->back();
-
     }
 
     /**
@@ -94,5 +93,4 @@ class ReviewsController extends Controller
     {
         //
     }
-
 }

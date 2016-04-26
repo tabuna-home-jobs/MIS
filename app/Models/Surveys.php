@@ -26,6 +26,4 @@ class Surveys extends Model
     {
         return $this->hasMany('App\Models\Question');
     }
-
-
 }

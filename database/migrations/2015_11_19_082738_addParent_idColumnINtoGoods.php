@@ -12,8 +12,7 @@ class AddParentIdColumnINtoGoods extends Migration
      */
     public function up()
     {
-        Schema::table('goods', function($table)
-        {
+        Schema::table('goods', function ($table) {
             $table->integer('parent_id')->nullable();
         });
     }

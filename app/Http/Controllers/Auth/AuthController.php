@@ -3,30 +3,30 @@
 use App\Events\SendMailAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
+use App\Http\Requests\ActionRequest;
 use App\Http\Requests\AuthLoginRequest;
 use App\Http\Requests\AuthRequest;
-use App\Http\Requests\ActionRequest;
 use App\Http\Requests\RepeatRequest;
-
 use Mail;
 use Sentry;
 
-class AuthController extends Controller {
+class AuthController extends Controller
+{
 
-	/**
+    /**
      * Display a listing of the resource.
-	 *
+     *
      * @return Response
-	 */
+     */
     public function getLogin()
-	{
+    {
         return view('auth/login');
     }
 
     public function postLogin(AuthLoginRequest $request)
     {
 
-
+        dd($request);
         $credentials = array(
             'email' => $request->email,
             'password' => $request->password,
@@ -34,8 +34,7 @@ class AuthController extends Controller {
         Sentry::authenticateAndRemember($credentials);
 
         return redirect('/dashboard');
-
-	}
+    }
 
 
     public function getRegister()
@@ -66,20 +65,17 @@ class AuthController extends Controller {
     }
 
 
-    public  function getLogout()
+    public function getLogout()
     {
         Sentry::logout();
     }
 
 
-
-    public function getAction($email = NULL, $activationCode = NULL)
+    public function getAction($email = null, $activationCode = null)
     {
-
-
-        if (is_null($email) || is_null($activationCode))
+        if (is_null($email) || is_null($activationCode)) {
             return view('auth/action', ['email' => $email]);
-        else {
+        } else {
             $user = Sentry::findUserByLogin($email);
             if ($user->attemptActivation($activationCode)) {
                 $adminGroup = Sentry::findGroupByName('User');
@@ -93,9 +89,8 @@ class AuthController extends Controller {
         }
     }
 
-    public function  postAction(ActionRequest $request)
+    public function postAction(ActionRequest $request)
     {
-
         $user = Sentry::findUserByLogin($request->email);
         if ($user->attemptActivation($request->key)) {
             $adminGroup = Sentry::findGroupByName('User');
@@ -114,18 +109,11 @@ class AuthController extends Controller {
         return view('auth/repeat');
     }
 
-    public function  postRepeat(RepeatRequest $request)
+    public function postRepeat(RepeatRequest $request)
     {
-        $user           = Sentry::findUserByLogin($request->email);
+        $user = Sentry::findUserByLogin($request->email);
         $activationCode = $user->getActivationCode();
         event(new SendMailAction($activationCode, $request));
         return redirect('/auth/action');
     }
-
-
-
-
-
-
-
 }

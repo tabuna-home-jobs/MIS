@@ -7,7 +7,7 @@ use DB;
 use Illuminate\Console\Command;
 use Storage;
 
-class AppointmentsLook extends Command
+class AppointmentsLock extends Command
 {
 
     /**
@@ -60,15 +60,13 @@ class AppointmentsLook extends Command
             }
         }
         $this->appointment();
-
     }
 
 
     protected function appointment()
     {
         //Если нет блокировки со стороны МиДа
-        if (!Storage::exists('flag_MID.lock'))
-        {
+        if (!Storage::exists('flag_MID.lock')) {
             Storage::put('flag_OKTAVIAN.lock', 'flag_OKTAVIAN.lock');
             //1.2. Октавиан читает от нас файл с обновленным расписанием - загружает его в свою БД и на сайт
             $this->readFile();
@@ -81,16 +79,15 @@ class AppointmentsLook extends Command
 
             Storage::delete('flag_OKTAVIAN.lock');
         }
-
-
     }
 
 
     /**
      * Октавиан читает от нас файл ответов - что мы загрузили себе в 1С - эти ID уже не надо повторно выгружать
      */
-    protected function answers(){
-        if(Storage::exists('otvet.xml')) {
+    protected function answers()
+    {
+        if (Storage::exists('otvet.xml')) {
             $xml = simplexml_load_string(Storage::get('otvet.xml'));
             foreach ($xml->id as $key => $id) {
                 $id = (int)$id;
@@ -105,11 +102,12 @@ class AppointmentsLook extends Command
     /**
      * Кто зарегался на сайте
      */
-    protected function export(){
-        $Apportointments =  Appoint::where('export',false)
+    protected function export()
+    {
+        $Apportointments = Appoint::where('export', false)
             ->get();
 
-        if($Apportointments->count() != 0) {
+        if ($Apportointments->count() != 0) {
             $Views = view('XML.appointments', [
                 'Record' => $Apportointments
             ])->render();
@@ -122,14 +120,14 @@ class AppointmentsLook extends Command
     /**
      * Читаю файл айтибора
      */
-    protected function readFile(){
-        if(Storage::exists('plan.xml')) {
+    protected function readFile()
+    {
+        if (Storage::exists('plan.xml')) {
             $xml = simplexml_load_string(Storage::get('plan.xml'));
             $date = date("Y-m-d G:i:s");
             $doctor = [];
 
             foreach ($xml->Record as $value) {
-
                 $doctor[] = [
                     'id' => $value->attributes()->ID,
                     'subdivision' => (string)$value->PODR,
@@ -161,7 +159,5 @@ class AppointmentsLook extends Command
                 'upload' => false
             ]);
         }
-
     }
-
 }

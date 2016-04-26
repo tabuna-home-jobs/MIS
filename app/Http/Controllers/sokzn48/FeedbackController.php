@@ -7,7 +7,6 @@ use App\Models\Feedback;
 use App\Models\Sites;
 use Session;
 
-
 class FeedbackController extends Controller
 {
 
@@ -20,7 +19,7 @@ class FeedbackController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
-        return view($sitename . $sitedomen . '/feedback',['LastNews' => $getLastNews]);
+        return view($sitename . $sitedomen . '/feedback', ['LastNews' => $getLastNews]);
     }
 
     /**
@@ -40,9 +39,8 @@ class FeedbackController extends Controller
      *
      * @return Response
      */
-    public function store(FeedbackRequest $request,$sitename = "sokzn48", $sitedomen = "ru")
+    public function store(FeedbackRequest $request, $sitename = "sokzn48", $sitedomen = "ru")
     {
-
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $new = new Feedback([
             'fio' => $request->fio,
@@ -100,5 +98,4 @@ class FeedbackController extends Controller
     {
         //
     }
-
 }

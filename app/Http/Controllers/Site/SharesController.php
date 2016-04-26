@@ -16,9 +16,9 @@ class SharesController extends Controller
      */
     public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
-        $getShares =$getSites->getShares()->orderBy('id', 'desc')->paginate(5);
-        return view( $sitename.$sitedomen.'/shares', ['Shares' => $getShares]);
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $getShares = $getSites->getShares()->orderBy('id', 'desc')->paginate(5);
+        return view($sitename . $sitedomen . '/shares', ['Shares' => $getShares]);
     }
 
     /**
@@ -34,7 +34,7 @@ class SharesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -45,23 +45,23 @@ class SharesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($Share, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
 
         $getShares = $getSites->getShares()->findorFail($Share->id);
 
-        return view( $sitename.$sitedomen.'/sharesItem', ['Shares' => $getShares]);
+        return view($sitename . $sitedomen . '/sharesItem', ['Shares' => $getShares]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -72,8 +72,8 @@ class SharesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -84,7 +84,7 @@ class SharesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

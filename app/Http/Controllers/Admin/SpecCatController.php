@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Models\SpecCat;
+use Illuminate\Http\Request;
 use Session;
 
 class SpecCatController extends Controller
@@ -17,13 +16,12 @@ class SpecCatController extends Controller
         //$Category = SpecCat::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
 
         $Category = SpecCat::orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/special/categorySpecial",['Category' => $Category ]);
+        return view("dashboard/special/categorySpecial", ['Category' => $Category]);
     }
 
 
     public function create()
     {
-
         return view("dashboard/special/categoryCreate");
     }
 
@@ -46,19 +44,17 @@ class SpecCatController extends Controller
 
     public function edit($id)
     {
+        $Category = SpecCat::where('id', $id)->firstOrFail();
 
-        $Category =  SpecCat::where('id',$id)->firstOrFail();
-
-        return view("dashboard/special/categoryUpdate",[
-            'Category' =>$Category
+        return view("dashboard/special/categoryUpdate", [
+            'Category' => $Category
         ]);
     }
 
 
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
-
-        $cat = SpecCat::where('id',$id)->firstOrFail();
+        $cat = SpecCat::where('id', $id)->firstOrFail();
         $cat->name = $request->name;
         $cat->save();
         return redirect('dashboard/spcat');
@@ -67,7 +63,7 @@ class SpecCatController extends Controller
 
     public function destroy($id)
     {
-        $cat = SpecCat::where('id',$id)->firstOrFail();
+        $cat = SpecCat::where('id', $id)->firstOrFail();
         $cat->delete();
         return redirect('dashboard/spcat');
     }

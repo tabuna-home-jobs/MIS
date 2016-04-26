@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Models\Shares;
-
+use Illuminate\Http\Request;
 
 class ShareAPI extends Controller
 {
@@ -18,7 +16,7 @@ class ShareAPI extends Controller
      */
     public function index()
     {
-        $shares = Shares::select('id', 'name', 'descript', 'avatar','created_at')->orderBy('id', 'desc')->paginate(5);
+        $shares = Shares::select('id', 'name', 'descript', 'avatar', 'created_at')->orderBy('id', 'desc')->paginate(5);
         return response()->json($shares);
     }
 
@@ -35,7 +33,7 @@ class ShareAPI extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param  Request $request
      * @return Response
      */
     public function store(Request $request)
@@ -46,7 +44,7 @@ class ShareAPI extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function show($share)
@@ -57,7 +55,7 @@ class ShareAPI extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function edit($id)
@@ -68,8 +66,8 @@ class ShareAPI extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  int  $id
+     * @param  Request $request
+     * @param  int $id
      * @return Response
      */
     public function update(Request $request, $id)
@@ -80,7 +78,7 @@ class ShareAPI extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function destroy($id)

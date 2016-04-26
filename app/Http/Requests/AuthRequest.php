@@ -26,8 +26,8 @@ class AuthRequest extends Request
             'name' => 'sometimes|required|max:255',
             'lastname' => 'sometimes|required|max:255',
             'email' => 'required|email|max:255|unique:users',
+            'phone' => 'required|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ];
     }
-
 }

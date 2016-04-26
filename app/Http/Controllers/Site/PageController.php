@@ -7,7 +7,8 @@ use App\Models\Sites;
 use Request;
 use Session;
 
-class PageController extends Controller {
+class PageController extends Controller
+{
 
 
     public function show($Pages, $sitename = 'zdorovie48', $sitedomen = 'ru')
@@ -16,10 +17,8 @@ class PageController extends Controller {
 
         $Page = $getSites->getPages()->find($Pages->id);
 
-         return view($sitename . $sitedomen . '/page', [
-             'Page' => $Page,
-         ]);
+        return view($sitename . $sitedomen . '/page', [
+            'Page' => $Page,
+        ]);
     }
-
-
 }

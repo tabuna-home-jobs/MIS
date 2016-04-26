@@ -5,31 +5,32 @@ use App\Http\Requests\CommentsRequest;
 use App\Models\Comments;
 use Session;
 
-class CommentsController extends Controller {
+class CommentsController extends Controller
+{
 
 
     public function getIndex()
     {
         $Comments = Comments::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/comments/comments",['Comments' => $Comments ]);
+        return view("dashboard/comments/comments", ['Comments' => $Comments]);
     }
 
 
     public function getAdd($Goods = null)
     {
         $Comments = Comments::find($Goods);
-        return view("dashboard/comments/view",['Comments' => $Comments]);
+        return view("dashboard/comments/view", ['Comments' => $Comments]);
     }
 
 
     //Добовление и изменение данных
     public function postIndex(CommentsRequest $request)
     {
-
-        if(!is_null($request->id))
+        if (!is_null($request->id)) {
             $Comments = Comments::find($request->id);
-        else
+        } else {
             $Comments = new Comments();
+        }
 
         $Comments->fio = $request->fio;
         $Comments->phone = $request->phone;
@@ -44,7 +45,7 @@ class CommentsController extends Controller {
     }
 
 
-    public  function  getRestore($Category = null)
+    public function getRestore($Category = null)
     {
         Comments::withTrashed()->find($Category)->restore();
         Session::flash('good', 'Вы успешно востановили запись');
@@ -66,15 +67,10 @@ class CommentsController extends Controller {
         return redirect()->route('dashboard.comments.index');
     }
 
-    public  function  getUnset($Comments = null)
+    public function getUnset($Comments = null)
     {
         Comments::withTrashed()->find($Comments)->forceDelete();
         Session::flash('good', 'Вы успешно окончательно удалили запись');
         return redirect()->route('dashboard.comments.index');
     }
-
-
-
-
-
 }

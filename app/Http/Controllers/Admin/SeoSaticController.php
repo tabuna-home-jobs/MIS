@@ -19,7 +19,6 @@ class SeoSaticController extends Controller
         return view('dashboard.seo.index', [
             'routes' => $routes
         ]);
-
     }
 
 
@@ -77,5 +76,4 @@ class SeoSaticController extends Controller
         Session::flash('good', 'Вы успешно добавили значения');
         return redirect()->back();
     }
-
 }

@@ -37,5 +37,4 @@ class CreateSpecialistyTable extends Migration
     {
         Schema::drop('specialisty');
     }
-
 }

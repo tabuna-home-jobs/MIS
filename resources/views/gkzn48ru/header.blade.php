@@ -22,12 +22,16 @@
 
 
 
-    <link rel='stylesheet' id='style_theme-css'  href='/gkzn48ru/wp-content/themes/medic-final/assets/css/style.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='style-css'  href='/gkzn48ru/wp-content/themes/medic-final/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='style_theme-css'  href='/gkzn48ru/wp-content/themes/assets/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css'  href='/gkzn48ru/wp-content/themes/style.css' type='text/css' media='all' />
     <link rel='stylesheet' id='js_composer_front-css'  href='/gkzn48ru/wp-content/plugins/js_composer/assets/css/js_composer.css' type='text/css' media='all' />
     <link rel='stylesheet' id='js_composer_custom_css-css'  href='/gkzn48ru/wp-content/uploads/js_composer/custom.css' type='text/css' media='screen' />
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+
+
 </head>
 
 
@@ -62,10 +66,10 @@
                     <a class="navbar-brand" href="/">
                     <span class="logo contrast">
                         <span class="primary-logo">
-                                                            <img id="logo" src="/gkzn48ru/wp-content/themes/medic-final/assets/img/logo_1.png" alt="">
+                                                            <img id="logo" src="/gkzn48ru/wp-content/themes/assets/img/gkzn1.png" alt="">
                                                     </span>
                         <span class="secondary-logo">
-                            <img id="logo" src="/gkzn48ru/wp-content/themes/medic-final/assets/img/logo.png" alt="">
+                            <img id="logo" src="/gkzn48ru/wp-content/themes/assets/img/gkzn2.png" alt="">
                         </span>
                     </span>
                     </a>
@@ -75,22 +79,19 @@
                 <!-- ===== Collect the nav links, forms, and other content for toggling ===== -->
                 <div class="collapse navbar-collapse navbar-responsive-collapse">
 
-                    <ul id="menu-medic" class="nav navbar-nav navbar-right">
 
 
 
-
-
-
+                    <ul class="nav navbar-nav navbar-left">
                         <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
                         <li class="{{Active::route('login.*')}}"><a href="/login">Личный кабинет</a></li>
+                    </ul>
+
+
+                    <ul id="menu-medic" class="nav navbar-nav navbar-right">
                         <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li>
                         <li class="{{Active::route('blog.*')}}"><a href="/blog">Новости</a></li>
                         <li class="{{Active::route('feedback.*')}}"><a href="/feedback">Контакты</a></li>
-
-
-
-
                     </ul>
                 </div>
                 <!-- ===== End Navbar-collapse ===== -->

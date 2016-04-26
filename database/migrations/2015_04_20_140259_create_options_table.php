@@ -3,33 +3,32 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOptionsTable extends Migration {
+class CreateOptionsTable extends Migration
+{
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-        Schema::create('options', function(Blueprint $table)
-        {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('options', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('ids');
             $table->string('module');
             $table->string('value');
             $table->timestamps();
         });
-	}
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
         Schema::drop('options');
-	}
-
+    }
 }

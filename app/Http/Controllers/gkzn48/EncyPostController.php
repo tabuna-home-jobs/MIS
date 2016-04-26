@@ -26,11 +26,10 @@ class EncyPostController extends Controller
             ->get();
         sort($Index);
 
-        $MainElementMenu = EncyCategory::where('encycategory_id','0')->select('id','name')->get();
+        $MainElementMenu = EncyCategory::where('encycategory_id', '0')->select('id', 'name')->get();
 
 
-
-        if(Request::has('index')) {
+        if (Request::has('index')) {
             $IndexEncyPost = EncyPost::whereRaw('left(name,1) = ?', [Request::get('index')])->paginate(10);
             return view($sitename . $sitedomen . '/encyclopediaPostList', [
                 'PostList' => $IndexEncyPost,
@@ -40,16 +39,14 @@ class EncyPostController extends Controller
         }
 
 
-        if(Request::has('search')) {
-            $Index = EncyPost::where('name', 'like', "%"+Request::get('search') + "%")->paginate(10);
+        if (Request::has('search')) {
+            $Index = EncyPost::where('name', 'like', "%" + Request::get('search') + "%")->paginate(10);
             return view($sitename . $sitedomen . '/encyclopediaPostList', [
                 'PostList' => $Index,
                 'MainElementMenu' => $MainElementMenu,
                 'Index' => $Index
             ]);
         }
-
-
     }
 
     /**
@@ -75,7 +72,7 @@ class EncyPostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function show($model, $sitename = 'gkzn48', $sitedomen = 'ru')
@@ -92,10 +89,8 @@ class EncyPostController extends Controller
         sort($Index);
 
 
-
-
-        $MainElementMenu = EncyCategory::where('encycategory_id','0')->select('id','name')->get();
-        return view( $sitename.$sitedomen.'/encyclopediaPost',[
+        $MainElementMenu = EncyCategory::where('encycategory_id', '0')->select('id', 'name')->get();
+        return view($sitename . $sitedomen . '/encyclopediaPost', [
             'post' => $model,
             'MainElementMenu' => $MainElementMenu,
             'LastNews' => $getLastNews,
@@ -106,7 +101,7 @@ class EncyPostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function edit($id)
@@ -117,7 +112,7 @@ class EncyPostController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function update($id)
@@ -128,7 +123,7 @@ class EncyPostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function destroy($id)

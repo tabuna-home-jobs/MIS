@@ -29,5 +29,4 @@ class GroupRequest extends Request
             'permissions' => 'array',
         ];
     }
-
 }

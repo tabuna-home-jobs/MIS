@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Reviews extends Model {
+class Reviews extends Model
+{
 
     use SoftDeletes;
     /**
@@ -24,5 +25,4 @@ class Reviews extends Model {
     {
         return $this->belongsTo('App\Models\Sites', 'ids');
     }
-
 }

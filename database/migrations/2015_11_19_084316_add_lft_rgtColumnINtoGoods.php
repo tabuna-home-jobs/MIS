@@ -12,8 +12,7 @@ class AddLftRgtColumnINtoGoods extends Migration
      */
     public function up()
     {
-        Schema::table('goods', function($table)
-        {
+        Schema::table('goods', function ($table) {
             $table->integer('_lft')->nullable();
             $table->integer('_rgt')->nullable();
         });

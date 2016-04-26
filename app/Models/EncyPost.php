@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class EncyPost extends Model {
+class EncyPost extends Model
+{
 
     use SoftDeletes;
     /**
@@ -36,9 +37,6 @@ class EncyPost extends Model {
 
     public function Category()
     {
-        return $this->belongsTo('App\Models\EncyCategory','encycategory_id');
+        return $this->belongsTo('App\Models\EncyCategory', 'encycategory_id');
     }
-
-
-
 }

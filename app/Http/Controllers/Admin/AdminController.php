@@ -1,20 +1,19 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comments;
+use App\Models\Feedback;
+use App\Models\Goods;
+use App\Models\News;
 use App\Models\Page;
+use App\Services\Ok;
 use Redirect;
 use Request;
 use Session;
 use Validator;
-use App\Services\Ok;
-use App\Models\News;
-use App\Models\Goods;
-use App\Models\Comments;
-use App\Models\Feedback;
 
-
-class AdminController extends Controller {
-
+class AdminController extends Controller
+{
 
 
     public function index()
@@ -44,19 +43,21 @@ class AdminController extends Controller {
         $CommentsGood = Comments::whereRaw('ids = ? and publish = ?', [Session::get('website'), 'true'])->count();
         $CommentsAll = Comments::where('ids', '=', Session::get('website'))->count();
 
-        if($CommentsAll != 0)
+        if ($CommentsAll != 0) {
             $Comments = round($CommentsGood / $CommentsAll * 100);
-        else
+        } else {
             $Comments = 100;
+        }
 
 
         $feedbacksGood = Feedback::whereRaw('ids = ? and read = ?', [Session::get('website'), 'true'])->count();
         $feedbacksAll = Feedback::where('ids', '=', Session::get('website'))->count();
 
-        if($feedbacksAll != 0)
+        if ($feedbacksAll != 0) {
             $feedbacks = round($feedbacksGood / $feedbacksAll * 100);
-        else
+        } else {
             $feedbacks = 100;
+        }
 
 
         return view("dashboard/home", [
@@ -67,8 +68,4 @@ class AdminController extends Controller {
             'Feedbacks' => $feedbacks,
         ]);
     }
-
-
-
-
 }

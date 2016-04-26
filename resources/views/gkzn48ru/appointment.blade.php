@@ -13,7 +13,7 @@
             <div class="heading_e"><h3>Записаться на приём к специалисту</h3>
 
                 <p>Быстрая и удобная запись в врачу где бы вы не были</p><h4><img
-                            src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
+                            src="/gkzn48ru/wp-content/themes/assets/img/heading.png" alt="heading"></h4>
             </div>
 
             <div class="row">
@@ -290,7 +290,7 @@
                         <div class="heading_e"><h3>Наша цель – здоровое зачатие, рождение и развитие человека.</h3>
 
                             <p>Мы бережно и уважительно относимся к нашим клиентам и сотрудникам.</p><h4><img
-                                        src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png"
+                                        src="/gkzn48ru/wp-content/themes/assets/img/heading.png"
                                         alt="heading"></h4></div>
                         <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1409843233310">
                             <div class="vc_col-sm-4 wpb_column vc_column_container">

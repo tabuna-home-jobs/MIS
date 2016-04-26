@@ -31,5 +31,4 @@ class MenuChildRequest extends Request
 
         ];
     }
-
 }

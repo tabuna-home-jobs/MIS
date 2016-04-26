@@ -41,5 +41,4 @@ class Chat extends BaseSocketListener
     {
         $conn->close();
     }
-
 }

@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class TimeTable extends Model {
+class Timetable extends Model
+{
 
     use SoftDeletes;
     /**
@@ -26,9 +27,4 @@ class TimeTable extends Model {
     {
         return $this->hasMany('App\Models\Entry', 'timetable_id');
     }
-
-
-
-
-
 }
