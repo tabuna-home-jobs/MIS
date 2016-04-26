@@ -3,6 +3,7 @@
 use App\Models\Menu as SiteMenu;
 use App\Models\MenuItem;
 use Illuminate\Support\Facades\Facade;
+use Active;
 
 class Menu extends Facade
 {
@@ -16,6 +17,27 @@ class Menu extends Facade
 
         foreach ($element as $li) {
             $html .= "<li class='$li->class'><a href='$li->link'> $pref $li->label</a></li>";
+        }
+
+
+        return $html;
+    }
+
+    static function getLIActive($site,$NameMenu, $pref = '')
+    {
+        $menu = SiteMenu::whereRaw('ids = ? and name = ?', [$site, $NameMenu])->first();
+        $element = $menu->getElement()->orderBy('sort','asc')->get();
+
+        $html = '';
+
+        foreach($element as $li)
+        {
+            if(substr($li['link'], 0,1) == '/') {
+                $active = Active::path(substr($li['link'], 1));
+            }else {
+                $active = Active::path($li['link']);
+            }
+            $html .= "<li class='$active $li->class'><a href='$li->link'> $pref $li->label</a></li>";
         }
 
 
