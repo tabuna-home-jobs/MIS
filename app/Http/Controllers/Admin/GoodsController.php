@@ -18,6 +18,7 @@ class GoodsController extends Controller {
         $query = $request->input('query');
         if(is_null($query) || empty($query))
         {
+
             $Goods = Goods::where('ids', Session::get('website'))
                 ->orderBy('name', 'asc')
                 ->paginate(15);

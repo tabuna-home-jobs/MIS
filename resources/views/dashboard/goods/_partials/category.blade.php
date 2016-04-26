@@ -23,12 +23,3 @@
     </td>
 </tr>
 
-
-
-
-
-@if (count($category->children) > 0)
-    @foreach($category->children as $category)
-        @include('dashboard.goods._partials.category', $category)
-    @endforeach
-@endif
