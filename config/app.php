@@ -202,7 +202,8 @@ return [
         'View'      => 'Illuminate\Support\Facades\View',
 
         'Sites' => 'App\Facades\SitesFacades',
-        'SMS' => 'App\Facades\IntisSMSFacades',
+        //'SMS' => 'App\Facades\IntisSMSFacades',
+        'SMS' => \App\Facades\AeroSMSFacades::class,
         'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
         'Image' => 'Intervention\Image\Facades\Image',
         'Active' => 'Watson\Active\Facades\Active',
