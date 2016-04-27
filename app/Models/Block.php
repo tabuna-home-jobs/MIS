@@ -20,15 +20,12 @@ class Block extends Model {
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'content', 'tag', 'descript', 'ids'];
-
+    protected $fillable = ['title', 'name', 'cont', 'descript', 'ids'];
 
     /**
      * @var array
      */
-    protected $searchFields = ['title', 'name', 'content'];
-
-
+    protected $searchFields = ['title', 'name', 'cont'];
 
     public $SlugName = 'block';
 
@@ -41,7 +38,7 @@ class Block extends Model {
         'columns' => [
             'title' => 10,
             'name' => 10,
-            'content' => 20,
+            'cont' => 20,
             'tag' => 5,
             'descript' => 2,
         ]

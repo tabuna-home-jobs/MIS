@@ -195,6 +195,11 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'] ,'prefi
         'getAdd' => 'dashboard.reviews.add',
     ]);
 
+    Route::controller('block/{block}/items', 'BlockItemController', [
+        'getIndex' => 'dashboard.block_items',
+        'getAdd' => 'dashboard.block_items.add',
+    ]);
+
     Route::controller('category', 'CategoryController', [
         'getIndex' => 'dashboard.category.index',
         'getAdd' => 'dashboard.category.add',

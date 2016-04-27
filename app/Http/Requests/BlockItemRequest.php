@@ -1,8 +1,6 @@
 <?php namespace App\Http\Requests;
 
-use Sentry;
-
-class BlockRequest extends Request {
+class BlockItemRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -11,7 +9,7 @@ class BlockRequest extends Request {
 	 */
 	public function authorize()
 	{
-        return Sentry::check();
+		return true;
 	}
 
 	/**
@@ -21,13 +19,15 @@ class BlockRequest extends Request {
 	 */
 	public function rules()
 	{
-		return [
+        return [
             'id' => 'integer',
             'title' => 'required|max:255',
             'name' => 'required|max:255',
-            'cont' => 'required',
+            'text' => 'required',
             'descript' => 'max:255',
-		];
+            'avatar' => 'mimes:jpeg,bmp,png',
+            'block_id'=> 'integer'
+        ];
 	}
 
 }

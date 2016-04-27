@@ -14,20 +14,16 @@ use App\Http\Requests\BlockRequest;
 class BlockController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return Response
+     * Список блоков
      */
     public function index()
     {
-        $BlockList = Block::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/block/blocks", ['BlockList' => $BlockList]);
+        $items = Block::where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+        return view("dashboard/block/blocks", ['items' => $items]);
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
+     * Страница создание блока
      */
     public function create()
     {
@@ -35,24 +31,23 @@ class BlockController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @return Response
+     * Создание блока
      */
     public function store(BlockRequest $request)
     {
         $block = new Block([
             'title'=>$request->title,
             'name'=>$request->name,
-            'content'=>$request->content,
-            'tag'=>$request->tag,
+            'cont'=>$request->cont,
             'descript'=>$request->descript,
             'ids'=> Session::get('website'),
         ]);
-        $block->save();
 
-        //Флеш сообщение
-        Session::flash('good', 'Вы успешно добавили значения');
+        if ($block->save()) {
+            // Флеш сообщение
+            Session::flash('good', 'Вы успешно добавили значения');
+        }
+
         return redirect()->route('dashboard.block.index');
     }
 
@@ -68,10 +63,7 @@ class BlockController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
+     * Страница редактирования блока
      */
     public function edit(Block $block)
     {
@@ -79,18 +71,14 @@ class BlockController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  int  $id
-     * @return Response
+     * Редактирование блока
      */
     public function update(Block $block, BlockRequest $request)
     {
         $block->fill([
             'title'=>$request->title,
             'name'=>$request->name,
-            'content'=>$request->content,
-            'tag'=>$request->tag,
+            'cont'=>$request->cont,
             'descript'=>$request->descript,
             'ids'=> Session::get('website'),
         ])->save();
@@ -101,10 +89,7 @@ class BlockController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
+     * Удаление блока
      */
     public function destroy(Block $block)
     {
