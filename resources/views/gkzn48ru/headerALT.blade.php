@@ -65,15 +65,12 @@
             <!-- ===== Collect the nav links, forms, and other content for toggling ===== -->
             <div class="collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="{{Active::route('appointment')}}"><a href="/appointment">Запись на приём</a></li>
-                    <li class="{{Active::route('login.*')}}"><a href="/login">Личный кабинет</a></li>
+                    {!!Menu::getLIActive('3','top', '')!!}
                 </ul>
 
 
                 <ul id="menu-medic" class="nav navbar-nav navbar-right">
-                    <li class="{{Active::route('medencyclopedia.*')}}"><a href="/medencyclopedia">Энциклопедия</a></li>
-                    <li class="{{Active::route('blog.*')}}"><a href="/blog">Новости</a></li>
-                    <li class="{{Active::route('feedback.*')}}"><a href="/feedback">Контакты</a></li>
+                    {!!Menu::getLIActive('3','top_right', '')!!}
                 </ul>
             </div>
             <!-- ===== End Navbar-collapse ===== -->
