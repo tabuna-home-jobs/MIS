@@ -80,7 +80,6 @@ class UserController extends Controller
      */
     public function update(UserUpdateRequest $request)
     {
-
         $user = Sentry::getUser();
         $user->email = $request->email;
         $user->first_name = $request->first_name;
@@ -90,7 +89,6 @@ class UserController extends Controller
         return redirect()->route('dashboard.user.index');
 
         //dd(Sentry::getUser());
-
     }
 
     /**
@@ -116,5 +114,4 @@ class UserController extends Controller
             echo 'User was not found.';
         }
     }
-
 }

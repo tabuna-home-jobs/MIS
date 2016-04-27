@@ -39,5 +39,4 @@ class CreateTableSeo extends Migration
     {
         Schema::drop('seo');
     }
-
 }

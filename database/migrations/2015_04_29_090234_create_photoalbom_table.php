@@ -31,5 +31,4 @@ class CreatePhotoAlbomTable extends Migration
     {
         Schema::drop('photoalbum');
     }
-
 }

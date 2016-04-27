@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\ReviewsRequest;
+use App\Models\Reviews;
 use App\Models\Sites;
 use Session;
-use App\Models\Reviews;
 
 class ReviewsController extends Controller
 {
@@ -41,14 +41,13 @@ class ReviewsController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Reviews = new Reviews([
             'fio' => $requests->fio,
-         //   'content' => $requests->content,
+            //   'content' => $requests->content,
             'publish' => 0
         ]);
         $getSites->getReviews()->save($Reviews);
 
         Session::flash('good', 'Спасибо, что написали, ваше мнение очень важно для нас.');
         return redirect()->back();
-
     }
 
     /**
@@ -94,5 +93,4 @@ class ReviewsController extends Controller
     {
         //
     }
-
 }

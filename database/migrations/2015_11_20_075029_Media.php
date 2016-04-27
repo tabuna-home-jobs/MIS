@@ -20,7 +20,6 @@ class Media extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
-
     }
 
     /**

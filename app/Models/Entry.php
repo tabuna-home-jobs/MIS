@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Entry extends Model {
+class Entry extends Model
+{
 
     use SoftDeletes;
     public $incrementing = false;
@@ -28,7 +29,4 @@ class Entry extends Model {
     {
         return $this->belongsTo('App\Models\Timetable');
     }
-
-
-
 }

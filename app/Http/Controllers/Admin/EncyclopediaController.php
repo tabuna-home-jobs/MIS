@@ -24,7 +24,7 @@ class EncyclopediaController extends Controller
     public function index()
     {
         $listPost = EncyPost::with('Category')->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/encyclopedia/post",['listPost' => $listPost ]);
+        return view("dashboard/encyclopedia/post", ['listPost' => $listPost]);
     }
 
     /**
@@ -34,12 +34,12 @@ class EncyclopediaController extends Controller
      */
     public function create()
     {
-        $category = EncyCategory::lists('name','id')->all();
-        $specdoctor = Cache::remember('TimeTableSpecialist', 10, function() {
+        $category = EncyCategory::lists('name', 'id')->all();
+        $specdoctor = Cache::remember('TimeTableSpecialist', 10, function () {
             return TimeTable::distinct()->lists('specialization')->all();
         });
 
-        return view("dashboard/encyclopedia/CreatePost",['category' => $category, 'specdoctor' =>$specdoctor ]);
+        return view("dashboard/encyclopedia/CreatePost", ['category' => $category, 'specdoctor' => $specdoctor]);
     }
 
     /**
@@ -66,7 +66,7 @@ class EncyclopediaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function show($id)
@@ -77,28 +77,28 @@ class EncyclopediaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function edit(EncyPost $post)
     {
-        $category = EncyCategory::lists('name','id')->all();
-        $specdoctor = Cache::remember('TimeTableSpecialist', 10, function() {
+        $category = EncyCategory::lists('name', 'id')->all();
+        $specdoctor = Cache::remember('TimeTableSpecialist', 10, function () {
             return TimeTable::distinct()->lists('specialization')->all();
         });
 
-        return view("dashboard/encyclopedia/EditPost",['category' => $category, 'specdoctor' =>$specdoctor , 'post' => $post]);
+        return view("dashboard/encyclopedia/EditPost",
+            ['category' => $category, 'specdoctor' => $specdoctor, 'post' => $post]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function update(EncyPost $post, EncyPostRequest $request)
     {
-
         $post->fill($request->all());
         //dd($post);
         $post->pol = serialize($request->pol);
@@ -113,14 +113,12 @@ class EncyclopediaController extends Controller
         //Флеш сообщение
         Session::flash('good', 'Вы успешно изменили значения');
         return redirect()->route('dashboard.encyclopedia.index');
-
-
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function destroy(EncyPost $post)
@@ -129,6 +127,4 @@ class EncyclopediaController extends Controller
         Session::flash('good', 'Вы успешно удалили значения');
         return redirect()->route('dashboard.encyclopedia.index');
     }
-
-
 }

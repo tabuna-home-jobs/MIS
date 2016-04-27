@@ -1,6 +1,5 @@
 <?php namespace App\Facades;
 
-
 use App\Models\SEO;
 use Illuminate\Support\Facades\Facade;
 

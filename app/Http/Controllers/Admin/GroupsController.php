@@ -39,13 +39,12 @@ class GroupsController extends Controller
      */
     public function store(GroupRequest $request)
     {
-
-            $group = Sentry::createGroup(array(
-                'name' => $request->name,
-                'permissions' => $request->permissions
-            ));
-            Session::flash('good', 'Вы создали удалили группу.');
-            return redirect()->route('dashboard.groups.index');
+        $group = Sentry::createGroup(array(
+            'name' => $request->name,
+            'permissions' => $request->permissions
+        ));
+        Session::flash('good', 'Вы создали удалили группу.');
+        return redirect()->route('dashboard.groups.index');
     }
 
     /**
@@ -83,24 +82,24 @@ class GroupsController extends Controller
      */
     public function update(GroupRequest $request)
     {
-
         $group = Sentry::findGroupById($request->id);
 
-            // Update the group details
-            $raznica = array_diff_key($group->permissions, $request->permissions);
-            foreach ($raznica as $key => $value)
-                $raznica[$key] = 0;
+        // Update the group details
+        $raznica = array_diff_key($group->permissions, $request->permissions);
+        foreach ($raznica as $key => $value) {
+            $raznica[$key] = 0;
+        }
 
-            $group->name = $request->namenew;
-            $group->permissions = array_merge($raznica, $request->permissions);
+        $group->name = $request->namenew;
+        $group->permissions = array_merge($raznica, $request->permissions);
 
-            // Update the group
-            if ($group->save()) {
-                Session::flash('good', 'Вы изменили группу.');
-                return redirect()->route('dashboard.groups.index');
-            } else {
-                // Group information was not updated
-            }
+        // Update the group
+        if ($group->save()) {
+            Session::flash('good', 'Вы изменили группу.');
+            return redirect()->route('dashboard.groups.index');
+        } else {
+            // Group information was not updated
+        }
     }
 
     /**
@@ -112,10 +111,8 @@ class GroupsController extends Controller
      */
     public function destroy(GroupRequest $request)
     {
-            Sentry::findGroupById($request->id)->delete();
-            Session::flash('good', 'Вы успешно удалили группу.');
-            return redirect()->route('dashboard.groups.index');
-
+        Sentry::findGroupById($request->id)->delete();
+        Session::flash('good', 'Вы успешно удалили группу.');
+        return redirect()->route('dashboard.groups.index');
     }
-
 }

@@ -18,8 +18,7 @@ class EncyclopediaController extends Controller
     public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $LastNews = EncyPost::limit(6)->get();
-        $MainElementMenu = EncyCategory::where('encycategory_id','0')->select('id','name')->get();
-
+        $MainElementMenu = EncyCategory::where('encycategory_id', '0')->select('id', 'name')->get();
 
 
         //Алфавитный указатель
@@ -30,7 +29,8 @@ class EncyclopediaController extends Controller
         sort($Index);
 
 
-        return view( $sitename.$sitedomen.'/encyclopedia',['MainElementMenu' => $MainElementMenu, 'LastNews' => $LastNews,'Index' => $Index]);
+        return view($sitename . $sitedomen . '/encyclopedia',
+            ['MainElementMenu' => $MainElementMenu, 'LastNews' => $LastNews, 'Index' => $Index]);
     }
 
     /**
@@ -56,14 +56,12 @@ class EncyclopediaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function show($model, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-
-
-        $MainElementMenu = EncyCategory::where('encycategory_id','0')->select('id','name')->get();
+        $MainElementMenu = EncyCategory::where('encycategory_id', '0')->select('id', 'name')->get();
 
 
         //Алфавитный указатель
@@ -76,7 +74,7 @@ class EncyclopediaController extends Controller
         $post = $model->Post()->paginate(9);
 
 
-        return view( $sitename.$sitedomen.'/encyclopediaCategory',[
+        return view($sitename . $sitedomen . '/encyclopediaCategory', [
             'MainElementMenu' => $MainElementMenu,
             'Category' => $model,
             'Index' => $Index,
@@ -87,7 +85,7 @@ class EncyclopediaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function edit($id)
@@ -98,7 +96,7 @@ class EncyclopediaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function update($id)
@@ -109,7 +107,7 @@ class EncyclopediaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function destroy($id)

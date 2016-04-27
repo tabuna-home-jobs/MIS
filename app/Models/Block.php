@@ -20,12 +20,12 @@ class Block extends Model {
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'cont', 'descript', 'ids'];
+    protected $fillable = ['title', 'name', 'cont', 'descript', 'ids', 'slug'];
 
     /**
      * @var array
      */
-    protected $searchFields = ['title', 'name', 'cont'];
+    protected $searchFields = ['title', 'name', 'cont', 'slug'];
 
     public $SlugName = 'block';
 
@@ -39,9 +39,14 @@ class Block extends Model {
             'title' => 10,
             'name' => 10,
             'cont' => 20,
+            'slug' => 10,
             'tag' => 5,
             'descript' => 2,
         ]
     ];
 
+    public function items()
+    {
+        return $this->hasMany('App\Models\BlockItem', 'block_id');
+    }
 }

@@ -2,12 +2,12 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-
 use Remoblaser\Search\SearchableTrait;
 
-class News extends Model {
+class News extends Model
+{
 
-    use SoftDeletes,SearchableTrait;
+    use SoftDeletes, SearchableTrait;
     /**
      * The database table used by the model.
      *
@@ -21,7 +21,6 @@ class News extends Model {
      * @var array
      */
     protected $fillable = ['title', 'name', 'content', 'avatar', 'datetime', 'tag', 'descript', 'ids', 'created_at'];
-
 
 
     protected $searchFields = ['title', 'name', 'content'];
@@ -48,6 +47,4 @@ class News extends Model {
     {
         return $this->belongsTo('App\Models\Sites', 'ids');
     }
-
-
 }

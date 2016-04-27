@@ -33,6 +33,7 @@ class VK
      * @var \StdClass
      */
     private $accessToken;
+
     /**
      * The Vkontakte instance constructor for quick configuration
      * @param array $config
@@ -58,6 +59,7 @@ class VK
             $this->setResponceType($config['response_type']);
         }
     }
+
     /**
      * Get the user id of current access token
      * @return integer
@@ -66,96 +68,7 @@ class VK
     {
         return $this->accessToken->user_id;
     }
-    /**
-     * Set the application id
-     * @param integer $appId
-     * @return \Vkontakte
-     */
-    public function setAppId($appId)
-    {
-        $this->appId = $appId;
-        return $this;
-    }
-    /**
-     * Get the application id
-     * @return integer
-     */
-    public function getAppId()
-    {
-        return $this->appId;
-    }
-    /**
-     * Set the application secret key
-     * @param string $secret
-     * @return \Vkontakte
-     */
-    public function setSecret($secret)
-    {
-        $this->secret = $secret;
-        return $this;
-    }
-    /**
-     * Get the application secret key
-     * @return string
-     */
-    public function getSecret()
-    {
-        return $this->secret;
-    }
-    /**
-     * Set the scope for login URL
-     * @param array $scope
-     * @return \Vkontakte
-     */
-    public function setScope(array $scope)
-    {
-        $this->scope = $scope;
-        return $this;
-    }
-    /**
-     * Get the scope for login URL
-     * @return array
-     */
-    public function getScope()
-    {
-        return $this->scope;
-    }
-    /**
-     * Set the URL to which the user will be redirected
-     * @param string $redirect_uri
-     * @return \Vkontakte
-     */
-    public function setRedirectUri($redirect_uri)
-    {
-        $this->redirect_uri = $redirect_uri;
-        return $this;
-    }
-    /**
-     * Get the URL to which the user will be redirected
-     * @return string
-     */
-    public function getRedirectUri()
-    {
-        return $this->redirect_uri;
-    }
-    /**
-     * Set the response type of login URL
-     * @param string $responceType
-     * @return \Vkontakte
-     */
-    public function setResponceType($responceType)
-    {
-        $this->responceType = $responceType;
-        return $this;
-    }
-    /**
-     * Get the response type of login URL
-     * @return string
-     */
-    public function getResponceType()
-    {
-        return $this->responceType;
-    }
+
     /**
      * Get the login URL via Vkontakte
      * @return string
@@ -169,6 +82,87 @@ class VK
         . '&response_type=' . urlencode($this->getResponceType())
         . '&v=' . urlencode(self::VERSION);
     }
+
+    /**
+     * Get the application id
+     * @return integer
+     */
+    public function getAppId()
+    {
+        return $this->appId;
+    }
+
+    /**
+     * Set the application id
+     * @param integer $appId
+     * @return \Vkontakte
+     */
+    public function setAppId($appId)
+    {
+        $this->appId = $appId;
+        return $this;
+    }
+
+    /**
+     * Get the scope for login URL
+     * @return array
+     */
+    public function getScope()
+    {
+        return $this->scope;
+    }
+
+    /**
+     * Set the scope for login URL
+     * @param array $scope
+     * @return \Vkontakte
+     */
+    public function setScope(array $scope)
+    {
+        $this->scope = $scope;
+        return $this;
+    }
+
+    /**
+     * Get the URL to which the user will be redirected
+     * @return string
+     */
+    public function getRedirectUri()
+    {
+        return $this->redirect_uri;
+    }
+
+    /**
+     * Set the URL to which the user will be redirected
+     * @param string $redirect_uri
+     * @return \Vkontakte
+     */
+    public function setRedirectUri($redirect_uri)
+    {
+        $this->redirect_uri = $redirect_uri;
+        return $this;
+    }
+
+    /**
+     * Get the response type of login URL
+     * @return string
+     */
+    public function getResponceType()
+    {
+        return $this->responceType;
+    }
+
+    /**
+     * Set the response type of login URL
+     * @param string $responceType
+     * @return \Vkontakte
+     */
+    public function setResponceType($responceType)
+    {
+        $this->responceType = $responceType;
+        return $this;
+    }
+
     /**
      * Check is access token expired
      * @return boolean
@@ -177,12 +171,13 @@ class VK
     {
         return time() > $this->accessToken->created + $this->accessToken->expires_in;
     }
+
     /**
      * Authenticate user and get access token from server
      * @param string $code
      * @return \Vkontakte
      */
-    public function authenticate($code = NULL)
+    public function authenticate($code = null)
     {
         $code = $code ? $code : $_GET['code'];
         $url = 'https://oauth.vk.com/access_token'
@@ -197,53 +192,27 @@ class VK
         $this->setAccessToken($token);
         return $this;
     }
+
     /**
-     * Set the access token
-     * @param string $token The access token in json format
+     * Get the application secret key
+     * @return string
+     */
+    public function getSecret()
+    {
+        return $this->secret;
+    }
+
+    /**
+     * Set the application secret key
+     * @param string $secret
      * @return \Vkontakte
      */
-    public function setAccessToken($token)
+    public function setSecret($secret)
     {
-        $this->accessToken = json_decode($token);
+        $this->secret = $secret;
         return $this;
     }
-    /**
-     * Get the access token
-     * @param string $code
-     * @return string The access token in json format
-     */
-    public function getAccessToken()
-    {
-        return json_encode($this->accessToken);
-    }
-    /**
-     * Make an API call to https://api.vk.com/method/
-     * @return string The response, decoded from json format
-     */
-    public function api($method, array $query = array())
-    {
-        /* Generate query string from array */
-        $parameters = array();
-        foreach ($query as $param => $value) {
-            $q = $param . '=';
-            if (is_array($value)) {
-                $q .= urlencode(implode(',', $value));
-            } else {
-                $q .= urlencode($value);
-            }
-            $parameters[] = $q;
-        }
-        $q = implode('&', $parameters);
-        if (count($query) > 0) {
-            $q .= '&'; // Add "&" sign for access_token if query exists
-        }
-        $url = 'https://api.vk.com/method/' . $method . '?' . $q . 'access_token=' . $this->accessToken->access_token;
-        $result = json_decode($this->curl($url));
-        if (isset($result->response)) {
-            return $result->response;
-        }
-        return $result;
-    }
+
     /**
      * Make the curl request to specified url
      * @param string $url The url for curl() function
@@ -257,9 +226,9 @@ class VK
         // set url
         curl_setopt($ch, CURLOPT_URL, $url);
         // return the transfer as a string
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         // disable SSL verifying
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         // $output contains the output string
         $result = curl_exec($ch);
         if (!$result) {
@@ -273,6 +242,28 @@ class VK
         }
         return $result;
     }
+
+    /**
+     * Get the access token
+     * @param string $code
+     * @return string The access token in json format
+     */
+    public function getAccessToken()
+    {
+        return json_encode($this->accessToken);
+    }
+
+    /**
+     * Set the access token
+     * @param string $token The access token in json format
+     * @return \Vkontakte
+     */
+    public function setAccessToken($token)
+    {
+        $this->accessToken = json_decode($token);
+        return $this;
+    }
+
     /**
      * @param $publicID int vk group official identifier
      * @param $fullServerPathToImage string full path to the image file, ex. /var/www/site/img/pic.jpg
@@ -341,5 +332,34 @@ public 'created' => int 1402950212
                 'attachments' => "{$response[0]->id}", // uploaded image is passed as attachment
             ]);
         return isset($response->post_id);
+    }
+
+    /**
+     * Make an API call to https://api.vk.com/method/
+     * @return string The response, decoded from json format
+     */
+    public function api($method, array $query = array())
+    {
+        /* Generate query string from array */
+        $parameters = array();
+        foreach ($query as $param => $value) {
+            $q = $param . '=';
+            if (is_array($value)) {
+                $q .= urlencode(implode(',', $value));
+            } else {
+                $q .= urlencode($value);
+            }
+            $parameters[] = $q;
+        }
+        $q = implode('&', $parameters);
+        if (count($query) > 0) {
+            $q .= '&'; // Add "&" sign for access_token if query exists
+        }
+        $url = 'https://api.vk.com/method/' . $method . '?' . $q . 'access_token=' . $this->accessToken->access_token;
+        $result = json_decode($this->curl($url));
+        if (isset($result->response)) {
+            return $result->response;
+        }
+        return $result;
     }
 }

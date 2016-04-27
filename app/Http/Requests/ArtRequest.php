@@ -1,9 +1,9 @@
 <?php namespace App\Http\Requests;
 
-
 use Sentry;
 
-class ArtRequest extends Request {
+class ArtRequest extends Request
+{
 
     /**
      * Determine if the user is authorized to make this request.
@@ -32,5 +32,4 @@ class ArtRequest extends Request {
             'avatar' => 'mimes:jpeg,bmp,png'
         ];
     }
-
 }

@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\Options;
-use Session;
+use App\Http\Requests;
 use App\Http\Requests\Admin\OptionsRequest;
+use App\Models\Options;
+use Illuminate\Http\Request;
+use Session;
 
 class OptionsController extends Controller
 {
@@ -53,7 +52,7 @@ class OptionsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function show($id)
@@ -64,24 +63,24 @@ class OptionsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function edit($id)
     {
-        $Options = Options::whereRaw('ids= ? and id=?', [Session::get('website'),$id])->first();
-        return view("dashboard/options/EditOptions", ['Options'=> $Options]);
+        $Options = Options::whereRaw('ids= ? and id=?', [Session::get('website'), $id])->first();
+        return view("dashboard/options/EditOptions", ['Options' => $Options]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function update(OptionsRequest $request)
     {
-        $Options = Options::whereRaw('ids= ? and id=?', [Session::get('website'),$request->id])->first();
+        $Options = Options::whereRaw('ids= ? and id=?', [Session::get('website'), $request->id])->first();
         $Options->fill([
             'module' => $request->module,
             'value' => $request->value,
@@ -89,18 +88,17 @@ class OptionsController extends Controller
         ]);
         Session::flash('good', 'Вы успешно изменили значения');
         return redirect()->route('dashboard.options.index');
-
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function destroy($id)
     {
-        $Options = Options::whereRaw('ids= ? and id=?', [Session::get('website'),$id])->first();
+        $Options = Options::whereRaw('ids= ? and id=?', [Session::get('website'), $id])->first();
         $Options->delete();
         Session::flash('good', 'Вы успешно удалили значения');
         return redirect()->route('dashboard.options.index');

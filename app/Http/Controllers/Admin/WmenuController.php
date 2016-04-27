@@ -3,11 +3,11 @@
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Http\Requests\Admin\UserRequest;
+use App\Models\Menu;
+use App\Models\MenuItem;
 use Input;
 use Sentry;
 use Session;
-use App\Models\Menu;
-use App\Models\MenuItem;
 use View;
 
 class WmenuController extends Controller
@@ -16,14 +16,15 @@ class WmenuController extends Controller
     {
         $menuitems = new MenuItem();
         //$menulist = Menu::lists("name", "id");
-        $menulist = Menu::where('ids',Session::get('website'))->lists("name", "id");
+        $menulist = Menu::where('ids', Session::get('website'))->lists("name", "id");
         $menulist[0] = "Выберите меню";
         if (Input::has("action")) {
             return View::make('dashboard/menu/menu')->with("menulist", $menulist);
         } else {
             $menu = Menu::find(Input::get("menu"));
             $menus = $menuitems->getall(Input::get("menu"));
-            return View::make('dashboard/menu/menu')->with("menus", $menus)->with("indmenu", $menu)->with("menulist", $menulist);
+            return View::make('dashboard/menu/menu')->with("menus", $menus)->with("indmenu", $menu)->with("menulist",
+                $menulist);
         }
     }
 

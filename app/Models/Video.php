@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Video extends Model {
+class Video extends Model
+{
 
     use SoftDeletes;
     /**
@@ -21,7 +22,6 @@ class Video extends Model {
     protected $fillable = ['ids', 'album_id', 'code'];
 
 
-
     public function getSite()
     {
         return $this->belongsTo('App\Models\Sites', 'ids');
@@ -31,6 +31,4 @@ class Video extends Model {
     {
         return $this->belongsTo('App\Models\VideoAlbum', 'album_id');
     }
-
-
 }

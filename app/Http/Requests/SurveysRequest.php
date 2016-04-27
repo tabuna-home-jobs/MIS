@@ -27,5 +27,4 @@ class SurveysRequest extends Request
             'id' => 'integer',
         ];
     }
-
 }

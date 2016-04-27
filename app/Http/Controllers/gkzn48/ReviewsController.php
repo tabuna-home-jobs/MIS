@@ -48,7 +48,6 @@ class ReviewsController extends Controller
 
         Session::flash('good', 'Спасибо, что написали, ваше мнение очень важно для нас.');
         return redirect()->back();
-
     }
 
     /**
@@ -94,5 +93,4 @@ class ReviewsController extends Controller
     {
         //
     }
-
 }

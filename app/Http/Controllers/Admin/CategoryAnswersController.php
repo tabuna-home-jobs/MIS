@@ -18,7 +18,6 @@ class CategoryAnswersController extends Controller
      */
     public function index()
     {
-
         return view('dashboard.questAnswer.category', [
             'category' => CategoryAnswers::where('ids', Session::get('website'))->orderBy('id', 'DESC')->paginate(15)
         ]);

@@ -28,12 +28,17 @@
 
                                 <div class="form-group">
                                     <label>Заголовок</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="title" value="{{$Block->title or ''}}">
+                                    <input class="form-control" type="text" maxlength="255" required name="title" value="{{ old('title', $Block->title)}}">
                                 </div>
 
                                 <div class="form-group">
                                     <label>Имя</label>
                                     <input class="form-control" type="text" maxlength="255" required name="name" value="{{$Block->name or ''}}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Идентификатор</label>
+                                    <input class="form-control" type="text" maxlength="255" required name="slug" value="{{$Block->slug or ''}}">
                                 </div>
 
                                 <div class="form-group">

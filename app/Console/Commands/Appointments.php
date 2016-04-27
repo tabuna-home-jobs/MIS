@@ -61,13 +61,11 @@ class Appointments extends Command
         }
 
         $this->appointment();
-
     }
 
 
     protected function appointment()
     {
-
         $files = collect(Storage::files(''));
 
         $filtered = $files->filter(function ($item) {
@@ -86,16 +84,12 @@ class Appointments extends Command
         DB::connection()->disableQueryLog();
 
         foreach ($filtered as $file1COUT) {
-
-
             if (Storage::exists($file1COUT)) {
-
                 $xml = simplexml_load_string(Storage::get($file1COUT));
                 $date = date("Y-m-d G:i:s");
                 $doctor = [];
 
                 foreach ($xml->Record as $value) {
-
                     $doctor[] = [
                         'id' => $value->attributes()->ID,
                         'subdivision' => (string)$value->PODR,
@@ -118,8 +112,6 @@ class Appointments extends Command
                     }
 
                     DB::table('entry')->insert($entry);
-
-
                 }
 
                 DB::table('timetable')->truncate();
@@ -133,11 +125,9 @@ class Appointments extends Command
 
                 Storage::delete($file1COUT);
                 $this->info('Команда выгрузки xml файла расписания отработала');
-
             } else {
                 $this->info('xml файл не существует');
             }
-
         }
 
 
@@ -146,9 +136,7 @@ class Appointments extends Command
             'Record' => $Apportointments
         ])->render();
         Storage::put(time() . '-export.xml', $Views);
-
     }
-
 
 
     /**
@@ -174,5 +162,4 @@ class Appointments extends Command
             //['example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null],
         ];
     }
-
 }

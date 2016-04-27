@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\SpecialRequest;
-use App\Models\Specialisty;
 use App\Models\SpecCat;
+use App\Models\Specialisty;
 use Image;
 use Redirect;
 use Request;
@@ -30,8 +30,8 @@ class SpecialistyController extends Controller
     public function create()
     {
         $SpecCat = SpecCat::where('ids', Session::get('website'))->orderBy('id', 'desc')->get();
-        return view("dashboard/special/create",[
-           'cats' => $SpecCat
+        return view("dashboard/special/create", [
+            'cats' => $SpecCat
         ]);
     }
 
@@ -39,7 +39,7 @@ class SpecialistyController extends Controller
     {
         $SpecCat = SpecCat::where('ids', Session::get('website'))->orderBy('id', 'desc')->get();
 
-        return view("dashboard/special/edit",['Spec'=>$Spec,'cats' => $SpecCat]);
+        return view("dashboard/special/edit", ['Spec' => $Spec, 'cats' => $SpecCat]);
     }
 
 
@@ -48,21 +48,21 @@ class SpecialistyController extends Controller
         (isset($request->best)) ? $request['best'] = 1 : $request['best'] = 0;
 
         $special = new Specialisty([
-                'fio' => $request->fio,
-                'subname' => $request->subname,
-                'special' => $request->special,
-                'obrazovanie' => $request->obrazovanie,
-                'opyt' => $request->opyt,
-                'about' => $request->about,
-                'works' => serialize($request->works),
-                'cats' => $request->cats,
-                'sort' => $request->sort,
-                'staj' => $request->staj,
-                'dopinfo' => $request->dopinfo,
-                'napravlenie' => $request->napravlenie,
-                'sertificats' => $request->sertificats,
-                'best' => $request->best,
-                'ids' => Session::get('website'),
+            'fio' => $request->fio,
+            'subname' => $request->subname,
+            'special' => $request->special,
+            'obrazovanie' => $request->obrazovanie,
+            'opyt' => $request->opyt,
+            'about' => $request->about,
+            'works' => serialize($request->works),
+            'cats' => $request->cats,
+            'sort' => $request->sort,
+            'staj' => $request->staj,
+            'dopinfo' => $request->dopinfo,
+            'napravlenie' => $request->napravlenie,
+            'sertificats' => $request->sertificats,
+            'best' => $request->best,
+            'ids' => Session::get('website'),
         ]);
 
         if (Request::hasFile('avatar')) {
@@ -78,10 +78,8 @@ class SpecialistyController extends Controller
     }
 
 
-
     public function update(Specialisty $special, SpecialRequest $request)
     {
-
         (isset($request->best)) ? $request['best'] = 1 : $request['best'] = 0;
 
         $special->fill([
@@ -115,8 +113,6 @@ class SpecialistyController extends Controller
     }
 
 
-
-
     //Удаление
     public function destroy(Specialisty $special)
     {
@@ -124,6 +120,4 @@ class SpecialistyController extends Controller
         Session::flash('good', 'Вы успешно удалили значения');
         return redirect()->route('dashboard.special.index');
     }
-
-
 }

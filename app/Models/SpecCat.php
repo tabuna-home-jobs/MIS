@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class SpecCat extends Model {
+class SpecCat extends Model
+{
 
     use SoftDeletes;
 
@@ -22,5 +23,4 @@ class SpecCat extends Model {
     {
         return $this->belongsTo('App\Models\Sites', 'ids');
     }
-
 }

@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Options extends Model {
+class Options extends Model
+{
 
     /**
      * The database table used by the model.
@@ -16,14 +17,11 @@ class Options extends Model {
      *
      * @var array
      */
-    protected $fillable = ['ids','module','value'];
-
+    protected $fillable = ['ids', 'module', 'value'];
 
 
     public function getSite()
     {
         return $this->belongsTo('App\Models\Sites', 'ids');
     }
-
-
 }

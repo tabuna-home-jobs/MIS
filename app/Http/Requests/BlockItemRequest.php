@@ -21,7 +21,6 @@ class BlockItemRequest extends Request {
 	{
         return [
             'id' => 'integer',
-            'title' => 'required|max:255',
             'name' => 'required|max:255',
             'text' => 'required',
             'descript' => 'max:255',

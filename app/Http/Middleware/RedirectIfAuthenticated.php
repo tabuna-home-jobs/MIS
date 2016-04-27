@@ -5,37 +5,36 @@ use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\RedirectResponse;
 use Sentry;
 
-class RedirectIfAuthenticated {
+class RedirectIfAuthenticated
+{
 
-	/**
-	 * The Guard implementation.
-	 *
-	 * @var Guard
-	 */
+    /**
+     * The Guard implementation.
+     *
+     * @var Guard
+     */
 
 
-	/**
-	 * Create a new filter instance.
-	 *
-	 * @param  Guard  $auth
-	 * @return void
-	 */
+    /**
+     * Create a new filter instance.
+     *
+     * @param  Guard $auth
+     * @return void
+     */
 
-	/**
-	 * Handle an incoming request.
-	 *
-	 * @param  \Illuminate\Http\Request  $request
-	 * @param  \Closure  $next
-	 * @return mixed
-	 */
-	public function handle($request, Closure $next)
-	{
-        if (Sentry::check())
-		{
-			return new RedirectResponse(url('/dashboard'));
-		}
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Closure $next
+     * @return mixed
+     */
+    public function handle($request, Closure $next)
+    {
+        if (Sentry::check()) {
+            return new RedirectResponse(url('/dashboard'));
+        }
 
-		return $next($request);
-	}
-
+        return $next($request);
+    }
 }

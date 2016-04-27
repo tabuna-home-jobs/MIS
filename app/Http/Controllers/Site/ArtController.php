@@ -4,14 +4,15 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Models\Sites;
 
-class ArtController extends Controller {
+class ArtController extends Controller
+{
 
 
     public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
-        $getArts =$getSites->getArts()->orderBy('id', 'desc')->paginate(5);
-        return view( $sitename.$sitedomen.'/Articles', ['art' => $getArts]);
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $getArts = $getSites->getArts()->orderBy('id', 'desc')->paginate(5);
+        return view($sitename . $sitedomen . '/Articles', ['art' => $getArts]);
     }
 
 
@@ -29,9 +30,8 @@ class ArtController extends Controller {
 
     public function show($id, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-
-        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
-        $getArts =$getSites->getArts()->find($id->id);
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $getArts = $getSites->getArts()->find($id->id);
 
         return view($sitename . $sitedomen . '/artItem', [
             'art' => $getArts,
@@ -55,5 +55,4 @@ class ArtController extends Controller {
     {
         //
     }
-
 }

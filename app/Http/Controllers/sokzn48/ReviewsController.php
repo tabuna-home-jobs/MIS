@@ -39,8 +39,6 @@ class ReviewsController extends Controller
      */
     public function store(ReviewsRequest $requests, $sitename = "sokzn48", $sitedomen = "ru")
     {
-
-
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $Reviews = new Reviews([
             'fio' => $requests->fio,
@@ -51,7 +49,6 @@ class ReviewsController extends Controller
 
         Session::flash('good', 'Спасибо, что написали, ваше мнение очень важно для нас.');
         return redirect()->back();
-
     }
 
     /**
@@ -97,5 +94,4 @@ class ReviewsController extends Controller
     {
         //
     }
-
 }

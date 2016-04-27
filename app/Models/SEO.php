@@ -28,6 +28,4 @@ class SEO extends Model
         'custom' => 'array',
         'image' => 'array',
     ];
-
-
 }

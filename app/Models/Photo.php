@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Photo extends Model {
+class Photo extends Model
+{
 
     use SoftDeletes;
     /**
@@ -18,8 +19,7 @@ class Photo extends Model {
      *
      * @var array
      */
-    protected $fillable = ['ids', 'album_id', 'url','videourl'];
-
+    protected $fillable = ['ids', 'album_id', 'url', 'videourl'];
 
 
     public function getSite()
@@ -31,6 +31,4 @@ class Photo extends Model {
     {
         return $this->belongsTo('App\Models\Album', 'album_id');
     }
-
-
 }

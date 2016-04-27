@@ -2,12 +2,13 @@
 
 @section('content')
     <div class="bg-light lter b-b wrapper-md">
-        <h1 class="m-n font-thin h3"> Список комплексных услуг</h1>
+        <h1 class="m-n font-thin h3"> &laquo;{{ $block->name }}&raquo; - Список элементов </h1>
     </div>
     <div class="wrapper-md">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <a href="/dashboard/goods_group/add/" class="btn btn-link btn-sm"><span class="fa fa-plus"></span> Добавить новую запись </a>
+                <a href="/dashboard/block/" class="btn btn-danger btn-xs"> <i class="fa fa-arrow-left"></i> Список блоков</a>
+                <a href="/dashboard/block/{{$block->id}}/items/add/" class="btn btn-success btn-xs pull-right">Добавить элемент <i class="fa fa-plus"></i></a>
             </div>
 
             <div class="table-responsive">
@@ -18,7 +19,7 @@
                                 <thead>
                                 <tr>
                                     <th style="width: 5%;">#</th>
-                                    <th style="width: 15%;">Миниатюра</th>
+                                    <th style="width: 15%;">Изображение</th>
                                     <th>Имя</th>
                                     <th style="width: 12%;">Управление</th>
                                 </tr>
@@ -37,10 +38,10 @@
 
                     <div class="row">
                         <div class="col-sm-6 text-center">
-                            <small class="text-muted inline m-t-sm m-b-sm">Всего элементов: {!! $Groups->count() !!}</small>
+                            <small class="text-muted inline m-t-sm m-b-sm">Всего элементов: {!! $items->count() !!}</small>
                         </div>
                         <div class="col-sm-6 text-right text-center-xs">
-                            {!! $Groups->render() !!}
+                            {!! $items->render() !!}
                         </div>
                     </div>
                 </div>

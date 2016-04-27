@@ -1,6 +1,5 @@
 <?php namespace App\Models\Observer;
 
-
 class GoodsObserver
 {
 
@@ -11,7 +10,8 @@ class GoodsObserver
     }
 
 
-    public function created($model){
+    public function created($model)
+    {
         return $this->saving($model);
     }
 
@@ -24,6 +24,4 @@ class GoodsObserver
             $model->slug = str_slug($model->title, '-');
         }
     }
-
-
 }

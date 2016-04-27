@@ -12,8 +12,7 @@ class SortFieldSpecialAdmin extends Migration
      */
     public function up()
     {
-        Schema::table('specialisty', function($table)
-        {
+        Schema::table('specialisty', function ($table) {
             $table->integer('sort')->default(0);
         });
     }

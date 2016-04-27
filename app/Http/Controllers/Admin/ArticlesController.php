@@ -2,22 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Requests\ArtRequest;
 use App\Models\Articles;
+use App\Services\Social;
 use Image;
 use Redirect;
 use Request;
 use Session;
 use Validator;
-use App\Http\Requests\ArtRequest;
-use App\Services\Social;
-
-
-
-
-
-
 
 class ArticlesController extends Controller
 {
@@ -50,14 +44,13 @@ class ArticlesController extends Controller
     public function store(ArtRequest $request)
     {
         $art = new Articles([
-            'title'=>$request->title,
-            'name'=>$request->name,
-            'content'=>$request->content,
-            'tag'=>$request->tag,
-            'descript'=>$request->descript,
-            'ids'=> Session::get('website'),
+            'title' => $request->title,
+            'name' => $request->name,
+            'content' => $request->content,
+            'tag' => $request->tag,
+            'descript' => $request->descript,
+            'ids' => Session::get('website'),
         ]);
-
 
 
         if (Request::hasFile('avatar')) {
@@ -66,7 +59,6 @@ class ArticlesController extends Controller
         }
 
         $art->save();
-
 
 
         $Social = new Social([
@@ -91,19 +83,19 @@ class ArticlesController extends Controller
 
     public function edit(Articles $art)
     {
-        return view("dashboard/Articles/edit", ['Articles' => $art ]);
+        return view("dashboard/Articles/edit", ['Articles' => $art]);
     }
 
 
     public function update(Articles $art, ArtRequest $request)
     {
         $art->fill([
-            'title'=>$request->title,
-            'name'=>$request->name,
-            'content'=>$request->content,
-            'tag'=>$request->tag,
-            'descript'=>$request->descript,
-            'ids'=> Session::get('website'),
+            'title' => $request->title,
+            'name' => $request->name,
+            'content' => $request->content,
+            'tag' => $request->tag,
+            'descript' => $request->descript,
+            'ids' => Session::get('website'),
         ]);
 
         if (Request::hasFile('avatar')) {
@@ -120,7 +112,7 @@ class ArticlesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function destroy(Articles $art)

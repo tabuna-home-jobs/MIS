@@ -8,6 +8,4 @@ class CategoryObserver
     {
         $model->goods()->delete();
     }
-
-
 }

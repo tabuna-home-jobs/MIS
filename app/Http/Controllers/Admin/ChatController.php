@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\Controller;
 
-
 class ChatController extends Controller
 {
 
@@ -16,6 +15,4 @@ class ChatController extends Controller
     {
         return view("dashboard/chat/chat");
     }
-
-
 }

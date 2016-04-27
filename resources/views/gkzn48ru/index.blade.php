@@ -24,7 +24,7 @@
                             <p>Многопрофильная компания, оказывающая широкий спектр услуг.</p>
 
                             <h4><img
-                                        src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
+                                        src="/gkzn48ru/wp-content/themes/assets/img/heading.png" alt="heading"></h4>
                         </div>
                         <div class="vc_row wpb_row vc_inner vc_row-fluid">
                             <div class="vc_col-sm-3 wpb_column vc_column_container">
@@ -105,7 +105,7 @@
 
         <div class="col-xs-12">
             <div class="heading_e"><h3>Новости и события медицинского центра "Здоровье Нации"</h3>
-                <p>Последнии записи центров</p><h4><img src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
+                <p>Последнии записи центров</p><h4><img src="/gkzn48ru/wp-content/themes/assets/img/heading.png" alt="heading"></h4>
             </div>
         </div>
 
@@ -205,7 +205,7 @@
                         <div class="heading_e"><h3>Помощь</h3>
 
                             <p>Воспользуйтесь наши услугами прямо сейчас</p><h4><img
-                                        src="/gkzn48ru/wp-content/themes/medic-final/assets/img/heading.png" alt="heading"></h4>
+                                        src="/gkzn48ru/wp-content/themes/assets/img/heading.png" alt="heading"></h4>
                         </div>
                         <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1409824426179">
                             <div class="vc_col-sm-4 wpb_column vc_column_container">

@@ -51,13 +51,13 @@ class Throttle extends Model implements ThrottleInterface
      *
      * @var bool
      */
-    public $timestamps = FALSE;
+    public $timestamps = false;
     /**
      * Throttling status.
      *
      * @var bool
      */
-    protected $enabled = TRUE;
+    protected $enabled = true;
     /**
      * The table associated with the model.
      *
@@ -198,7 +198,7 @@ class Throttle extends Model implements ThrottleInterface
     public function suspend()
     {
         if (!$this->suspended) {
-            $this->suspended = TRUE;
+            $this->suspended = true;
             $this->suspended_at = $this->freshTimeStamp();
             $this->save();
         }
@@ -222,9 +222,9 @@ class Throttle extends Model implements ThrottleInterface
         }
 
         $this->attempts = 0;
-        $this->last_attempt_at = NULL;
-        $this->suspended = FALSE;
-        $this->suspended_at = NULL;
+        $this->last_attempt_at = null;
+        $this->suspended = false;
+        $this->suspended_at = null;
         $this->save();
     }
 
@@ -236,7 +236,7 @@ class Throttle extends Model implements ThrottleInterface
     public function ban()
     {
         if (!$this->banned) {
-            $this->banned = TRUE;
+            $this->banned = true;
             $this->banned_at = $this->freshTimeStamp();
             $this->save();
         }
@@ -250,8 +250,8 @@ class Throttle extends Model implements ThrottleInterface
     public function unban()
     {
         if ($this->banned) {
-            $this->banned = FALSE;
-            $this->banned_at = NULL;
+            $this->banned = false;
+            $this->banned_at = null;
             $this->save();
         }
     }
@@ -279,7 +279,7 @@ class Throttle extends Model implements ThrottleInterface
             ));
         }
 
-        return TRUE;
+        return true;
     }
 
     /**
@@ -325,7 +325,7 @@ class Throttle extends Model implements ThrottleInterface
             return (bool)$this->suspended;
         }
 
-        return FALSE;
+        return false;
     }
 
     /**
@@ -361,9 +361,9 @@ class Throttle extends Model implements ThrottleInterface
     {
         if ($this->suspended) {
             $this->attempts = 0;
-            $this->last_attempt_at = NULL;
-            $this->suspended = FALSE;
-            $this->suspended_at = NULL;
+            $this->last_attempt_at = null;
+            $this->suspended = false;
+            $this->suspended_at = null;
             $this->save();
         }
     }
@@ -435,8 +435,9 @@ class Throttle extends Model implements ThrottleInterface
      */
     public function getRemainingSuspensionTime()
     {
-        if (!$this->isSuspended())
+        if (!$this->isSuspended()) {
             return 0;
+        }
 
         $lastAttempt = clone $this->last_attempt_at;
 

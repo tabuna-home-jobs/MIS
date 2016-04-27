@@ -63,5 +63,4 @@ class MigrationCartalystSentryInstallUsers extends Migration
     {
         Schema::drop('users');
     }
-
 }

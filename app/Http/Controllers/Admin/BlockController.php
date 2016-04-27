@@ -35,20 +35,36 @@ class BlockController extends Controller
      */
     public function store(BlockRequest $request)
     {
-        $block = new Block([
-            'title'=>$request->title,
-            'name'=>$request->name,
-            'cont'=>$request->cont,
-            'descript'=>$request->descript,
-            'ids'=> Session::get('website'),
-        ]);
-
-        if ($block->save()) {
-            // Флеш сообщение
-            Session::flash('good', 'Вы успешно добавили значения');
+        if (!empty($request->slug)) {
+            $slug = str_slug($request->slug);
+        }
+        else {
+            $slug = str_slug($request->name);
         }
 
-        return redirect()->route('dashboard.block.index');
+        if (Block::where('slug', $slug)->first()) {
+            Session::flash('bad', 'Блок с указанным идентификатором уже существует');
+
+            return redirect()->back()->withInput();
+        } else {
+            $block = new Block([
+                'title'=>$request->title,
+                'name'=>$request->name,
+                'cont'=>$request->cont,
+                'descript'=>$request->descript,
+                'ids'=> Session::get('website'),
+                'slug'=>$slug,
+            ]);
+
+            if ($block->save()) {
+                // Флеш сообщение
+                Session::flash('good', 'Вы успешно добавили значения');
+            } else {
+                Session::flash('bad', 'Ошибка добавления значений');
+            }
+
+            return redirect()->route('dashboard.block.index');
+        }
     }
 
     /**
@@ -75,16 +91,31 @@ class BlockController extends Controller
      */
     public function update(Block $block, BlockRequest $request)
     {
-        $block->fill([
-            'title'=>$request->title,
-            'name'=>$request->name,
-            'cont'=>$request->cont,
-            'descript'=>$request->descript,
-            'ids'=> Session::get('website'),
-        ])->save();
+        if (!empty($request->slug)) {
+            $slug = str_slug($request->slug);
+        }
+        else {
+            $slug = str_slug($request->name);
+        }
 
-        //Флеш сообщение
-        Session::flash('good', 'Вы успешно изменили значения');
+        if ($block->slug != $slug && Block::where('slug', $slug)->first()) {
+            Session::flash('bad', 'Блок с указанным идентификатором уже существует');
+
+            return redirect()->back()->withInput();
+        } else {
+            $block->fill([
+                'title'=>$request->title,
+                'name'=>$request->name,
+                'cont'=>$request->cont,
+                'slug'=>$slug,
+                'descript'=>$request->descript,
+                'ids'=> Session::get('website'),
+            ])->save();
+
+            // Флеш сообщение
+            Session::flash('good', 'Вы успешно изменили значения');
+        }
+
         return redirect()->route('dashboard.block.index');
     }
 
@@ -93,8 +124,11 @@ class BlockController extends Controller
      */
     public function destroy(Block $block)
     {
-        $block->delete();
+        $block->items()->forceDelete();
+        $block->forceDelete();
+
         Session::flash('good', 'Вы успешно удалили значения');
+        
         return redirect()->route('dashboard.block.index');
     }
 }

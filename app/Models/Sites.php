@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Sites extends Model {
+class Sites extends Model
+{
 
     use SoftDeletes;
 
@@ -24,44 +25,44 @@ class Sites extends Model {
     protected $fillable = ['name', 'domen', 'pre', 'id'];
 
 
-
-    public function reviews(){
-
-        return $this->hasMany(static::$reviews, 'ids','id')->where('publish', 1)->limit(9);
+    public function reviews()
+    {
+        return $this->hasMany(static::$reviews, 'ids', 'id')->where('publish', 1)->limit(9);
     }
 
-    public function categories(){
-
-        return $this->hasMany(static::$categories, 'ids','id');
+    public function categories()
+    {
+        return $this->hasMany(static::$categories, 'ids', 'id');
     }
 
     public function getNews()
     {
-        return $this->hasOne('App\Models\News','ids');
+        return $this->hasOne('App\Models\News', 'ids');
     }
 
-    public function allnews(){
-
-        return $this->hasMany('App\Models\News','ids');
+    public function allnews()
+    {
+        return $this->hasMany('App\Models\News', 'ids');
     }
 
     public function getArts()
     {
-        return $this->hasOne('App\Models\Articles','ids');
+        return $this->hasOne('App\Models\Articles', 'ids');
     }
 
 
     public function getPages()
     {
-        return $this->hasOne('App\Models\Page','ids');
+        return $this->hasOne('App\Models\Page', 'ids');
     }
 
     public function getShares()
     {
         return $this->hasOne('App\Models\Shares', 'ids');
     }
-    public function getAllShares(){
 
+    public function getAllShares()
+    {
         return $this->hasMany('App\Models\Shares', 'ids');
     }
 
@@ -70,8 +71,8 @@ class Sites extends Model {
         return $this->hasOne('App\Models\Reviews', 'ids');
     }
 
-    public function randomReview(){
-
+    public function randomReview()
+    {
         return $this->hasOne('App\Models\Reviews', 'ids');
     }
 
@@ -85,10 +86,12 @@ class Sites extends Model {
     {
         return $this->hasOne('App\Models\Goods', 'ids');
     }
+
     public function getSpecCat()
     {
         return $this->hasOne('App\Models\SpecCat', 'ids');
     }
+
     public function getAllSpecCat()
     {
         return $this->hasMany('App\Models\SpecCat', 'ids');
@@ -117,8 +120,8 @@ class Sites extends Model {
         return $this->hasOne('App\Models\Specialisty', 'ids');
     }
 
-    public function allspecs(){
-
+    public function allspecs()
+    {
         return $this->hasMany('App\Models\Specialisty', 'ids');
     }
 
@@ -127,7 +130,6 @@ class Sites extends Model {
     {
         return $this->hasOne('App\Models\Surveys', 'ids');
     }
-
 
 
     public function getAlbums()
@@ -139,6 +141,7 @@ class Sites extends Model {
     {
         return $this->hasOne('App\Models\Photo', 'ids');
     }
+
     public function getVideoAlbums()
     {
         return $this->hasOne('App\Models\VideoAlbum', 'ids');
@@ -148,7 +151,4 @@ class Sites extends Model {
     {
         return $this->hasOne('App\Models\Video', 'ids');
     }
-
-
-
 }

@@ -4,33 +4,31 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\GoodsRequest;
 use App\Models\Category;
 use App\Models\Goods;
-use Image;
-use Session;
-use Search;
-use Request;
 use Illuminate\Http\Request as RequestIlluminate;
+use Image;
+use Request;
+use Search;
+use Session;
 
-class GoodsController extends Controller {
+class GoodsController extends Controller
+{
 
 
     public function getIndex(RequestIlluminate $request)
     {
         $query = $request->input('query');
-        if(is_null($query) || empty($query))
-        {
-
+        if (is_null($query) || empty($query)) {
             $Goods = Goods::where('ids', Session::get('website'))
                 ->orderBy('name', 'asc')
                 ->paginate(15);
-            return view("dashboard/goods/goods",['Goods' => $Goods ]);
-        }
-        else{
+            return view("dashboard/goods/goods", ['Goods' => $Goods]);
+        } else {
             $Goods = Goods::where('ids', Session::get('website'))
-                ->where('name', 'LIKE', '%'.$query.'%')
-                ->whereOr('title', 'LIKE', '%'.$query.'%')
+                ->where('name', 'LIKE', '%' . $query . '%')
+                ->whereOr('title', 'LIKE', '%' . $query . '%')
                 ->orderBy('name', 'asc')
                 ->paginate(15);
-            return view("dashboard/goods/goods",['Goods' => $Goods ]);
+            return view("dashboard/goods/goods", ['Goods' => $Goods]);
         }
     }
 
@@ -41,19 +39,18 @@ class GoodsController extends Controller {
         $allGoods = Goods::where('ids', Session::get('website'))->orderBy('name', 'desc')->get();
         $Category = Category::where('ids', Session::get('website'))->get();
         //$Category = Category::all();
-        return view("dashboard/goods/view",['Goods' => $Goods , 'Category' => $Category,'All'=>$allGoods]);
+        return view("dashboard/goods/view", ['Goods' => $Goods, 'Category' => $Category, 'All' => $allGoods]);
     }
 
 
     //Добовление и изменение данных
     public function postIndex(GoodsRequest $request)
     {
-
-
-        if(!is_null($request->id))
+        if (!is_null($request->id)) {
             $Goods = Goods::find($request->id);
-        else
+        } else {
             $Goods = new Goods();
+        }
 
         $Goods->title = $request->title;
         $Goods->name = $request->name;
@@ -63,7 +60,7 @@ class GoodsController extends Controller {
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $Goods->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
-        }elseif(is_null($Goods->avatar)){
+        } elseif (is_null($Goods->avatar)) {
             $Goods->avatar = '/dash/img/no_img.png';
         }
 
@@ -75,8 +72,9 @@ class GoodsController extends Controller {
         $Goods->parent_id = $request->parent;
         $Goods->sort = $request->sort;
 
-        if(!is_null($request->fieldsAttr))
-        $Goods->attribute = serialize(array_filter($request->fieldsAttr));
+        if (!is_null($request->fieldsAttr)) {
+            $Goods->attribute = serialize(array_filter($request->fieldsAttr));
+        }
 
 
         Goods::fixTree();
@@ -89,12 +87,7 @@ class GoodsController extends Controller {
     }
 
 
-
-
-
-
-
-    public  function  getRestore($Category = null)
+    public function getRestore($Category = null)
     {
         Goods::withTrashed()->find($Category)->restore();
 
@@ -120,7 +113,7 @@ class GoodsController extends Controller {
         return redirect()->route('goods');
     }
 
-    public  function  getUnset($Goods = null)
+    public function getUnset($Goods = null)
     {
         Goods::withTrashed()->find($Goods)->forceDelete();
 
@@ -130,14 +123,10 @@ class GoodsController extends Controller {
     }
 
 
-
-    public  function  getCategory($Goods = null)
+    public function getCategory($Goods = null)
     {
-        $Goods = Goods::whereRaw('ids =? and category_id =?', [Session::get('website'), $Goods])->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/goods/goods",['Goods' => $Goods ]);
+        $Goods = Goods::whereRaw('ids =? and category_id =?', [Session::get('website'), $Goods])->orderBy('id',
+            'desc')->paginate(15);
+        return view("dashboard/goods/goods", ['Goods' => $Goods]);
     }
-
-
-
-
 }

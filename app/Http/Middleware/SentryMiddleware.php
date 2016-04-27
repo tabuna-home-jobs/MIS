@@ -22,12 +22,12 @@ class SentryMiddleware
             $current = Route::currentRouteName();
 
             //Узнаём есть ли у пользователя права
-            if (Sentry::getUser()->hasAccess($current))
+            if (Sentry::getUser()->hasAccess($current)) {
                 return $next($request);
-            else
+            } else {
                 abort(404);
+            }
         }
         abort(404);
     }
-
 }

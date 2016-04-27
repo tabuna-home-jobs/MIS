@@ -50,5 +50,4 @@ class MigrationCartalystSentryInstallUsersGroupsPivot extends Migration
     {
         Schema::drop('users_groups');
     }
-
 }

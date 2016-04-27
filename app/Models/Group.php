@@ -106,7 +106,7 @@ class Group extends Model implements GroupInterface
      */
     public function hasAnyAccess(array $permissions)
     {
-        return $this->hasAccess($permissions, FALSE);
+        return $this->hasAccess($permissions, false);
     }
 
     /**
@@ -121,7 +121,7 @@ class Group extends Model implements GroupInterface
      *
      * @return bool
      */
-    public function hasAccess($permissions, $all = TRUE)
+    public function hasAccess($permissions, $all = true)
     {
         $groupPermissions = $this->getPermissions();
 
@@ -132,13 +132,13 @@ class Group extends Model implements GroupInterface
         foreach ($permissions as $permission) {
             // We will set a flag now for whether this permission was
             // matched at all.
-            $matched = TRUE;
+            $matched = true;
 
             // Now, let's check if the permission ends in a wildcard "*" symbol.
             // If it does, we'll check through all the merged permissions to see
             // if a permission exists which matches the wildcard.
             if ((strlen($permission) > 1) and ends_with($permission, '*')) {
-                $matched = FALSE;
+                $matched = false;
 
                 foreach ($groupPermissions as $groupPermission => $value) {
                     // Strip the '*' off the end of the permission.
@@ -146,8 +146,10 @@ class Group extends Model implements GroupInterface
 
                     // We will make sure that the merged permission does not
                     // exactly match our permission, but starts with it.
-                    if ($checkPermission != $groupPermission and starts_with($groupPermission, $checkPermission) and $value == 1) {
-                        $matched = TRUE;
+                    if ($checkPermission != $groupPermission and starts_with($groupPermission,
+                            $checkPermission) and $value == 1
+                    ) {
+                        $matched = true;
                         break;
                     }
                 }
@@ -157,7 +159,7 @@ class Group extends Model implements GroupInterface
             // If it does, we'll check through all the merged permissions to see
             // if a permission exists which matches the wildcard.
             elseif ((strlen($permission) > 1) and starts_with($permission, '*')) {
-                $matched = FALSE;
+                $matched = false;
 
                 foreach ($groupPermissions as $groupPermission => $value) {
                     // Strip the '*' off the start of the permission.
@@ -165,26 +167,30 @@ class Group extends Model implements GroupInterface
 
                     // We will make sure that the merged permission does not
                     // exactly match our permission, but ends with it.
-                    if ($checkPermission != $groupPermission and ends_with($groupPermission, $checkPermission) and $value == 1) {
-                        $matched = TRUE;
+                    if ($checkPermission != $groupPermission and ends_with($groupPermission,
+                            $checkPermission) and $value == 1
+                    ) {
+                        $matched = true;
                         break;
                     }
                 }
             } else {
-                $matched = FALSE;
+                $matched = false;
 
                 foreach ($groupPermissions as $groupPermission => $value) {
                     // This time check if the groupPermission ends in wildcard "*" symbol.
                     if ((strlen($groupPermission) > 1) and ends_with($groupPermission, '*')) {
-                        $matched = FALSE;
+                        $matched = false;
 
                         // Strip the '*' off the end of the permission.
                         $checkGroupPermission = substr($groupPermission, 0, -1);
 
                         // We will make sure that the merged permission does not
                         // exactly match our permission, but starts wtih it.
-                        if ($checkGroupPermission != $permission and starts_with($permission, $checkGroupPermission) and $value == 1) {
-                            $matched = TRUE;
+                        if ($checkGroupPermission != $permission and starts_with($permission,
+                                $checkGroupPermission) and $value == 1
+                        ) {
+                            $matched = true;
                             break;
                         }
                     }
@@ -192,7 +198,7 @@ class Group extends Model implements GroupInterface
                     // Otherwise, we'll fallback to standard permissions checking where
                     // we match that permissions explicitly exist.
                     elseif ($permission == $groupPermission and $groupPermissions[$permission] == 1) {
-                        $matched = TRUE;
+                        $matched = true;
                         break;
                     }
                 }
@@ -201,15 +207,14 @@ class Group extends Model implements GroupInterface
             // Now, we will check if we have to match all
             // permissions or any permission and return
             // accordingly.
-            if ($all === TRUE and $matched === FALSE) {
-                return FALSE;
-            } elseif ($all === FALSE and $matched === TRUE) {
-                return TRUE;
+            if ($all === true and $matched === false) {
+                return false;
+            } elseif ($all === false and $matched === true) {
+                return true;
             }
         }
 
         return $all;
-
     }
 
     /**
@@ -259,7 +264,7 @@ class Group extends Model implements GroupInterface
             throw new GroupExistsException("A group already exists with name [$name], names must be unique for groups.");
         }
 
-        return TRUE;
+        return true;
     }
 
     /**
@@ -357,11 +362,10 @@ class Group extends Model implements GroupInterface
             return $permissions;
         }
 
-        if (!$_permissions = json_decode($permissions, TRUE)) {
+        if (!$_permissions = json_decode($permissions, true)) {
             throw new \InvalidArgumentException("Cannot JSON decode permissions [$permissions].");
         }
 
         return $_permissions;
     }
-
 }

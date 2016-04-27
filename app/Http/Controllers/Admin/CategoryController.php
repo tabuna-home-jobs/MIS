@@ -7,16 +7,15 @@ use Image;
 use Request;
 use Session;
 
-class CategoryController extends Controller {
-
-
+class CategoryController extends Controller
+{
 
 
     public function getIndex()
     {
         Category::fixTree();
         $Category = Category::where('ids', Session::get('website'))->paginate(15);
-        return view("dashboard/category/category",['Category' => $Category ]);
+        return view("dashboard/category/category", ['Category' => $Category]);
     }
 
 
@@ -37,11 +36,11 @@ class CategoryController extends Controller {
     //Добовление и изменение данных
     public function postIndex(CategoryRequest $request)
     {
-
-        if(!is_null($request->id))
+        if (!is_null($request->id)) {
             $Category = Category::find($request->id);
-        else
+        } else {
             $Category = new Category();
+        }
 
         $Category->title = $request->title;
         $Category->name = $request->name;
@@ -51,15 +50,15 @@ class CategoryController extends Controller {
         $Category->parent_id = $request->parent_id;
 
         if (Request::hasFile('avatar')) {
-            if((Image::make(Request::file('avatar'))->width() > 300) ||(Image::make(Request::file('avatar'))->height() > 300) ){
-                Image::make(Request::file('avatar'))->resize(300, 200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
-            }else{
+            if ((Image::make(Request::file('avatar'))->width() > 300) || (Image::make(Request::file('avatar'))->height() > 300)) {
+                Image::make(Request::file('avatar'))->resize(300,
+                    200)->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
+            } else {
                 Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             }
 
             $Category->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
-        }else{
-
+        } else {
             $Category->avatar = '/dash/img/no_img.png';
         }
 
@@ -73,12 +72,7 @@ class CategoryController extends Controller {
     }
 
 
-
-
-
-
-
-    public  function  getRestore($Category = null)
+    public function getRestore($Category = null)
     {
         Category::withTrashed()->find($Category)->restore();
         Session::flash('good', 'Вы успешно востановили запись');
@@ -100,13 +94,10 @@ class CategoryController extends Controller {
         return redirect()->route('dashboard.category.index');
     }
 
-    public  function  getUnset($Feedback = null)
+    public function getUnset($Feedback = null)
     {
         Category::withTrashed()->find($Feedback)->forceDelete();
         Session::flash('good', 'Вы успешно окончательно удалили запись');
         return redirect()->route('dashboard.category.index');
     }
-
-
-
 }

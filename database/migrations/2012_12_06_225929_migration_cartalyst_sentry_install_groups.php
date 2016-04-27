@@ -52,5 +52,4 @@ class MigrationCartalystSentryInstallGroups extends Migration
     {
         Schema::drop('groups');
     }
-
 }

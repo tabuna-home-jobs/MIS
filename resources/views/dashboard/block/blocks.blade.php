@@ -17,33 +17,34 @@
                             <div class="col-sm-12">
                                 <table class="table table-striped m-b-none dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                                     <thead>
-                                    <tr role="row">
-                                        <th>#</th>
-                                        <th>Имя</th>
-                                        <th>Заголовок</th>
-                                        <th>Последнее редактирование</th>
-                                        <th>Управление</th>
-                                    </tr>
+                                        <tr role="row">
+                                            <th>#</th>
+                                            <th>Идентификатор</th>
+                                            <th>Имя</th>
+                                            <th>Заголовок</th>
+                                            <th>Последнее редактирование</th>
+                                            <th>Управление</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach ($items as $item)
-                                        <tr>
-                                            <td>{{ $item->id }}</td>
-                                            <td>{{ $item->name }}</td>
-                                            <td>{{ $item->title }}</td>
-                                            <td>{{ $item->updated_at }}</td>
-                                            <td class="pull-right">
-                                                <a href="{{URL::route('dashboard.block_items',$item->id)}}" class="btn btn-success"><span class="fa fa-list"></span> </a>
-                                                <a href="{{URL::route('dashboard.block.edit',$item->id)}}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
-                                                <a href="#"></a>
-                                                <form action="{{URL::route('dashboard.block.destroy',$item->id)}}" method="post" class="pull-right">
-                                                    <input type="hidden" name="_method" value="delete">
-                                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                    <button type="submit" class="btn btn-danger"><span class="fa fa-trash-o"></span></button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
+                                        @foreach ($items as $item)
+                                            <tr>
+                                                <td>{{ $item->id }}</td>
+                                                <td>{{ $item->slug }}</td>
+                                                <td>{{ $item->name }}</td>
+                                                <td>{{ $item->title }}</td>
+                                                <td>{{ $item->updated_at }}</td>
+                                                <td class="pull-right">
+                                                    <a href="{{URL::route('dashboard.block_items',$item->id)}}" class="btn btn-success"><span class="fa fa-list"></span> </a>
+                                                    <a href="{{URL::route('dashboard.block.edit',$item->id)}}" class="btn btn-primary"><span class="fa fa-edit"></span> </a>
+                                                    <form action="{{URL::route('dashboard.block.destroy',$item->id)}}" method="post" class="pull-right">
+                                                        <input type="hidden" name="_method" value="delete">
+                                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                        &nbsp;<button type="submit" class="btn btn-danger"><span class="fa fa-trash-o"></span></button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Comments extends Model {
+class Comments extends Model
+{
 
     use SoftDeletes;
     /**
@@ -18,14 +19,11 @@ class Comments extends Model {
      *
      * @var array
      */
-    protected $fillable = ['fio', 'phone', 'email', 'content', 'goods_id', 'ids' , 'comments_id', 'publish'];
+    protected $fillable = ['fio', 'phone', 'email', 'content', 'goods_id', 'ids', 'comments_id', 'publish'];
 
 
     public function goods()
     {
         return $this->belongsTo('App\Models\Goods');
     }
-
-
-
 }

@@ -11,9 +11,6 @@ use Request;
 use Session;
 use Validator;
 
-
-
-
 class SharesController extends Controller
 {
 
@@ -46,14 +43,14 @@ class SharesController extends Controller
     public function store(SharesRequest $request)
     {
         $shares = new Shares([
-            'title'=>$request->title,
-            'name'=>$request->name,
-            'content'=>$request->content,
-            'tag'=>$request->tag,
-            'descript'=>$request->descript,
-            'start'=> $request->start,
-            'end'=> $request->end,
-            'ids'=> Session::get('website'),
+            'title' => $request->title,
+            'name' => $request->name,
+            'content' => $request->content,
+            'tag' => $request->tag,
+            'descript' => $request->descript,
+            'start' => $request->start,
+            'end' => $request->end,
+            'ids' => Session::get('website'),
         ]);
 
         if (Request::hasFile('avatar')) {
@@ -71,7 +68,7 @@ class SharesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function show($id)
@@ -82,33 +79,33 @@ class SharesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function edit(Shares $shares)
     {
-        return view("dashboard/shares/edit", ['Shares' => $shares ]);
+        return view("dashboard/shares/edit", ['Shares' => $shares]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
-    public function update(SharesRequest $request,Shares $shares)
+    public function update(SharesRequest $request, Shares $shares)
     {
         //$sahres->fill($request->all());
 
         $shares->fill([
-            'title'=>$request->title,
-            'name'=>$request->name,
-            'content'=>$request->content,
-            'tag'=>$request->tag,
-            'descript'=>$request->descript,
-            'start'=> $request->start,
-            'end'=> $request->end,
-            'ids'=> Session::get('website'),
+            'title' => $request->title,
+            'name' => $request->name,
+            'content' => $request->content,
+            'tag' => $request->tag,
+            'descript' => $request->descript,
+            'start' => $request->start,
+            'end' => $request->end,
+            'ids' => Session::get('website'),
         ]);
 
         if (Request::hasFile('avatar')) {
@@ -126,7 +123,7 @@ class SharesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function destroy(Shares $shares)

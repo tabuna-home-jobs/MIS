@@ -7,94 +7,95 @@ use App\Models\Photo;
 use App\Models\Sites;
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller {
+class GalleryController extends Controller
+{
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $albums  =  $getSites->getAlbums()->select('*')->get();
+        $albums = $getSites->getAlbums()->select('*')->get();
         $photo = $getSites->getPhoto()->paginate(20);
 
-        return view( $sitename.$sitedomen.'/gallery', [
-                'albums' => $albums,
-                'photos'  => $photo,
-            ]);
+        return view($sitename . $sitedomen . '/gallery', [
+            'albums' => $albums,
+            'photos' => $photo,
+        ]);
     }
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create()
+    {
+        //
+    }
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id, $sitename = 'zdorovie48', $sitedomen = 'ru')
-	{
-		$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-		$albums  =  $getSites->getAlbums()->select('*')->get();
-		$photo = $getSites->getPhoto()->where('album_id',$id)->paginate(20);
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store()
+    {
+        //
+    }
 
-		return view( $sitename.$sitedomen.'/gallery', [
-			'albums' => $albums,
-			'photos'  => $photo,
-			'id' =>$id
-		]);
-	}
+    /**
+     * Display the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function show($id, $sitename = 'zdorovie48', $sitedomen = 'ru')
+    {
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+        $albums = $getSites->getAlbums()->select('*')->get();
+        $photo = $getSites->getPhoto()->where('album_id', $id)->paginate(20);
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
+        return view($sitename . $sitedomen . '/gallery', [
+            'albums' => $albums,
+            'photos' => $photo,
+            'id' => $id
+        ]);
+    }
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function edit($id)
+    {
+        //
+    }
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function update($id)
+    {
+        //
+    }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
 }

@@ -18,42 +18,43 @@ class ServiceController extends Controller
      */
     public function index($sitename = "sokzn48", $sitedomen = "ru")
     {
-
-
-
-
         $requestCategory = Request::input('category');
         $blue = "";
         if (is_null($requestCategory)) {
+            $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with([
+                'categories' => function ($query) {
+                    $query->orderBy('id', 'ASC')->with([
+                        'goods' => function ($query) {
 
-            $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with(['categories' => function ($query) {
-                $query->orderBy('id', 'ASC')->with(['goods' => function ($query) {
-
-                    $query->where('parent_id',null)->orderBy('sort', 'asc');
-                }]);
-            }])->first();
+                            $query->where('parent_id', null)->orderBy('sort', 'asc');
+                        }
+                    ]);
+                }
+            ])->first();
             //dd($query->categories);
+        } else {
+            $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with([
+                'categories' => function ($query) use ($requestCategory) {
+                    $query->where('id', $requestCategory)->orderBy('id', 'ASC')->with([
+                        'goods' => function ($query) {
 
-        }else {
-
-            $query = Sites::where('domen', '=', $sitename . "." . $sitedomen)->with(['categories' => function ($query) use ($requestCategory) {
-                $query->where('id', $requestCategory)->orderBy('id', 'ASC')->with(['goods' => function ($query) {
-
-                    $query->orderBy('id', 'desc');
-                }]);
-            }])->first();
-            if( ($requestCategory % 2 ) == 1 ){
+                            $query->orderBy('id', 'desc');
+                        }
+                    ]);
+                }
+            ])->first();
+            if (($requestCategory % 2) == 1) {
                 $blue = "blue";
             }
-
         }
 
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getLastNews = $getSites->getNews()->orderBy('id', 'desc')->limit(3)->get();
         return view($sitename . $sitedomen . '/service', [
-            'data' => $query->categories, 'LastNews' => $getLastNews, 'blue' => $blue
+            'data' => $query->categories,
+            'LastNews' => $getLastNews,
+            'blue' => $blue
         ]);
-
     }
 
     /**
@@ -64,7 +65,6 @@ class ServiceController extends Controller
     public function create()
     {
         //
-
     }
 
     /**
@@ -88,7 +88,6 @@ class ServiceController extends Controller
         $comment->save();
         Session::flash('good', 'Спасибо, что написали, ваше сообщение будет опубликовано после модерации.');
         return redirect()->back();
-
     }
 
     /**
@@ -99,11 +98,10 @@ class ServiceController extends Controller
      */
     public function show($id, $sitename = "sokzn48", $sitedomen = "ru")
     {
-
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
         $Goods = $getSites->getGoods()->where('id', $id)->first();
-        $ChildGoods =$getSites->getGoods()->where('parent_id',$id)->get();
+        $ChildGoods = $getSites->getGoods()->where('parent_id', $id)->get();
         $Category = $getSites->getCategory()->findorFail($Goods->category_id);
 
         $Comments = $Goods->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
@@ -152,5 +150,4 @@ class ServiceController extends Controller
     {
         //
     }
-
 }

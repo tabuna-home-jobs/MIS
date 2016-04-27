@@ -11,7 +11,6 @@ use Request;
 use Session;
 use Validator;
 
-
 class MenuController extends Controller
 {
 
@@ -23,7 +22,6 @@ class MenuController extends Controller
 
     public function getIndex()
     {
-
         $Menu = Menu::paginate(15);
         return view("dashboard/menu/menu", ['Menu' => $Menu]);
     }
@@ -59,7 +57,6 @@ class MenuController extends Controller
             Session::flash('good', 'Вы успешно изменили меню');
             return redirect()->route('menu');
         }
-
     }
 
 
@@ -83,7 +80,6 @@ class MenuController extends Controller
 
     public function postAddchild(MenuChildRequest $request)
     {
-
         if (!is_null($request->id)) {
             $menu = Menu::find($request->menuid);
             $childmenu = $menu->MenuElement()->find($request->id);
@@ -105,6 +101,4 @@ class MenuController extends Controller
             return redirect()->back();
         }
     }
-
-
 }

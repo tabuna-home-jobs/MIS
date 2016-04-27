@@ -37,6 +37,4 @@ class Appointments extends Model
         'spec_id',
         'export',
     ];
-
-
 }

@@ -17,38 +17,37 @@ class BlockItemController extends Controller
     /*
      * Список элементов блока
      */
-    public function getIndex(\App\Models\Block $block)
+    public function getIndex(RequestIlluminate $request, Block $block)
     {
-        dd($block);
+        $items = $block->items()->where('ids', Session::get('website'))->orderBy('name', 'desc')->paginate(15);
 
-        $items = BlockItem::where('ids', Session::get('website'))
-            ->orderBy('name', 'asc')
-            ->paginate(15);
-
-        return view("dashboard/block/items/items",['items' => $items ]);
+        return view("dashboard/block/items/items",['items' => $items, 'block' => $block]);
     }
 
     /*
      * Страница добавления элемента в блок
      */
-    public function getAdd()
+    public function getAdd(Block $block, $item_id = NULL)
     {
-        return view("dashboard/block/items/view");
+        // Группа
+        $item = BlockItem::find($item_id);
+
+        return view("dashboard/block/items/view", ['item' => $item, 'block' => $block]);
     }
 
     /*
      * Добавление и изменение данных
      */
-    public function postIndex(BlockItemRequest $request)
+    public function postIndex(BlockItemRequest $request, Block $block)
     {
-        if(!is_null($request->id))
+        if(!is_null($request->id)) {
             $Item = BlockItem::find($request->id);
-        else {
+        } else {
             $Item = new BlockItem();
-            $Item->group_id = $request->group_id;
+            $Item->block_id = $block->id;
         }
-
-        $Item->title = $request->title;
+            
+        $Item->link = $request->link;
         $Item->name = $request->name;
         $Item->slug = str_slug($request->name);
         $Item->text = $request->text;
@@ -65,36 +64,27 @@ class BlockItemController extends Controller
         $Item->sort = $request->sort;
 
         if ($Item->save()) {
-            //Флеш сообщение
-            Session::flash('group', 'Вы успешно изменили значения');
+            // Флеш сообщение
+            Session::flash('group', 'Вы успешно изменили элемент');
         }
-
-        return redirect()->route('block_items');
+        
+        return redirect()->route('dashboard.block_items', $block->id);
     }
 
     /*
      * Удаление элемента блока
      */
-    public function getDestroy($item_id = null)
+    public function getDestroy(Block $block, $item_id = null)
     {
-        $Item = BlockItem::find($item_id);
-        $Item->delete('cascade');
+        $item = BlockItem::find($item_id);
 
-        Session::flash('good_group', 'Вы успешно удалили значения');
-        return redirect()->route('block_items');
-    }
+        if ($item) {
+            $item->forceDelete();
+            Session::flash('good_group', 'Вы успешно удалили элемент');
+        } else {
+            Session::flash('bad', 'Элемент не найден');
+        }
 
-    /*
-     * Окончательное удаление элемента блока
-     */
-    public  function  getUnset($GoodsGroup = null)
-    {
-        GoodsGroup::withTrashed()->find($GoodsGroup)->forceDelete();
-
-        // Удаляем все привязки к группе
-        GoodsGroups::where('good_group_id', $GoodsGroup)->delete();
-
-        Session::flash('good_group', 'Вы успешно окончательно удалили запись');
-        return redirect()->route('block_items');
+        return redirect()->route('dashboard.block_items', $block->id);
     }
 }

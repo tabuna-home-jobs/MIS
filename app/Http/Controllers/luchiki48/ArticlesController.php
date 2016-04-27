@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\luchiki48;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use App\Models\Articles;
 use App\Models\Sites;
+use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
@@ -18,10 +17,9 @@ class ArticlesController extends Controller
      */
     public function index($sitename = "luchiki48", $sitedomen = "ru")
     {
-
-        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $art = $getSites->getArts()->paginate(10);
-        return view( $sitename.$sitedomen.'/articles', ['Articles' => $art]);
+        return view($sitename . $sitedomen . '/articles', ['Articles' => $art]);
     }
 
     /**
@@ -37,7 +35,7 @@ class ArticlesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -48,20 +46,20 @@ class ArticlesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id, $sitename = "luchiki48", $sitedomen = "ru")
     {
-        $getSites = Sites::where('domen','=',$sitename.".".$sitedomen)->first();
+        $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $art = $getSites->getArts()->findOrFail($id);
-        return view( $sitename.$sitedomen.'/article', ['Article' => $art]);
+        return view($sitename . $sitedomen . '/article', ['Article' => $art]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -72,8 +70,8 @@ class ArticlesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -84,7 +82,7 @@ class ArticlesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

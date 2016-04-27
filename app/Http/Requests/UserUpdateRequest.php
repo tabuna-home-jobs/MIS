@@ -30,5 +30,4 @@ class UserUpdateRequest extends Request
             'permissions' => 'array'
         ];
     }
-
 }

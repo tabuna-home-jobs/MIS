@@ -1,40 +1,39 @@
 <?php namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
 
-class HomeController extends Controller {
+class HomeController extends Controller
+{
 
-	/*
-	|--------------------------------------------------------------------------
-	| Welcome Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders the "marketing page" for the application and
-	| is configured to only allow guests. Like most of the other sample
-	| controllers, you are free to modify or remove it as you desire.
-	|
-	*/
+    /*
+    |--------------------------------------------------------------------------
+    | Welcome Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller renders the "marketing page" for the application and
+    | is configured to only allow guests. Like most of the other sample
+    | controllers, you are free to modify or remove it as you desire.
+    |
+    */
 
-	/**
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
-	public function __construct(Request $request)
-	{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct(Request $request)
+    {
         $this->site = $request->route()->parameter('sitename') . $request->route()->parameter('sitedomen') . "/";
-		$this->middleware('guest');
-	}
+        $this->middleware('guest');
+    }
 
-	/**
-	 * Show the application welcome screen to the user.
-	 *
-	 * @return Response
-	 */
-	public function getIndex()
-	{
-		return view($this->site . "home");
-	}
-
+    /**
+     * Show the application welcome screen to the user.
+     *
+     * @return Response
+     */
+    public function getIndex()
+    {
+        return view($this->site . "home");
+    }
 }

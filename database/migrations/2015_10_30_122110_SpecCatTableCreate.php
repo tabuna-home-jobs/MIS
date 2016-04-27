@@ -8,8 +8,7 @@ class SpecCatTableCreate extends Migration
 
     public function up()
     {
-        Schema::create('SpecCat', function(Blueprint $table)
-        {
+        Schema::create('SpecCat', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->integer('ids');
