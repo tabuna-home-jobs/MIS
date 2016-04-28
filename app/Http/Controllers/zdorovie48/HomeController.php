@@ -19,12 +19,19 @@ class HomeController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
-        $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
+        $getShare = $getSites->getShares()
+            ->select('name')
+            ->limit(1)
+            ->orderByRaw('RANDOM()')
+            ->first();
+
+
+
 
         $specialization = DB::table('timetable')->select('specialization')->distinct()->get();
         return view('new' . $sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
-            'getShares' => $getShares,
+            'getShare' => $getShare,
             'specialization' => $specialization,
 
         ]);

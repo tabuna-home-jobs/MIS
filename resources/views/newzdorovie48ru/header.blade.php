@@ -3,9 +3,10 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="csrf-token" content="{{ csrf_token() }}" >
-    <meta name="robots" content="noindex" />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="robots" content="noindex"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/zdorovie48/css/orchid.css" type="text/css">
     <script src="/zdorovie48/js/orchid.js"></script>
 
@@ -19,19 +20,43 @@
         <meta name="twitter:title" content="@yield('title')">
         <meta name="twitter:description" content="@yield('description')"/>
         <meta name="twitter:image:src" content="@yield('avatar')"/>
-        @else
+    @else
         {!! $meta !!}
-        @endif
-
+    @endif
 
 
 </head>
 <body>
 
 
+@if (count($errors) > 0)
+    <script>
+        swal({
+            title: "Ошибка!",
+            text: "<ul class='w-xxl block-center'>@foreach ($errors->all() as $error)<li>{{ $error }}</li>@endforeach</ul>",
+            html: true,
+            type: "warning",
+        });
+    </script>
+@endif
 
-<div class="alert alert-danger text-center" role="alert">
-    На данный момент времени на <strong>сайте</strong> ведутся технические работы. В самое ближайшее время они закончатся, и сайт заработает в штатном режиме.</div>
+
+
+
+@if (Session::has('good'))
+    <script>
+        swal("Успех!", "{{Session::get('good')}}", "success")
+    </script>
+@elseif(Session::has('bad'))
+    <script>
+        swal("Ошибка!", " {{Session::get('bad')}}", "warning")
+    </script>
+@endif
+
+
+
+
+
 
 
 
@@ -95,9 +120,9 @@
                     <i class="fa fa-calendar fa-3x"></i>
                 </div>
                 <div class="col-md-10 padder-v">
-                   <a href="/#main-appointments-section"> <h6><b>Запишитесь на приём</b></h6>
-                    <small>В три простых шага</small>
-                       </a>
+                    <a href="/#main-appointments-section"><h6><b>Запишитесь на приём</b></h6>
+                        <small>В три простых шага</small>
+                    </a>
                 </div>
             </div>
         </div>
@@ -105,23 +130,6 @@
 
 
 </header>
-
-
-
-@if (count($errors) > 0)
-    <div class="container alert-container">
-        <div class="alert alert-danger alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <strong>Ошибка!</strong> Пожалуйста проверте вводимые данные.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    </div>
-@endif
-
 
 
 @yield('content')

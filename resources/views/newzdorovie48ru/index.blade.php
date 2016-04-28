@@ -97,23 +97,24 @@
 <!-- Слайдер -->
 
 
-
+@if(!is_null($getShare))
 <!-- Акция -->
 <section class="container-fluid">
     <div class="row bg-success">
 
         <div class="container v-center padder-v b-b">
             <div class="col-md-10 text-white v-center">
-                <h3>Массажеры для спины со скидкой <b>25%</b></h3>
+                <h3>{{$getShare->name}}</h3>
             </div>
             <div class="col-md-2 v-center text-center">
-                <button class="btn btn-default btn-void-white">Далее</button>
+                <button class="btn btn-default btn-void-white">Смотреть все</button>
             </div>
 
         </div>
     </div>
 </section>
 <!-- Акция -->
+@endif
 
 
 
