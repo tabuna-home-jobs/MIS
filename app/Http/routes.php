@@ -202,6 +202,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'], 'prefi
     Route::resource('encyclopedia', 'EncyclopediaController');
     Route::resource('encyclopediaCategory', 'EncyclopediaCategoryController');
     Route::resource('page', 'PageController');
+    Route::resource('block', 'BlockController');
     Route::resource('news', 'NewsController');
     Route::resource('art', 'ArticlesController');
     Route::resource('shares', 'SharesController');
@@ -216,16 +217,24 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'], 'prefi
         'getAdd' => 'dashboard.reviews.add',
     ]);
 
+    Route::controller('block/{block}/items', 'BlockItemController', [
+        'getIndex' => 'dashboard.block_items',
+        'getAdd' => 'dashboard.block_items.add',
+    ]);
 
     Route::controller('category', 'CategoryController', [
         'getIndex' => 'dashboard.category.index',
         'getAdd' => 'dashboard.category.add',
     ]);
 
-
     Route::controller('goods', 'GoodsController', [
         'getIndex' => 'goods',
         'getAdd' => 'dashboard.goods.add',
+    ]);
+
+    Route::controller('goods_group', 'GoodsGroupController', [
+        'getIndex' => 'goods_group',
+        'getAdd' => 'dashboard.goods_group.add',
     ]);
 
     Route::controller('comments', 'CommentsController', [
@@ -259,7 +268,6 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'], 'prefi
 
 });
 
-
 //API
 
 Route::group(['namespace' => 'API', 'middleware' => 'cors', 'prefix' => 'api'], function () {
@@ -268,12 +276,18 @@ Route::group(['namespace' => 'API', 'middleware' => 'cors', 'prefix' => 'api'], 
 });
 
 
+//API with Auth
+
+Route::group(['namespace' => 'API', 'middleware' => ['cors', 'auth'],'prefix' => 'api'], function()
+{
+    Route::resource('/goods', 'GoodsAPI');
+});
+
 /*Route::group(['namespace' => 'test', 'prefix' => 'test'], function()
 {
     Route::resource('/{model}/{function?}', 'TestController');
 
 });*/
-
 
 Route::get('socket', function () {
     return view('chat.socket');
@@ -281,8 +295,6 @@ Route::get('socket', function () {
 Route::get('/consult', function () {
     return view('chat.consult');
 });
-
-
 
 //Перенаправление авторизации
 Route::controllers([

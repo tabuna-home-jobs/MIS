@@ -36,6 +36,7 @@ class RouteServiceProvider extends ServiceProvider
         $router->model('encyclopedia', 'App\Models\EncyPost');
         $router->model('medencyclopedia', 'App\Models\EncyCategory');
         $router->model('encypost', 'App\Models\EncyPost');
+        $router->model('block', 'App\Models\Block');
 
 
         $router->bind('model', function ($model, $function) {

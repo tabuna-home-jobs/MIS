@@ -11,6 +11,7 @@
     <link href="{{asset('/menu/menu.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="/dash/bootstrap/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="/dash/bootstrap/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/dash/plugins/select2/select2.css" />
     <link rel="stylesheet" href="/dash/css/font.css" type="text/css" />
     <link rel="stylesheet" href="/dash/css/app.css" type="text/css" />
     <meta name="token" content="{{ csrf_token() }}" >
@@ -261,6 +262,16 @@
                                     </li>
                                 @endif
 
+
+                                @if(Config::get('dashboard.'.Session::get('SiteName').'.Блоки'))
+                                    <li class="{{Active::route('dashboard.block.*')}}">
+                                        <a href="{{URL::route('dashboard.block.index')}}">
+                                            <i class="glyphicon glyphicon-th icon"></i>
+                                            <span>Блоки</span>
+                                        </a>
+                                    </li>
+                                @endif
+
                                 @if(Config::get('dashboard.'.Session::get('SiteName').'.Новости'))
                                 <li class="{{Active::route('dashboard.news.*')}}">
                                     <a href="{{URL::route('dashboard.news.index')}}">
@@ -404,10 +415,10 @@
                         @if(Config::get('dashboard.'.Session::get('SiteName').'.Услуги'))
                         <li class="{{Active::route(['dashboard.category.*','dashboard.goods.*','dashboard.comments.*'])}}">
                             <a href class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
+                                <span class="pull-right text-muted">
+                                  <i class="fa fa-fw fa-angle-right text"></i>
+                                  <i class="fa fa-fw fa-angle-down text-active"></i>
+                                </span>
                                 <i class="fa fa-ambulance icon"></i>
                                 <span>Услуги</span>
                             </a>
@@ -418,6 +429,12 @@
                                     <a href="{{URL::route('dashboard.category.index')}}">
                                         <i class="fa fa-medkit icon"></i>
                                         <span>Категории</span>
+                                    </a>
+                                </li>
+                                <li class="{{Active::route('dashboard.goods_group.*')}}">
+                                    <a href="{{URL::route('goods_group')}}">
+                                        <i class="fa fa-heart-o"></i>
+                                        <span>Группы</span>
                                     </a>
                                 </li>
                                 <li class="{{Active::route('dashboard.news.*')}}">
@@ -432,7 +449,6 @@
                                         <span>Коментарии</span>
                                     </a>
                                 </li>
-
                             </ul>
                         </li>
                         @endif

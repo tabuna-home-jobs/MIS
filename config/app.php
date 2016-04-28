@@ -222,7 +222,9 @@ return [
         'catOnMain'=> \App\Facades\categoryOnMain::class,
 
         'SEO' => App\Facades\SEOFacades::class,
-        'Search' => Remoblaser\Search\Facades\Search::class
+        'Search' => Remoblaser\Search\Facades\Search::class,
+        
+        'Block'=> \App\Facades\Block::class,
     ],
 
 ];

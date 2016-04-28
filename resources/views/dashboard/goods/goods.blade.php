@@ -41,10 +41,7 @@
                                 </thead>
                                 <tbody>
 
-
-
-
-                                @foreach ($Goods->toTree() as  $key => $category)
+                                @foreach ($Goods as  $key => $category)
                                     @include('dashboard.goods._partials.category', $category)
                                 @endforeach
 

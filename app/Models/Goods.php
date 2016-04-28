@@ -14,8 +14,7 @@ class Goods extends Node
      * @var string
      */
     protected $table = 'goods';
-
-
+    
     protected $casts = [
         'attribute' => 'array',
     ];
