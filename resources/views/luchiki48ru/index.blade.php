@@ -173,7 +173,7 @@
                             <div class="share-text">
                                 <h4><a href="/shares/{{$item['id']}}">{{$item['name']}}</a></h4>
                                 <span>{{$item['created_at']}}</span>
-                                <p>{!! str_limit($item['content'],150,'...') !!}<a href="/shares/{{$item['id']}}">Подробнее</a></p>
+                                <p>{!! str_limit(strip_tags($item['content']),150,'...')!!}<a href="/shares/{{$item['id']}}">Подробнее</a></p>
                             </div>
                         </div>
                     </div>
