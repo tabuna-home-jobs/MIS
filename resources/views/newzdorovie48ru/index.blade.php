@@ -330,7 +330,7 @@
                                                         var option = "";
 
                                                         $.each(msg, function (dateStr, timeObj) {
-                                                            option += "<h5>" + dateStr + "</h5>";
+                                                            option += "<h5><b>" + dateStr + "</b></h5>";
 
                                                             $.each(timeObj, function (dateStr2, timeObj2) {
 
@@ -449,7 +449,7 @@
                                     <div class="col-md-12">
                                         <h5> Выберите дату</h5>
 
-                                        <div class="form-group appointment-scroll" id="date">
+                                        <div class="form-group scrollbar text-center" id="date">
 
                                         </div>
 

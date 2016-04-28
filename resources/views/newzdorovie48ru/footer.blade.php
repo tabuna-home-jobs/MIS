@@ -1,8 +1,4 @@
 
-{{--
-                        {!!Menu::getLI('2','footer', '<i class="fa fa-long-arrow-right"></i>')!!}
---}}
-
 
                                 <!-- Футер -->
                         <footer class="container-fluid b-t">
@@ -15,26 +11,19 @@
 
                                         <div class="col-md-4">
                                             <ul class="list-unstyled">
-                                                <li class=""><a href="#">О центре</a></li>
-                                                <li class=""><a href="#">Лицензии и свидетельство</a></li>
-                                                <li class=""><a href="#">Законодательные акты</a></li>
-                                                <li class=""><a href="#">Контролирующие органы</a></li>
+                                                {!!Menu::getLI('2','Левое нижнее меню')!!}
                                             </ul>
                                         </div>
 
                                         <div class="col-md-4">
                                             <ul class="list-unstyled">
-                                                <li class=""><a href="#">Администрация</a></li>
-                                                <li class=""><a href="#"> Правила</a></li>
-                                                <li class=""><a href="#">Сотрудничество состраховыми компаниями</a></li>
+                                                {!!Menu::getLI('2','Центральное нижнее меню')!!}
                                             </ul>
                                         </div>
 
                                         <div class="col-md-4">
                                             <ul class="list-unstyled">
-                                                <li class=""><a href="#">Прайс</a></li>
-                                                <li class=""><a href="#">Вакансии</a></li>
-                                                <li class=""><a href="#">Контакты</a></li>
+                                                {!!Menu::getLI('2','Правое нижнее меню')!!}
                                             </ul>
                                         </div>
 

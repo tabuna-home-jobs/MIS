@@ -81,13 +81,13 @@
 
 
                             <div class="page-header">
-                                <div class="row m-b">
-                                    <div class="col-md-6 text-center">
+                                <div class="row m-b-md">
+                                    <div class="col-md-6 text-center m-b-xs">
                                         <a href="/gallery">
                                             <i class="fa fa-camera fa-2x text-primary m-r-xs" aria-hidden="true"></i>  <span class="h3"> Фото</span>
                                         </a>
                                     </div>
-                                    <div class="col-md-6 text-center">
+                                    <div class="col-md-6 text-center m-b-xs">
                                         <a href="/video" class="opacity">
                                             <i class="fa fa-video-camera fa-2x  text-primary m-r-xs" aria-hidden="true"></i>  <span class="h3"> Видео</span>
                                         </a>
