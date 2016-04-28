@@ -21,10 +21,10 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        <div class="footer-block-1 col-md-3 hidden-xs">
+        <div class="footer-block-1 col-md-3 hidden-xs col-sm-6">
             {!!Menu::getMenuByLayout('7','bottom','','footMenu')!!}
         </div>
-        <div class="footer-block-2 col-md-3">
+        <div class="footer-block-2 col-md-3 col-sm-6">
             <div class="phone-footer">
                 <img src="/luchiki48.ru/img/phone.png">
                 +7 (4742) 77 03 97
@@ -39,7 +39,7 @@
             </div>
 
         </div>
-        <div class="footer-block-3 col-md-3">
+        <div class="footer-block-3 col-md-3 ">
             <!--<script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>-->
             <!-- VK Widget -->
             <!--<div id="vk_groups"></div>-->
@@ -47,7 +47,7 @@
             VK.Widgets.Group("vk_groups", {mode: 0, width: "260", height: "260", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 20003922);
             </script>-->
         </div>
-        <div class="footer-block-4 col-md-3">
+        <div class="footer-block-4 col-md-3 col-sm-12">
             <h5>© Студия раннего развития детей «Лучики». Развивающие занятия. <br> 2015 - {{date('Y')}}</h5>
             <br>
             <img src="/luchiki48.ru/img/minobr.png" class="img-responsive">

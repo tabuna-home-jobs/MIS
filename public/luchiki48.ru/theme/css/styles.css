@@ -687,3 +687,13 @@ li{
 .caruselTeachers{
     top:inherit!important;
 }
+.nav-search{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.nav-search .form-control{
+    height: 26px;
+}
+.nav-search .btn{
+    padding: 2px 12px;
+}

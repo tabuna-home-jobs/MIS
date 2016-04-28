@@ -226,6 +226,18 @@ h2 {
 .navbar-default .navbar-nav>li>a {
 	color: #FFF;
 }
+.nav-search{
+	padding-right: 0;
+	position: relative;
+	right: -10px;
+	width: 185px;
+}
+.nav-search .form-control{
+	height: 24px;
+}
+.nav-search .btn{
+	padding: 1px 7px;
+}
 .footer{
 	background-color: #1d1d1d;
 	text-align: center;
@@ -395,10 +407,18 @@ margin-right: 23%;
 	}
 	.input-form>select{
     width: 205px;
+	}
+
+	.sites-slider{
+		display: none;
+	}
 }
-.sites-slider{
-	display: none;
-}
+@media (max-width: 1024px){
+	.nav-search{
+		float: none !important;
+		display: inline-block;
+		border: none;
+	}
 }
 .description-form{
 	display: inline-block;
@@ -746,4 +766,8 @@ a:hover{
 	margin-top: 20px;
 	border-top: 1px solid rgb(154, 9, 63);
 	padding-top: 30px;
+}
+
+.list-group-item>.thumb-md{
+	margin-right: 10px;
 }

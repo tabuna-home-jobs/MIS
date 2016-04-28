@@ -90,6 +90,29 @@
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <ul id="menu-primary-menu" class="top_nav_menu">
                         {!!Menu::getLI('10','topmain')!!}
+                        <li class="dropdown">
+                            <a id="drop-search" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-search"></i>
+                                <span class="caret"></span>
+                            </a>
+                            <ul id="menu1" class="dropdown-menu" aria-labelledby="drop-search">
+
+                                <li class="sub-li">
+
+                                    <form class="navbar-form navbar-form-sm pull-right nav-search"  role="search" action="/search" method="post">
+                                        {!! csrf_field() !!}
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="query" placeholder="Поиск по ...">
+                              <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                              </span>
+                                        </div>
+                                    </form>
+                                </li>
+
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <!--Меню-->
@@ -101,6 +124,19 @@
         <div class="mobile_menu">
             <ul id="menu-primary-menu-1" class="top_mobile_menu">
                 {!!Menu::getLI('10','topmain')!!}
+
+                        <li>
+
+                            <form class="navbar-form navbar-form-sm nav-search"  role="search" action="/search" method="post">
+                                {!! csrf_field() !!}
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="query" placeholder="Поиск по ...">
+                              <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                              </span>
+                                </div>
+                            </form>
+                        </li>
 
             </ul>
         </div>

@@ -4,7 +4,12 @@
     <div id="wrapper-content">
         <section class="page-title-wrapper">
             <div class="container clearfix">
-                <div class="luchiki-heading"><h2>Результаты поиска:</h2>
+                <div class="luchiki-heading">
+                    <h2>Результаты поиска
+                        @if($query)
+                        по запросу: {{$query}}
+                        @endif
+                    </h2>
                 </div>
             </div>
             <div class="wrrr"></div>
@@ -23,6 +28,7 @@
 
 
                                     <div class="wrapper-md">
+                                    @if($search)
 
                                         <ul class="list-group list-group-alt list-group-lg no-borders pull-in m-b-none">
 
@@ -59,6 +65,7 @@
 
 
                                         </ul>
+                                        @endif
 
 
                                     </div>
