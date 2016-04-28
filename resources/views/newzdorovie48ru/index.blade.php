@@ -8,21 +8,24 @@
 </section>
 <!-- Слайдер -->
 
+
+@if(!is_null($getShare))
 <!-- Акция -->
 <section class="container-fluid">
     <div class="row bg-success">
         <div class="container v-center padder-v b-b">
             <div class="col-md-10 text-white v-center">
-                <h3>Массажеры для спины со скидкой <b>25%</b></h3>
+                <h3>{{$getShare->name}}</h3>
             </div>
             <div class="col-md-2 v-center text-center">
-                <button class="btn btn-default btn-void-white">Далее</button>
+                <button class="btn btn-default btn-void-white">Смотреть все</button>
             </div>
 
         </div>
     </div>
 </section>
 <!-- Акция -->
+@endif
 
 <!-- Услуги -->
 <section class="container-fluid">
@@ -136,7 +139,7 @@
                                                         var option = "";
 
                                                         $.each(msg, function (dateStr, timeObj) {
-                                                            option += "<h5>" + dateStr + "</h5>";
+                                                            option += "<h5><b>" + dateStr + "</b></h5>";
 
                                                             $.each(timeObj, function (dateStr2, timeObj2) {
 
@@ -255,7 +258,7 @@
                                     <div class="col-md-12">
                                         <h5> Выберите дату</h5>
 
-                                        <div class="form-group appointment-scroll" id="date">
+                                        <div class="form-group scrollbar text-center" id="date">
 
                                         </div>
 

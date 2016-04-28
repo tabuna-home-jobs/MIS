@@ -13,15 +13,8 @@ class SendMailAction extends Event
      *
      * @return void
      */
-    public function __construct($activationCode, $request)
+    public function __construct($activationCode, $phone)
     {
-        Mail::send('mail/activate', ['activationCode' => $activationCode, 'email' => $request->email, 'phone' => $request->phone],
-            function ($message) use ($request) {
-                $message->to($request->email)->cc($request->email);
-            });
-
-        SMS::send($request->phone,'Код активации: '.$activationCode);
-
-
+        SMS::send($phone,'Код активации: '.$activationCode);
     }
 }

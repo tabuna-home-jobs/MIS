@@ -21,7 +21,12 @@ class HomeController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
-        $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
+        $getShare = $getSites->getShares()
+            ->select('name')
+            ->limit(1)
+            ->orderByRaw('RANDOM()')
+            ->first();
+        
         $getComplextGoods = Category::where('ids', Session::get('website'))->take(3)->with(['complexGoods' => function($query) {
             $query->orderBy('sort', 'asc');
         }])->get();
@@ -35,7 +40,7 @@ class HomeController extends Controller
         $specialization = DB::table('timetable')->select('specialization')->distinct()->get();
         return view('new' . $sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
-            'getShares' => $getShares,
+            'getShare' => $getShare,
             'specialization' => $specialization,
             'complexGoods' => $getComplextGoods,
         ]);

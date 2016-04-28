@@ -40,20 +40,32 @@
 <div class="header">
     <div class="header-top">
         <div class="container">
-            <div class="phone-header col-md-3 col-sm-6  col-xs-12">
+            <div class="phone-header col-md-2 col-sm-6  col-xs-12">
                 <img src="/luchiki48.ru/img/phone.png">
                 +7 (4742) 77 03 97
             </div>
-            <div class="adr-header col-md-4 col-sm-6 col-xs-12">
+            <div class="adr-header col-md-3 col-sm-6 col-xs-12">
                 <img src="/luchiki48.ru/img/adr.png">
                 г. Липецк, ул. Неделина, 15-а
             </div>
-            <div class="mail-header col-md-3 col-sm-6 col-xs-12">
+            <div class="mail-header col-md-2 col-sm-6 col-xs-12">
                 <img src="/luchiki48.ru/img/mail.png">
                 info@luchiki.ru
             </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <form class="navbar-form navbar-form-sm nav-search"  role="search" action="/search" method="post">
+                    {!! csrf_field() !!}
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="query" placeholder="Поиск по ...">
+                              <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                              </span>
+                    </div>
+                </form>
 
-            <div class="social-header col-md-2 col-sm-6 hidden-xs">
+            </div>
+
+            <div class="social-header col-md-2 hidden-sm hidden-xs">
                 <!--<img src="/luchiki48.ru/img/social.png">-->
                 <div class="col-sm-3 col-md-3 col-xs-3">
                     <a href="http://vk.com/club58100338"><img src="/luchiki48.ru/img/vk.png"></a>
@@ -93,6 +105,7 @@
                             <ul class="nav navbar-nav">
                                 {!! Menu::getLi(7,'topmain','') !!}
                             </ul>
+
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
                 </nav>

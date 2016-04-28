@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\sokzn48;
+namespace App\Http\Controllers\stomzn48;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
@@ -18,7 +18,7 @@ class SearchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($sitename = "sokzn48", $sitedomen = "ru")
+    public function index($sitename = "stomzn48", $sitedomen = "ru")
     {
         return view($sitename . $sitedomen . '/search', [
             'query' => null,
@@ -42,8 +42,9 @@ class SearchController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $sitename = "sokzn48", $sitedomen = "ru")
+    public function store(Request $request, $sitename = "stomzn48", $sitedomen = "ru")
     {
+
         $query = $request->input('query');
         $site = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id;
         $search = Search::all($query);
