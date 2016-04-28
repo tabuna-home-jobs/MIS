@@ -22,10 +22,7 @@ class BlockItemRequest extends Request {
         return [
             'id' => 'integer',
             'name' => 'required|max:255',
-            'text' => 'required',
-            'descript' => 'max:255',
             'avatar' => 'mimes:jpeg,bmp,png',
-            'block_id'=> 'integer'
         ];
 	}
 

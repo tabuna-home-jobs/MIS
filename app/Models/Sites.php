@@ -86,6 +86,11 @@ class Sites extends Model
     {
         return $this->hasOne('App\Models\Goods', 'ids');
     }
+    
+    public function getComplexGoods() 
+    {
+        return $this->hasOne('App\Models\GoodsGroup', 'ids');
+    }
 
     public function getSpecCat()
     {

@@ -93,6 +93,6 @@ class Menu extends Facade
         }
 
 
-        echo view("zdorovie48ru/_layout/" . $template, ['items' => $menuParents->toArray()])->render();
+        echo view("newzdorovie48ru/_layout/" . $template, ['items' => $menuParents->toArray()])->render();
     }
 }

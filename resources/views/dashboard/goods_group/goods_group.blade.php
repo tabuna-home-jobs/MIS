@@ -6,8 +6,8 @@
     </div>
     <div class="wrapper-md">
         <div class="panel panel-default">
-            <div class="panel-heading">
-                <a href="/dashboard/goods_group/add/" class="btn btn-link btn-sm"><span class="fa fa-plus"></span> Добавить новую запись </a>
+            <div class="panel-heading clearfix">
+                <a href="/dashboard/goods_group/add/" class="btn btn-success btn-xs pull-right">Добавить <i class="fa fa-plus"></i></a>
             </div>
 
             <div class="table-responsive">
@@ -26,8 +26,8 @@
                                 </thead>
                                 <tbody>
 
-                                @foreach ($Groups as  $key => $category)
-                                    @include('dashboard.goods_group._partials.category', $category)
+                                @foreach ($Groups as  $key => $item)
+                                    @include('dashboard.goods_group._partials.category')
                                 @endforeach
 
 

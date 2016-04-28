@@ -6,8 +6,10 @@ use App\Models\Category as Cats;
 use App\Models\Comments;
 use App\Models\Goods;
 use App\Models\Sites;
+use Illuminate\Support\Collection;
 use Request;
 use Session;
+use Route;
 
 class ServicesController extends Controller
 {
@@ -114,19 +116,25 @@ class ServicesController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
-
-        if (intval($id) && (strlen($id) == strlen(intval($id)))) {
-            $Goods = $getSites->getGoods()->where('id', $id)->first();
+        if (!empty(Route::getCurrentRoute()->parameterNames()) && Route::getCurrentRoute()->parameterNames()[0] == 'complex') {
+            $data['Good'] = $getSites->getComplexGoods()->with('goods')->where('slug', $id)->firstOrFail();
+            $view = 'new' . $sitename . $sitedomen . '/goods_complex';
         } else {
-            $Goods = $getSites->getGoods()->where('slug', $id)->firstOrFail();
+            if (intval($id) && (strlen($id) == strlen(intval($id)))) {
+                $data['Good'] = $getSites->getGoods()->where('id', $id)->first();
+            } else {
+                $data['Good'] = $getSites->getGoods()->where('slug', $id)->firstOrFail();
+            }
+
+            $data['Comments'] = $data['Good']->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
+            $view = 'new' . $sitename . $sitedomen . '/goods';
         }
 
-        $Category = $getSites->getCategory()->findorFail($Goods->category_id);
-        $Comments = $Goods->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
-        $GoodsCat = $getSites->getGoods()->where('category_id', $Goods->category_id)->orderBy('name', 'asc')->get();
+        $data['Category'] = $getSites->getCategory()->findorFail($data['Good']->category_id);
+        $data['Goods'] = $getSites->getGoods()->where('category_id', $data['Good']->category_id)->orderBy('name', 'asc')->get();
+        $data['complexGoods'] = $getSites->getComplexGoods()->where('category_id', $data['Good']->category_id)->orderBy('name', 'asc')->get();
 
-        return view('new' . $sitename . $sitedomen . '/goods',
-            ['Good' => $Goods, 'Category' => $Category, 'Goods' => $GoodsCat, 'Comments' => $Comments]);
+        return view($view, $data);
     }
 
     /**

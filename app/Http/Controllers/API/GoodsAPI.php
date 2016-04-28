@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Models\GoodsDefault;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Session;
 
 class GoodsAPI extends Controller
 {
@@ -22,7 +23,11 @@ class GoodsAPI extends Controller
         ]);
 
         $query = $request->q;
-        $goods = GoodsDefault::select('id', 'name as text')->take(15)->where('name', 'ILIKE', '%' . $query .'%')->orderBy('name', 'desc')->get();
+        $goods = GoodsDefault::select('id', 'name as text')->take(15)
+            ->where('ids', Session::get('website'))
+            ->where('name', 'ILIKE', '%' . $query .'%')
+            ->whereOr('title', 'ILIKE', '%' . $query . '%')
+            ->orderBy('name', 'asc')->get();
 
         return response()->json($goods);
     }

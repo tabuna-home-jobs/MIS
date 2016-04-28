@@ -6,6 +6,8 @@ use App\Models\Page as Page;
 use App\Models\Sites;
 use DB;
 use Request;
+use Session;
+use App\Models\Category;
 
 class HomeController extends Controller
 {
@@ -20,13 +22,22 @@ class HomeController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->get();
+        $getComplextGoods = Category::where('ids', Session::get('website'))->take(3)->with(['complexGoods' => function($query) {
+            $query->orderBy('sort', 'asc');
+        }])->get();
+
+        foreach ($getComplextGoods as $key => $value) {
+            if (empty($value->complexGoods->count())) {
+                unset($getComplextGoods[$key]);
+            }
+        }
 
         $specialization = DB::table('timetable')->select('specialization')->distinct()->get();
         return view('new' . $sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShares' => $getShares,
             'specialization' => $specialization,
-
+            'complexGoods' => $getComplextGoods,
         ]);
     }
 

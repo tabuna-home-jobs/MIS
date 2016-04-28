@@ -118,6 +118,7 @@ Route::group(['domain' => 'new.zdorovie48.ru', 'namespace' => 'zdorovie48'], fun
     Route::resource('/answers', 'AnswersController');
     Route::resource('/reviews', 'ReviewsController');
     Route::resource('/service', 'ServicesController');
+    Route::resource('/service/complex', 'ServicesController');
     Route::resource('/shares', 'SharesController');
     Route::resource('/page', 'PageController');
     Route::resource('/gallery', 'GalleryController');
@@ -127,6 +128,7 @@ Route::group(['domain' => 'new.zdorovie48.ru', 'namespace' => 'zdorovie48'], fun
     Route::controller('/appointment', 'AppointmentController', [
         'getIndex' => 'appointment',
     ]);
+    
     Route::resource('/blog', 'BlogController');
 
     Route::resource('/', 'HomeController');
@@ -138,7 +140,6 @@ Route::group(['domain' => 'new.zdorovie48.ru', 'namespace' => 'zdorovie48'], fun
     ]);
 
     Route::resource('/login', 'LoginController');
-
 });
 
 

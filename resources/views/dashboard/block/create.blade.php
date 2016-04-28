@@ -23,7 +23,7 @@
 
                                 <div class="form-group">
                                     <label>Заголовок</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="title" value="{{ old('title') }}">
+                                    <input class="form-control" type="text" maxlength="255" name="title" value="{{ old('title') }}">
                                 </div>
 
                                 <div class="form-group">
@@ -39,7 +39,7 @@
                                 <div class="form-group">
                                     <label>Описание</label>
 
-                                    <textarea class="form-control" rows="7"  maxlength="255" required name="descript">{{ old('descript') }}</textarea>
+                                    <textarea class="form-control" rows="7"  maxlength="255" name="descript">{{ old('descript') }}</textarea>
                                 </div>
 
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

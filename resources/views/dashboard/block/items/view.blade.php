@@ -38,7 +38,7 @@
                         </div>
                         <div class="form-group">
                             <label>Описание</label>
-                            <input class="form-control" type="text" maxlength="255" required name="descript" value="{{ old('descript', isset($item->descript) ? $item->descript : '') }}">
+                            <input class="form-control" type="text" maxlength="255" name="descript" value="{{ old('descript', isset($item->descript) ? $item->descript : '') }}">
                         </div>
 
                         <div class="form-group">

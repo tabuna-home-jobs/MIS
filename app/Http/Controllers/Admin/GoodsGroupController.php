@@ -16,25 +16,9 @@ class GoodsGroupController extends Controller
 {
     public function getIndex(RequestIlluminate $request)
     {
-        $query = $request->input('query');
+        $Groups = GoodsGroup::where('ids', Session::get('website'))->orderBy('category_id', 'desc')->paginate(15);
 
-        if(is_null($query) || empty($query))
-        {
-            $Groups = GoodsGroup::where('ids', Session::get('website'))
-                ->orderBy('name', 'asc')
-                ->paginate(15);
-
-            return view("dashboard/goods_group/goods_group",['Groups' => $Groups ]);
-        }
-        else{
-            $Groups = GoodsGroup::where('ids', Session::get('website'))
-                ->where('name', 'LIKE', '%'.$query.'%')
-                ->whereOr('title', 'LIKE', '%'.$query.'%')
-                ->orderBy('name', 'asc')
-                ->paginate(15);
-
-            return view("dashboard/goods_group/goods_group",['Groups' => $Groups ]);
-        }
+        return view("dashboard/goods_group/goods_group",['Groups' => $Groups ]);
     }
 
 

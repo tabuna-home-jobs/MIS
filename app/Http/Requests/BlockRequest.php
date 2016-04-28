@@ -23,9 +23,9 @@ class BlockRequest extends Request {
 	{
 		return [
             'id' => 'integer',
-            'title' => 'required|max:255',
+            'title' => 'max:255',
             'name' => 'required|max:255',
-            'cont' => 'required',
+			'slug' => 'required',
             'descript' => 'max:255',
 		];
 	}

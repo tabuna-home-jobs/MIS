@@ -41,4 +41,10 @@ class Category extends Node
     {
         return $this->belongsTo('App\Models\Sites', 'ids');
     }
+    
+    // Комплексные услуги
+    public function complexGoods()
+    {
+        return $this->hasMany('App\Models\GoodsGroup', 'category_id');
+    }    
 }

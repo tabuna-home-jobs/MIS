@@ -13047,7 +13047,7 @@ body {
   background: #FAFAFA;
 }
 body section {
-  background: #FAFAFA;
+  background: #CCC;
 }
 .fa-8x {
   font-size: 8em;
@@ -13074,6 +13074,30 @@ body section {
 }
 .complex-uslug a:not(:hover) span i {
   transition: 0.8s;
+}
+.complex_goods_list > div {
+  height: 215px;
+  margin: 15px 0;
+}
+.complex_goods_list > div .bg-white {
+  height: 100%;
+  padding: 10px;
+  transition: .6s ease background-color;
+  border-radius: 2px;
+}
+.complex_goods_list .img {
+  height: 140px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.complex_goods_list .img img {
+  width: 100%;
+}
+.complex_goods_list .name {
+  text-align: center;
+}
+.btn-order-good {
+  margin-top: 30px;
 }
 .btn-void-white {
   background: none;

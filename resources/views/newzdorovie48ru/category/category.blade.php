@@ -30,5 +30,6 @@
 
 
 @else
-    <li><a href="/service/{{$category->slug}}">{{$category->name}}</a></li>
+
+    <li><a href="/service/@if (isset($type) && $type == 'complex')complex/@endif{{$category->slug}}">{{$category->name}}</a></li>
 @endif

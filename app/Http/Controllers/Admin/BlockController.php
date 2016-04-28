@@ -35,11 +35,10 @@ class BlockController extends Controller
      */
     public function store(BlockRequest $request)
     {
+        $slug = str_slug($request->name);
+
         if (!empty($request->slug)) {
-            $slug = str_slug($request->slug);
-        }
-        else {
-            $slug = str_slug($request->name);
+            $slug = $request->slug;
         }
 
         if (Block::where('slug', $slug)->first()) {
@@ -91,11 +90,10 @@ class BlockController extends Controller
      */
     public function update(Block $block, BlockRequest $request)
     {
+        $slug = str_slug($request->name);
+
         if (!empty($request->slug)) {
-            $slug = str_slug($request->slug);
-        }
-        else {
-            $slug = str_slug($request->name);
+            $slug = $request->slug;
         }
 
         if ($block->slug != $slug && Block::where('slug', $slug)->first()) {

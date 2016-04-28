@@ -2,106 +2,15 @@
 
 @section('content')
 
-
-
-        <!-- Слайдер -->
+<!-- Слайдер -->
 <section>
-    <div id="main-slider" class="main-slider carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#main-slider" data-slide-to="0" class=""></li>
-            <li data-target="#main-slider" data-slide-to="1" class="active"></li>
-            <li data-target="#main-slider" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="item">
-                <img
-                        alt="Слайдер"
-                        src="/zdorovie48/img/slider/1.png"
-                >
-
-                <div class="carousel-caption text-black">
-                    <small>медицинский центр</small>
-                    <h1 class="m-t-none">˝Здоровье Нации˝</h1>
-
-                    <p class="w-full">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</p>
-
-                    <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
-                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
-                        sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                        inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-                        dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                        labore et dolore magnam aliquam quaerat voluptatem.</p>
-                </div>
-            </div>
-            <div class="item active">
-                <img
-                        alt="Слайдер"
-                        src="/zdorovie48/img/slider/1.png"
-                >
-
-                <div class="carousel-caption text-black">
-                    <small>медицинский центр</small>
-                    <h1 class="m-t-none">˝Здоровье Нации˝</h1>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</p>
-
-                    <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
-                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
-                        sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                        inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-                        dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                        labore et dolore magnam aliquam quaerat voluptatem.</p>
-                </div>
-            </div>
-            <div class="item">
-                <img
-                        alt="Слайдер"
-                        src="/zdorovie48/img/slider/1.png"
-                >
-
-                <div class="carousel-caption text-black">
-                    <small>медицинский центр</small>
-                    <h1 class="m-t-none">˝Здоровье Нации˝</h1>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</p>
-
-                    <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
-                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
-                        sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                        inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-                        dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                        labore et dolore magnam aliquam quaerat voluptatem.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{ Block::make('index_slider', 'newzdorovie48ru/_blocks/index_slider') }}
 </section>
 <!-- Слайдер -->
-
-
 
 <!-- Акция -->
 <section class="container-fluid">
     <div class="row bg-success">
-
         <div class="container v-center padder-v b-b">
             <div class="col-md-10 text-white v-center">
                 <h3>Массажеры для спины со скидкой <b>25%</b></h3>
@@ -115,119 +24,17 @@
 </section>
 <!-- Акция -->
 
-
-
-
-
-
-
-
 <!-- Услуги -->
 <section class="container-fluid">
-    <div class="row m-b-xxl">
-
-        <h1 class="text-center m-t-xxl  m-b-xxl">Услуги</h1>
-
-        <div class="container text-center">
-            <div class="w-full">
-                <div class="col-md-4 padder-v">
-                    <a href="/service/53" class="block"> <p class="h3 m-b-md"><span class="text-muted-dm b-b-success">Консультации</span></p>
-                        <i class="fa fa-user-md fa-8x text-primary" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <div class="col-md-4 padder-v">
-                    <a href="/service/127" class="block"><p class="h3 m-b-md"><span class="text-muted-dm b-b-success">Диагностика</span></p></a>
-                    <i class="fa fa-stethoscope fa-8x text-primary" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-4 padder-v">
-                    <a href="/service/142" class="block"><p class="h3 m-b-md"><span class="text-muted-dm b-b-success">Лечение</span></p></a>
-                    <i class="fa fa-medkit fa-8x text-primary" aria-hidden="true"></i>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    {{ Block::make('index_goods', 'newzdorovie48ru/_blocks/index_goods', 3) }}
 </section>
 <!-- Услуги -->
 
-
-
 <!-- Наши достоинства -->
-
 <section class="container-fluid">
-
-    <div class="row">
-
-        <div class="paralax-3  parallax-main text-center v-center" data-type="background" data-speed="10">
-
-
-            <div class="container padder-v text-white">
-
-                <h1 class="text-center  m-b-xxl">Наши достоинства</h1>
-
-
-                <div class="col-sm-3 hidden-xs">
-                    <p class="h3 m-b-xl inline b b-white rounded wrapper-xl">
-                        <i class="fa w-1x fa fa-user-md fa-2x" aria-hidden="true"></i>
-                    </p>
-
-                    <div class="m-b-xl">
-                        <h5 class="m-t-none l-h-1x">Квалифицированные<br>
-                            специалисты</h5>
-                    </div>
-                </div>
-
-                <div class="col-sm-3 hidden-xs">
-                    <p class="h3 m-b-xl inline b b-white rounded wrapper-xl">
-                        <i class="fa w-1x fa fa-users  fa-2x"></i>
-                    </p>
-
-                    <div class="m-b-xl">
-                        <h5 class="m-t-none l-h-1x">700 постоянных<br>
-                            клиентов</h5>
-
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-12 hidden-xs">
-                    <p class="h3 m-b-xl inline b b-white rounded wrapper-xl">
-                        <i class="fa w-1x fa fa-clock-o  fa-2x" aria-hidden="true"  ></i>
-                    </p>
-
-                    <div class="m-b-xl">
-                        <h5 class="m-t-none l-h-1x">Приём в удобное<br>
-                            для вас время</h5>
-
-                    </div>
-                </div>
-
-
-                <div class="col-sm-3 col-xs-12 hidden-xs">
-                    <p class="h3 m-b-xl inline b b-white rounded wrapper-xl">
-                        <i class="fa w-1x fa fa-heart  fa-2x" aria-hidden="true"></i>
-                    </p>
-
-                    <div class="m-b-xl">
-                        <h5 class="m-t-none l-h-1x">Только положительные<br>
-                            отзывы от клиентов</h5>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-    </div>
+    {{ Block::make('index_dignity', 'newzdorovie48ru/_blocks/index_dignity', 4) }}
 </section>
-
-
 <!-- Наши достоинства -->
-
-
-
-
 
 <!-- Запись на приём -->
 <section class="container-fluid" id="main-appointments-section">
@@ -501,164 +308,41 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
         </div>
-
     </div>
-
 </section>
-
 <!-- Запись на приём -->
 
-
-
-
 <!-- Комплексные услуги -->
-
 <section class="container-fluid">
-
     <div class="row">
-
         <div class="paralax-2 complex-uslug  parallax-main v-center" data-type="background" data-speed="10">
-
-
             <div class="container padder-v text-white">
-
                 <h1 class="text-center  m-b-xxl">Комплексные услуги</h1>
 
+                @foreach ($complexGoods as $item)
+                    <div class="col-md-4">
+                        <p class="h3 m-b-md text-center">{{ $item->name }}</p>
 
-                <div class="col-md-4">
-                    <p class="h3 m-b-md text-center">Консультации</p>
-
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-                    </ul>
-
-
-                </div>
-
-
-
-                <div class="col-md-4">
-                    <p class="h3 m-b-md text-center">Дианностика</p>
-
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-                    </ul>
-
-
-                </div>
-
-
-
-                <div class="col-md-4">
-                    <p class="h3 m-b-md text-center">Лечение</p>
-
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="text-white"> <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
-                                <i class="fa w-1x fa fa-heart"></i>
-                            </span>  Услуга услуга услуга
-                            </a>
-                        </li>
-                    </ul>
-
-
-                </div>
-
-
-
+                        <ul class="list-unstyled">
+                            @foreach($item->complexGoods as $complexGood)
+                                <li>
+                                    <a href="/service/complex/{{$complexGood->slug}}" class="text-white">
+                                        <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
+                                            <i class="fa w-1x fa fa-heart"></i>
+                                        </span>
+                                        {{ $complexGood->name }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endforeach
             </div>
-
-
         </div>
-
-    </div>
-
     </div>
 </section>
-
-
 <!-- Комплекстные услуги -->
-
-
-
-
-
 
 <!-- Новости -->
 <section class="container-fluid">
@@ -666,13 +350,7 @@
         <h1 class="text-center m-t-xxl  m-b-xxl">Последние новости</h1>
 
         <div class="container">
-
-
-
-
             @foreach($getNews as $key => $value)
-
-
                 <article class="col-md-3">
                     <figure>
                         <a href="/blog/{{$value['id']}}"><img src="{{$value['avatar']}}" alt="" class="img-responsive" alt="{{$value['name']}}"/>
@@ -684,20 +362,13 @@
                         </figcaption>
                     </figure>
                 </article>
-
-
             @endforeach
-
-
-
         </div>
     </div>
 </section>
 <!-- Новости -->
 
-
 <!-- Мобильное приложение -->
-
 <section class="paralax container-fluid" data-stellar-background-ratio="0.3">
     <div class="row">
         <div class="container">

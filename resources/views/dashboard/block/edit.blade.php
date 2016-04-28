@@ -28,7 +28,7 @@
 
                                 <div class="form-group">
                                     <label>Заголовок</label>
-                                    <input class="form-control" type="text" maxlength="255" required name="title" value="{{ old('title', $Block->title)}}">
+                                    <input class="form-control" type="text" maxlength="255" name="title" value="{{ old('title', $Block->title)}}">
                                 </div>
 
                                 <div class="form-group">
@@ -44,7 +44,7 @@
                                 <div class="form-group">
                                     <label>Описание</label>
 
-                                    <textarea class="form-control" rows="7"  maxlength="255" required name="descript">{{$Block->descript or ''}}</textarea>
+                                    <textarea class="form-control" rows="7"  maxlength="255" name="descript">{{$Block->descript or ''}}</textarea>
                                 </div>
 
                                 <input type="hidden" name="_method" value="PUT">
