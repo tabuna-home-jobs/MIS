@@ -134,6 +134,7 @@ Route::group(['domain' => 'new.zdorovie48.ru', 'namespace' => 'zdorovie48'], fun
 
     Route::controllers([
         'auth' => 'AuthController',
+        'cabinet' => 'CabinetController'
         //'password' => 'Auth\RegistrationController',
     ]);
 

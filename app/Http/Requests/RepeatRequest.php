@@ -24,7 +24,7 @@ class RepeatRequest extends Request
     public function rules()
     {
         return [
-            'email' => 'email|required|max:255',
+            'phone' => 'required|max:255',
         ];
     }
 }

@@ -8,9 +8,10 @@ use App\Http\Requests\AuthLoginRequest;
 use App\Http\Requests\AuthRequest;
 use App\Http\Requests\RepeatRequest;
 use App\Models\Sites;
-use Mail;
-use Sentry;
 use App\Models\User;
+use Mail;
+use Route;
+use Sentry;
 
 class AuthController extends Controller
 {
@@ -22,104 +23,135 @@ class AuthController extends Controller
      */
     public function getLogin($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        //$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        return view('new' . $sitename . $sitedomen . '/login', []);
+        if (Sentry::check()) {
+            return redirect('/cabinet');
+        } else {
+            //$getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+            return view('new' . $sitename . $sitedomen . '/auth/login', []);
+        }
     }
 
     public function postLogin(AuthLoginRequest $request)
     {
-        $phone = str_replace(['','-',' ','+'],'',$request->phone);
-        $credentials = array(
-            'phone' => $phone,
-            'password' => $request->password,
-        );
-        Sentry::authenticateAndRemember($credentials);
-        return redirect('/home');
+        if (Sentry::check()) {
+            return redirect('/cabinet');
+        } else {
+            $phone = str_replace(['', '-', ' ', '+'], '', $request->phone);
+            $credentials = array(
+                'phone' => $phone,
+                'password' => $request->password,
+            );
+            Sentry::authenticateAndRemember($credentials);
+            return redirect('/cabinet');
+        }
     }
 
 
-    public function getRegister()
+    public function getRegister($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        return view('auth/register');
+        if (Sentry::check()) {
+            return redirect('/cabinet');
+        } else {
+            return view('new' . $sitename . $sitedomen . '/auth/register');
+        }
     }
 
 
-    public function postRegister(AuthRequest $request)
+    public function postRegister(AuthRequest $request, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        // Create the user
-        $user = Sentry::createUser(array(
-            'first_name' => $request->name,
-            'last_name' => $request->lastname,
-            'middle_name'=> $request->middlename,
-            'phone' => $request->phone,
-            'birth' => $request->birth,
-            'email' => $request->email,
-            'password' => $request->password,
-            //'activated' => TRUE,
-        ));
+        if (Sentry::check()) {
+            return redirect('/cabinet');
+        } else {
+            // Create the user
+            $phone = str_replace(['', '-', ' ', '+'], '', $request->phone);
+            $user = Sentry::createUser(array(
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'middle_name' => $request->middle_name,
+                'phone' => $phone,
+                'birth' => $request->birth,
+                'email' => $request->email,
+                'password' => $request->password,
+                //'activated' => TRUE,
+            ));
 
-        $activationCode = $user->getActivationCode();
+            $activationCode = $user->getActivationCode();
 
+            $user->activation_code = str_limit($activationCode, $limit = 5, '');
+            $user->save();
 
-        //$user = User::find($user->)
-
-        $user->activation_code = str_limit($activationCode, $limit = 5,'');
-        $user->save();
-
-        event(new SendMailAction($user->activation_code, $request));
+            event(new SendMailAction($user->activation_code, $phone));
+        }
         return redirect('/auth/action');
     }
 
 
-    public function getLogout()
+    public function getLogout($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        Sentry::logout();
+            Sentry::logout();
+            return view('new' . $sitename . $sitedomen . '/auth/login', []);
     }
 
 
-    public function getAction($email = null, $activationCode = null)
+    public function getAction($email = null, $activationCode = null, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        if (is_null($email) || is_null($activationCode)) {
-            return view('auth/action', ['email' => $email]);
-        } else {
-            $user = Sentry::findUserByLogin($email);
-            if ($user->attemptActivation($activationCode)) {
-                $adminGroup = Sentry::findGroupByName('User');
-                $user->addGroup($adminGroup);
-                Sentry::loginAndRemember($user);
 
-                return redirect('/');
+        if (Sentry::check()) {
+            return redirect('/cabinet');
+        } else {
+
+            if (is_null($email) || is_null($activationCode)) {
+                return view('new' . $sitename . $sitedomen . '/auth/action', ['email' => $email]);
             } else {
-                return redirect()->back()->withErrors(array('Ключ не подходит к email'));
+                $user = Sentry::findUserByLogin($email);
+                if ($user->attemptActivation($activationCode)) {
+                    $adminGroup = Sentry::findGroupByName('User');
+                    $user->addGroup($adminGroup);
+                    Sentry::loginAndRemember($user);
+
+                    return redirect('/cabinet');
+                } else {
+                    return redirect()->back()->withErrors(array('Ключ не подходит к номеру телефона'));
+                }
             }
         }
     }
 
     public function postAction(ActionRequest $request)
     {
-        $user = Sentry::findUserByLogin($request->email);
+        $user = Sentry::findUserByLogin($request->phone);
         if ($user->attemptActivation($request->key)) {
             $adminGroup = Sentry::findGroupByName('User');
             $user->addGroup($adminGroup);
             Sentry::loginAndRemember($user);
 
-            return redirect('/');
+            return redirect('/cabinet');
         } else {
-            return redirect()->back()->withErrors(array('Ключ не подходит к email'));
+            return redirect()->back()->withErrors(array('Ключ не подходит к номеру телефона'));
         }
     }
 
 
-    public function getRepeat()
+    public function getRepeat($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        return view('auth/repeat');
+        if (Sentry::check()) {
+            return redirect('/cabinet');
+        } else {
+
+            return view('new' . $sitename . $sitedomen . '/auth/repeat');
+        }
     }
 
-    public function postRepeat(RepeatRequest $request)
+    public function postRepeat(RepeatRequest $request, $sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        $user = Sentry::findUserByLogin($request->email);
-        $activationCode = $user->getActivationCode();
-        event(new SendMailAction($activationCode, $request));
-        return redirect('/auth/action');
+        if (Sentry::check()) {
+            return redirect('/cabinet');
+        } else {
+            $phone = str_replace(['', '-', ' ', '+'], '', $request->phone);
+            $user = Sentry::findUserByLogin($request->email);
+            $activationCode = $user->getActivationCode();
+            event(new SendMailAction($activationCode, $phone));
+            return redirect('new' . $sitename . $sitedomen . '/auth/action');
+        }
     }
 }

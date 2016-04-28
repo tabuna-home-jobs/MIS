@@ -3,8 +3,6 @@
 @section('content')
 
 
-
-
         <!-- Команда -->
 <section class="container-fluid">
     <div class="row">
@@ -20,10 +18,7 @@
                 </div>
 
 
-
                 <div class="row">
-
-
 
 
                     <div class="col-sm-9">
@@ -34,31 +29,31 @@
 
                                 <div class="row">
 
-                            @foreach($Specialisty as $spec)
+                                    @foreach($Specialisty as $spec)
 
-                                <article class="item text-center">
-                                    <div class="panel">
-                                        <div class="wrapper-md">
-                                            <a href="/team/{{$spec->id}}">
-                                                <img class="img-responsive img-center" src="{{$spec->avatar or ''}}" alt="">
-                                                <h5>{{$spec->fio or ''}}
-                                                    <p class="m-t-xs"><small>{!!$spec->dopinfo or ''!!}</small></p>
-                                                </h5>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
+                                        <article class="item text-center">
+                                            <div class="panel">
+                                                <div class="wrapper-md">
+                                                    <a href="/team/{{$spec->id}}">
+                                                        <img class="img-responsive img-center"
+                                                             src="{{$spec->avatar or ''}}" alt="">
+                                                        <h5>{{$spec->fio or ''}}
+                                                            <p class="m-t-xs">
+                                                                <small>{!!$spec->dopinfo or ''!!}</small>
+                                                            </p>
+                                                        </h5>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
 
-                            @endforeach
+                                    @endforeach
 
-                                    </div>
                                 </div>
+                            </div>
 
 
                         </div>
-
-
-
 
 
                         <div class="row">
@@ -70,9 +65,7 @@
                         </div>
 
 
-                        </div>
-
-
+                    </div>
 
 
                     <div class="col-sm-3">
@@ -88,9 +81,7 @@
                     </div>
 
 
-
                 </div>
-
 
 
             </div>
@@ -100,21 +91,6 @@
     </div>
 </section>
 <!-- Команда -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @endsection

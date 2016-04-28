@@ -8,7 +8,7 @@ class AeroSMS
     const URL_SMSAERO_API = 'gate.smsaero.ru';
     private $login = 'fisher_88@inbox.ru'; //Ваш логин
     private $password = 'OAnv1IHrnrbbcMI1w747wp65HIT';//'OAnv1IHrnrbbcMI1w747wp65HIT'; //Ваш пароль
-    private $sign = 'NEWS'; //Подпись по умолчанию
+    private $sign = "Zdorov'e Nacii"; //Подпись по умолчанию
 
     public function __construct($login = false, $password =false, $sign = false)
     {
