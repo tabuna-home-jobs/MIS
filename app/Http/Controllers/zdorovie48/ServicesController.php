@@ -121,12 +121,14 @@ class ServicesController extends Controller
             $view = 'new' . $sitename . $sitedomen . '/goods_complex';
         } else {
             if (intval($id) && (strlen($id) == strlen(intval($id)))) {
-                $data['Good'] = $getSites->getGoods()->where('id', $id)->first();
+                $data['Good'] = $getSites->getGoods()->where('id', $id);
             } else {
-                $data['Good'] = $getSites->getGoods()->where('slug', $id)->firstOrFail();
+                $data['Good'] = $getSites->getGoods()->with('complex_goods')->where('slug', $id);
             }
 
+            $data['Good'] = $data['Good']->with('complex_goods')->first();
             $data['Comments'] = $data['Good']->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
+            
             $view = 'new' . $sitename . $sitedomen . '/goods';
         }
 

@@ -27,22 +27,16 @@ class HomeController extends Controller
             ->orderByRaw('RANDOM()')
             ->first();
         
-        $getComplextGoods = Category::where('ids', Session::get('website'))->take(3)->with(['complexGoods' => function($query) {
+        $getComplexGoods = Category::has('complexGoods')->with(['complexGoods' => function($query) {
             $query->orderBy('sort', 'asc');
-        }])->get();
-
-        foreach ($getComplextGoods as $key => $value) {
-            if (empty($value->complexGoods->count())) {
-                unset($getComplextGoods[$key]);
-            }
-        }
+        }])->take(3)->get();
 
         $specialization = DB::table('timetable')->select('specialization')->distinct()->get();
         return view('new' . $sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShare' => $getShare,
             'specialization' => $specialization,
-            'complexGoods' => $getComplextGoods,
+            'complexGoods' => $getComplexGoods,
         ]);
     }
 
