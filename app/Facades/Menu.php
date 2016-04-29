@@ -95,4 +95,24 @@ class Menu extends Facade
 
         echo view("newzdorovie48ru/_layout/" . $template, ['items' => $menuParents->toArray()])->render();
     }
+
+    public static function getZdorovieNaciiOld($site, $NameMenu, $pref = '', $template)
+    {
+        $menu = SiteMenu::with('items')->where(['ids' => $site, 'name' => $NameMenu])->first();
+
+
+        $menuParents = collect($menu->items);
+        $item['child'] = [];
+
+        foreach ($menuParents as $key => $item) {
+            $child = MenuItem::where(['parent' => $item->id, 'menu' => $item->menu])->get();
+
+            if ($child->count() != 0) {
+                $item['child'] = $child->toArray();
+            }
+        }
+
+
+        echo view("zdorovie48ru/_layout/" . $template, ['items' => $menuParents->toArray()])->render();
+    }
 }
