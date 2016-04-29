@@ -3,7 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Timetable extends Model
+class TimeTable extends Model
 {
 
     use SoftDeletes;

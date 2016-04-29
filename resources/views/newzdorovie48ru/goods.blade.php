@@ -82,7 +82,7 @@
                                                     <h4>{{$Good->name}}</h4>
                                                     <h5>Категория: {{$Good->category()->first()->name}}</h5>
                                                     <p class="text-center btn-order-good">
-                                                        <a href="/#main-appointments-section" class="btn btn-default btn-void-primary">Заказать</a>
+                                                        <a href="/#main-appointments-section" class="btn btn-default btn-void-primary">Записаться на приём</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -98,8 +98,8 @@
                                                             @foreach(unserialize($Good->attribute) as  $keyAttr=> $valueAttr)
                                                                 @if($keyAttr % 2 == 0)
                                                                     <li class="list-group-item"><span class="pull-left">{{$valueAttr}}
-                                                                            @else
-                                                            </span>:<span class="pull-right">{{ $valueAttr }}</span></li>
+                                                                @else
+                                                                    </span>:<span class="pull-right">{{ $valueAttr }}</span></li>
                                                                 @endif
                                                             @endforeach
                                                         </ul>
@@ -115,13 +115,13 @@
 
                     @if(count($Good->complex_goods) > 0)
                         <div class="page-header">
-                            <h3 class="h4 font-thin m-b"><span class="h4">Входит в следующии комплексные услуги:</span></h3>
+                            <h3 class="h4 font-thin m-b"><span class="h4">Куда входит:</span></h3>
                         </div>
                         <div class="row complex_goods_list">
                             @foreach($Good->complex_goods as $key => $value)
                                 <div class="col-md-4">
                                     <a class="h5" href="/service/complex/{{ $value->slug }}">
-                                        <div class="bg-white">
+                                        <div class="bg-white box-shadow">
                                             <div class="img">
                                                 <img src="{{ $value->avatar }}" alt="">
                                             </div>
@@ -148,7 +148,7 @@
                                         </main>
                                     </div>
 
-                                    <div class="line line-lg b-b b-light"></div>
+                                    <div class="line line-lg padder-v b-b b-light"></div>
                                     <div class="text-muted v-center">
                                         <div class="col-md-6">
                                             <i class="fa fa-clock-o text-muted"></i>  {!! $Good->created_at->toDateString()!!}
@@ -170,7 +170,6 @@
                                                class="btn btn-icon"><i class="fa fa-odnoklassniki"></i></a>
                                         </div>
                                     </div>
-                                    <div class="line line-lg b-b b-light"></div>
                                 </div>
                             </div>
                         </div>

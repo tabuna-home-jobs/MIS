@@ -329,6 +329,8 @@ body{
 
 }
 
+main ul { padding-left: 50px;}
+
 .complex_goods_list {
   & > div {
     height: 215px;
@@ -339,6 +341,12 @@ body{
       padding: 10px;
       transition: .6s ease background-color;
       border-radius: 2px;
+
+      .name { transition: .3s ease color; }
+
+      &:hover .name {
+        color: #000;
+      }
     }
   }
 
@@ -361,6 +369,26 @@ body{
   margin-top: 30px;
 }
 
+#step-2 .radio {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+/* Скроллер для выбора даты записи на прием */
+#date .mCSB_dragger_bar{ background-color: #40B559; }
+#date .mCSB_draggerRail { background-color: #cccccc; }
+
+.index-share h3 { margin-top: 10px; }
+.index-share {
+  a {
+    transition: .3s ease border-bottom;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid #FFFFFF;
+    }
+  }
+}
 
 .btn-void-white{
   background: none;

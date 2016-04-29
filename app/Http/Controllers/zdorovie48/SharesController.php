@@ -53,9 +53,9 @@ class SharesController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
 
-        $getShares = $getSites->getShares()->findorFail($Share->id);
+        $getShare = $getSites->getShares()->findOrFail($Share->id);
 
-        return view('new' . $sitename . $sitedomen . '/sharesItem', ['Shares' => $getShares]);
+        return view('new' . $sitename . $sitedomen . '/sharesItem', ['Share' => $getShare]);
     }
 
     /**

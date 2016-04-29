@@ -17,6 +17,11 @@ var gulp = require('gulp');
 elixir(function(mix) {
     mix.less('zdorovie48/app.less', './public/zdorovie48/css/orchid.css');
 
+    mix.styles([
+        "./resources/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css",
+        "./public/zdorovie48/css/orchid.css"
+    ], 'public/zdorovie48/css/orchid.css', './');
+
     /*
     mix.copy('./resources/assets/zdorovie48/vendor/bootstrap/dist/fonts/', './public/zdorovie48/fonts');
     mix.copy('./resources/assets/zdorovie48/vendor/font-awesome/fonts/', './public/zdorovie48/fonts');
@@ -24,16 +29,15 @@ elixir(function(mix) {
     mix.copy('./resources/assets/zdorovie48/vendor/fancybox/source/', './public/zdorovie48/fancybox');
     */
 
-    /*
     mix.scripts([
-        "./resources/assets/zdorovie48/vendor/jquery/dist/jquery.min.js",
-        "./resources/assets/zdorovie48/vendor/bootstrap/dist/js/bootstrap.min.js",
-        "./resources/assets/zdorovie48/vendor/jasny-bootstrap/dist/js/jasny-bootstrap.min.js",
-        "./resources/assets/zdorovie48/vendor/jquery-ui/jquery-ui.min.js",
-        "./resources/assets/zdorovie48/js/app.js",
-        "./resources/assets/zdorovie48/js/components/**",
-        './resources/assets/zdorovie48/vendor/fancybox/source/jquery.fancybox.js',
-        '/resources./assets/zdorovie48/vendor/sweetalert/dist/sweetalert.min.js'
+        "../vendor/jquery/dist/jquery.min.js",
+        "../vendor/bootstrap/dist/js/bootstrap.min.js",
+        "../vendor/jasny-bootstrap/dist/js/jasny-bootstrap.min.js",
+        "../vendor/jquery-ui/jquery-ui.min.js",
+        '../vendor/fancybox/source/jquery.fancybox.js',
+        '../vendor/sweetalert/dist/sweetalert.min.js',
+        '../vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+        "zdorovie48/app.js",
+        "zdorovie48/components/**"
     ], './public/zdorovie48/js/orchid.js');
-    */
 });

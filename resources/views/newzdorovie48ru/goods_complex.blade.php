@@ -78,7 +78,7 @@
                                                     <h5>Категория: {{$Good->category()->first()->name}}</h5>
                                                     <h5>Цена: {{$Good->price or 0}} рублей</h5>
                                                     <p class="text-center btn-order-good">
-                                                        <a href="/#main-appointments-section" class="btn btn-default btn-void-primary">Заказать</a>
+                                                        <a href="/#main-appointments-section" class="btn btn-default btn-void-primary">Записаться на приём</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -96,7 +96,7 @@
                         @foreach($Good->goods as $key => $value)
                             <div class="col-md-4">
                                 <a class="h5" href="/service/{{ $value->slug }}">
-                                    <div class="bg-white">
+                                    <div class="bg-white box-shadow">
                                         <div class="img">
                                             <img src="{{ $value->avatar }}" alt="">
                                         </div>
@@ -123,7 +123,7 @@
                                     </div>
 
                                     <div class="line line-lg b-b b-light"></div>
-                                    <div class="text-muted v-center">
+                                    <div class="text-muted padder-v v-center">
                                         <div class="col-md-6">
                                             <i class="fa fa-clock-o text-muted"></i>  {!! $Good->created_at->toDateString()!!}
                                         </div>
@@ -144,7 +144,6 @@
                                                class="btn btn-icon"><i class="fa fa-odnoklassniki"></i></a>
                                         </div>
                                     </div>
-                                    <div class="line line-lg b-b b-light"></div>
                                 </div>
                             </div>
                         </div>

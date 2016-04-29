@@ -22,7 +22,8 @@ class HomeController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(4)->get();
         $getShare = $getSites->getShares()
-            ->select('name')
+            ->select(['id', 'name'])
+            ->orderByRaw("RANDOM()")
             ->limit(1)
             ->orderByRaw('RANDOM()')
             ->first();
