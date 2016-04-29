@@ -13084,9 +13084,6 @@ body section {
 .complex-uslug a:not(:hover) span i {
   transition: 0.8s;
 }
-body > section.container-fluid {
-  background-color: #e2e2e2;
-}
 .complex_goods_list > div {
   height: 215px;
   margin: 15px 0;
