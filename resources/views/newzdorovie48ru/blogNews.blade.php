@@ -57,7 +57,7 @@
                                             <h2 class="m-t-none"><a href="/blog/{{$New['id']}}">{{$New['name']}}</a></h2>
 
                                             <div class="blog-content">
-                                                {{str_limit(strip_tags($New['content']), 300, '...')}}
+                                                {!! $New['content'] !!}
                                             </div>
                                             <div class="line line-lg b-b b-light"></div>
                                             <div class="text-muted row v-center">
