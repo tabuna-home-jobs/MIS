@@ -65,7 +65,6 @@
                         <li class="active">{{$Good->name}}</li>
                     </ol>
 
-
                     <div class="panel">
                         <div class="row">
                             <div class="col-sm-12">
@@ -99,7 +98,7 @@
                                 <a class="h5" href="/service/{{ $value->slug }}">
                                     <div class="bg-white">
                                         <div class="img">
-                                            <img src="@if(file_exists($value->avatar)){{$value->avatar}}@else{{'/upload/no_img.png'}}@endif" alt="">
+                                            <img src="{{ $value->avatar }}" alt="">
                                         </div>
                                         <div class="name">
                                             {{ str_limit($value->name, 45) }}
@@ -145,6 +144,7 @@
                                                class="btn btn-icon"><i class="fa fa-odnoklassniki"></i></a>
                                         </div>
                                     </div>
+                                    <div class="line line-lg b-b b-light"></div>
                                 </div>
                             </div>
                         </div>

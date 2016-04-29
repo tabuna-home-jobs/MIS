@@ -13045,6 +13045,9 @@ footer ul a {
 .navbar-top .navbar-nav > li.active a:hover {
   border-bottom: none;
 }
+.navbar-top .navbar-nav > .dropdown.open > a {
+  border-bottom: 2px solid #40b559;
+}
 .navbar-top .navbar-nav .dropdown-menu > li > a {
   background: inherit!important;
   border: inherit!important;
@@ -13080,6 +13083,33 @@ body section {
 }
 .complex-uslug a:not(:hover) span i {
   transition: 0.8s;
+}
+body > section.container-fluid {
+  background-color: #e2e2e2;
+}
+.complex_goods_list > div {
+  height: 215px;
+  margin: 15px 0;
+}
+.complex_goods_list > div .bg-white {
+  height: 100%;
+  padding: 10px;
+  transition: 0.6s ease background-color;
+  border-radius: 2px;
+}
+.complex_goods_list .img {
+  height: 140px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.complex_goods_list .img img {
+  width: 100%;
+}
+.complex_goods_list .name {
+  text-align: center;
+}
+.btn-order-good {
+  margin-top: 30px;
 }
 .btn-void-white {
   background: none;

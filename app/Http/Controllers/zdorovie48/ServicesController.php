@@ -117,8 +117,10 @@ class ServicesController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
         if (!empty(Route::getCurrentRoute()->parameterNames()) && Route::getCurrentRoute()->parameterNames()[0] == 'complex') {
-            $data['Good'] = $getSites->getComplexGoods()->with('goods')->where('slug', $id)->firstOrFail();
+            $data['Good'] = $getSites->getComplexGoods()->with('goods')->where('slug', $id)->first();
             $view = 'new' . $sitename . $sitedomen . '/goods_complex';
+
+            if (!$data['Good']) { abort('404'); }
         } else {
             if (intval($id) && (strlen($id) == strlen(intval($id)))) {
                 $data['Good'] = $getSites->getGoods()->where('id', $id);
@@ -127,6 +129,9 @@ class ServicesController extends Controller
             }
 
             $data['Good'] = $data['Good']->with('complex_goods')->first();
+
+            if (!$data['Good']) { abort('404'); }
+
             $data['Comments'] = $data['Good']->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
             
             $view = 'new' . $sitename . $sitedomen . '/goods';

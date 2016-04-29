@@ -329,7 +329,41 @@ body{
 
 }
 
+body > section.container-fluid {
+  background-color: #e2e2e2;
+}
 
+.complex_goods_list {
+  & > div {
+    height: 215px;
+    margin: 15px 0;
+
+    .bg-white {
+      height: 100%;
+      padding: 10px;
+      transition: .6s ease background-color;
+      border-radius: 2px;
+    }
+  }
+
+  .img {
+    height: 140px;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .name {
+    text-align: center;
+  }
+}
+
+.btn-order-good {
+  margin-top: 30px;
+}
 
 
 .btn-void-white{
