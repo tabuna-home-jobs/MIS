@@ -61,9 +61,13 @@ class Goods extends Node
         return $this->hasMany('App\Models\Comments');
     }
 
-
     public function getParent()
     {
         return $this->hasMany('App\Models\Goods', 'id', 'parent_id');
+    }
+
+    public function complex_goods()
+    {
+        return $this->belongsToMany('App\Models\GoodsGroup', 'goods_groups', 'good_id', 'good_group_id');
     }
 }
