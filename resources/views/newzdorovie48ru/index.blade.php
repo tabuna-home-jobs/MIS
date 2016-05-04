@@ -149,14 +149,17 @@
                                                         }
 
                                                         $('#date').html(option);
-                                                        $('#date-scroll').mCustomScrollbar({
-                                                            theme:"dark",
-                                                            axis: 'y',
-                                                            advanced:{ updateOnContentResize: true, updateOnSelectorChange: true },
-                                                            liveSelector: '#date-scroll',
-                                                            live: true,
-                                                            setHeight: 250
-                                                        });
+
+                                                        if (!is_empty_option) {
+                                                            $('#date-scroll').mCustomScrollbar({
+                                                                theme:"dark",
+                                                                axis: 'y',
+                                                                advanced:{ updateOnContentResize: true, updateOnSelectorChange: true },
+                                                                liveSelector: '#date-scroll',
+                                                                live: true,
+                                                                setHeight: 250
+                                                            });
+                                                        }
                                                     },
                                                     error: function () {
                                                         console.log('ошибка');
