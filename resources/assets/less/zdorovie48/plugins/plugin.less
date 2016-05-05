@@ -331,14 +331,42 @@ body{
 
 main ul { padding-left: 50px;}
 
-.old-price {
-  color: #7e8a9c;
+.total_price {
+  margin-top: 30px;
 }
 
 .complex_goods_list {
   & > div {
     height: 235px;
     margin: 15px 0;
+
+    &.more-btn {
+      cursor: pointer;
+
+      i {
+        font-size: 1.5em;
+      }
+
+      span {
+        display: block;
+        font-size: 1.6em;
+        margin: 3.9em 0 0.3em;
+      }
+    }
+
+    .bg-purple {
+      background: #fff;
+      border: 1px solid #a387c5;
+      height: 100%;
+      color: #816b9c;
+      border-radius: 2px;
+      transition: .2s ease background, .2s ease color;
+
+      &:hover {
+        color: #fff;
+        background: #a387c5;
+      }
+    }
 
     .bg-white {
       position: relative;

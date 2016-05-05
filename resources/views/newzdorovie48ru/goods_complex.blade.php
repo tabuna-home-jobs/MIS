@@ -76,8 +76,8 @@
                                                 <div class="text-center">
                                                     <h4>{{$Good->name}}</h4>
                                                     <h5>Категория: {{$Good->category()->first()->name}}</h5>
-                                                    <h4>Цена: <s>{{$Good->price or 0}} <i class="fa fa-rub"></i></s></h4>
-                                                    <h4 class="text-danger">{{number_format($Good->total_price, 0)}} <i class="fa fa-rub"></i></h4>
+                                                    <h4 class="total_price">Цена: <s>{{number_format($Good->total_price, 0, '.', ' ')}} <i class="fa fa-rub"></i></s></h4>
+                                                    <h4 class="text-danger">{{number_format($Good->price, 0, '.', ' ')}} <i class="fa fa-rub"></i></h4>
                                                     <p class="text-center btn-order-good">
                                                         <a href="/#main-appointments-section" class="btn btn-default btn-void-primary">Записаться на приём</a>
                                                     </p>
@@ -95,7 +95,7 @@
                     </div>
                     <div class="row complex_goods_list">
                         @foreach($Good->goods as $key => $value)
-                            <div class="col-md-4">
+                            <div class="col-md-4 @if($key > 4 && count($Good->goods) > 6) hidden hidden-good @endif">
                                 <a class="h5" href="/service/{{ $value->slug }}">
                                     <div class="bg-white box-shadow">
                                         <div class="img">
@@ -105,15 +105,26 @@
                                             {{ str_limit($value->name, 45) }}
                                         </div>
                                         <div class="row info">
-                                            <div class="col-md-12 text-center">
-                                                <span><i class="fa fa-user"></i> {{ $value->count_visit }}</span> x
-                                                <span>{{ $value->price }} <i class="fa fa-rub"></i></span> =
-                                                <span>{{ $value->total_price }} <i class="fa fa-rub"></i></span>
+                                            <div class="col-md-6">
+                                                <span title="Количество посещений"><i class="fa fa-user"></i> {{ $value->count_visit }}</span>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <span title="Количество посещений x Стоимость услуги">{{ $value->total_price }} <i class="fa fa-rub"></i></span>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            @if($key == 4 && count($Good->goods) > 6)
+                                <div class="col-md-4 more-btn">
+                                    <div class="bg-purple box-shadow text-center">
+                                        <span>Показать все</span>
+                                        <span class="hidden">Скрыть</span>
+                                        <i class="fa fa-arrow-circle-down"></i>
+                                        <i class="hidden fa fa-arrow-circle-up"></i>
+                                    </div>
+                                </div>
+                            @endif
                         @endforeach
                     </div>
 
@@ -163,10 +174,13 @@
 </section>
 <!-- Услуга -->
 
-<style>
-    body > section {
-        background: #e2e2e2;
-    }
-</style>
+<script>
+    $(document).ready(function() {
+        $('.more-btn').on('click', function() {
+            $('.hidden-good').toggleClass('hidden');
+            $(this).find('span, i').toggleClass('hidden');
+        });
+    });
+</script>
 
 @endsection

@@ -13087,12 +13087,35 @@ body section {
 main ul {
   padding-left: 50px;
 }
-.old-price {
-  color: #7e8a9c;
+.total_price {
+  margin-top: 30px;
 }
 .complex_goods_list > div {
   height: 235px;
   margin: 15px 0;
+}
+.complex_goods_list > div.more-btn {
+  cursor: pointer;
+}
+.complex_goods_list > div.more-btn i {
+  font-size: 1.5em;
+}
+.complex_goods_list > div.more-btn span {
+  display: block;
+  font-size: 1.6em;
+  margin: 3.9em 0 0.3em;
+}
+.complex_goods_list > div .bg-purple {
+  background: #fff;
+  border: 1px solid #a387c5;
+  height: 100%;
+  color: #816b9c;
+  border-radius: 2px;
+  transition: .2s ease background, .2s ease color;
+}
+.complex_goods_list > div .bg-purple:hover {
+  color: #fff;
+  background: #a387c5;
 }
 .complex_goods_list > div .bg-white {
   position: relative;
