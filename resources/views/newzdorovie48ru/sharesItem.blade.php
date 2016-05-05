@@ -19,6 +19,14 @@
                                 <h1 class="font-thin m-b">{{$Share['name']}}</h1>
                             </div>
 
+                            <!-- Хлебные крошки -->
+                            <ol class="breadcrumb">
+                                <li><a href="/">Главная</a></li>
+                                <li><a href="/shares">Акции</a></li>
+                                <li class="active">{{ $Share['name'] }}</li>
+                            </ol>
+                            <!-- Хлебные крошки -->
+
                             <div class="blog-post">
                                 <article class="panel">
                                     <div>

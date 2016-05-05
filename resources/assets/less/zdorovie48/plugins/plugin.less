@@ -331,12 +331,17 @@ body{
 
 main ul { padding-left: 50px;}
 
+.old-price {
+  color: #7e8a9c;
+}
+
 .complex_goods_list {
   & > div {
-    height: 215px;
+    height: 235px;
     margin: 15px 0;
 
     .bg-white {
+      position: relative;
       height: 100%;
       padding: 10px;
       transition: .6s ease background-color;
@@ -346,6 +351,21 @@ main ul { padding-left: 50px;}
 
       &:hover .name {
         color: #000;
+      }
+
+      .info {
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+        width: 100%;
+        font-size: 13px;
+        color: #696c83;
+
+        span {
+          font-weight: bold;
+        }
+
+        i { font-size: 12px; }
       }
     }
   }

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Session;
 
 class GoodsAPI extends Controller
-{
+{    
     /**
      * Display a listing of the resource.
      *

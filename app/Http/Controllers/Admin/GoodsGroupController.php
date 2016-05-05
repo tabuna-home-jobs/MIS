@@ -68,7 +68,7 @@ class GoodsGroupController extends Controller
         $GoodsGroup->sort = $request->sort;
 
         if ($GoodsGroup->save()) {
-            $this->bind_goods($request->good_ids, $GoodsGroup->id);
+            $this->bind_goods($request, $GoodsGroup->id);
 
             //Флеш сообщение
             Session::flash('group', 'Вы успешно изменили значения');
@@ -77,16 +77,18 @@ class GoodsGroupController extends Controller
         return redirect()->route('goods_group');
     }
 
-    protected function bind_goods($good_ids, $group_id) 
+    protected function bind_goods($request, $group_id)
     {
         // Сначала, удаляем все старые записи
         GoodsGroups::where('good_group_id', $group_id)->delete();
 
         // Затем, привязываем новые
-        foreach($good_ids as $key => $value) {
+        foreach($request->good_ids as $key => $value) {
             $GoodsGroups = new GoodsGroups();
             $GoodsGroups->good_id = $value;
             $GoodsGroups->good_group_id = $group_id;
+            $GoodsGroups->count_visit =  (isset($request->count[$value])) ? $request->count[$value] : 1 ;
+
             $GoodsGroups->save();
         }
     }

@@ -46,6 +46,6 @@ class GoodsGroup extends Model {
     // Услуги группы
     public function goods()
     {
-        return $this->belongsToMany('App\Models\GoodsDefault', 'goods_groups', 'good_group_id', 'good_id');
+        return $this->belongsToMany('App\Models\GoodsDefault', 'goods_groups', 'good_group_id', 'good_id')->select(['goods.*', 'count_visit']);
     }
 }

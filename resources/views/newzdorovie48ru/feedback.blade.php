@@ -18,6 +18,13 @@
                     <h1 class="font-thin m-b">О центре</h1>
                 </div>
 
+                <!-- Хлебные крошки -->
+                <ol class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li class="active">О центре</li>
+                </ol>
+                <!-- Хлебные крошки -->
+
 
                 <article class="panel">
 

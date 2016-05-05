@@ -13,6 +13,14 @@
                             <div class="page-header">
                                 <h1 class="font-thin m-b">Акции нашего центра</h1>
                             </div>
+
+                            <!-- Хлебные крошки -->
+                            <ol class="breadcrumb">
+                                <li><a href="/">Главная</a></li>
+                                <li class="active">Акции</li>
+                            </ol>
+                            <!-- Хлебные крошки -->
+
                             <div class="blog-post">
                                 @foreach($Shares as $key => $value)
                                     <article class="panel">
@@ -31,22 +39,6 @@
                                             <div class="text-muted row v-center">
                                                 <div class="col-md-6">
                                                     <i class="fa fa-clock-o text-muted"></i>  {{$value['created_at']->toDateString()}}
-                                                </div>
-
-                                                <div class="col-md-6 text-right">
-                                                    <a onClick='window.open ("http://www.facebook.com/sharer.php?u={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");' class="btn btn-icon"><i class="fa fa-facebook"></i></a>
-
-                                                    <a onClick='window.open ("https://twitter.com/share?url={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
-                                                            class="btn btn-icon"><i class="fa fa-twitter"></i></a>
-
-                                                    <a onClick='window.open ("https://plus.google.com/share?url={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
-                                                       class="btn btn-icon"><i class="fa fa-google-plus"></i></a>
-
-                                                    <a onClick='window.open ("http://vk.com/share.php?url={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
-                                                             class="btn btn-icon"><i class="fa fa-vk"></i></a>
-
-                                                    <a onClick='window.open ("http://www.ok.ru/dk?st.cmd=addShare&st.s=1&st._surl={{Request::url()}}","mywindow","menubar=1,resizable=1,width=650,height=550");'
-                                                            class="btn btn-icon"><i class="fa fa-odnoklassniki"></i></a>
                                                 </div>
                                             </div>
                                         </div>

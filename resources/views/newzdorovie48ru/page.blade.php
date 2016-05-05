@@ -29,6 +29,13 @@
                     <h1 class="font-thin m-b">{{$Page['name']}}</h1>
                 </div>
 
+                <!-- Хлебные крошки -->
+                <ol class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li class="active">{{$Page['name']}}</li>
+                </ol>
+                <!-- Хлебные крошки -->
+
                 <div class="panel">
                 <div class="wrapper-md">
                     <div class="row">

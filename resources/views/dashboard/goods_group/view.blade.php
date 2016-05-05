@@ -74,6 +74,11 @@
 
                             <div class="form-group">
                                 <label>Связанные услуги</label>
+                                <div id="good-counts">
+                                    @foreach($Goods as $good)
+                                        <input id="good-count-{{ $good->id }}" name="count[{{ $good->id }}]" type="hidden" value="{{ $good->count_visit }}" />
+                                    @endforeach
+                                </div>
                                 <select name="good_ids[]" class="form-control w-md goods-ajax" style="width: 100%;" required multiple="multiple">
                                     @foreach($Goods as $good)
                                         <option value="{{ $good->id}}" selected>{{ $good->name}}</option>
@@ -122,12 +127,63 @@
         </form>
     </div>
 
+    <style>
+        .selection-input {
+            width: 28px;
+            text-align: center;
+            margin: 0 5px;
+            border-top: none;
+            border-bottom: none;
+            border-left: 1px solid rgba(0,0,0,.3);
+            border-right: 1px solid rgba(0,0,0,.3);
+        }
+    </style>
+
     <script src="/dash/plugins/select2/select2.min.js"></script>
     <script>
         $(document).ready(function() {
-            $(".goods-ajax").select2({
+            var goods_ajax = $('.goods-ajax');
+
+            // Разрешаем backspace, tab, delete, стрелки, обычные цифры и цифры на дополнительной клавиатуре
+            $(document).on('keydown', '.selection-input', function(e) {
+                var key = e.charCode || e.keyCode || 0;
+
+                return (
+                    key == 8 ||
+                    key == 9 ||
+                    key == 46 ||
+                    (key >= 37 && key <= 40) ||
+                    (key >= 48 && key <= 57) ||
+                    (key >= 96 && key <= 105));
+            });
+
+            // Копируем значение в другое поле, чтобы сохранить
+            $(document).on('keyup', '.selection-input', function() {
+                var id = $(this).data('id');
+                var value = $(this).val();
+                $('#good-count-' + id).val(value);
+            });
+
+            // jQuery Select2
+            goods_ajax.select2({
                 placeholder: 'Введите название услуги',
                 minimumResultsForSearch: Infinity,
+                minimumInputLength: 1,
+                templateSelection: function(item, container) {
+                    var good_count = 1;
+                    var good_count_obj = $('#good-count-' + item.id);
+
+                    if (good_count_obj.length) {
+                        good_count = good_count_obj.val();
+                    } else {
+                        $('#good-counts').append('<input id="good-count-' + item.id + '" name="count[' + item.id + ']" type="hidden" value="1" />');
+                    }
+
+                    var input = $('<input id="good-count-temp-' + item.id + '" data-id="' + item.id + '" class="selection-input" type="text" value="' + good_count + '" />');
+
+                    container.find('span').after(input);
+                    return item.text;
+                },
                 ajax: {
                     url: "{{ url('/api/goods') }}",
                     dataType: 'json',
@@ -142,6 +198,16 @@
                             results: data
                         };
                     }
+                }
+            });
+
+            // Разрешаем фокус по input внутри select
+            $(document).on('click', function(e) {
+                if ($(e.target).hasClass('selection-input')) {
+                    goods_ajax.select2('close');
+                    $(e.target).focus();
+                     e.preventDefault();
+                     return false;
                 }
             });
         });

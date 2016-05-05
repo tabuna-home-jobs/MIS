@@ -17,7 +17,7 @@ class SharesController extends Controller
     public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $getShares = $getSites->getShares()->orderBy('id', 'desc')->paginate(5);
+        $getShares = $getSites->getShares()->orderBy('id', 'desc')->paginate(2);
         return view('new' . $sitename . $sitedomen . '/shares', ['Shares' => $getShares]);
     }
 
@@ -54,8 +54,12 @@ class SharesController extends Controller
 
 
         $getShare = $getSites->getShares()->findOrFail($Share->id);
+        
+        $crumbs = [
+            ['name' => $getShare->name, 'slug' => ($getShare->slug) ? $getShare->slug : $getShare->id],
+        ];
 
-        return view('new' . $sitename . $sitedomen . '/sharesItem', ['Share' => $getShare]);
+        return view('new' . $sitename . $sitedomen . '/sharesItem', ['Share' => $getShare, 'crumbs' => $crumbs]);
     }
 
     /**

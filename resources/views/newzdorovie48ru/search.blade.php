@@ -8,20 +8,21 @@
         <!-- Страница -->
 <section class="container-fluid">
     <div class="row">
-
-
         <div class="container">
-
-
             <div class="app-content-body ">
-
-
                 <div class="page-header">
                     <h1 class="font-thin m-b">Результаты поиска
                         @if($query)
-                                              по запросу: {{$query}}
+                          по запросу: {{$query}}
                         @endif</h1>
                 </div>
+
+                <!-- Хлебные крошки -->
+                <ol class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li>Поиск</li>
+                </ol>
+                <!-- Хлебные крошки -->
 
                 <div class="panel">
                     <div class="wrapper-md">

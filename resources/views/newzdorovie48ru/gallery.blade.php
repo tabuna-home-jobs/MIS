@@ -30,6 +30,13 @@
                                 <h1 class="font-thin m-b">Галерея</h1>
                             </div>
 
+                            <!-- Хлебные крошки -->
+                            <ol class="breadcrumb">
+                                <li><a href="/">Главная</a></li>
+                                <li class="active">Галерея</li>
+                            </ol>
+                            <!-- Хлебные крошки -->
+
 
                             <section class="vbox">
                                 <section class="scrollable padder-lg w-f-md" id="bjax-target">

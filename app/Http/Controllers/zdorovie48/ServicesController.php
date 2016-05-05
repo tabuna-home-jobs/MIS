@@ -120,6 +120,13 @@ class ServicesController extends Controller
             $data['Good'] = $getSites->getComplexGoods()->with('goods')->where('slug', $id)->first();
             $view = 'new' . $sitename . $sitedomen . '/goods_complex';
 
+            $data['Good']->total_price = 0;
+
+            foreach($data['Good']->goods as $key => $value) {
+                $data['Good']->goods[$key]->total_price = $value->count_visit * $value->price;
+                $data['Good']->total_price += $data['Good']->goods[$key]->total_price;
+            }
+
             if (!$data['Good']) { abort('404'); }
         } else {
             if (intval($id) && (strlen($id) == strlen(intval($id)))) {

@@ -21,6 +21,13 @@
                     <h1 class="font-thin m-b">Отзывы</h1>
                 </div>
 
+                <!-- Хлебные крошки -->
+                <ol class="breadcrumb">
+                    <li><a href="/">Главная</a></li>
+                    <li class="active">Отзывы</li>
+                </ol>
+                <!-- Хлебные крошки -->
+
 
                 <div class="wrapper-md">
                     <div class="row">

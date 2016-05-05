@@ -76,7 +76,8 @@
                                                 <div class="text-center">
                                                     <h4>{{$Good->name}}</h4>
                                                     <h5>Категория: {{$Good->category()->first()->name}}</h5>
-                                                    <h5>Цена: {{$Good->price or 0}} рублей</h5>
+                                                    <h4>Цена: <s>{{$Good->price or 0}} <i class="fa fa-rub"></i></s></h4>
+                                                    <h4 class="text-danger">{{number_format($Good->total_price, 0)}} <i class="fa fa-rub"></i></h4>
                                                     <p class="text-center btn-order-good">
                                                         <a href="/#main-appointments-section" class="btn btn-default btn-void-primary">Записаться на приём</a>
                                                     </p>
@@ -102,6 +103,13 @@
                                         </div>
                                         <div class="name">
                                             {{ str_limit($value->name, 45) }}
+                                        </div>
+                                        <div class="row info">
+                                            <div class="col-md-12 text-center">
+                                                <span><i class="fa fa-user"></i> {{ $value->count_visit }}</span> x
+                                                <span>{{ $value->price }} <i class="fa fa-rub"></i></span> =
+                                                <span>{{ $value->total_price }} <i class="fa fa-rub"></i></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -154,5 +162,11 @@
     </div>
 </section>
 <!-- Услуга -->
+
+<style>
+    body > section {
+        background: #e2e2e2;
+    }
+</style>
 
 @endsection

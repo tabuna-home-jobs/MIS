@@ -5,7 +5,7 @@
             <h1 class="text-center  m-b-xxl">Наши достоинства</h1>
 
             @foreach($block->items as $key => $item)
-                <div class="col-sm-3 hidden-xs">
+                <div class="col-sm-3 col-xs-6 @if($key > 1) hidden-xs @endif">
                     <p class="h3 m-b-xl inline b b-white rounded wrapper-xl">
                         <i class="fa w-1x fa {{ $item->descript }} fa-2x" aria-hidden="true"></i>
                     </p>

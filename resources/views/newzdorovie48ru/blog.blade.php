@@ -28,6 +28,14 @@
                             <div class="page-header">
                                 <h1 class="font-thin m-b">Новости нашего центра</h1>
                             </div>
+
+                            <!-- Хлебные крошки -->
+                            <ol class="breadcrumb">
+                                <li><a href="/">Главная</a></li>
+                                <li class="active">Новости нашего центра</li>
+                            </ol>
+                            <!-- Хлебные крошки -->
+
                             <div class="blog-post">
 
 

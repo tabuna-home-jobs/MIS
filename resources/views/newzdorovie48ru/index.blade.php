@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Слайдер -->
-<section>
+<section class="hidden-xs hidden-sm">
     {{ Block::make('index_slider', 'newzdorovie48ru/_blocks/index_slider') }}
 </section>
 <!-- Слайдер -->
@@ -11,7 +11,7 @@
 
 @if(!is_null($getShare))
 <!-- Акция -->
-<section class="container-fluid">
+<section class="container-fluid hidden-xs hidden-sm">
     <div class="row bg-success">
         <div class="container v-center padder-v">
             <div class="col-md-10 text-white index-share">
@@ -282,7 +282,7 @@
                                        </div>
 
                                         <div class="form-group">
-                                        <textarea rows="5" name="comment"  class="form-control rounded" placeholder="Комментарий"></textarea>
+                                            <textarea rows="5" name="comment"  class="form-control rounded" placeholder="Комментарий"></textarea>
                                        </div>
 
                                         <div class="form-group">
@@ -293,9 +293,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <br>
                         </form>
-
-
                     </div>
                 </div>
             </div>
@@ -311,8 +310,8 @@
             <div class="container padder-v text-white">
                 <h1 class="text-center  m-b-xxl">Комплексные услуги</h1>
 
-                @foreach ($complexGoods as $item)
-                    <div class="col-md-4">
+                @foreach ($complexGoods as $key => $item)
+                    <div class="col-md-4 @if($key > 0) hidden-xs hidden-sm @endif">
                         <p class="h3 m-b-md text-center">{{ $item->name }}</p>
 
                         <ul class="list-unstyled">
@@ -360,7 +359,7 @@
 <!-- Новости -->
 
 <!-- Мобильное приложение -->
-<section class="paralax container-fluid" data-stellar-background-ratio="0.3">
+<section class="paralax container-fluid hidden-sm hidden-xs" data-stellar-background-ratio="0.3">
     <div class="row">
         <div class="container">
             <div class="row">
