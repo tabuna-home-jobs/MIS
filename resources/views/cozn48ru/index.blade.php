@@ -109,6 +109,8 @@
     <!--end of crosses-->
 </div>
 <!--end of reasons-->
+
+<!--
 <div class="appointment">
     <h2>ЗАПИСАТЬСЯ НА ПРИЁМ</h2>
     <div class="container">
@@ -209,7 +211,7 @@
     </div>
 </div>
 
-
+-->
 <!-- apointment --><script>
 
 
@@ -437,7 +439,7 @@
 </div>
 <div class="sites-slider">
     <div class="container">
-        <h2>САЙТЫ ГУППЫ КОМПАНИЙ «ЗДОРОВЬЕ НАЦИИ»</h2>
+        <h2>САЙТЫ ГРУППЫ КОМПАНИЙ «ЗДОРОВЬЕ НАЦИИ»</h2>
         <div class="autoplay">
             <div class="sl-img">
                 <a href="http://mother-baby.ru/" target="_blank">
