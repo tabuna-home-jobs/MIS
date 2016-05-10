@@ -122,12 +122,12 @@
                                 <div class="input-group">
                                     <label class="i-switch bg-success m-t-xs m-r">
                                         <input type="radio" name="onmain" value="1"
-                                               @if($GoodsGroup->onmain) checked @endif>
+                                               @if(isset($GoodsGroup->onmain)&&$GoodsGroup->onmain) checked @endif>
                                         <i></i>
                                     </label>
                                     <label class="i-switch bg-danger m-t-xs m-r">
                                         <input type="radio" name="onmain" value="0"
-                                               @if(!$GoodsGroup->onmain) checked @endif>
+                                               @if(isset($GoodsGroup->onmain)&&!$GoodsGroup->onmain) checked @endif>
                                         <i></i>
                                     </label>
                                 </div>
