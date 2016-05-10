@@ -235,7 +235,7 @@
                             </div>
                             <div class="entry-excerpt">
                                 <p>
-                                    {{str_limit(strip_tags($news['descript']), 300, '...')}}
+                                    {{str_limit(strip_tags($news['content']), 150, '...')}}
                                 </p>
                             </div>
                             <div class="entry-read-more">

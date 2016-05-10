@@ -56,7 +56,7 @@
                                                                         </div>
                                                                         <div class="entry-excerpt">
                                                                             <p>
-                                                                                {{str_limit(strip_tags($item['descript']), 300, '...')}}
+                                                                                {{str_limit(strip_tags($item['content']), 150, '...')}}
                                                                             </p>
                                                                         </div>
                                                                         <div class="entry-read-more">
