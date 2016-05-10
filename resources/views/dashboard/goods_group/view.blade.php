@@ -116,7 +116,22 @@
                                     </div>
                                 </div><!-- /.input group -->
                             </div>
+                            <div class="form-group">
+                                <label>Отображать на главной</label>
 
+                                <div class="input-group">
+                                    <label class="i-switch bg-success m-t-xs m-r">
+                                        <input type="radio" name="onmain" value="1"
+                                               @if($GoodsGroup->onmain) checked @endif>
+                                        <i></i>
+                                    </label>
+                                    <label class="i-switch bg-danger m-t-xs m-r">
+                                        <input type="radio" name="onmain" value="0"
+                                               @if(!$GoodsGroup->onmain) checked @endif>
+                                        <i></i>
+                                    </label>
+                                </div>
+                            </div>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button type="submit" class="btn btn-primary">Отправить</button>
 

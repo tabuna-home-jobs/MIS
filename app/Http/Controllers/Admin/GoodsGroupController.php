@@ -52,6 +52,7 @@ class GoodsGroupController extends Controller
         $GoodsGroup->slug = str_slug($request->name);
         $GoodsGroup->text = $request->text;
         $GoodsGroup->tag = $request->tag;
+        $GoodsGroup->onmain = $request->onmain;
 
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());

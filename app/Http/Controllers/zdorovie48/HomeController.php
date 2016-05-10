@@ -29,7 +29,7 @@ class HomeController extends Controller
             ->first();
         
         $getComplexGoods = Category::has('complexGoods')->with(['complexGoods' => function($query) {
-            $query->orderBy('sort', 'asc');
+            $query->where('onmain','=','true')->orderBy('sort', 'asc');
         }])->take(3)->get();
 
         $specialization = DB::table('timetable')->select('specialization')->distinct()->get();
