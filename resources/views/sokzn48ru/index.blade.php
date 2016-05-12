@@ -6,7 +6,7 @@
             <div class="entry-content">
                 <div class="videoSection">
                     <div class="video-bg-before"></div>
-                    <video class="video-bg" autoplay loop class="fillWidth fadeIn animated">
+                    <video autoplay loop class="video-bg">
                         <source src="/sokzn48.ru/video/bg-video.mp4" type="video/mp4">
                         Ваш браузер устарел, пожалуйста обновите его.
                     </video>

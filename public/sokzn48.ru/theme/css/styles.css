@@ -515,6 +515,7 @@ header .header_logo>a>div {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 100%;
 }
 .childi{
     padding: 10px;
@@ -761,7 +762,7 @@ li{
     font-weight: bold;
 }
 .header-1 {
-    min-height: 68px;
+    /*min-height: 68px;*/
 }
     @media (max-width: 1199px) and (min-width: 768px){
         .navbar-header{float:none; position: relative !important;}
@@ -831,6 +832,8 @@ li{
 .nav-search{
     padding: 10px;
     margin-left: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .breadcrumb a{
