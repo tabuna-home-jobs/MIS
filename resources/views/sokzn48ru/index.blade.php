@@ -374,7 +374,7 @@
                                             <div class="homeanswer">
 
                                                 <q>{{$randomQuestAnsver['answer']}}</q>
-                                                <p>С уважением </p>
+                                                <p>С уважением cемейный оздоровительный комплекс «СОК»</p>
                                             </div>
                                         </div>
                                     </div>
