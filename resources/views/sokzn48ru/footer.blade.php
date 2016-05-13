@@ -6,7 +6,7 @@
                 <div class="footer-bottom-inner">
                     <div class="footer-logo">
                         <a href="/" title="Home Page">
-                            <img src="/sokzn48.ru/img/logo_white.png" alt="Home Page">
+                            <img src="/sokzn48.ru/img/sok_c.png" alt="Home Page">
                         </a>
                     </div>
                     <div class="footer-menu-container">

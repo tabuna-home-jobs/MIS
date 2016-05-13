@@ -302,7 +302,7 @@
 
                                             <div class="carousel-inner caruselTeachers" role="listbox">
 
-                                                <div class="item">
+                                                <div class="item active">
                                                     @foreach($allspecs as $key => $spec)
 
                                                         <div class="col-xs-4">
