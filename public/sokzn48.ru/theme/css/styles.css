@@ -877,3 +877,21 @@ li{
     .video-caption h3{
         color: #fff;
     }
+
+    .homequest{
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .homeanswer{
+        text-align: right;
+    }
+    .homeanswer q{
+        font-size:20px;
+    }
+    .homeanswer p{
+        font-size: 18px;
+    }
+    .vc_custom_14442909099{
+        background-image: url('/sokzn48.ru/img/questhome.jpg');
+    }

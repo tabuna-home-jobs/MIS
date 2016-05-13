@@ -5,6 +5,7 @@ use App\Http\Requests;
 use App\Models\Page as Page;
 use App\Models\Sites;
 use App\Models\SpecCat;
+use App\Models\QuestAnswer;
 use DB;
 
 class HomeController extends Controller
@@ -20,14 +21,20 @@ class HomeController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(3)->get();
-        $getShares = $getSites->getShares()->orderBy('id', 'desc')->limit(2)->get();
+        $getShares = $getSites->getShares()->orderBy('id', 'desc')->limit(3)->get();
         $getReviews = $getSites->getReviews()->where('publish',
             true)->orderBy(DB::raw('RANDOM()'))->limit(1)->get()->first();
         $getSpec = $getSites->getTeam()->orderBy('sort', 'asc')->limit(8)->get();
+        $QuestAnswers = QuestAnswer::whereRaw('ids = ? and publish = ?',
+            [Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id, true])
+            ->orderBy(DB::raw('RANDOM()'))
+            ->with('getCategory', 'getDoctor')
+            ->limit(1)->get()->first();
         return view($sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShares' => $getShares,
             'randomReview' => $getReviews,
+            'randomQuestAnsver' =>$QuestAnswers,
             'allspecs' => $getSpec,
         ]);
     }

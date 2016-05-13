@@ -25,9 +25,9 @@
                                 <div class="row">
                                     <div class="gallery-wrapper gallery-infinite-scroll">
 
-                                        @foreach($data as $item)
+                                        @foreach($data as $key=>$item)
 
-                                            <div class="col-xs-12 service-wrapper">
+                                            <div id="cat-{{$key}}" class="col-xs-12 service-wrapper">
                                                 <h2>{{$item->name}}</h2>
 
 

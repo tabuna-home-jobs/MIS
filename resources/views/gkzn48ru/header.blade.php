@@ -127,7 +127,7 @@
                                 <a href="http://mother-baby.ru/"  target="_blank" class="no-u">
                                     <img src="/gkzn48ru/images/logo/kid_w.png">
                                 </a>
-                                <h3><a href="http://mother-baby.ru/"  target="_blank">Мать и Дитя</a></h3>
+                                <h3><a href="http://mother-baby.ru/"  target="_blank">Центр детского здоровья</a></h3>
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию. </p></div>
 
                             <div class="departament-item-owl">
@@ -165,7 +165,7 @@
 
                             <div class="departament-item-owl">
                                 <img src="/gkzn48ru/images/logo/zub.png">
-                                <h3><a href="#">Стомотология</a></h3>
+                                <h3><a href="http://stomzn48.ru/">Стоматология</a></h3>
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию.</p>
                             </div>
                         </li>
