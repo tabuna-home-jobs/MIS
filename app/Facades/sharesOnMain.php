@@ -9,6 +9,6 @@ class sharesOnMain extends Facade
 
     public static function getShare($siteId, $lim = 6)
     {
-        return Shares::where('ids', $siteId)->limit($lim)->get()->toArray();
+        return Shares::where('ids', $siteId)->orderBy('id', 'desc')->limit($lim)->get()->toArray();
     }
 }

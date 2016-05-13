@@ -158,16 +158,20 @@
         <div class="shares col-md-4 col-sm-12 col-xs-12">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-                @foreach(sharesOnMain::getShare(7,3) as $item)
+                @foreach(sharesOnMain::getShare(7,3) as $key=>$item)
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{$key}}" aria-expanded="false" aria-controls="collapse-{{$key}}">
                                 АКЦИЯ
                             </a>
                         </h4>
                     </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div id="collapse-{{$key}}" class="panel-collapse collapse
+                        @if($key == 0)
+                            in
+                        @endif
+                        " role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
                             <div class="share-img"><img src="{{$item['avatar']}}"></div>
                             <div class="share-text">
@@ -179,13 +183,13 @@
                     </div>
                 </div>
                 @endforeach
-
+                    {{--
                     <script>
                         $(document).ready(function(){
                             $('.panel-collapse:nth-child(2)').addClass('in');
                         });
                     </script>
-
+                    --}}
             </div>
         </div>
         <!-- END акции-->

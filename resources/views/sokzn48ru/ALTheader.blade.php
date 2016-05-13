@@ -84,7 +84,7 @@
                                 class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
                     <div class="header_logo">
                         <a href="/" title="luchiki" rel="home">
-                            <div><img src="/sokzn48.ru/img/logo_blue.png" alt=""></div>
+                            <div><img src="/sokzn48.ru/img/sok_c.png" alt=""></div>
                         </a>
                     </div>
                 </div>
