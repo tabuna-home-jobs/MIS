@@ -71,7 +71,7 @@
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
                                                 <div id="icon-box-3019-5054" class="luchiki-icon-box style2 left ">
-                                                    <a href="/service/#cat-1"><i class="fa fa-tags"></i></a>
+                                                    <a href="/service/#cat-0"><i class="fa fa-tags"></i></a>
                                                     <h4>До рождения</h4>
                                                 </div>
                                             </div>
@@ -79,7 +79,7 @@
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
                                                 <div id="icon-box-2878-8462" class="luchiki-icon-box style2 left ">
-                                                    <a href="/service/#cat-2"><i class="fa fa-plane"></i></a>
+                                                    <a href="/service/#cat-1"><i class="fa fa-plane"></i></a>
                                                     <h4>Детство</h4>
                                                 </div>
                                             </div>
@@ -87,7 +87,7 @@
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
                                                 <div id="icon-box-9590-2325" class="luchiki-icon-box style2 left ">
-                                                    <a href="/service/#cat-3"><i class="fa fa-thumb-tack"></i>
+                                                    <a href="/service/#cat-2"><i class="fa fa-thumb-tack"></i>
                                                     </a><h4>Особенные дети</h4>
                                                 </div>
                                             </div>
@@ -95,7 +95,7 @@
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
                                                 <div id="icon-box-4851-4352" class="luchiki-icon-box style2 left ">
-                                                    <a href="/service/#cat-4"><i class="fa fa-gamepad"></i></a>
+                                                    <a href="/service/#cat-3"><i class="fa fa-gamepad"></i></a>
                                                     <h4>Взросление</h4>
                                                 </div>
                                             </div>
