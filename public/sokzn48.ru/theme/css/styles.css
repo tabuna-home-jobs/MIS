@@ -912,3 +912,21 @@ li{
         background: url('/sokzn48.ru/img/vzrosl.svg') center no-repeat;
         background-size: 60%;
     }
+    .f_soc{
+        display: inline-block;
+        vertical-align: bottom;
+    }
+    #ok_shareWidget{
+        display: inline-block;
+        vertical-align: bottom;
+        position: relative;
+        bottom: -7px;
+    }
+    .face_foot{
+        background-image: url("/sokzn48.ru/img/facebook.png");
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        vertical-align: bottom;
+        cursor: pointer;
+    }

@@ -40,9 +40,15 @@
         });
     </script>
 
+    <!-- Put this script tag to the <head> of your page -->
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?93" charset="windows-1251"></script>
+
 </head>
 
 <body>
+
+
+
 <!--Верхняя плашка с адресами-->
 <div class="site-top site-top-4 header-4">
     <div class="container">
