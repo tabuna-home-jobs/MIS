@@ -554,7 +554,7 @@
 
 
 
-                <div class="container">
+                <div class="container hidden-xs">
                     <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-85 luchiki-margin-top-35">
                         <div class="wpb_column vc_column_container vc_col-sm-12 hidden-xs">
                             <div class="wpb_wrapper">
@@ -565,7 +565,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container hidden-xs">
                     <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-90">
                         <div class="wpb_column vc_column_container vc_col-sm-12 hidden-xs">
                             <div class="wpb_wrapper">
