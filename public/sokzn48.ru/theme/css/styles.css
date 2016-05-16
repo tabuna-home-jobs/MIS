@@ -894,4 +894,21 @@ li{
     }
     .vc_custom_14442909099{
         background-image: url('/sokzn48.ru/img/questhome.jpg');
+
+    }
+    .fa-embrion{
+        background: url('/sokzn48.ru/img/embrion.svg') center no-repeat;
+        background-size: 70%;
+    }
+    .fa-baby{
+        background: url('/sokzn48.ru/img/baby.svg') center no-repeat;
+        background-size: 60%;
+    }
+    .fa-oswob{
+        background: url('/sokzn48.ru/img/osob.svg') center no-repeat;
+        background-size: 60%;
+    }
+    .fa-vzrosl{
+        background: url('/sokzn48.ru/img/vzrosl.svg') center no-repeat;
+        background-size: 60%;
     }

@@ -19,6 +19,7 @@
         {!! $meta !!}
     @endif
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/sokzn48.ru/css/slick.css">
     <link rel="stylesheet" href="/sokzn48.ru/theme/css/full_styles.min.css">
     <link rel="stylesheet" type="text/css" href="/sokzn48.ru/theme/css/woocommerce-smallscreen.css">
     <link rel="stylesheet" href="/sokzn48.ru/theme/css/styles.css">
@@ -28,6 +29,7 @@
     <script src="/sokzn48.ru/theme/js/all.min.js"></script>
     <script src="/sokzn48.ru/theme/js/cloudflare.min.js"></script>
     <script src="/sokzn48.ru/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/sokzn48.ru/js/slick.min.js"></script>
 
     <link rel="stylesheet" href="/sokzn48.ru/theme/css/source/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/sokzn48.ru/theme/css/source/jquery.fancybox.pack.js"></script>

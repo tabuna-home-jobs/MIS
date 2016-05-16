@@ -71,7 +71,7 @@
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
                                                 <div id="icon-box-3019-5054" class="luchiki-icon-box style2 left ">
-                                                    <a href="/service/#cat-0"><i class="fa fa-tags"></i></a>
+                                                    <a href="/service/#cat-0"><i class="fa fa-embrion"></i></a>
                                                     <h4>До рождения</h4>
                                                 </div>
                                             </div>
@@ -79,7 +79,7 @@
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
                                                 <div id="icon-box-2878-8462" class="luchiki-icon-box style2 left ">
-                                                    <a href="/service/#cat-1"><i class="fa fa-plane"></i></a>
+                                                    <a href="/service/#cat-1"><i class="fa fa-baby"></i></a>
                                                     <h4>Детство</h4>
                                                 </div>
                                             </div>
@@ -87,7 +87,7 @@
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
                                                 <div id="icon-box-9590-2325" class="luchiki-icon-box style2 left ">
-                                                    <a href="/service/#cat-2"><i class="fa fa-thumb-tack"></i>
+                                                    <a href="/service/#cat-2"><i class="fa fa-oswob"></i>
                                                     </a><h4>Особенные дети</h4>
                                                 </div>
                                             </div>
@@ -95,7 +95,7 @@
                                         <div class="wpb_column vc_column_container vc_col-sm-6">
                                             <div class="wpb_wrapper">
                                                 <div id="icon-box-4851-4352" class="luchiki-icon-box style2 left ">
-                                                    <a href="/service/#cat-3"><i class="fa fa-gamepad"></i></a>
+                                                    <a href="/service/#cat-3"><i class="fa fa-vzrosl"></i></a>
                                                     <h4>Взросление</h4>
                                                 </div>
                                             </div>
@@ -148,32 +148,46 @@
                             <div class="wpb_wrapper">
                                 <div class="container">
                                     <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1425263113761">
-                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                        <div class="wpb_column vc_column_container vc_col-sm-2">
                                             <div class="wpb_wrapper">
-                                                <div class="luchiki-counter "><span class="display-percentage" data-percentage="545">545</span>
+                                                <div class="luchiki-counter "><span ><img src="/sokzn48.ru/img/visokoe_kachestvo.png"></span>
 
-                                                    <p class="counter-title">Учебных часов</p></div>
+                                                    <p class="counter-title">Высокое качество услуг</p></div>
                                             </div>
                                         </div>
-                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                        <div class="wpb_column vc_column_container vc_col-sm-2">
                                             <div class="wpb_wrapper">
-                                                <div class="luchiki-counter "><span class="display-percentage" data-percentage="1324">1324</span>
+                                                <div class="luchiki-counter "><span ><img src="/sokzn48.ru/img/visokiy_servis.png"></span>
 
-                                                    <p class="counter-title">Питание в год</p></div>
+                                                    <p class="counter-title">Высокий сервис</p></div>
                                             </div>
                                         </div>
-                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                        <div class="wpb_column vc_column_container vc_col-sm-2">
                                             <div class="wpb_wrapper">
-                                                <div class="luchiki-counter "><span class="display-percentage" data-percentage="368">368</span>
+                                                <div class="luchiki-counter "><span><img src="/sokzn48.ru/img/prof_specov.png"></span>
 
-                                                    <p class="counter-title">Утренние Сессии</p></div>
+                                                    <p class="counter-title">Профессиональность и высококлассность специалистов</p></div>
                                             </div>
                                         </div>
-                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                        <div class="wpb_column vc_column_container vc_col-sm-2">
                                             <div class="wpb_wrapper">
-                                                <div class="luchiki-counter "><span class="display-percentage" data-percentage="183">183</span>
+                                                <div class="luchiki-counter "><span><img src="/sokzn48.ru/img/realinie_tseny.png"></span>
 
-                                                    <p class="counter-title">Полный Дневной</p></div>
+                                                    <p class="counter-title">Реальные цены</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_column vc_column_container vc_col-sm-2">
+                                            <div class="wpb_wrapper">
+                                                <div class="luchiki-counter "><span><img src="/sokzn48.ru/img/unikalnie_uslugi.png"></span>
+
+                                                    <p class="counter-title">Уникальные услуги</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_column vc_column_container vc_col-sm-2">
+                                            <div class="wpb_wrapper">
+                                                <div class="luchiki-counter "><span><img src="/sokzn48.ru/img/vse_vozrosta.png"></span>
+
+                                                    <p class="counter-title">Ориентация на клиентов всех возрастов</p></div>
                                             </div>
                                         </div>
                                     </div>
@@ -392,7 +406,7 @@
                 <!--Учителя-->
                 <div class="container">
                     <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-85 luchiki-margin-top-35">
-                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="wpb_column vc_column_container vc_col-sm-12 hidden-xs">
                             <div class="wpb_wrapper">
                                 <div class="luchiki-heading"><h2>Наши <b>Учителя</b></h2>
                                     <span>Каждый из них профессионал в своём деле</span>
@@ -403,7 +417,7 @@
                 </div>
                 <div class="container">
                     <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-90">
-                        <div class="wpb_column vc_column_container vc_col-sm-8">
+                        <div class="wpb_column vc_column_container vc_col-sm-8 hidden-xs">
                             <div class="wpb_wrapper">
                                 <div class="luchiki-our-staffs  our-staffs-margin-right" >
                                     <div class="row">
@@ -537,6 +551,36 @@
                     </div>
                 </div>
                 <!--Учителя-->
+
+
+
+                <div class="container">
+                    <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-85 luchiki-margin-top-35">
+                        <div class="wpb_column vc_column_container vc_col-sm-12 hidden-xs">
+                            <div class="wpb_wrapper">
+                                <div class="luchiki-heading"><h2>САЙТЫ ГРУППЫ КОМПАНИЙ <b>«ЗДОРОВЬЕ НАЦИИ»</b></h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-90">
+                        <div class="wpb_column vc_column_container vc_col-sm-12 hidden-xs">
+                            <div class="wpb_wrapper">
+                                <div class="luchiki-our-staffs  our-staffs-margin-right" >
+                                    <div class="row">
+
+                                        {{ Block::make('site_carousel', 'sokzn48ru/_blocks/site_carousel') }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
 
 
             </div>
