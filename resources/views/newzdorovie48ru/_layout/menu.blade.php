@@ -33,6 +33,24 @@
 
 
     @endforeach
+
+
+    @if(Sentry::check())
+            <li class="{{Active::path('/auth/*')}}">
+                <a href="/auth/logout">
+                   Выйти
+                </a>
+            </li>
+        @else
+        <li class="{{Active::path('/auth/*')}}">
+            <a href="/auth/login">
+                Личный кабинет
+            </a>
+        </li>
+    @endif
+
+
+
     <li class="dropdown">
         <a id="drop-search" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
            aria-haspopup="true" aria-expanded="false">
@@ -43,7 +61,7 @@
 
                 <li class="sub-li">
 
-                    <form class="navbar-form navbar-form-sm pull-right nav-search"  role="search" action="/search" method="post">
+                    <form class="navbar-form navbar-form-sm pull-right nav-search w-md"  role="search" action="/search" method="post">
                         {!! csrf_field() !!}
                         <div class="input-group">
                             <input type="text" class="form-control" name="query" placeholder="Поиск по ...">

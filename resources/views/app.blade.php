@@ -40,7 +40,7 @@
 
 </head>
 <body>
-<div class="app app-header-fixed app-aside-fixed container app-aside-dock app-aside-folded ">
+<div class="app app-header-fixed app-aside-fixed"> <!-- container app-aside-dock app-aside-folded  -->
 
     <!-- header -->
     <header id="header" class="app-header navbar" role="menu">
@@ -55,6 +55,7 @@
             <!-- brand -->
             <a href="/dashboard/" class="navbar-brand text-lt">
                 <i class="fa fa-hospital-o"></i>
+                <span class="m-l-sm">МИС</span>
             </a>
             <!-- / brand -->
         </div>
@@ -87,6 +88,7 @@
             <!-- / link and dropdown -->
 
             <!-- search form -->
+           {{--
             <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
                 <div class="form-group">
                     <div class="input-group">
@@ -97,8 +99,9 @@
                     </div>
                 </div>
             </form>
+            --}}
             <!-- / search form -->
-
+    {{--
             <!-- nabar right -->
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -166,6 +169,7 @@
                 </li>
             </ul>
             <!-- / navbar right -->
+            --}}
         </div>
         <!-- / navbar collapse -->
     </header>

@@ -368,19 +368,21 @@
                 </div>
                 <div class="col-md-7">
                     <div class="mobile-app-content">
-                        <h1>Карманный доктор</h1>
+                        <h1 class="padder-v">Карманный доктор</h1>
 
                         <p class="lead">Попробуйте мобильное приложение "Здоровье Нации" на своём устройстве,
                             которое позволит
                             вам удобно управлять собственным здоровьем.
-                            <span>Бесплатно!</span>
+                            <h3>Скоро на Вашем устройстве!</h3>
                         </p>
+                        <!--
                         <ul class="list-unstyled app-buttons">
                             <li><a href="#"><img src="/zdorovie48/img/mobile/app-store-btn.png" alt="" title="App Store"></a>
                             </li>
                             <li><a href="#"><img src="/zdorovie48/img/mobile/google-play-btn.png" alt=""
                                                  title="Google App"></a></li>
                         </ul>
+                        -->
                     </div>
                 </div>
             </div>

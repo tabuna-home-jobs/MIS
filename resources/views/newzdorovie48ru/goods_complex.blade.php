@@ -106,7 +106,7 @@
                                         </div>
                                         <div class="row info">
                                             <div class="col-md-6">
-                                                <span title="Количество посещений"><i class="fa fa-user"></i> {{ $value->count_visit }}</span>
+                                                <span title="Количество посещений"><i class="fa fa-user-md" aria-hidden="true"></i> {{ $value->count_visit }}</span>
                                             </div>
                                             <div class="col-md-6 text-right">
                                                 <span title="Количество посещений x Стоимость услуги">{{ $value->total_price }} <i class="fa fa-rub"></i></span>
@@ -115,17 +115,29 @@
                                     </div>
                                 </a>
                             </div>
-                            @if($key == 4 && count($Good->goods) > 6)
+                        @endforeach
+
+                            @if( count($Good->goods) > 6)
                                 <div class="col-md-4 more-btn">
                                     <div class="bg-purple box-shadow text-center">
-                                        <span>Показать все</span>
-                                        <span class="hidden">Скрыть</span>
-                                        <i class="fa fa-arrow-circle-down"></i>
-                                        <i class="hidden fa fa-arrow-circle-up"></i>
+                                        <span>
+                                            <i class="fa fa-angle-right fa-4x padder-v" aria-hidden="true"></i>
+                                            <br>
+                                            <small>Показать все</small>
+                                        </span>
+
+                                        <span class="hidden">
+
+                                        <i class="fa fa-angle-left  fa-4x hidden  padder-v" aria-hidden="true"></i>
+                                              <br>
+                                            <small> Свернуть</small>
+                                        </span>
+
                                     </div>
                                 </div>
                             @endif
-                        @endforeach
+
+
                     </div>
 
                     <div class="page-header">

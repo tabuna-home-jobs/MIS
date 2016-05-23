@@ -37,6 +37,8 @@ elixir(function(mix) {
         '../vendor/fancybox/source/jquery.fancybox.js',
         '../vendor/sweetalert/dist/sweetalert.min.js',
         '../vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+        '../vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+        '../vendor/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js',
         "zdorovie48/app.js",
         "zdorovie48/components/**"
     ], './public/zdorovie48/js/orchid.js');

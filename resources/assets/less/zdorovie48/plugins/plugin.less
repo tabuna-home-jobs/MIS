@@ -185,6 +185,8 @@
   position: relative;
   border-bottom: 4px solid @brand-success;
   overflow: hidden;
+
+  background-size: cover;
   .app-img {
     position: relative;
     bottom: -60px;
@@ -197,6 +199,8 @@
   position: relative;
   border-bottom: 4px solid @brand-success;
   overflow: hidden;
+
+  background-size: cover;
   .app-img {
     position: relative;
     bottom: -60px;
@@ -210,6 +214,7 @@
   position: relative;
   border-bottom: 4px solid @brand-success;
   overflow: hidden;
+  background-size: cover;
   .app-img {
     position: relative;
     bottom: -60px;
@@ -217,6 +222,13 @@
 }
 
 
+.paralax-auth {
+  background: url('/zdorovie48/img/auth/auth-background.jpg') fixed;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
 
 
 
@@ -340,24 +352,24 @@ main ul { padding-left: 50px;}
     height: 235px;
     margin: 15px 0;
 
+
     &.more-btn {
       cursor: pointer;
 
-      i {
-        font-size: 1.5em;
-      }
 
       span {
         display: block;
-        font-size: 1.6em;
-        margin: 3.9em 0 0.3em;
+        margin: 0 auto;
       }
     }
 
     .bg-purple {
+      display: flex;
+      align-items: center;
       background: #fff;
       border: 1px solid #a387c5;
       height: 100%;
+      width: 100%;
       color: #816b9c;
       border-radius: 2px;
       transition: .2s ease background, .2s ease color;
@@ -365,6 +377,10 @@ main ul { padding-left: 50px;}
       &:hover {
         color: #fff;
         background: #a387c5;
+        transition: 0.5s;
+      }
+      &:not(:hover) {
+        transition: 0.5s;
       }
     }
 
@@ -379,6 +395,7 @@ main ul { padding-left: 50px;}
 
       &:hover .name {
         color: #000;
+        transition: 0.4s;
       }
 
       .info {
@@ -559,4 +576,8 @@ textarea.rounded{
 
 .form-control:focus {
   border-color: #40b559;
+}
+
+.cart-body {
+  height: 300px;
 }

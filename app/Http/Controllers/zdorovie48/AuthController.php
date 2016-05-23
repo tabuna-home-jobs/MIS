@@ -41,11 +41,32 @@ class AuthController extends Controller
                 'phone' => $phone,
                 'password' => $request->password,
             );
-            Sentry::authenticateAndRemember($credentials);
+            $this->authenticateAndRemember($credentials);
             return redirect('/cabinet');
+
         }
     }
 
+    private function authenticateAndRemember($credentials)
+    {
+        try {
+            Sentry::authenticateAndRemember($credentials);
+        } catch (\Cartalyst\Sentry\Users\LoginRequiredException $e) {
+            echo 'Поле телефон обязательно для заполнения.';
+        } catch (\Cartalyst\Sentry\Users\PasswordRequiredException $e) {
+            echo 'Поле пароль обязательно для заполнения.';
+        } catch (\Cartalyst\Sentry\Users\WrongPasswordException $e) {
+            echo 'Неправильный пароль, попробуйте еще раз.';
+        } catch (\Cartalyst\Sentry\Users\UserNotFoundException $e) {
+            echo 'Пользователь не найден.';
+        } catch (\Cartalyst\Sentry\Users\UserNotActivatedException $e) {
+            echo 'Пользователь не активирован.';
+        } catch (\Cartalyst\Sentry\Throttling\UserSuspendedException $e) {
+            echo 'Действие пользователя приостановлено.';
+        } catch (\Cartalyst\Sentry\Throttling\UserBannedException $e) {
+            echo 'Пользователь заблокирован.';
+        }
+    }
 
     public function getRegister($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
@@ -88,8 +109,8 @@ class AuthController extends Controller
 
     public function getLogout($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-            Sentry::logout();
-            return view('new' . $sitename . $sitedomen . '/auth/login', []);
+        Sentry::logout();
+        return view('new' . $sitename . $sitedomen . '/auth/login', []);
     }
 
 

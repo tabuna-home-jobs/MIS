@@ -3,7 +3,135 @@
 @section('content')
 
 
+    <div class="container-fluid">
+        <div class="row paralax-auth v-center  box-shadow">
 
+
+            <div class="container padder-v">
+
+
+                <div class="col-md-4">
+                    <div class="wrapper cart-titile bg-success text-center b box-shadow padder-lg">
+                        <h2 class="text-white">Вход<br>
+                            в личный кабинет</h2>
+                        <i class="fa fa-users fa-4x padder-v text-white"></i>
+                        <p>Для входа в личный кабинет введите
+                        номер вашего мобильного телефона и пароль</p>
+                    </div>
+
+                    <div class="cart-body bg-white wrapper-lg b box-shadow">
+
+                        <form action="/auth/login" method="post" name="form">
+                                <div class="m-t-md m-b-md">
+                                    <input type="text" placeholder="Телефон" name="phone" class="form-control  rounded"
+                                           required
+                                           data-mask="+ 9-999-999-99-99">
+                                </div>
+
+                                <div class="m-t-md m-b-md">
+                                    <input type="password" name="password" placeholder="Пароль"
+                                           class="form-control rounded" required>
+                                </div>
+
+                                {!! csrf_field() !!}
+
+                                <button type="submit" class="m-t-md btn btn-lg btn-primary btn-void-primary btn-block">Войти
+                                </button>
+                        </form>
+                        <p class="text-center m-t m-b"><a>Забыли пароль?</a></p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="wrapper cart-titile bg-success text-center b box-shadow padder-lg">
+                        <h2 class="text-white">Уже были у нас<br>
+                            в клинике?</h2>
+                        <i class="fa fa-users fa-4x padder-v text-white"></i>
+                        <p>Просто получите пароль на ваш мобильный телефон и начните пользоваться личным кабинетом</p>
+                    </div>
+
+                    <div class="cart-body bg-white wrapper-lg b box-shadow">
+
+                        <p class="text-center padder-v">
+                            Введите номер мобильного телефона, указанный вами при посещении медицинского центра Здоровье Нации
+                        </p>
+
+
+                        <form action="/auth/login" method="post" name="form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Телефон" name="phone" class="form-control  rounded"
+                                       required
+                                       data-mask="+ 9-999-999-99-99">
+                            </div>
+
+                            {!! csrf_field() !!}
+
+                            <button type="submit" class="btn btn-lg btn-primary btn-void-primary btn-block">Получить пароль
+                            </button>
+                        </form>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="wrapper cart-titile bg-success text-center b box-shadow padder-lg">
+                        <h2 class="text-white">Регистрация<br> на сайте</h2>
+                        <i class="fa fa-users fa-4x padder-v text-white"></i>
+                        <p>Зарегистрируйтесь, чтобы пользоваться всеми преимуществами личного кабинета</p>
+                    </div>
+
+                    <div class="cart-body bg-white wrapper-lg b box-shadow">
+
+                        <div class="padder">
+                        <ul class="list-unstyled">
+                            <li class="m-xs"><span class="fa fa-check text-success"></span> Смотри историю посещений
+                            </li>
+                            <li  class="m-xs"><span class="fa fa-check text-success"></span> Узнавай результаты
+                                анализов
+                            </li>
+                            <li  class="m-xs"><span class="fa fa-check text-success"></span> Сохраняй свои записи</li>
+                            <li  class="m-xs"><span class="fa fa-check text-success"></span> Получай новости</li>
+                            <li  class="m-xs"><span class="fa fa-check text-success"></span> Обращаяся за вопросами
+                            </li>
+                        </ul>
+                            </div>
+
+                        <button type="submit" class="btn btn-lg btn-primary btn-void-primary btn-block">Регистрация
+                        </button>
+                        <p class="text-center m-t m-b"><a>Выслать код подтверждения повторно</a></p>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<!--
     <div class="container">
 
 
@@ -149,6 +277,16 @@
                                             <label class="control-label">Дата рожения</label>
                                             <input maxlength="200" type="text" name="birth" required="required"
                                                    class="form-control rounded" placeholder="Выберите дату рождения"/>
+
+
+
+                                            <div class="input-group date" data-provide="datepicker">
+                                                <input type="text" class="form-control">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-th"></span>
+                                                </div>
+                                            </div>
+
                                         </div>
 
 
@@ -189,7 +327,7 @@
 
 
     </div>
-
+-->
 
 
 @endsection
