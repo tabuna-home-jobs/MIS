@@ -28,7 +28,7 @@
 
 
                                     <div class="wrapper-md">
-                                    @if($search)
+                                    @if($query)
 
                                         <ul class="list-group list-group-alt list-group-lg no-borders pull-in m-b-none">
 
@@ -53,18 +53,15 @@
                                                             </div>
                                                         </div>
                                                     </li>
-
-
                                             @endforeach
 
 
                                         @endforeach
 
-
-
-
-
                                         </ul>
+
+                                        @else
+                                        Пустой запрос
                                         @endif
 
 
