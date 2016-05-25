@@ -312,7 +312,7 @@
 
                 @foreach ($complexGoods as $key => $item)
                     <div class="col-md-4 @if($key > 0) hidden-xs hidden-sm @endif">
-                        <p class="h3 m-b-md text-center">{{ $item->name }}</p>
+                        {{--<p class="h3 m-b-md text-center">{{ $item->name }}</p>--}}
 
                         <ul class="list-unstyled">
                             @foreach($item->complexGoods as $complexGood)
