@@ -55,7 +55,7 @@
                 <form class="navbar-form navbar-form-sm nav-search"  role="search" action="/search" method="post">
                     {!! csrf_field() !!}
                     <div class="input-group">
-                        <input type="text" class="form-control" name="query" placeholder="Поиск по ...">
+                        <input type="text" class="form-control" name="search" placeholder="Поиск по ..." required>
                               <span class="input-group-btn">
                                 <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                               </span>

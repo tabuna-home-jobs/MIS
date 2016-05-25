@@ -94,7 +94,7 @@
                                 <div class="text media-body media-middle">
                                     <h4 style="font-size: 20px; font-weight: 500;">Ортопедия</h4>
 
-                                    <p class="p1">Сто процентное использование импортного материала</p>
+                                    <p class="p1">Стопроцентное использование импортного материала</p>
                                 </div>
 
                                 <div class="icon media-right">

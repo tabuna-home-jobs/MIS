@@ -9,6 +9,7 @@ use App\Models\Page;
 use App\Models\Shares;
 use App\Models\Sites;
 use Illuminate\Http\Request;
+use App\Http\Requests\SearchRequest;
 use Search;
 
 class SearchController extends Controller
@@ -42,9 +43,9 @@ class SearchController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $sitename = "sokzn48", $sitedomen = "ru")
+    public function store(SearchRequest $request, $sitename = "sokzn48", $sitedomen = "ru")
     {
-        $query = $request->input('query');
+        $query = $request->input('search');
         $site = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id;
         $search = Search::all($query);
 
@@ -57,7 +58,7 @@ class SearchController extends Controller
 
         return view($sitename . $sitedomen . '/search', [
             'query' => $query,
-            'search' => $search,
+            'search' => collect($search),
         ]);
     }
 

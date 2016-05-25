@@ -13,7 +13,7 @@
                 <li>Поиск</li>
             </ul>
             <div class="page-text">
-                @if($search)
+                @if($search->collapse()->all() )
                 <ul class="list-group list-group-alt list-group-lg no-borders pull-in m-b-none">
 
                     @foreach($search as $key =>$value)
