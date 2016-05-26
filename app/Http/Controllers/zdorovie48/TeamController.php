@@ -23,13 +23,14 @@ class TeamController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $SpecCat = $getSites->getSpecCat()->get();
 
+
         $requestCategory = Request::input('catspec');
         if (is_null($requestCategory)) {
-            $Specialisty = $getSites->getTeam()->orderBy('sort', 'asc')->paginate(15);
+            $Specialisty = $getSites->getTeam()->paginate();
         } else {
-            $Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->orderBy('sort', 'asc')->paginate(12);
+            $Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->paginate();
         }
-
+       //dd($getSites->getTeam()->orderBy('sort', 'asc')->limit(30)->get());
 
         return view('new' . $sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty, 'SpCat' => $SpecCat]);
     }

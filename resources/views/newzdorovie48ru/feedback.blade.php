@@ -96,21 +96,21 @@
                                         <input type="text" name="fio" placeholder="ФИО" class="form-control rounded" required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Как Вас зовут?</label>
+                                        <label>Ваш email</label>
                                         <input type="email" name="email" placeholder="Email" class="form-control rounded"
                                                required>
                                     </div>
 
                                     <div class="form-group">
 
-                                        <label>Как Вас зовут?</label>
+                                        <label>Ваш номер телефона</label>
                                         <input type="text" name="phone" placeholder="Телефон" class="form-control rounded"
                                                data-mask="+ 9-999-999-99-99">
                                     </div>
 
                                     <div class="form-group">
 
-                                        <label>Как Вас зовут?</label>
+                                        <label>Ваше сообщение</label>
                                         <textarea name="message" required class="form-control rounded"
                                                   placeholder="Текст сообщения"></textarea>
                                     </div>
