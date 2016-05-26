@@ -17,7 +17,7 @@ class SharesController extends Controller
     public function index($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        $getShares = $getSites->getShares()->orderBy('id', 'desc')->paginate(2);
+        $getShares = $getSites->getShares()->orderBy('id', 'desc')->paginate(6);
         return view('new' . $sitename . $sitedomen . '/shares', ['Shares' => $getShares]);
     }
 

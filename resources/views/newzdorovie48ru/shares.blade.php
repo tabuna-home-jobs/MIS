@@ -23,7 +23,7 @@
 
                             <div class="blog-post">
                                 @foreach($Shares as $key => $value)
-                                    <article class="panel">
+                                    <article class="panel col-md-6">
                                         <div>
                                             <a href="/shares/{{$value['id']}}">
                                                 <img alt="{{$value['name']}}" src="{{$value['avatar']}}" class="img-full">
@@ -43,6 +43,10 @@
                                             </div>
                                         </div>
                                     </article>
+                                    @if(($key+1)%2 == 0)
+                                        <div class="clearfix"></div>
+                                    @endif
+
                                 @endforeach
                             </div>
 
