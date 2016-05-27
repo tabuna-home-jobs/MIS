@@ -115,12 +115,17 @@
 
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию.</p></div>
                             <div class="departament-item-owl">
+                                <img src="/gkzn48ru/images/logo/zub.png">
+                                <h3><a href="http://stomzn48.ru/">Стоматология</a></h3>
+                                <p>Разнообразный и богатый опыт начало повседневной работы по формированию.</p>
+                            </div>
+                            {{--<div class="departament-item-owl">
 
                                 <a href="http://karta-uspeha.ru" target="_blank" class="no-u">
                                     <img src="/gkzn48ru/images/logo/karta_w.png">
                                 </a>
                                 <h3><a href="http://karta-uspeha.ru" target="_blank">Карта Успеха</a></h3>
-                                <p>Разнообразный и богатый опыт начало повседневной работы по формированию. </p></div>
+                                <p>Разнообразный и богатый опыт начало повседневной работы по формированию. </p></div>--}}
                         </li>
                         <li>
                             <div class="departament-item-owl">
@@ -162,12 +167,12 @@
                                 <h3><a href="#">Центр Диагностики</a></h3>
                                 <p>Разнообразный и богатый опыт начало повседневной работы по формированию.</p>
                             </div>
-
-                            <div class="departament-item-owl">
-                                <img src="/gkzn48ru/images/logo/zub.png">
-                                <h3><a href="http://stomzn48.ru/">Стоматология</a></h3>
-                                <p>Разнообразный и богатый опыт начало повседневной работы по формированию.</p>
-                            </div>
+                            {{--
+                             <div class="departament-item-owl">
+                                        <img src="/gkzn48ru/images/logo/zub.png">
+                                        <h3><a href="http://stomzn48.ru/">Стоматология</a></h3>
+                                        <p>Разнообразный и богатый опыт начало повседневной работы по формированию.</p>
+                                    </div>--}}
                         </li>
 
 

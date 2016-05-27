@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex"/>
 
     <link href="/stomzn48.ru/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
@@ -50,24 +49,37 @@
 
     <script type="text/javascript" src="/stomzn48.ru/theme/js/functions.js"></script>
 
+    <script>
+        /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+        if ( typeof WebFontConfig === "undefined" ) {
+            WebFontConfig = new Object();
+        }
+        WebFontConfig['google'] = {families: ['Roboto:100,300,400,500,700,900,100italic,300italic,400italic,500italic,700italic,900italic', 'Playfair+Display:400,700,900,400italic,700italic,900italic']};
+
+        (function() {
+            var wf = document.createElement( 'script' );
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName( 'script' )[0];
+            s.parentNode.insertBefore( wf, s );
+        })();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-65069943-24', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
 
  </head>
- <script>
-     /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
-     if ( typeof WebFontConfig === "undefined" ) {
-         WebFontConfig = new Object();
-     }
-     WebFontConfig['google'] = {families: ['Roboto:100,300,400,500,700,900,100italic,300italic,400italic,500italic,700italic,900italic', 'Playfair+Display:400,700,900,400italic,700italic,900italic']};
 
-     (function() {
-         var wf = document.createElement( 'script' );
-         wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
-         wf.type = 'text/javascript';
-         wf.async = 'true';
-         var s = document.getElementsByTagName( 'script' )[0];
-         s.parentNode.insertBefore( wf, s );
-     })();
- </script>
  <body>
 
  <header id="header">

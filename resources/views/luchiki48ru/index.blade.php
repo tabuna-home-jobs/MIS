@@ -275,23 +275,23 @@
     <div class="slider-sites autoplay">
         <div class="sites-slide">
             <a href="http://mother-baby.ru/" target="_blank">
-                <img src="/luchiki48.ru/img/zn1.png">
+                <img src="/luchiki48.ru/img/zn1.png" alt="Цент детского здоровья">
             </a>
         </div>
-        <div class="sites-slide"><img src="/luchiki48.ru/img/zn2.png"></div>
+
         <div class="sites-slide">
             <a href="http://zdorovie48.ru/" target="_blank">
-                <img src="/luchiki48.ru/img/zn3.png">
+                <img src="/luchiki48.ru/img/zn3.png" atl="Здоровье нации">
             </a>
         </div>
         <div class="sites-slide">
             <a href="http://luchiki48.ru/" target="_blank" >
-                <img src="/luchiki48.ru/img/zn4.png">
+                <img src="/luchiki48.ru/img/zn4.png" alt="Лучики">
             </a>
         </div>
         <div class="sites-slide">
             <a href="http://sokzn48.ru/" target="_blank">
-                <img src="/luchiki48.ru/img/zn5.png">
+                <img src="/luchiki48.ru/img/zn5.png" alt="Сок">
             </a>
         </div>
     </div>

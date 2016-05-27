@@ -16,13 +16,24 @@
 
     <link rel="stylesheet" href="/luchiki48.ru/theme/css/source/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/luchiki48.ru/theme/css/source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+            $(".fancybox").fancybox();
+        });
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-65069943-25', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 
 </head>
-<script type="text/javascript">
-    jQuery(document).ready(function($){
-        $(".fancybox").fancybox();
-    });
-</script>
+
 <body>
 <!--Верхняя плашка с адресами-->
 <div class="site-top site-top-4 header-4">

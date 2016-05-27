@@ -5774,3 +5774,7 @@ span.heading{
 .top_mobile_menu .nav-search{
     margin: 0;
 }
+.count{
+    display: inline-block;
+    padding: 0 5px;
+}

@@ -949,3 +949,7 @@ ul.specNav{
 .list-group-item>.thumb-md{
     margin-right: 10px;
 }
+.count {
+    padding: 10px 5px 10px 0;
+    display: inline-block;
+}

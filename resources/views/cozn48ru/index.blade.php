@@ -419,7 +419,7 @@
                     <img src="cozn48.ru/img/zn1.png">
                 </a>
             </div>
-            <div class="sl-img"><img src="cozn48.ru/img/zn2.png"></div>
+
             <div class="sl-img">
                 <a href="http://zdorovie48.ru/" target="_blank">
                     <img src="cozn48.ru/img/zn3.png">
