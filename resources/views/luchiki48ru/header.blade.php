@@ -52,15 +52,15 @@
     <div class="header-top">
         <div class="container">
             <div class="phone-header col-md-2 col-sm-6  col-xs-12">
-                <img src="/luchiki48.ru/img/phone.png">
+                <img src="/luchiki48.ru/img/phone.png" alt="телефон">
                 +7 (4742) 77 03 97
             </div>
             <div class="adr-header col-md-3 col-sm-6 col-xs-12">
-                <img src="/luchiki48.ru/img/adr.png">
+                <img src="/luchiki48.ru/img/adr.png" alt="Адрес">
                 г. Липецк, ул. Неделина, 15-а
             </div>
             <div class="mail-header col-md-2 col-sm-6 col-xs-12">
-                <img src="/luchiki48.ru/img/mail.png">
+                <img src="/luchiki48.ru/img/mail.png" alt="email">
                 info@luchiki.ru
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -79,22 +79,22 @@
             <div class="social-header col-md-2 hidden-sm hidden-xs">
                 <!--<img src="/luchiki48.ru/img/social.png">-->
                 <div class="col-sm-3 col-md-3 col-xs-3">
-                    <a href="http://vk.com/club58100338"><img src="/luchiki48.ru/img/vk.png"></a>
+                    <a href="http://vk.com/club58100338"><img src="/luchiki48.ru/img/vk.png" alt="VK"></a>
                 </div>
                 <!--<div class="col-sm-3 col-md-3 col-xs-3">
                     <a href=""><img src="/luchiki48.ru/img/twit.png"></a>
                 </div>-->
                 <div class="col-sm-3 col-md-3 col-xs-3">
-                    <a href="https://www.ok.ru/luchikistu"><img src="/luchiki48.ru/img/ok.png"></a>
+                    <a href="https://www.ok.ru/luchikistu"><img src="/luchiki48.ru/img/ok.png" alt="OK"></a>
                 </div>
                 <div class="col-sm-3 col-md-3 col-xs-3">
-                    <a href="https://www.facebook.com/groups/676658982456131/ "><img src="/luchiki48.ru/img/face.png"></a>
+                    <a href="https://www.facebook.com/groups/676658982456131/ "><img src="/luchiki48.ru/img/face.png" alt="FACEBOOK"></a>
                 </div>
             </div>
         </div>
     </div>
     <div class="header-top-menu container">
-        <div class="logo col-md-2 col-sm-2 col-xs-12"><a href="/"><img src="/luchiki48.ru/img/logo.png"></a></div>
+        <div class="logo col-md-2 col-sm-2 col-xs-12"><a href="/"><img src="/luchiki48.ru/img/logo.png" alt="Студия раннего развития детей «Лучики»"></a></div>
         <div class="menu-block col-md-10 col-sm-10 col-xs-12">
             <!-- ВЕРХНЕЕ МЕНЮ -->
             <div class="menu-header col-md-12 col-sm-12 col-xs-12">

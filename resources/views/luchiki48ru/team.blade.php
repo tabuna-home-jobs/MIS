@@ -39,7 +39,7 @@
                                     <div class="doctors col-sm-6 col-md-6 col-xs-12 padding-bottom-60 clearfix">
                                         <div class="doctors-img col-sm-5 col-md-5 col-xs-12 ">
                                             <a href="/team/{{$spec['id']}}">
-                                                <img src="{{$spec->avatar}}"  alt="" title="">
+                                                <img src="{{$spec->avatar}}"  alt="{{$spec->fio}}" title="{{$spec->fio}}">
                                             </a>
 
                                         </div>

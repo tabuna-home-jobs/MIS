@@ -91,7 +91,7 @@
             и продвижение сайта
         </div>
         <div class="octav col-sm-1">
-            <a href="#"><img src="/cozn48.ru/img/octavian.png"></a>
+            <a href="http://octavian48.ru/" target="_blank"><img src="/cozn48.ru/img/octavian.png" alt="Октавиан"></a>
         </div>
     </div>
 

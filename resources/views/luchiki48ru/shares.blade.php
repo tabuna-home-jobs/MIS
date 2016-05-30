@@ -13,7 +13,7 @@
                         <div class="col-md-4 item-row ">
                             <div class="item-blog">
                                 <a href="/shares/{{$item->id}}">
-                                    <img src="{{$item->avatar}}" class="img-full">
+                                    <img src="{{$item->avatar}}" class="img-full" alt="{{$item['name']}}">
                                 </a>
                                 <div>
                                     <h3><a href="/shares/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>

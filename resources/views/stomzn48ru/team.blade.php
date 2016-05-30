@@ -26,7 +26,7 @@
                             <div class="wpb_text_column wpb_content_element ">
                             <div class="wpb_wrapper">
                                 <div class="row inline-block-grids padding-top-35">
-                                    <!-- <div class="col-sm-12 col-xs-12 col-md-12 of-canvas-xs  padding-top-35">
+                                   {{--<div class="col-sm-12 col-xs-12 col-md-12 of-canvas-xs  padding-top-35">
 
                     <nav class="primary-albums clearfix">
                         <ul class="list-group specNav">
@@ -42,7 +42,7 @@
 
                                             </ul>
                                         </nav>
-                                    </div>-->
+                                    </div>--}}
                                     <div class="col-sm-12 font-size-0 padding-top-35">
 
 
@@ -50,7 +50,7 @@
                                             <div class="doctors col-sm-6 col-md-6 col-xs-12 padding-bottom-60 clearfix">
                                                 <div class="doctors-img col-sm-5 col-md-5 col-xs-12 ">
                                                     <a href="/team/{{$spec['id']}}">
-                                                        <img src="{{$spec->avatar}}"  alt="" title="">
+                                                        <img src="{{$spec->avatar}}"  alt="{{$spec->fio}}" title="{{$spec->fio}}">
                                                     </a>
 
                                                 </div>

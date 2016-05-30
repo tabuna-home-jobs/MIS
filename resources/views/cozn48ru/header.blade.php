@@ -64,12 +64,12 @@
     <div class="shapka container">
         <div class="logo col-md-3 col-sm-12 col-xs-12">
             <a href="/">
-            <img src="/cozn48.ru/img/logo.png">
+            <img src="/cozn48.ru/img/logo.png" alt="«Центр остеопатии»">
             </a>
         </div>
         <div class="col-md-9 col-sm-12 col-xs-12">
             <div class="adress col-sm-4">
-                <img src="/cozn48.ru/img/adress.png"> Липецк, ул. Фрунзе 14
+                <img src="/cozn48.ru/img/adress.png" alt="Адрес"> Липецк, ул. Фрунзе 14
             </div>
             <div class="socialnetwork col-sm-2 col-xs-12">
                 <!--
@@ -85,7 +85,7 @@
                 -->
             </div>
             <div class="phone col-sm-3 col-xs-12">
-                <img src="/cozn48.ru/img/phone.png"> (4742) <span class="tel">227-887</span>
+                <img src="/cozn48.ru/img/phone.png" alt="Телефон"> (4742) <span class="tel">227-887</span>
             </div>
             <div class="callback col-sm-3 col-xs-12">
                 <a type="button" class="btn btn-lg button1" data-toggle="modal" data-target="#myModal">

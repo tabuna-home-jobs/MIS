@@ -33,7 +33,7 @@
                         <div class="col-md-4 item-row-good">
                             <div>
                                 <div class="item-row-good-img">
-                                    <img src="{{$item['avatar']}}" alt="">
+                                    <img src="{{$item['avatar']}}" alt="{{$item['name']}}">
                                 </div>
                                 <h3><a href="/service/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
                                 <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>

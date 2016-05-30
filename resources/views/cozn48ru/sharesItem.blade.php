@@ -29,7 +29,7 @@
             @foreach(newsOnMain::getNews(6,4) as $item)
 
                 <div class="news1 col-md-3 col-sm-6 col-xs-12">
-                    <img src="{{$item['avatar']}}">
+                    <img src="{{$item['avatar']}}" alt="{{$item['name']}}">
                     <div class="s1"><a href="/blog/{{$item['id']}}">{{$item['name']}}</a></div>
 
                     <div class="textnews1">

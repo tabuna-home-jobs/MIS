@@ -38,7 +38,7 @@
             Студия раннего развития детей «Лучики» предлагает занятия для детей от 1 до 6 лет два раза в неделю в удобное для Вас время
         </div>
         <div class="single-st white col-md-4 col-sm-6">
-            <img src="/luchiki48.ru/img/st1.png" class="col-md-4">
+            <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="ИНДИВИДУАЛЬНЫЙ ПОДХОД">
             <p class="col-md-8">
                 <span>ИНДИВИДУАЛЬНЫЙ ПОДХОД</span><br>
                 Индивидуальный подход к каждому
@@ -46,7 +46,7 @@
             </p>
         </div>
         <div class="single-st white col-md-4 col-sm-6">
-            <img src="/luchiki48.ru/img/st1.png" class="col-md-4">
+            <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="ПОСТОЯННОЕ ВНИМАНИЕ">
             <p class="col-md-8">
                 <span>ПОСТОЯННОЕ ВНИМАНИЕ</span><br>
                 Вы ни когда не будете обделены
@@ -55,7 +55,7 @@
             </p>
         </div>
         <div class="single-st white col-md-4 col-sm-6">
-            <img src="/luchiki48.ru/img/st1.png" class="col-md-4">
+            <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="КАЧЕСТВО ОБСЛУЖИВАНИЯ">
             <p class="col-md-8">
                 <span>КАЧЕСТВО ОБСЛУЖИВАНИЯ</span><br>
                 Будьте уверены в том, что в нашей студии
@@ -64,14 +64,14 @@
             </p>
         </div>
         <div class="single-st white col-md-4 col-sm-6">
-            <img src="/luchiki48.ru/img/st1.png" class="col-md-4">
+            <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="ВЫСОКАЯ КВАЛИФИКАЦИЯ">
             <p class="col-md-8">
                 <span>ВЫСОКАЯ КВАЛИФИКАЦИЯ</span><br>
                 Все наши преподаватели имеют высокую квалификацию
             </p>
         </div>
         <div class="single-st white col-md-4 col-sm-6">
-            <img src="/luchiki48.ru/img/st1.png" class="col-md-4">
+            <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="КОМФОРТ И БЕЗОПАСНОСТЬ">
             <p class="col-md-8">
                 <span>КОМФОРТ И БЕЗОПАСНОСТЬ</span><br>
                 Абсолютный комфорт и безопасность
@@ -79,7 +79,7 @@
             </p>
         </div>
         <div class="single-st white col-md-4 col-sm-6">
-            <img src="/luchiki48.ru/img/st1.png" class="col-md-4">
+            <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="СОВРЕМЕННОЕ ОБОРУДОВАНИЕ">
             <p class="col-md-8">
                 <span>СОВРЕМЕННОЕ ОБОРУДОВАНИЕ</span><br>
                 Все оборудование студии соответствует требованиям нашего времении
@@ -93,7 +93,7 @@
         <div class="header-label-small col-md-12">
             Вы можете быстро и удобно оставить свою заявку где бы вы не были
         </div>
-        <div class="request-img col-md-6 hidden-xs"><img src="/luchiki48.ru/img/request.png"></div>
+        <div class="request-img col-md-6 hidden-xs"><img src="/luchiki48.ru/img/request.png" alt="ОСТАВИТЬ ЗАЯВКУ ON-LINE"></div>
         <div class="form col-md-6">
             <form action="/feedback" method="post">
                 <div class="form-group">
@@ -142,14 +142,14 @@
             @foreach($allnews as $item)
             <div class="single-news col-md-12 col-sm-12">
                 <div class="table-news col-md-11 col-sm-11">
-                    <div class="news-img col-md-4 col-sm-4"><img src="{{$item['avatar']}}"></div>
+                    <div class="news-img col-md-4 col-sm-4"><img src="{{$item['avatar']}}" alt="{{$item['name']}}"></div>
                     <div class="news-text col-md-8 col-sm-8">
                         <h4><a href="blog/{{$item['id']}}">{{$item['name']}}</a></h4>
                         <span>{{$item['created_at']}}</span>
                         <p>{!! str_limit(strip_tags($item['content']),150,'...') !!}<a href="blog/{{$item['id']}}">Подробнее</a></p>
                     </div>
                 </div>
-                <div class="table-href col-md-1 col-sm-1"><a href="blog/{{$item['id']}}"><img src="/luchiki48.ru/img/news-icon.png"></a></div>
+                <div class="table-href col-md-1 col-sm-1"><a href="blog/{{$item['id']}}"><img src="/luchiki48.ru/img/news-icon.png" alt="Иконка"></a></div>
             </div>
             @endforeach
 
@@ -173,7 +173,7 @@
                         @endif
                         " role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
-                            <div class="share-img"><img src="{{$item['avatar']}}"></div>
+                            <div class="share-img"><img src="{{$item['avatar']}}" alt="{{$item['name']}}"></div>
                             <div class="share-text">
                                 <h4><a href="/shares/{{$item['id']}}">{{$item['name']}}</a></h4>
                                 <span>{{$item['created_at']}}</span>
@@ -228,7 +228,7 @@
 
     @foreach(GoodsMain::getGoods(7,43,4) as $item)
         <div class="single-license col-md-3 col-sm-6">
-            <div class="license-img"><a class="fancybox" href="{{$item['avatar']}}"><img src="{{$item['avatar']}}"></a></div>
+            <div class="license-img"><a class="fancybox" href="{{$item['avatar']}}"><img src="{{$item['avatar']}}" alt="{{$item['name']}}"></a></div>
             <p><a href="/service/{{$item['id']}}">{{$item['name']}}</a></p>
         </div>
     @endforeach

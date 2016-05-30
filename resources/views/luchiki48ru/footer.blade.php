@@ -26,15 +26,15 @@
         </div>
         <div class="footer-block-2 col-md-3 col-sm-6">
             <div class="phone-footer">
-                <img src="/luchiki48.ru/img/phone.png">
+                <img src="/luchiki48.ru/img/phone.png" alt="Телефон">
                 +7 (4742) 77 03 97
             </div>
             <div class="adr-footer">
-                <img src="/luchiki48.ru/img/adr.png">
+                <img src="/luchiki48.ru/img/adr.png" alt="Адрес">
                 г. Липецк, ул. Неделина, 15-а
             </div>
             <div class="mail-footer">
-                <img src="/luchiki48.ru/img/mail.png">
+                <img src="/luchiki48.ru/img/mail.png" alt="email">
                 <a href="">info@luchiki.ru</a>
             </div>
             <div class="counts">
@@ -104,7 +104,7 @@
         <div class="footer-block-4 col-md-3 col-sm-12">
             <h5>© Студия раннего развития детей «Лучики». Развивающие занятия. <br> 2015 - {{date('Y')}}</h5>
             <br>
-            <img src="/luchiki48.ru/img/minobr.png" class="img-responsive">
+            <img src="/luchiki48.ru/img/minobr.png" class="img-responsive" alt="Министерство образования и науки Российской Федераци">
             <br>
 
         </div>

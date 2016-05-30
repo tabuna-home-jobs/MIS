@@ -30,7 +30,7 @@
 
                     <div class="sk1 col-xs-12 col-md-12 col-sm-12 col-lg-4">
                         <a href="/shares/{{$item['id']}}">
-                            <img src="{{$item['avatar']}}">
+                            <img src="{{$item['avatar']}}" alt="{{$item['name']}}">
                         </a>
                     </div>
 

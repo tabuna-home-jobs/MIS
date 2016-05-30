@@ -12,7 +12,7 @@
                     @foreach($Shares as $item)
                         <div class="col-md-4">
                             <div class="share-item">
-                                <div class="share-item-img" ><img src="{{$item['avatar']}}" alt=""></div>
+                                <div class="share-item-img" ><img src="{{$item['avatar']}}" alt="{{$item['name']}}"></div>
                                 <h3>{{$item['name']}}</h3>
                                 <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
                                 <div class="seeall"><img src="/cozn48.ru/img/minibutton.png"><a href="/shares/{{$item['id']}}">Посмотреть акцию</a><br></div>
@@ -34,7 +34,7 @@
             @foreach(newsOnMain::getNews(6,4) as $item)
 
                 <div class="news1 col-md-3 col-sm-6 col-xs-12">
-                    <img src="{{$item['avatar']}}">
+                    <img src="{{$item['avatar']}}" alt="{{$item['name']}}">
                     <div class="s1"><a href="/blog/{{$item['id']}}">{{$item['name']}}</a></div>
 
                     <div class="textnews1">

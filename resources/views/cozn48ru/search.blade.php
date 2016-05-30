@@ -25,7 +25,7 @@
                             <li class="list-group-item">
                                 @if(isset($text->avatar))
                                     <a href="/{{$text->SlugName . '/' . $text->id}}" class="pull-left thumb-md m-r">
-                                        <img src="{{$text->avatar}}" alt="{{$text->title}}">
+                                        <img src="{{$text->avatar}}" alt="{{$text->name}}">
                                     </a>
                                 @endif
 

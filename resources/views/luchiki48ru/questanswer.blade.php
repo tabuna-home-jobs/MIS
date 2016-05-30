@@ -75,12 +75,8 @@
                             <h2 class="blueBg center  feedHead">Напиши и узнаешь</h2>
                             <div class="container">
                                 <div class="col-md-6">
-                                    <p>
-
-
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae urna eu ipsum dictum faucibus. Mauris placerat scelerisque purus id luctus. Nam sit amet arcu laoreet, pulvinar libero ac, facilisis sapien. Proin erat dolor, faucibus sit amet sagittis et, sagittis sed nulla. Fusce vel risus mauris. Nulla quis orci ornare, porta lorem id, lobortis dolor. Mauris ligula leo, iaculis ac velit ullamcorper, blandit euismod erat. Sed dictum purus sed viverra mattis. Sed ultricies odio id consectetur ultrices. Suspendisse venenatis orci nec nibh pellentesque, et malesuada lacus hendrerit. Sed et sem ante. Nullam et nunc ac massa volutpat ornare. Praesent finibus elit sem, in tristique est vestibulum id. Vivamus lobortis scelerisque turpis, non vulputate velit dignissim nec. Pellentesque varius arcu commodo rhoncus cursus. Praesent sagittis posuere odio eu sodales.
-
-                                        Donec nec rutrum orci, ac rutrum purus. Praesent finibus malesuada ultrices. Donec imperdiet vel sem in ornare. Suspendisse gravida fringilla nisl lacinia tempor. Cras rutrum a arcu vel posuere. Nullam ex purus, faucibus sed erat nec, consequat ornare est. Sed scelerisque at purus eget faucibus. Proin vitae sapien lectus. Integer tincidunt, augue in pretium scelerisque, massa neque luctus arcu, at fringilla augue mauris a leo.
+                                    <p class="big textst">
+                                        Здесь Вы можете задать свой вопрос
                                     </p>
                                     <!--<h2 class="light bordered">Уверенность и  качество</h2>
                                     <div class="feature">

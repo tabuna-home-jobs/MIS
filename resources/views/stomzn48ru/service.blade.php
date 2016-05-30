@@ -1,4 +1,4 @@
-@extends('stomzn48ru/headerPage')
+@extends('stomzn48ru/header')
 
 @section('content')
     <style>
@@ -28,7 +28,7 @@
                     @foreach($Goods as $item)
                         <div class="col-md-3 item-row">
                             <div>
-                                <div><img width="200" height="200" class="img-circle" src="{{$item['avatar']}}" alt=""></div>
+                                <div><img width="200" height="200" class="img-circle" src="{{$item['avatar']}}" alt="{{$item['name']}}"></div>
                                 <h3><a href="/service/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
                                 <p class="day">{{$item['created_at']}}</p>
                                 <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>

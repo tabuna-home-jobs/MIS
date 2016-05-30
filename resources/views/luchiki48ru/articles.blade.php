@@ -13,8 +13,8 @@
                     @foreach($Articles as $item)
                         <div class="col-md-4 item-row ">
                             <div class="item-blog">
-                                <a href="/articles/{{$item->id}}">
-                                    <img src="{{$item->avatar}}" class="img-full">
+                                <a href="/articles/{{$item->id}}" title="{{$item['name']}}">
+                                    <img src="{{$item->avatar}}" class="img-full" alt="{{$item['name']}}">
                                 </a>
                                 <div>
                                     <h3><a href="/articles/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>

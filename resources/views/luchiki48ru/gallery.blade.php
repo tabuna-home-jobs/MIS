@@ -10,13 +10,13 @@
 
                 </ul>
                 <div class="row">
-                   <!-- @foreach($photos as $item)
+                  {{-- @foreach($photos as $item)
                         <div class="col-md-3 item-galery">
                             <div>
                                 <a class="fancybox" rel="group" href="{{$item->url}}"><img src="{{$item->url}}" alt="" /></a>
                             </div>
                         </div>
-                    @endforeach -->
+                    @endforeach --}}
                 </div>
 
                     <div class="cupid-gallery row">

@@ -415,24 +415,24 @@
         <h2>САЙТЫ ГРУППЫ КОМПАНИЙ «ЗДОРОВЬЕ НАЦИИ»</h2>
         <div class="autoplay">
             <div class="sl-img">
-                <a href="http://mother-baby.ru/" target="_blank">
+                <a href="http://mother-baby.ru/" target="_blank" alt="Центр детского здоровья">
                     <img src="cozn48.ru/img/zn1.png">
                 </a>
             </div>
 
             <div class="sl-img">
                 <a href="http://zdorovie48.ru/" target="_blank">
-                    <img src="cozn48.ru/img/zn3.png">
+                    <img src="cozn48.ru/img/zn3.png" alt="Здоровье нции">
                 </a>
             </div>
             <div class="sl-img">
                 <a href="http://luchiki48.ru/" target="_blank" >
-                    <img src="cozn48.ru/img/zn4.png">
+                    <img src="cozn48.ru/img/zn4.png" alt="Студия раннего развития детей «Лучики»">
                 </a>
             </div>
             <div class="sl-img">
                 <a href="http://sokzn48.ru/" target="_blank">
-                    <img src="cozn48.ru/img/zn5.png">
+                    <img src="cozn48.ru/img/zn5.png" alt="«Центр остеопатии»">
                 </a>
             </div>
         </div>
