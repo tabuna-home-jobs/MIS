@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="/stomzn48.ru/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="google-site-verification" content="Jq8T0Z-ywOfLqW2JzrirHs884pOUQDoNsZr35pW0-Rg" />
+    <meta name='yandex-verification' content='6f5282756dd7b060' />
 
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
         <title>@yield('title') - Стоматология «Здоровье нации»</title>

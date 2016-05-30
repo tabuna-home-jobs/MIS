@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link href="/luchiki48.ru/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="google-site-verification" content="CYE4ztDnY2fJEP39cIhySBx2Cw1xi9NFzMJb-_uM2Ss" />
+    <meta name='yandex-verification' content='499d5c44d03d0212' />
 
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
         <title>@yield('title') - СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ»</title>

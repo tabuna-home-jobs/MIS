@@ -4,6 +4,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" >
     <link href="/cozn48.ru/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="qHmgM8pVN7GCedYiVBz_m49VWBZHE0-PHURQfidrlGg" />
+    <meta name='yandex-verification' content='5a5c49062c6e110e' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/cozn48.ru/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/cozn48.ru/style.css">

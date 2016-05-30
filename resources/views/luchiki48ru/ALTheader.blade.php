@@ -13,6 +13,8 @@
     <script src="/luchiki48.ru/theme/js/all.min.js"></script>
     <script src="/luchiki48.ru/theme/js/cloudflare.min.js"></script>
     <script src="/luchiki48.ru/js/bootstrap.min.js"></script>
+    <meta name="google-site-verification" content="CYE4ztDnY2fJEP39cIhySBx2Cw1xi9NFzMJb-_uM2Ss" />
+    <meta name='yandex-verification' content='499d5c44d03d0212' />
 
     <link rel="stylesheet" href="/luchiki48.ru/theme/css/source/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/luchiki48.ru/theme/css/source/jquery.fancybox.pack.js"></script>
