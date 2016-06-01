@@ -25,13 +25,13 @@
 
                         <div class="col-xs-12">
 
-                            <div class="mansory">
+                            <div class="">
 
                                 <div class="row">
 
-                                    @foreach($Specialisty as $spec)
+                                    @foreach($Specialisty as $key=> $spec)
 
-                                        <article class="item text-center">
+                                        <article class="item text-center col-md-4">
                                             <div class="panel">
                                                 <div class="wrapper-md">
                                                     <a href="/team/{{$spec->id}}">
@@ -46,6 +46,9 @@
                                                 </div>
                                             </div>
                                         </article>
+                                        @if( ($key+1) % 3 == 0 )
+                                            <div class="clearfix"></div>
+                                        @endif
 
                                     @endforeach
 

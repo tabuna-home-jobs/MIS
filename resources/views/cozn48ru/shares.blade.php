@@ -25,7 +25,7 @@
 
     </div>
 
-
+    {{--
     <div class="news">
         <h2>НОВОСТИ</h2>
 
@@ -48,7 +48,7 @@
             @endforeach
 
         </div>
-    </div>
+    </div> --}}
 
 @endsection
 <style>

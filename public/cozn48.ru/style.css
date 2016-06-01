@@ -778,3 +778,8 @@ a:hover{
 	display: inline-block;
 	padding: 0 5px;
 }
+@media(min-width: 768px){
+	.page-content {
+		min-height: 500px;
+	}
+}

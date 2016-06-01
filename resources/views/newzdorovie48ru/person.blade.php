@@ -72,6 +72,22 @@
                                                 </div>
                                             @endif
 
+
+                                            @if(empty(!$Spec->sertificats) && trim($Spec->sertificats) !== '')
+                                                    <div>
+                                                        <b class="heading-doc">Сертификаты:</b>
+                                                        <div class="detail-doc">{{$Spec->sertificats or ''}}</div>
+                                                    </div>
+                                            @endif
+
+
+                                            @if(empty(!$Spec->staj) && trim($Spec->staj) !== '')
+                                                    <div>
+                                                        <b class="heading-doc">Стаж работы:</b>
+                                                        <div class="detail-doc">{{$Spec->staj or ''}}</div>
+                                                    </div>
+                                            @endif
+
                                             @if(empty(!$Spec->obrazovanie) && trim($Spec->obrazovanie) !== '')
                                                 <div>
                                                     <title class="heading-doc">Образование</title>
