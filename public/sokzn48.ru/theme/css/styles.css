@@ -542,11 +542,13 @@ header .header_logo>a>div {
     background-image:url("/sokzn48.ru/img/luchiki-quote.png")!important
 }
 .luchiki-quote p {
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 .content-middle-inner{
-    text-shadow: 1px 1px 1px #000;
+    /*text-shadow: 1px 1px 1px #000;*/
+    padding: 0 25px;
 }
 .bg-while{
     background-color: #fff!important;
@@ -880,7 +882,7 @@ li{
 
     .homequest{
         text-align: left;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
     }
 
     .homeanswer{
@@ -891,6 +893,7 @@ li{
     }
     .homeanswer p{
         font-size: 18px;
+        margin-bottom: 5px;
     }
     .vc_custom_14442909099{
         background-image: url('/sokzn48.ru/img/questhome.jpg');
@@ -930,3 +933,31 @@ li{
         vertical-align: bottom;
         cursor: pointer;
     }
+.vc_parallax .latest-post-wrapper{
+    margin-top: 40px;
+}
+    .vc_parallax .latest-post-wrapper .type-post .entry-wrapper {
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px 3px #444242;
+    }
+    .vc_parallax .latest-post-wrapper .type-post .entry-wrapper .entry-content-wrapper{
+        padding: 15px 10px;
+
+    }
+    .vc_parallax .latest-post-wrapper .type-post .entry-wrapper .thumbnail{
+        border-radius: 4px 4px 0 0;
+    }
+.sharesTitle h2{
+    color:#fff;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 400;
+    padding-right: 18px;
+    position: relative;
+}
+
+.review{
+    margin-bottom: 25px;
+}

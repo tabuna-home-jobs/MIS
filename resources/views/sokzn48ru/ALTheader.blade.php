@@ -30,6 +30,7 @@
     <script src="/sokzn48.ru/theme/js/cloudflare.min.js"></script>
     <script src="/sokzn48.ru/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/sokzn48.ru/js/slick.min.js"></script>
+    <script type="text/javascript" src="/sokzn48.ru/js/jquery.matchHeight-min.js"></script>
 
     <link rel="stylesheet" href="/sokzn48.ru/theme/css/source/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/sokzn48.ru/theme/css/source/jquery.fancybox.pack.js"></script>
@@ -37,6 +38,8 @@
     <script type="text/javascript">
         jQuery(document).ready(function($){
             $(".fancybox, .highslide").fancybox();
+            $('.vc_parallax .latest-post-wrapper .type-post .entry-wrapper .thumbnail').matchHeight();
+            $('.vc_parallax .latest-post-wrapper .type-post .entry-wrapper .entry-content-wrapper').matchHeight();
         });
     </script>
 

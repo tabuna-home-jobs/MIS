@@ -100,26 +100,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        {{--
-                                        <div class="wpb_column vc_column_container vc_col-sm-6">
-                                            <div class="wpb_wrapper">
-                                                <div id="icon-box-9456-7143" class="luchiki-icon-box style2 left ">
-                                                    <a href="index.html%3Fp=189.html"><i class="fa fa-cube"></i>
-                                                    </a>
-                                                    <h4>Игровые места</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="wpb_column vc_column_container vc_col-sm-6">
-                                            <div class="wpb_wrapper">
-                                                <div id="icon-box-2417-4927" class="luchiki-icon-box style2 left ">
-                                                    <a href="index.html%3Fp=189.html"><i class="fa fa-bullhorn"></i>
-                                                    </a>
-                                                    <h4>Круглосуточно</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        --}}
+
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +195,7 @@
                     </div>
                 </div>
                 <div class="fullwidth">
-                    <div class="vc_row wpb_row vc_row-fluid luchiki-padding-bottom-40 luchiki-border-bottom">
+                    <div class="vc_row wpb_row vc_row-fluid luchiki-padding-bottom-40">
                         <div class="wpb_column vc_column_container vc_col-sm-12">
                             <div class="wpb_wrapper">
                                 <div class="latest-post-wrapper">
@@ -273,6 +254,157 @@
                 </div>
                 <!--Наш блог-->
 
+                <!--Новые акции-->
+                <div class="fullwidth">
+                    <div data-vc-parallax="1.5" data-overlay-color="rgba(0,0,0,0.3)"
+                         class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-95 vc_custom_1444210607896 vc_general vc_parallax vc_parallax-content-moving overlay-bg-vc-wapper">
+                        <div class="overlay-bg-vc" style="background-color: rgba(0,0,0,0.3)"></div>
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="wpb_wrapper">
+                                <div class="latest-post-wrapper">
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="sharesTitle">
+                                                <h2><b>Наши Акции</b></h2>
+                                            </div>
+                                            <div class="latest-post-col-3 latest-post-no-slider latest-post-style1  ">
+                                                @foreach($getShares as $shares)
+                                                    <article id="post-82"
+                                                             class="post-82 post type-post status-publish format-standard has-post-thumbnail hentry category-new-event clearfix">
+                                                        <div class="entry-wrapper clearfix">
+                                                            <div class="entry-image-wrapper">
+                                                                <div class="entry-thumbnail">
+                                                                    <a href="/shares/{{$shares['id']}}" title="{{$shares['title']}}" class="thumbnail">
+                                                                        <img class="img-rounded img-responsive" src="{{$shares['avatar']}}" alt="{{$shares['title']}}">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="entry-content-wrapper clearfix">
+                                                                <div class="entry-content-container clearfix">
+
+                                                                    <h3 class="entry-title">
+                                                                        <a href="/shares/{{$shares['id']}}" rel="bookmark" title="{{$shares['title']}}">
+                                                                            {{$shares['name']}}
+                                                                        </a>
+                                                                    </h3>
+
+                                                                    <div class="entry-meta">
+
+                            <span class="entry-meta-date"><i class="fa fa-clock-o"></i> Опубликованно
+                                <a href="/shares/{{$shares['id']}}" rel="bookmark" title="{{$shares['title']}}">
+                                    {{$shares['created_at']->diffForHumans()}}
+                                </a>
+                            </span>
+                                                                    </div>
+                                                                    {{--
+                                                                    <div class="entry-excerpt">
+                                                                        <p>
+                                                                            {{str_limit(strip_tags($shares['content']), 150, '...')}}
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="entry-read-more">
+                                                                        <a href="/shares/{{$shares['id']}}" rel="bookmark" title="Read more">Читать дальше <i class="fa fa-angle-double-right"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                    --}}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_parallax-inner skrollable skrollable-between" data-bottom-top="top: -50%;" data-top-bottom="top: 0%;"
+                             style="height: 150%; top: -11.868%;"></div>
+                    </div>
+                </div>
+                <!--Новые акции-->
+
+                <!--Отзывы и вопрос-ответ-->
+
+                <div class="fullwidth">
+                    <div class="vc_row wpb_row vc_row-fluid luchiki-padding-bottom-40 luchiki-border-bottom">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="wpb_wrapper">
+                                <div class="latest-post-wrapper">
+                                    <div class="container">
+                                        <div class="row">
+
+
+
+
+                                            <div class="col-md-6">
+                                                <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-35">
+                                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                        <div class="wpb_wrapper">
+                                                            <div class="luchiki-heading">
+                                                                <h2><b>Отзывы</b></h2>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="luchiki-quote content-middle  review">
+                                                    @foreach($randomReview as $reiew)
+                                                    <div class="content-middle-inner">
+
+                                                        <q>{{$reiew['content']}}</q>
+                                                        <p>{{$reiew['fio']}}</p>
+                                                    </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="col-md-6">
+
+                                                    <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-35">
+                                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="luchiki-heading">
+                                                                    <h2><b>Вопросы и ответы</b></h2>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="luchiki-quote content-middle  ">
+                                                        <div class="content-middle-inner">
+
+                                                                <div class="homequest">
+                                                                    <p>{{$randomQuestAnsver['fio']}} спрашивает:</p>
+                                                                    <q>{{$randomQuestAnsver['questions']}}</q>
+                                                                </div>
+
+
+                                                                <div class="homeanswer">
+                                                                    <p>Ответ:</p>
+                                                                    <q>{{$randomQuestAnsver['answer']}}</q>
+                                                                    <p>С уважением cемейный оздоровительный комплекс «СОК»</p>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Отзывы и вопрос-ответ-->
+
+                {{--
                 <!--Отзывы-->
                 <div class="fullwidth">
                     <div data-vc-parallax="1.5" data-overlay-color="rgba(0,0,0,0.3)"
@@ -294,8 +426,10 @@
                     </div>
                 </div>
                 <!--Отзывы-->
+                --}}
 
                 <!--Акции-->
+                {{--
                 <div class="container">
                     <div class="vc_row wpb_row vc_row-fluid luchiki-margin-bottom-35">
                         <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -366,9 +500,11 @@
                         </div>
                     </div>
                 </div>
+
+                --}}
                 <!--Акции-->
 
-
+                {{--
                 <!--Вопрос-ответ-->
                 <div class="fullwidth">
                     <div data-vc-parallax="1.5" data-overlay-color="rgba(0,0,0,0.3)"
@@ -400,6 +536,7 @@
                     </div>
                 </div>
                 <!--Вопрос-ответ-->
+                --}}
 
 
 

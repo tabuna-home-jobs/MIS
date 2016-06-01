@@ -22,14 +22,39 @@ class HomeController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getNews = $getSites->getNews()->orderBy('updated_at', 'desc')->limit(3)->get();
         $getShares = $getSites->getShares()->orderBy('id', 'desc')->limit(3)->get();
-        $getReviews = $getSites->getReviews()->where('publish',
-            true)->orderBy(DB::raw('RANDOM()'))->limit(1)->get()->first();
-        $getSpec = $getSites->getTeam()->orderBy('sort', 'asc')->limit(8)->get();
-        $QuestAnswers = QuestAnswer::whereRaw('ids = ? and publish = ?',
+
+        $getReviews = collect();
+
+        $getReviews->push( $getSites->getReviews()
+            ->where('publish', true)
+            ->orderBy(DB::raw('RANDOM()'))
+            ->limit(1)
+            ->get()
+            ->first());
+
+        $getReviews->push( $getSites->getReviews()
+            ->where('publish', true)
+            ->where('id','!=',$getReviews->first()->id)
+            ->orderBy(DB::raw('RANDOM()'))
+            ->limit(1)
+            ->get()
+            ->first());
+
+
+
+
+        $getSpec = $getSites->getTeam()
+            ->orderBy('sort', 'asc')
+            ->limit(8)
+            ->get();
+
+        $QuestAnswers= QuestAnswer::whereRaw('ids = ? and publish = ?',
             [Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id, true])
             ->orderBy(DB::raw('RANDOM()'))
             ->with('getCategory', 'getDoctor')
-            ->limit(1)->get()->first();
+            ->limit(2)->get()->first();
+
+
         return view($sitename . $sitedomen . '/index', [
             'getNews' => $getNews,
             'getShares' => $getShares,
