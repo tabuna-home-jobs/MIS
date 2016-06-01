@@ -349,9 +349,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="luchiki-quote content-middle  review">
+                                                <div class="luchiki-quote content-middle  ">
                                                     @foreach($randomReview as $reiew)
-                                                    <div class="content-middle-inner">
+                                                    <div class="content-middle-inner review">
 
                                                         <q>{{$reiew['content']}}</q>
                                                         <p>{{$reiew['fio']}}</p>
