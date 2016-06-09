@@ -22,6 +22,8 @@
                         </div>
 
                         <div class="side-bar-catalog">
+
+                            {{--
                             @if(count($complexGoods) > 0)
                                 <nav class="navmenu navmenu-default" role="navigation">
                                     <ul class="nav navmenu-nav">
@@ -33,6 +35,7 @@
                                 </nav>
                                 <br>
                             @endif
+                            --}}
                             <nav class="navmenu navmenu-default" role="navigation">
                                 <ul class="nav navmenu-nav">
                                     @if(!empty($Goods))
