@@ -9,7 +9,7 @@
             <div class="item {{ ($key == 0) ? 'active' : '' }}">
                 <img alt="Слайдер" src="{{ $item->avatar }}">
 
-                <div class="carousel-caption text-black">
+                <div class="carousel-caption text-black bg-white-opacity">
                     {!! $item->text !!}
                 </div>
             </div>

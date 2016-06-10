@@ -79,7 +79,7 @@
                                                     <h4 class="total_price">Цена: <s>{{number_format($Good->total_price, 0, '.', ' ')}} <i class="fa fa-rub"></i></s></h4>
                                                     <h4 class="text-danger">{{number_format($Good->price, 0, '.', ' ')}} <i class="fa fa-rub"></i></h4>
                                                     <p class="text-center btn-order-good">
-                                                        <a href="/#main-appointments-section" class="btn btn-default btn-void-primary">Записаться на приём</a>
+                                                        <button onclick="order()" class="btn btn-default btn-void-primary">Записаться на приём</button>
                                                     </p>
                                                 </div>
                                             </div>
@@ -193,6 +193,20 @@
             $(this).find('span, i').toggleClass('hidden');
         });
     });
+
+
+
+    function order() {
+        swal({
+            title: "Запись на приём!",
+            text: '<form action="/feedback" method="post"><div class="form-group"><label>Как Вас зовут?</label><input type="text" name="fio" placeholder="ФИО" class="form-control show rounded" required=""></div><div class="form-group"><label>Ваш email</label><input type="email" name="email" placeholder="Email" class="form-control show rounded" required=""></div><div class="form-group"><label>Ваш номер телефона</label><input type="text" name="phone" placeholder="Телефон" class="form-control show rounded" data-mask="+ 9-999-999-99-99"></div><div class="form-group"><label>Ваше сообщение</label><textarea name="message" required="" class="form-control hidden rounded" placeholder="Текст сообщения">Хочу воспользоваться услогой : {{$Good->name}}</textarea></div><div class="form-group text-center"><input type="hidden" name="_token" value="{!! csrf_token() !!}"><input type="submit" class="btn btn-default btn-void-primary show" value="Отправить"></div></form>',
+            html: true,
+            closeOnConfirm: false,
+            showConfirmButton: false,
+        });
+    }
+
+
 </script>
 
 @endsection

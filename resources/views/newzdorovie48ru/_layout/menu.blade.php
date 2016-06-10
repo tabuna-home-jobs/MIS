@@ -10,8 +10,7 @@
             <li role="presentation" class="dropdown">
                 <a id="drop-{{$item['id']}}" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                    aria-haspopup="true" aria-expanded="false">
-                    {{$item['label']}}
-                    <span class="caret"></span>
+                    {!! $item['label']!!}
                 </a>
                 <ul id="menu1" class="dropdown-menu" aria-labelledby="drop-{{$item['id']}}">
                     @foreach($item['child'] as $child)
@@ -27,7 +26,7 @@
             @else
             {{Active::path($item['link'])}}
             @endif
-                    "><a href="{{$item['link']}}" class="{{$item['class']}}">{{$item['label']}}</a></li>
+                    "><a href="{{$item['link']}}" class="{{$item['class']}}">{!! $item['label'] !!}</a></li>
         @endif
 
 
@@ -35,6 +34,7 @@
     @endforeach
 
 
+    {{--
     @if(Sentry::check())
             <li class="{{Active::path('/auth/*')}}">
                 <a href="/auth/logout">
@@ -48,6 +48,7 @@
             </a>
         </li>
     @endif
+    --}}
 
 
 
@@ -55,7 +56,6 @@
         <a id="drop-search" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
            aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-search"></i>
-            <span class="caret"></span>
         </a>
         <ul id="menu1" class="dropdown-menu" aria-labelledby="drop-search">
 

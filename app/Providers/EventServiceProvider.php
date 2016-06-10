@@ -1,7 +1,9 @@
 <?php namespace App\Providers;
 
 use App\Models\Category;
+use App\Models\Feedback;
 use App\Models\Goods;
+use App\Models\Observer\FeedBackObserver;
 use App\Models\Observer\GoodsObserver;
 use App\Models\Observer\QuestAnswerObserver;
 use App\Models\QuestAnswer;
@@ -37,5 +39,6 @@ class EventServiceProvider extends ServiceProvider
 
         Goods::observe(new GoodsObserver);
         QuestAnswer::observe(new QuestAnswerObserver);
+        Feedback::observe(new FeedBackObserver);
     }
 }

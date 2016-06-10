@@ -84,7 +84,7 @@ Route::group(['domain' => 'cozn48.ru', 'namespace' => 'cozn48'], function () {
     ]);
 });
 
-
+/*
 Route::group(['domain' => 'zdorovie48.ru', 'namespace' => 'Site'], function () {
     Route::resource('/search', 'SearchController');
     Route::resource('/video', 'VideoGalleryController');
@@ -112,9 +112,9 @@ Route::group(['domain' => 'zdorovie48.ru', 'namespace' => 'Site'], function () {
     Route::resource('/login', 'LoginController');
 
 });
+*/
 
-
-Route::group(['domain' => 'new.zdorovie48.ru', 'namespace' => 'zdorovie48'], function () {
+Route::group(['domain' => 'zdorovie48.ru', 'namespace' => 'zdorovie48'], function () {
     Route::resource('/search', 'SearchController');
     Route::resource('/video', 'VideoGalleryController');
     Route::resource('/questanswer', 'QuestAnswerController');
