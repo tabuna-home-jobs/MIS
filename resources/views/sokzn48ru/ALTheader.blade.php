@@ -49,6 +49,12 @@
 </head>
 
 <body>
+<!-- заглушка-->
+<center>
+    <img src="/sokzn48.ru/img/sait-v-razrabotke.jpg">
+</center>
+{!!dd()!!}
+        <!-- звглушка -->
 
 
 

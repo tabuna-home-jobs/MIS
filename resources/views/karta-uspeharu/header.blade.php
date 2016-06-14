@@ -25,6 +25,15 @@
     </script>
 </head>
 <body>
+
+<!-- заглушка-->
+<center>
+    <img src="/karta-uspeha.ru/img/sait-v-razrabotke.jpg">
+</center>
+{!!dd()!!}
+        <!-- звглушка -->
+
+
 <!--Хэдр начинается!-->
 <div class="header container">
     <div class="row">
