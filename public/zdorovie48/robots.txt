@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://zdorovie48.ru/zdorovie48.ru/sitemap.xml
+Sitemap: http://zdorovie48.ru/zdorovie48/sitemap.xml
