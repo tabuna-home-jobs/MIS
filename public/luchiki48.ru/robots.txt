@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://luchiki48.ru/luchiki48.ru/sitemap.xml

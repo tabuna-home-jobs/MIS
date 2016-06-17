@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://cozn48.ru/cozn48.ru/sitemap.xml

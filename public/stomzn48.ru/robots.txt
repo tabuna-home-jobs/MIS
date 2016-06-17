@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://stomzn48.ru/stomzn48.ru/sitemap.xml
