@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="robots" content="noindex"/>
+    <link href="/zdorovie48/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic'
           rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/zdorovie48/css/orchid.css" type="text/css">
