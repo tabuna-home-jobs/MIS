@@ -12,6 +12,9 @@
     RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
     RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+    RewriteRule ^index\.php$ http://%1/$1 [R=301,L]
+
     #RewriteRule ^(.*)/$ /$1 [L,R=301]
 
     # Handle Front Controller...

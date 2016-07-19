@@ -11,7 +11,7 @@
                     </p>
 
                     <div class="m-b-xl">
-                        <h5 class="m-t-none l-h-1x">{{ $item->name }}</h5>
+                        <p class="h4 m-t-none l-h-1x">{{ $item->name }}</p>
                     </div>
                 </div>
             @endforeach

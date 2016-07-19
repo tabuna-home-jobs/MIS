@@ -9,6 +9,8 @@
           rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/zdorovie48/css/orchid.css" type="text/css">
     <script src="/zdorovie48/js/orchid.js"></script>
+    <meta name="google-site-verification" content="aDS7vvzuwnzLcrgCUvsYDzzWzLvDCdAP40JfSbiiPyo" />
+    <meta name="yandex-verification" content="04fc130ecf2406f2" />
 
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
         <title>@yield('title') - Медицинский центр «Здоровье Нации»</title>
@@ -107,7 +109,7 @@
                     <i class="fa fa-home fa-3x text-success"></i>
                 </div>
                 <div class="col-md-10 padder-v">
-                    <h6><b>Свяжитесь с нами +7 (4742) 227-887</b></h6>
+                    <h5><b>Свяжитесь с нами +7 (4742) 227-887</b></h5>
                     <small>ул. Октябрьская д.61</small>
                 </div>
             </div>
@@ -118,7 +120,7 @@
                     <i class="fa fa-clock-o fa-3x text-success"></i>
                 </div>
                 <div class="col-md-10 padder-v">
-                    <h6><b>График работы</b></h6>
+                    <h5><b>График работы</b></h5>
 
                     <small>Пн - Пт: 8:00 - 21:00, Сб: 8:00 - 18:00</small>
                 </div>
@@ -130,7 +132,7 @@
                     <i class="fa fa-calendar fa-3x"></i>
                 </div>
                 <div class="col-md-10 padder-v">
-                    <a href="/#main-appointments-section"><h6><b>Запишитесь на приём</b></h6>
+                    <a href="/#main-appointments-section"><h5><b>Запишитесь на приём</b></h5>
                         <small>В три простых шага</small>
                     </a>
                 </div>

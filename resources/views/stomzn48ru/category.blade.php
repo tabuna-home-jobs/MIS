@@ -87,7 +87,7 @@
                                                         <li>
                                                             <div class="text"><strong>E-mail</strong>
 
-                                                                <p><a href="stom@zdorovie48.ru">stom@zdorovie48.ru</a></p></div>
+                                                                <p><a href="mailto:stom@zdorovie48.ru">stom@zdorovie48.ru</a></p></div>
                                                             <div class="icon"><i class="fa fa-envelope-o"></i></div>
                                                         </li>
                                                         <li>
