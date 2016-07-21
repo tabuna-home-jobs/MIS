@@ -39,6 +39,14 @@
                                             <li><i class="fa-li fa fa-envelope text-success" aria-hidden="true"></i>mother-baby@mail.ru</li>
                                             <li><i class="fa-li fa fa-phone text-success" aria-hidden="true"></i>(4742) 227-887</li>
                                         </ul>
+                                        <a href="https://www.facebook.com/groups/zdorovie48/" class="btn btn-icon btn-rounded btn-light b b-dark" target="_blank"><i class="fa fa-facebook"></i></a>
+
+                                        <a href="http://vk.com/zdorovie_nacii48" class="btn btn-icon btn-rounded btn-light b b-dark" target="_blank"><i class="fa fa-vk"></i></a>
+
+                                        <a href="https://ok.ru/zdorovienacii48" class="btn btn-icon btn-rounded btn-light b b-dark" target="_blank"><i class="fa fa-odnoklassniki"></i></a>
+
+                                        <a href="https://www.youtube.com/channel/UCIohC7RacRB60OqNdnXRHBA" class="btn btn-icon btn-rounded btn-light b b-dark" target="_blank"><i class="fa fa-youtube-play "></i></a>
+
                                     </div>
 
 
