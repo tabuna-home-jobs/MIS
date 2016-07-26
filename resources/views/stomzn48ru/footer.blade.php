@@ -70,9 +70,14 @@
 <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery-ui-timepicker-addon.min.js"></script>
 <script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="/stomzn48.ru/theme/js/select2.min.js"></script>
+<script type="text/javascript" src="/stomzn48.ru/theme/js/jquery.matchHeight-min.js"></script>
 <script type="text/javascript" src="/stomzn48.ru/theme/js/custom.js"></script>
 <script type="text/javascript" src="/stomzn48.ru/theme/js/slick.min.js"></script>
 <script type="text/javascript" src="/stomzn48.ru/theme/js/countUp.min.js"></script>
 <script type="text/javascript" src="/stomzn48.ru/theme/js/js_composer_front.js"></script>
+
+
+
+
 </body>
 </html>

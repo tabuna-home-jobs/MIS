@@ -66,7 +66,7 @@
         <article id="post-2" class="post-2 page type-page status-publish hentry">
             <div class="container">
                 <!--Блоки под слайдером-->
-                <div class="vc_row wpb_row vc_row-fluid overflowed_content vc_custom_1439880673570">
+                <div class="vc_row wpb_row vc_row-fluid overflowed_content vc_custom_1439880673570 my_bloks">
                     <div class="wpb_column vc_column_container vc_col-sm-3 vc_custom_1439878727322">
                         <div class="wpb_wrapper">
                             <div class="icon_box vc_custom_1443700113643 base_background_color mobile_adaptive icon_right media animated_on_hover">

@@ -1,6 +1,10 @@
 jQuery(document).ready(function ($) {
     "use strict";
 
+    $(function() {
+        $('.my_bloks>div>div>div').matchHeight();
+    });
+
     $('#menu_toggle').on('click touchstart', function () {
         $(this).toggleClass('open');
         $('.mobile_menu').slideToggle(300);
@@ -161,3 +165,8 @@ function load_testimonials(that,offset,per_page){
         }
     });
 }
+
+
+
+
+
