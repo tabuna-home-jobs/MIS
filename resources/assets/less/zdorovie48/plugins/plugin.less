@@ -581,3 +581,42 @@ textarea.rounded{
 .cart-body {
   height: 300px;
 }
+.hover-dospt{
+  opacity: 0;
+}
+.item-dost{
+  .hover-dospt{
+    /*display: none;*/
+    opacity: 0;
+    position: absolute;
+    top:0;
+    padding: 15px;
+  }
+  .rounded, .m-b-xl{
+    opacity: 1;
+  }
+  &:not(:hover){
+    .hover-dospt, .rounded, .m-b-xl{
+      transition: .5s;
+    }
+
+  }
+
+  &:hover{
+
+    .rounded{
+      transition: .5s;
+      opacity: 0;
+    }
+    .m-b-xl{
+      transition: .5s;
+      opacity: 0;
+    }
+    .hover-dospt{
+      transition: .5s;
+      opacity: 1;
+
+    }
+  }
+
+}
