@@ -12,6 +12,14 @@
 
                 <div class="carousel-caption text-black bg-white-opacity">
                     {!! $item->text !!}
+
+                    @if($item->link)
+                        <a href="{{$item->link}}">
+                            <button class="btn btn-default btn-void-success">Подробнее</button>
+                        </a>
+                    @endif
+
+
                 </div>
             </div>
         @endforeach

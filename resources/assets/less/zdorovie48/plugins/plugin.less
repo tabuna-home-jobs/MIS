@@ -564,6 +564,24 @@ main ul { padding-left: 50px;}
 }
 
 
+.btn-void-success{
+  background: none;
+  color: @brand-success!important;
+  border-color: @brand-success;
+  box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+  padding: 10px 60px 10px 60px;
+  border-radius: 50px;
+  &:hover {
+    transition: 0.5s;
+    background:  @brand-success;
+    color: #fff!important;
+  }
+  &:not(:hover) {
+    transition: 0.5s;
+  }
+}
+
+
 .list-group-item.active{
   border-color: @brand-primary!important;
   background-color: @brand-primary!important;
