@@ -11,13 +11,9 @@
                 <img alt="Слайдер" src="{{ $item->avatar }}">
 
                 <div class="carousel-caption text-black bg-white-opacity">
+                    <a @if($item->link) href="{{$item->link}} @endif" class="slider_link">
                     {!! $item->text !!}
-
-                    @if($item->link)
-                        <a href="{{$item->link}}">
-                            <button class="btn btn-default btn-void-success">Подробнее</button>
-                        </a>
-                    @endif
+                    </a>
 
 
                 </div>
