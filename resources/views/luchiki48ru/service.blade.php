@@ -1,17 +1,6 @@
 @extends('luchiki48ru/header')
 
 @section('content')
-    <style>
-        .page-content {
-            padding-bottom: 10px;
-        }
-        .page-content h1 {
-            margin:25px 0;
-        }
-        .item-row {
-            margin:10px 0;
-        }
-    </style>
     <div class="page-content">
         <div class="container">
             <div class="center"> <h1>Услуги</h1></div>
@@ -65,49 +54,6 @@
         </div>
 
     </div>
-    <script>
-        var resized = function () {
-
-            $('.item-row').each(function(){
-                var height_this = $(this).height();
-                height_this > height ? height = height_this:'';
-            });
-
-            $('.item-row').height(height);
-        };
-
-
-
-        $(window).on('load',function(){
-            var height = 0;
-            $('.item-row').each(function(){
-                var height_this = $(this).height();
-                if(height_this > height){
-                    height = height_this
-                }
-
-            });
-
-
-            $('.item-row').height(height);
-        });
-
-        $(window).on('resize',function(){
-
-            $('.item-row').css('height','auto');
-            var height = 0;
-            $('.item-row').each(function(){
-                var height_this = $(this).height();
-                if(height_this > height){
-                    height = height_this
-                }
-
-            });
-
-
-            $('.item-row').height(height);
-        });
-
-    </script>
+    <script src="/luchiki48.ru/js/articles_height.js"></script>
 
 @endsection

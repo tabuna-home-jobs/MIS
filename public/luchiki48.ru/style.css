@@ -953,3 +953,12 @@ ul.specNav{
     padding: 10px 5px 10px 0;
     display: inline-block;
 }
+
+.single-review>div:nth-child(1) {
+    overflow: hidden;
+}
+.single-review i {
+    display: block;
+    font-size: 4em;
+    text-align: center;
+}

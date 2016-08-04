@@ -13,16 +13,6 @@
             </div>
             <div class="page-text">
 
-                <style>
-                    .single-review>div:nth-child(1) {
-                        overflow: hidden;
-                    }
-                    .single-review i {
-                        display: block;
-                        font-size: 4em;
-                        text-align: center;
-                    }
-                </style>
                 <div class="row">
                     @if(Session::has('good'))
                         <div class="alert alert-success">

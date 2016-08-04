@@ -30,11 +30,7 @@
     <script type="text/javascript" src="/luchiki48.ru/js/fancybox/jquery.fancybox.pack.js"></script>
 
 
-    <script>
-        $(document).ready(function(){
-            $('.highslide').fancybox();
-        });
-    </script>
+    <script src="/luchiki48.ru/js/app.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

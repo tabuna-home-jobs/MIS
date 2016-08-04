@@ -1,5 +1,6 @@
 @extends('luchiki48ru/header')
 @section('content')
+    <script src="/luchiki48.ru/js/index.js"></script>
 <div class="development-studio">
     <div class="container">
         <div class="header-label-big col-md-12">СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ»</div>
@@ -22,10 +23,7 @@
 
         <script>
             $(document).ready(function(){
-                $('.cirleses .circle:nth-child(4)').addClass('width-4');
-                $('.cirleses .circle:nth-child(1),.development-studio .circle:nth-child(6)').addClass('width-1');
-                $('.cirleses .circle:nth-child(3),.development-studio .circle:nth-child(8)').addClass('width-3');
-                $('.cirleses .circle:nth-child(2),.development-studio .circle:nth-child(5),.development-studio .circle:nth-child(7)').addClass('width-2');
+
             });
         </script>
 
@@ -183,13 +181,6 @@
                     </div>
                 </div>
                 @endforeach
-                    {{--
-                    <script>
-                        $(document).ready(function(){
-                            $('.panel-collapse:nth-child(2)').addClass('in');
-                        });
-                    </script>
-                    --}}
             </div>
         </div>
         <!-- END акции-->
@@ -243,16 +234,7 @@
         Здесь Вы можете прочитать то, что пишут о нас наши клиенты и оставить свой отзыв
     </div>
 
-    <style>
-        .single-review>div:nth-child(1) {
-            overflow: hidden;
-        }
-        .single-review i {
-            display: block;
-            font-size: 4em;
-            text-align: center;
-        }
-    </style>
+
 
     @foreach(reviewsOnMain::getReview(7,4) as $item)
     <div class="single-review col-md-12">
@@ -295,39 +277,7 @@
             </a>
         </div>
     </div>
-    <script type="text/javascript">
-        $('.autoplay').slick({
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            responsive: [
-                {
-                    breakpoint: 1000,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-    </script>
+
 </div>
 
 <div class="map">
