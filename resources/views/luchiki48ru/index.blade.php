@@ -158,7 +158,7 @@
 
                 @foreach(sharesOnMain::getShare(7,3) as $key=>$item)
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo">
+                    <div class="panel-heading" role="tab" id="heading-{{$key}}">
                         <h4 class="panel-title">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{$key}}" aria-expanded="false" aria-controls="collapse-{{$key}}">
                                 АКЦИЯ
@@ -169,7 +169,7 @@
                         @if($key == 0)
                             in
                         @endif
-                        " role="tabpanel" aria-labelledby="headingTwo">
+                        " role="tabpanel" aria-labelledby="heading-{{$key}}">
                         <div class="panel-body">
                             <div class="share-img"><img src="{{$item['avatar']}}" alt="{{$item['name']}}"></div>
                             <div class="share-text">
@@ -263,7 +263,7 @@
 
         <div class="sites-slide">
             <a href="http://zdorovie48.ru/" target="_blank">
-                <img src="/luchiki48.ru/img/zn3.png" atl="Здоровье нации">
+                <img src="/luchiki48.ru/img/zn3.png" alt="Здоровье нации">
             </a>
         </div>
         <div class="sites-slide">
