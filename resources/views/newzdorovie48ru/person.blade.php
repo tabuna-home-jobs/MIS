@@ -291,7 +291,7 @@
                                             <div class="form-group row">
                                                 <div class="col-md-6">
                                                     <input type="email" name="email" placeholder="Email адрес"
-                                                           class="form-control rounded">
+                                                           class="form-control rounded" required>
                                                 </div>
 
                                                 <div class="col-md-6">
