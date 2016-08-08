@@ -12,7 +12,7 @@
 
                     </a>
 
-                    {{ Block::make('index_goods_col'.($key+1), 'newzdorovie48ru/_blocks/index_goods_col', 3) }}
+                    {{ Block::make('index_goods_col'.($key+1), 'newzdorovie48ru/_blocks/index_goods_col', 50) }}
                 </div>
             @endforeach
         </div>
