@@ -41,16 +41,16 @@
             </div>
         </div>
     </div>
-    <div class="reviews-form">
+    <div class="reviews-form" id="reviews_form">
         <h2 class="blueBg center white feedHead">ОСТАВИТЬ ОТЗЫВ</h2>
         <div class="container">
 
-            <div class="col-md-6 col-sm-6 hidden-xs big textst">
+            <div class="col-sm-6 hidden-xs big textst">
                 Здесь Вы можете оставить свой отзыв
 
             </div>
 
-            <div class="col-md-6 col-sm-6">
+            <div class="col-sm-offset-2 col-sm-4">
 
                 <form class="form-horizontal" role="form" action="/reviews" method="post">
                     <fieldset>

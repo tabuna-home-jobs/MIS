@@ -26,9 +26,9 @@
 </div>
 <div class="stud">
     <div class="container">
-        <div class="header-label-big white col-md-12">УЧИТЬСЯ МОЖНО ЛЕГКО И С УДОВОЛЬСТВИЕМ!</div>
+        <div class="header-label-big white col-md-12">УЧИТЬСЯ НУЖНО ЛЕГКО И С УДОВОЛЬСТВИЕМ!</div>
         <div class="header-label-small white col-md-12">
-            Студия раннего развития детей «Лучики» предлагает занятия для детей от 1 до 6 лет два раза в неделю в удобное для Вас время
+            Центр детского развития «Лучики» предлагает занятия для детей от 1 года  до 6 лет два раза в неделю в удобное для Вас время
         </div>
         <div class="single-st white col-md-4 col-sm-6">
             <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="ИНДИВИДУАЛЬНЫЙ ПОДХОД">
@@ -102,7 +102,7 @@
                     <textarea name="message" class="form-control" required placeholder="Текст сообщения"></textarea>
                 </div>
                 {{csrf_field()}}
-                <input type="submit" class="btn btn-primary" value="Отправить">
+                <input type="submit" class="btn btn-primary" value="ОТПРАВИТЬ">
             </form>
         </div>
         {{--Временно скрыли шаги
@@ -183,9 +183,9 @@
 </div>
 <div class="studio hidden-xs">
     <div class="container">
-        <div class="studio-head-big col-md-12">СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ»</div>
+        <div class="studio-head-big col-md-12">ДЕТСКИЙ ЦЕНТР ДОШКОЛЬНОГО РАЗВИТИЯ «ЛУЧИКИ»</div>
         <div class="studio-head-small col-md-12">
-            предлагает широкий спектр развивающих и досуговых программ для ребят от 1 до 6 лет
+            предлагает широкий спектр развивающих и досуговых программ для ребят от 1-го года до 6 лет
         </div>
         <div class="program col-md-7 col-md-push-5 col-sm-12 col-xs-12">
             <div class="program-head">
@@ -194,13 +194,13 @@
             </div>
             <div class="program-body">
                 <ul>
-                    <li>Развивающие занятия для детей от 1 года</li>
-                    <li>Детский психолог</li>
-                    <li>Логопед – дефектолог</li>
-                    <li>Веселый английский</li>
-                    <li>Подготовка к школе</li>
-                    <li>Йога</li>
-                    <li>Организация и проведение детских праздников</li>
+                    <li>Развивающие занятия для детей от 1 года;</li>
+                    <li>Детский психолог;</li>
+                    <li>Логопед – дефектолог;</li>
+                    <li>Веселый английский;</li>
+                    <li>Подготовка к школе;</li>
+                    <li>Йога;</li>
+                    <li>Организация и проведение детских праздников.</li>
                 </ul>
             </div>
         </div>
@@ -246,7 +246,52 @@
 
     <div class="all-rev"><a href="/reviews">Все отзывы</a></div>
 </div>
+    <div class="reviews-form" id="reviews_form">
+        <h2 class="blueBg center white feedHead">ОСТАВИТЬ ОТЗЫВ</h2>
+        <div class="container">
 
+            <div class="col-sm-6 hidden-xs big textst">
+                Здесь Вы можете оставить свой отзыв
+
+            </div>
+
+            <div class="col-sm-offset-2 col-sm-4">
+
+                <form class="form-horizontal" role="form" action="/reviews" method="post">
+                    <fieldset>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                <input id="textinput" name="fio" type="text" max="255" placeholder="Имя" class="form-control input-md">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                <textarea class="form-control" id="textarea" name="content" placeholder="Комментарий"></textarea>
+                            </div>
+                        </div>
+
+                        {{csrf_field()}}
+
+                                <!-- Button -->
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                <button name="singlebutton" type="submit" class="btn btn-primary">ОТПРАВИТЬ</button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
 <div class="container slick-slider-sites">
     <div class="header-label-big col-md-12">САЙТЫ ГРУППЫ КОМПАНИЙ «ЗДОРОВЬЕ НАЦИИ»</div>
     <div class="slider-sites autoplay">

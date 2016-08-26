@@ -375,6 +375,16 @@ line-height: 32px;
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
+.reviews-form form{
+    background: rgba(255, 255, 255, 0.74) none repeat scroll 0% 0%;
+    padding: 15px;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+}
+.reviews-form .form-control{
+    border: 2px solid rgba(51, 122, 183, 0.74);
+}
 .single-review{
 margin: 30px auto;
 }
