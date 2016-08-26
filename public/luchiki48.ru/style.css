@@ -29,13 +29,34 @@ color: white;
 .header-top>div>div{
     padding: 10px 0;
 }
-.nav>li>a {
+.nav>li>a{
     position: relative;
     display: block;
-    padding: 0px;
-    padding-left: 10px;
-    padding-top: 10px;
     text-transform: uppercase;
+    padding: 0px;
+    /* padding-left: 10px;
+     padding-top: 10px;*/
+
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.nav>li:first-child>a{
+    margin-left: 0;
+}
+.header .nav>li>a {
+
+
+    border-left: 1px solid #e4e3e3;
+    box-shadow: -1px 0px 1px -1px #CFCFCF;
+
+
+}
+
+.header .nav>li:first-child>a{
+    border-left: 0;
+    box-shadow: none;
 }
 .under-menu ul{
 padding: 0;
