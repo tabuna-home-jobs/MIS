@@ -66,6 +66,7 @@
                                                 Неизвестно
                                             @endif
                                         </div>
+                                        {{--
                                         <!-- Социальные сети етого педагога
                                         <div class="our-staffs-social">
                                             <ul>
@@ -80,6 +81,8 @@
                                             </ul>
                                         </div>
                                         -->
+
+                                        --}}
                                     </div>
                                 </div>
                                 <div class="our-staffs-content">

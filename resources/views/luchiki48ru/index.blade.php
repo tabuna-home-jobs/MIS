@@ -21,11 +21,6 @@
 
         </div>
 
-        <script>
-            $(document).ready(function(){
-
-            });
-        </script>
 
     </div>
 </div>
@@ -110,7 +105,7 @@
                 <input type="submit" class="btn btn-primary" value="Отправить">
             </form>
         </div>
-        <!-- Временно скрыли шаги
+        {{--Временно скрыли шаги
         <div class="steps col-md-12 col-sm-12 hidden-xs">
             <div class="step active-step col-md-4 col-sm-4">
                 <img src="/luchiki48.ru/img/step1.png">
@@ -127,7 +122,7 @@
                 <h4>3-й шаг</h4>
                 <p>Введите Ваши контактные данные</p>
             </div>
-        </div>-->
+        </div>--}}
     </div>
 </div>
 <div class="news-shares">

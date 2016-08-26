@@ -28,6 +28,7 @@
                                                {{str_limit((strip_tags($good->name)), 80, '...')}}
                                            </h4>
                                        </a>
+                                       {{--
                                        <!--
                                        <p class="day"></p>
                                        <div>
@@ -38,6 +39,7 @@
                                                <span class="glyphicon glyphicon-eye-open"></span> Посмотреть
                                            </a>
                                         </div>-->
+                                        --}}
                                    </div>
                                </div>
                                @if(($key+1) % 3 == 0)
