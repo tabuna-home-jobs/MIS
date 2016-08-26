@@ -3,7 +3,7 @@
     <script src="/luchiki48.ru/js/index.js"></script>
 <div class="development-studio">
     <div class="container">
-        <div class="header-label-big col-md-12">ДЕТСКИЙ ЦЕНТР РАЗВИТИЯ «ЛУЧИКИ»</div>
+        <div class="header-label-big col-md-12">Детский центр развития «Лучики»</div>
         <div class="header-label-small col-md-12">
             Развивающие занятия для детей дошкольного возраста. Если Вы  хотите гордиться успехами своего ребёнка, то наша студия для Вас!
         </div>
@@ -26,14 +26,14 @@
 </div>
 <div class="stud">
     <div class="container">
-        <div class="header-label-big white col-md-12">УЧИТЬСЯ НУЖНО ЛЕГКО И С УДОВОЛЬСТВИЕМ!</div>
+        <div class="header-label-big white col-md-12">Учиться нужно легко и с удовольствием!</div>
         <div class="header-label-small white col-md-12">
             Центр детского развития «Лучики» предлагает занятия для детей от 1 года  до 6 лет два раза в неделю в удобное для Вас время
         </div>
         <div class="single-st white col-md-4 col-sm-6">
             <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="ИНДИВИДУАЛЬНЫЙ ПОДХОД">
             <p class="col-md-8">
-                <span>ИНДИВИДУАЛЬНЫЙ ПОДХОД</span><br>
+                <span>Индивидуальный подход</span><br>
                 Индивидуальный подход к каждому
                 клиенту нашей студии
             </p>
@@ -41,7 +41,7 @@
         <div class="single-st white col-md-4 col-sm-6">
             <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="ПОСТОЯННОЕ ВНИМАНИЕ">
             <p class="col-md-8">
-                <span>ПОСТОЯННОЕ ВНИМАНИЕ</span><br>
+                <span>Постоянное внимание</span><br>
                 Вы ни когда не будете обделены
                 вниманием со стороны нашего
                 персонала
@@ -50,7 +50,7 @@
         <div class="single-st white col-md-4 col-sm-6">
             <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="КАЧЕСТВО ОБСЛУЖИВАНИЯ">
             <p class="col-md-8">
-                <span>КАЧЕСТВО ОБСЛУЖИВАНИЯ</span><br>
+                <span>Качество обслуживания</span><br>
                 Будьте уверены в том, что в нашей студии
                 Вам будет предоставлено только
                 качественное обслуживание
@@ -59,14 +59,14 @@
         <div class="single-st white col-md-4 col-sm-6">
             <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="ВЫСОКАЯ КВАЛИФИКАЦИЯ">
             <p class="col-md-8">
-                <span>ВЫСОКАЯ КВАЛИФИКАЦИЯ</span><br>
+                <span>Высокая квалификация</span><br>
                 Все наши преподаватели имеют высокую квалификацию
             </p>
         </div>
         <div class="single-st white col-md-4 col-sm-6">
             <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="КОМФОРТ И БЕЗОПАСНОСТЬ">
             <p class="col-md-8">
-                <span>КОМФОРТ И БЕЗОПАСНОСТЬ</span><br>
+                <span>Комфорт и безопасность</span><br>
                 Абсолютный комфорт и безопасность
                 для детей и родителей
             </p>
@@ -74,7 +74,7 @@
         <div class="single-st white col-md-4 col-sm-6">
             <img src="/luchiki48.ru/img/st1.png" class="col-md-4" alt="СОВРЕМЕННОЕ ОБОРУДОВАНИЕ">
             <p class="col-md-8">
-                <span>СОВРЕМЕННОЕ ОБОРУДОВАНИЕ</span><br>
+                <span>Современное оборудование</span><br>
                 Все оборудование студии соответствует требованиям нашего времении
             </p>
         </div>
@@ -82,7 +82,7 @@
 </div>
 <div class="request">
     <div class="container">
-        <div class="header-label-big col-md-12">ОСТАВИТЬ ЗАЯВКУ ON-LINE</div>
+        <div class="header-label-big col-md-12">ОСставить заявку on-line</div>
         <div class="header-label-small col-md-12">
             Вы можете быстро и удобно оставить свою заявку где бы вы не были
         </div>
@@ -127,7 +127,7 @@
 </div>
 <div class="news-shares">
     <div class="news-shares-head">
-        <span><a href="/blog">ПОСЛЕДНИЕ НОВОСТИ</a></span><span><a href="/shares">НАШИ АКЦИИ</a></span><p>НОВОСТИ И АКЦИИ</p>
+        <span><a href="/blog">Последнии новости</a></span><span><a href="/shares">Наши акции</a></span><p>Новости и акции</p>
     </div>
     <div class="container">
         <div class="news col-md-8 col-sm-12 col-xs-12">
@@ -183,7 +183,7 @@
 </div>
 <div class="studio hidden-xs">
     <div class="container">
-        <div class="studio-head-big col-md-12">ДЕТСКИЙ ЦЕНТР ДОШКОЛЬНОГО РАЗВИТИЯ «ЛУЧИКИ»</div>
+        <div class="studio-head-big col-md-12">Детский центр дошкольного развития «Лучики»</div>
         <div class="studio-head-small col-md-12">
             предлагает широкий спектр развивающих и досуговых программ для ребят от 1-го года до 6 лет
         </div>
@@ -207,7 +207,7 @@
     </div>
 </div>
 <div class="license container">
-    <div class="header-label-big col-md-12">НАШИ ЛИЦЕНЗИИ</div>
+    <div class="header-label-big col-md-12">Наши лицензии</div>
     <div class="header-label-small col-md-12">
         Здесь Вы можете ознакомиться с нашими лицензиями и другими документами
     </div>
@@ -224,7 +224,7 @@
 </div>
 
 <div class="reviews container">
-    <div class="header-label-big col-md-12">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
+    <div class="header-label-big col-md-12">Отзывы наших клиентов</div>
     <div class="header-label-small col-md-12">
         Здесь Вы можете прочитать то, что пишут о нас наши клиенты и оставить свой отзыв
     </div>
@@ -247,7 +247,7 @@
     <div class="all-rev"><a href="/reviews">Все отзывы</a></div>
 </div>
     <div class="reviews-form" id="reviews_form">
-        <h2 class="blueBg center white feedHead">ОСТАВИТЬ ОТЗЫВ</h2>
+        <h2 class="blueBg center white feedHead">Оставить отзыв</h2>
         <div class="container">
 
             <div class="col-sm-6 hidden-xs big textst">
@@ -294,7 +294,7 @@
     </div>
 
 <div class="container slick-slider-sites">
-    <div class="header-label-big col-md-12">САЙТЫ ГРУППЫ КОМПАНИЙ «ЗДОРОВЬЕ НАЦИИ»</div>
+    <div class="header-label-big col-md-12">Сайты группы компаний  «Здоровье нации»</div>
     <div class="slider-sites autoplay">
         <div class="sites-slide">
             <a href="http://mother-baby.ru/" target="_blank">

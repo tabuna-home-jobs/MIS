@@ -253,6 +253,9 @@ color: white;
 .blueText{
     color: #479DED;
 }
+.container h1.blueText{
+    /*text-transform: uppercase;*/
+}
 .fa.fa-big{
     font-size: 70px;
 }
@@ -360,7 +363,7 @@ margin-top: 20px;
     margin-top: 20px;
 }
 .program-body li{
-color: #0076de;
+color: #415166;
 font-family: PTSerif;
 font-size: 24px;
 font-weight: 400;

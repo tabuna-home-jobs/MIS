@@ -3,7 +3,7 @@
 @section('content')
     <div class="page-content">
         <div class="container">
-            <div class="center"> <h1>Услуги</h1></div>
+            <div class="center blueText"> <h1>Услуги детского центра развития «ЛУЧИКИ»</h1></div>
             <div class="padding-top-35">
                 <ul class="breadcrumb">
                     <li><a href="/">Главная</a></li>

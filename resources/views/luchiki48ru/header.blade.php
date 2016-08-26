@@ -7,7 +7,7 @@
     <meta name='yandex-verification' content='499d5c44d03d0212' />
 
     @if(is_null($meta = SEO::render()) || empty($meta = SEO::render()))
-        <title>@yield('title') - ДЕТСКИЙ ЦЕНТР РАЗВИТИЯ «ЛУЧИКИ»</title>
+        <title>@yield('title') - Детский развиваюций центр «Лучики»</title>
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
         <meta property="og:title" content="@yield('title')">

@@ -4,8 +4,10 @@
 
 
     <div class="sub-page-content">
-
+        <div class="center blueText"> <h1>Мы на карте</h1></div>
+        {{--
         	<h1 class="blueBg center white feedHead">Мы на карте</h1>
+        	--}}
             <div class="row">
             	<div class="container padding-top-35">
                     <ul class="breadcrumb">

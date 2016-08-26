@@ -7,7 +7,7 @@
     	
         
         <div class="container">
-        	<h1 class="blueText center">НАШИ СПЕЦИАЛИСТЫ</h1>
+        	<h1 class="blueText center">Наши специалисты</h1>
             <div class="padding-top-35">
                 <ul class="breadcrumb">
                     <li><a href="/">Главная</a></li>

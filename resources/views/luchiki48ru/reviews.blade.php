@@ -4,7 +4,7 @@
 
     <div class="page-content">
         <div class="container">
-            <h1 class="blueText center">ОТЗЫВЫ О НАС</h1>
+            <h1 class="blueText center">Отзывы о нас</h1>
             <div class="padding-top-35">
                 <ul class="breadcrumb">
                     <li><a href="/">Главная</a></li>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="reviews-form" id="reviews_form">
-        <h2 class="blueBg center white feedHead">ОСТАВИТЬ ОТЗЫВ</h2>
+        <h2 class="blueBg center white feedHead">Оставить отзыв</h2>
         <div class="container">
 
             <div class="col-sm-6 hidden-xs big textst">
