@@ -12,7 +12,7 @@
             <div class="page-text padding-top-35">
                 <ul class="breadcrumb">
                     <li><a href="/">Главная</a></li>
-                    <li><a href="/shares/">Услуги</a></li>
+                    <li><a href="/shares/">Акции</a></li>
                     <li>{{$Shares->name}}</li>
                 </ul>
                 {!! $Shares['content'] !!}

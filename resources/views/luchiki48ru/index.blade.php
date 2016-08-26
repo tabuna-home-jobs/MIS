@@ -3,9 +3,9 @@
     <script src="/luchiki48.ru/js/index.js"></script>
 <div class="development-studio">
     <div class="container">
-        <div class="header-label-big col-md-12">СТУДИЯ РАННЕГО РАЗВИТИЯ ДЕТЕЙ «ЛУЧИКИ»</div>
+        <div class="header-label-big col-md-12">ДЕТСКИЙ ЦЕНТР РАЗВИТИЯ «ЛУЧИКИ»</div>
         <div class="header-label-small col-md-12">
-            Развивающие занятия. Если Вы  хотите гордиться успехами своего ребёнка, то наша студия для Вас!
+            Развивающие занятия для детей дошкольного возраста. Если Вы  хотите гордиться успехами своего ребёнка, то наша студия для Вас!
         </div>
 
         <div class="cirleses hidden-xs">
@@ -257,7 +257,7 @@
         </div>
 
         <div class="sites-slide">
-            <a href="http://zdorovie48.ru/" target="_blank">
+            <a>
                 <img src="/luchiki48.ru/img/zn3.png" alt="Здоровье нации">
             </a>
         </div>

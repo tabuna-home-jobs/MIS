@@ -657,6 +657,9 @@ left: 88%;
     padding-bottom: 5px;
 }
 .footer-menu li a{
+    text-decoration: none;
+}
+.footer-menu li a:hover,.footer-menu li a:focus{
     text-decoration: underline;
 }
 .footer-block-2>div{
@@ -961,4 +964,7 @@ ul.specNav{
     display: block;
     font-size: 4em;
     text-align: center;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
+    color:#000;
 }
