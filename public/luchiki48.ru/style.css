@@ -1002,3 +1002,65 @@ ul.specNav{
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
     color:#000;
 }
+.header.fixheader{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+
+    z-index: 999;
+
+}
+.m-t-150{
+    margin-top: 150px;
+}
+
+.big_logo,.litle_logo{
+    max-height: 150px;
+}
+.litle_logo{
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+.header.top{
+    background: #fff;
+    border-bottom: 2px solid #e4e5e6;
+    transition: 1s;
+
+}
+.header:not(.top){
+    border-bottom: 0 solid #e4e5e6;
+    background: rgba(255, 255, 255, 0);
+    transition: 1s;
+}
+.header.top .big_logo{
+    opacity:0 ;
+    max-height: 0;
+    transition: 1s;
+}
+
+.header.top .litle_logo{
+    opacity:1 ;
+    max-height: 150px;
+    transition: 1s;
+}
+
+
+
+.header:not(.top) .litle_logo{
+    opacity:0 ;
+    max-height: 0;
+    transition: 1s;
+}
+
+.header:not(.top) .big_logo{
+    opacity:1 ;
+    max-height: 150px;
+    transition: 1s;
+}
+.logo{
+    min-height: 44px;
+}
+.top{
+
+}

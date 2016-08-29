@@ -82,7 +82,7 @@
 </div>
 <div class="request">
     <div class="container">
-        <div class="header-label-big col-md-12">ОСставить заявку on-line</div>
+        <div class="header-label-big col-md-12">Оставить заявку on-line</div>
         <div class="header-label-small col-md-12">
             Вы можете быстро и удобно оставить свою заявку где бы вы не были
         </div>

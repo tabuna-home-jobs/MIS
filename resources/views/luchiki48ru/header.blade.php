@@ -90,7 +90,13 @@
         </div>
     </div>
     <div class="header-top-menu container">
-        <div class="logo col-md-2 col-sm-2 col-xs-12"><a href="/"><img src="/luchiki48.ru/img/logo.png" alt="Студия раннего развития детей «Лучики»"></a></div>
+        <div class="logo col-md-2 col-sm-2 col-xs-12">
+
+            <a href="/">
+                <img src="/luchiki48.ru/img/logo.png" alt="Студия раннего развития детей «Лучики»" class="big_logo">
+                <img src="/luchiki48.ru/img/logonew.png" alt="Студия раннего развития детей «Лучики»" class="litle_logo">
+            </a>
+        </div>
         <div class="menu-block col-md-10 col-sm-10 col-xs-12">
             <!-- ВЕРХНЕЕ МЕНЮ -->
             <div class="menu-header col-md-12 col-sm-12 col-xs-12">
@@ -119,11 +125,12 @@
             </div>
             <!-- КОНЕЦ ВЕРХНЕГО МЕНЮ -->
             <!-- НИЖНЕЕ МЕНЮ -->
+            {{--
             <div class="under-menu col-md-12 col-sm-12 col-xs-12">
                 <ul>
                     {!! Menu::getLi(7,'topdop','') !!}
                 </ul>
-            </div>
+            </div>--}}
             <!-- КОНЕЦ НИЖНЕГО МЕНЮ -->
         </div>
     </div>
