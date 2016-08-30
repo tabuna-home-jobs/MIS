@@ -92,7 +92,11 @@
     <div class="header-top-menu container">
         <div class="logo col-md-2 col-sm-2 col-xs-12">
 
-            <a href="/">
+            <a @if(!Active::path('/'))
+                    href="/"
+               @endif
+            >
+
                 <img src="/luchiki48.ru/img/logo.png" alt="Студия раннего развития детей «Лучики»" class="big_logo">
                 <img src="/luchiki48.ru/img/logonew.png" alt="Студия раннего развития детей «Лучики»" class="litle_logo">
             </a>

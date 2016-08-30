@@ -1,7 +1,6 @@
 <ul id="main-menu" class="nav navbar-nav main-menu">
 	@foreach($items as $item)
 
-
 		<li class="menu-item menu-item-type-custom menu-item-object-custom {{$item['class']}}
 
 		@if(isset($item['child']))

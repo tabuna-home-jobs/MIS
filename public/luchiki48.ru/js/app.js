@@ -28,7 +28,7 @@ $(document).ready(function(){
 
     if(!isMobile.any()) {
         $('.header').addClass('fixheader');
-        $('.development-studio,.page-content').addClass('m-t-150');
+        $('.development-studio,.page-content, .sub-page-content, #wrapper-content').addClass('m-t-150');
 
        // var h_top =  $('.header-top').outerHeight();
         var h_top = 20;

@@ -1064,3 +1064,6 @@ ul.specNav{
 .top{
 
 }
+.dissable{
+    cursor: not-allowed;
+}

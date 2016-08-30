@@ -52,6 +52,7 @@ class ArticlesController extends Controller
     public function show($id, $sitename = "luchiki48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
+	    //dd($getSites);
         $art = $getSites->getArts()->findOrFail($id);
         return view($sitename . $sitedomen . '/article', ['Article' => $art]);
     }
