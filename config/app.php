@@ -153,7 +153,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         Orchid\Socket\Providers\SocketServiceProvider::class,
-        Remoblaser\Search\SearchServiceProvider::class
+	    \App\Providers\SearchServiceProvider::class,
     ],
 
     /*
@@ -222,7 +222,7 @@ return [
         'catOnMain'=> \App\Facades\categoryOnMain::class,
 
         'SEO' => App\Facades\SEOFacades::class,
-        'Search' => Remoblaser\Search\Facades\Search::class,
+        'Search' => App\Facades\Search::class,
         
         'Block'=> \App\Facades\Block::class,
     ],

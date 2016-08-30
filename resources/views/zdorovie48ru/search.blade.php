@@ -45,10 +45,18 @@
                                                     @endif
 
                                                     <div class="clearfix">
-                                                        <a href="/{{$text->SlugName . '/' . $text->id}}" class="h4 text-primary m-b-sm block">{{$text->name}}</a>
+                                                        <a href="/{{$text->SlugName . '/' . $text->id}}" class="h4 text-primary m-b-sm block"> @if($text->name)
+                                                                {{$text->name}}
+                                                            @elseif($text->fio)
+                                                                {{$text->fio}}
+                                                            @endif</a>
 
                                                         <div>
-                                                            {{str_limit(strip_tags($text->content), 300, '...')}}
+                                                            @if($text->content)
+                                                                {{str_limit(strip_tags($text->content), 300, '...')}}
+                                                            @elseif($text->opyt)
+                                                                {{str_limit(strip_tags($text->opyt), 300, '...')}}
+                                                            @endif
                                                         </div>
                                                     </div>
                                                 </li>

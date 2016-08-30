@@ -6,4 +6,5 @@ return [
     'page' => \App\Models\Page::class,
     'goods' => \App\Models\Goods::class,
     'articles' => \App\Models\Articles::class,
+    'team' => \App\Models\Specialisty::class,
 ];

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Remoblaser\Search\SearchableTrait;
+use App\Services\Search\SearchableTrait;
 
 class Articles extends Model
 {

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Kalnoy\Nestedset\Node;
-use Remoblaser\Search\SearchableTrait;
+use App\Services\Search\SearchableTrait;
 
 class Goods extends Node
 {
