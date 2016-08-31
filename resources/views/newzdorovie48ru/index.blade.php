@@ -358,6 +358,15 @@
 </section>
 <!-- Новости -->
 
+<section class="container-fluid">
+    <div class="row">
+
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=PGr_ZwUruElPyf_7LeDqD9iyrRwoXSyi&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+
+
+    </div>
+</section>
+
 <!-- Мобильное приложение -->
 <section class="paralax container-fluid hidden-sm hidden-xs" data-stellar-background-ratio="0.3">
     <div class="row">

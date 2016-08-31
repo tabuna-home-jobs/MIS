@@ -126,17 +126,21 @@
                 </div>
             </div>
 
-
+            <a class="feedback_link" href="/#main-appointments-section">
             <div class="col-md-4 bg-success text-white v-center">
+
                 <div class="col-md-2 padder-v">
                     <i class="fa fa-calendar fa-3x"></i>
                 </div>
                 <div class="col-md-10 padder-v">
-                    <a href="/#main-appointments-section"><h5><b>Запишитесь на приём</b></h5>
-                        <small>В три простых шага</small>
-                    </a>
+                    <h5><b>Запишитесь на приём</b></h5>
+                    <small>В три простых шага</small>
+
                 </div>
+
+
             </div>
+            </a>
         </div>
     </section>
 
