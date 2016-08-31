@@ -38,17 +38,6 @@ class RouteServiceProvider extends ServiceProvider
         $router->model('encypost', 'App\Models\EncyPost');
         $router->model('block', 'App\Models\Block');
 
-
-        $router->bind('model', function ($model, $function) {
-            //Отдаём необходимую модельк
-            return $model;
-
-            dd(App::make('App/Models/' . $model));
-            $model = App::make('App/Models/' . $model);
-            dd($model);
-
-            //return User::where('name', $value)->first();
-        });
     }
 
     /**

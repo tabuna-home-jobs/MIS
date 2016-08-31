@@ -109,7 +109,11 @@ class ServiceController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
-        $Goods = $getSites->getGoods()->where('id', $id)->first();
+	    if (intval($id) && (strlen($id) == strlen(intval($id)))) {
+		    $Goods = $getSites->getGoods()->where('id', $id)->first();
+	    } else {
+		    $Goods = $getSites->getGoods()->where('slug', $id)->firstOrFail();
+	    }
         $Category = $getSites->getCategory()->findorFail($Goods->category_id);
 
         $Comments = $Goods->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);

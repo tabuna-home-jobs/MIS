@@ -20,7 +20,7 @@ class Articles extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'content', 'avatar', 'datetime', 'tag', 'descript', 'ids'];
+    protected $fillable = ['title', 'name', 'content', 'avatar', 'datetime', 'tag', 'descript', 'ids','upadate_at'];
     protected $searchFields = ['title', 'name', 'content'];
 
 

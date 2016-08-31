@@ -21,6 +21,11 @@ class VideoAlbum extends Model
      */
     protected $fillable = ['ids', 'name'];
 
+
+	/**
+	 * @var string
+	 */
+	public $SlugName = 'video';
     public function getSite()
     {
         return $this->belongsTo('App\Models\Sites', 'ids');

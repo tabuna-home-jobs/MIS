@@ -35,7 +35,8 @@ class Specialisty extends Model
 		'dopinfo',
 		'napravlenie',
 		'sertificats',
-		'best'
+		'best',
+		'upadate_at'
 	];
 
 	protected $searchFields = [ 'fio', 'subname', 'special', 'obrazovanie', 'about',
@@ -44,4 +45,8 @@ class Specialisty extends Model
 		'sertificats','opyt'];
 
 	public $SlugName = 'team';
+	protected $slugField = "fio";
+	public function scopeGetSlug(){
+		return $this->slugField;
+	}
 }

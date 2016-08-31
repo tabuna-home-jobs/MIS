@@ -27,7 +27,8 @@ class GoodsGroup extends Model {
         'descript',
         'price',
         'sort',
-        'slug'
+        'slug',
+	    'upadate_at'
     ];
 
 
@@ -35,7 +36,11 @@ class GoodsGroup extends Model {
      * @var array
      */
     protected $searchFields = ['title', 'name'];
-    public $SlugName = 'group';
+    public $SlugName = 'complex';
+	protected $slugField = 'name';
+	public function scopeGetSlug(){
+		return $this->slugField;
+	}
 
     // Категория группы
     public function category()

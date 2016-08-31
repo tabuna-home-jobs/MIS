@@ -14,7 +14,8 @@
 		"barryvdh/laravel-cors": "0.7.x",
 		"doctrine/dbal": "~2.4",
 		"kalnoy/nestedset": "^3.1",
-		"orchid/socket": "^1.3"
+		"orchid/socket": "^1.3",
+        "roumen/sitemap": "2.6.*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",

@@ -154,6 +154,7 @@ return [
         Barryvdh\Cors\ServiceProvider::class,
         Orchid\Socket\Providers\SocketServiceProvider::class,
 	    \App\Providers\SearchServiceProvider::class,
+	    Roumen\Sitemap\SitemapServiceProvider::class,
     ],
 
     /*

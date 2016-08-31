@@ -100,7 +100,11 @@ class ServiceController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
-        $Goods = $getSites->getGoods()->where('id', $id)->first();
+	    if (intval($id) && (strlen($id) == strlen(intval($id)))) {
+		    $Goods = $getSites->getGoods()->where('id', $id)->first();
+	    } else {
+		    $Goods = $getSites->getGoods()->where('slug', $id)->firstOrFail();
+	    }
         $ChildGoods = $getSites->getGoods()->where('parent_id', $id)->get();
         $Category = $getSites->getCategory()->findorFail($Goods->category_id);
 

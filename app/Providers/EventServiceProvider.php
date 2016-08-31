@@ -1,12 +1,18 @@
 <?php namespace App\Providers;
 
+use App\Models\Articles;
 use App\Models\Category;
 use App\Models\Feedback;
 use App\Models\Goods;
+use App\Models\News;
 use App\Models\Observer\FeedBackObserver;
 use App\Models\Observer\GoodsObserver;
 use App\Models\Observer\QuestAnswerObserver;
+use App\Models\Observer\SlugGenerateObserver;
+use App\Models\Page;
 use App\Models\QuestAnswer;
+use App\Models\Shares;
+use App\Models\Specialisty;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -40,5 +46,17 @@ class EventServiceProvider extends ServiceProvider
         Goods::observe(new GoodsObserver);
         QuestAnswer::observe(new QuestAnswerObserver);
         Feedback::observe(new FeedBackObserver);
+
+	   /*
+	   Для чпу
+	   не удалять, потом пригодится
+
+	   News::observe(new SlugGenerateObserver);
+	    Page::observe(new SlugGenerateObserver);
+	    Shares::observe(new SlugGenerateObserver);
+	    Articles::observe(new SlugGenerateObserver);
+	   // Goods::observe(new SlugGenerateObserver);
+	    Specialisty::observe(new SlugGenerateObserver);*/
+
     }
 }

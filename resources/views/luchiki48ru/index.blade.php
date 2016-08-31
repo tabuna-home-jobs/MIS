@@ -14,7 +14,7 @@
         @foreach(GoodsMain::getGoods(7,42,8) as $item)
             <div class="circle pad-{{$i}}">
                 <img class="img-circle img-thumbnail" src="{{$item['avatar']}}" alt="{{$item['name']}}">
-                <p><a href="/service/{{$item['id']}}">{{$item['name']}}</a></p>
+                <p><a href="/service/{{$item['slug']?$item['slug']:$item['id']}}">{{$item['name']}}</a></p>
             </div>
         <?php $i++; ?>
         @endforeach
@@ -303,12 +303,12 @@
         </div>
 
         <div class="sites-slide">
-            <a>
+            <a href="http://zdorovie48.ru/" target="_blank">
                 <img src="/luchiki48.ru/img/zn3.png" alt="Здоровье нации">
             </a>
         </div>
         <div class="sites-slide">
-            <a href="http://luchiki48.ru/" target="_blank" >
+            <a >
                 <img src="/luchiki48.ru/img/zn4.png" alt="Лучики">
             </a>
         </div>

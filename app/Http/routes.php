@@ -309,3 +309,8 @@ Route::controllers([
     'auth' => 'Auth\AuthController',
     //'password' => 'Auth\RegistrationController',
 ]);
+
+
+Route::group(['domain' => '{site}.{domain}'], function () {
+	Route::get('sitemap.xml', 'SiteMapController@index');
+});

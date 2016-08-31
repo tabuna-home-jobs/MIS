@@ -23,7 +23,7 @@
                                        <div>
                                            <img src="{{$good->avatar}}" alt="{{$good->name}}">
                                        </div>
-                                       <a href="/service/{{$good->id}}">
+                                       <a href="/service/{{$good['slug']?$good['slug']:$good['id']}}">
                                            <h4>
                                                {{str_limit((strip_tags($good->name)), 80, '...')}}
                                            </h4>

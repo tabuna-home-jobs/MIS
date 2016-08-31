@@ -20,6 +20,15 @@ class Album extends Model
      * @var array
      */
     protected $fillable = ['ids', 'name'];
+	/**
+	 * @var string
+	 */
+	protected $slug = 'name';
+
+	/**
+	 * @var string
+	 */
+	public $SlugName = 'gallery';
 
     public function getSite()
     {

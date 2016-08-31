@@ -35,11 +35,11 @@
                                 <div class="item-row-good-img">
                                     <img src="{{$item['avatar']}}" alt="{{$item['name']}}">
                                 </div>
-                                <h3><a href="/service/{{$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
+                                <h3><a href="/service/{{$item['slug']?$item['slug']:$item['id']}}">{{str_limit((strip_tags($item['name'])), $limit = 80, $end = '...')}}</a></h3>
                                 <div>{{str_limit((strip_tags($item['content'])), $limit = 130, $end = '...')}}</div>
                                 <div class="seeall">
                                     <img src="/cozn48.ru/img/minibutton.png">
-                                    <a href="/service/{{$item['id']}}">Перейти к услуге</a><br></div>
+                                    <a href="/service/{{$item['slug']?$item['slug']:$item['id']}}">Перейти к услуге</a><br></div>
                             </div>
                         </div>
                     @endforeach

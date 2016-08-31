@@ -17,6 +17,11 @@ class QuestAnswer extends Model
      *
      * @var array
      */
+	/**
+	 * @var string
+	 */
+
+	public $SlugName = 'questanswer';
     protected $fillable = [
         'fio',
         'questions',

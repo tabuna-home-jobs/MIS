@@ -40,7 +40,8 @@ class Goods extends Node
         'price',
         'attribute',
         'sort',
-        'slug'
+        'slug',
+	    'upadate_at'
     ];
 
 
@@ -49,6 +50,13 @@ class Goods extends Node
      */
     protected $searchFields = ['title', 'name'];
     public $SlugName = 'service';
+	/**
+	 * @var string
+	 */
+	protected $slugField = 'name';
+	public function scopeGetSlug(){
+		return $this->slugField;
+	}
 
 
     public function category()

@@ -20,7 +20,7 @@ class Shares extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'content', 'avatar', 'start', 'end', 'tag', 'descript', 'ids'];
+    protected $fillable = ['title', 'name', 'content', 'avatar', 'start', 'end', 'tag', 'descript', 'ids', 'upadate_at'];
 
 
     /**
@@ -30,6 +30,8 @@ class Shares extends Model
 
 
     public $SlugName = 'shares';
+
+	protected $slugField = 'name';
 
 
     /**

@@ -19,8 +19,8 @@ class Category extends Node
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'text', 'tag', 'descript', 'avatar', 'ids', '_lft', '_rgt', 'parent_id'];
-
+    protected $fillable = ['title', 'name', 'text', 'tag', 'descript', 'avatar', 'ids', '_lft', '_rgt', 'parent_id','upadate_at'];
+	public $SlugName = 'category';
 
     //Связь категории с товаром
     public function goods()

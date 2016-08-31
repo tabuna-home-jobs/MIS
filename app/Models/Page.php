@@ -20,7 +20,7 @@ class Page extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'content', 'tag', 'descript', 'ids'];
+    protected $fillable = ['title', 'name', 'content', 'tag', 'descript', 'ids', 'upadate_at'];
 
 
     /**
@@ -30,6 +30,11 @@ class Page extends Model
 
 
     public $SlugName = 'page';
+	protected $slugField = 'name';
+
+	public function scopeGetSlug(){
+		return $this->slugField;
+	}
 
     /**
      * Searchable rules.

@@ -111,8 +111,12 @@ class ServiceController extends Controller
             ->with([
                 'getAllShares',
                 'getGoods' => function ($query) use ($id) {
+	                if (intval($id) && (strlen($id) == strlen(intval($id)))) {
 
                     $query->where('id', $id);
+	                } else {
+		                $query->where('slug', $id);
+	                }
                 }
             ])
             ->first();

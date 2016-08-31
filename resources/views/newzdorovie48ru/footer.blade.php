@@ -36,7 +36,7 @@
                                         <ul class="fa-ul">
                                             <li><i class="fa-li fa fa-map-marker text-success" aria-hidden="true"></i>г.Липецк, ул.Октябрьская, д.61
                                             </li>
-                                            <li><i class="fa-li fa fa-envelope text-success" aria-hidden="true"></i>mother-baby@mail.ru</li>
+                                            <li><i class="fa-li fa fa-envelope text-success" aria-hidden="true"></i>info@zdorovie48.ru</li>
                                             <li><i class="fa-li fa fa-phone text-success" aria-hidden="true"></i>(4742) 227-887</li>
                                         </ul>
                                         <a href="https://www.facebook.com/groups/zdorovie48/" class="btn btn-icon btn-rounded btn-light b b-dark m-r-sm" target="_blank"><i class="fa fa-facebook"></i></a>

@@ -20,7 +20,14 @@ class News extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'content', 'avatar', 'datetime', 'tag', 'descript', 'ids', 'created_at'];
+    protected $fillable = ['title', 'name', 'content', 'avatar', 'datetime', 'tag', 'descript', 'ids', 'created_at','upadate_at'];
+
+
+	protected $dates = [
+		'created_at',
+		'updated_at',
+		'deleted_at'
+	];
 
 
     protected $searchFields = ['title', 'name', 'content'];
@@ -41,7 +48,19 @@ class News extends Model
     ];
 
 
+	/**
+	 * @var string
+	 */
+	protected $slugField = 'name';
+
+	/**
+	 * @var string
+	 */
     public $SlugName = 'blog';
+
+	public function scopeGetSlug(){
+		return $this->slugField;
+	}
 
     public function getSite()
     {

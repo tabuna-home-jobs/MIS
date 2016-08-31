@@ -137,7 +137,7 @@
                                     <li>
                                         <i class="fa fa-envelope pull-left text-lg m-r  text-success"></i>
 
-                                        <p class="clear m-b-xs text-justify"><a href="mailto:mother-baby@mail.ru">mother-baby@mail.ru</a>
+                                        <p class="clear m-b-xs text-justify"><a href="mailto:info@zdorovie48.ru">info@zdorovie48.ru</a>
                                         </p>
                                     </li>
                                     <li>

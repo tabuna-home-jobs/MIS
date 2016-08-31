@@ -19,5 +19,11 @@ class Feedback extends Model
      *
      * @var array
      */
+
+
+	/**
+	 * @var string
+	 */
+	public $SlugName = 'feedback';
     protected $fillable = ['fio', 'phone', 'email', 'content', 'ids'];
 }
