@@ -308,7 +308,7 @@
     <div class="row">
         <div class="paralax-2 complex-uslug  parallax-main v-center" data-type="background" data-speed="10">
             <div class="container padder-v text-white">
-                <h1 class="text-center  m-b-xxl">Комплексные услуги</h1>
+                <h1 class="text-center  m-b-xxl">Комплексные медицинские услуги</h1>
 
                 @foreach ($complexGoods as $key => $item)
                     <div class="col-md-4 @if($key > 0) hidden-xs hidden-sm @endif">

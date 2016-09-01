@@ -1,6 +1,6 @@
 
 <div class="row m-b-xxl">
-    <h1 class="text-center m-t-xxl  m-b-xxl">Услуги</h1>
+    <h1 class="text-center m-t-xxl  m-b-xxl">Медицинские услуги</h1>
 
     <div class="container text-center">
         <div class="w-full">
