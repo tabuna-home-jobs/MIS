@@ -67,15 +67,22 @@
 
 
 
+<style>
+
+
+</style>
+
+<script>
+
+</script>
 
 
 
 
+<header>
 
-<header class="container">
-
-    <nav class="navbar navbar-top">
-        <div class="container-fluid">
+    <nav class="navbar navbar-top  container-fluid">
+        <div class="container">
             <div class="row">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -102,7 +109,7 @@
     </nav>
 
 
-    <section class="container-fluid header-bottom">
+    <section class="container header-bottom">
         <div class="row">
             <div class="col-md-4 v-center">
                 <div class="col-md-2 padder-v">
