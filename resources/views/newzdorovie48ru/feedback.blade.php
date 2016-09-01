@@ -70,7 +70,7 @@
 
 
                 <div class="page-header">
-                    <h1 class="font-thin m-b">Как Добраться</h1>
+                    <h2 class="font-thin h1  m-b">Как Добраться</h2>
                 </div>
                 <div class="row">
 
@@ -87,7 +87,7 @@
                     <div class="wrapper-lg">
                         <div class="row">
                             <div class="col-md-6">
-                                <h2 class="">Написать нам</h2>
+                                <div class="h2 m-b m-t">Написать нам</div>
                                 <hr>
 
                                 <form action="/feedback" method="post">

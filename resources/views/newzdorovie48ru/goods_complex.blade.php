@@ -16,7 +16,7 @@
                 <div class="col-sm-4">
                     <div class="procedures">
                         <div class="page-header">
-                            <h3 class="h1 font-thin m-b"><span class="h3">{{$Category->name}}</span></h3>
+                            <div class="h1 font-thin m-b"><span class="h3">{{$Category->name}}</span></div>
                         </div>
 
                         <div class="side-bar-catalog">
@@ -74,10 +74,10 @@
                                             <div class="col-md-6 col-sm-6"><img class="img-responsive img-rounded" alt="" src="{{$Good->avatar}}"></div>
                                             <div class="col-md-6 col-sm-6">
                                                 <div class="text-center">
-                                                    <h4>{{$Good->name}}</h4>
-                                                    <h5>Категория: {{$Good->category()->first()->name}}</h5>
-                                                    <h4 class="total_price">Цена: <s>{{number_format($Good->total_price, 0, '.', ' ')}} <i class="fa fa-rub"></i></s></h4>
-                                                    <h4 class="text-danger">{{number_format($Good->price, 0, '.', ' ')}} <i class="fa fa-rub"></i></h4>
+                                                    <div class="h4 m-t m-b">{{$Good->name}}</div>
+                                                    <div class="h5 m-t m-b">Категория: {{$Good->category()->first()->name}}</div>
+                                                    <div class="h4 total_price">Цена: <s>{{number_format($Good->total_price, 0, '.', ' ')}} <i class="fa fa-rub"></i></s></div>
+                                                    <div class="h3 text-danger font-bold m-t m-b">{{number_format($Good->price, 0, '.', ' ')}} <i class="fa fa-rub"></i></div>
                                                     <p class="text-center btn-order-good">
                                                         <button onclick="order()" class="btn btn-default btn-void-primary">Записаться на приём</button>
                                                     </p>
@@ -91,7 +91,7 @@
                     </div>
 
                     <div class="page-header">
-                        <h3 class="h4 font-thin m-b"><span class="h4">Что входит:</span></h3>
+                        <div class="h4 font-thin m-t m-b"><span class="h4">Что входит:</span></div>
                     </div>
                     <div class="row complex_goods_list">
                         @foreach($Good->goods as $key => $value)
@@ -141,7 +141,7 @@
                     </div>
 
                     <div class="page-header">
-                        <h3 class="h4 font-thin m-b"><span class="h4">Описание:</span></h3>
+                        <div class="h4 font-thin m-t m-b"><span class="h4">Описание:</span></div>
                     </div>
                     <div class="panel">
                         <div class="row">

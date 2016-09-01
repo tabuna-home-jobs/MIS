@@ -40,7 +40,7 @@
                         <div class="col-sm-9">
 
                             <div class="page-header">
-                                <h1 class="font-thin m-b">Новости нашего центра</h1>
+                                <div class="h1 font-thin m-b m-t">Новости нашего центра</div>
                             </div>
 
                             <!-- Хлебные крошки -->
@@ -57,12 +57,10 @@
 
                                     <article class="panel">
                                         <div>
-                                            <a href="/blog/{{$New['id']}}">
                                                 <img alt="{{$New['name']}}" src="{{$New['avatar']}}" class="img-full">
-                                            </a>
                                         </div>
                                         <div class="wrapper-lg">
-                                            <h2 class="m-t-none"><a href="/blog/{{$New['id']}}">{{$New['name']}}</a></h2>
+                                            <h1 class="m-t-none h2">{{$New['name']}}</h1>
 
                                             <div class="blog-content">
                                                 {!! $New['content'] !!}
@@ -107,7 +105,7 @@
                         <aside class="col-sm-3">
 
                             <div class="page-header">
-                                <h3 class="h1 font-thin m-b"><span class="h3">Опрос</span></h3>
+                                <div class="h1 font-thin m-b"><span class="h3">Опрос</span></div>
                             </div>
 
                             <div class="">
@@ -144,8 +142,8 @@
                                             <div class="col-xs-12">
                                                 <div class="col-md-12">
 
-                                                    <h4 class="m-n">Шаг {{$key+1}} из {{$getQuests->count() +1}}</h4>
-                                                    <h6 class="padder-v text-justify">{{$quest->quest}}</h6>
+                                                    <div class=" h4 m-n">Шаг {{$key+1}} из {{$getQuests->count() +1}}</div>
+                                                    <div class="h6 padder-v text-justify m-t m-b">{{$quest->quest}}</div>
 
 
                                                     @if($quest->type == 'one')
@@ -187,7 +185,7 @@
                                     <div class="row setup-content" id="step-end">
                                         <div class="col-xs-12">
                                             <div class="col-md-12">
-                                                <h6 class="text-justify">Контакты для обратной связи</h6>
+                                                <div class="text-justify h6 m-t m-b">Контакты для обратной связи</div>
 
                                                 <div class="form-group">
                                                     <input type="text" name="fio" placeholder="ФИО" class=" form-control rounded input-sm" required>
@@ -212,7 +210,7 @@
 
 
                             <div class="page-header">
-                                <h3 class="h1 font-thin m-b"><span class="h3">Последние Новости</span></h3>
+                                <div class="h1 font-thin m-b"><span class="h3">Последние Новости</span></div>
                             </div>
 
                             <div>

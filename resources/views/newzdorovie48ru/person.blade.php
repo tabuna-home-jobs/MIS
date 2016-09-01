@@ -119,7 +119,7 @@
 
                     @if(count($timetable, COUNT_RECURSIVE) > 1)
                         <div class="page-header">
-                            <h2 class="font-thin m-b">Ближайшее время приёма</h2>
+                            <div class="h2 font-thin m-b m-t">Ближайшее время приёма</div>
                         </div>
 
                         <div class="panel">
@@ -272,7 +272,7 @@
 
 
                                     <div class="col-md-8 b-l">
-                                        <h5 class="padder-v"> Личные данные</h5>
+                                        <div class="h5 padder-v m-t-sm m-b-sm"> Личные данные</div>
 
                                         <div>
                                             <div class="row form-group">
@@ -340,7 +340,7 @@
 
 
                     <div class="page-header">
-                        <h1 class="font-thin m-b">Коллеги</h1>
+                        <div class="h1 font-thin m-b m-t">Коллеги</div>
                     </div>
 
                     @foreach($Collegi as $person)

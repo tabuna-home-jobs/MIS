@@ -40,7 +40,7 @@
                         <div class="row setup-content" id="step-1">
                             <div class="col-xs-12">
                                 <div class="col-md-12">
-                                    <h5> Выберите специализацию</h5>
+                                    <div class="h5 m-t m-b"> Выберите специализацию</div>
 
                                     <div class="form-group row">
                                         <label class="control-label">Специализациия</label>
@@ -218,7 +218,7 @@
                         <div class="row setup-content" id="step-2">
                             <div class="col-xs-12">
                                 <div class="col-md-12">
-                                    <h5> Выберите дату</h5>
+                                    <div class="h5 m-t m-b"> Выберите дату</div>
 
                                     <div class="form-group appointment-scroll" id="date">
 
@@ -232,7 +232,7 @@
                         <div class="row setup-content" id="step-3">
                             <div class="col-xs-12">
                                 <div class="col-md-12">
-                                    <h5> Информация</h5>
+                                    <div class="h5 m-t m-b"> Информация</div>
 
                                     <input type="text" name="firstname" max="255"  required placeholder="Имя">
                                     <input type="text" name="lastname" max="255" required placeholder="Фамилия">
@@ -258,7 +258,7 @@
 
     <section class="after-booking-sec text-center">
         <div class="container">
-            <h1>Что дальше?</h1>
+            <div class="h1 m-t m-b">Что дальше?</div>
 
 
             <ul class="medicom-feature-list list-inline text-left">

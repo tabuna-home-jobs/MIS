@@ -103,7 +103,7 @@
                         <div class="col-md-5">
 
 
-                            <h4 class="text-dark font-bold m-b-lg">С Вами мы становимся лучше!</h4>
+                            <div class="h4 text-dark font-bold m-b-lg">С Вами мы становимся лучше!</div>
                             <ul class="list-unstyled  m-t-xl">
                                 <li>
                                     <i class="fa fa-check pull-left text-lg m-r m-t-sm text-success "></i>

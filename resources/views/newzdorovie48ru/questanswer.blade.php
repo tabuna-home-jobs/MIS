@@ -46,7 +46,7 @@
                                                     <div class="panel-heading" role="tab" id="heading-answer-{{$QA->id}}">
 
 
-                                                        <h4 class="panel-title">
+                                                        <div class="h4 m-t-sm m-b-sm panel-title">
                                                             <a role="button" data-toggle="collapse" data-parent="#accordion"
                                                                href="#collapse-answer-{{$QA->id}}" aria-expanded="true"
                                                                aria-controls="collapse-answer-{{$QA->id}}">
@@ -59,7 +59,7 @@
                                                                     <br>{{$QA->fio}} </small>
                                                             </p>
 
-                                                        </h4>
+                                                        </div>
 
 
                                                     </div>
@@ -178,7 +178,7 @@
                                 <div class="feature">
                                     <i class="pull-left feature-icon fa fa-user-md"></i>
                                     <div class="feature-content">
-                                        <h5><a href="/team">Наши специалисты</a></h5>
+                                        <div class="h5 m-t-sm m-b-sm"><a href="/team">Наши специалисты</a></div>
 
 
                                         <p>Ответственно используют проверенные и надежные технологии,
@@ -188,7 +188,7 @@
                                         <a href="/team"><dfn>- Перейти</dfn></a>
                                     </div>
                                 </div>
-
+                                {{--
                                 <div class="feature">
                                     <i class="pull-left feature-icon fa fa-book"></i>
                                     <div class="feature-content">
@@ -197,15 +197,16 @@
                                         <a href="/medencyclopedia"><dfn>- Перейти</dfn></a>
                                     </div>
                                 </div>
+                                --}}
 
                                 <div class="feature">
                                     <i class="pull-left feature-icon fa fa-phone-square"></i>
                                     <div class="feature-content">
-                                        <h5><a href="/appointment">Записаться на приём</a></h5>
+                                        <div class="h5 m-t-xs m-b-xs"><a href="/appointment">Записаться на приём</a></div>
 
                                         <p>Сервис «Онлайн запись на прием» предоставляет возможность записаться на прием в удобное
                                             время не выходя из дома.</p>
-                                        <a href="/appointment"><dfn>-  Перейти</dfn></a>
+                                        <a href="/#main-appointments-section"><dfn>-  Перейти</dfn></a>
                                     </div>
                                 </div>
                             </div>

@@ -15,7 +15,7 @@
     <div class="row bg-success">
         <div class="container v-center padder-v">
             <div class="col-md-10 text-white index-share">
-                <h3><a href="/shares/{{$getShare->id}}">{{$getShare->name}}</a></h3>
+                <div class="h3 m-b m-t"><a href="/shares/{{$getShare->id}}">{{$getShare->name}}</a></div>
             </div>
             <div class="col-md-2 v-center text-center">
                 <a href="/shares/" class="btn btn-default btn-void-white">Смотреть все</a>
@@ -247,7 +247,7 @@
                             <div class="row setup-content" id="step-2">
                                 <div class="col-xs-12">
                                     <div class="col-md-12">
-                                        <h5 class="text-center"><b>Выберите дату</b></h5>
+                                        <div class="h5 m-b-sm m-t-sm text-center"><b>Выберите дату</b></div>
 
                                         <div class="form-group" id="date"></div>
 
@@ -258,7 +258,7 @@
                             <div class="row setup-content" id="step-3">
                                 <div class="col-xs-12">
                                     <div class="col-md-12">
-                                        <h5> Информация</h5>
+                                        <div class="h5 m-b-sm m-t-sm"> Информация</div>
 
                                         <div class="row form-group">
                                         <div class="col-md-6">
@@ -344,7 +344,7 @@
                 <article class="col-md-3">
                     <figure>
                         <a href="/blog/{{$value['id']}}"><img src="{{$value['avatar']}}" alt="" class="img-responsive" alt="{{$value['name']}}"/>
-                            <h4>{{$value['name']}}</h4></a>
+                            <h2 class="h4 m-t m-b">{{$value['name']}}</h2></a>
 
                         <div class="b-b-success w-50-p line-lg"></div>
                         <figcaption>
@@ -382,7 +382,7 @@
                         <p class="lead">Попробуйте мобильное приложение "Здоровье Нации" на своём устройстве,
                             которое позволит
                             вам удобно управлять собственным здоровьем.
-                            <h3>Скоро на Вашем устройстве!</h3>
+                            <span class="h3 m-t m-b">Скоро на Вашем устройстве!</span>
                         </p>
                         <!--
                         <ul class="list-unstyled app-buttons">

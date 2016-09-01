@@ -51,7 +51,7 @@
                                             </a>
                                         </div>
                                         <div class="wrapper-lg">
-                                            <h2 class="m-t-none"><a href="/blog/{{$value['id']}}">{{$value['name']}}</a></h2>
+                                            <div class= "h2 m-t-none m-b"><a href="/blog/{{$value['id']}}">{{$value['name']}}</a></div>
 
                                             <div class="blog-content">
                                                 {{str_limit(strip_tags($value['content']), 300, '...')}}
@@ -111,7 +111,7 @@
 
 
                             <div class="page-header">
-                                <h3 class="h1 font-thin m-b"><span class="h3">Последние Акции</span></h3>
+                                <div class="h1 font-thin m-b m-t"><span class="h3">Последние Акции</span></div>
                             </div>
 
 

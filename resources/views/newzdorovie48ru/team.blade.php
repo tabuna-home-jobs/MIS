@@ -37,11 +37,11 @@
                                                     <a href="/team/{{$spec->id}}">
                                                         <img class="img-responsive img-center"
                                                              src="{{$spec->avatar or ''}}" alt="">
-                                                        <h5>{{$spec->fio or ''}}
+                                                        <div class="h5 m-t-sm m-b-sm">{{$spec->fio or ''}}
                                                             <p class="m-t-xs">
                                                                 <small>{!!$spec->dopinfo or ''!!}</small>
                                                             </p>
-                                                        </h5>
+                                                        </div>
                                                     </a>
                                                 </div>
                                             </div>

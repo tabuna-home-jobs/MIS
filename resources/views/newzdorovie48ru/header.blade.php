@@ -116,7 +116,7 @@
                     <i class="fa fa-home fa-3x text-success"></i>
                 </div>
                 <div class="col-md-10 padder-v">
-                    <h5><b>Свяжитесь с нами +7 (4742) 227-887</b></h5>
+                    <div class="h5 m-b-sm m-t-sm"><b>Свяжитесь с нами +7 (4742) 227-887</b></div>
                     <small>ул. Октябрьская д.61</small>
                 </div>
             </div>
@@ -127,7 +127,7 @@
                     <i class="fa fa-clock-o fa-3x text-success"></i>
                 </div>
                 <div class="col-md-10 padder-v">
-                    <h5><b>График работы</b></h5>
+                    <div class="h5 m-b-sm m-t-sm"><b>График работы</b></div>
 
                     <small>Пн - Пт: 8:00 - 21:00, Сб: 8:00 - 18:00</small>
                 </div>
@@ -140,7 +140,7 @@
                     <i class="fa fa-calendar fa-3x"></i>
                 </div>
                 <div class="col-md-10 padder-v">
-                    <h5><b>Запишитесь на приём</b></h5>
+                    <div class="h5 m-b-sm m-t-sm"><b>Запишитесь на приём</b></div>
                     <small>В три простых шага</small>
 
                 </div>
