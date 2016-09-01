@@ -7,6 +7,9 @@
     font-style: normal;
     font-weight: normal;
 }
+img{
+    max-width: 100%;
+}
 body{
 font-family: PTSerif;
 font-size: 14px;
@@ -108,6 +111,7 @@ width: 16%;
     background-size: auto 100%;
     background-position: center;
     background-attachment: fixed;
+    padding-bottom: 30px;
 }
 .request{
 background-image: url(img/request-bg.png);
@@ -291,7 +295,7 @@ padding:0;
 .single-st span{
 margin-right: 10px;
 font-family: PTSerif;
-font-size: 14px;
+font-size: 18px;
 font-weight: 500;
 line-height: 30px;
 }
@@ -1066,4 +1070,49 @@ ul.specNav{
 }
 .dissable{
     cursor: not-allowed;
+}
+.single-st .no_hover{
+    position: relative;
+    z-index: 1;
+}
+.single-st .hover{
+    position: absolute;
+    top:0;
+    z-index: 0;
+    padding: 0 15px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.stud .single-st{
+    min-height: 150px;
+
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.stud .single-st{
+    background: rgba(255,255,255,0);
+}
+.stud .single-st:hover{
+    background: rgba(0, 0, 0, 0.55);
+    transition: 600ms;
+}
+.stud .single-st:not(:hover){
+    background: rgba(255,255,255,0);
+    transition: 600ms;
+}
+.single-st:hover  .no_hover{
+    opacity: 0;
+    transition: 600ms;
+}
+
+.single-st:not(:hover) .no_hover{
+    opacity: 1;
+    transition: 600ms;
 }

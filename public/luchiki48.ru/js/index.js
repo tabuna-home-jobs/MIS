@@ -43,3 +43,30 @@ $(document).ready(function(){
     });
 
 });
+
+
+var resized = function () {
+
+    $('.single-st').each(function(){
+        var height_this = $(this).height();
+        height_this > height ? height = height_this:'';
+    });
+
+    $('.single-st').height(height);
+};
+
+
+
+$(window).on('load',function(){
+    var height = 0;
+    $('.single-st').each(function(){
+        var height_this = $(this).height();
+        if(height_this > height){
+            height = height_this
+        }
+
+    });
+
+
+    $('.single-st').height(height);
+});
