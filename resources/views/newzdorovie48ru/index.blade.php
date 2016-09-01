@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- Слайдер -->
+        <!-- Слайдер -->
 <section class="hidden-xs hidden-sm">
     {{ Block::make('index_slider', 'newzdorovie48ru/_blocks/index_slider') }}
 </section>
@@ -10,7 +10,7 @@
 
 
 @if(!is_null($getShare))
-<!-- Акция -->
+        <!-- Акция -->
 <section class="container-fluid hidden-xs hidden-sm">
     <div class="row bg-success">
         <div class="container v-center padder-v">
@@ -27,7 +27,7 @@
 <!-- Акция -->
 @endif
 
-<!-- Услуги -->
+        <!-- Услуги -->
 <section class="container-fluid">
     {{ Block::make('index_goods', 'newzdorovie48ru/_blocks/index_goods', 3) }}
 </section>
@@ -90,7 +90,7 @@
                                                 @foreach($specialization as $spec)
                                                     <option value="{{$spec->specialization}}">{{$spec->specialization}}</option>
                                                 @endforeach
-                                           </select>
+                                            </select>
                                         </div>
 
                                         <div class="form-group row">
@@ -123,10 +123,10 @@
                                                     type: "POST",
                                                     url: "/appointment/time/" + Placevalue + "/" + Specialvalue + "/" + NameValue,
                                                     dataType: 'json',
-                                                    beforeSend: function(request) {
+                                                    beforeSend: function (request) {
                                                         request.setRequestHeader('X-CSRF-Token', csrf);
                                                     },
-                                                    success: function(msg){
+                                                    success: function (msg) {
                                                         var option = "<div id='date-scroll'>";
                                                         var is_empty_option = true;
 
@@ -152,9 +152,9 @@
 
                                                         if (!is_empty_option) {
                                                             $('#date-scroll').mCustomScrollbar({
-                                                                theme:"dark",
+                                                                theme: "dark",
                                                                 axis: 'y',
-                                                                advanced:{ updateOnContentResize: true, updateOnSelectorChange: true },
+                                                                advanced: {updateOnContentResize: true, updateOnSelectorChange: true},
                                                                 liveSelector: '#date-scroll',
                                                                 live: true,
                                                                 setHeight: 250
@@ -175,7 +175,7 @@
 
                                             $('select[name="specialization"]').change(function () {
                                                 var obj = $(this);
-                                                var Curvalue = $(':selected',this).val();
+                                                var Curvalue = $(':selected', this).val();
                                                 //var Placevalue = $('select[name="subdivision"] :selected').val();
                                                 var csrf = $('meta[name="csrf-token"]').attr('content');
 
@@ -186,15 +186,14 @@
                                                 $.ajax({
                                                     type: "POST",
                                                     url: "/appointment/fio/" + Curvalue,
-                                                    beforeSend: function(request) {
+                                                    beforeSend: function (request) {
                                                         request.setRequestHeader('X-CSRF-Token', csrf);
                                                     },
-                                                    success: function(msg){
+                                                    success: function (msg) {
 
                                                         var option = "<option selected disabled value=''>Выберите врача</option>";
-                                                        for(var i = 0; msg.length > i; i++)
-                                                        {
-                                                            option += "<option value='"+ msg[i].name + "'>"
+                                                        for (var i = 0; msg.length > i; i++) {
+                                                            option += "<option value='" + msg[i].name + "'>"
                                                                     + msg[i].name + "</option>";
                                                         }
 
@@ -209,7 +208,7 @@
 
 
                                             $('select[name="name"]').change(function () {
-                                                var Curvalue = $(':selected',this).val();
+                                                var Curvalue = $(':selected', this).val();
 
                                                 var NameValue = $('select[name="name"] :selected').val();
                                                 var SpecialValue = $('select[name="specialization"] :selected').val();
@@ -220,15 +219,14 @@
                                                 $.ajax({
                                                     type: "POST",
                                                     url: "/appointment/place/" + SpecialValue + "/" + NameValue,
-                                                    beforeSend: function(request) {
+                                                    beforeSend: function (request) {
                                                         request.setRequestHeader('X-CSRF-Token', csrf);
                                                     },
-                                                    success: function(msg){
+                                                    success: function (msg) {
 
 
                                                         var option = "<option selected disabled value=''>Выберите место</option>";
-                                                        for(var i = 0; msg.length > i; i++)
-                                                        {
+                                                        for (var i = 0; msg.length > i; i++) {
 
                                                             option += "<option value='" + msg[i].subdivision + "'>"
                                                                     + msg[i].subdivision + "</option>";
@@ -261,35 +259,38 @@
                                         <div class="h5 m-b-sm m-t-sm"> Информация</div>
 
                                         <div class="row form-group">
-                                        <div class="col-md-6">
-                                        <input type="text" name="firstname" max="255" required class="form-control rounded" placeholder="Имя">
+                                            <div class="col-md-6">
+                                                <input type="text" name="firstname" max="255" required class="form-control rounded" placeholder="Имя">
                                             </div>
                                             <div class="col-md-6">
-                                        <input type="text" name="lastname" max="255" required class="form-control rounded" placeholder="Фамилия">
-                                        </div>
+                                                <input type="text" name="lastname" max="255" required class="form-control rounded" placeholder="Фамилия">
+                                            </div>
 
                                         </div>
 
 
                                         <div class="form-group row">
                                             <div class="col-md-6">
-                                        <input type="email" name="email" placeholder="Email адрес"  class="form-control rounded" required>
-                                      </div>
+                                                <input type="email" name="email" placeholder="Email адрес" class="form-control rounded" required>
+                                            </div>
 
                                             <div class="col-md-6">
-                                                <input name="phone" placeholder="Номер телефона"  class="form-control rounded" required type="text" data-mask="+ 9-999-999-99-99">
+                                                <input name="phone" placeholder="Номер телефона" class="form-control rounded" required type="text"
+                                                       data-mask="+ 9-999-999-99-99">
                                             </div>
-                                       </div>
+                                        </div>
 
                                         <div class="form-group">
-                                            <textarea rows="5" name="comment"  class="form-control rounded" placeholder="Комментарий"></textarea>
-                                       </div>
+                                            <textarea rows="5" name="comment" class="form-control rounded" placeholder="Комментарий"></textarea>
+                                        </div>
 
                                         <div class="form-group">
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <p class="col-md-12"><button class="btn btn-default  btn-void-primary pull-right" type="submit">Записаться!
-                                        </button></p>
-                                            </div>
+                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                            <p class="col-md-12">
+                                                <button class="btn btn-default  btn-void-primary pull-right" type="submit">Записаться!
+                                                </button>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -312,18 +313,27 @@
 
                 @foreach ($complexGoods as $key => $item)
                     <div class="col-md-4 @if($key > 0) hidden-xs hidden-sm @endif">
+                        <h2 class="h3 m-b-md text-center">{{ $item->name }}</h2>
                         {{--<p class="h3 m-b-md text-center">{{ $item->name }}</p>--}}
 
                         <ul class="list-unstyled">
-                            @foreach($item->complexGoods as $complexGood)
-                                <li>
-                                    <a href="/service/complex/{{$complexGood->slug}}" class="text-white">
+                            @foreach($item->complexGoods as $key=>$complexGood)
+                                <li class="m-b-md">
+                                    <a href="/service/complex/{{$complexGood->slug}}" class="text-white row complex-list">
+                                        <div class="col-xs-3">
                                         <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
                                             <i class="fa w-1x fa fa-heart"></i>
                                         </span>
-                                        {{ $complexGood->name }}
+                                        </div>
+                                        <div class="col-xs-9">
+                                            {{ $complexGood->name }}
+                                        </div>
                                     </a>
                                 </li>
+                                @if($key == 2)
+                                    @break
+                                @endif
+
                             @endforeach
                         </ul>
                     </div>
@@ -361,7 +371,8 @@
 <section class="container-fluid">
     <div class="row">
 
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=PGr_ZwUruElPyf_7LeDqD9iyrRwoXSyi&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=PGr_ZwUruElPyf_7LeDqD9iyrRwoXSyi&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
 
 
     </div>
@@ -380,8 +391,8 @@
                         <h1 class="padder-v">Карманный доктор</h1>
 
                         <p class="lead">Попробуйте мобильное приложение "Здоровье Нации" на своём устройстве,
-                            которое позволит
-                            вам удобно управлять собственным здоровьем.
+                                        которое позволит
+                                        вам удобно управлять собственным здоровьем.
                             <span class="h3 m-t m-b">Скоро на Вашем устройстве!</span>
                         </p>
                         <!--
@@ -402,5 +413,4 @@
 <!-- Мобильное приложение -->
 
 
-
-    @endsection
+@endsection
