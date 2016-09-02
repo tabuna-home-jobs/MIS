@@ -346,7 +346,7 @@
                                 @endforeach
                             </ul>
 
-                            <a href="/service/complex/{{$complexGood->slug}}" class="text-center text-lg m-t"><i>Все комплексные услуги</i></a>
+                            <a href="/service/complex/{{$complexGood->slug}}" class="text-center  m-t-lg"><i>Все комплексные услуги</i></a>
                         </div>
                     @endforeach
                     </div>
