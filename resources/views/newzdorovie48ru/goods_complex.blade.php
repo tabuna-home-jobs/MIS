@@ -61,7 +61,7 @@
 
                     <ol class="breadcrumb">
                         <li><a href="/">Главная</a></li>
-                        <li><a href="/service?category={{$Good->category()->first()->id}}">{{$Good->category()->first()->name}}</a></li>
+                        <li> {{--<a href="/service?category={{$Good->category()->first()->id}}">{{$Good->category()->first()->name}}</a>--}} {{$Good->category()->first()->name}}</li>
                         <li class="active">{{$Good->name}}</li>
                     </ol>
 

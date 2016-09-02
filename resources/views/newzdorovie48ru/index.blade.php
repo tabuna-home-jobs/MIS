@@ -304,43 +304,55 @@
 </section>
 <!-- Запись на приём -->
 
+
+<style>
+
+
+
+
+</style>
+
 <!-- Комплексные услуги -->
 <section class="container-fluid">
     <div class="row">
         <div class="paralax-2 complex-uslug  parallax-main v-center" data-type="background" data-speed="10">
             <div class="container padder-v text-white">
                 <h1 class="text-center  m-b-xxl">Комплексные медицинские услуги</h1>
+                <div>
 
-                @foreach ($complexGoods as $key => $item)
-                    <div class="col-md-4 @if($key > 0) hidden-xs hidden-sm @endif">
-                        <h2 class="h3 m-b-md text-center">{{ $item->name }}</h2>
-                        {{--<p class="h3 m-b-md text-center">{{ $item->name }}</p>--}}
+                    @foreach ($complexGoods as $key => $item)
+                        <div class="col-md-4 @if($key > 0) hidden-xs hidden-sm @endif border_gradient">
+                            <h2 class="h3 m-b-md text-center">{{ $item->name }}</h2>
+                            {{--<p class="h3 m-b-md text-center">{{ $item->name }}</p>--}}
 
-                        <ul class="list-unstyled">
-                            @foreach($item->complexGoods as $key=>$complexGood)
-                                <li class="m-b-md">
-                                    <a href="/service/complex/{{$complexGood->slug}}" class="text-white row complex-list">
-                                        <div class="col-xs-3">
+                            <ul class="list-unstyled">
+                                @foreach($item->complexGoods as $key=>$complexGood)
+                                    <li class="m-b-md">
+                                        <a href="/service/complex/{{$complexGood->slug}}" class="text-white row complex-list">
+                                            <div class="col-xs-3">
                                         <span class="h3 m-b-xs m-r-md inline b b-white rounded wrapper">
                                             <i class="fa w-1x fa fa-heart"></i>
                                         </span>
-                                        </div>
-                                        <div class="col-xs-9">
-                                            {{ $complexGood->name }}
-                                        </div>
-                                    </a>
-                                </li>
-                                @if($key == 2)
-                                    @break
-                                @endif
+                                            </div>
+                                            <div class="col-xs-9">
+                                                {{ $complexGood->name }}
+                                            </div>
+                                        </a>
+                                    </li>
+                                    @if($key == 2)
+                                        @break
+                                    @endif
 
-                            @endforeach
-                        </ul>
+                                @endforeach
+                            </ul>
+
+                            <a href="/service/complex/{{$complexGood->slug}}" class="text-center text-lg m-t"><i>Все комплексные услуги</i></a>
+                        </div>
+                    @endforeach
                     </div>
-                @endforeach
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 </section>
 <!-- Комплекстные услуги -->
 

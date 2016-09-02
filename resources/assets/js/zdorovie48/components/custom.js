@@ -18,3 +18,38 @@ $(document).ready(function() {
     });
 
 });
+
+
+var resized = function (height) {
+
+    $('.border_gradient .list-unstyled').each(function(){
+        var height_this = $(this).height();
+        height_this > height ? height = height_this:'';
+    });
+
+    $('.border_gradient .list-unstyled').height(height);
+};
+
+$(window).resize(function(){
+    var height = 0;
+    $('.border_gradient .list-unstyled').each(function(){
+        var height_this = $(this).height();
+        if(height_this > height){
+            height = height_this;
+        }
+    });
+
+    $('.border_gradient .list-unstyled').height(height);
+});
+
+window.onload=function(){
+    var height = 0;
+    $('.border_gradient .list-unstyled').each(function(){
+        var height_this = $(this).height();
+        if(height_this > height){
+            height = height_this;
+        }
+    });
+
+    $('.border_gradient .list-unstyled').height(height);
+}
