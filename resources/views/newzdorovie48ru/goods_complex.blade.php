@@ -79,7 +79,7 @@
                                                     <div class="h4 total_price">Цена: <s>{{number_format($Good->total_price, 0, '.', ' ')}} <i class="fa fa-rub"></i></s></div>
                                                     <div class="h3 text-danger font-bold m-t m-b">{{number_format($Good->price, 0, '.', ' ')}} <i class="fa fa-rub"></i></div>
                                                     <p class="text-center btn-order-good">
-                                                        <button onclick="order()" class="btn btn-default btn-void-primary">Записаться на приём</button>
+                                                        <a href="/#main-appointments-section" class="btn btn-default btn-void-primary">Записаться на приём</a>
                                                     </p>
                                                 </div>
                                             </div>

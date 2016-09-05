@@ -345,8 +345,11 @@
 
                                 @endforeach
                             </ul>
+                            <div class="text-center  m-t-lg">
+                                <a href="/service/complex/{{$complexGood->slug}}" class=" btn btn-default btn-void-white">Все комплексные услуги</a>
+                            </div>
 
-                            <a href="/service/complex/{{$complexGood->slug}}" class="text-center  m-t-lg"><i>Все комплексные услуги</i></a>
+
                         </div>
                     @endforeach
                     </div>
