@@ -79,7 +79,7 @@
                                         <input id="good-count-{{ $good->id }}" name="count[{{ $good->id }}]" type="hidden" value="{{ $good->count_visit }}" />
                                     @endforeach
                                 </div>
-                                <select name="good_ids[]" class="form-control w-md goods-ajax" style="width: 100%;" required multiple="multiple">
+                                <select name="good_ids[]" class="form-control w-md goods-ajax" style="width: 100%;"  multiple="multiple">
                                     @foreach($Goods as $good)
                                         <option value="{{ $good->id}}" selected>{{ $good->name}}</option>
                                     @endforeach;

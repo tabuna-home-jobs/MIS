@@ -90,6 +90,7 @@
                         </div>
                     </div>
 
+                    @if(count($Good->goods)>0)
                     <div class="page-header">
                         <div class="h4 font-thin m-t m-b"><span class="h4">Что входит:</span></div>
                     </div>
@@ -139,6 +140,7 @@
 
 
                     </div>
+                    @endif
 
                     <div class="page-header">
                         <div class="h4 font-thin m-t m-b"><span class="h4">Описание:</span></div>

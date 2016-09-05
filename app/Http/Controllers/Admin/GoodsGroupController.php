@@ -82,16 +82,17 @@ class GoodsGroupController extends Controller
     {
         // Сначала, удаляем все старые записи
         GoodsGroups::where('good_group_id', $group_id)->delete();
+	    if($request->good_ids ) {
+		    // Затем, привязываем новые
+		    foreach ($request->good_ids as $key => $value) {
+			    $GoodsGroups                = new GoodsGroups();
+			    $GoodsGroups->good_id       = $value;
+			    $GoodsGroups->good_group_id = $group_id;
+			    $GoodsGroups->count_visit   = (isset($request->count[$value])) ? $request->count[$value] : 1;
 
-        // Затем, привязываем новые
-        foreach($request->good_ids as $key => $value) {
-            $GoodsGroups = new GoodsGroups();
-            $GoodsGroups->good_id = $value;
-            $GoodsGroups->good_group_id = $group_id;
-            $GoodsGroups->count_visit =  (isset($request->count[$value])) ? $request->count[$value] : 1 ;
-
-            $GoodsGroups->save();
-        }
+			    $GoodsGroups->save();
+		    }
+	    }
     }
 
     public function getRestore($Category = null)

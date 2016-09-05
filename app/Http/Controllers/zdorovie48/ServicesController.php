@@ -119,7 +119,7 @@ class ServicesController extends Controller
         if (!empty(Route::getCurrentRoute()->parameterNames()) && Route::getCurrentRoute()->parameterNames()[0] == 'complex') {
             $data['Good'] = $getSites->getComplexGoods()->with('goods')->where('slug', $id)->first();
             $view = 'new' . $sitename . $sitedomen . '/goods_complex';
-
+			//dd($data);
             $data['Good']->total_price = 0;
 
             foreach($data['Good']->goods as $key => $value) {
