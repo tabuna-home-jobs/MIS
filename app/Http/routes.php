@@ -149,6 +149,41 @@ Route::group(['domain' => 'zdorovie48.ru', 'namespace' => 'zdorovie48'], functio
     Route::resource('/login', 'LoginController');
 });
 
+	Route::group(['domain' => 'mother-baby.ru', 'namespace' => 'motherbaby'], function () {
+		Route::resource('/search', 'SearchController');
+		Route::resource('/video', 'VideoGalleryController');
+		Route::resource('/questanswer', 'QuestAnswerController');
+		Route::resource('/medencyclopedia', 'EncyclopediaController');
+		Route::resource('/encypost', 'EncyPostController');
+		Route::resource('/articles', 'ArticlesController');
+		Route::resource('/answers', 'AnswersController');
+		Route::resource('/reviews', 'ReviewsController');
+		Route::resource('/service', 'ServicesController');
+		Route::resource('/service/complex', 'ServicesController');
+		Route::resource('/shares', 'SharesController');
+		Route::resource('/page', 'PageController');
+		Route::resource('/gallery', 'GalleryController');
+		Route::resource('/team', 'TeamController');
+		Route::resource('/art', 'ArtController');
+		Route::resource('/feedback', 'FeedbackController');
+		Route::controller('/appointment', 'AppointmentController', [
+			'getIndex' => 'appointment',
+		]);
+
+		Route::resource('/blog', 'BlogController');
+
+		Route::resource('/', 'HomeController');
+
+
+		Route::controllers([
+			'auth' => 'AuthController',
+			'cabinet' => 'CabinetController'
+			//'password' => 'Auth\RegistrationController',
+		]);
+
+		Route::resource('/login', 'LoginController');
+	});
+
 
 Route::group(['domain' => 'gkzn48.ru', 'namespace' => 'gkzn48'], function () {
     Route::resource('/search', 'SearchController');
