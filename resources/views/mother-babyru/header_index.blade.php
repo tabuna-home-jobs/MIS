@@ -7,6 +7,8 @@
     <link href="/mother-baby.ru/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic'
           rel='stylesheet' type='text/css'>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="/mother-baby.ru/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/mother-baby.ru/css/slick.css" type="text/css">
     <link rel="stylesheet" href="/mother-baby.ru/style.css" type="text/css">
@@ -31,6 +33,11 @@
 
 </head>
 <body>
+
+<header class="index-head">
+
+
+</header>
 
 
 
