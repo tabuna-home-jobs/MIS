@@ -8,7 +8,7 @@
     </div>
 
                         <iframe width="100%" frameborder="0" id="ourframe"
-                                src="/dash/filemanager/dialog.php">
+                                src="/dash/filemanager/dialog.php?akey=e1ekeL4iiOIZPjbw">
                         </iframe>
 
 

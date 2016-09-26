@@ -74,7 +74,8 @@ $(document).ready(function(){
 
                 external_filemanager_path: "/dash/filemanager/",
                 filemanager_title: "Файловый менеджер",
-                external_plugins: {"filemanager": "/dash/filemanager/plugin.min.js"}
+                external_plugins: {"filemanager": "/dash/filemanager/plugin.min.js"},
+                filemanager_access_key:"e1ekeL4iiOIZPjbw" ,
             });
     });
 
