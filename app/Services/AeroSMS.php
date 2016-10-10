@@ -10,7 +10,7 @@ class AeroSMS
     private $password = 'OAnv1IHrnrbbcMI1w747wp65HIT';//'OAnv1IHrnrbbcMI1w747wp65HIT'; //Ваш пароль
     private $sign = "Zdorov'e Nacii"; //Подпись по умолчанию
 
-    public function __construct($login = false, $password =false, $sign = false)
+    public function __construct($login = false, $password = false, $sign = false)
     {
         if ($login) {
             $this->login = $login;
@@ -21,36 +21,6 @@ class AeroSMS
         if ($sign) {
             $this->sign = $sign;
         }
-    }
-
-    /**
-     * Формирование curl запроса
-     * @param $url
-     * @param $post
-     * @param $options
-     * @return mixed
-     */
-
-    private static function curl_post($url, array $post = null, array $options = array())
-    {
-        $defaults = array(
-            CURLOPT_POST => 1, //Отправка данных post
-            CURLOPT_HEADER => 0,
-            CURLOPT_URL => $url,  //url
-            CURLOPT_FRESH_CONNECT => 1,
-            CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_FORBID_REUSE => 1,
-            CURLOPT_TIMEOUT => 10, //максимальное время выполнения
-            CURLOPT_POSTFIELDS => http_build_query($post) //$_POST данные
-        );
-
-        $ch = curl_init();
-        curl_setopt_array($ch, ($options + $defaults));
-        if (!$result = curl_exec($ch)) {
-            return curl_error($ch);
-        }
-        curl_close($ch);
-        return $result;
     }
 
     /**
@@ -82,6 +52,36 @@ class AeroSMS
                 ), true
             )
         ];
+    }
+
+    /**
+     * Формирование curl запроса
+     * @param $url
+     * @param $post
+     * @param $options
+     * @return mixed
+     */
+
+    private static function curl_post($url, array $post = null, array $options = array())
+    {
+        $defaults = array(
+            CURLOPT_POST => 1, //Отправка данных post
+            CURLOPT_HEADER => 0,
+            CURLOPT_URL => $url,  //url
+            CURLOPT_FRESH_CONNECT => 1,
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_FORBID_REUSE => 1,
+            CURLOPT_TIMEOUT => 10, //максимальное время выполнения
+            CURLOPT_POSTFIELDS => http_build_query($post) //$_POST данные
+        );
+
+        $ch = curl_init();
+        curl_setopt_array($ch, ($options + $defaults));
+        if (!$result = curl_exec($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        return $result;
     }
 
     /**
@@ -164,15 +164,15 @@ class AeroSMS
 
     public function balance()
     {
-        $response =  json_decode(
-                self::curl_post(self::URL_SMSAERO_API . '/balance/',
-                    [
-                        'user' => $this->login,
-                        'password' => $this->password,
-                        'answer' => 'json'
-                    ]
-                ), true
-            );
+        $response = json_decode(
+            self::curl_post(self::URL_SMSAERO_API . '/balance/',
+                [
+                    'user' => $this->login,
+                    'password' => $this->password,
+                    'answer' => 'json'
+                ]
+            ), true
+        );
 
 
         return $response['balance'];

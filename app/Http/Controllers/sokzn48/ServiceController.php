@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\CommentRequest;
-use App\Models\Category as Cats;
 use App\Models\Comments;
 use App\Models\Sites;
 use Request;
@@ -100,11 +99,11 @@ class ServiceController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
-	    if (intval($id) && (strlen($id) == strlen(intval($id)))) {
-		    $Goods = $getSites->getGoods()->where('id', $id)->first();
-	    } else {
-		    $Goods = $getSites->getGoods()->where('slug', $id)->firstOrFail();
-	    }
+        if (intval($id) && (strlen($id) == strlen(intval($id)))) {
+            $Goods = $getSites->getGoods()->where('id', $id)->first();
+        } else {
+            $Goods = $getSites->getGoods()->where('slug', $id)->firstOrFail();
+        }
         $ChildGoods = $getSites->getGoods()->where('parent_id', $id)->get();
         $Category = $getSites->getCategory()->findorFail($Goods->category_id);
 

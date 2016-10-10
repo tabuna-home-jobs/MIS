@@ -27,9 +27,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('inspire')
             ->hourly();
-
-
-        //Каждые 15 секунд
+        
         $schedule->command('xml:Appointments')
             ->cron('* * * * *');
     }

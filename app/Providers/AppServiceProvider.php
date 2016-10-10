@@ -1,8 +1,8 @@
 <?php namespace App\Providers;
 
 use Carbon\Carbon;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,9 +16,9 @@ class AppServiceProvider extends ServiceProvider
     {
         Carbon::setLocale('ru');
 
-	    Blade::directive('break', function ($key) {
-		    return "<?php break; ?>";
-	    });
+        Blade::directive('break', function ($key) {
+            return "<?php break; ?>";
+        });
 
 
     }

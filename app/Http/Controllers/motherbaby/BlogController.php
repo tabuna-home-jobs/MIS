@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers\motherbaby;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Sites;
-use App\Models\Surveys;
 
 class BlogController extends Controller
 {
@@ -72,7 +70,7 @@ class BlogController extends Controller
             $getSurveys = null;
         }
 
-        return view( $sitename . $sitedomen . '/blogNews', [
+        return view($sitename . $sitedomen . '/blogNews', [
             'New' => $getNews,
             'LastNews' => $getLastNews,
             'getQuests' => $getQuests,

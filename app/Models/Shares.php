@@ -1,37 +1,42 @@
 <?php namespace App\Models;
 
+use App\Services\Search\SearchableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Services\Search\SearchableTrait;
 
 class Shares extends Model
 {
 
     use SoftDeletes, SearchableTrait;
+    public $SlugName = 'shares';
     /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'shares';
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['title', 'name', 'content', 'avatar', 'start', 'end', 'tag', 'descript', 'ids', 'upadate_at'];
-
-
+    protected $fillable = [
+        'title',
+        'name',
+        'content',
+        'avatar',
+        'start',
+        'end',
+        'tag',
+        'descript',
+        'ids',
+        'upadate_at'
+    ];
     /**
      * @var array
      */
     protected $searchFields = ['title', 'name', 'content'];
-
-
-    public $SlugName = 'shares';
-
-	protected $slugField = 'name';
+    protected $slugField = 'name';
 
 
     /**

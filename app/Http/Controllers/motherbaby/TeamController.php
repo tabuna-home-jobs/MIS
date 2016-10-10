@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers\motherbaby;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Sites;
-use App\Models\SpecCat;
 use App\Models\Specialisty;
 use App\Models\TimeTable;
 use Cache;
@@ -30,9 +28,9 @@ class TeamController extends Controller
         } else {
             $Specialisty = $getSites->getTeam()->where('cats', $requestCategory)->paginate();
         }
-       //dd($getSites->getTeam()->orderBy('sort', 'asc')->limit(30)->get());
+        //dd($getSites->getTeam()->orderBy('sort', 'asc')->limit(30)->get());
 
-        return view( $sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty, 'SpCat' => $SpecCat]);
+        return view($sitename . $sitedomen . '/team', ['Specialisty' => $Specialisty, 'SpCat' => $SpecCat]);
     }
 
     /**
@@ -189,7 +187,7 @@ class TeamController extends Controller
             ->orderByRaw('RANDOM()')
             ->get();
 
-        return view( $sitename . $sitedomen . '/person', [
+        return view($sitename . $sitedomen . '/person', [
             'Collegi' => $Collegi,
             'Spec' => $Spec,
             'timetable' => $timetable,

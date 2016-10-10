@@ -1,12 +1,13 @@
 <?php
-	namespace App\Services\Search;
+namespace App\Services\Search;
 
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Config;
 use App\Exceptions\SearchException;
 use App\Exceptions\SearchNotImplementedException;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
 
-class Search {
+class Search
+{
 
     /**
      * Handle static calls on the Search Facade
@@ -37,29 +38,11 @@ class Search {
     {
         $className = Config::get("search.$function");
 
-        if(is_null($className))
+        if (is_null($className)) {
             throw new SearchException("No model for $function has been found in the config.");
-
-        return App::make($className);
-    }
-
-    /**
-     * Searches all available Models for the specified keyword
-     *
-     * @param $keyword
-     * @return array
-     */
-    public function all($keyword)
-    {
-        $registeredModels = Config::get("search");
-
-        $resultSet = [];
-        foreach($registeredModels as $model) {
-            $searchable = App::make($model);
-            $resultSet[] = $this->search($searchable, $keyword);
         }
 
-        return $resultSet;
+        return App::make($className);
     }
 
     /**
@@ -73,10 +56,29 @@ class Search {
     {
         $searchFields = $searchable->searchFields();
 
-        return $searchable->where(function($query) use ($searchFields, $keyword){
-            foreach($searchFields as $field) {
-                $query->orWhere($field, "ILIKE" , '%' . $keyword . '%');
+        return $searchable->where(function ($query) use ($searchFields, $keyword) {
+            foreach ($searchFields as $field) {
+                $query->orWhere($field, "ILIKE", '%' . $keyword . '%');
             }
         })->get();
+    }
+
+    /**
+     * Searches all available Models for the specified keyword
+     *
+     * @param $keyword
+     * @return array
+     */
+    public function all($keyword)
+    {
+        $registeredModels = Config::get("search");
+
+        $resultSet = [];
+        foreach ($registeredModels as $model) {
+            $searchable = App::make($model);
+            $resultSet[] = $this->search($searchable, $keyword);
+        }
+
+        return $resultSet;
     }
 } 

@@ -1,18 +1,16 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\BlockItemRequest;
 use App\Models\Block;
 use App\Models\BlockItem;
-use App\Http\Requests\BlockItemRequest;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\App;
-use Image;
-use Session;
-use Search;
-use Request;
 use Illuminate\Http\Request as RequestIlluminate;
+use Image;
+use Request;
+use Search;
+use Session;
 
-class BlockItemController extends Controller 
+class BlockItemController extends Controller
 {
     /*
      * Список элементов блока
@@ -21,13 +19,13 @@ class BlockItemController extends Controller
     {
         $items = $block->items()->where('ids', Session::get('website'))->orderBy('name', 'desc')->paginate(15);
 
-        return view("dashboard/block/items/items",['items' => $items, 'block' => $block]);
+        return view("dashboard/block/items/items", ['items' => $items, 'block' => $block]);
     }
 
     /*
      * Страница добавления элемента в блок
      */
-    public function getAdd(Block $block, $item_id = NULL)
+    public function getAdd(Block $block, $item_id = null)
     {
         // Группа
         $item = BlockItem::find($item_id);
@@ -40,13 +38,13 @@ class BlockItemController extends Controller
      */
     public function postIndex(BlockItemRequest $request, Block $block)
     {
-        if(!is_null($request->id)) {
+        if (!is_null($request->id)) {
             $Item = BlockItem::find($request->id);
         } else {
             $Item = new BlockItem();
             $Item->block_id = $block->id;
         }
-            
+
         $Item->link = $request->link;
         $Item->name = $request->name;
         $Item->slug = str_slug($request->name);
@@ -55,7 +53,7 @@ class BlockItemController extends Controller
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $Item->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
-        }elseif(is_null($Item->avatar)){
+        } elseif (is_null($Item->avatar)) {
             $Item->avatar = '/dash/img/no_img.png';
         }
 
@@ -67,7 +65,7 @@ class BlockItemController extends Controller
             // Флеш сообщение
             Session::flash('group', 'Вы успешно изменили элемент');
         }
-        
+
         return redirect()->route('dashboard.block_items', $block->id);
     }
 

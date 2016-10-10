@@ -1,34 +1,31 @@
 <?php namespace App\Models;
 
+use App\Services\Search\SearchableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Services\Search\SearchableTrait;
 
 
-class Block extends Model {
+class Block extends Model
+{
 
-    use SoftDeletes,SearchableTrait;
+    use SoftDeletes, SearchableTrait;
+    public $SlugName = 'block';
     /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'blocks';
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = ['title', 'name', 'cont', 'descript', 'ids', 'slug'];
-
     /**
      * @var array
      */
     protected $searchFields = ['title', 'name', 'cont', 'slug'];
-
-    public $SlugName = 'block';
-
     /**
      * Searchable rules.
      *

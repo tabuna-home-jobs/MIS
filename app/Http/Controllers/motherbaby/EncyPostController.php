@@ -31,7 +31,7 @@ class EncyPostController extends Controller
 
         if (Request::has('index')) {
             $IndexEncyPost = EncyPost::whereRaw('left(name,1) = ?', [Request::get('index')])->paginate(10);
-            return view( $sitename . $sitedomen . '/encyclopediaPostList', [
+            return view($sitename . $sitedomen . '/encyclopediaPostList', [
                 'PostList' => $IndexEncyPost,
                 'MainElementMenu' => $MainElementMenu,
                 'Index' => $Index

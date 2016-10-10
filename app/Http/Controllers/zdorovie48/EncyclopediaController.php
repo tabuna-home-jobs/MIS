@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\zdorovie48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\EncyCategory;
 use App\Models\EncyPost;
 use DB;

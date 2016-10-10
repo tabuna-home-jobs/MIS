@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\cozn48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Answers;
 use Illuminate\Http\Request;
 use Session;

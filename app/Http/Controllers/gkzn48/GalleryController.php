@@ -1,11 +1,7 @@
 <?php namespace App\Http\Controllers\gkzn48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use App\Models\Album;
-use App\Models\Photo;
 use App\Models\Sites;
-use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {

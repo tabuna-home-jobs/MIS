@@ -100,9 +100,8 @@ class EncyclopediaController extends Controller
     public function update(EncyPost $post, EncyPostRequest $request)
     {
         $post->fill($request->all());
-        //dd($post);
         $post->pol = serialize($request->pol);
-        //Пока оставлю так
+
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $post->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();

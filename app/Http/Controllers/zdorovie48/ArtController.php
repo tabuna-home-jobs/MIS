@@ -1,7 +1,6 @@
 <?php namespace App\Http\Controllers\zdorovie48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Sites;
 
 class ArtController extends Controller

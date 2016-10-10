@@ -8,24 +8,21 @@ class Reviews extends Model
 
     use SoftDeletes;
     /**
+     * @var string
+     */
+    public $SlugName = 'reviews';
+    /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'reviews';
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = ['fio', 'content', 'datatime', 'publish', 'ids'];
-
-
-	/**
-	 * @var string
-	 */
-	public $SlugName = 'reviews';
 
     public function getSite()
     {

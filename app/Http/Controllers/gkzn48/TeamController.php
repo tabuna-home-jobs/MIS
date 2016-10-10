@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers\gkzn48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Sites;
-use App\Models\SpecCat;
 use Request;
 
 class TeamController extends Controller

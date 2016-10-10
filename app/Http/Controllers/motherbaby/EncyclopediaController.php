@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\motherbaby;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\EncyCategory;
 use App\Models\EncyPost;
 use DB;
@@ -74,7 +73,7 @@ class EncyclopediaController extends Controller
         $post = $model->Post()->paginate(9);
 
 
-        return view( $sitename . $sitedomen . '/encyclopediaCategory', [
+        return view($sitename . $sitedomen . '/encyclopediaCategory', [
             'MainElementMenu' => $MainElementMenu,
             'Category' => $model,
             'Index' => $Index,

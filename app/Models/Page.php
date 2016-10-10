@@ -1,41 +1,31 @@
 <?php namespace App\Models;
 
+use App\Services\Search\SearchableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Services\Search\SearchableTrait;
 
 class Page extends Model
 {
 
     use SoftDeletes, SearchableTrait;
+    public $SlugName = 'page';
     /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'pages';
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = ['title', 'name', 'content', 'tag', 'descript', 'ids', 'upadate_at'];
-
-
     /**
      * @var array
      */
     protected $searchFields = ['title', 'name', 'content'];
-
-
-    public $SlugName = 'page';
-	protected $slugField = 'name';
-
-	public function scopeGetSlug(){
-		return $this->slugField;
-	}
-
+    protected $slugField = 'name';
     /**
      * Searchable rules.
      *
@@ -50,4 +40,9 @@ class Page extends Model
             'descript' => 2,
         ]
     ];
+
+    public function scopeGetSlug()
+    {
+        return $this->slugField;
+    }
 }

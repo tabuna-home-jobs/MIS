@@ -2,14 +2,11 @@
 
 use App\Events\SendMailAction;
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Http\Requests\ActionRequest;
 use App\Http\Requests\AuthLoginRequest;
 use App\Http\Requests\AuthRequest;
 use App\Http\Requests\RepeatRequest;
 use App\Models\Group;
-use App\Models\Sites;
-use App\Models\User;
 use Mail;
 use Route;
 use Sentry;
@@ -36,7 +33,7 @@ class AuthController extends Controller
     {
         if (Sentry::check()) {
             //return redirect('/cabinet');
-           return $this->roleRedirect();
+            return $this->roleRedirect();
         } else {
             $phone = str_replace(['', '-', ' ', '+'], '', $request->phone);
             $credentials = array(
@@ -44,26 +41,20 @@ class AuthController extends Controller
                 'password' => $request->password,
             );
             $this->authenticateAndRemember($credentials);
-          return $this->roleRedirect();
+            return $this->roleRedirect();
         }
     }
-
 
 
     public function roleRedirect()
     {
-        $admin = Group::where('name','Administrator')->first();
-        if(Sentry::getUser()->inGroup($admin))
-        {
+        $admin = Group::where('name', 'Administrator')->first();
+        if (Sentry::getUser()->inGroup($admin)) {
             return redirect('/dashboard');
-        }
-        else{
+        } else {
             return redirect('/cabinet');
         }
     }
-
-
-
 
 
     private function authenticateAndRemember($credentials)

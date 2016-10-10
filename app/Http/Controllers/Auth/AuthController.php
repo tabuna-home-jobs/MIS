@@ -2,7 +2,6 @@
 
 use App\Events\SendMailAction;
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Http\Requests\ActionRequest;
 use App\Http\Requests\AuthLoginRequest;
 use App\Http\Requests\AuthRequest;

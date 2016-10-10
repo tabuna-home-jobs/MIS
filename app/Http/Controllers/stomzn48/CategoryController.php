@@ -3,9 +3,7 @@
 namespace App\Http\Controllers\stomzn48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Category;
-use App\Models\Sites;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller

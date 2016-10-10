@@ -62,8 +62,7 @@
                         </div>
                         <div class="form-group">
                             <label>Сертификаты</label>
-                            <input class="form-control" type="text" maxlength="255"  name="sertificats"
-                                   value="">
+                            <textarea class="form-control" rows="5" name="sertificats"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Стаж работы</label>

@@ -1,8 +1,6 @@
 <?php namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use App\Models\Page as Page;
 use App\Models\Sites;
 use DB;
 use Request;

@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\CommentRequest;
-use App\Models\Category as Cats;
 use App\Models\Comments;
 use App\Models\Sites;
 use Request;
@@ -111,12 +110,12 @@ class ServiceController extends Controller
             ->with([
                 'getAllShares',
                 'getGoods' => function ($query) use ($id) {
-	                if (intval($id) && (strlen($id) == strlen(intval($id)))) {
+                    if (intval($id) && (strlen($id) == strlen(intval($id)))) {
 
-                    $query->where('id', $id);
-	                } else {
-		                $query->where('slug', $id);
-	                }
+                        $query->where('id', $id);
+                    } else {
+                        $query->where('slug', $id);
+                    }
                 }
             ])
             ->first();

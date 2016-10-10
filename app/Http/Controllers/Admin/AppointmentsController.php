@@ -1,7 +1,6 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\TimeTable;
 
 class AppointmentsController extends Controller

@@ -2,14 +2,11 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\CommentRequest;
-use App\Models\Category as Cats;
 use App\Models\Comments;
-use App\Models\Goods;
 use App\Models\Sites;
-use Illuminate\Support\Collection;
 use Request;
-use Session;
 use Route;
+use Session;
 
 class ServicesController extends Controller
 {
@@ -118,16 +115,18 @@ class ServicesController extends Controller
 
         if (!empty(Route::getCurrentRoute()->parameterNames()) && Route::getCurrentRoute()->parameterNames()[0] == 'complex') {
             $data['Good'] = $getSites->getComplexGoods()->with('goods')->where('slug', $id)->first();
-            $view =  $sitename . $sitedomen . '/goods_complex';
-			//dd($data);
+            $view = $sitename . $sitedomen . '/goods_complex';
+            //dd($data);
             $data['Good']->total_price = 0;
 
-            foreach($data['Good']->goods as $key => $value) {
+            foreach ($data['Good']->goods as $key => $value) {
                 $data['Good']->goods[$key]->total_price = $value->count_visit * $value->price;
                 $data['Good']->total_price += $data['Good']->goods[$key]->total_price;
             }
 
-            if (!$data['Good']) { abort('404'); }
+            if (!$data['Good']) {
+                abort('404');
+            }
         } else {
             if (intval($id) && (strlen($id) == strlen(intval($id)))) {
                 $data['Good'] = $getSites->getGoods()->where('id', $id);
@@ -137,16 +136,21 @@ class ServicesController extends Controller
 
             $data['Good'] = $data['Good']->with('complex_goods')->first();
 
-            if (!$data['Good']) { abort('404'); }
+            if (!$data['Good']) {
+                abort('404');
+            }
 
-            $data['Comments'] = $data['Good']->comments()->where('publish', true)->orderBy('fio', 'asc')->simplepaginate(5);
-            
-            $view =  $sitename . $sitedomen . '/goods';
+            $data['Comments'] = $data['Good']->comments()->where('publish', true)->orderBy('fio',
+                'asc')->simplepaginate(5);
+
+            $view = $sitename . $sitedomen . '/goods';
         }
 
         $data['Category'] = $getSites->getCategory()->findorFail($data['Good']->category_id);
-        $data['Goods'] = $getSites->getGoods()->where('category_id', $data['Good']->category_id)->orderBy('name', 'asc')->get();
-        $data['complexGoods'] = $getSites->getComplexGoods()->where('category_id', $data['Good']->category_id)->orderBy('name', 'asc')->get();
+        $data['Goods'] = $getSites->getGoods()->where('category_id', $data['Good']->category_id)->orderBy('name',
+            'asc')->get();
+        $data['complexGoods'] = $getSites->getComplexGoods()->where('category_id',
+            $data['Good']->category_id)->orderBy('name', 'asc')->get();
 
         return view($view, $data);
     }

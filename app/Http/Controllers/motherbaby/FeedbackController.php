@@ -1,7 +1,6 @@
 <?php namespace App\Http\Controllers\motherbaby;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Http\Requests\Site\FeedbackRequest;
 use App\Models\Feedback;
 use App\Models\Sites;
@@ -17,7 +16,7 @@ class FeedbackController extends Controller
      */
     public function index($sitename = 'mother-baby', $sitedomen = 'ru')
     {
-        return view( $sitename . $sitedomen . '/feedback');
+        return view($sitename . $sitedomen . '/feedback');
     }
 
     /**
@@ -29,7 +28,7 @@ class FeedbackController extends Controller
     {
         // Тут должна быть обработка
 
-        return view( $sitename . $sitedomen . '/feedback');
+        return view($sitename . $sitedomen . '/feedback');
     }
 
     /**

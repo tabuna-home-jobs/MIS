@@ -2,7 +2,6 @@
 
 use App\Console\Commands\AppointmentsThread;
 use App\Models\Appointments as Appoint;
-use Carbon\Carbon;
 use DB;
 use Illuminate\Console\Command;
 use Storage;
@@ -81,42 +80,6 @@ class AppointmentsLock extends Command
         }
     }
 
-
-    /**
-     * Октавиан читает от нас файл ответов - что мы загрузили себе в 1С - эти ID уже не надо повторно выгружать
-     */
-    protected function answers()
-    {
-        if (Storage::exists('otvet.xml')) {
-            $xml = simplexml_load_string(Storage::get('otvet.xml'));
-            foreach ($xml->id as $key => $id) {
-                $id = (int)$id;
-                DB::table('appointments')->where('id', $id)->update([
-                    'export' => true
-                ]);
-            }
-        }
-    }
-
-
-    /**
-     * Кто зарегался на сайте
-     */
-    protected function export()
-    {
-        $Apportointments = Appoint::where('export', false)
-            ->get();
-
-        if ($Apportointments->count() != 0) {
-            $Views = view('XML.appointments', [
-                'Record' => $Apportointments
-            ])->render();
-
-            Storage::put('new_clients.xml', $Views);
-        }
-    }
-
-
     /**
      * Читаю файл айтибора
      */
@@ -158,6 +121,39 @@ class AppointmentsLock extends Command
             DB::table('entry')->where('upload', true)->update([
                 'upload' => false
             ]);
+        }
+    }
+
+    /**
+     * Октавиан читает от нас файл ответов - что мы загрузили себе в 1С - эти ID уже не надо повторно выгружать
+     */
+    protected function answers()
+    {
+        if (Storage::exists('otvet.xml')) {
+            $xml = simplexml_load_string(Storage::get('otvet.xml'));
+            foreach ($xml->id as $key => $id) {
+                $id = (int)$id;
+                DB::table('appointments')->where('id', $id)->update([
+                    'export' => true
+                ]);
+            }
+        }
+    }
+
+    /**
+     * Кто зарегался на сайте
+     */
+    protected function export()
+    {
+        $Apportointments = Appoint::where('export', false)
+            ->get();
+
+        if ($Apportointments->count() != 0) {
+            $Views = view('XML.appointments', [
+                'Record' => $Apportointments
+            ])->render();
+
+            Storage::put('new_clients.xml', $Views);
         }
     }
 }

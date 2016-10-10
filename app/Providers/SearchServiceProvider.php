@@ -2,7 +2,8 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class SearchServiceProvider extends ServiceProvider {
+class SearchServiceProvider extends ServiceProvider
+{
 
     /**
      * Indicates if loading of the provider is deferred.

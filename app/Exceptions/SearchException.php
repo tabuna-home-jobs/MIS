@@ -1,3 +1,5 @@
 <?php namespace App\Exceptions;
 
-class SearchException extends \Exception {}
+class SearchException extends \Exception
+{
+}

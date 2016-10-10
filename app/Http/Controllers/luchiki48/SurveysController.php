@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\luchiki48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use Illuminate\Http\Request;
 
 class SurveysController extends Controller

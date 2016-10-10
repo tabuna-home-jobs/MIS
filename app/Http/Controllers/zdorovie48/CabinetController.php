@@ -1,23 +1,16 @@
 <?php namespace App\Http\Controllers\zdorovie48;
 
-use App\Events\SendMailAction;
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use App\Http\Requests\ActionRequest;
-use App\Http\Requests\AuthLoginRequest;
-use App\Http\Requests\AuthRequest;
-use App\Http\Requests\RepeatRequest;
-use App\Models\Sites;
-use App\Models\User;
 use Mail;
-use Sentry;
 use Redirect;
+use Sentry;
+
 class CabinetController extends Controller
 {
 
     public function __construct($sitename = 'zdorovie48', $sitedomen = 'ru')
     {
-        if (! Sentry::check()) {
+        if (!Sentry::check()) {
             Redirect::to('/auth/login')->send();
         }
     }

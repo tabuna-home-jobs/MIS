@@ -1,13 +1,11 @@
 <?php namespace App\Http\Controllers\zdorovie48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use App\Models\Page as Page;
+use App\Models\Category;
 use App\Models\Sites;
 use DB;
 use Request;
 use Session;
-use App\Models\Category;
 
 class HomeController extends Controller
 {
@@ -27,10 +25,12 @@ class HomeController extends Controller
             ->limit(1)
             ->orderByRaw('RANDOM()')
             ->first();
-        
-        $getComplexGoods = Category::has('complexGoods')->with(['complexGoods' => function($query) {
-            $query->where('onmain','=','true')->orderBy('sort', 'asc');
-        }])->take(3)->get();
+
+        $getComplexGoods = Category::has('complexGoods')->with([
+            'complexGoods' => function ($query) {
+                $query->where('onmain', '=', 'true')->orderBy('sort', 'asc');
+            }
+        ])->take(3)->get();
 
         $specialization = DB::table('timetable')->select('specialization')->distinct()->get();
         return view('new' . $sitename . $sitedomen . '/index', [

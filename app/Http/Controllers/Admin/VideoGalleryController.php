@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Video as Video;
 use App\Models\VideoAlbum as Album;
 use Illuminate\Http\Request;

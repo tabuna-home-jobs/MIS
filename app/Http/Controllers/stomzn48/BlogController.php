@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers\stomzn48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Sites;
-use App\Models\Surveys;
 
 class BlogController extends Controller
 {

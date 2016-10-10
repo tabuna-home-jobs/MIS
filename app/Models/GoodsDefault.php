@@ -3,7 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class GoodsDefault extends Model {
+class GoodsDefault extends Model
+{
     use SoftDeletes;
 
     /**

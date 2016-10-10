@@ -2,23 +2,23 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\GoodsGroupRequest;
-use App\Models\GoodsGroups;
-use App\Models\GoodsGroup;
 use App\Models\Category;
+use App\Models\GoodsGroup;
+use App\Models\GoodsGroups;
+use Illuminate\Http\Request as RequestIlluminate;
 use Illuminate\Support\Collection;
 use Image;
-use Session;
-use Search;
 use Request;
-use Illuminate\Http\Request as RequestIlluminate;
+use Search;
+use Session;
 
-class GoodsGroupController extends Controller 
+class GoodsGroupController extends Controller
 {
     public function getIndex(RequestIlluminate $request)
     {
         $Groups = GoodsGroup::where('ids', Session::get('website'))->orderBy('category_id', 'desc')->paginate(15);
 
-        return view("dashboard/goods_group/goods_group",['Groups' => $Groups ]);
+        return view("dashboard/goods_group/goods_group", ['Groups' => $Groups]);
     }
 
 
@@ -35,17 +35,19 @@ class GoodsGroupController extends Controller
         // Список категорий
         $Category = Category::where('ids', Session::get('website'))->get();
 
-        return view("dashboard/goods_group/view",['GoodsGroup' => $GoodsGroup, 'Goods' => $Goods, 'Category' => $Category]);
+        return view("dashboard/goods_group/view",
+            ['GoodsGroup' => $GoodsGroup, 'Goods' => $Goods, 'Category' => $Category]);
     }
 
 
     //Добавление и изменение данных
     public function postIndex(GoodsGroupRequest $request)
     {
-        if(!is_null($request->id))
+        if (!is_null($request->id)) {
             $GoodsGroup = GoodsGroup::find($request->id);
-        else
+        } else {
             $GoodsGroup = new GoodsGroup();
+        }
 
         $GoodsGroup->title = $request->title;
         $GoodsGroup->name = $request->name;
@@ -57,7 +59,7 @@ class GoodsGroupController extends Controller
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $GoodsGroup->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();
-        }elseif(is_null($GoodsGroup->avatar)){
+        } elseif (is_null($GoodsGroup->avatar)) {
             $GoodsGroup->avatar = '/dash/img/no_img.png';
         }
 
@@ -82,17 +84,17 @@ class GoodsGroupController extends Controller
     {
         // Сначала, удаляем все старые записи
         GoodsGroups::where('good_group_id', $group_id)->delete();
-	    if($request->good_ids ) {
-		    // Затем, привязываем новые
-		    foreach ($request->good_ids as $key => $value) {
-			    $GoodsGroups                = new GoodsGroups();
-			    $GoodsGroups->good_id       = $value;
-			    $GoodsGroups->good_group_id = $group_id;
-			    $GoodsGroups->count_visit   = (isset($request->count[$value])) ? $request->count[$value] : 1;
+        if ($request->good_ids) {
+            // Затем, привязываем новые
+            foreach ($request->good_ids as $key => $value) {
+                $GoodsGroups = new GoodsGroups();
+                $GoodsGroups->good_id = $value;
+                $GoodsGroups->good_group_id = $group_id;
+                $GoodsGroups->count_visit = (isset($request->count[$value])) ? $request->count[$value] : 1;
 
-			    $GoodsGroups->save();
-		    }
-	    }
+                $GoodsGroups->save();
+            }
+        }
     }
 
     public function getRestore($Category = null)
@@ -106,7 +108,8 @@ class GoodsGroupController extends Controller
 
     public function getTrash()
     {
-        $GoodsGroup = GoodsGroup::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id', 'desc')->paginate(15);
+        $GoodsGroup = GoodsGroup::onlyTrashed()->where('ids', Session::get('website'))->orderBy('id',
+            'desc')->paginate(15);
         return view("dashboard/goods_group/trash", ['GoodsGroup' => $GoodsGroup]);
     }
 
@@ -123,7 +126,7 @@ class GoodsGroupController extends Controller
         return redirect()->route('goods_group');
     }
 
-    public  function  getUnset($GoodsGroup = null)
+    public function getUnset($GoodsGroup = null)
     {
         GoodsGroup::withTrashed()->find($GoodsGroup)->forceDelete();
 
@@ -134,13 +137,12 @@ class GoodsGroupController extends Controller
         return redirect()->route('goods_group');
     }
 
-    public  function  getCategory($GoodsGroup = null)
+    public function getCategory($GoodsGroup = null)
     {
-        $GoodsGroup = Goods::whereRaw('ids =? and category_id =?', [Session::get('website'), $GoodsGroup])->orderBy('id', 'desc')->paginate(15);
-        return view("dashboard/goods_group/goods_group",['GoodsGroup' => $GoodsGroup ]);
+        $GoodsGroup = Goods::whereRaw('ids =? and category_id =?',
+            [Session::get('website'), $GoodsGroup])->orderBy('id', 'desc')->paginate(15);
+        return view("dashboard/goods_group/goods_group", ['GoodsGroup' => $GoodsGroup]);
     }
-
-
 
 
 }

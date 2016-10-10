@@ -1,10 +1,8 @@
 <?php namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Http\Requests\Site\AppointmentRequest;
 use App\Models\Appointments;
-use App\Models\Entry;
 use App\Models\TimeTable;
 use DB;
 use Session;

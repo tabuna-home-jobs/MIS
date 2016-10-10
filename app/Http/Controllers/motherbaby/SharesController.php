@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\motherbaby;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Sites;
 use Illuminate\Http\Request;
 
@@ -54,12 +53,12 @@ class SharesController extends Controller
 
 
         $getShare = $getSites->getShares()->findOrFail($Share->id);
-        
+
         $crumbs = [
             ['name' => $getShare->name, 'slug' => ($getShare->slug) ? $getShare->slug : $getShare->id],
         ];
 
-        return view( $sitename . $sitedomen . '/sharesItem', ['Share' => $getShare, 'crumbs' => $crumbs]);
+        return view($sitename . $sitedomen . '/sharesItem', ['Share' => $getShare, 'crumbs' => $crumbs]);
     }
 
     /**

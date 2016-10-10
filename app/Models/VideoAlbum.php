@@ -8,12 +8,15 @@ class VideoAlbum extends Model
 
     use SoftDeletes;
     /**
+     * @var string
+     */
+    public $SlugName = 'video';
+    /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'videoalbum';
-
     /**
      * The attributes that are mass assignable.
      *
@@ -21,11 +24,6 @@ class VideoAlbum extends Model
      */
     protected $fillable = ['ids', 'name'];
 
-
-	/**
-	 * @var string
-	 */
-	public $SlugName = 'video';
     public function getSite()
     {
         return $this->belongsTo('App\Models\Sites', 'ids');

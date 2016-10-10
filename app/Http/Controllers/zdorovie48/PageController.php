@@ -1,8 +1,6 @@
 <?php namespace App\Http\Controllers\zdorovie48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Site\CommentRequest;
-use App\Models\Comments;
 use App\Models\Sites;
 use Request;
 use Session;

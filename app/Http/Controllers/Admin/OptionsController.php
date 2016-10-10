@@ -3,10 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Http\Requests\Admin\OptionsRequest;
 use App\Models\Options;
-use Illuminate\Http\Request;
 use Session;
 
 class OptionsController extends Controller

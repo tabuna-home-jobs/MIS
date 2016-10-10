@@ -1,8 +1,6 @@
 <?php namespace App\Http\Controllers\cozn48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use App\Http\Requests\Site\FeedbackRequest;
 use App\Models\Feedback;
 use App\Models\Sites;
 use Illuminate\Http\Request;

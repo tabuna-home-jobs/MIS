@@ -8,27 +8,25 @@ class Album extends Model
 
     use SoftDeletes;
     /**
+     * @var string
+     */
+    public $SlugName = 'gallery';
+    /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'album';
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = ['ids', 'name'];
-	/**
-	 * @var string
-	 */
-	protected $slug = 'name';
-
-	/**
-	 * @var string
-	 */
-	public $SlugName = 'gallery';
+    /**
+     * @var string
+     */
+    protected $slug = 'name';
 
     public function getSite()
     {

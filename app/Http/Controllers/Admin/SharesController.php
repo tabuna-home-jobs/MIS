@@ -107,7 +107,7 @@ class SharesController extends Controller
             'end' => $request->end,
             'ids' => Session::get('website'),
         ]);
-		//dd(Request::hasFile('avatar'));
+        //dd(Request::hasFile('avatar'));
         if (Request::hasFile('avatar')) {
             Image::make(Request::file('avatar'))->save('upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension());
             $shares->avatar = '/upload/' . time() . '.' . Request::file('avatar')->getClientOriginalExtension();

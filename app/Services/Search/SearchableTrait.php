@@ -1,10 +1,11 @@
 <?php
-	namespace App\Services\Search;
+namespace App\Services\Search;
 
 
-use  App\Exceptions\SearchException;
+use App\Exceptions\SearchException;
 
-trait SearchableTrait {
+trait SearchableTrait
+{
 
     /**
      * Returns the Searchable fields
@@ -14,8 +15,9 @@ trait SearchableTrait {
      */
     public function searchFields()
     {
-        if( ! property_exists($this, 'searchFields'))
-            throw new SearchException("Member searchFields on ". get_class($this) ." have not been defined");
+        if (!property_exists($this, 'searchFields')) {
+            throw new SearchException("Member searchFields on " . get_class($this) . " have not been defined");
+        }
 
         return $this->searchFields;
     }

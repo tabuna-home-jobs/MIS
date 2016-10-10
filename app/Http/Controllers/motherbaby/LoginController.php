@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\motherbaby;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Sites;
 use Illuminate\Http\Request;
 
@@ -17,7 +16,7 @@ class LoginController extends Controller
     public function index($sitename = 'mother-baby', $sitedomen = 'ru')
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-        return view( $sitename . $sitedomen . '/login', []);
+        return view($sitename . $sitedomen . '/login', []);
     }
 
     /**

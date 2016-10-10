@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\motherbaby;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Http\Requests\Site\QuestAnswerRequest;
 use App\Models\QuestAnswer;
 use App\Models\Sites;

@@ -2,16 +2,15 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class GoodsGroups extends Model {
+class GoodsGroups extends Model
+{
+    public $timestamps = false;
     /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'goods_groups';
-
-    public $timestamps = false;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -21,7 +20,7 @@ class GoodsGroups extends Model {
         'good_id',
         'good_group_id',
     ];
-    
+
     /**
      * @var array
      */

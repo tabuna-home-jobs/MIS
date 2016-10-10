@@ -1,10 +1,8 @@
 <?php namespace App\Http\Controllers\stomzn48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Http\Requests\Site\FeedbackRequest;
 use App\Models\Feedback;
-use App\Models\Sites;
 use Session;
 
 class FeedbackController extends Controller

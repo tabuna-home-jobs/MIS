@@ -1,11 +1,8 @@
 <?php namespace App\Http\Controllers\sokzn48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use App\Models\Page as Page;
-use App\Models\Sites;
-use App\Models\SpecCat;
 use App\Models\QuestAnswer;
+use App\Models\Sites;
 use DB;
 
 class HomeController extends Controller
@@ -25,22 +22,20 @@ class HomeController extends Controller
 
         $getReviews = collect();
 
-        $getReviews->push( $getSites->getReviews()
+        $getReviews->push($getSites->getReviews()
             ->where('publish', true)
             ->orderBy(DB::raw('RANDOM()'))
             ->limit(1)
             ->get()
             ->first());
 
-        $getReviews->push( $getSites->getReviews()
+        $getReviews->push($getSites->getReviews()
             ->where('publish', true)
-            ->where('id','!=',$getReviews->first()->id)
+            ->where('id', '!=', $getReviews->first()->id)
             ->orderBy(DB::raw('RANDOM()'))
             ->limit(1)
             ->get()
             ->first());
-
-
 
 
         $getSpec = $getSites->getTeam()
@@ -48,7 +43,7 @@ class HomeController extends Controller
             ->limit(8)
             ->get();
 
-        $QuestAnswers= QuestAnswer::whereRaw('ids = ? and publish = ?',
+        $QuestAnswers = QuestAnswer::whereRaw('ids = ? and publish = ?',
             [Sites::where('domen', '=', $sitename . "." . $sitedomen)->first()->id, true])
             ->orderBy(DB::raw('RANDOM()'))
             ->with('getCategory', 'getDoctor')
@@ -59,7 +54,7 @@ class HomeController extends Controller
             'getNews' => $getNews,
             'getShares' => $getShares,
             'randomReview' => $getReviews,
-            'randomQuestAnsver' =>$QuestAnswers,
+            'randomQuestAnsver' => $QuestAnswers,
             'allspecs' => $getSpec,
         ]);
     }

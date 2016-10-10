@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\motherbaby;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Sites as Sites;
 use Illuminate\Http\Request;
 
@@ -20,7 +19,7 @@ class VideoGalleryController extends Controller
         $albums = $getSites->getVideoAlbums()->select('*')->get();
         $video = $getSites->getVideo()->paginate(20);
 
-        return view( $sitename . $sitedomen . '/video', [
+        return view($sitename . $sitedomen . '/video', [
             'albums' => $albums,
             'videos' => $video,
         ]);

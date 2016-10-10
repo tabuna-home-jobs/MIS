@@ -1,7 +1,6 @@
 <?php namespace App\Http\Controllers\motherbaby;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\Models\Sites;
 
 class ArtController extends Controller
@@ -12,7 +11,7 @@ class ArtController extends Controller
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
         $getArts = $getSites->getArts()->orderBy('id', 'desc')->paginate(5);
-        return view( $sitename . $sitedomen . '/Articles', ['art' => $getArts]);
+        return view($sitename . $sitedomen . '/Articles', ['art' => $getArts]);
     }
 
 

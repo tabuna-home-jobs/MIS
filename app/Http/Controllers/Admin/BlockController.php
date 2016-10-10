@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\BlockRequest;
 use App\Models\Block;
 use Redirect;
 use Request;
 use Session;
 use Validator;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\BlockRequest;
 
 class BlockController extends Controller
 {
@@ -47,12 +46,12 @@ class BlockController extends Controller
             return redirect()->back()->withInput();
         } else {
             $block = new Block([
-                'title'=>$request->title,
-                'name'=>$request->name,
-                'cont'=>$request->cont,
-                'descript'=>$request->descript,
-                'ids'=> Session::get('website'),
-                'slug'=>$slug,
+                'title' => $request->title,
+                'name' => $request->name,
+                'cont' => $request->cont,
+                'descript' => $request->descript,
+                'ids' => Session::get('website'),
+                'slug' => $slug,
             ]);
 
             if ($block->save()) {
@@ -69,7 +68,7 @@ class BlockController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function show($id)
@@ -82,7 +81,7 @@ class BlockController extends Controller
      */
     public function edit(Block $block)
     {
-        return view("dashboard/block/edit", ['Block' => $block ]);
+        return view("dashboard/block/edit", ['Block' => $block]);
     }
 
     /**
@@ -102,12 +101,12 @@ class BlockController extends Controller
             return redirect()->back()->withInput();
         } else {
             $block->fill([
-                'title'=>$request->title,
-                'name'=>$request->name,
-                'cont'=>$request->cont,
-                'slug'=>$slug,
-                'descript'=>$request->descript,
-                'ids'=> Session::get('website'),
+                'title' => $request->title,
+                'name' => $request->name,
+                'cont' => $request->cont,
+                'slug' => $slug,
+                'descript' => $request->descript,
+                'ids' => Session::get('website'),
             ])->save();
 
             // Флеш сообщение
@@ -126,7 +125,7 @@ class BlockController extends Controller
         $block->forceDelete();
 
         Session::flash('good', 'Вы успешно удалили значения');
-        
+
         return redirect()->route('dashboard.block.index');
     }
 }

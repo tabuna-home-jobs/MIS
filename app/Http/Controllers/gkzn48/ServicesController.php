@@ -2,9 +2,7 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Site\CommentRequest;
-use App\Models\Category as Cats;
 use App\Models\Comments;
-use App\Models\Goods;
 use App\Models\Sites;
 use Request;
 use Session;

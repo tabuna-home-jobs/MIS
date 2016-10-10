@@ -2,11 +2,8 @@
 
 use App\Models\Options;
 use App\Models\Sites;
-use App\Services\VK;
 use Facebook\FacebookRequest;
-use Facebook\FacebookRequestException;
 use Facebook\FacebookSession;
-use Facebook\GraphObject;
 use Session;
 
 class Social

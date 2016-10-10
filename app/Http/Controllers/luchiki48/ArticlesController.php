@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\luchiki48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use App\Models\Articles;
 use App\Models\Sites;
 use Illuminate\Http\Request;
 
@@ -52,10 +50,10 @@ class ArticlesController extends Controller
     public function show($id, $sitename = "luchiki48", $sitedomen = "ru")
     {
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
-	    $art = $getSites->getArts()->findOrFail($id);
-	    //dd($getSites);
+        $art = $getSites->getArts()->findOrFail($id);
+        //dd($getSites);
         //$art = $getSites->getArts()->where('slug', $id)->first();
-	    //$data['Good'] = $getSites->getComplexGoods()->with('goods')->where('slug', $id)->first();
+        //$data['Good'] = $getSites->getComplexGoods()->with('goods')->where('slug', $id)->first();
         return view($sitename . $sitedomen . '/article', ['Article' => $art]);
     }
 

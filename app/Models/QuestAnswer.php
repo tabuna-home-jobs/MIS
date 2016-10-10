@@ -6,22 +6,22 @@ class QuestAnswer extends Model
 {
 
     /**
-     * The database table used by the model.
-     *
      * @var string
      */
-    protected $table = 'questanswer';
+
+    public $SlugName = 'questanswer';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-	/**
-	 * @var string
-	 */
-
-	public $SlugName = 'questanswer';
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'questanswer';
     protected $fillable = [
         'fio',
         'questions',

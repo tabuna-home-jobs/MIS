@@ -2,14 +2,15 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class GoodsGroup extends Model {
+class GoodsGroup extends Model
+{
+    public $SlugName = 'complex';
     /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'goods_group';
-
     /**
      * The attributes that are mass assignable.
      *
@@ -28,19 +29,18 @@ class GoodsGroup extends Model {
         'price',
         'sort',
         'slug',
-	    'upadate_at'
+        'upadate_at'
     ];
-
-
     /**
      * @var array
      */
     protected $searchFields = ['title', 'name'];
-    public $SlugName = 'complex';
-	protected $slugField = 'name';
-	public function scopeGetSlug(){
-		return $this->slugField;
-	}
+    protected $slugField = 'name';
+
+    public function scopeGetSlug()
+    {
+        return $this->slugField;
+    }
 
     // Категория группы
     public function category()
@@ -51,6 +51,7 @@ class GoodsGroup extends Model {
     // Услуги группы
     public function goods()
     {
-        return $this->belongsToMany('App\Models\GoodsDefault', 'goods_groups', 'good_group_id', 'good_id')->select(['goods.*', 'count_visit']);
+        return $this->belongsToMany('App\Models\GoodsDefault', 'goods_groups', 'good_group_id',
+            'good_id')->select(['goods.*', 'count_visit']);
     }
 }

@@ -3,6 +3,7 @@
 use Illuminate\Queue\SerializesModels;
 use Mail;
 use SMS;
+
 class SendMailAction extends Event
 {
 
@@ -15,6 +16,6 @@ class SendMailAction extends Event
      */
     public function __construct($activationCode, $phone)
     {
-        SMS::send($phone,'Код активации: '.$activationCode);
+        SMS::send($phone, 'Код активации: ' . $activationCode);
     }
 }

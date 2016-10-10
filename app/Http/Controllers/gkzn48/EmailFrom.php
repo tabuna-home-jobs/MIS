@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers\gkzn48;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use Illuminate\Http\Request;
-use Illuminate\Mail\Mailer;
 use Mail;
 
 class EmailFrom extends Controller

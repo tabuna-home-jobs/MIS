@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use App\Models\Answers;
 use App\Models\CategoryAnswers;
 use Illuminate\Http\Request;
 use Session;

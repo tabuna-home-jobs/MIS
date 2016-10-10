@@ -6,12 +6,11 @@ use App\Models\Feedback;
 use App\Models\Goods;
 use App\Models\News;
 use App\Models\Page;
-use App\Services\Ok;
 use Redirect;
 use Request;
 use Session;
-use Validator;
 use SMS;
+use Validator;
 
 class AdminController extends Controller
 {
@@ -31,7 +30,7 @@ class AdminController extends Controller
         }
         else
         {
-            dd('Хуканул: ключ, токен и сессию -  заебись');
+            dd('Хуканул: ключ, токен и сессию ');
         }
 */
 

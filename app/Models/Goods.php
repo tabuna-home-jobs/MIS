@@ -1,24 +1,23 @@
 <?php namespace App\Models;
 
+use App\Services\Search\SearchableTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Kalnoy\Nestedset\Node;
-use App\Services\Search\SearchableTrait;
 
 class Goods extends Node
 {
 
     use SoftDeletes, SearchableTrait;
+    public $SlugName = 'service';
     /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'goods';
-    
     protected $casts = [
         'attribute' => 'array',
     ];
-
     /**
      * The attributes that are mass assignable.
      *
@@ -41,22 +40,21 @@ class Goods extends Node
         'attribute',
         'sort',
         'slug',
-	    'upadate_at'
+        'upadate_at'
     ];
-
-
     /**
      * @var array
      */
     protected $searchFields = ['title', 'name'];
-    public $SlugName = 'service';
-	/**
-	 * @var string
-	 */
-	protected $slugField = 'name';
-	public function scopeGetSlug(){
-		return $this->slugField;
-	}
+    /**
+     * @var string
+     */
+    protected $slugField = 'name';
+
+    public function scopeGetSlug()
+    {
+        return $this->slugField;
+    }
 
 
     public function category()
