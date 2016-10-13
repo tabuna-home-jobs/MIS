@@ -17,6 +17,8 @@ $(document).ready(function() {
         }
     });
 
+    $('.highslide').fancybox();
+
 });
 
 
