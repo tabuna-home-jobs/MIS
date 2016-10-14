@@ -48,6 +48,10 @@
                                         <a href="https://www.youtube.com/channel/UCIohC7RacRB60OqNdnXRHBA" class="btn btn-icon btn-rounded btn-light b b-dark m-r-sm" target="_blank"><i class="fa fa-youtube-play "></i></a>
 
                                     </div>
+                                    <div class="col-md-12 text-2x center m-t-sm">
+                                        Имеются противопоказания,
+                                        необходима консультация специалистов
+                                    </div>
 
 
                                 </div>
