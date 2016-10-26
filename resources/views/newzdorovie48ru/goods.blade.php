@@ -39,7 +39,7 @@
                             <nav class="navmenu navmenu-default" role="navigation">
                                 <ul class="nav navmenu-nav">
                                     @if(!empty($Goods))
-                                        <li class="text-center bg-light" style="padding: 10px 15px;">Услуги</li>
+
                                         @foreach($Goods->toTree() as $category)
                                             @include('newzdorovie48ru.category.category', $category)
                                         @endforeach

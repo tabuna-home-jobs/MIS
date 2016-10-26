@@ -312,6 +312,7 @@
 
 </style>
 
+{{--
 <!-- Комплексные услуги -->
 <section class="container-fluid">
     <div class="row">
@@ -323,7 +324,7 @@
                     @foreach ($complexGoods as $key => $item)
                         <div class="col-md-4 @if($key > 0) hidden-xs hidden-sm @endif border_gradient">
                             <h2 class="h3 m-b-md text-center">{{ $item->name }}</h2>
-                            {{--<p class="h3 m-b-md text-center">{{ $item->name }}</p>--}}
+
 
                             <ul class="list-unstyled">
                                 @foreach($item->complexGoods as $key=>$complexGood)
@@ -358,7 +359,7 @@
             </div>
 </section>
 <!-- Комплекстные услуги -->
-
+--}}
 <!-- Новости -->
 <section class="container-fluid">
     <div class="row  m-b-xxl">
