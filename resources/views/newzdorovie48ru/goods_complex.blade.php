@@ -90,14 +90,14 @@
                         </div>
                     </div>
 
-                    @if(count($Good->goods)>0)
+                    @if(count($Good->subgoods)>0)
                     <div class="page-header">
                         <div class="h4 font-thin m-t m-b"><span class="h4">Что входит:</span></div>
                     </div>
                     <div class="row complex_goods_list">
-                        @foreach($Good->goods as $key => $value)
-                            <div class="col-md-4 @if($key > 4 && count($Good->goods) > 6) hidden hidden-good @endif">
-                                <a class="h5" href="/service/{{ $value->slug }}">
+                        @foreach($Good->subgoods as $key => $value)
+                            <div class="col-md-4 @if($key > 4 && count($Good->subgoods) > 6) hidden hidden-good @endif">
+                                <a class="h5" {{-- href="/service/{{ $value->slug }}" --}}>
                                     <div class="bg-white box-shadow">
                                         <div class="img">
                                             <img src="{{ $value->avatar }}" alt="">
@@ -118,7 +118,7 @@
                             </div>
                         @endforeach
 
-                            @if( count($Good->goods) > 6)
+                            @if( count($Good->subgoods) > 6)
                                 <div class="col-md-4 more-btn">
                                     <div class="bg-purple box-shadow text-center">
                                         <span>

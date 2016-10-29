@@ -114,15 +114,23 @@ class ServicesController extends Controller
         $getSites = Sites::where('domen', '=', $sitename . "." . $sitedomen)->first();
 
         if (!empty(Route::getCurrentRoute()->parameterNames()) && Route::getCurrentRoute()->parameterNames()[0] == 'complex') {
-            $data['Good'] = $getSites->getComplexGoods()->with('goods')->where('slug', $id)->first();
+            $data['Good'] = $getSites->getComplexGoods()->with('subgoods')->where('slug', $id)->first();
             $view = 'new' . $sitename . $sitedomen . '/goods_complex';
             //dd($data);
-            $data['Good']->total_price = 0;
 
+            $data['Good']->total_price = 0;
+            /*
             foreach ($data['Good']->goods as $key => $value) {
                 $data['Good']->goods[$key]->total_price = $value->count_visit * $value->price;
                 $data['Good']->total_price += $data['Good']->goods[$key]->total_price;
             }
+            */
+
+            foreach ($data['Good']->subgoods as $key => $value) {
+                $data['Good']->subgoods[$key]->total_price = $value->count_visit * $value->price;
+                $data['Good']->total_price += $data['Good']->subgoods[$key]->total_price;
+            }
+
 
             if (!$data['Good']) {
                 abort('404');
@@ -139,6 +147,27 @@ class ServicesController extends Controller
             if (!$data['Good']) {
                 abort('404');
             }
+
+
+            $subgoods = $getSites->getSubGoods()->with('complex_subgoods')->where('parent_good_id',$data['Good']['id'])->get();
+            //$compl = $getSites->getComplexGoods()->get();
+            //dd($complex);
+            $goods_complexgoods = [];
+            foreach ($subgoods as $key=>$value){
+
+
+                foreach ($value->complex_subgoods as $komplex_value){
+                    $hren = $getSites->getComplexGoods()->where('id',$komplex_value['id'])->first();
+                    //dd($hren);
+                    if(!in_array($hren, $goods_complexgoods)){
+                        $goods_complexgoods[]=$hren;
+                    }
+                }
+
+            }
+            //dd($googs_complexgoods);
+            //die('dfgdf');
+            $data['Good']['goods_complexgoods'] = $goods_complexgoods;
 
             $data['Comments'] = $data['Good']->comments()->where('publish', true)->orderBy('fio',
                 'asc')->simplepaginate(5);

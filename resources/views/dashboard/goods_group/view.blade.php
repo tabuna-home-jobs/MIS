@@ -73,14 +73,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Связанные услуги</label>
+                                <label>Связанные подуслуги</label>
                                 <div id="good-counts">
-                                    @foreach($Goods as $good)
+                                    @foreach($SubGoods as $good)
                                         <input id="good-count-{{ $good->id }}" name="count[{{ $good->id }}]" type="hidden" value="{{ $good->count_visit }}" />
                                     @endforeach
                                 </div>
-                                <select name="good_ids[]" class="form-control w-md goods-ajax" style="width: 100%;"  multiple="multiple">
-                                    @foreach($Goods as $good)
+                                <select name="subgood_ids[]" class="form-control w-md goods-ajax" style="width: 100%;"  multiple="multiple">
+                                    @foreach($SubGoods as $good)
                                         <option value="{{ $good->id}}" selected>{{ $good->name}}</option>
                                     @endforeach;
                                 </select>
@@ -181,7 +181,7 @@
 
             // jQuery Select2
             goods_ajax.select2({
-                placeholder: 'Введите название услуги',
+                placeholder: 'Введите название подуслуги',
                 minimumResultsForSearch: Infinity,
                 minimumInputLength: 1,
                 templateSelection: function(item, container) {
@@ -200,7 +200,7 @@
                     return item.text;
                 },
                 ajax: {
-                    url: "{{ url('/api/goods') }}",
+                    url: "{{ url('/api/subgoods') }}",
                     dataType: 'json',
                     delay: 400,
                     data: function (params) {

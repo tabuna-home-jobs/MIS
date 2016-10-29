@@ -221,6 +221,10 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'], 'prefi
         'getIndex' => 'goods',
         'getAdd' => 'dashboard.goods.add',
     ]);
+    Route::controller('subgoods', 'SubGoodsController', [
+        'getIndex' => 'subgoods',
+        'getAdd' => 'dashboard.subgoods.add',
+    ]);
 
     Route::controller('goods_group', 'GoodsGroupController', [
         'getIndex' => 'goods_group',
@@ -263,6 +267,8 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'], 'prefi
 Route::group(['namespace' => 'API', 'middleware' => 'cors', 'prefix' => 'api'], function () {
     Route::resource('/news', 'NewsAPI');
     Route::resource('/shares', 'ShareAPI');
+    Route::resource('/goods', 'GoodsAPI');
+    Route::resource('/subgoods', 'SubGoodsAPI');
 });
 
 

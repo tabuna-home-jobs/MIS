@@ -447,6 +447,13 @@
                                         <span>Услуги</span>
                                     </a>
                                 </li>
+                                <li class="{{Active::route('dashboard.subgoods.*')}}">
+                                    <a href="/dashboard/subgoods">
+                                        <i class="fa fa-stethoscope"></i>
+                                        <span>Подуслуги</span>
+                                    </a>
+                                </li>
+
                                 <li class="{{Active::route('dashboard.comments.*')}}">
                                     <a href="{{URL::route('dashboard.comments.index')}}">
                                         <i class="fa fa-comment"></i>

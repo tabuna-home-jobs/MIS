@@ -116,12 +116,12 @@
                         </div>
                     </div>
 
-                    @if(count($Good->complex_goods) > 0)
+                    @if(count($Good->goods_complexgoods) > 0)
                         <div class="page-header">
                             <div class="h4 font-thin m-b"><span class="h4">Куда входит:</span></div>
                         </div>
                         <div class="row complex_goods_list">
-                            @foreach($Good->complex_goods as $key => $value)
+                            @foreach($Good->goods_complexgoods as $key => $value)
                                 <div class="col-md-4">
                                     <a class="h5" href="/service/complex/{{ $value->slug }}">
                                         <div class="bg-white box-shadow">

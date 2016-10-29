@@ -20,7 +20,7 @@ class SentryMiddleware
         if (Sentry::check()) {
             //Узнаём что хочет выполнить пользователь
             $current = Route::currentRouteName();
-
+            //return $next($request);
             //Узнаём есть ли у пользователя права
             if (Sentry::getUser()->hasAccess($current)) {
                 return $next($request);

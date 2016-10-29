@@ -4,48 +4,37 @@ use App\Services\Search\SearchableTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Kalnoy\Nestedset\Node;
 
-class Goods extends Node
+class SubGoods extends Node
 {
 
     use SoftDeletes, SearchableTrait;
-    public $SlugName = 'service';
+    //public $SlugName = 'service';
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'goods';
-    protected $casts = [
-        'attribute' => 'array',
-    ];
+    protected $table = 'subgoods';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'title',
         'name',
-        'content',
         'avatar',
         'price',
-        'category_id',
-        'parent_id',
-        '_lft',
-        '_rgt',
+        'parent_good_id',
         'ids',
-        'tag',
-        'descript',
         'price',
-        'attribute',
         'sort',
-        'slug',
         'upadate_at'
     ];
     /**
      * @var array
      */
-    protected $searchFields = ['title', 'name'];
+    protected $searchFields = ['name'];
     /**
      * @var string
      */
@@ -57,24 +46,23 @@ class Goods extends Node
     }
 
 
-    public function category()
+    public function good()
     {
-        return $this->belongsTo('App\Models\Category');
+        return $this->belongsTo('App\Models\Goods');
     }
 
-    public function comments()
-    {
-        return $this->hasMany('App\Models\Comments');
-    }
-
+   
     public function getParent()
     {
-        return $this->hasMany('App\Models\Goods', 'id', 'parent_id');
+        return $this->hasMany('App\Models\Goods', 'id', 'parent_good_id');
     }
 
     public function complex_goods()
     {
         return $this->belongsToMany('App\Models\GoodsGroup', 'goods_groups', 'good_id', 'good_group_id');
     }
-   
+    public function complex_subgoods()
+    {
+        return $this->belongsToMany('App\Models\GoodsGroup', 'subgoods_groups', 'subgood_id', 'good_group_id');
+    }
 }

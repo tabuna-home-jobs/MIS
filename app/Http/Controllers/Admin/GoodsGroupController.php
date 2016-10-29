@@ -5,6 +5,7 @@ use App\Http\Requests\GoodsGroupRequest;
 use App\Models\Category;
 use App\Models\GoodsGroup;
 use App\Models\GoodsGroups;
+use App\Models\SubGoodsGroups;
 use Illuminate\Http\Request as RequestIlluminate;
 use Illuminate\Support\Collection;
 use Image;
@@ -27,16 +28,27 @@ class GoodsGroupController extends Controller
         // Группа
         $GoodsGroup = GoodsGroup::find($group_id);
 
+        /*
         $Goods = new Collection();
         if ($GoodsGroup) {
             // Привязанные услуги
             $Goods = $GoodsGroup->goods()->get();
         }
+        */
+        
+        $SubGoods = new Collection();
+        if ($GoodsGroup) {
+            // Привязанные подуслуги
+            $SubGoods = $GoodsGroup->subgoods()->get();
+        }
         // Список категорий
         $Category = Category::where('ids', Session::get('website'))->get();
 
+        /*return view("dashboard/goods_group/view",
+            ['GoodsGroup' => $GoodsGroup, 'Goods' => $Goods, 'Category' => $Category]);*/
+
         return view("dashboard/goods_group/view",
-            ['GoodsGroup' => $GoodsGroup, 'Goods' => $Goods, 'Category' => $Category]);
+            ['GoodsGroup' => $GoodsGroup, 'SubGoods' => $SubGoods, 'Category' => $Category]);
     }
 
 
@@ -71,7 +83,8 @@ class GoodsGroupController extends Controller
         $GoodsGroup->sort = $request->sort;
 
         if ($GoodsGroup->save()) {
-            $this->bind_goods($request, $GoodsGroup->id);
+            //$this->bind_goods($request, $GoodsGroup->id);
+            $this->bind_subgoods($request, $GoodsGroup->id);
 
             //Флеш сообщение
             Session::flash('group', 'Вы успешно изменили значения');
@@ -93,6 +106,23 @@ class GoodsGroupController extends Controller
                 $GoodsGroups->count_visit = (isset($request->count[$value])) ? $request->count[$value] : 1;
 
                 $GoodsGroups->save();
+            }
+        }
+    }
+
+    protected function bind_subgoods($request, $group_id)
+    {
+        // Сначала, удаляем все старые записи
+        SubGoodsGroups::where('good_group_id', $group_id)->delete();
+        if ($request->subgood_ids) {
+            // Затем, привязываем новые
+            foreach ($request->subgood_ids as $key => $value) {
+                $SubGoodsGroups = new SubGoodsGroups();
+                $SubGoodsGroups->subgood_id = $value;
+                $SubGoodsGroups->good_group_id = $group_id;
+                $SubGoodsGroups->count_visit = (isset($request->count[$value])) ? $request->count[$value] : 1;
+
+                $SubGoodsGroups->save();
             }
         }
     }
@@ -120,7 +150,8 @@ class GoodsGroupController extends Controller
         $Category->delete('cascade');
 
         // Удаляем все привязки к группе
-        GoodsGroups::where('good_group_id', $GoodsGroup)->delete();
+        //GoodsGroups::where('good_group_id', $GoodsGroup)->delete();
+        SubGoodsGroups::where('good_group_id', $GoodsGroup)->delete();
 
         Session::flash('good_group', 'Вы успешно удалили значения');
         return redirect()->route('goods_group');
@@ -131,7 +162,8 @@ class GoodsGroupController extends Controller
         GoodsGroup::withTrashed()->find($GoodsGroup)->forceDelete();
 
         // Удаляем все привязки к группе
-        GoodsGroups::where('good_group_id', $GoodsGroup)->delete();
+        //GoodsGroups::where('good_group_id', $GoodsGroup)->delete();
+        SubGoodsGroups::where('good_group_id', $GoodsGroup)->delete();
 
         Session::flash('good_group', 'Вы успешно окончательно удалили запись');
         return redirect()->route('goods_group');
