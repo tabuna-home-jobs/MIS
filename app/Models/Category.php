@@ -59,4 +59,14 @@ class Category extends Node
     {
         return $this->hasMany('App\Models\GoodsGroup', 'category_id');
     }
+
+
+    
+    //Услуги которые отображаются в категории
+    public function mygoods()
+    {
+        return $this->belongsToMany('App\Models\Goods', 'goods_categories', 'category_id', 'good_id');
+    }
+
+   
 }

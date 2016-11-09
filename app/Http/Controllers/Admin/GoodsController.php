@@ -3,8 +3,10 @@
 use App\Http\Controllers\Controller;
 use App\Http\Requests\GoodsRequest;
 use App\Models\Category;
+use App\Models\GoodsCategories;
 use App\Models\Goods;
 use Illuminate\Http\Request as RequestIlluminate;
+use Illuminate\Support\Collection;
 use Image;
 use Request;
 use Search;
@@ -38,8 +40,20 @@ class GoodsController extends Controller
         $Goods = Goods::find($Goods);
         $allGoods = Goods::where('ids', Session::get('website'))->orderBy('name', 'desc')->get();
         $Category = Category::where('ids', Session::get('website'))->get();
+
+
+
+        $Categories= new Collection();
+
+
+
+        if ($Goods) {
+            // Привязанные категории
+            $Categories = $Goods->categories()->get();
+        }
         //$Category = Category::all();
-        return view("dashboard/goods/view", ['Goods' => $Goods, 'Category' => $Category, 'All' => $allGoods]);
+        return view("dashboard/goods/view", ['Goods' => $Goods, 'Category' => $Category,
+            'All' => $allGoods, 'Categories' => $Categories]);
     }
 
 
@@ -78,14 +92,38 @@ class GoodsController extends Controller
 
 
         Goods::fixTree();
-        $Goods->save();
 
-        //Флеш сообщение
-        Session::flash('good', 'Вы успешно изменили значения');
+        if($Goods->save()){
+
+            $this->bind_categories($request, $Goods->id);
+            //Флеш сообщение
+            Session::flash('good', 'Вы успешно изменили значения');
+        }
+        //$Goods->save();
+
+
 
         return redirect()->route('goods');
     }
 
+
+
+    protected function bind_categories($request, $good_id)
+    {
+        // Сначала, удаляем все старые записи
+        GoodsCategories::where('good_id', $good_id)->delete();
+        if ($request->categories_ids) {
+            // Затем, привязываем новые
+            foreach ($request->categories_ids as $key => $value) {
+                $GoodsCategories = new GoodsCategories();
+                $GoodsCategories->category_id = $value;
+                $GoodsCategories->good_id = $good_id;
+                //$GoodsGroups->count_visit = (isset($request->count[$value])) ? $request->count[$value] : 1;
+
+                $GoodsCategories->save();
+            }
+        }
+    }
 
     public function getRestore($Category = null)
     {
@@ -107,6 +145,10 @@ class GoodsController extends Controller
     {
         $Category = Goods::find($Goods);
         $Category->delete('cascade');
+
+        // Удаляем все привязки к группе
+        //GoodsGroups::where('good_group_id', $GoodsGroup)->delete();
+        GoodsCategories::where('good_id', $Goods)->delete();
 
         Goods::fixTree();
         Session::flash('good', 'Вы успешно удалили значения');

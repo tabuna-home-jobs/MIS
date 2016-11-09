@@ -176,8 +176,20 @@ class ServicesController extends Controller
         }
 
         $data['Category'] = $getSites->getCategory()->findorFail($data['Good']->category_id);
-        $data['Goods'] = $getSites->getGoods()->where('category_id', $data['Good']->category_id)->orderBy('name',
+        
+        /*$data['Goods'] = $getSites->getGoods()->where('category_id', $data['Good']->category_id)->orderBy('name',
             'asc')->get();
+            */
+
+        //Услуги которые принадлежат родительской категории
+        $data['Goods2'] = $data['Category']->goods()->get();
+
+        //Услуги которые тоже нужно отображать в родительской категории
+        $data['goods3'] = $data['Category']->mygoods()->get();
+
+        $data['Goods'] = $data['Goods2']->merge($data['goods3'])->sortBy('name');;
+        //dd($data['Goods']);
+
         $data['complexGoods'] = $getSites->getComplexGoods()->where('category_id',
             $data['Good']->category_id)->orderBy('name', 'asc')->get();
 

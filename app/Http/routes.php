@@ -269,6 +269,7 @@ Route::group(['namespace' => 'API', 'middleware' => 'cors', 'prefix' => 'api'], 
     Route::resource('/shares', 'ShareAPI');
     Route::resource('/goods', 'GoodsAPI');
     Route::resource('/subgoods', 'SubGoodsAPI');
+    Route::resource('/categories', 'CategoriesAPI');
 });
 
 

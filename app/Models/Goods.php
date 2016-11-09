@@ -76,5 +76,14 @@ class Goods extends Node
     {
         return $this->belongsToMany('App\Models\GoodsGroup', 'goods_groups', 'good_id', 'good_group_id');
     }
+
+    
+
+    public function categories()
+    {
+        return $this->belongsToMany('App\Models\Category', 'goods_categories', 'good_id', 'category_id');
+    }
+    
+    
    
 }
