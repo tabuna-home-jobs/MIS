@@ -8,16 +8,26 @@ class Goods extends Node
 {
 
     use SoftDeletes, SearchableTrait;
-    public $SlugName = 'service';
+
+	/**
+	 * @var string
+	 */
+	public $SlugName = 'service';
+
     /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'goods';
+
+	/**
+	 * @var array
+	 */
     protected $casts = [
         'attribute' => 'array',
     ];
+
     /**
      * The attributes that are mass assignable.
      *

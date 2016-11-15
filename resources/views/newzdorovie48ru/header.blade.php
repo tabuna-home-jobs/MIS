@@ -128,8 +128,9 @@
                 </div>
                 <div class="col-md-10 padder-v">
                     <div class="h5 m-b-sm m-t-sm"><b>График работы</b></div>
-
-                    <small>Пн - Пт: 8:00 - 21:00, Сб: 8:00 - 18:00</small>
+                    <small>Пн - Пт: 8:00 - 21:00, Сб: 8:00 - 18:00<br>
+                        По предварительной записи
+                    </small>
                 </div>
             </div>
 
@@ -142,6 +143,8 @@
                 <div class="col-md-10 padder-v">
                     <div class="h5 m-b-sm m-t-sm"><b>Запишитесь на приём</b></div>
                     <small>В три простых шага</small>
+                    <br>
+                    <span>&nbsp;</span>
 
                 </div>
 
