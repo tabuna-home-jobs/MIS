@@ -97,7 +97,7 @@
                     <div class="row complex_goods_list">
                         @foreach($Good->subgoods as $key => $value)
                             <div class="col-md-4 @if($key > 4 && count($Good->subgoods) > 6) hidden hidden-good @endif">
-                                <a class="h5" {{-- href="/service/{{ $value->slug }}" --}}>
+                                {{--<a class="h5"  href="/service/{{ $value->slug }}"> --}}
                                     <div class="bg-white box-shadow">
                                         <div class="img">
                                             <img src="{{ $value->avatar }}" alt="">
@@ -114,7 +114,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                {{--</a> --}}
                             </div>
                         @endforeach
 
