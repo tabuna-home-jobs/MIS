@@ -103,7 +103,7 @@
                                             <img src="{{ $value->avatar }}" alt="">
                                         </div>
                                         <div class="name">
-                                            {{ str_limit($value->name, 45) }}
+                                            <span title="{{$value->name}}">{{ str_limit($value->name, 45) }}</span>
                                         </div>
                                         <div class="row info">
                                             <div class="col-md-6">
