@@ -312,7 +312,7 @@
 
 </style>
 
-{{--
+
 <!-- Комплексные услуги -->
 <section class="container-fluid">
     <div class="row">
@@ -359,7 +359,7 @@
             </div>
 </section>
 <!-- Комплекстные услуги -->
---}}
+
 <!-- Новости -->
 <section class="container-fluid">
     <div class="row  m-b-xxl">
