@@ -1,17 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
-
 
 Route::group(['domain' => 'stomzn48.ru', 'namespace' => 'stomzn48'], function () {
     Route::resource('/search', 'SearchController');
@@ -50,7 +38,7 @@ Route::group(['domain' => 'luchiki48.ru', 'namespace' => 'luchiki48'], function 
 Route::group(['domain' => 'sokzn48.ru', 'namespace' => 'sokzn48'], function () {
     Route::resource('/search', 'SearchController');
     Route::resource('/search', 'SearchController');
-    Route::resource('/articles', 'ArticlesController');
+    //Route::resource('/articles', 'ArticlesController');
     Route::resource('/answers', 'AnswersController');
     Route::resource('/blog', 'BlogController');
     Route::resource('/feedback', 'FeedbackController');
@@ -84,35 +72,6 @@ Route::group(['domain' => 'cozn48.ru', 'namespace' => 'cozn48'], function () {
     ]);
 });
 
-/*
-Route::group(['domain' => 'zdorovie48.ru', 'namespace' => 'Site'], function () {
-    Route::resource('/search', 'SearchController');
-    Route::resource('/video', 'VideoGalleryController');
-    Route::resource('/questanswer', 'QuestAnswerController');
-    Route::resource('/medencyclopedia', 'EncyclopediaController');
-    Route::resource('/encypost', 'EncyPostController');
-    Route::resource('/articles', 'ArticlesController');
-    Route::resource('/answers', 'AnswersController');
-    Route::resource('/reviews', 'ReviewsController');
-    Route::resource('/service', 'ServicesController');
-    Route::resource('/shares', 'SharesController');
-    Route::resource('/page', 'PageController');
-    Route::resource('/gallery', 'GalleryController');
-    Route::resource('/team', 'TeamController');
-    Route::resource('/art', 'ArtController');
-    Route::resource('/feedback', 'FeedbackController');
-    Route::controller('/appointment', 'AppointmentController', [
-        'getIndex' => 'appointment',
-    ]);
-    Route::resource('/blog', 'BlogController');
-
-    Route::resource('/', 'HomeController');
-
-
-    Route::resource('/login', 'LoginController');
-
-});
-*/
 
 Route::group(['domain' => 'zdorovie48.ru', 'namespace' => 'zdorovie48'], function () {
     Route::resource('/search', 'SearchController');
@@ -134,12 +93,40 @@ Route::group(['domain' => 'zdorovie48.ru', 'namespace' => 'zdorovie48'], functio
     Route::controller('/appointment', 'AppointmentController', [
         'getIndex' => 'appointment',
     ]);
-    
     Route::resource('/blog', 'BlogController');
-
     Route::resource('/', 'HomeController');
+    Route::controllers([
+        'auth' => 'AuthController',
+        'cabinet' => 'CabinetController'
+        //'password' => 'Auth\RegistrationController',
+    ]);
 
+    Route::resource('/login', 'LoginController');
+});
 
+Route::group(['domain' => 'mother-baby.ru', 'namespace' => 'motherbaby'], function () {
+    Route::resource('/search', 'SearchController');
+    Route::resource('/video', 'VideoGalleryController');
+    Route::resource('/questanswer', 'QuestAnswerController');
+    Route::resource('/medencyclopedia', 'EncyclopediaController');
+    Route::resource('/encypost', 'EncyPostController');
+    Route::resource('/articles', 'ArticlesController');
+    Route::resource('/answers', 'AnswersController');
+    Route::resource('/reviews', 'ReviewsController');
+    Route::resource('/service', 'ServicesController');
+    Route::resource('/service/complex', 'ServicesController');
+    Route::resource('/shares', 'SharesController');
+    Route::resource('/page', 'PageController');
+    Route::resource('/gallery', 'GalleryController');
+    Route::resource('/team', 'TeamController');
+    Route::resource('/art', 'ArtController');
+    Route::resource('/feedback', 'FeedbackController');
+    Route::controller('/appointment', 'AppointmentController', [
+        'getIndex' => 'appointment',
+    ]);
+
+    Route::resource('/blog', 'BlogController');
+    Route::resource('/', 'HomeController');
     Route::controllers([
         'auth' => 'AuthController',
         'cabinet' => 'CabinetController'
@@ -151,7 +138,7 @@ Route::group(['domain' => 'zdorovie48.ru', 'namespace' => 'zdorovie48'], functio
 
 
 Route::group(['domain' => 'gkzn48.ru', 'namespace' => 'gkzn48'], function () {
-    Route::resource('/search', 'SearchController');
+    //Route::resource('/search', 'SearchController');
     Route::resource('/video', 'VideoGalleryController');
     Route::resource('/questanswer', 'QuestAnswerController');
     Route::resource('/medencyclopedia', 'EncyclopediaController');
@@ -187,10 +174,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'dashboard'], function () {
 });
 
 
-//Группа админ
-//
-
-//Извиняюсь за то чо сделал так...
 Route::resource('dashboard/spcat', 'Admin\SpecCatController');
 Route::post('dashboard/spcat/store', 'Admin\SpecCatController@store');
 Route::get('dashboard/spcat/edit/{id}', 'Admin\SpecCatController@edit');
@@ -198,7 +181,6 @@ Route::post('dashboard/spcat/update/{id}', 'Admin\SpecCatController@update');
 Route::get('dashboard/spcat/destroy/{id}', 'Admin\SpecCatController@destroy');
 Route::get('dashboard/video/destroy/{id}', 'Admin\VideoGalleryController@getDestroyAlbom');
 
-Route::post('/errormailsend', 'Site\EmailFrom@postSend');
 
 Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'], 'prefix' => 'dashboard'], function () {
     //Route::resource('spcat', 'SpecCatController');
@@ -239,11 +221,10 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'], 'prefi
         'getIndex' => 'goods',
         'getAdd' => 'dashboard.goods.add',
     ]);
-
     Route::controller('subgoods', 'SubGoodsController', [
-               'getIndex' => 'subgoods',
-               'getAdd' => 'dashboard.subgoods.add',
-            ]);
+        'getIndex' => 'subgoods',
+        'getAdd' => 'dashboard.subgoods.add',
+    ]);
 
     Route::controller('goods_group', 'GoodsGroupController', [
         'getIndex' => 'goods_group',
@@ -284,14 +265,6 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'sentry'], 'prefi
 //API
 
 Route::group(['namespace' => 'API', 'middleware' => 'cors', 'prefix' => 'api'], function () {
-    Route::resource('/news', 'NewsAPI');
-    Route::resource('/shares', 'ShareAPI');
-});
-
-
-//API with Auth
-
-Route::group(['namespace' => 'API', 'middleware' => 'cors', 'prefix' => 'api'], function () {
     Route::resource('/news', 'NewsController');
     Route::resource('/shares', 'ShareController');
     //Route::resource('/goods', 'GoodsAPI');
@@ -305,19 +278,6 @@ Route::group(['namespace' => 'API', 'middleware' => 'cors', 'prefix' => 'api'], 
 });
 
 
-/*Route::group(['namespace' => 'test', 'prefix' => 'test'], function()
-{
-    Route::resource('/{model}/{function?}', 'TestController');
-
-});*/
-
-Route::get('socket', function () {
-    return view('chat.socket');
-});
-Route::get('/consult', function () {
-    return view('chat.consult');
-});
-
 //Перенаправление авторизации
 Route::controllers([
     'auth' => 'Auth\AuthController',
@@ -326,5 +286,5 @@ Route::controllers([
 
 
 Route::group(['domain' => '{site}.{domain}'], function () {
-	Route::get('sitemap.xml', 'SiteMapController@index');
+    Route::get('sitemap.xml', 'SiteMapController@index');
 });

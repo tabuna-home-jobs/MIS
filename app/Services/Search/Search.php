@@ -52,7 +52,7 @@ class Search
      * @param $keyword
      * @return mixed
      */
-    private function search($searchable, $keyword)
+    private function search($searchable, $keyword, $limit = 15)
     {
         $searchFields = $searchable->searchFields();
 
@@ -60,7 +60,7 @@ class Search
             foreach ($searchFields as $field) {
                 $query->orWhere($field, "ILIKE", '%' . $keyword . '%');
             }
-        })->get();
+        })->limit($limit)->get();
     }
 
     /**

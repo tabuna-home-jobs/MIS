@@ -50,7 +50,7 @@ class Goods extends Node
         'attribute',
         'sort',
         'slug',
-        'upadate_at'
+        'update_at'
     ];
     /**
      * @var array
@@ -61,39 +61,54 @@ class Goods extends Node
      */
     protected $slugField = 'name';
 
+    /**
+     * @return string
+     */
     public function scopeGetSlug()
     {
         return $this->slugField;
     }
 
 
+    /**
+     * @return mixed
+     */
     public function category()
     {
         return $this->belongsTo('App\Models\Category');
     }
 
+    /**
+     * @return mixed
+     */
     public function comments()
     {
         return $this->hasMany('App\Models\Comments');
     }
 
+    /**
+     * @return mixed
+     */
     public function getParent()
     {
         return $this->hasMany('App\Models\Goods', 'id', 'parent_id');
     }
 
+    /**
+     * @return mixed
+     */
     public function complex_goods()
     {
         return $this->belongsToMany('App\Models\GoodsGroup', 'goods_groups', 'good_id', 'good_group_id');
     }
 
-    
-
+    /**
+     * @return mixed
+     */
     public function categories()
     {
         return $this->belongsToMany('App\Models\Category', 'goods_categories', 'good_id', 'category_id');
     }
     
-    
-   
+
 }
